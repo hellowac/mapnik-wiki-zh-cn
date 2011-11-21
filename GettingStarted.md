@@ -6,9 +6,9 @@
 
 # Tutorial 1  -- 'Hello,world!' in Python
 
-== Step 1 == 
+## Step 1 
 
-Make sure you have mapnik installed. Depending on your installation path you may need to modify your PYTHONPATH, /etc/ld.so.conf or export LD_LIBRARY_PATH, or whatever your system requires.
+Make sure you have mapnik installed. Depending on your installation path you may need to modify your `PYTHONPATH`, `/etc/ld.so.conf` or export `LD_LIBRARY_PATH`, or whatever your system requires.
 
 The simple check is to start python interpreter from a command line by typing python
 and then just type:
@@ -19,6 +19,7 @@ and then just type:
 ```
 
 and if you don't see any complaints, you're on the right track. If you do, you have to check your installation again.
+
  * Note: If you have built mapnik in debug mode you should see the available datasources listed, including:
 
 ```python
@@ -32,13 +33,14 @@ registered datasource : shape
 ## Step 2
 
 The code below can be pasted into your python interpreter. Ideally paste line by line so you can confirm each step is working. The commented lines (#) should be able to be pasted without trouble, but depending on your interpreter setting may cause errors.
+
  * See the code snippet in Step 3 for code without comments.
 
 Import the mapnik python toolkit and setup the basic map parameters
 
 ```
+# import mapnik python bindings
 import mapnik
-
 # Instantiate a map object with given width, height and spatial reference system
 m = mapnik.Map(600,300,"+proj=latlong +datum=WGS84")
 # Set background colour to 'steelblue'.  
@@ -87,8 +89,8 @@ lyr.styles.append('My Style')
 Finally add the layers to the map and zoom to the full extent of the data layer
 
 ```python
-    m.layers.append(lyr)
-    m.zoom_to_box(lyr.envelope())
+m.layers.append(lyr)
+m.zoom_to_box(lyr.envelope())
 ```
 
 Finish up by making the world map image
@@ -98,21 +100,19 @@ Finish up by making the world map image
 mapnik.render_to_file(m,'world.png', 'png')
 
 # Exit the python interpreter
-exit()
+exit() # or ctrl-d
 ```
 
 Then back in your normal shell type:
 
-``sh
+```sh
 # On a mac
 open world.png
 # On windows
 start world.png
 ```
 
-Or navigate to your base directory and open world.png and the result should look like this:
- [[BR]]
-[[Image(world.png)]]
+Or navigate to your base directory and open world.png and the result should look like this: ![world.png]
 
 
 ## Step 3
@@ -155,7 +155,7 @@ Next make the script executable. On Mac or Linux you would do this with the comm
 
 
 ```sh
-    chmod +x world.py
+chmod +x world.py
 ```
 
 Finally run the script with the command:
@@ -174,7 +174,7 @@ start world.py && start world.png
  * Run this way the script will continually write over and open the world.png map.
  * Now you can easily open the script in a separate text editor and try changing the dimensions, colors, or datasource (remember to use the correct projection).
 
-To view the XML approach to make this same map head over to [XmlGettingStarted / Tutorial 2](/wiki:XMLGettingStarted/) which shows the use of XML map configurations.
+To view the XML approach to make this same map head over to [XmlGettingStarted / Tutorial 2](XMLGettingStarted) which shows the use of XML map configurations.
 
 To download this script along with other tutorial scripts see: http://code.google.com/p/mapnik-utils/
 
