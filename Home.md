@@ -1,5 +1,5 @@
-Welcome to the mapnik wiki!
+Welcome to the Mapnik wiki.
 
-We are currently migrating docs from http://trac.mapnik.org/wiki/ to here. All docs will be converted to markdown format.
+[Pages listing](_pages)
 
-If you want to help get in touch with @springmeyer.
+Note: Many of these pages are in the process of conversion for trac format. Thanks for your patience.
