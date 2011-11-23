@@ -4,12 +4,13 @@
 <!-- Author: jamierob -->
 ## Configuration Options for BuildingSymbolizer
 
-` A BuildingSymbolizer is used to create a pseudo 3D effect on polygons. `
+A BuildingSymbolizer is used to create a pseudo 3D effect on polygons.
 
-|| *parameter* || *value*  || *default* ||
-|| fill            ||  CSS colour  || "FIXME" ||
-|| fill-opacity    ||  integer     || "FIXME" ||
-|| height          ||  integer     || "FIXME" ||
+| **parameter**      | **value**    | **default** |
+|:-----------------|---------------:|:-----------:|
+| fill             |  CSS colour    | gray      |
+| fill-opacity     |  float         | 1.0       |
+| height           |  float         | 0         |
 
 ## Examples
 
@@ -19,14 +20,13 @@
 
 #### XML
 
-{{{
-#!xml
+```xml
       <BuildingSymbolizer>
         <CssParameter name="fill">#000000</CssParameter>
         <CssParameter name="fill-opacity">1</CssParameter>
 	<CssParameter name="height">8</CssParameter>
       </BuildingSymbolizer>
- }}}
+```
 
 #### Python
 
