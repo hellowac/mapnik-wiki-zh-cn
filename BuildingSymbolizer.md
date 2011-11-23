@@ -24,7 +24,7 @@ A BuildingSymbolizer is used to create a pseudo 3D effect on polygons.
       <BuildingSymbolizer>
         <CssParameter name="fill">#000000</CssParameter>
         <CssParameter name="fill-opacity">1</CssParameter>
-	<CssParameter name="height">8</CssParameter>
+        <CssParameter name="height">8</CssParameter>
       </BuildingSymbolizer>
 ```
 
