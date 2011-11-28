@@ -40,45 +40,50 @@ is now:
 ## Changes by Element
 
 ### Map
-|| *component*       ||                  *old*             ||                    *new* ||
-|| Map                         ||     bgcolor            ||     background-color                           ||
-|| Map                         ||      did not exist  ||     background-image                           ||
+
+| *component*       |                 *old*             |                    *new* |
+|------------------|---------------|--------------------------|
+| Map                         |     bgcolor            |     background-color                           |
+| Map                         |      did not exist  |     background-image                           |
 
 ### Symbolizers
 
-|| *component* ||                  *old* ||                    *new* ||
-|| TextSymbolizer   || name='field'  ||     name='[field]'                            ||
-|| TextSymbolizer   || text_convert  ||      text-transform                            ||
-|| TextSymbolizer   || min_distance  ||      minimum-distance                            ||
-|| TextSymbolizer   || did not exist  ||     minimum-padding                            ||
-|| PointSymbolizer / PolygonPatternSymbolizer / LinePatternSymbolizer   || width  ||     removed                            ||
-|| PointSymbolizer / PolygonPatternSymbolizer / LinePatternSymbolizer   || height  ||     removed                            ||
-|| PointSymbolizer / PolygonPatternSymbolizer / LinePatternSymbolizer   || type  ||     removed                            ||
+| *component*      |         *old* |                    *new* |
+|------------------|---------------|--------------------------|
+| TextSymbolizer   | name='field'  |     name='[field]'                            |
+| TextSymbolizer   | text_convert  |      text-transform                           |
+| TextSymbolizer   | min_distance  |      minimum-distance                         |
+| TextSymbolizer   | did not exist |     minimum-padding                           |
+| PointSymbolizer / PolygonPatternSymbolizer / LinePatternSymbolizer   | width  |     removed  |
+| PointSymbolizer / PolygonPatternSymbolizer / LinePatternSymbolizer   | height  |     removed |
+| PointSymbolizer / PolygonPatternSymbolizer / LinePatternSymbolizer   | type  |    removed  |
 
 
 # Python API
 
-|| *component* ||                  *old* ||                    *new* ||
-|| mapnik             ||               mapnik.Envelope  ||                   mapnik.Box2d ||
-|| TextSymbolizer   || set_displacement (function)  ||     displacement (property)    ||
-|| TextSymbolizer   || first argument was string  ||    first argument now mapnik2.Expression(['field'])    ||
-|| ShieldSymbolizer   || first argument was string  ||    first argument now mapnik2.Expression(['field'])    ||
-|| ShieldSymbolizer   || fifth argument was string  ||    fifth argument now mapnik2.PathExpression('/path/to/[field].png')    ||
+| *component* |                  *old* |                    *new* |
+|------------------|---------------|--------------------------|
+| mapnik             |               mapnik.Envelope  |                   mapnik.Box2d |
+| TextSymbolizer   | set_displacement (function)  |     displacement (property)    |
+| TextSymbolizer   | first argument was string  |    first argument now mapnik2.Expression(['field'])    |
+| ShieldSymbolizer   | first argument was string  |    first argument now mapnik2.Expression(['field'])    |
+| ShieldSymbolizer   | fifth argument was string  |    fifth argument now mapnik2.PathExpression('/path/to/[field].png')    |
 
 
 # C++ API
-|| *component* ||                  *old* ||                    *new* ||
-|| mapnik::Map ||                 getWidth  ||                   width ||
-|| mapnik::Map ||                 getHeight  ||                   height ||
-|| mapnik::Map ||                 zoomToBox  ||                  zoom_to_box ||
-|| mapnik::Map ||                 setBackground  ||                  set_background ||
-|| mapnik::Map ||                 getCurrentExtent  ||                  get_current_extent  ||
-|| mapnik::Map ||                 zoomToBox  ||                  zoom_to_box ||
-|| mapnik:: ||                 mapnik::Layer  ||                   mapnik::layer ||
-|| mapnik:: ||                 mapnik::Envelope  ||                   mapnik::box2d ||
-|| mapnik:: ||                 mapnik::ImageData32  ||                   mapnik::image_data_32 ||
-|| mapnik:: ||                 mapnik::Image32  ||                   mapnik::image_32 ||
-|| mapnik:: ||                 mapnik::Image8  ||                   mapnik::image_8 ||
+| *component* |                  *old* |                    *new* |
+|------------------|---------------|--------------------------|
+| mapnik::Map |                 getWidth  |                   width |
+| mapnik::Map |                 getHeight  |                   height |
+| mapnik::Map |                 zoomToBox  |                  zoom_to_box |
+| mapnik::Map |                 setBackground  |                  set_background |
+| mapnik::Map |                 getCurrentExtent  |                  get_current_extent  |
+| mapnik::Map |                 zoomToBox  |                  zoom_to_box |
+| mapnik:: |                 mapnik::Layer  |                   mapnik::layer |
+| mapnik:: |                 mapnik::Envelope  |                   mapnik::box2d |
+| mapnik:: |                 mapnik::ImageData32  |                   mapnik::image_data_32 |
+| mapnik:: |                 mapnik::Image32  |                   mapnik::image_32 |
+| mapnik:: |                 mapnik::Image8  |                   mapnik::image_8 |
 
 
 # Planned/Proposed Before Release
