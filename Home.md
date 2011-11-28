@@ -9,11 +9,13 @@ Note: Many of these pages are in the process of conversion from trac format. Tha
 - [[InstallGuide]]
 - [[GettingStarted]]
 - API Reference
+- [[Notes and Caveats|NotesAndCaveats]]
 
 ### Advanced Topics
 
 - [Building Mapnik](https://github.com/mapnik/mapnik/blob/master/INSTALL.md)
 - [[Migrating to Mapnik2 from older Versions|Mapnik2]]
+- [[Mapnik Development|Development]]
 
 ### Community
 
