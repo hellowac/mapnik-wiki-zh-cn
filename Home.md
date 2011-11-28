@@ -4,6 +4,8 @@ Welcome to the Mapnik wiki.
 
 Note: Many of these pages are in the process of conversion from trac format. Thanks for your patience.
 
+![Example Mapnik Output](http://teczno.com/cascadenik-openstreetmap-II/osm-15-r12662-c5254.png)
+
 ### Introductory Topics
 
 - [[InstallGuide]]
