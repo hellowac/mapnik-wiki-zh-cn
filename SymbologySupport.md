@@ -35,14 +35,14 @@ See ["Filter"] for more details (especially regarding how this is different for 
 
 Symbolizers describe how features should appear on a map.
 
- * LineSymbolizer
- * LinePatternSymbolizer
- * PolygonSymbolizer
- * PolygonPatternSymbolizer
- * PointSymbolizer
- * TextSymbolizer
- * RasterSymbolizer
- * ShieldSymbolizer
- * BuildingSymbolizer
- * MarkersSymbolizer
- * GlyphSymbolizer
+ * [[LineSymbolizer]]
+ * [[LinePatternSymbolizer]]
+ * [[PolygonSymbolizer]]
+ * [[PolygonPatternSymbolizer]]
+ * [[PointSymbolizer]]
+ * [[TextSymbolizer]]
+ * [[RasterSymbolizer]]
+ * [[ShieldSymbolizer]]
+ * [[BuildingSymbolizer]]
+ * [[MarkersSymbolizer]]
+ * [[GlyphSymbolizer]]
