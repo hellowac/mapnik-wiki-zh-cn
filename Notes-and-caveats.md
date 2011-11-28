@@ -5,6 +5,7 @@
 - [[MapnikTutorials]]
 - [[MapnikUtilities]]
 - [[MaxScaleDenominator]]
+- [[ScaleAndPpi]]
 - [[OptimizeRenderingWithPostGIS]]
 
 ##
