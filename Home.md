@@ -9,7 +9,7 @@ Note: Many of these pages are in the process of conversion from trac format. Tha
 - [[InstallGuide]]
 - [[GettingStarted]]
 - API Reference
-- [[Learning Mapnik]]
+- [[LearningMapnik]]
 - [[Notes and Caveats|Notes And Caveats]]
 
 ### Advanced Topics
