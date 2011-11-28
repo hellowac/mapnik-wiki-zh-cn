@@ -8,7 +8,7 @@ Welcome to the Mapnik wiki.
 ### Introductory Topics
 
 - [[About Mapnik]] (Overview)
-- [[MapnikInstallation]]
+- [[Mapnik Installation]]
 - [[GettingStarted]]
 - [[API Reference|Mapnik-API]]
 - [[LearningMapnik]]
