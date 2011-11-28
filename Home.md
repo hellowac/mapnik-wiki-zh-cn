@@ -20,4 +20,4 @@ Note: Many of these pages are in the process of conversion from trac format. Tha
 - [GitHub Project Page](https://github.com/mapnik/mapnik/)
 - [Users Mailing List](http://lists.berlios.de/mailman/listinfo/mapnik-users)
 - [Developers Mailing List](http://lists.berlios.de/mailman/listinfo/mapnik-devel)
-- [#mapnik channel on IRC](irc://irc.freenode.net/%23mapnik)
+- #mapnik channel on irc.freenode.net [Webchat](http://webchat.freenode.net/#mapnik)
