@@ -1,9 +1,3 @@
-<!-- Name: MapnikInstallation -->
-<!-- Version: 32 -->
-<!-- Last-Modified: 2011/09/03 06:56:34 -->
-<!-- Author: herm -->
-[[TOC]]
-
 ## Get the Source
 
 
