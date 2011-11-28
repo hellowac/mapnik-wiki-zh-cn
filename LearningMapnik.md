@@ -1,7 +1,6 @@
-
 ## Background
 
-[[MapDesign]] -- use Mapnik to design better looking maps!
+also see [[MapnikTutorials]]
 
 **Understanding GIS Concepts**
 
@@ -13,6 +12,7 @@
 **How to Style your Maps**
 
 * [[SymbologySupport]]
+* [[MapDesign]] -- use Mapnik to design better looking maps!
 
 **How to combine Map styles and Layers**
 
