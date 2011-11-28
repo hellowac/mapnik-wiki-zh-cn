@@ -7,4 +7,6 @@
 - [[MaxScaleDenominator]]
 - [[OptimizeRenderingWithPostGIS]]
 
-- [[Demo Gallery]]
+##
+
+- [[DemoGallery]]
