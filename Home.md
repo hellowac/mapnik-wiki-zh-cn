@@ -12,7 +12,7 @@ Note: Many of these pages are in the process of conversion from trac format. Tha
 
 ### Advanced Topics
 
-- Building Mapnik
+- [Building Mapnik[(https://github.com/mapnik/mapnik/blob/master/INSTALL.md)
 - [[Migrating to Mapnik2 from older Versions|Mapnik2]]
 
 ### Community
