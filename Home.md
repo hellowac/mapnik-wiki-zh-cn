@@ -6,8 +6,8 @@ Note: Many of these pages are in the process of conversion from trac format. Tha
 
 ### Introductory Topics
 
-- Installation
-- [Getting Started](GettingStarted)
+- [[InstallGuide]]
+- [[GettingStarted]]
 - API References
 
 ### Advanced Topics
