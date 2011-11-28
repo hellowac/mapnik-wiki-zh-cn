@@ -1,14 +1,6 @@
-<!-- Name: Release2.0.0 -->
-<!-- Version: 5 -->
-<!-- Last-Modified: 2011/09/28 01:36:00 -->
-<!-- Author: artem -->
 # Mapnik 2.0.0 release
 
 Announcement: [Release 2.0](http://mapnik.org/news/2011/sep/26/release_2_0/) 
-
-Overview of the 2.0.0 Milestone: milestone:"Mapnik 2.0"
-
-Complete list of [tickets closed against this milestone](http://trac.mapnik.org/query?group=status&milestone=Mapnik%202.0)
 
 ## Mapnik 2.0.0 Changelog
 
@@ -16,7 +8,7 @@ Complete list of [tickets closed against this milestone](http://trac.mapnik.org/
 
 - Add support for png quantization using fixed palettes (#843)
 
-- Add AlsoFilter functionality - http://trac.mapnik.org/wiki/AlsoFilter
+- Add AlsoFilter functionality - [[AlsoFilter]]
 
 - SQLite Plugin: optimize i/o using shared cache and no mutexes (#797)
 
