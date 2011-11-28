@@ -12,6 +12,7 @@ Note: Many of these pages are in the process of conversion from trac format. Tha
 - API Reference
 - [[LearningMapnik]]
 - [[Notes and Caveats|Notes And Caveats]]
+- [[Related Projects and Utilities]]
 
 ### Advanced Topics
 
