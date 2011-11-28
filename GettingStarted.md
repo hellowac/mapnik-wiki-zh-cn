@@ -2,11 +2,14 @@
 <!-- Version: 26 -->
 <!-- Last-Modified: 2009/04/20 10:04:35 -->
 <!-- Author: phispi -->
-[[TOC]]
 
-# Tutorial 1  -- 'Hello,world!' in Python
+Mapnik can be used in a variety of ways. The most widely used options are using XML config files, using the Python bindings or using the API directly in C++.
 
-## Step 1 
+[Getting started using XML](XMLGettingStarted)
+
+## Getting started in Python
+
+### Step 1 
 
 Make sure you have mapnik installed. Depending on your installation path you may need to modify your `PYTHONPATH`, `/etc/ld.so.conf` or export `LD_LIBRARY_PATH`, or whatever your system requires.
 
@@ -30,7 +33,7 @@ registered datasource : raster
 registered datasource : shape
 ```
 
-## Step 2
+### Step 2
 
 The code below can be pasted into your python interpreter. Ideally paste line by line so you can confirm each step is working. The commented lines (#) should be able to be pasted without trouble, but depending on your interpreter setting may cause errors.
 
@@ -115,7 +118,7 @@ start world.png
 Or navigate to your base directory and open world.png and the result should look like this: ![world.png]
 
 
-## Step 3
+### Step 3
 
 The next logical step is to run the same code as a python script from your shell/terminal. This way you will be able to modify and experiment with the settings.
 
@@ -173,8 +176,6 @@ start world.py && start world.png
 
  * Run this way the script will continually write over and open the world.png map.
  * Now you can easily open the script in a separate text editor and try changing the dimensions, colors, or datasource (remember to use the correct projection).
-
-To view the XML approach to make this same map head over to [XmlGettingStarted / Tutorial 2](XMLGettingStarted) which shows the use of XML map configurations.
 
 To download this script along with other tutorial scripts see: http://code.google.com/p/mapnik-utils/
 
