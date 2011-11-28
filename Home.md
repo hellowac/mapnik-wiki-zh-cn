@@ -10,7 +10,7 @@ Welcome to the Mapnik wiki.
 - [[About Mapnik]] (Overview)
 - [[MapnikInstallation]]
 - [[GettingStarted]]
-- [[API Reference|API]]
+- [[API Reference|Mapnik-API]]
 - [[LearningMapnik]]
 - [[Notes and Caveats|Notes And Caveats]]
 - [[Related Projects and Utilities]]
