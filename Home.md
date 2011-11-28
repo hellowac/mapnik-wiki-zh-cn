@@ -23,6 +23,7 @@ Note: Many of these pages are in the process of conversion from trac format. Tha
 ### Community
 
 - [GitHub Project Page](https://github.com/mapnik/mapnik/)
+- [Ohloh Project Page](https://www.ohloh.net/p/mapnik) (Project Statistics)
 - [Users Mailing List](http://lists.berlios.de/mailman/listinfo/mapnik-users)
 - [Developers Mailing List](http://lists.berlios.de/mailman/listinfo/mapnik-devel)
 - #mapnik channel on irc.freenode.net [Webchat](http://webchat.freenode.net/#mapnik)
