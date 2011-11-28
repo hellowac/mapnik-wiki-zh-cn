@@ -13,4 +13,6 @@ Note: Many of these pages are in the process of conversion from trac format. Tha
 ### Advanced Topics
 
 - Building Mapnik
-- Migrating to Mapnik2 from older Versions
+- [[Migrating to Mapnik2 from older Versions|Mapnik2]]
+
+### Community
