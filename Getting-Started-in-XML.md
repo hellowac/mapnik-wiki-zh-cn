@@ -1,5 +1,3 @@
-# Getting Started in XML
-
 ## Tutorial 2  -- 'Hello,world!' using XML configuration
 
 == Overview == 
