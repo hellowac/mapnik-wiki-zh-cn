@@ -1,12 +1,6 @@
-<!-- Name: SymbologySupport -->
-<!-- Version: 15 -->
-<!-- Last-Modified: 2011/01/28 13:56:27 -->
-<!-- Author: springmeyer -->
-[[TOC]]
-
 # Symbology Support
 
-Also see ["XMLConfigReference"] for descriptions of these elements within the xml mapfile.
+Also see [[XMLConfigReference]] for descriptions of these elements within the xml mapfile.
 
 ## Styles
 
