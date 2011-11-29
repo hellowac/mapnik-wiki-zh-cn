@@ -4,6 +4,8 @@ Mapnik can be used in a variety of ways. The most widely used options are using 
 
 [TODO]
 
+## Choose your weapon: XML, Python or C++
+
 [[Getting started using XML|GettingStartedInXML]]
 
 [[Getting started using Python|GettingStartedInPython]]
