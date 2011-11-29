@@ -12,4 +12,8 @@ Mapnik can be used in a variety of ways. The most widely used options are using 
 
 [[Getting started using C++|GettingStartedInC]]
 
+## Further reading
 
+- API Reference
+- [[LearningMapnik]]
+- [[Notes and Caveats]]
