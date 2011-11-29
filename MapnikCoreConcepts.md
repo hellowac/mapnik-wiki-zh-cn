@@ -15,3 +15,6 @@ The order of layers, rules and symbolizers is generally important in Mapnik, as 
 - [[SymbologySupport]]
 - [[GettingStartedInPython]]
 - [[Mapnik API]] 
+
+---
+Back to [[LearningMapnik]]
