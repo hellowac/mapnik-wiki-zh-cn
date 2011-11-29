@@ -1,42 +1,47 @@
-## Background
+### Important Note: The Mapnik documentation is currently in the process of being restructured and updated for Mapnik 2.0 and the move to GitHub -- please double check all information found here and fix / report any errors you may find. Thanks for your patience.
+---
 
-also see [[MapnikTutorials]]
+Mapnik can be used in a variety of ways. The most widely used options are using XML config files, using the Python bindings or using the API directly in C++.
 
-**Understanding GIS Concepts**
+## General Concepts
 
+* TODO: Introdice Mapnik core concepts
 * [[IntroductionToGIS]] -- a brief intro to the world of mapping systems
-* Projections, geodetics, and polygons, oh my...
 
-## Core Topics
+## Getting started
 
-**How to Style your Maps**
+To get first results, choose your weapon: Choose your weapon: XML, Python or C++
+
+* [[Getting started using XML|GettingStartedInXML]]
+* [[Getting started using Python|GettingStartedInPython]]
+* [[Getting started using C++|GettingStartedInC]]
+
+### Further Resources:
+
+- API Reference
+- [[Notes and Caveats]]
+- [[MapnikTutorials]]
+- [[ExampleCode]]
+
+## How to Style your Maps
 
 * [[SymbologySupport]]
 * [[MapDesign]] -- use Mapnik to design better looking maps!
 
-**How to combine Map styles and Layers**
+## How to combine Map styles and Layers
 
 * See the [[MapnikTutorials]]
 * XML Mapfile details [[XMLConfigReference]]
 
-**How to read in data**
+## How to read in data
 
 * [[PluginArchitecture]]
 
-**How to use the Mapnik Python Bindings**
+## How to use the Mapnik Python Bindings
 
 * See the python api docs [here](http://media.mapnik.org/api_docs/python/)
 * Check out the [[MapnikTutorials]] and  the references at [[ExampleCode]]
 * Study applications like Cascadenik or Nik2img at http://mapnik-utils.googlecode.com/
-
-**How to use Custom Fonts**
-
-* [[UsingCustomFonts]]
-
-## Performance
-
-[[OptimizeRenderingWithPostGIS]] -- Optimize rendering speed and simplify the stylesheet with PostGIS
-
 
 ## Advanced Topics
  
@@ -52,10 +57,5 @@ also see [[MapnikTutorials]]
 
 [[Hooking up Mapnik to PostGIS|PostGIS]]
 
-[[ModServer]] -- An experimental mod_python server for Mapnik
-
-[[IntegrateWithWxPython]] -- Demonstrate how to integrate mapnik with wxPython
-
-[[FontSet]] -- Fallback fonts support
 
 [[MapnikReferences]] -- Various other resources related to Mapnik and Mapping
