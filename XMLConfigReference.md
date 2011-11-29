@@ -1,8 +1,5 @@
-<!-- Name: XMLConfigReference -->
-<!-- Version: 44 -->
-<!-- Last-Modified: 2011/08/30 14:59:29 -->
-<!-- Author: springmeyer -->
-[[TOC]]
+### Important Note: The Mapnik documentation is currently in the process of being restructured and updated for Mapnik 2.0 and the move to GitHub -- please double check all information found here and fix / report any errors you may find. Thanks for your patience.
+---
 
 # Mapnik configuration XML
 
