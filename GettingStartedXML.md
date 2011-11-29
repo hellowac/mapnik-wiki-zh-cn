@@ -1,10 +1,6 @@
-<!-- Name: XMLGettingStarted -->
-<!-- Version: 16 -->
-<!-- Last-Modified: 2010/02/14 06:25:59 -->
-<!-- Author: HrvojeP -->
-[[TOC]]
+# Getting Started in XML
 
-# Tutorial 2  -- 'Hello,world!' using XML configuration
+## Tutorial 2  -- 'Hello,world!' using XML configuration
 
 == Overview == 
 
