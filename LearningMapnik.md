@@ -18,7 +18,7 @@ To get first results, choose your weapon: Choose your weapon: XML, Python or C++
 
 ### Further Resources:
 
-- API Reference
+- [[Mapnik API]]
 - [[Notes and Caveats]]
 - [[MapnikTutorials]]
 - [[ExampleCode]]
