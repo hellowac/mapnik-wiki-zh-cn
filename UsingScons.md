@@ -1,56 +1,55 @@
-<!-- Name: UsingScons -->
-<!-- Version: 18 -->
-<!-- Last-Modified: 2010/01/08 16:07:42 -->
-<!-- Author: myselfhimself -->
-# Using SCons with Mapnik 0.6.0
-
-*NOTE: these instructions are for the 0.6.0 release*
+# Using SCons with Mapnik
 
 Mapnik uses a python-based build system called [SCons](http://www.scons.org/wiki/TheBigPicture) to configure, build, and install Mapnik from source.
 
-The build system is composed of a single *`SConstruct`* file in the main source directory and various *`SConscript`* files in subdirectories.
+The build system is composed of a single `SConstruct` file in the main source directory and various `SConscript` files in subdirectories.
 
 For more details see on SCons see:
- * SCons documentation: http://www.scons.org/documentation.php
- * Good Overview: http://www.humanized.com/presentations/scons/
+* SCons documentation: http://www.scons.org/documentation.php
+* Good Overview: http://www.humanized.com/presentations/scons/
 
-For Details about the usage of SCons in the Mapnik build system, follow along...
-
-# Quickstart
+## Quickstart
 
 For the impatient just do:
 
-    #!sh
     $ cd mapnik_src_dir
     $ python scons/scons.py configure # will configure compilation and save out configuration to a python pickle
     $ python scons/scons.py # will compile mapnik sources (running configure first if not done yet)
     $ sudo python scons/scons.py install # will install Mapnik (running configure and compiling first if not done yet)
-If you are confident as to the mapnik project's dependencies, you should run the scons/scons.py install command right away.
 
-# Common Questions
+## Common Questions
 
-* Do I need to install SCons? *
- * No, for convenience Mapnik bundles a `scons-local` directory that includes all the SCons python modules needed to build Mapnik..
- * This allows you to run scons locally within the Mapnik source folder like:
+### Do I need to install SCons?
+
+* No, for convenience Mapnik bundles a `scons-local` directory that includes all the SCons python modules needed to build Mapnik..
+* This allows you to run scons locally within the Mapnik source folder like:
 
     $ python scons/scons.py
 
-* I already have SCons installed, can I use it? *
- * Yes, to use your installed version of SCons rather than the bundled version just run the command:
+### I already have SCons installed, can I use it?
+
+* Yes, to use your installed version of SCons rather than the bundled version just run the command:
 
     $ scons
 
-* How does SCons compare to `make`? *
- * SCons is less verbose, handles dependency checking more thoroughly, and caches configuration settings differently.
- * However, the basic user experience is quite similar to the common `make` commands:
+### How does SCons compare to `make`?
+* SCons is less verbose, handles dependency checking more thoroughly, and caches configuration settings differently.
+* However, the basic user experience is quite similar to the common `make` commands:
 
- || *Tool* || *Configure Step* || *Compile Step*|| *Install Step* || 
- || *make* || $ ./configure || $ make || $ sudo make install ||
- || *SCons* || $ scons configure || $ scons  || $ sudo scons install ||
-  * For more details on SCons vs other build tools see: http://www.scons.org/wiki/SconsVsOtherBuildTools
+<table>
+<tr><th>Tool</th><th>Configure Step</th><th>Compile Step</th><th>Install Step</th></tr>
+<tr><th>make</th><td>$ ./configure</td><td>$ make</td><td>$ sudo make install</td></tr>
+<tr><th>SCons</th><td>$ scons configure</td><td>$ scons</td><td>$ sudo scons install</td></tr>
+</table>
+
+For more details on SCons vs other build tools see: http://www.scons.org/wiki/SconsVsOtherBuildTools
+
+---
+
+# Old / outdated information
 
 
-# Summary of  Changes between 0.5.x and 0.6.0
+## Summary of  Changes between 0.5.x and 0.6.0
 
  * SCons now has an optional configure step which will configure your build, then exit.
   * To configure run $ python scons/scons.py configure SOMEVARIABLE=somevalue
