@@ -8,6 +8,8 @@ Maps are (mainly) made up of arbitrary numbers of *layers*. Each layer has a *da
 
 A *style* defines how the objects in a layer are rendered. A style contains one or more *rules* that can optionally constrain its output to *filter* out a subset of the objects provided by the layers datasource, for example to show only these objects who have a specific attribute set. Filters are optional – a common case for simple maps is to have one rule for each layer without any filters. Each rule holds one or more *symbolizers* which are responsible for actually drawing geometry in the output. Depending on the symbolizer class and settings, geometry can be rendered in a variety of ways.
 
+The order of layers, rules and symbolizers is generally important in Mapnik, as the layering of output in the result image is not modelled explicitly (like, for example the `z-index` property in CSS), but determined by the order of these elements. It is therefore important to set these elements up in the correct order to produce the desired results.
+
 ## Further Reading
 
 - [[SymbologySupport]]
