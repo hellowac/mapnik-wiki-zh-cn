@@ -15,13 +15,13 @@ Currently source compiles are required for all platforms, see instructions below
 
 Build instructions are included in the source tree in the file [INSTALL.md](https://github.com/mapnik/mapnik/blob/master/INSTALL.md)
 
+See [[UsingScons]] for an introduction to SCons (Mapnik's python build system) 
+
 ---
 
 # Old / outdated information
 
 Also see [[MapnikDependencies]] for a list of dependencies and how to obtain / build them.
-
-See [[UsingScons]] for an introduction to SCons (Mapnik's python build system) 
 
 ## Platform-specific installation notes
 
