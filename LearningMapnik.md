@@ -5,7 +5,7 @@ Mapnik can be used in a variety of ways. The most widely used options are using 
 
 ## General Concepts
 
-* TODO: Introdice Mapnik core concepts
+* TODO: Introduce Mapnik core concepts
 * [[IntroductionToGIS]] -- a brief intro to the world of mapping systems
 
 ## Getting started
