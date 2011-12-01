@@ -50,7 +50,7 @@ A Shapefile datasource may be created as follows:
     
         // Bridges
         Layer lyr("Vector");
-        set_datasource(datasource_cache::instance()->create(p));
+        lyr.set_datasource(datasource_cache::instance()->create(p));
         lyr.add_style("vector");
         m.addLayer(lyr);
     }
