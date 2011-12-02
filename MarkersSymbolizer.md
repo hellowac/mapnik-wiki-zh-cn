@@ -4,21 +4,22 @@
 <!-- Author: Ldp -->
 MarkersSymbolizer, is experimental and added in r557. It currently accepts no options (see #408) but the development version supports these options:
 
-||*Name*||*Description*||*Default*||   Applies to SVG ||
-||allow_overlap||Allow the symbolizer to overlap others.||false||yes ||
-||spacing||Distance between markers in pixels.||100||yes ||
-||max_error||Maximum amount the marker can be move from its designated place to avoid collisions. This value is a fraction of "spacing", e.g. spacing = 100, max_error = 0.2 then the maximum the marker can be moved is 20pixels, if this is not enough it isn't drawn at all. || 0.2 ||yes ||
-||filename||The SVG file to use for the marker ||built-in marker||yes ||
-||transform||[SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) || identity || yes ||
-||opacity|| Opacity||1.0|| yes ||
-||fill||Color of the marker fill, e.g. #FFFFFF. This property is only used when the marker is NOT an SVG graphic. || blue|| no ||
-|| stroke                 ||  CSS colour - A Color value such as 'green' or #A3D979 ||  black || no ||
-|| stroke-width    || 0.0 - n  - Width of outline in pixels ||  1.0 || no ||
-|| stroke-opacity || 0.0 - 1.0 - 1 is fully opaque while zero is fully transparent and .5 would be 50% transparent ||  1.0  || no ||
-|| width                  || width of marker   ||   5 || no ||
-|| height                 ||  height of marker           ||  5 || no ||
-|| placement          || "point" or "line"  || line || no (todo) ||
-|| marker_type       || "arrow" "ellipse" || "arrow" if line placement, "ellipse" if point placement || no ||
+|*Name*|*Description*|*Default*|Applies to SVG |
+--------|------------|---------|----------------|
+|allow_overlap | Allow the symbolizer to overlap others. | false | yes |
+|spacing | Distance between markers in pixels. | 100 | yes |
+|max_error | Maximum amount the marker can be move from its designated place to avoid collisions. This value is a fraction of "spacing", e.g. spacing = 100, max_error = 0.2 then the maximum the marker can be moved is 20pixels, if this is not enough it isn't drawn at all. | 0.2 |yes |
+|filename | The SVG file to use for the marker | built-in marker | yes |
+|transform | [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) | identity | yes |
+|opacity | Opacity | 1.0 | yes |
+|fill | Color of the marker fill, e.g. #FFFFFF. This property is only used when the marker is NOT an SVG graphic. | blue | no |
+| stroke | CSS colour - A Color value such as 'green' or #A3D979 | black | no |
+| stroke-width | 0.0 - n  - Width of outline in pixels | 1.0 | no |
+| stroke-opacity | 0.0 - 1.0 - 1 is fully opaque while zero is fully transparent and .5 would be 50% transparent | 1.0  | no |
+| width | width of marker | 5 | no |
+| height |  height of marker | 5 | no |
+| placement | "point" or "line"  | line | no (todo) |
+| marker_type | "arrow" "ellipse" | "arrow" if line placement, "ellipse" if point placement | no |
 
 It can be added to a Rule with line features like:
 
