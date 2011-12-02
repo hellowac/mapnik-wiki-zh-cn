@@ -4,39 +4,41 @@
 <!-- Author: herm -->
 ## Configuration Options for TextSymbolizer
 
-||name||This is the query field you want to use for the label text, e.g. "street_name" (deprecated in Mapnik2, see section "new syntax" below)||
-||face_name||Font name (see [wiki:UsingCustomFonts])||
-||fontset_name|| FontSet name ||
-||size||Font size||
-||text_ratio|| Try to keep a given height to width ratio||
-||wrap_character||Use this character instead of a space to wrap long names (since r1254)||
-||wrap_width||Length before wrapping long names||
-||wrap-before||Wrap text before wrap-width is reached. If this setting is off your lines will always be a bit longer than wrap-width. If this setting is on the lines will usually be a bit shorter, but can be longer if there is a single word that is longer than your current line limit. (Mapnik2)||
-||text_transform||Allows conversion of text to lower or upper case before display. (available in >=0.8.0) Values are "none" (default), "uppercase", "lowercase" and "capitalize". (since r2210)||
-||text_convert (old)||same as above but the old name in Mapnik 0.7.x (later renamed to text_transform to more closely match the css property.)  Values are "none" (default), "toupper", and "tolower". (since r1254)||
-||line_spacing||Vertical spacing between lines of multiline labels (in pixels) (since r1254)||
-||character_spacing||Additional horizontal spacing between characters (in pixels). Currently works for point placement only, not line placement. You will get the normal spacing defined by the font plus this amount of extra space. (since r1254)||
-||spacing||Space between repeated labels||
-||label_position_tolerance||Allow labels to be moved from their point in line placement. Lower values indicate that Mapnik tries less positions and generally leads to fewer labels. Higher values lead to Mapnik trying more different positions along a line to find a free spot. If unset or 0, Mapnik sets this value based on the total length of the line to ensure enough labels are placed. Only available in XML in >= mapnik 0.7.2 (r2440)||
-||force_odd_labels||Force an odd amount of labels to be generated. Defaults to false.||
-||max_char_angle_delta||Maximum angle (in degrees) between two consecutive characters in a label allowed. The lower the number the fewer labels placed - this is to stop placing labels around sharp corners. See r365 for more info||
-||fill||Color of the text fill, e.g. #FFFFFF||
-||halo_fill||Color of the text halo||
-||halo_radius||Radius of the halo in whole pixels (fractional pixels are not accepted)||
-||dx, dy||Displace label by fixed amount on either axis. Also see note at vertical_alignment||
-||avoid_edges||Boolean to avoid labeling near intersection edges||
-||min_distance||Minimum distance between repeated labels such as street names or shield symbols (works across features, added in r490) (named minimum-distance in Mapnik2)||
-||allow_overlap||Allow labels to overlap other labels - Note: you can also clear the label collision cache at the LAYER level to promote more overlap. See 'clear_label_cache' at wiki:XMLConfigReference#Layer||
-||placement||"line" to label along lines instead of by point||
-||vertical_alignment||Position of label relative to point position ("top" (label on top of point), "middle", "bottom", "auto") default is "auto". "auto" is "middle" for dy=0, "bottom" for dy>0, "top" for dy<0 ("auto" since r2626, same behavior since r1527, "middle" before that)||
-||horizontal-alignment||Position of label relative to point position ("left, "middle", "right", "auto") default is "auto". (Mapnik2)||
-||justify-alignment||Justify multi-line text ("left, "middle", "right", "auto") default is "auto". (Mapnik2)||
-||opacity||1 is fully opaque while zero is fully transparent and .5 would be 50% transparent||
-||minimum_padding||default 0.0, if >0 helps prevents a label (or shield) from being placed too near the edge of the map. added in r2330 (#547)||
-||minimum-path-length||default 0.0, place labels only on paths longer than this value. Added in r3272 (#865)||
-||orientation||Rotate text (Mapnik2)||
-||placement-type||Placement finder algorithm. Currently supported: "dummy" (do nothing) and "simple" (automatically create new positions using a simple configuration; see below) (since r2626)||
-||placements||List of possible placements. Only valid if placement-type="simple" is used. (since r2626)||
+| *parameter* | *value*  | *description* | *unit* | *default* |
+----------------|---------|----------------|-------|------------|
+| name        |    -      | This is the query field you want to use for the label text, e.g. "street_name" (deprecated in Mapnik2, see section "new syntax" below)| - | - |  
+|face_name     |   -      | Font name (see [wiki:UsingCustomFonts])| - | - |
+|fontset_name|| FontSet name ||
+|size||Font size|||
+|text_ratio|| Try to keep a given height to width ratio|||
+|wrap_character||Use this character instead of a space to wrap long names (since r1254)|||
+|wrap_width||Length before wrapping long names|||
+|wrap-before||Wrap text before wrap-width is reached. If this setting is off your lines will always be a bit longer than wrap-width. If this setting is on the lines will usually be a bit shorter, but can be longer if there is a single word that is longer than your current line limit. (Mapnik2)|||
+|text_transform||Allows conversion of text to lower or upper case before display. (available in >=0.8.0) Values are "none" (default), "uppercase", "lowercase" and "capitalize". (since r2210)|||
+|text_convert (old)||same as above but the old name in Mapnik 0.7.x (later renamed to text_transform to more closely match the css property.)  Values are "none" (default), "toupper", and "tolower". (since r1254)|||
+|line_spacing||Vertical spacing between lines of multiline labels (in pixels) (since r1254)|||
+|character_spacing||Additional horizontal spacing between characters (in pixels). Currently works for point placement only, not line placement. You will get the normal spacing defined by the font plus this amount of extra space. (since r1254)|||
+|spacing||Space between repeated labels|||
+|label_position_tolerance||Allow labels to be moved from their point in line placement. Lower values indicate that Mapnik tries less positions and generally leads to fewer labels. Higher values lead to Mapnik trying more different positions along a line to find a free spot. If unset or 0, Mapnik sets this value based on the total length of the line to ensure enough labels are placed. Only available in XML in >= mapnik 0.7.2 (r2440)|||
+|force_odd_labels||Force an odd amount of labels to be generated. Defaults to false.|||
+|max_char_angle_delta||Maximum angle (in degrees) between two consecutive characters in a label allowed. The lower the number the fewer labels placed - this is to stop placing labels around sharp corners. See r365 for more info|||
+|fill||Color of the text fill, e.g. #FFFFFF|||
+|halo_fill||Color of the text halo|||
+|halo_radius||Radius of the halo in whole pixels (fractional pixels are not accepted)|||
+|dx, dy||Displace label by fixed amount on either axis. Also see note at vertical_alignment|||
+|avoid_edges||Boolean to avoid labeling near intersection edges|||
+|min_distance||Minimum distance between repeated labels such as street names or shield symbols (works across features, added in r490) (named minimum-distance in Mapnik2)|||
+|allow_overlap||Allow labels to overlap other labels - Note: you can also clear the label collision cache at the LAYER level to promote more overlap. See 'clear_label_cache' at wiki:XMLConfigReference#Layer|||
+|placement||"line" to label along lines instead of by point|||
+|vertical_alignment||Position of label relative to point position ("top" (label on top of point), "middle", "bottom", "auto") default is "auto". "auto" is "middle" for dy=0, "bottom" for dy>0, "top" for dy<0 ("auto" since r2626, same behavior since r1527, "middle" before that)|||
+|horizontal-alignment||Position of label relative to point position ("left, "middle", "right", "auto") default is "auto". (Mapnik2)|||
+|justify-alignment||Justify multi-line text ("left, "middle", "right", "auto") default is "auto". (Mapnik2)|||
+|opacity||1 is fully opaque while zero is fully transparent and .5 would be 50% transparent|||
+|minimum_padding||default 0.0, if >0 helps prevents a label (or shield) from being placed too near the edge of the map. added in r2330 (#547)|||
+|minimum-path-length||default 0.0, place labels only on paths longer than this value. Added in r3272 (#865)|||
+|orientation||Rotate text (Mapnik2)|||
+|placement-type||Placement finder algorithm. Currently supported: "dummy" (do nothing) and "simple" (automatically create new positions using a simple configuration; see below) (since r2626)|||
+|placements||List of possible placements. Only valid if placement-type="simple" is used. (since r2626)|||
 
 In Mapnik2 all underscores "_" are replaced by dashes "-" (e.g. avoid-edges instead of avoid_edges)
 
