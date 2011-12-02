@@ -1,22 +1,19 @@
-<!-- Name: LinePatternSymbolizer -->
-<!-- Version: 8 -->
-<!-- Last-Modified: 2009/09/17 01:14:55 -->
-<!-- Author: theosys -->
 ## Configuration Options for LinePatternSymbolizer
 
-|| *parameter* || *value* || *default* ||
-|| file || path to image file || none ||
-|| base || base path where to search for file || none ||
-|| width || px || 4 ||
-|| height || px || 4 ||
-|| type || png tiff || none ||
+| *parameter* | *value* | *default* |
+|---|---|---|
+| file | path to image file | none |
+| base | base path where to search for file | none |
+| width | px | 4 |
+| height | px | 4 |
+| type | png tiff | none |
 
 *Note* that the line direction matters!
 
 ## Examples
 A natural=cliff tag on an OpenStreetMap tile, rendered with LinePatternSymbolizer.
-[[BR]]
-[[Image(http://a.tile.openstreetmap.org/18/141423/87855.png)]]
+
+![Showing a cliff on openstreetmap.org](http://a.tile.openstreetmap.org/18/141423/87855.png)
 
 ### Default
 
