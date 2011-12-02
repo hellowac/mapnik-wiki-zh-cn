@@ -9,16 +9,16 @@ If you want to draw a graphic symbol and a text you would better use a ShieldSym
 Staring from r1793 PointSymbolizer supports [Scalable Vector Graphics (SVG)](http://www.w3.org/TR/SVG/) as input images,
 see examples below.
 
-|| *parameter* || *value*  || *default* ||
-|| file             ||  path to image file || none ||
-|| width || px || 4 ||
-|| height || px || 4 ||
-|| type || png tiff (+ svg (trunk)) || none ||
-|| allow_overlap || allow text to overlap the point image; true/false || false ||
-|| opacity || Opacity of the symbolizer: 0.0 - 1.0 || 1.0
-||   *Development version (trunk)*||
-||   transform    ||   [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) || identity ||
-||   ignore-placement || allow subsequent point/shield symbolizers to overlap this symbol; true/false || false ||
+| *parameter* | *value*  | *default* |
+--------------|---------|-----------|
+| file    |  path to image file | none |
+| width | px | 4 |
+| height | px | 4 |
+| type | png tiff (+ svg (trunk)) | none |
+| allow_overlap | allow text to overlap the point image; true/false | false |
+| opacity | *Development version (trunk)* Opacity of the symbolizer: 0.0 - 1.0 | 1.0 | 
+|   transform    |   [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) | identity |
+|   ignore-placement | allow subsequent point/shield symbolizers to overlap this symbol; true/false | false |
 
 ## Examples
 
