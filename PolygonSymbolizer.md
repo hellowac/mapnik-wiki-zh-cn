@@ -6,10 +6,11 @@
 
 A PolygonSymbolizer is often used to render the area enclosed by a [polygon](http://en.wikipedia.org/wiki/Polygon). For example, the `rundemo.py` and `rundemo.cpp` applications use PolygonSymbolizer objects to "fill-in" [Canadian provinces with different colors and to make bodies of water look blue](http://trac.mapnik.org/attachment/wiki/PolygonSymbolizer/demo256.png?format=raw).
 
-|| *parameter* || *value*  || *default* ||
-|| fill            ||  CSS colour  || "grey" ||
-|| fill-opacity || 0.0 - 1.0 || 1.0 ||
-|| gamma || 0.0 - 1.0 || 1.0 ||
+| *parameter* | *value*  | *default* |
+-------------|---------|------------|
+| fill            |  CSS colour | "grey" |
+| fill-opacity | 0.0 - 1.0 | 1.0 |
+| gamma | 0.0 - 1.0 | 1.0 |
 
 * Note: gamma is available in Mapnik >= 0.7.0, see #428 for more detail.
 
