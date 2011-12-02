@@ -7,42 +7,44 @@
 NEW: Starting from r1793 ShieldSymbolizer supports [Scalable Vector Graphics (SVG)](http://www.w3.org/TR/SVG/) as input images,
 see examples below.
 
-||allow_overlap||Allow the symbolizer to overlap others. (Default "false")||
-||avoid_edges||Attempts to stay away from the edge of the image. (Default "false")||
-||base||Base symbol template. See [#574](http://trac.mapnik.org/changeset/574) (XML config only)||
-||character_spacing||Horizontal spacing between characters (in pixels). Currently works for point placement only, not line placement. (Default 0)||
-||dx||Offset the text horizontally. Unit: pixels from the image's center||
-||dy||Offset the text vertically. Unit: pixels from the image's center. Also see note at vertical_alignment.||
-||face_name||Font name for the shield text||
-||file||The file to use for the shield background||
-||fill||Color of the shield text, e.g. #FFFFFF||
-||fontset_name||Name of the FontSet to use. (XML config only)||
-||halo_fill||Color of the colored halo around the text, e.g. #AF2304. (Default white)||
-||halo_radius||Thickness of the colored halo around the text as an integer value in pixels. (Default 0)||
-||height||The height of the shield file (Defaults to image's height)||
-||horizontal_alignment||(Default "middle")||
-||justify_alignment||(Default "middle")||
-||line_spacing||Vertical spacing between lines of multi-line labels, in pixels. (Default 0)||
-||min_distance||Minimum distance to the next shield symbol, not necessarily the same shield. (Default 0.0)||
-||name||This is the query field you want to use for the label text, e.g. "ref"||
-||no_text||(Default "false")||
-||opacity||(Default 1.0) - opacity of the image used for the shield||
-||text-opacity||(Default 1.0) - opacity of the text placed on top of the shield||
-||placement||"line" or "point"||
-||size||Font size of the shield text (a value of zero will prevent text from being written)||
-||spacing||The spacing between repeated occurrences of the same shield||
-||text_convert||Allows conversion of text to lower or upper case before display. Values are "none" (default), "toupper", and "tolower".||
-||type||Type of the shield file, e.g. "png"||
-||unlock_image||If "false", the symbol is placed relative to the text box center. If "true", the symbol is placed relative to the point position.(Default "false")||
-||vertical_alignment||Position of label relative to point position ("top" to label on top of a point, "middle", "bottom") default is "middle" for dy = 0, "bottom" for dy > 0, "top" for dy < 0||
-||width||The width of the shield file. (Defaults to image's width)||
-||wrap_before||(Default "false")||
-||wrap_character||Use this character instead of a space to wrap long names. (Default " ")||
-||wrap_width||Length before wrapping long names. (Default 0)||
-||   *Development version (trunk)*||
-||   transform    ||    [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) ||
-||shield_dx||offset the shield image horizontally||
-||shield_dy||offset the shield image vertically||
+
+| *parameter* | *value* | *default* |
+--------------|---------|-----------|
+|allow_overlap | Allow the symbolizer to overlap others | false|
+|avoid_edges | Attempts to stay away from the edge of the image | false|
+|base | Base symbol template. See [#574](http://trac.mapnik.org/changeset/574) (XML config only) | |
+|character_spacing | Horizontal spacing between characters (in pixels). Currently works for point placement only, not line placement | 0|
+|dx | Offset the text horizontally. Unit: pixels from the image's center | |
+|dy | Offset the text vertically. Unit: pixels from the image's center. Also see note at vertical_alignment. | |
+|face_name | Font name for the shield text | |
+|file | The file to use for the shield background | |
+|fill | Color of the shield text, e.g. #FFFFFF | |
+|fontset_name | Name of the FontSet to use. (XML config only) | |
+|halo_fill | Color of the colored halo around the text, e.g. #AF2304. | white |
+|halo_radius | Thickness of the colored halo around the text as an integer value in pixels | 0 |
+|height | The height of the shield file | image's height | 
+|horizontal_alignment |  | middle |
+|justify_alignment | | midle|
+|line_spacing | Vertical spacing between lines of multi-line labels, in pixels | 0|
+|min_distance | Minimum distance to the next shield symbol, not necessarily the same shield | 0|
+|name | This is the query field you want to use for the label text, e.g. "ref" | |
+|no_text | | false|
+|opacity| opacity of the image used for the shield | 1|
+|text-opacity | opacity of the text placed on top of the shield | 1|
+|placement | "line" or "point" | |
+|size | Font size of the shield text (a value of zero will prevent text from being written) | |
+|spacing | The spacing between repeated occurrences of the same shield | |
+|text_convert | Allows conversion of text to lower or upper case before display. Values are "none", "toupper", and "tolower". | "none"|
+|type | Type of the shield file, e.g. "png" | |
+|unlock_image | If "false", the symbol is placed relative to the text box center. If "true", the symbol is placed relative to the point position | "false"|
+|vertical_alignment | Position of label relative to point position ("top" to label on top of a point, "middle", "bottom") for dy = 0, "bottom" for dy > 0, "top" for dy < 0 | "middle"|
+|width | The width of the shield file| image's width |
+|wrap_before| | "false"|
+|wrap_character | Use this character instead of a space to wrap long names | " "|
+|wrap_width | Length before wrapping long names| 0 |
+| transform | *Development version (trunk)* [SVG transform] (http://www.w3.org/TR/SVG/coords.html#TransformAttribute) | |
+|shield_dx|offset the shield image horizontally | |
+|shield_dy|offset the shield image vertically | |
 
 ## Good to know
 
