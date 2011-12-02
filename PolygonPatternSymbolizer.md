@@ -4,11 +4,12 @@
 <!-- Author: floledermann -->
 ## Configuration Options for PolygonPatternSymbolizer
 
-|| *parameter* || *value* || *default* ||
-|| file || path to image file || none ||
-|| width || px || 4 ||
-|| height || px || 4 ||
-|| type || png tiff || none ||
+| *parameter* | *value* | *default* |
+--------------|---------|-----------|
+| file | path to image file | none |
+| width | px | 4 |
+| height | px | 4 |
+| type | png tiff | none |
 
 ## Examples
 
