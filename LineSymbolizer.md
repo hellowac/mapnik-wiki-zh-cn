@@ -1,7 +1,4 @@
-<!-- Name: LineSymbolizer -->
-<!-- Version: 11 -->
-<!-- Last-Modified: 2009/09/17 02:06:35 -->
-<!-- Author: theosys -->
+
 # LineSymbolizer
 
 A LineSymbolizer is used to render a "stroke" along a linear geometry.
