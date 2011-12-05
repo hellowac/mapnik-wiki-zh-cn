@@ -6,8 +6,8 @@
 
 A BuildingSymbolizer is used to create a pseudo 3D effect on polygons.
 
-| **parameter**      | **value**    | **default** |
-|:-----------------|---------------:|:-----------:|
+|**parameter**|**value**|**default**|
+|:-----------:|:-------:|:---------:|
 | fill             |  CSS colour    | gray      |
 | fill-opacity     |  float         | 1.0       |
 | height           |  float         | 0         |
