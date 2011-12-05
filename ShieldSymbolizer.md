@@ -8,8 +8,8 @@ NEW: Starting from r1793 ShieldSymbolizer supports [Scalable Vector Graphics (SV
 see examples below.
 
 
-| *parameter* | *value* | *default* |
---------------|---------|-----------|
+| *parameter*      | *value* | *default* |
+|------------------|---------|-----------|
 |allow-overlap | Allow the symbolizer to overlap others | false|
 |avoid-edges | Attempts to stay away from the edge of the image | false|
 |base | Base symbol template. See [#574](http://trac.mapnik.org/changeset/574) (XML config only) | |
