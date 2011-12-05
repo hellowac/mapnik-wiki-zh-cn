@@ -1,7 +1,3 @@
-<!-- Name: PluginArchitecture -->
-<!-- Version: 32 -->
-<!-- Last-Modified: 2010/11/13 09:01:03 -->
-<!-- Author: kunitoki -->
 ## Overview
 
 Mapnik supports a Plugin architecture read access to a variety of formats.
@@ -12,18 +8,19 @@ Interested in developing a new plugin see: DevelopingPlugins
 
 All current plugins are located in source:trunk/plugins/input/
 
- || *Name* || *Availability* || *Status* || *Built by default*  || *Notes*  ||
- || *[postgis](/wiki:PostGIS/)* || 0.2.0 || Stable || yes || support for accessing geospatial data through [wiki:PostGIS], the spatial database extension for [PostgreSQL](http://en.wikipedia.org/wiki/PostgreSQL) ||
- || *[raster](/wiki:Raster/)* || 0.2.0 || Stable || yes ||  stripped or tiled raster TIFF image dataset support ||
- || *[shape](/wiki:Shape/)* || 0.2.0 || Stable || yes ||  vector SHP ([ESRI Shapefile](http://en.wikipedia.org/wiki/Shapefile)) parsing ||
- || *[gdal](/wiki:GDAL/)* || 0.5.0 || Beta || no ||  support for [GDAL](http://en.wikipedia.org/wiki/GDAL) datasets ||
- || *[ogr](/wiki:OGR/)*  || 0.6.0 || Beta || no ||  support for [OGR](http://en.wikipedia.org/wiki/GDAL) datasets ||
- || *[osm](/wiki:OsmPlugin/)* || 0.6.0 || Beta || no ||  support for reading OpenStreetMap (OSM) xml datasets ||
- || *[sqlite](/wiki:SQLite/)* || 0.6.0 || Beta || no ||  support for [SQLite](http://en.wikipedia.org/wiki/SQLite) / [Spatialite](http://www.gaia-gis.it/spatialite) sql vector format ||
- || *[occi](/wiki:OCCI/)* || 0.6.0 || Beta || no ||  support for oracle spatial 10g (versions 10.2.0.x) ([Oracle Spatial](http://en.wikipedia.org/wiki/Oracle_Spatial)) sql vector format ||
- || *[kismet](/wiki:Kismet/)* || SVN || Alpha || no ||  support for [Kismet](http://www.kismetwireless.net/) GPS; shows little WLAN nodes on the map || 
- || *[rasterlite](/wiki:Rasterlite/)* || SVN || Experimental || no ||  support for [Rasterlite](http://www.gaia-gis.it/spatialite) sqlite raster with wavelet compression || 
- || *[geos](/wiki:GEOS/)* || SVN || Experimental || no ||  support for inline WKT geometries using [GEOS](http://trac.osgeo.org/geos/) library || 
+| **Name**| **Availability**|**Status**|**Build by Default**|**Notes**|
+|:-------:|:---------------:|:--------:|:------------------:|:-------:|
+| *[postgis](/wiki:PostGIS/)*| 0.2.0| Stable| yes| support for accessing geospatial data through [wiki:PostGIS], the spatial database extension for [PostgreSQL](http://en.wikipedia.org/wiki/PostgreSQL)|
+| *[raster](/wiki:Raster/)*| 0.2.0| Stable| yes|  stripped or tiled raster TIFF image dataset support|
+| *[shape](/wiki:Shape/)*| 0.2.0| Stable| yes|  vector SHP ([ESRI Shapefile](http://en.wikipedia.org/wiki/Shapefile)) parsing|
+| *[gdal](/wiki:GDAL/)*| 0.5.0| Beta| no|  support for [GDAL](http://en.wikipedia.org/wiki/GDAL) datasets|
+| *[ogr](/wiki:OGR/)* | 0.6.0| Beta| no|  support for [OGR](http://en.wikipedia.org/wiki/GDAL) datasets|
+| *[osm](/wiki:OsmPlugin/)*| 0.6.0| Beta| no|  support for reading OpenStreetMap (OSM) xml datasets|
+| *[sqlite](/wiki:SQLite/)*| 0.6.0| Beta| no|  support for [SQLite](http://en.wikipedia.org/wiki/SQLite) / [Spatialite](http://www.gaia-gis.it/spatialite) sql vector format|
+| *[occi](/wiki:OCCI/)*| 0.6.0| Beta| no|  support for oracle spatial 10g (versions 10.2.0.x) ([Oracle Spatial](http://en.wikipedia.org/wiki/Oracle_Spatial)) sql vector format|
+| *[kismet](/wiki:Kismet/)*| SVN| Alpha| no|  support for [Kismet](http://www.kismetwireless.net/) GPS; shows little WLAN nodes on the map| 
+| *[rasterlite](/wiki:Rasterlite/)*| SVN| Experimental| no|  support for [Rasterlite](http://www.gaia-gis.it/spatialite) sqlite raster with wavelet compression| 
+| *[geos](/wiki:GEOS/)*| SVN| Experimental| no|  support for inline WKT geometries using [GEOS](http://trac.osgeo.org/geos/) library| 
 
 *Note*: When compiling Mapnik from source only the PostGIS, Raster, and Shape plugins will be compiled by default.
 
