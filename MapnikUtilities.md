@@ -24,7 +24,7 @@ Add more here as you find them.
 
 [OpenLayers and Custom Tiles](http://trac.openlayers.org/wiki/UsingCustomTiles) - Tips for server pre-generated Mapnik tiles with OpenLayers
 
-=== Polymaps === 
+### Polymaps
 
 http://polymaps.org/
 
