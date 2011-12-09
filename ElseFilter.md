@@ -59,5 +59,5 @@ For each Object read from the Datasource Mapnik checks if the current ScaleDenom
     rule.set_else(True) # instead of rule.filter(...)
 
 ## See also
- * The normal [wiki:Filter]
- * The (other) special AlsoFilter
+ * The normal [Filter](https://github.com/mapnik/mapnik/wiki/Filter)
+ * The (other) special [AlsoFilter](https://github.com/mapnik/mapnik/wiki/AlsoFilter)
