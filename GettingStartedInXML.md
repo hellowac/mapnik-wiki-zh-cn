@@ -1,6 +1,6 @@
 ## Tutorial 2  -- 'Hello,world!' using XML configuration
 
-== Overview == 
+# Overview
 
 Make sure you have mapnik installed and you've successfully run through [GettingStarted Tutorial 1].
 
