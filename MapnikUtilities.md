@@ -1,7 +1,3 @@
-<!-- Name: MapnikUtilities -->
-<!-- Version: 7 -->
-<!-- Last-Modified: 2011/04/28 09:41:33 -->
-<!-- Author: manelclos -->
 ## Mapnik Utilities
 
 Third party scripts, applications, and approaches for working with mapnik
@@ -20,9 +16,10 @@ Add more here as you find them.
 
 ### mess.js
 
-[mess.js](https://github.com/developmentseed/mess.js) - Extended, Fast Styling for Mapnik
+[Carto](https://github.com/mapbox/carto) - Extended, Fast Styling for Mapnik
 
 ## Mapping UI
+
 ### OpenLayers
 
 [OpenLayers and Custom Tiles](http://trac.openlayers.org/wiki/UsingCustomTiles) - Tips for server pre-generated Mapnik tiles with OpenLayers
@@ -73,7 +70,7 @@ See http://bitbucket.org/springmeyer/quantumnik/
 
 ## Nik2Img
 
-[wiki:Nik2Img] -- Read in an XML mapfile and output a map
+[Nik2Img](Nik2Img) -- Read in an XML mapfile and output a map
 
 ## Shapeindex
 
