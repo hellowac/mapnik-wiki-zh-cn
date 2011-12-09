@@ -1,9 +1,3 @@
-<!-- Name: MarkersSymbolizer -->
-<!-- Version: 9 -->
-<!-- Last-Modified: 2010/09/26 07:50:00 -->
-<!-- Author: Ldp -->
-MarkersSymbolizer, is experimental and added in r557. It currently accepts no options (see #408) but the development version supports these options:
-
 |*Name*|*Description*|*Default*|Applies to SVG |
 --------|------------|---------|----------------|
 |allow_overlap | Allow the symbolizer to overlap others. | false | yes |
@@ -23,10 +17,10 @@ MarkersSymbolizer, is experimental and added in r557. It currently accepts no op
 
 It can be added to a Rule with line features like:
 
-    #!xml
-    <MarkersSymbolizer />
+```xml
+<MarkersSymbolizer />
+```
 
-[[BR]]
 [[Image(http://trac.mapnik.org/raw-attachment/ticket/180/offsets_directions.png)]]
 
 The MarkersSymbolizer should draw blue directional arrows *in the direction of the geometry* (for things like one-way streets).[[BR]]
@@ -36,28 +30,31 @@ The ST_reverse function of Postgis can fix this (The problem will then be to ide
 ### SVG markers
 *NEW*: Staring from r1793 MarkersSymbolizer supports [Scalable Vector Graphics (SVG)](http://www.w3.org/TR/SVG/) as input images:
 
-[[Image(markers_symbolizer.png)]] 
+[[Image(markers_symbolizer.png)]]
 
 
-    #!xml
-    <Rule>
-        <MaxScaleDenominator>10000</MaxScaleDenominator>
-        <MarkersSymbolizer spacing="100" file="/Users/artem/Desktop/svg/ladybird.svg" transform="translate(0 -16) scale(2.0)"/>
-    </Rule>
+```xml
+<Rule>
+    <MaxScaleDenominator>10000</MaxScaleDenominator>
+    <MarkersSymbolizer spacing="100" file="/Users/artem/Desktop/svg/ladybird.svg" transform="translate(0 -16) scale(2.0)"/>
+</Rule>
+```
 
 ### Dynamic Ellipses
 *NEW*: Starting from r2158 MarkersSymbolizer supports width/height/fill/stroke properties to dynamically draw circles (w == h) or ellipses (w != h) when no SVG file is supplied:
 
-[[Image(dynamic_ellipse_markers.png)]]
+[Image](dynamic_ellipse_markers.png)
 
 
-    #!xml
-          <MarkersSymbolizer fill="darkorange" opacity=".7" width="20" height="10" stroke="orange" stroke-width="7" stroke-opacity=".2" placement="point" marker_type="ellipse"/>
+```xml
+<MarkersSymbolizer fill="darkorange" opacity=".7" width="20" height="10" stroke="orange" stroke-width="7" stroke-opacity=".2" placement="point" marker_type="ellipse"/>
+```
 
 CAVEAT: these properties do not apply to SVG files, and SVG transforms are not supported for modifying ellipses (yet).
 
-[[BR]]
 OSM currently renders one-way street arrows with Mapnik using several stacked LineSymbolizers with varying dash-arrays, but could potentially use the MarkersSymbolizer in the future:
 
 
-       <LinePatternSymbolizer file="/home/mapnik/mapnik/symbols/arrow.png" type="png" width="74" height="8" />
+```xml
+<LinePatternSymbolizer file="/home/mapnik/mapnik/symbols/arrow.png" type="png" width="74" height="8" />
+```
