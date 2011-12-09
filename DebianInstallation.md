@@ -7,7 +7,7 @@
 ## Dependencies for Debian 6: Squeeze (stable)
 
 
-    #!sh
+    #!/usr/bin/env bash
     sudo apt-get install \
     g++-4.4 cpp \
     libicu-dev libicu44 \
@@ -40,7 +40,7 @@
 ## Dependencies for Debian 5: Lenny
 
 
-    #!sh
+    #!/usr/bin/env bash
     sudo apt-get install -y g++ cpp \
     libboost-system1.35-dev \
     libboost-filesystem1.35-dev \
@@ -67,7 +67,7 @@
 Install Mapnik 0.7.1
 
 
-    #!sh
+    #!/usr/bin/env bash
     svn co http://svn.mapnik.org/tags/release-0.7.1/ mapnik-0.7.1
     cd mapnik-0.7.1
     python scons/scons.py configure INPUT_PLUGINS=all \
@@ -80,7 +80,7 @@ Install Mapnik 0.7.1
 or Mapnik trunk:
 
 
-    #!sh
+    #!/usr/bin/env bash
     svn co http://svn.mapnik.org/trunk mapnik-trunk
     cd mapnik-trunk
     python scons/scons.py configure INPUT_PLUGINS=all \
@@ -94,7 +94,7 @@ or Mapnik trunk:
 ### Optional: Build and install mapnik without root permissions
 The development libraries have to be present as described above. In the following example `/home/$USER/mapnik_svn` (`$DIR_MAPNIK_SVN`) is the directory where you want to check out the source and `/home/$USER/mapnik_inst` (`$DIR_MAPNIK_INSTALL`) is the directory you want to use for installation. 
 
-    #!sh
+    #!/usr/bin/env bash
     DIR_MAPNIK_SRC=/home/$USER/mapnik_svn
     DIR_MAPNIK_INSTALL=/home/$USER/mapnik_inst
     
