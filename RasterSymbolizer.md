@@ -17,9 +17,12 @@ The RasterSymbolizer is used to render an image from any [GDAL supported format]
 
  * As of Mapnik 0.8 the RasterSymbolizer can be assigned a RasterColorizer to color a raw data raster according to a palette. This is useful for visualizing scientific data, dynamically changing the color gradient of a DEM, etc...
 
-[[BR]]
-||[[Image(http://pavlenko.f2s.com/tiles/srtm3/9/277/197.png)]]||[[Image(http://media.mapnik.org/tiles/relief/7/63/42.png)]]||[[Image(http://1.tiles.ump.waw.pl/ump_tiles/12/2265/1395.png)]]||[[Image(http://toolserver.org/~cmarqu/hill/12/2265/1395.png)]] ||
-|| || || ||Processed as described in http://wiki.openstreetmap.org/wiki/Hillshading_using_the_Alpha_Channel_of_an_Image||
+![tile](http://pavlenko.f2s.com/tiles/srtm3/9/277/197.png)
+![tile](http://media.mapnik.org/tiles/relief/7/63/42.png)
+![tile](http://1.tiles.ump.waw.pl/ump_tiles/12/2265/1395.png)
+![tile](http://toolserver.org/~cmarqu/hill/12/2265/1395.png)
+
+Processed as described in http://wiki.openstreetmap.org/wiki/Hillshading_using_the_Alpha_Channel_of_an_Image
 
 # Usage
 
@@ -44,44 +47,50 @@ See the [wiki:GDAL] plugin and [wiki:Raster] plugin pages for more info
 Default (simply renders a copy of the raster)
 
 
-    #!xml
-    <Style name="My Style">
-        <Rule>
-            <RasterSymbolizer/>
-        </Rule>
-    </Style>
+```xml
+#!xml
+<Style name="My Style">
+    <Rule>
+        <RasterSymbolizer/>
+    </Rule>
+</Style>
+```
 
 Using the new 0.6.0 release opacity / merging / scaling options:
 
-    #!xml
-    <Style name="raster">
-        <Rule>
-            <RasterSymbolizer>
-                <CssParameter name="opacity">0.5</CssParameter>
-                <!--<CssParameter name="scaling">fast</CssParameter>-->
-                <CssParameter name="scaling">bilinear</CssParameter>
-                <!--<CssParameter name="scaling">bilinear8</CssParameter>-->
-    
-                <!--<CssParameter name="mode">grain_merge</CssParameter>-->
-                <!--<CssParameter name="mode">grain_merge2</CssParameter>-->
-                <!--<CssParameter name="mode">multiply</CssParameter>-->
-                <CssParameter name="mode">multiply2</CssParameter>
-                <!--<CssParameter name="mode">divide</CssParameter>-->
-                <!--<CssParameter name="mode">divide2</CssParameter>-->
-                <!--<CssParameter name="mode">screen</CssParameter>-->
-                <!--<CssParameter name="mode">hard_light</CssParameter>-->
-            </RasterSymbolizer>
-        </Rule>
-    </Style>
+```xml
+#!xml
+<Style name="raster">
+    <Rule>
+        <RasterSymbolizer>
+            <CssParameter name="opacity">0.5</CssParameter>
+            <!--<CssParameter name="scaling">fast</CssParameter>-->
+            <CssParameter name="scaling">bilinear</CssParameter>
+            <!--<CssParameter name="scaling">bilinear8</CssParameter>-->
+
+            <!--<CssParameter name="mode">grain_merge</CssParameter>-->
+            <!--<CssParameter name="mode">grain_merge2</CssParameter>-->
+            <!--<CssParameter name="mode">multiply</CssParameter>-->
+            <CssParameter name="mode">multiply2</CssParameter>
+            <!--<CssParameter name="mode">divide</CssParameter>-->
+            <!--<CssParameter name="mode">divide2</CssParameter>-->
+            <!--<CssParameter name="mode">screen</CssParameter>-->
+            <!--<CssParameter name="mode">hard_light</CssParameter>-->
+        </RasterSymbolizer>
+    </Rule>
+</Style>
+```
 
 ## Python Styles
 
 
-    #!python
-    s = Style()
-    r=Rule()
-    r.symbols.append(RasterSymbolizer())
-    s.rules.append(r)
+```python
+#!python
+s = Style()
+r=Rule()
+r.symbols.append(RasterSymbolizer())
+s.rules.append(r)
+```
 
 ## C++
 
