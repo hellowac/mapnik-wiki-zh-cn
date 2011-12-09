@@ -51,4 +51,4 @@ In python filters can be set using the following syntax:
 
 ## See also
  * The [OpenStreetMap Stylesheet](http://trac.openstreetmap.org/browser/applications/rendering/mapnik/osm.xml?rev=9228) which uses Filters in many ways.
- * The special Filters ElseFilter and AlsoFilter
+ * The special Filters [ElseFilter](https://github.com/mapnik/mapnik/wiki/ElseFilter) and [AlsoFilter](https://github.com/mapnik/mapnik/wiki/AlsoFilter)
