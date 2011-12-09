@@ -92,8 +92,6 @@ To style a layer use the [[RasterSymbolizer]]
 
 See the docstring at: http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-module.html#Raster
 
-== XML == 
-
 ```xml
 #!xml
 <!-- NOTE: must be in the same SRS as your map-->
@@ -117,22 +115,23 @@ Plugin datasource initialization example code can be found on PluginArchitecture
 A Raster datasource may be created as follows:
 
 
-    #!C
-    {
-        parameters p;
-        p["type"]="raster";
-        p["file"]="/path/to/my/raster/file.tiff";
-        p["lox"]=min_x;
-        p["loy"]=min_y;
-        p["hix"]=max_x;
-        p["hiy"]=max_y;
-    
-        set_datasource(datasource_cache::instance()->create(p));
-    
-        Layer lyr("Raster");
-        lyr.add_style("raster");
-        m.addLayer(lyr);
-    }
+```cpp
+{
+    parameters p;
+    p["type"]="raster";
+    p["file"]="/path/to/my/raster/file.tiff";
+    p["lox"]=min_x;
+    p["loy"]=min_y;
+    p["hix"]=max_x;
+    p["hiy"]=max_y;
+
+    set_datasource(datasource_cache::instance()->create(p));
+
+    Layer lyr("Raster");
+    lyr.add_style("raster");
+    m.addLayer(lyr);
+}
+```
 
 
 ## Further References
