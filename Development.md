@@ -18,5 +18,5 @@
 
 ## Resources for Contributing
 
-* Developers list: http://lists.berlios.de/mailman/listinfo/mapnik-devel
+* Developers list: http://groups.google.com/group/mapnik (old list to not used now http://lists.berlios.de/mailman/listinfo/mapnik-devel )
 * [OpenStreetMap Tickets](http://trac.openstreetmap.org/query?status=new&status=assigned&status=reopened&component=mapnik&order=id&desc=1) relating to the use of Mapnik
