@@ -1,3 +1,4 @@
+
 <!-- Name: RasterSymbolizer -->
 <!-- Version: 19 -->
 <!-- Last-Modified: 2010/03/12 07:06:11 -->
@@ -15,11 +16,9 @@ The RasterSymbolizer is used to render an image from any [GDAL supported format]
 
  * This Symbolizer is often used with DEM (digital elevation model) data containing missing values (for example NASA SRTM DEM data); to achieve nice rendering, the [gdal_fillnodata.py](http://www.gdal.org/gdal_fillnodata.html) tool might be useful.
 
- * As of Mapnik 0.8 the RasterSymbolizer can be assigned a RasterColorizer to color a raw data raster according to a palette. This is useful for visualizing scientific data, dynamically changing the color gradient of a DEM, etc...
+ * As of Mapnik 0.8 the RasterSymbolizer can be assigned a [[RasterColorizer]] to color a raw data raster according to a palette. This is useful for visualizing scientific data, dynamically changing the color gradient of a DEM, etc...
 
-![tile](http://pavlenko.f2s.com/tiles/srtm3/9/277/197.png)
 ![tile](http://media.mapnik.org/tiles/relief/7/63/42.png)
-![tile](http://1.tiles.ump.waw.pl/ump_tiles/12/2265/1395.png)
 ![tile](http://toolserver.org/~cmarqu/hill/12/2265/1395.png)
 
 Processed as described in http://wiki.openstreetmap.org/wiki/Hillshading_using_the_Alpha_Channel_of_an_Image
