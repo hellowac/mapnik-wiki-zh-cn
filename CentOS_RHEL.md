@@ -5,6 +5,7 @@
 # CentOS/RHEL Installation
 
 *Note:* These instructions are out of date. Until these are updated better references are:
+
 * http://svn.osgeo.org/osgeo/foss4g/benchmarking/mapnik/scripts/install_mapnik_rhel_5.5.sh
 * http://krisarnold.com/2010/07/14/installing-mapnik-on-centos-5/
 
