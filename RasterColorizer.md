@@ -81,36 +81,37 @@ In this example XML, the following value to color translation is performed:
  * 18 <= x < 100 green blending to indigo
 
 
-    #!xml
-    <?xml version="1.0" encoding="utf-8"?>
-    <Map srs="+proj=latlong +datum=WGS84">
-      <Style name="elevation">
-        <Rule>
-          <RasterSymbolizer>
-            <RasterColorizer default-mode="linear" default-color="white" epsilon="0.001">
-              <stop color="blue"        value = "-1000"  />
-              <stop color="red"         value = "-500"   mode = "discrete" />
-              <stop color="yellow"      value = "0"      />
-              <stop                     value = "5"      />
-              <stop color="red"         value = "10"     />
-              <stop color="green"       value = "15"     />
-              <stop color="black"       value = "17"     mode = "exact"    />
-              <stop color="indigo"      value = "100"    />
-            </RasterColorizer>
-          </RasterSymbolizer>
-        </Rule>
-      </Style>
-    
-        <Layer name="dataraster">
-            <StyleName>elevation</StyleName>
-            <Datasource>
-                <Parameter name="file">../mapnik2/tests/data/raster/dataraster.tif</Parameter>
-                <Parameter name="type">gdal</Parameter>
-                <Parameter name="band">1</Parameter>
-            </Datasource>
-        </Layer>
-    
-    </Map>
+```xml
+#!xml
+<?xml version="1.0" encoding="utf-8"?>
+<Map srs="+proj=latlong +datum=WGS84">
+<Style name="elevation">
+  <Rule>
+    <RasterSymbolizer>
+      <RasterColorizer default-mode="linear" default-color="white" epsilon="0.001">
+        <stop color="blue"        value = "-1000"  />
+        <stop color="red"         value = "-500"   mode = "discrete" />
+        <stop color="yellow"      value = "0"      />
+        <stop                     value = "5"      />
+        <stop color="red"         value = "10"     />
+        <stop color="green"       value = "15"     />
+        <stop color="black"       value = "17"     mode = "exact"    />
+        <stop color="indigo"      value = "100"    />
+      </RasterColorizer>
+    </RasterSymbolizer>
+  </Rule>
+</Style>
+
+<Layer name="dataraster">
+    <StyleName>elevation</StyleName>
+    <Datasource>
+        <Parameter name="file">../mapnik2/tests/data/raster/dataraster.tif</Parameter>
+        <Parameter name="type">gdal</Parameter>
+        <Parameter name="band">1</Parameter>
+    </Datasource>
+</Layer>
+</Map>
+```
 
 
 # Python Bindings
@@ -140,13 +141,15 @@ This is the enumeration of the stop modes. The values are _mapnik2.COLORIZER_LIN
 ## Example Python
 
 
-    #!py
-    import mapnik2
-    c = mapnik2.RasterColorizer( mapnik2.COLORIZER_DISCRETE , mapnik2.Color(0,0,0,255) )
-    c.epsilon = 0.001
-    c.add_stop(-10)
-    c.add_stop(15.83, mapnik2.COLORIZER_EXACT)
-    c.add_stop(20, mapnik2.Color("red"))
-    c.add_stop(30.25, mapnik2.COLORIZER_LINEAR, mapnik2.Color("green"))
-    c.get_color(23.124)
-    c.stops[1].color
+```python
+#!py
+import mapnik2
+c = mapnik2.RasterColorizer( mapnik2.COLORIZER_DISCRETE , mapnik2.Color(0,0,0,255) )
+c.epsilon = 0.001
+c.add_stop(-10)
+c.add_stop(15.83, mapnik2.COLORIZER_EXACT)
+c.add_stop(20, mapnik2.Color("red"))
+c.add_stop(30.25, mapnik2.COLORIZER_LINEAR, mapnik2.Color("green"))
+c.get_color(23.124)
+c.stops[1].color
+```
