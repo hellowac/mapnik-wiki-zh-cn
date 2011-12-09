@@ -25,13 +25,13 @@ To check if the gdal plugin built and was installed correctly you can do:
 
 # Parameters
 
-|| *parameter* || *value*  || *description* || *default* ||
-|| file            || string       || file of the raster to be read || ||
-|| base            || string       || base path where to search for file parameter || ||
-|| shared          || boolean      || wheter to open the dataset in shared mode (allowing save of resources when using multiple access to the same files) or not || false ||
-|| band            || integer      || request for a specific raster band index, -1 means all bands || -1 ||
-|| filter_factor   || double       || filter to use when querying for raster data || 0.0 ||
-
+| *parameter* | *value*  | *description* | *default* |
+|:------------|----------|---------------|----------:|
+| file        | string   | file of the raster to be read | |
+| base        | string   | base path where to search for file parameter | |
+| shared      | boolean  | wheter to open the dataset in shared mode (allowing save of resources when using multiple access to the same files) or not | false |
+| band        | integer  | request for a specific raster band index, -1 means all bands | -1 |
+| filter_factor | double | filter to use when querying for raster data | 0.0 |
 
 # Styling
 
