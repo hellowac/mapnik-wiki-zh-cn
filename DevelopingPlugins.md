@@ -39,7 +39,7 @@ To specify the kind of datasource, note that we specified p's "type" as "shape".
 
 ## Examples
 
-See [browser:trunk/plugins/input/templates] in the source tree, and specifically the [browser:trunk/plugins/input/templates/helloworld HelloWorld] plugin.
+See [master/plugins/input/templates](https://github.com/mapnik/mapnik/tree/master/plugins/input/templates) in the source tree, and specifically the [master/plugins/input/templates/helloworld](https://github.com/mapnik/mapnik/tree/master/plugins/input/templates) HelloWorld plugin.
 
 ## Required functions
 
