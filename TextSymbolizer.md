@@ -1,7 +1,3 @@
-<!-- Name: TextSymbolizer -->
-<!-- Version: 39 -->
-<!-- Last-Modified: 2011/09/15 16:28:11 -->
-<!-- Author: herm -->
 ## Configuration Options for TextSymbolizer
 
 | *parameter* | *value*  | *description* | *unit* | *default* |
@@ -44,45 +40,51 @@ In Mapnik2 all underscores "_" are replaced by dashes "-" (e.g. avoid-edges inst
 
 ## Examples
 
- Some examples of Mapnik's ability to place text along lines:
- [[BR]]
-[[Image(http://trac.mapnik.org/raw-attachment/ticket/62/output_old.png)]]
+Some examples of Mapnik's ability to place text along lines:
+
+![thumb](http://trac.mapnik.org/raw-attachment/ticket/62/output_old.png)
 
 ### XML
 
 
-    #!xml
-     <TextSymbolizer name="FIELD_NAME" face_name="DejaVu Sans Book" size="10" fill="black" halo_fill= "white" halo_radius="1" placement="line" allow_overlap="false"/>
+```xml
+#!xml
+<TextSymbolizer name="FIELD_NAME" face_name="DejaVu Sans Book" size="10" fill="black" halo_fill= "white" halo_radius="1" placement="line" allow_overlap="false"/>
+```
 
 See [wiki:XMLGettingStarted] for more XML example uses of TextSymbolizer.
 
 ### Python
 
 
-    #!python
-    t = TextSymbolizer('FIELD_NAME', 'DejaVu Sans Book', 10, Color('black'))
-    t.halo_fill = Color('white')
-    t.halo_radius = 1
-    t.label_placement = label_placement.LINE_PLACEMENT # POINT_PLACEMENT is default
-    dir(t) # for the rest of the attributes
+```python
+#!python
+t = TextSymbolizer('FIELD_NAME', 'DejaVu Sans Book', 10, Color('black'))
+t.halo_fill = Color('white')
+t.halo_radius = 1
+t.label_placement = label_placement.LINE_PLACEMENT # POINT_PLACEMENT is default
+dir(t) # for the rest of the attributes
+```
 
 ### C++
 
 
-    #!cpp
-    #include <mapnik/map.hpp>
-    #include <mapnik/font_engine_freetype.hpp>
-    
-    using namespace mapnik;
-    try {
-       freetype_engine::register_font("/path/to/font.ttf");
-       /* some code */
-       rule_type rule;
-       text_symbolizer ts("FIELD_NAME", "DejaVu Sans Book", 10, color(0, 0, 0));
-       ts.set_halo_fill(color(255, 255, 200));
-       ts.set_halo_radius(1);
-       rule.append(ts);
-    }
+```cpp
+#!cpp
+#include <mapnik/map.hpp>
+#include <mapnik/font_engine_freetype.hpp>
+
+using namespace mapnik;
+try {
+   freetype_engine::register_font("/path/to/font.ttf");
+   /* some code */
+   rule_type rule;
+   text_symbolizer ts("FIELD_NAME", "DejaVu Sans Book", 10, color(0, 0, 0));
+   ts.set_halo_fill(color(255, 255, 200));
+   ts.set_halo_radius(1);
+   rule.append(ts);
+}
+```
 
 The first parameter is the field name of a database field, or from a shape file, or an osm file. In case of a shape file or osm file, the field name is case sensitive.
 You must load the needed fonts first, otherwise you'll get a run time error. But you can load as many true type fonts as you like. Mapnik is coming with a couple of fonts in "mapnik/fonts". I recommend to load all of this fonts, regardless if you need them or not. 
@@ -109,22 +111,30 @@ Note: Whitespace is ignored, e.g. "N,S,15,10" and "N, S,15,10" and "N, S, 15, 10
 
 An XML example might look like:
 
-    #!xml
-    <TextSymbolizer 
-                name="[label]" 
-                allow-overlap="false"
-                face-name="DejaVu Sans Book"
-                placement-type="simple"
-                placements="N,S,15,10,8"
-    />
+```xml
+#!xml
+<TextSymbolizer 
+  name="[label]" 
+  allow-overlap="false"
+  face-name="DejaVu Sans Book"
+  placement-type="simple"
+  placements="N,S,15,10,8"
+/>
+```
 
 ## New syntax
 Starting with r3354 Mapnik2 supports a new syntax:
 
-    #!xml
-    <TextSymbolizer name="[label]" />
+```
+#!xml
+<TextSymbolizer name="[label]" />
+```
+
 becomes
 
-    #!xml
-    <TextSymbolizer>[label]</TextSymbolizer>
+```xml
+#!xml
+<TextSymbolizer>[label]</TextSymbolizer>
+```
+
 This change was made to be forward compatible with changes to text formatting being introduced in later versions.
