@@ -1,15 +1,10 @@
-<!-- Name: Raster -->
-<!-- Version: 8 -->
-<!-- Last-Modified: 2010/11/14 07:09:01 -->
-<!-- Author: kunitoki -->
-[[TOC]]
-
 This plugin supports reading tiff and geotiff files.
 
 Tiled or Stripped tiff files are required and when rasters are small < 200-300 MB this driver is faster that the [[GDAL]] plugin.
 
 If files are larger it is recommended to build GDAL overviews (with gdaladdo command) and instead read with the [[GDAL]] plugin.
- * Note: overviews support is available only in Mapnik >= 0.7.0.
+
+**Note: overviews support is available only in Mapnik >= 0.7.0**
 
 A drawback(or advantage!) of this plugin is that it requires manually setting the file bounds.
  * hint: create a GDAL datasource from your tiff in python, call the envelope() method to get the bounds, and use those.
@@ -132,6 +127,3 @@ A Raster datasource may be created as follows:
     m.addLayer(lyr);
 }
 ```
-
-
-## Further References
