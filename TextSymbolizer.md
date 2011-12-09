@@ -48,7 +48,6 @@ Some examples of Mapnik's ability to place text along lines:
 
 
 ```xml
-#!xml
 <TextSymbolizer name="FIELD_NAME" face_name="DejaVu Sans Book" size="10" fill="black" halo_fill= "white" halo_radius="1" placement="line" allow_overlap="false"/>
 ```
 
@@ -58,7 +57,6 @@ See [wiki:XMLGettingStarted] for more XML example uses of TextSymbolizer.
 
 
 ```python
-#!python
 t = TextSymbolizer('FIELD_NAME', 'DejaVu Sans Book', 10, Color('black'))
 t.halo_fill = Color('white')
 t.halo_radius = 1
@@ -70,7 +68,6 @@ dir(t) # for the rest of the attributes
 
 
 ```cpp
-#!cpp
 #include <mapnik/map.hpp>
 #include <mapnik/font_engine_freetype.hpp>
 
@@ -112,7 +109,6 @@ Note: Whitespace is ignored, e.g. "N,S,15,10" and "N, S,15,10" and "N, S, 15, 10
 An XML example might look like:
 
 ```xml
-#!xml
 <TextSymbolizer 
   name="[label]" 
   allow-overlap="false"
@@ -126,14 +122,12 @@ An XML example might look like:
 Starting with r3354 Mapnik2 supports a new syntax:
 
 ```
-#!xml
 <TextSymbolizer name="[label]" />
 ```
 
 becomes
 
 ```xml
-#!xml
 <TextSymbolizer>[label]</TextSymbolizer>
 ```
 
