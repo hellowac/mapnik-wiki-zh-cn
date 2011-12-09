@@ -6,15 +6,15 @@
 
 This plugin supports reading tiff and geotiff files.
 
-Tiled or Stripped tiff files are required and when rasters are small < 200-300 MB this driver is faster that the [wiki:GDAL] plugin.
+Tiled or Stripped tiff files are required and when rasters are small < 200-300 MB this driver is faster that the [[GDAL]] plugin.
 
-If files are larger it is recommended to build GDAL overviews (with gdaladdo command) and instead read with the [wiki:GDAL] plugin.
+If files are larger it is recommended to build GDAL overviews (with gdaladdo command) and instead read with the [[GDAL]] plugin.
  * Note: overviews support is available only in Mapnik >= 0.7.0.
 
 A drawback(or advantage!) of this plugin is that it requires manually setting the file bounds.
  * hint: create a GDAL datasource from your tiff in python, call the envelope() method to get the bounds, and use those.
 
-For other plugins see: PluginArchitecture
+For other plugins see: [[PluginArchitecture]]
 
 # Installation
 
@@ -27,15 +27,56 @@ To check if the raster plugin built and was installed correctly you can do:
 
 # Parameters
 
-|| *parameter* || *value*  || *description* || *default* ||
-|| file            || string       || geotiff file path  || ||
-|| base            || string       || optional base path where to search for the tiff raster file  || ||
-|| lox             || double       || lower x corner of the image in map coordinates || ||
-|| loy             || double       || lower y corner of the image in map coordinates || ||
-|| hix             || double       || upper x corner of the image in map coordinates || ||
-|| hiy             || double       || upper y corner of the image in map coordinates || ||
-|| extent          || string       || extent of the image in map coordinates, comma or space separated (at least <lox> <loy> <hix> <hiy> or <extent> should be passed) || ||
-|| format          || string       || image format to use, currently only tiff is supported || tiff ||
+
+<table>
+<tr>
+<td> <strong>parameter</strong> </td>
+<td> <strong>value</strong>  </td>
+<td> <strong>description</strong> </td>
+<td> <strong>default</strong> </td>
+</tr>
+<tr>
+<td> file            </td>
+<td> string       </td>
+<td> geotiff file path  </td>
+</tr>
+<tr>
+<td> base            </td>
+<td> string       </td>
+<td> optional base path where to search for the tiff raster file  </td>
+</tr>
+<tr>
+<td> lox             </td>
+<td> double       </td>
+<td> lower x corner of the image in map coordinates </td>
+</tr>
+<tr>
+<td> loy             </td>
+<td> double       </td>
+<td> lower y corner of the image in map coordinates </td>
+</tr>
+<tr>
+<td> hix             </td>
+<td> double       </td>
+<td> upper x corner of the image in map coordinates </td>
+</tr>
+<tr>
+<td> hiy             </td>
+<td> double       </td>
+<td> upper y corner of the image in map coordinates </td>
+</tr>
+<tr>
+<td> extent          </td>
+<td> string       </td>
+<td> extent of the image in map coordinates, comma or space separated (at least <lox> <loy> <hix> <hiy> or <extent> should be passed) </td>
+</tr>
+<tr>
+<td> format          </td>
+<td> string       </td>
+<td> image format to use, currently only tiff is supported </td>
+<td> tiff </td>
+</tr>
+</table>
 
 
 # Styling
@@ -51,20 +92,21 @@ See the docstring at: http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-mo
 
 == XML == 
 
-
-    #!xml
-    <!-- NOTE: must be in the same SRS as your map-->
-    <Layer name="Raster">
-        <StyleName>raster</StyleName>
-        <Datasource>
-            <Parameter name="type">raster</Parameter>
-            <Parameter name="file">/path/to/my/raster/file.tiff</Parameter>
-            <Parameter name="lox">min_x</Parameter>
-            <Parameter name="loy">min_y</Parameter>
-            <Parameter name="hix">max_x</Parameter>
-            <Parameter name="hiy">max_y</Parameter>
-        </Datasource>
-    </Layer>
+```xml
+#!xml
+<!-- NOTE: must be in the same SRS as your map-->
+<Layer name="Raster">
+    <StyleName>raster</StyleName>
+    <Datasource>
+        <Parameter name="type">raster</Parameter>
+        <Parameter name="file">/path/to/my/raster/file.tiff</Parameter>
+        <Parameter name="lox">min_x</Parameter>
+        <Parameter name="loy">min_y</Parameter>
+        <Parameter name="hix">max_x</Parameter>
+        <Parameter name="hiy">max_y</Parameter>
+    </Datasource>
+</Layer>
+```
 
 ## C++
 
