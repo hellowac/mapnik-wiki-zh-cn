@@ -10,53 +10,53 @@ Any specific feature request or bug report should be created as a [new ticket](h
 
 ## Guidelines
 
-CodingStandards
+[Coding Standards](https://github.com/mapnik/mapnik/wiki/CodingStandards)
 
-StableMergeQueue - Mapnik stable releases
+[Stable merge queue](https://github.com/mapnik/mapnik/wiki/StableMergeQueue) - Mapnik stable releases
 
-PackageBuilding - Resources
+[Package building](https://github.com/mapnik/mapnik/wiki/PackageBuilding) - Resources
 
-DevelopingPlugins - Writing new datasource plugins
+[Developing plugins](https://github.com/mapnik/mapnik/wiki/DevelopingPlugins) - Writing new datasource plugins
 
 
 ## Resources
 
-FasterCompiling
+[Faster compiling](https://github.com/mapnik/mapnik/wiki/FasterCompiling)
 
-InternationalText
+[International text](https://github.com/mapnik/mapnik/wiki/InternationalText)
 
-BoundsClipping
+[Bounds clipping](https://github.com/mapnik/mapnik/wiki/BoundsClipping)
 
-BuildingwithAutotools
+[Building with Autotools](https://github.com/mapnik/mapnik/wiki/BuildingwithAutotools)
 
-BuildBot
+[Build bot](https://github.com/mapnik/mapnik/wiki/BuildBot)
 
-DebuggingMapnik -- TODO!
+[Debugging mapnik](https://github.com/mapnik/mapnik/wiki/DebuggingMapnik) -- TODO!
 
-BuildingOnWindows
+[Building on Windows](https://github.com/mapnik/mapnik/wiki/BuildingOnWindows)
 
 ## TODO notes / Wish List
 
-Ideas around compositing images: wiki:Ideas/Compositing
+[Ideas around compositing images](https://github.com/mapnik/mapnik/wiki/Ideas_Compositing)
 
-Ideas for the future: wiki:Ideas/FutureMapnik
+[Ideas for the future](https://github.com/mapnik/mapnik/wiki/Ideas_FutureMapnik)
 
-DeveloperTodo
+[DeveloperTodo](https://github.com/mapnik/mapnik/wiki/DeveloperTodo)
 
 [Tickets by owner](https://trac.mapnik.org/report/8) - Your tickets
 
 
 ## Sandbox
 
-[wiki:GSOC2010]
+[GSOC2010](https://github.com/mapnik/mapnik/wiki/GSOC2010)
 
-[wiki:Mapnik2] - notes on getting running with the experimental Mapnik2 code
+[Mapnik2](https://github.com/mapnik/mapnik/wiki/Mapnik2) - notes on getting running with the experimental Mapnik2 code
 
-[wiki:Compositing] Compositing modes 
+[Compositing](https://github.com/mapnik/mapnik/wiki/Compositing) Compositing modes 
 
-[wiki:Legending]
+[Legending](https://github.com/mapnik/mapnik/wiki/Legending)
 
-XmlFormatDiscussion -- freeform discussion on Mapnik's XML format
+[XmlFormatDiscussion](https://github.com/mapnik/mapnik/wiki/XmlFormatDiscussion) -- freeform discussion on Mapnik's XML format
 
-ShieldSymbolizerTests
+[ShieldSymbolizerTests](https://github.com/mapnik/mapnik/wiki/ShieldSymbolizerTests)
 
