@@ -20,10 +20,12 @@ For other plugins see: [[PluginArchitecture]]
 
 To check if the raster plugin built and was installed correctly you can do:
 
-    >>> from mapnik import DatasourceCache as c
-    >>> 'raster' in c.plugin_names()
-    True
 
+```python
+>>> from mapnik import DatasourceCache as c
+>>> 'raster' in c.plugin_names()
+True
+```
 
 # Parameters
 
@@ -81,7 +83,7 @@ To check if the raster plugin built and was installed correctly you can do:
 
 # Styling
 
-To style a layer use the RasterSymbolizer
+To style a layer use the [[RasterSymbolizer]]
 
 
 # Usage
