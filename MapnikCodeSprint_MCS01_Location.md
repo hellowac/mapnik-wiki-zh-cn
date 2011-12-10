@@ -6,7 +6,7 @@
 
 Friday, 24 September 2010 - Sunday, 26 September 2010
 
-=== London, England === 
+### London, England
 
 CloudMade [[BR]]
 Enterprise House[[BR]]
