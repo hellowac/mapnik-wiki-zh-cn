@@ -5,25 +5,25 @@
 # Installing Mapnik on Linux
 
  * *Ubuntu*
-  * Build instructions for the current Ubuntu release at UbuntuInstallation
-  * Notes for older versions archived at UbuntuInstallationOld
+  * Build instructions for the current Ubuntu release at [UbuntuInstallation](https://github.com/mapnik/mapnik/wiki/UbuntuInstallation)
+  * Notes for older versions archived at [UbuntuInstallationOld](https://github.com/mapnik/mapnik/wiki/UbuntuInstallationOld)
 
  * *Debian*
-  * DebianInstallation
+  * [DebianInstallation](https://github.com/mapnik/mapnik/wiki/DebianInstallation)
 
  * *OpenSuse*
-  * OpenSuseInstallation
+  * [OpenSuseInstallation](https://github.com/mapnik/mapnik/wiki/OpenSuseInstallation)
 
  * *FreeBSD* - TODO
 
  * *Gentoo* - http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map_Gentoo#Setting_up_your_system
 
- * *[wiki:CentOS/RHEL]*
+ * *[CentOS/RHEL](https://github.com/mapnik/mapnik/wiki/CentOS_RHEL)*
 
  * *Fedora* - http://wiki.openstreetmap.org/wiki/Mapnik/Fedora_Installation
 
  * *Arch Linux*
-  * ArchInstallation
+  * [ArchInstallation](https://github.com/mapnik/mapnik/wiki/ArchInstallation)
 
 
 *ALSO:* notes for many linux versions at: http://wiki.openstreetmap.org/index.php/Mapnik/Installation
