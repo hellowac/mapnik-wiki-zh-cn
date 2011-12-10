@@ -6,8 +6,8 @@ If you have upgraded to the MacPython binary off python.org and rebuilt your boo
 
  * *Note*, as of version 1.35 Macports now automatically links its copy of boost its own copy of python. So, it is not possible to use boost built with Macports along with an upgraded python from MacPython/Python.org. If you wish to use Boost built from macports then use the `python-select` tool to switch your default version of python to the Macports version, then rebuild mapnik using that python. When installing a version of python with macports, it should output this hint:
 
-    #!sh
-    --->  Activating python25 @2.5.4_0+darwin_9+macosx
+        #!sh
+        --->  Activating python25 @2.5.4_0+darwin_9+macosx
     
     To fully complete your installation and make python 2.5 the default, please run
     
