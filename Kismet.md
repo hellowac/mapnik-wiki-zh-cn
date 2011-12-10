@@ -20,11 +20,11 @@ There needs to be a running _kismet_server_ process with activated GPS support b
 
 # Parameters
 
-|| *parameter*       || *value*  || *description* || *default* ||
-|| host                  || string       || host where the kismet daemon is running || ||
-|| port                  || integer      || port of the kismet daemon || ||
-|| extent                || string       || max extent of the kismet returned wlans || ||
-|| encoding              || string       || internal file encoding || utf-8 ||
+| *parameter*       | *value*  | *description* | *default* |
+| host                  | string       | host where the kismet daemon is running | |
+| port                  | integer      | port of the kismet daemon | |
+| extent                | string       | max extent of the kismet returned wlans | |
+| encoding              | string       | internal file encoding | utf-8 |
 
 
 # Example
