@@ -23,7 +23,7 @@ To check if the sqlite plugin built and was installed correctly, try the usual P
 ## Getting the tools
 
 First of all we need a bit of external tools for loading and preparing our first spatial database with sqlite.
-Got to [Spatialite](http://www.gaia-gis.it/spatialite-2.3/) and download (depending on your arch) the "spatialite executable [statically linked, no deps]" and unpack them in a directory of choice. Also download and unpack [InitSpatialiteSql](http://www.gaia-gis.it/spatialite/init_spatialite-2.2.sql.zip) in the same directory.
+Go to [Spatialite](http://www.gaia-gis.it/spatialite-2.3/) and download (depending on your arch) the "spatialite executable [statically linked, no deps]" and unpack them in a directory of choice. Also download and unpack [InitSpatialiteSql](http://www.gaia-gis.it/spatialite/init_spatialite-2.2.sql.zip) in the same directory.
 
 If you have problems with your spatial indexes (mbr calculated wrong in tables idx_table_geometry), you will need to rebuild spatialite-2.3 yourself using a recent version of GEOS (>=3.0.3): refer to [Spatialite](http://www.gaia-gis.it/spatialite-2.3) compilation guide.
 
