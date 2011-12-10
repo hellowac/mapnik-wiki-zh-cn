@@ -83,20 +83,21 @@ You can now exit the spatialite shell:
 
 # Parameters
 
-|| *parameter*       || *value*  || *description* || *default* ||
-|| file                  || string       || sqlite database file path || ||
-|| base                  || string       || optional base path where to search for the sqlite database file || ||
-|| table                 || string       || name of the table to fetch, this can be a sub-query || ||
-|| metadata              || string       || name of the metadata table where the extent and srid of the table are specified || ||
-|| key_field             || string       || name of the id field of the table || OGC_FID || 
-|| geometry_field        || string       || name of the geometry field, in case you have more than one in a single table || the_geom ||
-|| extent                || string       || maxextent of the geometries || determined by querying the metadata table ||
-|| row_offset            || integer      || number of rows to skip when querying data || 0 ||
-|| row_limit             || integer      || max number of rows to return when querying data, 0 means no limit || 0 ||
-|| wkb_format            || string       || type of WKB in the geometry field blob, this can be "sqlite" or "spatialite" || sqlite ||
-|| use_spatial_index     || boolean      || choose wheter to use the oracle spatial index when fetching data || true ||
-|| multiple_geometries   || boolean      || wheter to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)|| false ||
-|| encoding              || string       || internal file encoding || utf-8 ||
+| *parameter*       | *value*  | *description* | *default* |
+|:------------------|----------|---------------|----------:|
+| file                  | string       | sqlite database file path | |
+| base                  | string       | optional base path where to search for the sqlite database file | |
+| table                 | string       | name of the table to fetch, this can be a sub-query | |
+| metadata              | string       | name of the metadata table where the extent and srid of the table are specified | |
+| key_field             | string       | name of the id field of the table | OGC_FID | 
+| geometry_field        | string       | name of the geometry field, in case you have more than one in a single table | the_geom |
+| extent                | string       | maxextent of the geometries | determined by querying the metadata table |
+| row_offset            | integer      | number of rows to skip when querying data | 0 |
+| row_limit             | integer      | max number of rows to return when querying data, 0 means no limit | 0 |
+| wkb_format            | string       | type of WKB in the geometry field blob, this can be "sqlite" or "spatialite" | sqlite |
+| use_spatial_index     | boolean      | choose wheter to use the oracle spatial index when fetching data | true |
+| multiple_geometries   | boolean      | wheter to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
+| encoding              | string       | internal file encoding | utf-8 |
 
 # Usage
 
