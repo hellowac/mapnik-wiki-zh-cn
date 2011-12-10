@@ -6,6 +6,10 @@ For the moment, we deleted
 * Support for InterWiki links
 * InterMapTxt
 
+**No content**
+
+Title Index  (because self referencing page)
+
 **For images** 
 
 A zip of old wiki images is [available](http://www.analysesig.net/images_mapnik_trac.zip)  
