@@ -4,6 +4,7 @@ For the moment, we deleted
 
 * InterTrac Links
 * Support for InterWiki links
+* InterMapTxt
 
 **For images** 
 
