@@ -314,7 +314,8 @@ File layers_with_entities.xml:
     </Include>
 
 ## Further Reading
-    - [http://www.xml.com/pub/a/98/08/xmlqna0.html XML.com entity tutorial ]
-    - [http://www.w3.org/TR/REC-xml/ W3C XML Standard]
-    - [http://www.w3.org/TR/xinclude/ W3C XInclude Standard]
-    - [http://en.wikipedia.org/wiki/XInclude Wikipedia XInclude Page]
+
+* [XML.com entity tutorial](http://www.xml.com/pub/a/98/08/xmlqna0.html)
+* [W3C XML Standard](http://www.w3.org/TR/REC-xml/)
+* [W3C XInclude Standard](http://www.w3.org/TR/xinclude/)
+* [Wikipedia XInclude Page](http://en.wikipedia.org/wiki/XInclude)
