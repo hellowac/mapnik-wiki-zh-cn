@@ -152,13 +152,13 @@ Mapnik2 requires at least icu >= 4.2.
 
 1. Get the latest release:
 
-    wget http://download.icu-project.org/files/icu4c/4.6/icu4c-4_6-src.tgz
-    tar xzvf icu4c-4_6-src.tgz
-    cd icu/source
-    ./runConfigureICU Linux # on os x do: ./runConfigureICU MacOSX
-    make
-    sudo make install
-    sudo ldconfig
+        wget http://download.icu-project.org/files/icu4c/4.6/icu4c-4_6-src.tgz
+        tar xzvf icu4c-4_6-src.tgz
+        cd icu/source
+        ./runConfigureICU Linux # on os x do: ./runConfigureICU MacOSX
+        make
+        sudo make install
+        sudo ldconfig
 
 ## Building Boost
 
