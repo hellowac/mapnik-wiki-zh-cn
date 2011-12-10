@@ -8,6 +8,8 @@ For the moment, we deleted
 
 **No content**
 
+We deleted too
+
 * Title Index  (because self referencing page)
 * Recent Changes (because self referencing page)
 
