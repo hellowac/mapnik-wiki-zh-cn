@@ -60,6 +60,7 @@ Rob's going to be working on [Cascadenik](http://code.google.com/p/mapnik-utils/
 ### Profiling
 
 Fred's interested in performance:
+
 * how long did it take to render this?
 * how much time was spent acquiring the data,
 * how much was spent processing each layer/style,
