@@ -7,7 +7,8 @@
 Make labels with the TextSymbolizer
 
 Great resources:
- * http://mike.teczno.com/notes/mapnik.html
- * http://trac.openstreetmap.org/browser/applications/rendering/mapnik/osm.xml
+
+* http://mike.teczno.com/notes/mapnik.html
+* http://trac.openstreetmap.org/browser/applications/rendering/mapnik/osm.xml
 
 
