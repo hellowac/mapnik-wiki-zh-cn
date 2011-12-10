@@ -8,9 +8,9 @@ Friday, 24 September 2010 - Sunday, 26 September 2010
 
 ### London, England
 
-CloudMade [[BR]]
-Enterprise House[[BR]]
-1/2 Hatfields[[BR]]
-London[[BR]]  
-SE1 9PG[[BR]]
+CloudMade  
+Enterprise House  
+1/2 Hatfields  
+London 
+SE1 9PG  
 [Map](http://osm.org/go/euu4oTw8O--?m)
