@@ -159,6 +159,7 @@ Note the -a setting which makes your system's installed regex symbols to be upda
         lrwxrwxrwx 1 root root      36 2008-02-01 22:46 /usr/lib/libboost_filesystem.so -> libboost_filesystem-gcc-mt-1_33_1.so
     
     then, since 'threading' (mt) will be looked for by default you can match libboost*-gcc-mt-1_33_1.so with...
+
         $ python scons/scons.py configure BOOST_TOOLKIT=gcc BOOST_VERSION=1_33
 
  * *Solution Option 2*: Locate your libboost* files - usually located in /usr/lib and manually create symlinks like:
