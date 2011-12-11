@@ -10,7 +10,7 @@ Mapnik binaries can be installed and configured manually, or installed using OSG
 
 If you are interested in installing Mapnik on other operating systems see: MapnikInstallation
 
-If you an interested in compiling Mapnik from source on windows see: BuildingOnWindows
+If you an interested in compiling Mapnik from source on windows see the windows scripts at https://github.com/mapnik/mapnik-packaging
 
 
 ## Supported Features
