@@ -15,6 +15,6 @@ We deleted too
 
 **For images** 
 
-A zip of old wiki images is [available](http://www.analysesig.net/images_mapnik_trac.zip)  
-Waiting an admin to put them somewhere to create images links.
+Images from trac have been checked into wiki github repo in an `/images` subfolder and can be referenced in pages like: `[/images/world.png]]` to produce:
 
+[[/images/world.png]]
