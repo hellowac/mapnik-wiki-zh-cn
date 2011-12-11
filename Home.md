@@ -31,4 +31,4 @@ Welcome to the Mapnik wiki.
 - [Ohloh Project Page](https://www.ohloh.net/p/mapnik) (Project Statistics)
 - [Users Mailing List](http://lists.berlios.de/mailman/listinfo/mapnik-users)
 - [Developers Mailing List](http://lists.berlios.de/mailman/listinfo/mapnik-devel)
-- #mapnik channel on irc.freenode.net [Webchat](http://webchat.freenode.net/#mapnik)
+- #mapnik channel on irc.freenode.net [Webchat](http://webchat.freenode.net/?channels=#mapnik)
