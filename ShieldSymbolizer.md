@@ -48,14 +48,18 @@ see examples below.
 
 ## Good to know
 
-ShieldSymbolizer can be used to label points.[[BR]]
-E.G. If you want to place points on cities and their name above it. If you try to use a TextSymbolizer and a PointSymbolizer separated you will often see points without texts and/or texts without points.[[BR]]
-To draw labeled points configure your shield symbolizer with placement = point and custom value for dx/dy to move the text around the point[[BR]]
+ShieldSymbolizer can be used to label points.
+
+E.G. If you want to place points on cities and their name above it. If you try to use a TextSymbolizer and a PointSymbolizer separated you will often see points without texts and/or texts without points.
+
+To draw labeled points configure your shield symbolizer with placement = point and custom value for dx/dy to move the text around the point
+
 
 
 ## Examples
 
-[[BR]]
+
+
 [[Image(http://wiki.openstreetmap.org/images/thumb/6/63/Mapnik-highway-motorway.png/120px-Mapnik-highway-motorway.png)]]
 
 

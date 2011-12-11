@@ -26,7 +26,8 @@ There are *three main routes* for getting Mapnik installed on Mac OS X.
   * /System/... means you are using the python pre-installed by Apple
   * /Library/... means you are likely using MacPython from http://python.org
 
- [[BR]]
+ 
+
 [[Image(http://trac.mapnik.org/raw-attachment/wiki/MacInstallation/mapnik_on_mac_os.png)]]
 
 # Step 1: Install Xcode

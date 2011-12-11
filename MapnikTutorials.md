@@ -10,19 +10,22 @@ Make sure to see LearningMapnik for more topics
 
 GettingStarted - 'Hello,world!' using the Python bindings.  
 
-[[BR]]
+
+
 [[Image(hello.png)]]
 
 ## World Population
 
 [[XMLGettingStarted]] - Python and XML styling
 
-[[BR]]
+
+
 [[Image(population.png)]]
 
 
 ## Advanced Resources
-[[BR]]
+
+
 [[Image(14__5531__9871.png)]]
 
  * MapsFromScratch - http://mapsfromscratch.com/

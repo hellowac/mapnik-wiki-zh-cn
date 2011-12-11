@@ -6,7 +6,8 @@
 
 Sandbox for keeping haiti specific style renderings.
 
- [[BR]]
+ 
+
 [[Image(fgdc_and_osm.png)]]
 
 

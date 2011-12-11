@@ -71,7 +71,8 @@ To download and manually configure the Mapnik 0.7.1, please follow the instructi
 
  This Guide will walk you through installing Mapnik and then running a test script to generate the sample map below:
 
- [[BR]]
+ 
+
 [[Image(demo.png)]]
 
 ## Manual Instructions
@@ -132,7 +133,8 @@ To download and manually configure the Mapnik 0.6.1, please follow the instructi
 
  This Guide will walk you through installing Mapnik and then running a test script to generate the sample map below:
 
- [[BR]]
+ 
+
 [[Image(demo.png)]]
 
 ## Manual Instructions

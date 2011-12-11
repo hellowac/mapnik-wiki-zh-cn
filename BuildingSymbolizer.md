@@ -40,5 +40,6 @@ A BuildingSymbolizer is used to create a pseudo 3D effect on polygons.
 
 Example output:
 
- [[BR]]
+ 
+
 [[Image(BuildingSymbolizer.png)]]

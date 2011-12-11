@@ -4,8 +4,10 @@
 <!-- Author: Ldp -->
 # PointSymbolizer
 
-A PointSymbolizer specifies the rendering of a "graphic symbol" at a point.[[BR]]
-If you want to draw a graphic symbol and a text you would better use a ShieldSymbolizer.[[BR]]
+A PointSymbolizer specifies the rendering of a "graphic symbol" at a point.
+
+If you want to draw a graphic symbol and a text you would better use a ShieldSymbolizer.
+
 Staring from r1793 PointSymbolizer supports [Scalable Vector Graphics (SVG)](http://www.w3.org/TR/SVG/) as input images,
 see examples below.
 
@@ -24,11 +26,13 @@ see examples below.
 
 === Default === 
 
-[[BR]]
+
+
  
 [[Image(htdocs:/images/point_symbolizer_1.png)]]
 
-[[BR]]
+
+
 [[Image(http://media.mapnik.org/images/streets2.png)]]
 
 #### XML
@@ -49,7 +53,8 @@ see examples below.
      }}}
     
      === Image label ===  
-    [[BR]]
+    
+
     [[Image(htdocs:/images/point_symbolizer_2.png)]]
     
     ==== XML ====

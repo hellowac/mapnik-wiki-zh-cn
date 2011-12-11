@@ -23,8 +23,10 @@ It can be added to a Rule with line features like:
 
 [[Image(http://trac.mapnik.org/raw-attachment/ticket/180/offsets_directions.png)]]
 
-The MarkersSymbolizer should draw blue directional arrows *in the direction of the geometry* (for things like one-way streets).[[BR]]
-In case you notice arrows pointing the wrong direction, this means that the segment has been coded in the wrong way.[[BR]]
+The MarkersSymbolizer should draw blue directional arrows *in the direction of the geometry* (for things like one-way streets).
+
+In case you notice arrows pointing the wrong direction, this means that the segment has been coded in the wrong way.
+
 The ST_reverse function of Postgis can fix this (The problem will then be to identify the geometries that need to be updated).
 
 ### SVG markers

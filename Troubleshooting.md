@@ -12,7 +12,8 @@ Make sure to check out LearningMapnik for tips on certain topics, and ExampleCod
 ## Global data has odd lines wrapping across it
 
  * *Description*: You get a shapefile in WGS84 and try to display it on a map in Google Mercator projection. But, the data has coordinates that wrap the dateline (180˚ meridan) in the wrong way.
-[[BR]]
+
+
 [[Image(bogus_lines.png)]]
 
  * *Solution*: This shapefile is bogus, and you need to fix it. *Usually* this problem can be fixed by clipping the extents of the shapefile before rendering with Mapnik. An easy way to do this is using the new clipping feature in GDAL 1.7. So, assuming a shapefile in WGS 84/EPS:4326 called 'sketchy_natural_earth.shp', fix it by doing:
@@ -62,13 +63,15 @@ A bit more advanced version of this converted to a script can be found at https:
 
 If this does not work, then go back to the person that gave you this shapefile and return it. Or check out http://trac.osgeo.org/postgis/wiki/UsersWikiCleanPolygons and see if any gurus have added new scripts.
 
-[[BR]]
+
+
 
 ## OGCServer Fails to Load External Entities
 
  * *Description*: OGCServer won't start after installation and configuration when using XML styling with external entities, but nik2img can still parse the files OK. Error message in server log: "I/O warning : failed to load external entity %entities;^"
           
           
-[[BR]]
+
+
 
  * *Solution*: Change all the paths in the XML style files AND external entity files from relative to absolute. Ensure line endings are the correct format for your operating system.  I encountered this problem when porting my code from windows to mac.  The source of the problem was found by commenting out most of the layers and scrutinising the file paths, it turned out that some of them were incorrect.

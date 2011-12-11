@@ -13,7 +13,8 @@
 
 ## Examples
 
-[[BR]]
+
+
 [[Image(http://media.mapnik.org/images/polygon_pattern.png)]]
 
 

@@ -13,7 +13,8 @@ Currently I have these questions:
 
 ## Eclipse
 Here I try to describe my setup. I'm sure there are better ways but this works for me:
- * Checkout the newest trunk version of the repository: `svn checkout http://svn.mapnik.org/trunk mapnik_trunk`[[BR]]
+ * Checkout the newest trunk version of the repository: `svn checkout http://svn.mapnik.org/trunk mapnik_trunk`
+
    This has the advantages that 
    * you always have the newest version (`svn update`)
    * you can quickly add test code and remove it again (`svn revert`)

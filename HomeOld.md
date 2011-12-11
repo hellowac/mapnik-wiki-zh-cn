@@ -19,7 +19,8 @@ High-level Python bindings (boost.python) facilitate rapid application developme
     <a href="http://teczno.com/cascadenik-openstreetmap-II/"><img style="float: right; border: 1px gray solid;" src="http://teczno.com/cascadenik-openstreetmap-II/osm-15-r12662-c5254.png" /></a>
 
 
-Have fun! [[BR]]
+Have fun! 
+
 _The Mapnik Team_
 
 
@@ -27,7 +28,8 @@ _The Mapnik Team_
 
  * *What is Mapnik?*
   * MapnikOverview |  DemoGallery | [mapnik.org](http://mapnik.org/)
-  * Commit Timeline at [Ohloh](https://www.ohloh.net/projects/mapnik): [[BR]] [[Image(http://www.ohloh.net/p/mapnik/analyses/latest/commits_spark.png)]]
+  * Commit Timeline at [Ohloh](https://www.ohloh.net/projects/mapnik): 
+ [[Image(http://www.ohloh.net/p/mapnik/analyses/latest/commits_spark.png)]]
 
  * *Installing Mapnik*
   * MapnikInstallation - Guides for installing Mapnik

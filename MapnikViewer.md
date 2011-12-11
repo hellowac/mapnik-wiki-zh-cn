@@ -7,7 +7,8 @@ The Mapnik Viewer is a GUI tool for rendering and viewing maps based on Mapnik X
 It's available under source:trunk/demo/viewer and needs to be compiled after manually modifying the build settings.
 
 ----
- [[BR]]
+ 
+
 [[Image(mapnik_viewer.png)]]
 ----
 

@@ -100,13 +100,20 @@ Styling the output is done in the same way as for other data sources, with tests
 Polygon support is not yet very sophisticated. A few pre-defined tag/value combinations are assumed to be polygons; all others are assumed to be linear ways.
 Currently these tag/values are assumed to be polygons:
 
-- natural=wood[[BR]]
-- natural=water[[BR]]
-- natural=heath[[BR]]
-- natural=marsh[[BR]]
-- military=danger_area[[BR]]
-- landuse=forest[[BR]]
-- landuse=industrial.[[BR]]
+- natural=wood
+
+- natural=water
+
+- natural=heath
+
+- natural=marsh
+
+- military=danger_area
+
+- landuse=forest
+
+- landuse=industrial.
+
 
 These are defined in the polygon_types class in the source file osm.h, so if you want to add others for your own use, that's the place to go.
 

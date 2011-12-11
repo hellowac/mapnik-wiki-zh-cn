@@ -22,7 +22,8 @@ To Install:
 *Note:* These instructions are for the nik2img 0.3.0 release or above.
 
 
- [[BR]]
+ 
+
 [[Image(states.png)]]
 
 ### If you want to render your XML mapfile just do:

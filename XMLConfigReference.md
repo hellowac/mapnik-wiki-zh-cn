@@ -157,8 +157,10 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
 
 Also see SymbologySupport for more info on Symbolizers
 
-> v.0.7.1: Please note that some Symbolizers require attributes while others require <CssParameter>-elements.[[BR]]
-> Refer to the examples given on the individual pages for the correct syntax.[[BR]]
+> v.0.7.1: Please note that some Symbolizers require attributes while others require <CssParameter>-elements.
+
+> Refer to the examples given on the individual pages for the correct syntax.
+
 > This has been fixed in Mapnik 2.0
 
 ## Include
