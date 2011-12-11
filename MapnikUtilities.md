@@ -53,7 +53,7 @@ See [OgcServer](https://github.com/mapnik/OGCServer) for more info.
 
 C++ WMS server.
 
-See [wiki:Paleoserver] for more info.
+See [[Paleoserver]] for more info.
 
 ## Desktop Tools
 

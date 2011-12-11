@@ -129,7 +129,7 @@
     
 ### Trac Post-Release
 
-* Update [wiki:MapnikInstallation], [MacInstallation](https://github.com/mapnik/mapnik/wiki/MacInstallation), [LinuxInstallation](https://github.com/mapnik/mapnik/wiki/LinuxInstallation) and [WindowsInstallation](https://github.com/mapnik/mapnik/wiki/WindowsInstallation) links
+* Update [[MapnikInstallation]], [MacInstallation](https://github.com/mapnik/mapnik/wiki/MacInstallation), [LinuxInstallation](https://github.com/mapnik/mapnik/wiki/LinuxInstallation) and [WindowsInstallation](https://github.com/mapnik/mapnik/wiki/WindowsInstallation) links
 * Create a release page from the relevant section of CHANGELOG like this page [Release0.7.1](https://github.com/mapnik/mapnik/wiki/Release0.7.1)
 * Update [MapnikReleases](https://github.com/mapnik/mapnik/wiki/MapnikReleases), a starting page for users to learn about Mapnik development
     

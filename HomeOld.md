@@ -45,7 +45,7 @@ _The Mapnik Team_
   * LearningMapnik - outline of key topics
 
  * *Troubleshooting Mapnik*
-  * [wiki:Troubleshooting] - tips for common gochas
+  * [[Troubleshooting]] - tips for common gochas
   * InstallationTroubleshooting - install problems and solutions
 
  * *Mapnik Utilities*
@@ -58,8 +58,8 @@ _The Mapnik Team_
   * See [MapnikCodeSprint Sprint Schedules] 
 
  * *Google Summer of Code*
-  * 2011: [wiki:GSOC2011]
-  * 2010: [wiki:GSOC2010]
+  * 2011: [[GSOC2011]]
+  * 2010: [[GSOC2010]]
  
  * *Development Ideas and Topics*
    * DeveloperTopics is a sandbox for discussing Mapnik development

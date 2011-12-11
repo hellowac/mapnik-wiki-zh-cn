@@ -55,7 +55,7 @@ This is a quick list of things we started work on or achieved during the sprint:
 * Improvements to SVG parsing and rendering (artem)
 * Fixed feature caching when using multiple styles for faster rendering (woodpeck) (#624)
 * Brainstormed and scoped on wiki ideas around [Compositing](/wiki:Ideas/Compositing/) and [Legends](/wiki:Legending/) (gravitystorm, ivansanchez)
-* Added Python3 support (haoyu,springmeyer) [wiki:Python3k]
+* Added Python3 support (haoyu,springmeyer) [[Python3k]]
 * Wrote a render_debug() function to output statistics on rendering times (woodpeck)
 * Added the ability to control the timeout of expensive PostGIS queries (jburgess) #632
 * Started writing Spreadnik v2 in python (ivansanchez)

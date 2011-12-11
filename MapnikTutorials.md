@@ -15,7 +15,7 @@ GettingStarted - 'Hello,world!' using the Python bindings.
 
 ## World Population
 
-[wiki:XMLGettingStarted] - Python and XML styling
+[[XMLGettingStarted]] - Python and XML styling
 
 [[BR]]
 [[Image(population.png)]]

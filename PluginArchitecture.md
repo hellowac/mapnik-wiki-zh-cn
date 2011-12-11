@@ -10,7 +10,7 @@ All current plugins are located in source:trunk/plugins/input/
 
 | **Name**| **Availability**|**Status**|**Build by Default**|**Notes**|
 |:-------:|:---------------:|:--------:|:------------------:|:-------:|
-| *[postgis](PostGIS)*| 0.2.0| Stable| yes| support for accessing geospatial data through [wiki:PostGIS], the spatial database extension for [PostgreSQL](http://en.wikipedia.org/wiki/PostgreSQL)|
+| *[postgis](PostGIS)*| 0.2.0| Stable| yes| support for accessing geospatial data through [[PostGIS]], the spatial database extension for [PostgreSQL](http://en.wikipedia.org/wiki/PostgreSQL)|
 | *[raster](Raster)*| 0.2.0| Stable| yes|  stripped or tiled raster TIFF image dataset support|
 | *[shape](Shape)*| 0.2.0| Stable| yes|  vector SHP ([ESRI Shapefile](http://en.wikipedia.org/wiki/Shapefile)) parsing|
 | *[gdal](GDAL/)*| 0.5.0| Beta| no|  support for [GDAL](http://en.wikipedia.org/wiki/GDAL) datasets|

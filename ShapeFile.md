@@ -6,7 +6,7 @@
 
 [[TOC]]
 
-This plugin supports reading shapefiles. They can also be read using the [wiki:OGR] Plugin, but the *shape* plugin is better tested and more mature.
+This plugin supports reading shapefiles. They can also be read using the [[OGR]] Plugin, but the *shape* plugin is better tested and more mature.
 
 The shapefile plugin will run fastest if you build indexes for your shapefiles using the 'shapeindex' command line tool installed when you build Mapnik.
 

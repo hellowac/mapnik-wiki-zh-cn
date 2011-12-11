@@ -11,7 +11,7 @@ The RasterSymbolizer is used to render an image from any [GDAL supported format]
 
  * As of Mapnik 0.6.0 the RasterSymbolizer supports transparency and composition modes.
   * See the original ticket for details: #259
-  * See also [wiki:Compositing] for some of the effects.
+  * See also [[Compositing]] for some of the effects.
 
  * This Symbolizer is often used with DEM (digital elevation model) data containing missing values (for example NASA SRTM DEM data); to achieve nice rendering, the [gdal_fillnodata.py](http://www.gdal.org/gdal_fillnodata.html) tool might be useful.
 
@@ -32,12 +32,12 @@ Processed as described in http://wiki.openstreetmap.org/wiki/Hillshading_using_t
 
 
 There are two types of raster datasources: *gdal* or *raster*:
- * The [wiki:GDAL] plugin is more convenient as it can read the file extents automatically and supports any GDAL-supported type of file
- * The [wiki:Raster] driver only works with Tiled or Stripped GeoTIFF files and requires manually setting the file bounds, but can be faster.
+ * The [[GDAL]] plugin is more convenient as it can read the file extents automatically and supports any GDAL-supported type of file
+ * The [[Raster]] driver only works with Tiled or Stripped GeoTIFF files and requires manually setting the file bounds, but can be faster.
 
 ## XML Layers
 
-See the [wiki:GDAL] plugin and [wiki:Raster] plugin pages for more info
+See the [[GDAL]] plugin and [[Raster]] plugin pages for more info
 
 
 ## XML Styles

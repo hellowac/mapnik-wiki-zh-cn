@@ -44,7 +44,7 @@ You may install Proj.4, PostgreSQL/PostGIS, and GDAL if needed.
 
     opts.Add(PathOption('PGSQL_INCLUDES', 'Search path for PostgreSQL include files', '/opt/local/include/postgresql83'))
     opts.Add(PathOption('PGSQL_LIBS', 'Search path for PostgreSQL library files', '/opt/local/lib/postgresql83'))
-  * See [wiki:MacPostGIS_Setup] for setup instructions.
+  * See [[MacPostGIS_Setup]] for setup instructions.
  * *GDAL* binary frameworks - use [kyngchaos.com](http://www.kyngchaos.com/wiki/software:frameworks) or build from source:
 
     $ wget http://download.osgeo.org/gdal/gdal-1.5.0.tar.gz

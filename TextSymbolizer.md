@@ -3,7 +3,7 @@
 | *parameter* | *value*  | *description* | *unit* | *default* |
 ----------------|---------|----------------|-------|------------|
 | name        |    -      | This is the query field you want to use for the label text, e.g. "street_name" (deprecated in Mapnik2, see section "new syntax" below)| - | - |  
-|face_name     |   -      | Font name (see [wiki:UsingCustomFonts])| - | - |
+|face_name     |   -      | Font name (see [[UsingCustomFonts]])| - | - |
 |fontset_name|| FontSet name ||
 |size||Font size|||
 |text_ratio|| Try to keep a given height to width ratio|||
@@ -51,7 +51,7 @@ Some examples of Mapnik's ability to place text along lines:
 <TextSymbolizer name="FIELD_NAME" face_name="DejaVu Sans Book" size="10" fill="black" halo_fill= "white" halo_radius="1" placement="line" allow_overlap="false"/>
 ```
 
-See [wiki:XMLGettingStarted] for more XML example uses of TextSymbolizer.
+See [[XMLGettingStarted]] for more XML example uses of TextSymbolizer.
 
 ### Python
 
