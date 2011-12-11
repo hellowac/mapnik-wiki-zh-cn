@@ -2,7 +2,7 @@
 <!-- Version: 12 -->
 <!-- Last-Modified: 2009/10/10 17:37:57 -->
 <!-- Author: springmeyer -->
-[[TOC]]
+
 # Mapnik Maps on the Command-Line
 
 *Nik2img* is a _third-party_ program that allows you to easily generate mapnik graphics from Mapnik xml or Cascadenik mml.

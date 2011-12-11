@@ -2,7 +2,7 @@
 <!-- Version: 10 -->
 <!-- Last-Modified: 2011/09/05 04:32:30 -->
 <!-- Author: kkaefer -->
-[[TOC]]
+
 # Mapnik Output Formats
 
 Mapnik supports rendering with both AGG and Cairo (see MapnikRenderers for more detail), and can create maps or map tiles in a variety of formats.

@@ -6,7 +6,7 @@
 
 *Committers and Cartographers* was the name and theme selected for the first Mapnik Code Sprint.  Grown from the seed of an idea at the OpenStreetMap State of the Map conference in Girona, Spain, July 2010.  It germinated on the Mapnik-Devel list to grow into an event on two continents.  
 
-[[TOC]]
+
 
 ## Date
 Friday, 24 September 2010 - Sunday, 26 September 2010

@@ -2,7 +2,7 @@
 <!-- Version: 18 -->
 <!-- Last-Modified: 2010/11/13 10:18:41 -->
 <!-- Author: kunitoki -->
-[[TOC]]
+
 
 Mapnik's PluginArchitecture supports the use of different input formats.
 

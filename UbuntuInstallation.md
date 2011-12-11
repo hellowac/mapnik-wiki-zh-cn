@@ -2,7 +2,7 @@
 <!-- Version: 57 -->
 <!-- Last-Modified: 2010/10/12 16:08:23 -->
 <!-- Author: springmeyer -->
-[[TOC]]
+
 
 # Installing Mapnik on Ubuntu
 For all versions of Ubuntu make sure you are up to date before starting to install:

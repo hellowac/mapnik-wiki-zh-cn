@@ -2,7 +2,7 @@
 <!-- Version: 11 -->
 <!-- Last-Modified: 2009/11/10 17:42:39 -->
 <!-- Author: springmeyer -->
-[[TOC]]
+
 
 # Example Code
 The Mapnik source comes with some example code in the [mapnik/demo](https://trac.mapnik.org/browser/trunk/demo) directory.

@@ -2,7 +2,7 @@
 <!-- Version: 8 -->
 <!-- Last-Modified: 2011/04/29 18:02:00 -->
 <!-- Author: springmeyer -->
-[[TOC]]
+
 
 # Google Summer of Code Ideas
 

@@ -2,7 +2,7 @@
 <!-- Version: 11 -->
 <!-- Last-Modified: 2011/08/11 07:29:20 -->
 <!-- Author: springmeyer -->
-[[TOC]]
+
 
 # Compiling Mapnik Faster
 

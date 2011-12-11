@@ -4,7 +4,7 @@
 <!-- Author: springmeyer -->
 # Shapefile Plugin
 
-[[TOC]]
+
 
 This plugin supports reading shapefiles. They can also be read using the [[OGR]] Plugin, but the *shape* plugin is better tested and more mature.
 

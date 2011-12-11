@@ -4,7 +4,7 @@
 <!-- Author: rweait -->
 The second Mapnik Code Sprint: Code Name To Be Determined, is in the early planning stages.  Do you have hopes and dreams for future Mapnik code sprints?  Tell us what you think!
 
-[[TOC]]
+
 
 ## Details
 ### Date

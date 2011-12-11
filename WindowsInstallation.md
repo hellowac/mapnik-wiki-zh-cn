@@ -2,7 +2,7 @@
 <!-- Version: 36 -->
 <!-- Last-Modified: 2011/06/09 09:06:43 -->
 <!-- Author: springmeyer -->
-[[TOC]]
+
 
 # Installing Mapnik in Windows
 

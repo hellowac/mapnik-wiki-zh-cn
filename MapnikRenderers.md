@@ -2,7 +2,7 @@
 <!-- Version: 23 -->
 <!-- Last-Modified: 2011/05/16 11:21:27 -->
 <!-- Author: springmeyer -->
-[[TOC]]
+
 # Mapnik Renderers
 
 Mapnik supports a variety of rendering backends. See OutputFormats for comparisons of different output formats.

@@ -2,7 +2,7 @@
 <!-- Version: 13 -->
 <!-- Last-Modified: 2010/11/10 02:52:19 -->
 <!-- Author: manelclos -->
-[[TOC]]
+
 
 # Optimize Rendering with PostGIS
 

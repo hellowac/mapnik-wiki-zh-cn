@@ -2,7 +2,7 @@
 <!-- Version: 96 -->
 <!-- Last-Modified: 2010/09/30 10:16:40 -->
 <!-- Author: springmeyer -->
-[[TOC]]
+
 
 # Installing Mapnik Mac OS X
 

@@ -2,7 +2,7 @@
 <!-- Version: 4 -->
 <!-- Last-Modified: 2010/09/29 07:15:24 -->
 <!-- Author: gnijholt -->
-[[TOC]]
+
 
 # Installing Mapnik on Suse
 

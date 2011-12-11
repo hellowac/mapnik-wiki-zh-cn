@@ -2,7 +2,7 @@
 <!-- Version: 6 -->
 <!-- Last-Modified: 2011/05/20 14:50:02 -->
 <!-- Author: springmeyer -->
-[[TOC]]
+
 # Installing Mapnik on OS X with Homebrew
 
 

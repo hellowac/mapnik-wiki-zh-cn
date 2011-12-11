@@ -3,7 +3,7 @@
 <!-- Last-Modified: 2011/04/14 18:26:35 -->
 <!-- Author: springmeyer -->
 # Mapnik2
-[[TOC]]
+
 
 Mapnik2 is current trunk and a new era of the mapnik codebase that uses boost features only available in boost >=1.41, icu >=4.2, and is a testbed for next-generation Mapnik features.
 

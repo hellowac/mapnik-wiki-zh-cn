@@ -2,7 +2,7 @@
 <!-- Version: 6 -->
 <!-- Last-Modified: 2009/03/06 08:30:10 -->
 <!-- Author: WJHildreth -->
-[[TOC]]
+
 
 As one might guess from [Wikipedia's entry on GIS](http://en.wikipedia.org/wiki/Geographic_information_system), geographic information systems have a long and rich history.
 

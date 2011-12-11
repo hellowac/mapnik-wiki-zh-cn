@@ -2,7 +2,7 @@
 <!-- Version: 5 -->
 <!-- Last-Modified: 2008/12/13 22:15:55 -->
 <!-- Author: victorlin -->
-[[TOC]]
+
 
 # How to integrate mapnik with wxPython?
 

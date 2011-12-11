@@ -2,7 +2,7 @@
 <!-- Version: 15 -->
 <!-- Last-Modified: 2011/05/16 07:42:34 -->
 <!-- Author: Harry Wood -->
-[[TOC]]
+
 # Sharing Map Styles
 
 We need a proper app to share styles (Dane has started django code but its not ready yet)

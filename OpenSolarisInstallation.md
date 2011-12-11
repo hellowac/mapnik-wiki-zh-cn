@@ -2,7 +2,7 @@
 <!-- Version: 44 -->
 <!-- Last-Modified: 2010/12/08 14:44:45 -->
 <!-- Author: springmeyer -->
-[[TOC]]
+
 
 # Installing Mapnik and Dependencies on Open Solaris
 
