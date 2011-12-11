@@ -11,13 +11,14 @@
 ### Underscores --> Dashes
 
 All properties that previously used underscores, ie '_' now use dashes ('-'). So, for example: 'allow_overlap' is now 'allow-overlap'
-   * Mapnik 0.7.2 has compatibility with both syntaxes as of r2579
-   * Mapnik 2.0 moved to only dashes in r2582
-   * Note: branch of trunk tagged before r2582: https://trac.mapnik.org/browser/branches/mapnik2-pre-dashes
-   * properties changed include: 
 
-    #!python
-    ['paths_from_xml','minimum_version','buffer_size','face_name,fonset_name','clear_label_cache','vertical_alignment','halo_fill','halo_radius','text_ratio','wrap_width','wrap_before','wrap_character','text_transform','line_spacing','label_position_tolerance','character_spacing','min_distance','minimum_distance','avoid_edges','allow_overlap','max_char_angle_delta','horizontal_alignment','justify_alignment','unlock_image','no_text']
+* Mapnik 0.7.2 has compatibility with both syntaxes as of r2579
+* Mapnik 2.0 moved to only dashes in r2582
+* Note: branch of trunk tagged before r2582: https://trac.mapnik.org/browser/branches/mapnik2-pre-dashes
+* properties changed include: 
+
+        #!python
+        ['paths_from_xml','minimum_version','buffer_size','face_name,fonset_name','clear_label_cache','vertical_alignment','halo_fill','halo_radius','text_ratio','wrap_width','wrap_before','wrap_character','text_transform','line_spacing','label_position_tolerance','character_spacing','min_distance','minimum_distance','avoid_edges','allow_overlap','max_char_angle_delta','horizontal_alignment','justify_alignment','unlock_image','no_text']
 
 ### CSSParameters --> Properties
 
@@ -65,8 +66,8 @@ is now:
 |------------------|---------------|--------------------------|
 | mapnik             |               mapnik.Envelope  |                   mapnik.Box2d |
 | TextSymbolizer   | set_displacement (function)  |     displacement (property)    |
-| TextSymbolizer   | first argument was string  |    first argument now mapnik2.Expression(['field'])    |
-| ShieldSymbolizer   | first argument was string  |    first argument now mapnik2.Expression(['field'])    |
+| TextSymbolizer   | first argument was string  |    first argument now mapnik2.Expression('[field]')    |
+| ShieldSymbolizer   | first argument was string  |    first argument now mapnik2.Expression('[field]')    |
 | ShieldSymbolizer   | fifth argument was string  |    fifth argument now mapnik2.PathExpression('/path/to/[field].png')    |
 
 
