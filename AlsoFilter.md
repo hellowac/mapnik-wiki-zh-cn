@@ -20,8 +20,7 @@ For each Object read from the Datasource Mapnik checks if the current ScaleDenom
  * If the Object _passes_ these tests, the according rule is evaluated. After all normal Rules have been evaluated, the Rules containing an `<AlsoFilter />` are also evaluated.
  * If the Object _misses_ these tests, none of the rules is evaluated.
 
-
-    #!xml
+```xml
     <Style name="contours">
       <Rule>
         <Filter>[amenity] = 'restaurant'</Filter>
@@ -46,12 +45,14 @@ For each Object read from the Datasource Mapnik checks if the current ScaleDenom
         <TextSymbolizer name="[name]" fontset-name="book-fonts" size="9" fill="black" dy="9" halo-radius="1" wrap-width="0" />
       </Rule>
     </Style>
+```
 
 ## Example in Python
 
-    #!python
+```python
     rule = mapnik.Rule()
     rule.set_also(True) # instead of rule.filter(...)
+```
 
 ## See also
  * The normal [Filter](https://github.com/mapnik/mapnik/wiki/Filter)
