@@ -12,26 +12,21 @@ GettingStarted - 'Hello,world!' using the Python bindings.
 
 
 
-[[Image(hello.png)]]
+[[/images/hello.png]]
 
 ## World Population
 
 [[XMLGettingStarted]] - Python and XML styling
 
-
-
-[[Image(population.png)]]
-
+[[/images/population.png]]
 
 ## Advanced Resources
 
-
-[[Image(14__5531__9871.png)]]
+[[/images/14__5531__9871.png]]
 
  * MapsFromScratch - http://mapsfromscratch.com/
  * Cascadenik Tutorial - http://mapnik-utils.googlecode.com/svn/trunk/serverside/cascadenik/doc/index.html
  * Quantumnik - http://bitbucket.org/springmeyer/quantumnik
  * ExampleCode -- Code snippets from Mapnik users
 
-
-For details on Mapnik features see LearningMapnik
+For details on Mapnik features see [LearningMapnik](https://github.com/mapnik/mapnik/wiki/LearningMapnik)
