@@ -1,8 +1,3 @@
-<!-- Name: MapnikRenderers -->
-<!-- Version: 23 -->
-<!-- Last-Modified: 2011/05/16 11:21:27 -->
-<!-- Author: springmeyer -->
-
 # Mapnik Renderers
 
 Mapnik supports a variety of rendering backends. See OutputFormats for comparisons of different output formats.
@@ -10,27 +5,29 @@ Mapnik supports a variety of rendering backends. See OutputFormats for compariso
 ## agg_renderer | Anti-Grain Geometry
 
 The AGG renderer ([Antigrain Geometry](http://antigrain.com)) is the primary renderer in Mapnik.
- * AGG 's fast scanline rendering with subpixel *anti-aliasing* is the standout reason for the beauty of Mapnik output.
-  * [Anti-Aliasing](http://en.wikipedia.org/wiki/Antialiasing) and [Subpixel Rendering](http://en.wikipedia.org/wiki/Subpixel_rendering) on Wikipedia 
- * The AGG renderer's buffer can easily be encoded in a variety of formats. Currently Mapnik supports writing to png and jpeg.
- * Version 2.3 of the AGG C++ library is included/embedded within the source tree of Mapnik and compiled automatically during the Scons process.
- * Because the primary developer of AGG has moved on to other endeavors, we happily maintain our own version of AGG with bugfixes.
- * Mapnik can also build against a system version of AGG, but this is NOT RECOMMENDED since packaged versions have likely not been updated with critical bug fixes
+
+* AGG 's fast scanline rendering with subpixel *anti-aliasing* is the standout reason for the beauty of Mapnik output.
+ * [Anti-Aliasing](http://en.wikipedia.org/wiki/Antialiasing) and [Subpixel Rendering](http://en.wikipedia.org/wiki/Subpixel_rendering) on Wikipedia 
+* The AGG renderer's buffer can easily be encoded in a variety of formats. Currently Mapnik supports writing to png and jpeg.
+* Version 2.3 of the AGG C++ library is included/embedded within the source tree of Mapnik and compiled automatically during the Scons process.
+* Because the primary developer of AGG has moved on to other endeavors, we happily maintain our own version of AGG with bugfixes.
+* Mapnik can also build against a system version of AGG, but this is NOT RECOMMENDED since packaged versions have likely not been updated with critical bug fixes
     
 While Mapnik was the first to use AGG rendering for mapping, the AGG renderer is also now an optional rendering engine in the [http://mapserver.gis.umn.edu/docs/howto/agg-rendering-specifics MapServer] and [http://trac.osgeo.org/mapguide/wiki/MapGuideRfc40 MapGuide] projects.
     
     
 ## cairo_renderer | Cairographics
   
-    The [http://cairographics.org/ Cairo] renderer is an auxiliary renderer in Mapnik.
-     * Cairo was added in r656 due to its similar reputation for high quality graphics output to various formats
-      * http://trac.mapnik.org/log/trunk/src/cairo_renderer.cpp
-     * Cairo has the '''added advantage''' of supporting both Vector and Raster output.
-     * Mapnik can render to any [http://www.cairographics.org/manual/cairo-surfaces.html surface] supported by cairo, either directly or by rendering to a cairo [http://www.cairographics.org/manual/cairo-context.html context].
-      * You can demo the PNG, JPEG, SVG, PDF, and PS formats using the [http://openstreetmap.org/export/ OSM export tool]
-     * Cairo is optional during Mapnik Scons build process but is enabled automatically if found (using pkg-config).
-      * Pkg-config must find libcairo as well as Cairomm(C++ bindings) and Pycairo (python bindings)
-      * If Pkg-config is successful you will see the added compiler flags: `-DHAVE_CAIRO -DHAVE_PYCAIRO`
+The [http://cairographics.org/ Cairo] renderer is an auxiliary renderer in Mapnik.
+
+* Cairo was added in r656 due to its similar reputation for high quality graphics output to various formats
+ * http://trac.mapnik.org/log/trunk/src/cairo_renderer.cpp
+* Cairo has the '''added advantage''' of supporting both Vector and Raster output.
+* Mapnik can render to any [http://www.cairographics.org/manual/cairo-surfaces.html surface] supported by cairo, either directly or by rendering to a cairo [http://www.cairographics.org/manual/cairo-context.html context].
+ * You can demo the PNG, JPEG, SVG, PDF, and PS formats using the [http://openstreetmap.org/export/ OSM export tool]
+* Cairo is optional during Mapnik Scons build process but is enabled automatically if found (using pkg-config).
+ * Pkg-config must find libcairo as well as Cairomm(C++ bindings) and Pycairo (python bindings)
+ * If Pkg-config is successful you will see the added compiler flags: `-DHAVE_CAIRO -DHAVE_PYCAIRO`
 
 
 ### Python Example Code
@@ -38,7 +35,6 @@ While Mapnik was the first to use AGG rendering for mapping, the AGG renderer is
 Writing to SVG with Mapnik's Cairo renderer:
 
 
-```python
     import mapnik
     import cairo
     
@@ -59,7 +55,6 @@ Writing to SVG with Mapnik's Cairo renderer:
     surface = cairo.PDFSurface('mapfile.pdf', mapnik_map.width, mapnik_map.height)
     mapnik.render(mapnik_map, surface)
     surface.finish()
-```    
 
  * Note: Cairo can also write to PostScript and other image formats
  * Note: 'mapnik.render()' can also render to Cairo Contexts
@@ -94,4 +89,3 @@ y = (2**z-1) - y
  * [Blog post on Skia (Chrome Renderer) in context of AGG and Cairo](http://www.gnashdev.org/?q=node/57)
  * [Agg inclusion in Boost thread - see 'A preliminary proposal: AGG project'](http://lists.boost.org/Archives/boost/2002/05/index.php)
  * [Good intro into anti-aliased font issues](http://www.joelonsoftware.com/items/2007/06/12.html)
-
