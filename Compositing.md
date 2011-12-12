@@ -9,20 +9,20 @@ See brainstorming at Ideas/Compositing in terms of a potential syntax....
 Below are tests that artem did using agg composing functions.
 
 ## Multiply
-[[Image(htdocs:/images/compositing/multiply.png)]]
-== Colour burn == 
-[[Image(htdocs:/images/compositing/color_burn.png)]]
-== Color dodge == 
-[[Image(htdocs:/images/compositing/color_dodge.png)]]
+[[/images/multiply.png]]
+## Colour burn 
+[[/images/color_burn.png]]
+## Color dodge
+[[/images/color_dodge.png]]
 ## Contrast
-[[Image(htdocs:/images/compositing/contrast.png)]]
+[[/images/contrast.png]]
 ## Difference
-[[Image(htdocs:/images/compositing/difference.png)]]
+[[/images/difference.png]]
 ## Exclusion
-[[Image(htdocs:/images/compositing/exclusion.png)]]
-== Hard Light == 
-[[Image(htdocs:/images/compositing/hard_light.png)]]
-== Soft Light == 
-[[Image(htdocs:/images/compositing/soft_light.png)]]
+[[/images/exclusion.png]]
+## Hard Light
+[[/images/hard_light.png]]
+## Soft Light
+[[/images/soft_light.png]]
 
 TODO
