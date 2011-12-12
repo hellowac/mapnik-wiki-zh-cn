@@ -63,8 +63,8 @@ If you want to figure out a pixel <-> real world meter correspondence, you there
 Apart from the scale, there's also the scale denominator, which plays a further role if you print your maps.
 
 ### Scale denominator
-[[Image(scale.png)]]
 
+[[/images/scale.png]]
 
 The above image illustrates how scale dependent rendering and resolution interact. Each map has the same extent and proportions. The large map was printed at 1000px by 1000px and the smaller inset at 250px250px, these were both reduced by 50% for display here. What you should notice is that resolution matters for scale. Each of these maps, made with [[Nik2Img]], have different levels of detail, because they are at different scales, even though the extents are the same. 
 
