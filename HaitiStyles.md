@@ -8,7 +8,7 @@ Sandbox for keeping haiti specific style renderings.
 
  
 
-[[Image(fgdc_and_osm.png)]]
+[[/images/fgdc_and_osm.png]]
 
 
 Note: styles based on maps in EPSG:4326 running Mapnik 0.7.
