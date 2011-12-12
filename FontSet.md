@@ -8,7 +8,7 @@ For example, on a layer with both English and Chinese names, one could specify f
 
 Here's a small example:
 
-
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE Map>
     <Map srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
@@ -31,3 +31,4 @@ Here's a small example:
        </Datasource>
       </Layer>
     </Map>
+```
