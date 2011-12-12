@@ -5,7 +5,7 @@
 
 
 # Example Code
-The Mapnik source comes with some example code in the [mapnik/demo](https://trac.mapnik.org/browser/trunk/demo) directory.
+The Mapnik source comes with some example code in the [mapnik/demo](https://github.com/mapnik/mapnik/tree/master/demo) directory.
 
 Here are some other sets of Example Code to learn from.
 
@@ -74,5 +74,6 @@ and
 ```sh
     $ pydoc -p 8080 
 ```
-and then open a browser and go to :  
-http://localhost:8080/mapnik.html
+and then open a browser and go to :
+
+    http://localhost:8080/mapnik.html
