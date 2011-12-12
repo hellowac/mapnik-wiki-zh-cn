@@ -28,7 +28,7 @@ featureZ[z=3]: styleA
 featureZ[z=3]: styleB
 ```
 
-An example XML and sqlite file can be downloaded from [[/data/grouped-rendering-sample.zip]].
+An example XML and sqlite file can be downloaded from [here](data/grouped-rendering-sample.zip).
 
 Example of rendering from one layer without and with the `group-by` on z order:
 
