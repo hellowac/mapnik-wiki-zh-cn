@@ -15,6 +15,7 @@ We deleted too
 
 **For images** 
 
+_**Images links changed done**_
 Images from trac have been checked into wiki github repo in an `/images` subfolder and can be referenced in pages like: `[/images/world.png]]` to produce:
 
 [[/images/world.png]]
