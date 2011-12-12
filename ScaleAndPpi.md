@@ -11,7 +11,7 @@ Map scale has traditionally been about how the real world translates into the pa
 
 For large maps, this difference will be even larger, for example, if we look at the world map below, it should be obvious that no scale can be given. On this map Africa looks the same size as Greenland, in reality it is 14 times as large. The pink circles indicate areas of equal size on the real world. Mapnik will still give a ‘scale’ for such a projection, but one should be aware that for these projections that cover a large area, such a number might not be very useful, or only be valid for a specific part of the map.
 
-[[Image(Tissot_mercator.png)]]
+[[/images/Tissot_mercator.png]]
 
 One can see a similar issue on Google Maps, if you follow [this link](http://maps.google.com/?ie=UTF8&ll=46.589069,2.548828&spn=7.504362,14.150391&z=6), you'll see a map centered on France, with a scale marker indicating 100 mile and 200km, if you drag the map in small steps to Norway or to the equator (without changing the zoom level) you can see how these scale markers change in order to adjust for the deformation introduced by the projection Google uses.
 
