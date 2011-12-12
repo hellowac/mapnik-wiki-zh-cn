@@ -17,13 +17,13 @@ Run the python executable in gdb:
 ( in this example we use the full path to apps for clarity, your system will differ )
 
 
-    #!sh
+```sh
     $ gdb /usr/bin/amd64/python
+```
 
 You should get some basic gdb startup output:
 
-
-    #!sh
+```sh
     GNU gdb 6.8
     Copyright (C) 2008 Free Software Foundation, Inc.
     License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -32,6 +32,7 @@ You should get some basic gdb startup output:
     and "show warranty" for details.
     This GDB was configured as "i386-pc-solaris2.11"...
     (no debugging symbols found)
+```
 
 Now you have a gdb prompt and you need to run your actual program that is crashing. The goal here is to get a backtrace that may indicate the place where the crash is happening.
 
@@ -40,12 +41,13 @@ For example, is it happening in a datasource plugin? If so that would point towa
 Below we run nik2img by typing 'r' then the path to the command and its arguments:
 
 
-    #!sh
+```sh
     (gdb) r /usr/bin/nik2img.py osm.xml image.png
-
+```
 
 You should see a bunch of output like:
 
+```sh
     Starting program: /usr/bin/amd64/python /usr/bin/nik2img.py osm.xml t.png
     (no debugging symbols found)
     (no debugging symbols found)
@@ -76,17 +78,16 @@ You should see a bunch of output like:
     warning: Lowest section in /lib/amd64/librt.so.1 is .dynamic at 00000000000000b0
     warning: Lowest section in /lib/amd64/libpthread.so.1 is .dynamic at 00000000000000b0
     warning: Lowest section in /lib/amd64/libthread.so.1 is .dynamic at 00000000000000b0
-    
+```    
 
 And then if you hit the crash you should see a line like:
-
 
     Program received signal SIGSEGV, Segmentation fault.
 
 
 Now, type 'bt' in the interpreter to get the backtrace:
 
-
+```sh
     (gdb) bt
     #0  0x0000000000053735 in ?? ()
     #1  0xfffffd7fff2ec5d1 in _Unwind_RaiseException_Body () from /usr/lib/amd64/libc.so.1
@@ -120,7 +121,7 @@ Now, type 'bt' in the interpreter to get the backtrace:
     #27 0xfffffd7ffd3a4d9d in PyEval_EvalFrameEx () from /usr/lib/amd64/libpython2.6.so.1.0
     #28 0xfffffd7ffd3abb95 in fast_function () from /usr/lib/amd64/libpython2.6.so.1.0
     #29 0xfffffd7ffd3ab68a in call_function () from /usr/lib/amd64/libpython2.6.so.1.0
-
+```
 
 The most important lines are the top ones:
 
@@ -128,8 +129,7 @@ Basically in this case it clearly indicates that the problem happened in the 'sh
 
 We know the bind function is basically the call to create the datasource, so at creation time one of the values must be wrong. A likely possibility is that the path to a shapefile was wrong and mapnik is throwing a datasource exception to tell us this, but because this exception is not caught we cannot know for sure.
 
-
-    #!sh
+```sh
     #0  0x0000000000053735 in ?? ()
     #1  0xfffffd7fff2ec5d1 in _Unwind_RaiseException_Body () from /usr/lib/amd64/libc.so.1
     #2  0xfffffd7fff2ec855 in _Unwind_RaiseException () from /usr/lib/amd64/libc.so.1
@@ -137,16 +137,18 @@ We know the bind function is basically the call to create the datasource, so at 
         at ../../../../.././libstdc++-v3/libsupc++/eh_throw.cc:78
     #4  0xfffffd7ffaaaa1c8 in shape_datasource::bind () from /usr/local/lib/mapnik/input/shape.input
     #5  0xfffffd7ffaaaadb5 in shape_datasource::shape_datasource () from /usr/local/lib/mapnik/input/shape.input
+```
 
 To leave gdb do:
 
-
     quit
+
 
 It is a sad thing, but perhaps the only definitive way to figure out what is wrong without being able to fix the ultimate problem is to replace any `throw`s with std::exit like:
 
 
-    #!cpp
+```cpp
+
     Index: plugins/input/shape/shape.cpp
     ===================================================================
     --- plugins/input/shape/shape.cpp       (revision 2441)
@@ -177,3 +179,4 @@ It is a sad thing, but perhaps the only definitive way to figure out what is wro
          }
      
          if (boost::filesystem::is_directory(shape_name_ + ".shp"))
+```
