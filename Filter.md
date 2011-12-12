@@ -25,29 +25,34 @@ Missing Attributes are treated as empty strings. Attributes can be compared agai
 ## Examples in XML
 Matches all Objects that have an attribute "amenity" with a value of "restaurant":
 
-    #!xml
+```xml
     <Filter>[amenity] = 'restaurant'</Filter> 
+```
 
 Matches all Objects that have an attribute "CARTO" with a value that compares greater or equal 2 and lower then 5:
 
-    #!xml
+```xml
     <Filter>[CARTO] &gt;= 2 and [CARTO] &lt; 5</Filter>
+```
 
 Matches all Objects that have an attribute "waterway" with a value of "canal" a) without a "tunnel" attribute or b) with a "tunnel" attribute that has a value different from "yes" and "true".
 
-    #!xml
+```xml
     <Filter>[waterway] = 'canal' and not ([tunnel] = 'yes' or [tunnel] = 'true')</Filter> 
+```
 
 Example using an Regular expression, matching all Objects with an attribute "place" with a value of "town" and an attribute "population" with a value consisting of exactly 5 characters where the first one is one of 5, 6, 7 or 8 and the remaining 4 characters are digits.
 
-    #!xml
+```xml
     <Filter>[place] = 'town' and [population].match('[5-9]\d\d\d\d')</Filter>
+```
 
 ## Examples in Python
 In python filters can be set using the following syntax:
 
-    #!python
+```python
     f = Filter("[name] = 'value'")
+```
 
 ## See also
  * The [OpenStreetMap Stylesheet](http://trac.openstreetmap.org/browser/applications/rendering/mapnik/osm.xml?rev=9228) which uses Filters in many ways.
