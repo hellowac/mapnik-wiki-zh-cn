@@ -13,8 +13,7 @@ Make sure to check out LearningMapnik for tips on certain topics, and ExampleCod
 
  * *Description*: You get a shapefile in WGS84 and try to display it on a map in Google Mercator projection. But, the data has coordinates that wrap the dateline (180˚ meridan) in the wrong way.
 
-
-[[Image(bogus_lines.png)]]
+[[/images/bogus_lines.png]]
 
  * *Solution*: This shapefile is bogus, and you need to fix it. *Usually* this problem can be fixed by clipping the extents of the shapefile before rendering with Mapnik. An easy way to do this is using the new clipping feature in GDAL 1.7. So, assuming a shapefile in WGS 84/EPS:4326 called 'sketchy_natural_earth.shp', fix it by doing:
 
