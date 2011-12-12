@@ -17,21 +17,22 @@ If you an interested in compiling Mapnik from source on windows see the windows 
 
 The Windows builds have a slightly less complete feature set than is possible from source builds. Full support is planned, and this table tracks the versions in which new features are added:
 
-|| *Mapnik Feature*                ||    *0.5.0*  ||  *0.5.1*  ||     *0.6.0* || *0.6.1*   || *0.7.0*   || *0.7.1* ||
-|| Cairo Rendering                    || -                 || -               || -                || -               || -               || -              ||
-|| ICU Unicode Support            || -                  || -               ||  ***          ||  ***         ||  ***         || ***          ||
-|| Python 2.5 Support               ||  ***           ||  ***         ||  ***           ||  ***         ||  ***         || ***         ||
-|| Python 2.6 Support               || -                 || -               || -                || -               ||  ***         || ***         ||
-|| Libxml2 Parser Support        || -                 || -               || -                || ***          ||  ***         || ***         ||
-|| Shapefile Plugin                     ||  ***            ||  ***         ||  ***          ||  ***          ||  ***         || ***         ||
-|| Raster Plugin                          ||  ***            ||  ***         ||  ***          ||  ***          ||  ***         || ***         ||
-|| PostGIS Plugin                        ||  ***            ||  ***         ||  ***          ||  ***          ||  ***         || ***         ||
-|| GDAL Plugin                           || -                  || -               ||  ***          ||  ***          ||  ***         || ***         ||
-|| OGR Plugin                             || -                  || -               || -                || ***          ||  ***         || ***         ||
-|| SQLite Plugin                          || -                  || -               ||  ***          ||  ***          ||  ***         || ***         ||
-|| OSM Plugin                             || -                  || -               || -                || -               || -               || -              ||
-|| shapeindex.exe                     || -                  || ***           ||  ***          ||  ***          ||  ***         || ***         ||
-|| pgsql2sqlite.exe                   || -                  || -                ||  ***          ||  ***          ||  ***         || ***         ||
+| *Mapnik Feature*                |    *0.5.0*  |  *0.5.1*  |     *0.6.0* | *0.6.1*   | *0.7.0*   | *0.7.1* |
+|:--------------------------------|-------------|-----------|-------------|-----------|-----------|--------:|
+| Cairo Rendering                    | -                 | -               | -                | -               | -               | -              |
+| ICU Unicode Support            | -                  | -               |  ***          |  ***         |  ***         | ***          |
+| Python 2.5 Support               |  ***           |  ***         |  ***           |  ***         |  ***         | ***         |
+| Python 2.6 Support               | -                 | -               | -                | -               |  ***         | ***         |
+| Libxml2 Parser Support        | -                 | -               | -                | ***          |  ***         | ***         |
+| Shapefile Plugin                     |  ***            |  ***         |  ***          |  ***          |  ***         | ***         |
+| Raster Plugin                          |  ***            |  ***         |  ***          |  ***          |  ***         | ***         |
+| PostGIS Plugin                        |  ***            |  ***         |  ***          |  ***          |  ***         | ***         |
+| GDAL Plugin                           | -                  | -               |  ***          |  ***          |  ***         | ***         |
+| OGR Plugin                             | -                  | -               | -                | ***          |  ***         | ***         |
+| SQLite Plugin                          | -                  | -               |  ***          |  ***          |  ***         | ***         |
+| OSM Plugin                             | -                  | -               | -                | -               | -               | -              |
+| shapeindex.exe                     | -                  | ***           |  ***          |  ***          |  ***         | ***         |
+| pgsql2sqlite.exe                   | -                  | -                |  ***          |  ***          |  ***         | ***         |
 
  * - : not available
  * ***: available
@@ -64,16 +65,14 @@ To download and manually configure the Mapnik 0.7.1, please follow the instructi
 
  * Windows XP or Vista (not yet tested in Windows 7)
  * Python 2.5 or Python 2.6 - [python.org](http://www.python.org)
- * [Mapnik 0.7.1 Binary Files](http://prdownload.berlios.de/mapnik/mapnik-0.7.1-win32-py25_26.zip) ([[Alt link](http://download.berlios.de/mapnik/mapnik-0.7.1-win32-py25_26.zip)])
+ * [Mapnik 0.7.1 Binary Files](http://prdownload.berlios.de/mapnik/mapnik-0.7.1-win32-py25_26.zip) ([Alt link](http://download.berlios.de/mapnik/mapnik-0.7.1-win32-py25_26.zip))
  * [PROJ4 binary files](http://download.osgeo.org/proj/proj446_win32_bin.zip), if you are planning to use the OGC WMS server or wish to specify projections using EPSG codes
 
 ## Overview
 
- This Guide will walk you through installing Mapnik and then running a test script to generate the sample map below:
+This Guide will walk you through installing Mapnik and then running a test script to generate the sample map below:
 
- 
-
-[[Image(demo.png)]]
+[[/images/demo.png]]
 
 ## Manual Instructions
 
@@ -99,8 +98,9 @@ To download and manually configure the Mapnik 0.7.1, please follow the instructi
 
  5. Run "C:\Python25\python.exe" , then type at a python prompt:
 
-    #!python
-    from mapnik import *
+        #!python
+        from mapnik import *
+
   * If you get no error message, you made it!
   * If you do get an error message, see *Troubleshooting* below
  
@@ -133,9 +133,7 @@ To download and manually configure the Mapnik 0.6.1, please follow the instructi
 
  This Guide will walk you through installing Mapnik and then running a test script to generate the sample map below:
 
- 
-
-[[Image(demo.png)]]
+[[/images/demo.png]]
 
 ## Manual Instructions
 
@@ -157,8 +155,9 @@ To download and manually configure the Mapnik 0.6.1, please follow the instructi
 
  5. Run "C:\Python25\python.exe" , then type at a python prompt:
 
-    #!python
-    from mapnik import *
+        #!python
+        from mapnik import *
+
   * If you get no error message, you made it!
   * If you do get an error message, see *Troubleshooting* below
  
@@ -177,7 +176,6 @@ To download and manually configure the Mapnik 0.6.1, please follow the instructi
 
 You get an error like:
 
-
     Can't find mapnik.dll
 
 Solution: make sure that you complete *Step 3.a* properly.
@@ -186,7 +184,6 @@ Solution: make sure that you complete *Step 3.a* properly.
 ### Mapnik Python not found
 
 Problem: When importing mapnik in python you get:
-
 
     #!python
     >>> import mapnik
