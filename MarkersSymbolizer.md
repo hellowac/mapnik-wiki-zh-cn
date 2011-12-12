@@ -21,7 +21,7 @@ It can be added to a Rule with line features like:
 <MarkersSymbolizer />
 ```
 
-[[Image(http://trac.mapnik.org/raw-attachment/ticket/180/offsets_directions.png)]]
+[[/images/offsets_directions.png)]]
 
 The MarkersSymbolizer should draw blue directional arrows *in the direction of the geometry* (for things like one-way streets).
 
@@ -32,7 +32,7 @@ The ST_reverse function of Postgis can fix this (The problem will then be to ide
 ### SVG markers
 *NEW*: Staring from r1793 MarkersSymbolizer supports [Scalable Vector Graphics (SVG)](http://www.w3.org/TR/SVG/) as input images:
 
-[[Image(markers_symbolizer.png)]]
+[[/images/markers_symbolizer.png]]
 
 
 ```xml
