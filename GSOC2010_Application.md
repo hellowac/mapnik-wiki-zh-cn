@@ -44,7 +44,8 @@ Not applicable.
 Not applicable.
 
 ## What is the URL for your ideas page? (required)
-http://trac.mapnik.org/wiki/GSOC2010/Ideas
+http://trac.mapnik.org/wiki/GSOC2010/Ideas (for history)  
+Now [GSOC2010/Ideas](GSOC2010_Ideas) 
 
 ## What is the main development mailing list for your organization? This question will be shown to students who would like to get more information about applying to your organization for GSoC 2010. If your organization uses more than one list, please make sure to include a description of the list so students know which to use. (required)
 
