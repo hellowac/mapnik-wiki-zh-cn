@@ -12,8 +12,7 @@ Both potential students and mentors can start adding their ideas for potential p
 
 See the main page for more details: wiki:GSOC2010
 
-See also steve8's ideas page: http://trac.mapnik.org/wiki/Ideas
-
+See also steve8's ideas page: [Ideas](Ideas)
 
 # Project Ideas
 
@@ -92,7 +91,7 @@ Unsure who would be a willing mentor - [I](http://mike.teczno.com) know what wou
  * See also: http://wiki.openstreetmap.org/wiki/User:Kobezda/GSoC
    * -- Dane Springmeyer - April 6, 2010
 
- * Potential spec could look like: http://trac.mapnik.org/wiki/Ideas/Compositing
+ * Potential spec could look like: [Ideas/Compositing](Ideas_Compositing)
    * -- Dane Springmeyer - April 6, 2010
 
  * Good brainstorming thread on issues around compositing on #mapnik April 7th: http://mapnik.dbsgeo.com/mapnik_logs/2010/04/07/ 
