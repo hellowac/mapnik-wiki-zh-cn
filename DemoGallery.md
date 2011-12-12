@@ -27,7 +27,7 @@ Have a look at some online uses of Mapnik!
  * [Pandemic Preparedness: When Data Visualization and Workflow Matter](http://www.developmentseed.org/blog/2008/jun/25/data-visualization-for-pandemic-preparedness) (Drupal + Mapnik)
  * http://patch-maps.com/
  * http://magic.cyclopath.org/
- * [http://5411.info/]
+ * http://5411.info/
  * [Mapnik & OpenLayers](http://gallery.openlayers.org/?tag=mapnik) -  Example sites using Mapnik in the OpenLayers Gallery
  * http://hikebikemap.de
  * [Карта Дрогобыча и Трускавца. Бизнес справочник на карте](http://nadoloni.com/)
