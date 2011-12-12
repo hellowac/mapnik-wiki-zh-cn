@@ -14,10 +14,7 @@ Slides from State of the Map Europe 2011 are [available](http://trac.mapnik.org/
 
 See also Herm's demo, which highlights both visible and invisible features: http://r2d2.stefanm.com/mapnik/demo.html
 
-
-
-[[Image(metawriter_bbox_around_width_plus_stroke.png)]]
-
+[[/images/metawriter_bbox_around_width_plus_stroke.png]]
 
 The above graphic highlights output (geojson) representing the clickable area of a MarkersSymbolizer rendered circle. This circle can change size dynamically depending on the width/height of the shape plus the thickness of the stroke and the bbox output by the MetaWriter will be intelligent to all rendering parameters.
 
