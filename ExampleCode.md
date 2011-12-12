@@ -74,6 +74,5 @@ and
 ```sh
     $ pydoc -p 8080 
 ```
-and then open a browser and go to :
 
-    http://localhost:8080/mapnik.html
+and then open a browser and go to : [http://localhost:8080/mapnik.html](http://localhost:8080/mapnik.html)
