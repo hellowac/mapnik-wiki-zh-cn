@@ -28,7 +28,7 @@ NOTE: the code for example 1, along with the code from [GettingStarted Tutorial 
 First you will still need a python script that sets the basic map parameters and points to the XML config file:
 
 
-    #!python
+```python
     #!/usr/bin/env python
     import mapnik
     mapfile = 'world_styles.xml'
@@ -38,6 +38,7 @@ First you will still need a python script that sets the basic map parameters and
     bbox = mapnik.Envelope(mapnik.Coord(-180.0, -90.0), mapnik.Coord(180.0, 90.0))
     m.zoom_to_box(bbox) 
     mapnik.render_to_file(m, map_output)
+```
 
  * Copy this code and save to a file called *world_map.py*
 
@@ -45,8 +46,8 @@ Next you will need to create the *world_styles.xml* file referenced in the *worl
 
 Note: you will need to specify the path to the same Mapping Hacks [world borders shapefile](http://mappinghacks.com/data/world_borders.zip) using in Tutorial 1
 
+```xml
 
-    #!xml
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE Map>
     <Map bgcolor="steelblue" srs="+proj=latlong +datum=WGS84">
@@ -72,18 +73,19 @@ Note: you will need to specify the path to the same Mapping Hacks [world borders
       </Layer>
     
     </Map>
+```
 
  * Copy this XML and save to a file called *world_styles.xml* beside the *world_map.py* script
 
 Now run that script with this command:
 
-    #!sh
+```sh
     python world_map.py
+```
+
  * It should output a png graphic in the same folder that matches the Getting Started Tutorial.
 
 ----
-
-
 
 ## Step 2
 
@@ -98,7 +100,7 @@ This script should result in a graphic like this:
 
 [[/images/world_population_minimized.png]]
 
-    #!python
+```python
     #!/usr/bin/env python
     
     import mapnik
@@ -108,11 +110,11 @@ This script should result in a graphic like this:
     bbox = mapnik.Envelope(mapnik.Coord(-180.0, -75.0), mapnik.Coord(180.0, 90.0))
     m.zoom_to_box(bbox) 
     mapnik.render_to_file(m, 'world_population.png', 'png')
+```
 
 And here is the xml file:
 
-
-    #!xml
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE Map>
     <!-- Sample Mapnik XML template by Dane Springmeyer -->
@@ -245,3 +247,4 @@ And here is the xml file:
       </Layer>
     
     </Map>
+```
