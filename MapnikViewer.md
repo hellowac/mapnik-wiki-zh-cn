@@ -9,7 +9,7 @@ It's available under source:trunk/demo/viewer and needs to be compiled after man
 ----
  
 
-[[Image(mapnik_viewer.png)]]
+[[/images/mapnik_viewer.png]]
 ----
 
 == A Desktop XML Viewer == 
