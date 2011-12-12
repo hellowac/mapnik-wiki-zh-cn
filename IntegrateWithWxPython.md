@@ -88,4 +88,4 @@ We create an Image32 object, and render map on to that image, then load raw data
 
 Screenshots
 
-[[Image(wxMapnikScreenshot.png)]]
+[[/images/wxMapnikScreenshot.png]]
