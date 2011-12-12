@@ -6,8 +6,7 @@
 
 ## Dependencies for Debian 6: Squeeze (stable)
 
-
-    #!/usr/bin/env bash
+```sh
     sudo apt-get install \
     g++-4.4 cpp \
     libicu-dev libicu44 \
@@ -33,6 +32,7 @@
     libgdal1-dev python-gdal \
     postgresql-8.4-postgis libsqlite3-dev  \
     subversion build-essential python-nose
+```
 
 *Note:* We use libjpeg62 instead of libjpeg8 above because libtiff package still depends on 62.
 
@@ -40,7 +40,7 @@
 ## Dependencies for Debian 5: Lenny
 
 
-    #!/usr/bin/env bash
+```sh
     sudo apt-get install -y g++ cpp \
     libboost-system1.35-dev \
     libboost-filesystem1.35-dev \
@@ -63,11 +63,11 @@
     postgresql-server-dev-8.3 postgresql-contrib-8.3 \
     libsqlite3-dev  \
     subversion build-essential python-nose
+```
 
 Install Mapnik 0.7.1
 
-
-    #!/usr/bin/env bash
+```sh
     svn co http://svn.mapnik.org/tags/release-0.7.1/ mapnik-0.7.1
     cd mapnik-0.7.1
     python scons/scons.py configure INPUT_PLUGINS=all \
@@ -76,11 +76,11 @@ Install Mapnik 0.7.1
     python scons/scons.py
     sudo python scons/scons.py install
     sudo ldconfig
+```
 
 or Mapnik trunk:
 
-
-    #!/usr/bin/env bash
+```sh
     svn co http://svn.mapnik.org/trunk mapnik-trunk
     cd mapnik-trunk
     python scons/scons.py configure INPUT_PLUGINS=all \
@@ -89,12 +89,12 @@ or Mapnik trunk:
     python scons/scons.py
     sudo python scons/scons.py install
     sudo ldconfig
-
+```
 
 ### Optional: Build and install mapnik without root permissions
 The development libraries have to be present as described above. In the following example `/home/$USER/mapnik_svn` (`$DIR_MAPNIK_SVN`) is the directory where you want to check out the source and `/home/$USER/mapnik_inst` (`$DIR_MAPNIK_INSTALL`) is the directory you want to use for installation. 
 
-    #!/usr/bin/env bash
+```sh
     DIR_MAPNIK_SRC=/home/$USER/mapnik_svn
     DIR_MAPNIK_INSTALL=/home/$USER/mapnik_inst
     
@@ -113,3 +113,4 @@ The development libraries have to be present as described above. In the followin
     DIR_MAPNIK_INSTALL=/home/$USER/mapnik_inst
     export LD_LIBRARY_PATH=$DIR_MAPNIK_INSTALL/lib
     export PYTHONPATH=$DIR_MAPNIK_INSTALL/lib/python2.6/site-packages
+```
