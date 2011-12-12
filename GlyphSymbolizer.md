@@ -8,12 +8,12 @@
 
 Renders a TrueType Glyph at the Feature's label location (usually the center of polygons/lines and on the point themselves).
 
-(see source:trunk/tests/python_tests/glyph_symbolizer_test.py for sample usage)
+(see [source](https://github.com/mapnik/mapnik/blob/master/tests/python_tests/glyph_symbolizer_test.py) for sample usage)
 
 
 ## Sample XML Configuration
 
-    #!xml
+```xml
     
     <?xml version="1.0" encoding="utf-8"?>
     <Map>
@@ -39,5 +39,6 @@ Renders a TrueType Glyph at the Feature's label location (usually the center of 
         </Rule>
       </Style>
     </Map>
+```
 
 TODO: Describe all parameters
