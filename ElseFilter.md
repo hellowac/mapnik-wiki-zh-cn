@@ -15,8 +15,7 @@ For each Object read from the Datasource Mapnik checks if the current ScaleDenom
  * If the Object _passes_ these tests, the first Rule is evaluated painted to the map. The two other Rules are ignored in this case.
  * If the Object _misses_ these tests, the two Rules with an `<ElseFilter />` are evaluated according to their Min- and MaxScaleDenominator.
 
-
-    #!xml
+```xml
     <Style name="contours">
       <Rule>
         <Filter>[major] = 1</Filter>
@@ -51,12 +50,14 @@ For each Object read from the Datasource Mapnik checks if the current ScaleDenom
         </LineSymbolizer>
       </Rule>
     </Style>
+```
 
 ## Example in Python
 
-    #!python
+```python
     rule = mapnik.Rule()
     rule.set_else(True) # instead of rule.filter(...)
+```
 
 ## See also
  * The normal [Filter](https://github.com/mapnik/mapnik/wiki/Filter)
