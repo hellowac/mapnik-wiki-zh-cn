@@ -6,12 +6,12 @@
 
 [TopOSM](http://wiki.openstreetmap.org/wiki/TopOSM/Details) is pretty inspirational. How about an XML dialect for specifying the composition of multiple Mapnik-rendered layers into a single map. This example is based on [TopOSM's compositing steps](http://wiki.openstreetmap.org/wiki/TopOSM/Details#Combining_images_into_a_final_composite), which also incorporate `gdalwarp`-generated hill shadings. (These could be integrated using a [RasterSymbolizer](http://trac.mapnik.org/wiki/RasterSymbolizer), or a thin wrapper could be generated at runtime.)
 
-* Note: see also artem's test images (generated with AGG): http://trac.mapnik.org/wiki/Compositing
-* Note: see also the GSOC page on related ideas: http://trac.mapnik.org/wiki/GSOC2010/Ideas?version=17#LayerComposites
+* Note: see also [artem's test images](Compositing) (generated with AGG)
+* Note: see also the GSOC page on related ideas part [Layer Composites](GSOC2010_Ideas)
 * Note: Research possibility of use RPN (reverse polish notation) for specifying the rendering and compositing order. It would be hard to understand complex compositing schemes, but easy to implement
 * Note: Research multithreaded/multiprocess rendering and compositing of layers. In a nutshell, rendering of two different layers to be composed could be handled by different threads, all compositing should be multithreaded. Research and benchmark if it makes sense performance-wise.
 
-
+```xml
         <?xml version="1.0"?>
         <Composite srs="...">
     
@@ -54,6 +54,7 @@
             <Map href="labels.xml"/>
     
         </Composite>
+```
 
 The idea here is that the composition starts with an empty buffer and draws layers into it recursively, in the order that they appear in the XML. The `areas.xml` Mapnik stylesheet is rendered directly into the buffer, then the hill shading is applied twice: first darkened and composited using the "screen" blend mode; then lightened and composited using the "multiply" blend mode. The "features" group creates a new temporary buffer, into which the `features.xml` Mapnik stylesheet is rendered, then has its alpha channel ("A") replaced by that of the rendered `labels.xml` stylesheet (which, before being applied, is blurred, inverted, and leveled). The "areas" buffer is then composited onto the hill-shaded area map, followed by straight-up alpha composited `noshade-fill.xml` and `labels.xml` Mapnik styles.
 
