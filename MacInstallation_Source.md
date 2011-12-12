@@ -12,10 +12,12 @@ There are *three main routes* for getting Mapnik installed on Mac OS X.
 
 *Please* take a moment to decide which one fits you best.
 
-|| *Route A - Option 1* || _Easiest_ -> Recommended for users *new to Python* or users already using Python26 from Macports. ||
-|| *Route A - Option 2* || _Hardest_ -> Recommended for advanced users already using Python26 from Macports. ||
-|| *Route B* || _Moderate_ -> Recommended for users who actively using the Python that came pre-installed with Leopard.||
-|| *Route C* || _Moderate_ -> Recommended for users who are running Python installed from python.org.||
+| Choice | Difficulty |
+|:-------|-----------:|
+| *Route A - Option 1* | _Easiest_ -> Recommended for users *new to Python* or users already using Python26 from Macports. |
+| *Route A - Option 2* || _Hardest_ -> Recommended for advanced users already using Python26 from Macports. |
+| *Route B* | _Moderate_ -> Recommended for users who actively using the Python that came pre-installed with Leopard.|
+| *Route C* | _Moderate_ -> Recommended for users who are running Python installed from python.org.|
 
 *Hint*: open Terminal.app and type:
 
@@ -26,9 +28,7 @@ There are *three main routes* for getting Mapnik installed on Mac OS X.
   * /System/... means you are using the python pre-installed by Apple
   * /Library/... means you are likely using MacPython from http://python.org
 
- 
-
-[[Image(http://trac.mapnik.org/raw-attachment/wiki/MacInstallation/mapnik_on_mac_os.png)]]
+[[/images/mapnik_on_mac_os.png]]
 
 # Step 1: Install Xcode
 
