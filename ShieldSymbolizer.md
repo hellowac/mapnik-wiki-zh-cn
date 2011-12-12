@@ -58,17 +58,12 @@ To draw labeled points configure your shield symbolizer with placement = point a
 
 ## Examples
 
-
-
-[[Image(http://wiki.openstreetmap.org/images/thumb/6/63/Mapnik-highway-motorway.png/120px-Mapnik-highway-motorway.png)]]
-
-
+[[/images/120px-Mapnik-highway-motorway.png]]
 
 Setting up a sample shield symbolizer, from the Cascade Users of OpenSource GeoSpatial (CUGOS) list:
 http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba
 
 ### Default
-
 
 
 #### XML
@@ -114,7 +109,7 @@ http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba
 
 ## SVG shields
 
-[[Image(shield_symbolizer_svg.png)]]
+[[/images/shield_symbolizer_svg.png]]
 
 
     #!xml
