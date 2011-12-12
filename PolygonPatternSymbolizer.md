@@ -13,18 +13,13 @@
 
 ## Examples
 
-
-
-[[Image(http://media.mapnik.org/images/polygon_pattern.png)]]
-
-
+[[/images/polygon_pattern.png]]
 
 ### Default
 
 ` FIXME: Add image `
 
 #### XML
-
 
     #!xml
     <PolygonPatternSymbolizer width="16" height="16" type="png" file="/path/to/icon.png"/>
