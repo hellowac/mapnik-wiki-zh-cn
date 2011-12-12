@@ -20,6 +20,10 @@ Images from trac have been checked into wiki github repo in an `/images` subfold
 
 [[/images/world.png]]
 
+**Code blocks**
+
+To get syntax color, see "Syntax highlighting" from http://github.github.com/github-flavored-markdown/
+
 |Pages | Syntax review 1 | Syntax review 2 | Content update|
 |:-----|-----------------|-----------------|--------------:|
 |About Mapnik|||
