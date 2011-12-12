@@ -12,7 +12,7 @@ There are *three main routes* for getting Mapnik installed on Mac OS X.
 
 *Please* take a moment to decide which one fits you best.
 
-| Choice | Difficulty |
+| **Choice** | **Difficulty** |
 |:-------|-----------:|
 | *Route A - Option 1* | _Easiest_ -> Recommended for users *new to Python* or users already using Python26 from Macports. |
 | *Route A - Option 2* || _Hardest_ -> Recommended for advanced users already using Python26 from Macports. |
