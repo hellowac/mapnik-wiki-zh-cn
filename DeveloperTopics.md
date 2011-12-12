@@ -6,7 +6,7 @@
 
 Please use this wiki page to share ideas, sketch plans, and discuss features.
 
-Any specific feature request or bug report should be created as a [new ticket](http://trac.mapnik.org/newticket).
+Any specific feature request or bug report should be created as a [new ticket](https://github.com/mapnik/mapnik/issues/new).
 
 ## Guidelines
 
