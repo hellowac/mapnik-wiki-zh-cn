@@ -16,21 +16,12 @@ The AGG renderer ([Antigrain Geometry](http://antigrain.com)) is the primary ren
  * Version 2.3 of the AGG C++ library is included/embedded within the source tree of Mapnik and compiled automatically during the Scons process.
  * Because the primary developer of AGG has moved on to other endeavors, we happily maintain our own version of AGG with bugfixes.
  * Mapnik can also build against a system version of AGG, but this is NOT RECOMMENDED since packaged versions have likely not been updated with critical bug fixes
- * Use the INTERNAL_LIBAGG option as a scons flag:
- 
-     INTERNAL_LIBAGG=False
-     }}}
-      * The need for this option is due in part to [http://www.nabble.com/Statically-linking-against-bundled-libagg-td18803411.html concerns about packaging].
     
-    While Mapnik was the first to use AGG rendering for mapping, the AGG renderer is also now an optional rendering engine in the [http://mapserver.gis.umn.edu/docs/howto/agg-rendering-specifics MapServer] and [http://trac.osgeo.org/mapguide/wiki/MapGuideRfc40 MapGuide] projects.
-    
-    Due to licensing issues much discussion exists in the !MapServer and !MapGuide communities about the now GPL-licensed AGG:
-     * http://www.nabble.com/MapGuide-fork-of-AGG-tt13321313.html#a13406886
-     * http://www.nabble.com/Re%3A-MapGuide-fork-of-AGG-p13359220.html
+While Mapnik was the first to use AGG rendering for mapping, the AGG renderer is also now an optional rendering engine in the [http://mapserver.gis.umn.edu/docs/howto/agg-rendering-specifics MapServer] and [http://trac.osgeo.org/mapguide/wiki/MapGuideRfc40 MapGuide] projects.
     
     
-    == cairo_renderer | Cairographics ==
-    
+## cairo_renderer | Cairographics
+  
     The [http://cairographics.org/ Cairo] renderer is an auxiliary renderer in Mapnik.
      * Cairo was added in r656 due to its similar reputation for high quality graphics output to various formats
       * http://trac.mapnik.org/log/trunk/src/cairo_renderer.cpp
@@ -39,9 +30,7 @@ The AGG renderer ([Antigrain Geometry](http://antigrain.com)) is the primary ren
       * You can demo the PNG, JPEG, SVG, PDF, and PS formats using the [http://openstreetmap.org/export/ OSM export tool]
      * Cairo is optional during Mapnik Scons build process but is enabled automatically if found (using pkg-config).
       * Pkg-config must find libcairo as well as Cairomm(C++ bindings) and Pycairo (python bindings)
-      * If Pkg-config is successful you will see the added compiler flags
-    {{{
-    -DHAVE_CAIRO -DHAVE_PYCAIRO
+      * If Pkg-config is successful you will see the added compiler flags: `-DHAVE_CAIRO -DHAVE_PYCAIRO`
 
 
 ### Python Example Code
@@ -49,7 +38,7 @@ The AGG renderer ([Antigrain Geometry](http://antigrain.com)) is the primary ren
 Writing to SVG with Mapnik's Cairo renderer:
 
 
-    #!python
+```python
     import mapnik
     import cairo
     
@@ -70,7 +59,7 @@ Writing to SVG with Mapnik's Cairo renderer:
     surface = cairo.PDFSurface('mapfile.pdf', mapnik_map.width, mapnik_map.height)
     mapnik.render(mapnik_map, surface)
     surface.finish()
-    
+```    
 
  * Note: Cairo can also write to PostScript and other image formats
  * Note: 'mapnik.render()' can also render to Cairo Contexts
@@ -92,10 +81,9 @@ The client javascript library that works with all major javascript mapping APIs 
 
 It should be noted that while the mbtiles spec also talks about leveraging sqlite as a tile cache the interaction and grid.json should work absolutely fine with any caching format on the filesystem. However, at this time the WAX client javascript code (for legacy reasons) assumes that the tile scheme is [TMS](http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification), which is basically the same as the OSM/Google scheme except that the [Y axis is flipped](http://lists.osgeo.org/pipermail/tiling/2010-September/000015.html) (or the origin is [lower left](http://wiki.osgeo.org/wiki/File:Tms.png) not top left). Luckily it is pretty easy to "flip" the y with code like:
 
-
-    #!python
-        y = (2**z-1) - y
-
+```python
+y = (2**z-1) - y
+```
 
 
 ## Further References

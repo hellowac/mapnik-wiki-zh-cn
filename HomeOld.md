@@ -28,8 +28,7 @@ _The Mapnik Team_
 
  * *What is Mapnik?*
   * MapnikOverview |  DemoGallery | [mapnik.org](http://mapnik.org/)
-  * Commit Timeline at [Ohloh](https://www.ohloh.net/projects/mapnik): 
- [[Image(http://www.ohloh.net/p/mapnik/analyses/latest/commits_spark.png)]]
+  * Commit Timeline at [Ohloh](https://www.ohloh.net/projects/mapnik) 
 
  * *Installing Mapnik*
   * MapnikInstallation - Guides for installing Mapnik
