@@ -20,7 +20,7 @@ A PolygonSymbolizer is often used to render the area enclosed by a [polygon](htt
 
 
 
-[[Image(default_polygon_symbolizer.png)]]
+[[/images/default_polygon_symbolizer.png]]
 
 
     #!xml
@@ -29,7 +29,7 @@ A PolygonSymbolizer is often used to render the area enclosed by a [polygon](htt
 ### Default fill with Gamma correction
 
 
-[[Image(gamma65_polygon_symbolizer.png)]]
+[[/images/gamma65_polygon_symbolizer.png]]
 
 
     #!xml
@@ -58,11 +58,8 @@ A PolygonSymbolizer is often used to render the area enclosed by a [polygon](htt
 
 ` FIXME `
 
-
 ----
 
 Example output of the `rundemo.py` utilizing the PolygonSymbolizer for provinces and water bodies:
 
- 
-
-[[Image(demo256.png)]]
+[[/images/demo256.png]]
