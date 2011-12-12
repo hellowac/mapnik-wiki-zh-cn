@@ -1,4 +1,16 @@
-Using "grouped rendering" on a layer renders all styles of one layer for all features that have the same value before proceeding to other features that have a different value. This is useful for rendering roads in the correct z-order:
+Using "grouped rendering" on a layer renders all styles of one layer for all features that have the same value before proceeding to other features that have a different value.
+
+Example syntax looks like:
+
+```xml
+<Layer srs=".." group-by="z">
+    <StyleName>casing</StyleName>
+    <StyleName>fill</StyleName>
+    ...
+</Layer>
+```
+
+This is useful for rendering roads in the correct z-order:
 
 * The datasource (e.g. Postgres) sorts the data based on a field (e.g. z_order) into ascending order
 * Mapnik paints the features as they come in, but stops when the next feature has a higher z-order than the current one. It then proceeds to paint other styles for the features it has retrieved so far.
