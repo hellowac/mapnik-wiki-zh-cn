@@ -11,17 +11,18 @@ This plugin supports the [GDAL](http://www.gdal.org/) library in order to read a
 
 # Installation
 
-Make sure that running _python scons/scons.py _ shows the following line
+Make sure that running `python scons/scons.py` shows the following line
 
     Checking for gdal-config --libs... yes
     Checking for gdal-config --cflags... yes
 
 To check if the gdal plugin built and was installed correctly you can do:
 
+```python
     >>> from mapnik import DatasourceCache as c
     >>> 'gdal' in c.plugin_names()
     True
-
+```
 
 # Parameters
 
@@ -37,15 +38,13 @@ To check if the gdal plugin built and was installed correctly you can do:
 
 To style a layer from GDAL use the RasterSymbolizer
 
-
 # Usage
 
 This plugin in Mapnik >= 0.7.0 supports reading overviews created with http://www.gdal.org/gdaladdo.html
 
 ## Python
 
-
-    #!python
+```python
     style=Style()
     rule=Rule()
     rule.symbols.append(RasterSymbolizer())
@@ -54,13 +53,13 @@ This plugin in Mapnik >= 0.7.0 supports reading overviews created with http://ww
     lyr = Layer('GDAL Layer from TIFF file')
     lyr.datasource = Gdal(base='/path/to/your/data',file='raster.tif')
     lyr.styles.append('Raster Style')
+```
 
 See the docstring at: http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-module.html#Gdal
 
 ## XML
 
-
-    #!xml
+```xml
     <!-- NOTE: must be in the same SRS as your map-->
     <Layer name="GDAL Layer from TIFF file">
     	<StyleName>raster</StyleName>
@@ -69,6 +68,7 @@ See the docstring at: http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-mo
     		<Parameter name="file">/path/to/your/data/raster.tiff</Parameter>
     	</Datasource>
     </Layer>
+```
 
 ## C++
 
@@ -76,8 +76,7 @@ Plugin datasource initialization example code can be found on PluginArchitecture
 
 A GDAL datasource may be created as follows:
 
-
-    #!C
+```c
     {
         parameters p;
         p["type"]="gdal";
@@ -89,5 +88,6 @@ A GDAL datasource may be created as follows:
         lyr.add_style("raster");
         m.addLayer(lyr);
     }
+```
 
 ## Further References
