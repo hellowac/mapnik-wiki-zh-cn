@@ -26,14 +26,9 @@ see examples below.
 
 === Default === 
 
+[[/images/point_symbolizer_1.png]]
 
-
- 
-[[Image(htdocs:/images/point_symbolizer_1.png)]]
-
-
-
-[[Image(http://media.mapnik.org/images/streets2.png)]]
+[[/images/streets2.png]]
 
 #### XML
 
@@ -55,7 +50,7 @@ see examples below.
      === Image label ===  
     
 
-    [[Image(htdocs:/images/point_symbolizer_2.png)]]
+    [[/images/point_symbolizer_2.png]]
     
     ==== XML ====
     {{{
@@ -78,7 +73,8 @@ point_symbolizer sym("/tmp/pub.png","png",16,16);
 }}}
 
 ### Allow Overlap
-[[Image(allow_overlap=yes.png)]]
+
+[[/images/allow_overlap=yes.png]]
 
 #### XML
 
@@ -88,7 +84,9 @@ point_symbolizer sym("/tmp/pub.png","png",16,16);
     height="5" />
 
 ### Do Not Allow Overlap
-[[Image(allow_overlap=no.png)]]
+
+[[/images/allow_overlap=no.png]]
+
 #### XML
 
     #!xml
@@ -98,12 +96,12 @@ point_symbolizer sym("/tmp/pub.png","png",16,16);
 
 ## SVG symbols (trunk)
 
-[[Image(point_symbolizer_svg.png)]]
+[[/images/point_symbolizer_svg.png]]
 
     #!xml
     <PointSymbolizer file="/Users/artem/Desktop/svg/lion.svg" opacity="1.0" transform="scale(0.2,0.2)" />
 
-[[Image(point_symbolizer_svg2.png)]]
+[[/images/point_symbolizer_svg2.png]]
 
     #!xml
     <PointSymbolizer file="/Users/artem/Desktop/svg/lion.svg" opacity="1.0" transform="rotate(45) scale(0.4,0.4)" />
