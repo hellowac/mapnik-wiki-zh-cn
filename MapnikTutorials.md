@@ -8,15 +8,13 @@ Make sure to see LearningMapnik for more topics
 
 ## Hello World
 
-GettingStarted - 'Hello,world!' using the Python bindings.  
-
-
+[GettingStarted - 'Hello,world!'](https://github.com/mapnik/mapnik/wiki/GettingStartedInPython) using the Python bindings.  
 
 [[/images/hello.png]]
 
 ## World Population
 
-[[XMLGettingStarted]] - Python and XML styling
+[XMLGettingStarted](https://github.com/mapnik/mapnik/wiki/GettingStartedInXML) - Python and XML styling
 
 [[/images/population.png]]
 
