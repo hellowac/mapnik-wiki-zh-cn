@@ -10,7 +10,7 @@ Mapnik will participate in Google Summer of Code 2010.
 
 Both potential students and mentors can start adding their ideas for potential projects here.
 
-See the main page for more details: wiki:GSOC2010
+See the main page for more details: [GSOC2010](GSOC2010)
 
 See also steve8's ideas page: [Ideas](Ideas)
 
@@ -19,13 +19,13 @@ See also steve8's ideas page: [Ideas](Ideas)
 ----
 
 # Results
- * *Mapnik Python3k Support*: Done: see wiki:Python3k 
+ * *Mapnik Python3k Support*: Done: see [Python3k](Python3k)
 
  * *Layer Composites*: Too hard for a GSOC student, but hopefully will be tackled by core devs soon
 
  * *Better Print Support*: GSOC Student Carlos finished adding scale_factor to agg_renderer and wrote a custom svg_renderer (also see: https://github.com/thjc/mapnik-svg)
 
- * *Support for outputting hit-areas*:  GSOC Student Herm created MetaWriter
+ * *Support for outputting hit-areas*:  GSOC Student Herm created [MetaWriter](MetaWriter)
 
  * *Processnik*: DevSeed wrote something like this, see http://tilemill.com 
 
