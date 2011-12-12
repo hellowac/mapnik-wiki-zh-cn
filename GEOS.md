@@ -3,10 +3,9 @@
 <!-- Last-Modified: 2011/08/10 13:41:42 -->
 <!-- Author: springmeyer -->
 
-
-
-    #!html
+```html
     <h2 style="text-align: left; color: red">WARNING: experimental !</h1>
+```
 
 Mapnik's PluginArchitecture supports the use of different input formats.
 
@@ -17,9 +16,10 @@ One such plugin supports writing inline [WKT](http://en.wikipedia.org/wiki/Well-
 
 Check if you have the GEOS library installed:
 
-
+```sh
     $ geos-config --version
     3.2.0
+```
 
 If not, install it from [here](http://trac.osgeo.org/geos/) or use your package system on your distro.
 
@@ -55,23 +55,23 @@ To check if the geos plugin built and was installed correctly, try the usual Pyt
 
 Instantiate a datasource like:
 
-    #!python
+```python
     lyr = Layer('WKT Rectangle')
     lyr.datasource = Geos(wkt='POLYGON((0 0, 10 0, 10 10, 0 10, 0 0))')
+```
 
 ### XML
 
 If you are using XML mapfiles to style your data, then using a datasource looks like:
 
-
-    #!xml
+```xml
       <Layer name="WKT Rectangle" status="on">
         <StyleName>RectangleStyle</StyleName>
         <Datasource>
           <Parameter name="wkt">POLYGON((0 0, 10 0, 10 10, 0 10, 0 0))</Parameter>
         </Datasource>
       </Layer>
-
+```
 
 ### C++
 
@@ -79,8 +79,7 @@ Plugin datasource initialization example code can be found on PluginArchitecture
 
 A  datasource may be created as follows:
 
-
-    #!C
+```c
     {
         parameters p;
         p["type"]="geos";
@@ -93,3 +92,4 @@ A  datasource may be created as follows:
         lyr.add_style("RectangleStyle");
         m.addLayer(lyr);
     }
+```
