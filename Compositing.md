@@ -4,7 +4,7 @@
 <!-- Author: springmeyer -->
 # Compositing examples (work in progress)
 
-See brainstorming at Ideas/Compositing in terms of a potential syntax....
+See brainstorming at [Ideas/Compositing](Ideas_Compositing) in terms of a potential syntax....
 
 Below are tests that artem did using agg composing functions.
 
