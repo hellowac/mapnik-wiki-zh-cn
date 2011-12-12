@@ -52,7 +52,7 @@ Here are some other sets of Example Code to learn from.
  * *Added by:* springmeyer
 
 ### Cairo Renderer
-[MapnikRenderers#PythonExampleCode Code samples] for writing to SVG and PDF
+[Code samples]((MapnikRenderers) for writing to SVG and PDF
 
 ### mapnik-utils
 
@@ -62,17 +62,17 @@ The mapnik-utils project includes some example code as well: http://code.google.
 
 An e-mail on [Mapnik ShieldSymbolizer](http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba). Also describes use of
 
-
-    #!python
+```python
     $ python 
      >>>import mapnik 
      >>>dir(mapnik) 
      >>>help(mapnik) 
+```
 
 and
 
-
-    #!sh
+```sh
     $ pydoc -p 8080 
-    and then open a browser and go to : 
-    http://localhost:8080/mapnik.html 
+```
+and then open a browser and go to :  
+http://localhost:8080/mapnik.html
