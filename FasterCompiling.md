@@ -6,8 +6,9 @@
 
 # Compiling Mapnik Faster
 
-    #!html
+```html
     <a href="http://imgs.xkcd.com/comics/compiling.png"><img src="http://imgs.xkcd.com/comics/compiling.png"></a>
+```
 
 When you are tired of sword fighting, its time to actually figure out how to compile Mapnik faster.
  
@@ -23,16 +24,16 @@ If you have enough memory (> 2 GB) and >2 cores, tell SCons to compile stuff in 
 
 *Note*: on some systems this may not help will overall speed unless you have >4 GB memory
 
-
-    #!sh
+```sh
     $ python scons/scons.py install -j2
+```
 
 ## Upgrade your compiler
 The more recent compiler you are using, likely the faster the compile. g++ 4.5 should be faster than 4.2 for example, and the new clang++/llvm compilers are about twice as fast.
 
 Here is how to build the latest clang++
 
-    #!sh
+```sh
     # grab llvm and clang from svn
     svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm
     cd llvm/tools
@@ -41,20 +42,21 @@ Here is how to build the latest clang++
     ./configure --enable-optimized
     make
     sudo make install
+```
 
 then compile Mapnik like:
 
 *Note:* this requires the boost >= 1.44. You should be able to use a version of boost compiled with g++, but for the advanced users you should also be able to compile boost with clang. See: http://blog.llvm.org/2010/05/clang-builds-boost.html
 
-
-    #!sh
+```sh
     $ python scons/scons.py install CXX="clang++"
+```
 
 Be aware that clang provides more warnings that gcc, and this can clog your terminal sometimes when the boost guys get careless. To silence most of the clang warnings that come from boost headers you can do:
 
-
-    #!sh
+```sh
     $ python scons/scons.py install WARNING_CXXFLAGS="-Wno-unused-function -Wno-uninitialized -Wno-array-bounds -Wno-parentheses -Wno-char-subscripts"
+```
 
 ## Use Precompiled Headers
 
@@ -70,8 +72,7 @@ Then, the goal is to precompile some or all of boost spirit so that each time a 
 
 First we need to develop a list of boost spirit headers and dump them into a single header:
 
-
-    #!python
+```python
     from glob import glob
     
     hpps = glob('include/mapnik/*hpp')
@@ -95,11 +96,13 @@ First we need to develop a list of boost spirit headers and dump them into a sin
     
     sorted(includes)
     print '\n'.join(includes)
+```
 
 Save that script as `parse_spirit_headers.py` and run like:
 
-    #!sh
+```sh
     python parse_spirit_headers.py > spirit.h
+```
 
 Then compile that header:
 
@@ -114,9 +117,9 @@ Then compile the header:
 
 Next, in src/SConscript on the line below `lib_env = env.Close()` do:
 
-
-    #!python
+```python
     lib_env['CXX'] = "clang++ -include-pch mapnik.h.pch"
+```
 
 Finally, compile mapnik as normal.
 
@@ -130,25 +133,25 @@ To use ccache, first install it, then compile Mapnik like:
 
 If using clang, you should do:
 
-    #!sh
+```sh
     $ python scons/scons.py install CXX="ccache clang++ -Qunused-arguments -fcolor-diagnostics"
+```
 
 Or with gcc do:
 
-    #!sh
+```sh
     $ python scons/scons.py install CXX="ccache g++"
-
+```
 
 ## Using ccache with clang++
 
 One a 13-inch 2.66 GHz Intel Core 2 Duo 4GB macbook using both ccache and clang++ compiled Mapnik from scratch in *15 minutes* the first run, then *5* minutes the second.
-
 
 ## Reduce latency in SCons
 Scons is really good - almost too good - at scanning for dependency trees, to ensure quality builds. For example, you could make no change to your Mapnik code checkout, but if you re-install the boost libraries, when you return to install Mapnik likely all of Mapnik will be triggered for recompile. This is a good thing for consistent binaries, but it means that it takes SCons a long time to get started actually sending commands to the compiler.
 
 There are a [variety of tricks](http://www.scons.org/wiki/GoFastButton) but the easiest, and should be safe, is to send the FAST=True flag to Scons, which will slightly lessen its hunger for scanning and should reduce the time it takes to start compiling:
 
-    #!sh
+```sh
     $ scons FAST=True
-
+```
