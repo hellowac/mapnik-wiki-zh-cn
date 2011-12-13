@@ -1,10 +1,4 @@
-<!-- Name: OsmPlugin -->
-<!-- Version: 27 -->
-<!-- Last-Modified: 2010/11/13 10:24:18 -->
-<!-- Author: kunitoki -->
-
-
-Mapnik's PluginArchitecture supports the use of different input formats.
+Mapnik's [[PluginArchitecture]] supports the use of different input formats.
 
 This plugin allows for the direct reading of data from the [OpenStreetMap XML format](http://wiki.openstreetmap.org/wiki/.osm). You can use it in two different ways; you can either render a local file, or connect to a URL which provides OSM XML data within a given bounding box.
 
@@ -34,18 +28,19 @@ Your layer's Datasource must have a "type" parameter with a value of "osm", in a
 For example:
 
 
-    #!xml
-    <Layer name="roads" status="on" srs="+proj=latlong +datum=WGS84">
-        <StyleName>residential</StyleName>
-        <StyleName>unclassified</StyleName>
-        <StyleName>secondary</StyleName>
-        <StyleName>primary</StyleName>
-        <StyleName>motorway</StyleName>
-        <Datasource>
-          <Parameter name="type">osm</Parameter>
-          <Parameter name="file">test2.osm</Parameter>
-        </Datasource>
-    </Layer>
+```xml
+<Layer name="roads" status="on" srs="+proj=latlong +datum=WGS84">
+    <StyleName>residential</StyleName>
+    <StyleName>unclassified</StyleName>
+    <StyleName>secondary</StyleName>
+    <StyleName>primary</StyleName>
+    <StyleName>motorway</StyleName>
+    <Datasource>
+      <Parameter name="type">osm</Parameter>
+      <Parameter name="file">test2.osm</Parameter>
+    </Datasource>
+</Layer>
+```
 
 ## Specifying the data's source
 
@@ -54,19 +49,20 @@ OSM data may be sourced from two different places: a file (as in the example abo
 For a web data source, we must provide two parameters: the base URL and the bounding box in WGS84 latitude/longitude. These two parameters are named "url" and "bbox". The full URL of the OSM data server will be constructed from the base URL with the bounding box added as a query string. Here is an example:
 
 
-    #!xml
-    <Layer name="roads" status="on" srs="+proj=latlong +datum=WGS84">
-        <StyleName>residential</StyleName>
-        <StyleName>unclassified</StyleName>
-        <StyleName>secondary</StyleName>
-        <StyleName>primary</StyleName>
-        <StyleName>motorway</StyleName>
-        <Datasource>
-          <Parameter name="type">osm</Parameter>
-          <Parameter name="url">http://www.osmdataserver.com/data.php</Parameter>
-          <Parameter name="bbox">-0.8,51,-0.7,51.1<Parameter>
-        </Datasource>
-    </Layer>
+```xml
+<Layer name="roads" status="on" srs="+proj=latlong +datum=WGS84">
+    <StyleName>residential</StyleName>
+    <StyleName>unclassified</StyleName>
+    <StyleName>secondary</StyleName>
+    <StyleName>primary</StyleName>
+    <StyleName>motorway</StyleName>
+    <Datasource>
+      <Parameter name="type">osm</Parameter>
+      <Parameter name="url">http://www.osmdataserver.com/data.php</Parameter>
+      <Parameter name="bbox">-0.8,51,-0.7,51.1<Parameter>
+    </Datasource>
+</Layer>
+```
 
 In the above example, the full URL of the OSM data server would be `http://www.osmdataserver.com/data.php?bbox=-0.8,51,-0.7,51.1`. Data will be downloaded from this URL and rendered according to the rules in the style file.
 
@@ -75,25 +71,25 @@ In the above example, the full URL of the OSM data server would be `http://www.o
 Styling the output is done in the same way as for other data sources, with tests for different tags done in the `<Filter>` tag. For example this rule will match OSM ways where the 'highway' tag is equal to 'path' and the 'foot' tag is equal to 'designated':
 
 
-    #!xml
-    <Rule>
-        <Filter>[highway] = 'path' and [foot] = 'designated'</Filter>
-        <LineSymbolizer>
-            <CssParameter name="stroke">#fff</CssParameter>
-            <CssParameter name="stroke-width">6</CssParameter>
-            <CssParameter name="stroke-linejoin">round</CssParameter>
-            <CssParameter name="stroke-linecap">round</CssParameter>
-            <CssParameter name="stroke-opacity">0.4</CssParameter>
-        </LineSymbolizer>
-        <LineSymbolizer>
-            <CssParameter name="stroke">red</CssParameter>
-            <CssParameter name="stroke-width">2.0</CssParameter>
-            <CssParameter name="stroke-dasharray">1,4</CssParameter>
-            <CssParameter name="stroke-linejoin">round</CssParameter>
-            <CssParameter name="stroke-linecap">round</CssParameter>
-        </LineSymbolizer>
-    </Rule>
-
+```xml
+<Rule>
+    <Filter>[highway] = 'path' and [foot] = 'designated'</Filter>
+    <LineSymbolizer>
+        <CssParameter name="stroke">#fff</CssParameter>
+        <CssParameter name="stroke-width">6</CssParameter>
+        <CssParameter name="stroke-linejoin">round</CssParameter>
+        <CssParameter name="stroke-linecap">round</CssParameter>
+        <CssParameter name="stroke-opacity">0.4</CssParameter>
+    </LineSymbolizer>
+    <LineSymbolizer>
+        <CssParameter name="stroke">red</CssParameter>
+        <CssParameter name="stroke-width">2.0</CssParameter>
+        <CssParameter name="stroke-dasharray">1,4</CssParameter>
+        <CssParameter name="stroke-linejoin">round</CssParameter>
+        <CssParameter name="stroke-linecap">round</CssParameter>
+    </LineSymbolizer>
+</Rule>
+```
 
 ## Lines or polygons?
 
