@@ -4,29 +4,18 @@
 <!-- Author: ajashton -->
 # Installing Mapnik on Arch Linux
 
-## Stable version
+## 0.7.x
 
-The stable release of Mapnik (and all of its dependencies, of course) are available from the Arch Community repository. Install it with Pacman:
-
+Mapnik 0.7.1 is available from the Arch Community repository. Install it with Pacman:
 
     $ sudo pacman -S mapnik
 
-## Mapnik Trunk (aka Mapnik2)
+## Mapnik 2 from Git
 
-Installing Mapnik2 will require building a couple packages from source. It is highly recommended you do this using the Arch Build System. If you are unfamiliar with this process read more about it on the Arch Wiki: https://wiki.archlinux.org/index.php/Arch_Build_System . With the ABS and tools like Yaourt, building custom packages for Arch is usually an easy process.
+Mapnik 2 must be built from source. A package description is available in the Arch User Repository for easy building with ABS: [mapnik-git](https://aur.archlinux.org/packages.php?ID=53270) (this will compile the latest development version from the Git master branch).
 
-### Installation from AUR with Yaourt
+If you use [Yaourt](https://wiki.archlinux.org/index.php/Yaourt) or a similar [AUR helper](https://wiki.archlinux.org/index.php/AUR_Helpers), just install the 'mapnik-git' package:
 
-If you use Yaourt (or perhaps a similar AUR frontend) installation is greatly simplified. Just install the 'mapnik2-svn' package and Yaourt will handle building and installing Mapnik and its dependencies:
+    $ yaourt -S mapnik-git
 
-
-    $ yaourt -S mapnik2-svn
-
-This will build a custom version of Boost against ICU, and pull any other uninstalled dependencies from the Arch 'extra' and 'community' repositories. More info about Yaourt can be found here: https://wiki.archlinux.org/index.php/Yaourt
-
-### Manual ABS installation
-
-Details coming soon. For now look at these packages in the AUR:
-
- * boost-icu: https://aur.archlinux.org/packages.php?ID=42259
- * mapnik2-svn: https://aur.archlinux.org/packages.php?ID=42260
+This will handle downloading, building and installing Mapnik with dependencies from the 'extra' and 'community' repositories.
