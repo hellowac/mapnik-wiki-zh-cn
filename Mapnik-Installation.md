@@ -8,8 +8,6 @@ Detailed build instructions are included in the source tree in the file [INSTALL
 
 See [[UsingScons]] for an introduction to SCons (Mapnik's python build system) 
 
----
-
 ## Platform-specific installation notes
 
 - [[LinuxInstallation]] -- Notes on a variety of Linux Distributions
