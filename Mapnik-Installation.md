@@ -1,27 +1,14 @@
-### Important Note: The Mapnik documentation is currently in the process of being restructured and updated for Mapnik 2.0 and the move to GitHub -- please double check all information found here and fix / report any errors you may find. Thanks for your patience.
----
-
 Mapnik 2.0.0 is the current stable release. We are currently in the process of providing binary packages for supported platforms.
 
-You can download the source code archive for Mapnik 2.0.0 (and other releases) [here](http://download.berlios.de/mapnik/).
-
-Alternatively you can clone Mapnik's git repository for the in-development version (Warning: this may contain unstable / untested code):
-
-    git clone https://github.com/mapnik/mapnik.git
+You can download the source code archive for Mapnik 2.0.0 from [here](https://github.com/mapnik/mapnik/downloads) and other releases from [here](https://github.com/mapnik/mapnik/tags).
 
 ## Installing / Building
 
-Currently source compiles are required for all platforms, see instructions below.
-
-Build instructions are included in the source tree in the file [INSTALL.md](https://github.com/mapnik/mapnik/blob/master/INSTALL.md)
+Detailed build instructions are included in the source tree in the file [INSTALL.md](https://github.com/mapnik/mapnik/blob/master/INSTALL.md)
 
 See [[UsingScons]] for an introduction to SCons (Mapnik's python build system) 
 
 ---
-
-# Old / outdated information
-
-Also see [[MapnikDependencies]] for a list of dependencies and how to obtain / build them.
 
 ## Platform-specific installation notes
 
@@ -36,5 +23,3 @@ Also see [[MapnikDependencies]] for a list of dependencies and how to obtain / b
 ## Troubleshooting & Gotchas
 
 - [[InstallationTroubleshooting]] (Find/Report hints here)
-
-
