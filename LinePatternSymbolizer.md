@@ -21,8 +21,7 @@ A natural=cliff tag on an OpenStreetMap tile, rendered with LinePatternSymbolize
 #### XML
 
 ```xml
-#!xml
-<LinePatternSymbolizer width="16" height="16" type="png" file="/path/to/icon.png"/>
+    <LinePatternSymbolizer width="16" height="16" type="png" file="/path/to/icon.png"/>
 ```
 
 
@@ -30,13 +29,12 @@ A natural=cliff tag on an OpenStreetMap tile, rendered with LinePatternSymbolize
 
 
 ```python
-#!python
-l = LinePatternSymbolizer('/path/to/icon.png','png',10,10) # file, type, width, height
+    l = LinePatternSymbolizer('/path/to/icon.png','png',10,10) # file, type, width, height
 ```
 
 #### C++
 
-
-    #!cpp
+```cpp
     rule_type rule;
     rule.append(line_pattern_symbolizer("/path/to/icon.png", "png", 20, 20)); // file, type, width, height
+```
