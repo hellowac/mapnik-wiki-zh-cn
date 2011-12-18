@@ -25,7 +25,7 @@ Processed as described in http://wiki.openstreetmap.org/wiki/Hillshading_using_t
 # Usage
 
 | *parameter* | *value* | *description* |
---------------|---------|-----------|
+|--------------|---------|-----------|
 | opacity         |  0.0 - 1.0   | 1 is fully opaque while zero is fully transparent and .5 would be 50% transparent |
 | mode            | grain_merge, grain_merge2, multiply, multiply2, divide, divide2, screen, hard_light | Compositing/Merging effects with image below raster level (?). The formulas for combinding foreground (raster) and background are: grain_merge: bg + fg - 0.5, grain_merge2: bg + 2*fg - 1.0, multiply: fg * bg, multiply2: 2 * fg * bg, divide: bg / fg, divide2: 2*bg / fg, screen: (1-fg)*(1-bg), hardlight: see [[http://docs.gimp.org/en/gimp-concepts-layer-modes.html#id2834930]] |
 | scaling         | fast, bilinear, bilinear8 || fast: nearest neighbour, bilinear: bilinear interpolation for all 4 channels (RGBA), bilinear8 like bilinear, but only one channel assumed |
@@ -46,48 +46,45 @@ Default (simply renders a copy of the raster)
 
 
 ```xml
-#!xml
-<Style name="My Style">
-    <Rule>
-        <RasterSymbolizer/>
-    </Rule>
-</Style>
+    <Style name="My Style">
+        <Rule>
+            <RasterSymbolizer/>
+        </Rule>
+    </Style>
 ```
 
 Using the new 0.6.0 release opacity / merging / scaling options:
 
 ```xml
-#!xml
-<Style name="raster">
-    <Rule>
-        <RasterSymbolizer>
-            <CssParameter name="opacity">0.5</CssParameter>
-            <!--<CssParameter name="scaling">fast</CssParameter>-->
-            <CssParameter name="scaling">bilinear</CssParameter>
-            <!--<CssParameter name="scaling">bilinear8</CssParameter>-->
 
-            <!--<CssParameter name="mode">grain_merge</CssParameter>-->
-            <!--<CssParameter name="mode">grain_merge2</CssParameter>-->
-            <!--<CssParameter name="mode">multiply</CssParameter>-->
-            <CssParameter name="mode">multiply2</CssParameter>
-            <!--<CssParameter name="mode">divide</CssParameter>-->
-            <!--<CssParameter name="mode">divide2</CssParameter>-->
-            <!--<CssParameter name="mode">screen</CssParameter>-->
-            <!--<CssParameter name="mode">hard_light</CssParameter>-->
-        </RasterSymbolizer>
-    </Rule>
-</Style>
+    <Style name="raster">
+        <Rule>
+            <RasterSymbolizer>
+                <CssParameter name="opacity">0.5</CssParameter>
+                <!--<CssParameter name="scaling">fast</CssParameter>-->
+                <CssParameter name="scaling">bilinear</CssParameter>
+                <!--<CssParameter name="scaling">bilinear8</CssParameter>-->
+
+                <!--<CssParameter name="mode">grain_merge</CssParameter>-->
+                <!--<CssParameter name="mode">grain_merge2</CssParameter>-->
+                <!--<CssParameter name="mode">multiply</CssParameter>-->
+                <CssParameter name="mode">multiply2</CssParameter>
+                <!--<CssParameter name="mode">divide</CssParameter>-->
+                <!--<CssParameter name="mode">divide2</CssParameter>-->
+                <!--<CssParameter name="mode">screen</CssParameter>-->
+                <!--<CssParameter name="mode">hard_light</CssParameter>-->
+            </RasterSymbolizer>
+        </Rule>
+    </Style>
 ```
 
 ## Python Styles
 
-
 ```python
-#!python
-s = Style()
-r=Rule()
-r.symbols.append(RasterSymbolizer())
-s.rules.append(r)
+    s = Style()
+    r=Rule()
+    r.symbols.append(RasterSymbolizer())
+    s.rules.append(r)
 ```
 
 ## C++
