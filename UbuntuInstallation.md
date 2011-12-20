@@ -8,9 +8,10 @@
 For all versions of Ubuntu make sure you are up to date before starting to install:
 
 
-    #!sh
+```sh
     sudo apt-get update
     sudo apt-get upgrade
+```
 
 For previous versions see the archived notes at UbuntuInstallationOld
 
@@ -27,9 +28,9 @@ This release has Mapnik packages for 0.7.1 (to check run `apt-cache show libmapn
 
 ## Install from packages
 
-
-    #!sh
+```sh
     sudo apt-get install libmapnik0.7 mapnik-utils python-mapnik
+```
 
 *Note:* then you will likely also want to install Postgres + PostGIS (see below)
 
@@ -37,12 +38,13 @@ This release has Mapnik packages for 0.7.1 (to check run `apt-cache show libmapn
 
 First, remove any apt installing packages:
 
-    #!sh
+```sh
     sudo apt-get remove libmapnik* mapnik-utils python-mapnik
+```
 
 ### Set up build environment
 
-    #!sh
+```sh
     # get a build environment going...
     sudo apt-get install -y g++ cpp \
     libboost-filesystem1.42-dev \
@@ -64,42 +66,45 @@ First, remove any apt installing packages:
     sudo apt-get install libgdal1-dev python-gdal \
     postgresql-8.4 postgresql-server-dev-8.4 postgresql-contrib-8.4 postgresql-8.4-postgis \
     libsqlite3-dev
-    
+```
 
 ### Then compile and install Mapnik
 
 For instructions on compiling trunk (aka Mapnik2) see: wiki:Mapnik2
 
-
-    #!sh
+```sh
     svn co http://svn.mapnik.org/tags/release-0.7.1/ mapnik-0.7.1
     cd mapnik-0.7.1
     python scons/scons.py configure INPUT_PLUGINS=all OPTIMIZATION=3 SYSTEM_FONTS=/usr/share/fonts/
     python scons/scons.py
     sudo python scons/scons.py install
-
+```
 
 Then run:
 
-    #!sh
+```sh
     $ sudo ldconfig
+```
 
 To test mapnik:
 
-    #!python
+```python
     $ Python
     >>> import mapnik
     >>>
+```
+
  * No output is good. 
 
 Then run the full test suite
 
-    #!sh
+```sh
     cd mapnik-0.7.1
     python tests/run_tests.py
+```
 
 If you are interested what libraries mapnik linked against do (for example):
 
-
-    #!sh
+```sh
     ldd /usr/lib/python2.6/site-packages/mapnik/_mapnik.so | grep boost
+```
