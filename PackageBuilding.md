@@ -33,5 +33,5 @@ This page is intended to serve as a starting point for learning more about the w
 ## FreeBSD
  * http://www.freebsd.org/cgi/cvsweb.cgi/ports/graphics/mapnik/#dirlist
 
-## OS X
- * http://trac.macports.org/browser/trunk/dports/python/py26-mapnik
+## OS X  
+http://trac.macports.org/browser/trunk/dports/python/py26-mapnik
