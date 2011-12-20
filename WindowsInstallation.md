@@ -51,8 +51,9 @@ The Windows builds have a slightly less complete feature set than is possible fr
 4) Once OSGEO4W finishes installing you should be able to use the OSGEO4W shell to test:
 
 
-    python
+```python
     >>> import mapnik
+````
 
   * Note: this mapnik version will only be available under default settings from the OSGEO4W shell, and other previously installed versions should be disabled through editing your 'PATH' and 'PYTHONPATH' system variables
 
@@ -98,8 +99,9 @@ This Guide will walk you through installing Mapnik and then running a test scrip
 
  5. Run "C:\Python25\python.exe" , then type at a python prompt:
 
-        #!python
-        from mapnik import *
+```python
+    from mapnik import *
+```
 
   * If you get no error message, you made it!
   * If you do get an error message, see *Troubleshooting* below
@@ -155,8 +157,9 @@ To download and manually configure the Mapnik 0.6.1, please follow the instructi
 
  5. Run "C:\Python25\python.exe" , then type at a python prompt:
 
-        #!python
-        from mapnik import *
+```python
+    from mapnik import *
+```
 
   * If you get no error message, you made it!
   * If you do get an error message, see *Troubleshooting* below
@@ -185,11 +188,12 @@ Solution: make sure that you complete *Step 3.a* properly.
 
 Problem: When importing mapnik in python you get:
 
-    #!python
+```python
     >>> import mapnik
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
     ImportError: No module named mapnik
+```
 
 Solution: make sure that you have put the 'site-packages' folder on your PYTHONPATH by completing *Step 3.b.*
 
@@ -197,11 +201,12 @@ Solution: make sure that you have put the 'site-packages' folder on your PYTHONP
 
 Problem: When importing mapnik in python you get:
 
-    #!python
+```python
     >>> import mapnik
     [...snip...]
     from _mapnik import *
     ImportError: DLL load failed: This application has failed to start because the application configuration is incorrect. Reinstalling the application may fix this problem.
+```
 
 Solution:
  * You likely have an older system and need to install the 2008 Visual Studio Runtime Libraries (msvcrt90.dll) from the [Microsoft Developer Network](http://www.microsoft.com/downloads/details.aspx?familyid=9B2DA534-3E03-4391-8A4D-074B9F2BC1BF&displaylang=en). If that does not fix it you may also be missing the [2005 version](http://www.microsoft.com/downloads/details.aspx?familyid=32BC1BEE-A3F9-4C13-9C99-220B62A191EE&displaylang=en)
