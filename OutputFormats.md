@@ -5,19 +5,20 @@
 
 # Mapnik Output Formats
 
-Mapnik supports rendering with both AGG and Cairo (see MapnikRenderers for more detail), and can create maps or map tiles in a variety of formats.
+Mapnik supports rendering with both AGG and Cairo (see [[MapnikRenderers]] for more detail), and can create maps or map tiles in a variety of formats.
 
 ## Tradeoffs
 
-||  *Mapnik Format*  ||  *Renderer*  ||  *Type*  ||  *Visual Quality*                                                                                                                                                ||  *Rendering Speed**  ||  *Size**  || *Relevant Code*  ||
-||png, png32             || AGG    || 32-bit || [png](http://mapnik-utils.googlecode.com/svn/example_code/agg_renderer/world_png.png)                                ||                   0.12 s                     ||      16 KB        || source:trunk/include/mapnik/png_io.hpp ||
-||png8, png256           || AGG    || 8-bit  ||  [png256](http://mapnik-utils.googlecode.com/svn/example_code/agg_renderer/world_png256.png)                   ||                   0.12 s                         ||        8 KB       || source:trunk/include/mapnik/png_io.hpp ||
-||jpeg                   || AGG    || ?      ||  [jpeg](http://mapnik-utils.googlecode.com/svn/example_code/agg_renderer/world_jpeg.jpg)                              ||                   0.12 s                     ||        8 KB       || source:trunk/include/mapnik/jpeg_io.hpp ||
-||ARGB32 (png)           || CAIRO  || 32 bit ||  [png24](http://mapnik-utils.googlecode.com/svn/example_code/cairo_renderer/world_FORMAT_RGB24.png) ||                   0.24 s                             ||        20 KB        || source:trunk/include/mapnik/cairo_renderer.hpp ||
-||RGB24 (png)            || CAIRO  || 24 bit || [alpha png32](http://mapnik-utils.googlecode.com/svn/example_code/cairo_renderer/world_FORMAT_ARGB32.png) ||          0.24 s                             ||      20 KB       || source:trunk/include/mapnik/cairo_renderer.hpp ||
-||svg                    || CAIRO  || N/A    || [svg](http://mapnik-utils.googlecode.com/svn/example_code/cairo_renderer/world.svg)                                       ||                    0.28 s                     ||    980 KB          || source:trunk/include/mapnik/cairo_renderer.hpp ||
-||pdf                    || CAIRO  || N/A    || [pdf](http://mapnik-utils.googlecode.com/svn/example_code/cairo_renderer/world.pdf)                                        ||                 0.40 s                       ||      232 KB         || source:trunk/include/mapnik/cairo_renderer.hpp ||
-||ps                     || CAIRO  || N/A    || [postscript](http://mapnik-utils.googlecode.com/svn/example_code/cairo_renderer/world.ps)                               ||                    0.36 s                     ||       1.4 MB       || source:trunk/include/mapnik/cairo_renderer.hpp ||
+|  *Mapnik Format*  |  *Renderer*  |  *Type*  |  *Visual Quality*  |  *Rendering Speed**  |  *Size**  | *Relevant Code*  |
+|-------------------|--------------|----------|--------------------|----------------------|-----------|------------------|
+|png, png32             | AGG    | 32-bit | [png](http://mapnik-utils.googlecode.com/svn/example_code/agg_renderer/world_png.png)                                |                   0.12 s                     |      16 KB        | source:trunk/include/mapnik/png_io.hpp |
+|png8, png256           | AGG    | 8-bit  |  [png256](http://mapnik-utils.googlecode.com/svn/example_code/agg_renderer/world_png256.png)                   |                   0.12 s                         |        8 KB       | source:trunk/include/mapnik/png_io.hpp |
+|jpeg                   | AGG    | ?      |  [jpeg](http://mapnik-utils.googlecode.com/svn/example_code/agg_renderer/world_jpeg.jpg)                              |                   0.12 s                     |        8 KB       | source:trunk/include/mapnik/jpeg_io.hpp |
+|ARGB32 (png)           | CAIRO  | 32 bit |  [png24](http://mapnik-utils.googlecode.com/svn/example_code/cairo_renderer/world_FORMAT_RGB24.png) |                   0.24 s                             |        20 KB        | source:trunk/include/mapnik/cairo_renderer.hpp |
+|RGB24 (png)            | CAIRO  | 24 bit | [alpha png32](http://mapnik-utils.googlecode.com/svn/example_code/cairo_renderer/world_FORMAT_ARGB32.png) |          0.24 s                             |      20 KB       | source:trunk/include/mapnik/cairo_renderer.hpp |
+|svg                    | CAIRO  | N/A    | [svg](http://mapnik-utils.googlecode.com/svn/example_code/cairo_renderer/world.svg)                                       |                    0.28 s                     |    980 KB          | source:trunk/include/mapnik/cairo_renderer.hpp |
+|pdf                    | CAIRO  | N/A    | [pdf](http://mapnik-utils.googlecode.com/svn/example_code/cairo_renderer/world.pdf)                                        |                 0.40 s                       |      232 KB         | source:trunk/include/mapnik/cairo_renderer.hpp |
+|ps                     | CAIRO  | N/A    | [postscript](http://mapnik-utils.googlecode.com/svn/example_code/cairo_renderer/world.ps)                               |                    0.36 s                     |       1.4 MB       | source:trunk/include/mapnik/cairo_renderer.hpp |
 
 * Rendering speeds and output sizes based on sample 256 X 256 tiles created using the GettingStarted sample data, run using Mapnik SVN Head (r 747), cairo 1.8.0, and pycairo 1.4.12.
 
