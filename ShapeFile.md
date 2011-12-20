@@ -8,7 +8,7 @@ This plugin supports reading shapefiles. They can also be read using the [[OGR]]
 
 The shapefile plugin will run fastest if you build indexes for your shapefiles using the 'shapeindex' command line tool installed when you build Mapnik.
 
-For other plugins see: PluginArchitecture
+For other plugins see: [[PluginArchitecture]]
 
 # Installation
 
@@ -54,7 +54,7 @@ A Shapefile datasource may be created as follows:
     }
 ```
 
-== XML == 
+## XML
 
 ```xml
     <Layer name="vector" srs="+init=epsg:4236">
