@@ -5,8 +5,9 @@
 
 
 
-    #!html
+```html
     <h2 style="text-align: left; color: red">WARNING: experimental !</h1>
+```
 
 This plugin supports reading georaster files embedded into sqlite databases using [RasterLite](http://www.gaia-gis.it/spatialite/index.html) of the excellent Spatialite project.
 
@@ -14,8 +15,7 @@ The use of rasterlite allows to use jpeg / wavelets compressed rasters in sqlite
 
  * Note: You must use at least the development version [2.4.0-RC2](http://www.gaia-gis.it/spatialite-2.4.0/index.html) to compile the input plugin.
 
-For other plugins see: PluginArchitecture
-
+For other plugins see: [[PluginArchitecture]]
 
 # Installation
 
@@ -29,11 +29,9 @@ TODO
 || base            || string       || optional base path where to search for the sqlite database file  || ||
 || table           || string       || table in database which contains raster data  || ||
 
-
 # Styling
 
 To style a layer use the RasterSymbolizer
-
 
 # Usage
 
@@ -41,10 +39,9 @@ To style a layer use the RasterSymbolizer
 
 TODO
 
-== XML == 
+## XML
 
-
-    #!xml
+```xml
     <!-- NOTE: must be in the same SRS as your map-->
     <Layer name="Raster">
         <StyleName>raster</StyleName>
@@ -54,6 +51,7 @@ TODO
             <Parameter name="table">my_raster</Parameter>
         </Datasource>
     </Layer>
+```
 
 ## C++
 
@@ -61,8 +59,7 @@ Plugin datasource initialization example code can be found on PluginArchitecture
 
 A Raster datasource may be created as follows:
 
-
-    #!C
+```cpp
     {
         parameters p;
         p["type"]="rasterlite";
@@ -75,7 +72,7 @@ A Raster datasource may be created as follows:
         lyr.add_style("raster");
         m.addLayer(lyr);
     }
-
+```
 
 ## Further References
 
