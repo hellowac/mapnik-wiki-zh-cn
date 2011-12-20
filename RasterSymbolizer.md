@@ -17,8 +17,10 @@ The RasterSymbolizer is used to render an image from any [GDAL supported format]
 
  * As of Mapnik 0.8 the RasterSymbolizer can be assigned a [[RasterColorizer]] to color a raw data raster according to a palette. This is useful for visualizing scientific data, dynamically changing the color gradient of a DEM, etc...
 
-![tile](http://media.mapnik.org/tiles/relief/7/63/42.png)
+
+![tile](http://1.tiles.ump.waw.pl/ump_tiles/12/2265/1395.png)
 ![tile](http://toolserver.org/~cmarqu/hill/12/2265/1395.png)
+
 
 Processed as described in http://wiki.openstreetmap.org/wiki/Hillshading_using_the_Alpha_Channel_of_an_Image
 
