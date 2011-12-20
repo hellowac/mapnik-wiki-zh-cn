@@ -6,14 +6,15 @@
 
 To validate the Map xml file, reference mapnik's mapfile DTD as in:
 
-    #!text/xml
+```
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE Map SYSTEM "mapnik2.dtd">
     <Map>
     ...
     </Map>
+```
 
-The DTD file can be found here: source:/trunk/utils/xml/mapnik2.dtd
+The DTD file can be found here: https://github.com/mapnik/mapnik/blob/master/utils/xml/mapnik2.dtd
 
 
 ## Validating in editors
@@ -25,5 +26,6 @@ The DTD file can be found here: source:/trunk/utils/xml/mapnik2.dtd
 
 ## Validating from the command line
 
-
+```sh
     xmllint --valid --noout path/to/file.xml
+```
