@@ -4,8 +4,6 @@
 <!-- Author: springmeyer -->
 # Shapefile Plugin
 
-
-
 This plugin supports reading shapefiles. They can also be read using the [[OGR]] Plugin, but the *shape* plugin is better tested and more mature.
 
 The shapefile plugin will run fastest if you build indexes for your shapefiles using the 'shapeindex' command line tool installed when you build Mapnik.
@@ -16,10 +14,11 @@ For other plugins see: PluginArchitecture
 
 To check if the raster plugin built and was installed correctly you can do:
 
+```python
     >>> from mapnik import DatasourceCache as c
     >>> 'shape' in c.plugin_names()
     True
-
+```
 
 # Parameters
 
@@ -41,8 +40,7 @@ Plugin datasource initialization example code can be found on PluginArchitecture
 
 A Shapefile datasource may be created as follows:
 
-
-    #!C
+```cpp
     {
         parameters p;
         p["type"]="shape";
@@ -54,11 +52,11 @@ A Shapefile datasource may be created as follows:
         lyr.add_style("vector");
         m.addLayer(lyr);
     }
+```
 
 == XML == 
 
-
-    #!xml
+```xml
     <Layer name="vector" srs="+init=epsg:4236">
             <StyleName>polygon</StyleName>
             <Datasource>
@@ -67,5 +65,6 @@ A Shapefile datasource may be created as follows:
                     <Parameter name="file">/path/to/your/shapefile.shp</Parameter>
             </Datasource>
     </Layer>
+```
 
 ## Further References
