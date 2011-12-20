@@ -14,15 +14,17 @@ Doing this requires three steps:
 Find the location of Mapnik's special font folder and place new fonts in it:
 
 
-    #!sh
+```sh
     $ python -c "import mapnik;print mapnik.fontscollectionpath"
+```
 
 Or register a custom location:
 
-    #!python
+```python
     import mapnik
     custom_fonts_dir = '/Library/Fonts/'
     mapnik.register_fonts(custom_fonts_dir)
+```
 
 ### XML
 We are planning to add registration support within XML in #168
@@ -31,8 +33,9 @@ We are planning to add registration support within XML in #168
 
 ### C++
 
-    #!sh
+```cpp
     mapnik::freetype_engine::register_font(std::string const& file_name)
+```
 
 ...where file_name is the full path to the directory where the font is located (e.g., "/home/user/mapnik/fonts/unifont-Medium.ttf"). The c++ demo (source:trunk/demo/c++/rundemo) also provides an good example of how to add additional fonts.
 
@@ -40,7 +43,7 @@ We are planning to add registration support within XML in #168
 
   * Ask Mapnik to print all registered face names (*note*: this only will show fonts already auto-registered in the `fontscollectionpath`):
 
-    #!sh
+```sh
     python -c "from mapnik import FontEngine as e;print '\n'.join(e.instance().face_names())"
     DejaVu Sans Bold
     DejaVu Sans Bold Oblique
@@ -48,10 +51,11 @@ We are planning to add registration support within XML in #168
     DejaVu Sans Condensed
     DejaVu Sans Condensed Bold
     [..snip..]
+```
 
  * Or, register custom fonts and then show their face names:
 
-    #!python
+```python
     from mapnik import register_fonts, FontEngine
     custom_fonts_dir = '/Library/Fonts/'
     register_fonts(custom_fonts_dir)
@@ -62,13 +66,14 @@ We are planning to add registration support within XML in #168
     Andale Mono Regular
     Arial Black Regular
     [...snip...]
+```
 
 ## 3) Pass the 'face_name' to the TextSymbolizer or ShieldSymbolizer
 
 
-    #!xml
+```xml
     <TextSymbolizer name="FIELD_NAME" face_name="DejaVu Sans Condensed Bold" size="10" fill="black" />
-
+```
 
 
 ## Further references
