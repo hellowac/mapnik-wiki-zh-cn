@@ -23,7 +23,7 @@ Support for:
  * Logical operators: `and`, `or`, `not`
  * Regular expression matching: `[attribute_name].match('reg_ex')`
 
-See [Filter] for more details (especially regarding how this is different for XML).
+See [[Filter]] for more details (especially regarding how this is different for XML).
 
 ## Symbolizers
 
