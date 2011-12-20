@@ -25,6 +25,7 @@ TODO
 # Parameters
 
 | *parameter* | *value*  | *description* | *default* |
+|-------------|----------|---------------|-----------|
 | file            | string       | sqlite database file path  | |
 | base            | string       | optional base path where to search for the sqlite database file  | |
 | table           | string       | table in database which contains raster data  | |
