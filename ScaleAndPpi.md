@@ -20,7 +20,7 @@ Alternatively you may compare the scale markers of [a googlemap at equator (LAT=
 Let's look at some example code which makes a map for the same area of the earth (the Netherlands) using both the traditional Dutch projection (which is optimized for the Netherlands) and the projection Google uses and how this plays a part when you wish to determine the scale of the image.
 
 
-    #!python
+```python
     #!/usr/bin/env python
     from mapnik import *
     
@@ -45,14 +45,16 @@ Let's look at some example code which makes a map for the same area of the earth
     google_map.zoom_to_box(google_p.forward(Envelope(ll, ur)))
     print 'Google projection: ', google_p.inverse(google_map.envelope())
     print 'Scale of Google projection: ', google_map.scale()
+```
 
 The output of this script is as follows:
 
-
+```sh
     Dutch projection:  Envelope(3.33616615777,50.6726082021,7.27393885318,53.5524509099)
     Scale of Dutch projection:  200.0
     Google projection:  Envelope(3.32579921056,50.6726082021,7.28430580039,53.5524509099)
     Scale of Google projection:  326.414028061
+```
 
 So we see that both projections cover roughly the same physical area on Earth, the Google projection covers only a slightly larger area, and both maps are the same size in number of pixels, yet their scale values differ wildly! This might be counter intuitive at first, if you have paper maps in mind: two maps of the same size covering the same area, should have the same scale.
 
@@ -78,13 +80,11 @@ The value scale_denominator yields the map scale as given by the scale() method,
 As can be understood from the previous section: even if you project roughly the same part of the physical earth onto the same sized image, depending on the projection you use the scale of the map can change by a large amount. If you reuse a style file which was written with one projection (for example Google projection) in mind and you switch to another projection, you need to adjust these denominators in order to see the same amount of detail on your map. For the above Google -> Dutch switch, every denominator would need to be divided by (326/200) in order to get the same features on both maps.
 
 
-References:
+### References:
+
  * [DPI VS PPI](http://www.rideau-info.com/photos/printshop.html)
  * [Scale and PPI Discussion on Mapnik-Users](https://lists.berlios.de/pipermail/mapnik-users/2008-November/001415.html)
  * [SLD Implementation Specification](http://portal.opengeospatial.org/files/?artifact_id=1188)
  * [Mapnik's Scale Denominator Code](http://trac.mapnik.org/browser/trunk/src/scale_denominator.cpp#L37)
  * [PCL Scale Denominator Code](http://trac.gispython.org/lab/browser/PCL/trunk/PCL-Core/cartography/context/rendering.py#L112)
  * [PPI @ Wikipedia](http://en.wikipedia.org/wiki/Pixels_per_inch)
- 
-
- 
