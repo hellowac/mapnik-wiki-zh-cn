@@ -2,7 +2,6 @@
 <!-- Version: 2 -->
 <!-- Last-Modified: 2011/04/28 09:44:27 -->
 <!-- Author: manelclos -->
-*== Paleoserver ==
 
 ### Overview
 Paleoserver is a new asynchronous C++ wms for mapnik that leverages the latest boost libraries (boost::asio and boost::spirit) for multi-threaded rendering and request parsing.
@@ -35,9 +34,9 @@ It is in heavy development. For applications needing fully featured Mapnik WMS y
 
 For now the code can be downloaded from github: http://github.com/springmeyer/paleoserver
 
-
-    #!sh
+```sh
     $ git clone git@github.com:springmeyer/paleoserver.git
+```
 
 ### Building
 
@@ -47,12 +46,12 @@ So, basically you need to open up 'SConstruct' and add any custom paths to libra
 
 The build requires an external installation of SCons:
 
-
-    #!sh
+```sh
     $ sudo easy_install scons
+```
 
 Then to compile do:
 
-
-    #!sh
+```sh
     $ scons
+```
