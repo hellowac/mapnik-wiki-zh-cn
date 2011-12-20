@@ -111,8 +111,7 @@ Plugin datasource initialization example code can be found on PluginArchitecture
 
 A Sqlite datasource may be created as follows:
 
-
-    #!C
+```cpp
     {
         parameters p;
         p["type"]="sqlite";
@@ -128,6 +127,6 @@ A Sqlite datasource may be created as follows:
         lyr.add_style("bridges"); // in style.xml
         m.addLayer(lyr);
     }
-
+```
 
 ## Further References
