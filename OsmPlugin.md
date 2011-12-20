@@ -12,12 +12,13 @@ You need libxml2 installed on your system for parsing the XML, and libcurl (http
 
 # Parameters
 
-|| *parameter* || *value*  || *description* || *default* ||
-|| file            || string       || the OSM file to load || ||
-|| url             || string       || the URL of an OSM data source (see below). || ||
-|| bbox            || string       || the bounding box to load from the URL of an OSM data source (see below). || ||
-|| parser          || string       || the XML parser: currently, this must have a value of "libxml2" as libxml2 is the only parser currently supported || libxml2 ||
-|| filter_factor   || double       || filter to use when querying for raster data || 0.0 ||
+| *parameter* | *value*  | *description* | *default* |
+|-------------|----------|---------------|-----------|
+| file            | string       | the OSM file to load | |
+| url             | string       | the URL of an OSM data source (see below). | |
+| bbox            | string       | the bounding box to load from the URL of an OSM data source (see below). | |
+| parser          | string       | the XML parser: currently, this must have a value of "libxml2" as libxml2 is the only parser currently supported | libxml2 |
+| filter_factor   | double       | filter to use when querying for raster data | 0.0 |
 
 
 # Usage
@@ -129,6 +130,7 @@ w, s, e and n represent the bounding box to zoom to. By default you specify the 
 
 easymapnik is the beginnings of a project to develop an application to allow easy rendering of OSM data from file or from an OSM data server, without the need to install a PostGIS database, or, ultimately, to write a Mapnik rules file. At the moment it's very much a demo app, rather than a production-ready app, but nonetheless it demonstrates how you can render OSM data from an OSM data source or server. It's available in the "demo" directory and has a Makefile which has so far only been tested on OS X 10.5 with a version of Mapnik dating from early 2009. The usage is:
 
+```
 `easymapnik -s source [-w width] [-h height] -x xmlfile [-i InOSMFile] [-o OutPNGFile] [-t] [-z startzoom] [-Z endzoom] [-b bbox] [-u serverURL] [-m]`
 
 To go through each option one at a time:
@@ -146,3 +148,4 @@ To go through each option one at a time:
     -u : server URL; only applies with '-s api'.
     -m : multirequest mode; if you're requesting a relatively large area from the server, the data will
     be fetched in 0.1x0.1 degree tiles.
+```
