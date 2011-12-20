@@ -10,7 +10,7 @@ Overview of the 0.7.0 Milestone: milestone:0.7.0
 
 Complete list of [tickets closed against this milestone](http://trac.mapnik.org/query?group=status&milestone=0.7.0)
 
-== Mapnik 0.7.0 Changelog == 
+## Mapnik 0.7.0 Changelog
 
 (Packaged from r1574)
 
