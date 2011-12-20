@@ -7,6 +7,7 @@ If files are larger it is recommended to build GDAL overviews (with gdaladdo com
 **Note: overviews support is available only in Mapnik >= 0.7.0**
 
 A drawback(or advantage!) of this plugin is that it requires manually setting the file bounds.
+
  * hint: create a GDAL datasource from your tiff in python, call the envelope() method to get the bounds, and use those.
 
 For other plugins see: [[PluginArchitecture]]
@@ -80,7 +81,6 @@ True
 
 To style a layer use the [[RasterSymbolizer]]
 
-
 # Usage
 
 ## Python
@@ -88,7 +88,6 @@ To style a layer use the [[RasterSymbolizer]]
 See the docstring at: http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-module.html#Raster
 
 ```xml
-#!xml
 <!-- NOTE: must be in the same SRS as your map-->
 <Layer name="Raster">
     <StyleName>raster</StyleName>
