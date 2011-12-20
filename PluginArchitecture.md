@@ -34,23 +34,23 @@ $ python scons/scons.py INPUT_PLUGINS='all'
 $ python scons/scons.py INPUT_PLUGINS='postgis'
 ```
 
-= Querying plugins = 
+## Querying plugins
 
 If you compiled Mapnik with DEBUG=True, then the list of plugins registered by the python bindings will during initial import:
 
-```
-Python 2.5.1 (r251:54863, Jan 17 2008, 19:35:17) 
->>> import mapnik
-registered datasource : gdal
-registered datasource : raster
-registered datasource : shape
+```python
+    Python 2.5.1 (r251:54863, Jan 17 2008, 19:35:17) 
+    >>> import mapnik
+    registered datasource : gdal
+    registered datasource : raster
+    registered datasource : shape
 ```
 
 Otherwise, get a listing of available plugins with this command:
 
 ```sh
-$ python -c "from mapnik import DatasourceCache as c; print ','.join(c.plugin_names())"
-These are the registered datasource plugins that Mapnik's python binding currently knows about.
+    $ python -c "from mapnik import DatasourceCache as c; print ','.join(c.plugin_names())"
+    These are the registered datasource plugins that Mapnik's python binding currently knows about.
 ```
 
 *TODO:* Propose icons at OSM
