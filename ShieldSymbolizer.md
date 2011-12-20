@@ -69,27 +69,27 @@ http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba
 #### XML
 
 
-    #!xml
+```xml
     <Style name="My Style">
         <Rule>
             <ShieldSymbolizer name="NAME" face-name="DejaVu Sans Bold" size="6" fill="#000000" file="images/ushighway_shield_20.png" type="png" width="20" height="20" spacing="100" min-distance="50"></ShieldSymbolizer>
         </Rule>
     </Style>
+```
 
 #### Python
 
-
-    #!python
+```python
     shield = ShieldSymbolizer('NAME','DejaVu Sans Bold',6,Color('#000000'),'images/ushighway_shield_20.png','png',20,20)
     # parameters are: (name, font name, font size, font color, image file, image type, width, height)
     shield.min_distance = 50
     shield.label_spacing = 100
     shield.displacement(dx,dy)
+```
 
 #### C++
 
-
-    #!cpp
+```cpp
     rule_type rule;
     /* Parameters:
           name
@@ -106,18 +106,19 @@ http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba
     ss.set_displacement(dx, dy);
     ss.set_label_spacing(min_distance);
     rule.append(ss);
+```
 
 ## SVG shields
 
 [[/images/shield_symbolizer_svg.png]]
 
-
-    #!xml
+```xml
     <Style name="My Style">
         <Rule>
             <ShieldSymbolizer name="'ABC'" fontset-name="bold-fonts" size="10" fill="green" placement="line" file="/Users/artem/Desktop/svg/shield.svg" transform="scale(2.0,2.0)" min-distance="100" spacing="250"/>
         </Rule>
     </Style>
+```
 
 == Resources == 
  * http://www.routemarkers.com/
