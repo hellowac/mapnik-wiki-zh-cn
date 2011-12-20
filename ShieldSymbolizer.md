@@ -120,7 +120,8 @@ http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba
     </Style>
 ```
 
-## Resources
+### Resources
 
- * http://www.routemarkers.com/
- * http://www.weait.com/content/badges-badges
+* http://www.routemarkers.com/
+
+* http://www.weait.com/content/badges-badges
