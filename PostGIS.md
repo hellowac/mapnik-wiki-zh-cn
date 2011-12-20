@@ -44,13 +44,14 @@ To check if the PostGIS plugin built and was installed correctly, try the usual 
 
 Instantiate a datasource like:
 
-    #!python
+```python
     lyr = Layer('Geometry from PostGIS')
     lyr.datasource = PostGIS(host='localhost',user='postgres',password='',dbname='your_postgis_database',table='your_table')
+```
 
 If you want to do complex queries you can nest subselects in the `table` argument:
 
-    #!python
+```python
     lyr = Layer('Buffered Geometry from PostGIS')
     BUFFERED_TABLE = '(select ST_Buffer(geometry, 5) as geometry from %s) polygon' % ('your_postgis_table')
     lyr.datasource = PostGIS(host='localhost',user='postgres',password='',dbname='your_postgis_database',table=BUFFERED_TABLE)
@@ -61,6 +62,7 @@ If you want to add something after the query (for example ORDER BY) you must use
     lyr = Layer('Order by st_lenght from PostGIS')
     BUFFERED_TABLE = 'table_line where way && !bbox! ORDER BY st_LENGTH(way) DESC'
     lyr.datasource = PostGIS(host='localhost',user='postgres',password='',dbname='your_postgis_database',table=BUFFERED_TABLE, srid='your_srid', geometry_field='way', extent='your_extent')
+```
 
  * *Note*: because mapnik depends on the `geometry_columns` entry be careful not to use sub-selects that change the geometry type.
  * Further references: See Artem's email on [using the PostGIS from Python](https://lists.berlios.de/pipermail/mapnik-users/2007-June/000300.html)
@@ -71,9 +73,8 @@ If you want to add something after the query (for example ORDER BY) you must use
 If you are using XML mapfiles to style your data, then using a PostGIS datasource (with a sub-select in this case) looks like:
  * *Note*: if you use a sub-select that changes the extents of your features, make sure to use `estimate_extent=false` otherwise Mapnik will return no features. Otherwise you don't need to use the `estimate_extent` or `extent` parameters at all.
 
-
-    #!xml
-      <Layer name="countries" status="on" srs="+proj=latlong +datum=WGS84">
+```xml
+    <Layer name="countries" status="on" srs="+proj=latlong +datum=WGS84">
         <StyleName>countries_style_label</StyleName>
         <Datasource>
           <Parameter name="type">postgis</Parameter>
@@ -85,13 +86,14 @@ If you are using XML mapfiles to style your data, then using a PostGIS datasourc
           <Parameter name="estimate_extent">false</Parameter>
           <Parameter name="extent">-180,-90,180,89.99</Parameter>
         </Datasource>
-      </Layer>
-
+    </Layer>
+```
 
 *Note*: If you use a custom projection, you might need to change the extent parameters to the area for which the projection is defined. For example, the Dutch grid (EPSG:28992) is only defined around the Netherlands. It does not make sense to try to project South America onto it. You need to change the extent parameter to something like this:
 
-    #!xml
-          <Parameter name="extent">3.09582088671,50.6680811311,7.41350097346,53.6310799196</Parameter>
+```xml
+    <Parameter name="extent">3.09582088671,50.6680811311,7.41350097346,53.6310799196</Parameter>
+```
 
 If you don't do this, you might not see data from this data source at all, even if it does not contain data outside of the valid region. Also note that you always specify the extents in the coordinates of the source system.
 
@@ -101,8 +103,7 @@ Plugin datasource initialization example code can be found on PluginArchitecture
 
 A PostGIS datasource may be created as follows:
 
-
-    #!C
+```cpp
     {
         parameters p;
         p["type"]="postgis";
@@ -117,6 +118,7 @@ A PostGIS datasource may be created as follows:
         lyr.add_style("roads");
         m.addLayer(lyr);
     }
+```
 
 For other PostGIS parameters, see [the postgis_datasource constructor in postgis.cpp:L57](http://trac.mapnik.org/browser/trunk/plugins/input/postgis/postgis.cpp#L57)
 
