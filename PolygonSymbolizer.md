@@ -18,13 +18,12 @@ A PolygonSymbolizer is often used to render the area enclosed by a [polygon](htt
 
 ### Default
 
-
-
 [[/images/default_polygon_symbolizer.png]]
 
 
-    #!xml
+```xml
     <PolygonSymbolizer />
+```
 
 ### Default fill with Gamma correction
 
@@ -32,27 +31,27 @@ A PolygonSymbolizer is often used to render the area enclosed by a [polygon](htt
 [[/images/gamma65_polygon_symbolizer.png]]
 
 
-    #!xml
+```xml
     <PolygonSymbolizer>
         <CssParameter name="gamma">.65</CssParameter>
     </PolygonSymbolizer>
+```
 
 ### Custom Fill and Opacity
 
-
-    #!xml
+```xml
     <PolygonSymbolizer>
          <CssParameter name="fill">steelblue</CssParameter>
          <CssParameter name="fill-opacity">0.5</CssParameter>
     </PolygonSymbolizer>
-     }}}
+```
     
-    ==== Python ====
+### Python
     
-    {{{
-    #!python
+```python
     p = PolygonSymbolizer(Color('steelblue'))
     p.fill_opacity = 0.7
+```
 
 #### C++
 
