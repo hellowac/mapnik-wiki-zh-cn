@@ -52,8 +52,12 @@ Still as root:
 
  * Next, start the python REPL and try to import mapnik:
 
+```sh
     $ python
+```
+```python
     >>> import mapnik
     >>> mapnik.mapnik_version()
     701
     >>>
+```
