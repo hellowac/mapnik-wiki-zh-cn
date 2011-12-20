@@ -13,11 +13,12 @@ by adding a ticket with the keyword `XML`.
 
 If we do ticket:58 it would be consequent to make the denominators attributes too:
 
-    #!xml
+```xml
     <Style name="some_style">
         <Rule max_denominator="6000000" min_denominator="600000">
             <Filter> ... </Filter>
             <PointSymbolizer/>
         </Rule>
     </Style>
+```
 (David Siegel)
