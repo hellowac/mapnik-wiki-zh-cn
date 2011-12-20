@@ -11,6 +11,7 @@ See also a performance tuning page: OptimizeRenderingWithPostGIS
 # New 0.7.0 Features
 
 Docs TODO ->
+
  * Dynamic map variables
   * !bbox!
   * !scale_denominator!
@@ -20,9 +21,9 @@ Docs TODO ->
 
 # Installation
 
-For Ubuntu, see UbuntuInstallation (specifically the package install line that includes _postgresql-8.3_)
+For Ubuntu, see [[UbuntuInstallation]] (specifically the package install line that includes _postgresql-8.3_)
 
-On Macs, try the instructions listed on MacInstallation/Optional.
+On Macs, try the instructions listed on [[MacInstallation_Optional]].
 
 Either way, make sure that running _python scons/scons.py DEBUG=y_ shows the following line
 
