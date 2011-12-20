@@ -24,7 +24,7 @@ see examples below.
 
 ## Examples
 
-=== Default === 
+#### Default
 
 [[/images/point_symbolizer_1.png]]
 
@@ -32,45 +32,49 @@ see examples below.
 
 #### XML
 
-    #!xml
+```xml
     <PointSymbolizer/> 
+```
 
-==== Python ==== 
+#### Python
 
-    #!python
+```python
     sym = PointSymbolizer()
+```
 
 #### C++
 
-    #!c
+```cpp
     using mapnik::point_symbolizer;
     point_symbolizer sym;
-     }}}
+```
     
-     === Image label ===  
+### Image label
     
 
     [[/images/point_symbolizer_2.png]]
     
-    ==== XML ====
-    {{{
-    #!xml
+#### XML
+
+```xml
     <PointSymbolizer file="/tmp/pub.png" width="16" height="16" type="png" /> 
+```
 
 #### Python
 
-    #!python
+```python
     sym = PointSymbolizer("/tmp/pub.png", "png", 16, 16)
     # args are file, type, height, width
     sym.allow_overlap = True
     sym.opacity = .5
+```
 
 #### C++
-{{{ 
-#!c
-using mapnik::point_symbolizer;
-point_symbolizer sym("/tmp/pub.png","png",16,16);
-}}}
+ 
+```cpp
+    using mapnik::point_symbolizer;
+    point_symbolizer sym("/tmp/pub.png","png",16,16);
+```
 
 ### Allow Overlap
 
@@ -78,10 +82,11 @@ point_symbolizer sym("/tmp/pub.png","png",16,16);
 
 #### XML
 
-    #!xml
+```xml
     <PointSymbolizer allow_overlap="yes" file="/Users/artem/projects/ 
     openstreetmap/mapnik/symbols/station_small.png" type="png" width="5"  
     height="5" />
+```
 
 ### Do Not Allow Overlap
 
@@ -89,20 +94,22 @@ point_symbolizer sym("/tmp/pub.png","png",16,16);
 
 #### XML
 
-    #!xml
+```xml
     <PointSymbolizer allow_overlap="no" file="/Users/artem/projects/ 
     openstreetmap/mapnik/symbols/station_small.png" type="png" width="5"  
     height="5" />
+```
 
 ## SVG symbols (trunk)
 
 [[/images/point_symbolizer_svg.png]]
 
-    #!xml
+```xml
     <PointSymbolizer file="/Users/artem/Desktop/svg/lion.svg" opacity="1.0" transform="scale(0.2,0.2)" />
+```
 
 [[/images/point_symbolizer_svg2.png]]
 
-    #!xml
+```xml
     <PointSymbolizer file="/Users/artem/Desktop/svg/lion.svg" opacity="1.0" transform="rotate(45) scale(0.4,0.4)" />
-
+```
