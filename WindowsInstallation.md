@@ -53,7 +53,7 @@ The Windows builds have a slightly less complete feature set than is possible fr
 
 ```python
     >>> import mapnik
-````
+```
 
   * Note: this mapnik version will only be available under default settings from the OSGEO4W shell, and other previously installed versions should be disabled through editing your 'PATH' and 'PYTHONPATH' system variables
 
