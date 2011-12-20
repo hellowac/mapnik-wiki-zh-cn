@@ -82,7 +82,6 @@ In this example XML, the following value to color translation is performed:
 
 
 ```xml
-#!xml
 <?xml version="1.0" encoding="utf-8"?>
 <Map srs="+proj=latlong +datum=WGS84">
 <Style name="elevation">
@@ -113,7 +112,6 @@ In this example XML, the following value to color translation is performed:
 </Map>
 ```
 
-
 # Python Bindings
 
 Python bindings are available. The objects are as follows:
@@ -140,9 +138,7 @@ This is the enumeration of the stop modes. The values are _mapnik2.COLORIZER_LIN
 
 ## Example Python
 
-
 ```python
-#!py
 import mapnik2
 c = mapnik2.RasterColorizer( mapnik2.COLORIZER_DISCRETE , mapnik2.Color(0,0,0,255) )
 c.epsilon = 0.001
