@@ -4,9 +4,7 @@
 <!-- Author: kunitoki -->
 
 
-
-    #!html
-    <h2 style="text-align: left; color: red">WARNING: experimental !</h1>
+**WARNING: experimental !**
 
 Mapnik's PluginArchitecture supports the use of different input formats.
 
@@ -32,7 +30,7 @@ There needs to be a running _kismet_server_ process with activated GPS support b
 
 See next an example XML file to render WLAN icons on the map.
 
-
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE Map>
     <Map bgcolor="#b5d0d0" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
@@ -76,6 +74,7 @@ See next an example XML file to render WLAN icons on the map.
         </Datasource>
       </Layer>
     </Map>
+```
 
 # Resources
 
