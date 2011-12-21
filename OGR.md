@@ -1,9 +1,3 @@
-<!-- Name: OGR -->
-<!-- Version: 10 -->
-<!-- Last-Modified: 2011/08/03 13:16:21 -->
-<!-- Author: tmcw -->
-
-
 Mapnik's PluginArchitecture supports the use of different input formats.
 
 This plugin supports the [OGR](http://www.gdal.org/ogr/index.html) library in order to read multiple spatial vector formats.
@@ -37,7 +31,7 @@ To check if the ogr plugin built and was installed correctly, try the usual Pyth
 
 *Note*: The layer names of OGR datasources are returned by Mapnik in the error message when you do not provide the `layer` parameter.
 
-    #!python
+```python
     >>> import mapnik
     >>> mapnik.Ogr(file='test_point_line.gpx')
     Traceback (most recent call last):
@@ -47,11 +41,12 @@ To check if the ogr plugin built and was installed correctly, try the usual Pyth
     RuntimeError: missing <layer> parameter, available layers are:  'waypoints'  'routes'  'tracks'  'route_points'  'track_points'
     >>> mapnik.Ogr(file='test_point_line.gpx',layer='waypoints')
     <mapnik.Datasource object at 0x23f6b0> # works!
+```
 
 However the best way to discover the layer names is to use the OGR provided utility called `ogrinfo`. For example running `ogrinfo` on a test GPX files provided with the OGR source code reveals the layer names and geometry types:
 
 
-    #!sh
+```sh
     $ ogrinfo test_point_line.gpx
     Had to open data source read-only.
     INFO: Open of `test_point_line.gpx'
@@ -61,12 +56,12 @@ However the best way to discover the layer names is to use the OGR provided util
     3: tracks (Multi Line String)
     4: route_points (Point)
     5: track_points (Point)
-
+```
 
 ## XML
 
 
-    #!xml
+```xml
         <Layer name="gps_waypoints">
             <StyleName>waypoint_styles</StyleName>
             <Datasource>
@@ -75,9 +70,9 @@ However the best way to discover the layer names is to use the OGR provided util
                <Parameter name="layer">waypoints</Parameter>
             </Datasource>
         </Layer>
+```
 
-
-    #!xml
+```xml
         <Layer name="states">
             <StyleName>states_shp_styles</StyleName>
             <Datasource>
@@ -89,6 +84,7 @@ However the best way to discover the layer names is to use the OGR provided util
                <Parameter name="layer">us_states</Parameter>
             </Datasource>
         </Layer>
+```
 
 ## C++
 
@@ -97,7 +93,7 @@ Plugin datasource initialization example code can be found on PluginArchitecture
 A OGR datasource may be created as follows:
 
 
-    #!C
+```cpp
     {
         parameters p;
         p["type"]="ogr";
@@ -111,6 +107,6 @@ A OGR datasource may be created as follows:
         lyr.add_style("bridges");
         m.addLayer(lyr);
     }
-
+```
 
 ## Further References
