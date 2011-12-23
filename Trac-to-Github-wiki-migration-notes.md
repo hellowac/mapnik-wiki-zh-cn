@@ -43,16 +43,16 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[DebuggingMapnik](http://github.com/mapnik/mapnik/wiki/DebuggingMapnik)|yes|||
 |[Demo Gallery](http://github.com/mapnik/mapnik/wiki/DemoGallery)|yes|||
 |[DeveloperTodo](http://github.com/mapnik/mapnik/wiki/DeveloperTodo)|yes|||
-|[Development Ideas and Topics](http://github.com/mapnik/mapnik/wiki/DeveloperTopics)||||
-|[Developing Mapnik Plugins](http://github.com/mapnik/mapnik/wiki/DevelopingPlugins)||||
-|[Development](http://github.com/mapnik/mapnik/wiki/Development)||||
-|[ElseFilter](http://github.com/mapnik/mapnik/wiki/ElseFilter)||||
-|[Example Code](http://github.com/mapnik/mapnik/wiki/ExampleCode)||||
-|[Compiling Mapnik Faster](http://github.com/mapnik/mapnik/wiki/FasterCompiling)||||
-|[Filter](http://github.com/mapnik/mapnik/wiki/Filter)||||
-|[FontSet](http://github.com/mapnik/mapnik/wiki/FontSet)||||
-|[FreeBSDInstallation](http://github.com/mapnik/mapnik/wiki/FreeBSDInstallation)||||
-|[GDAL](http://github.com/mapnik/mapnik/wiki/GDAL)||||
+|[Development Ideas and Topics](http://github.com/mapnik/mapnik/wiki/DeveloperTopics)|yes|||
+|[Developing Mapnik Plugins](http://github.com/mapnik/mapnik/wiki/DevelopingPlugins)|yes|||
+|[Development](http://github.com/mapnik/mapnik/wiki/Development)|yes|||
+|[ElseFilter](http://github.com/mapnik/mapnik/wiki/ElseFilter)|yes|||
+|[Example Code](http://github.com/mapnik/mapnik/wiki/ExampleCode)|yes|||
+|[Compiling Mapnik Faster](http://github.com/mapnik/mapnik/wiki/FasterCompiling)|yes|||
+|[Filter](http://github.com/mapnik/mapnik/wiki/Filter)|yes|||
+|[FontSet](http://github.com/mapnik/mapnik/wiki/FontSet)|yes|||
+|[FreeBSDInstallation](http://github.com/mapnik/mapnik/wiki/FreeBSDInstallation)|yes|||
+|[GDAL](http://github.com/mapnik/mapnik/wiki/GDAL)|yes (find a place for python bindings docs e.g http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-module.html#Gdal not working anymore)|||
 |[GEOS](http://github.com/mapnik/mapnik/wiki/GEOS)||||
 |[GettingStarted](http://github.com/mapnik/mapnik/wiki/GettingStarted)||||
 |[GettingStartedInPython](http://github.com/mapnik/mapnik/wiki/GettingStartedInPython)||||
