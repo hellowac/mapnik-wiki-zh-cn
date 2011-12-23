@@ -14,5 +14,6 @@ See the [the Mapnik FAQ](http://mapnik.org/faq/) for more information.
 ## Mapnik Example Gallery
 
 ![Example Mapnik Output](http://teczno.com/cascadenik-openstreetmap-II/osm-15-r12662-c5254.png)
-![Example Mapnik Output](http://media.mapnik.org/images/biodiver_canada.png)
+![Example Mapnik Output](http://mapnik.org/images/biodiver_canada.png)
+
 
