@@ -94,7 +94,8 @@ Now run that script with this command:
 
 Attached below and included as code samples, here is a sample python script that accesses a _'population.xml_ map configuration.
 
-Note: you will need to download the [modified world borders shapefile](http://trac.mapnik.org/attachment/wiki/XMLGettingStarted/world_borders.zip). 
+Note: you will need to download the [modified world borders shapefile](http://trac.mapnik.org/attachment/wiki/XMLGettingStarted/world_borders.zip).
+
  * Note: this file is originally from [Thematic Mapping Blog](http://thematicmapping.org/downloads/world_borders.php). The version attached here is the simpler shapefile provided there with some modification made to avoid problems that occur when displaying the map in projections such as 900913/3785 (this tutorial does not use this projection so you can use the original shapefiles as well). See [ticket 308](https://github.com/mapnik/mapnik/issues/308) for details.
 
 This script should result in a graphic like this:
