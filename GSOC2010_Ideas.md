@@ -35,7 +35,7 @@ See also steve8's ideas page: [Ideas](Ideas)
 ### Description
 Mapnik uses Boost.Python for its python bindings. Boost.Python is written in C++ and recently added support for Python 3.x based on the excellent [2009 Google Summer of Code project by Haoyu Bai](http://socghop.appspot.com/gsoc/student_project/show/google/gsoc2009/boost/t124021999037) (mentored by Stefan Seefeld). An amazing addition to the Mapnik library would be following up on this work and applying it to Mapnik for full python 3.x support.
 
-In addition, if interest and time this project could look at exposing more pythonic access to Mapnik C++ objects, perhaps using a more declarative style (#459) and extending wrapping of key object like r1740.
+In addition, if interest and time this project could look at exposing more pythonic access to Mapnik C++ objects, perhaps using a more declarative style ([#459](https://github.com/mapnik/mapnik/issues/459)) and extending wrapping of key object like r1740.
 
 ### How it would benefit Mapnik Project
 Mapnik would be compatible with both Python 2.x and Python 3.x, paving the way for better integration with other leading python applications. Better python style would encourage faster and funner development.
@@ -50,7 +50,7 @@ The student would learn about the latest advances in Boost Python, the intricaci
 [Dane Springmeyer](http://dbsgeo.com)
 
 ### Technical Issues
-  * See ticket #334 for more details
+  * See [ticket #334](https://github.com/mapnik/mapnik/issues/334) for more details
    * -- springmeyer - March 12th,2010
 
 
@@ -82,7 +82,7 @@ Unsure who would be a willing mentor - [I](http://mike.teczno.com) know what wou
   * GRASS GIS made something similar with [r.his](http://grass.osgeo.org/grass64/manuals/html64_user/r.his.html) 
    * -- luca delucchi - March 12, 2009
 
-  * Seems perhaps related to #314 
+  * Seems perhaps related to [#314](https://github.com/mapnik/mapnik/issues/314)
    * -- springmeyer - March 12, 2009
 
   * TopOSM does indeed use ImageMagick for compositing, so that may be a good thing to look at. See http://wiki.openstreetmap.org/wiki/TopOSM/Details for more info about how it is done.
@@ -109,14 +109,15 @@ Unsure who would be a willing mentor - [I](http://mike.teczno.com) know what wou
 Through the growth of projects using Mapnik rendering, like http://OpenStreetMap.org, http://Walking-Papers.org, and http://MapOSMatic.org, more and more users are looking to print out Mapnik cartography. Target formats are large paper plots or other variable-resolution digital formats (vectors like PDF/SVG). It is an exciting and powerful thing to be able to use the same renderer for web cartography as multi-resolution cartography, and due to Mapnik's solid Cairo Rendering backend the foundation is in place for multi-resolution output. But currently Mapnik has a few limits which hold back optimal print and vector output.
 
 Potential subtopics include:
- * Mapnik's understanding of units could be expanded beyond just pixels (#389)
- * Users could gain hooks into the Mapnik rendering process to control scaling directives (#343), and tune currently hardcoded map scale assumptions (#196)
+
+ * Mapnik's understanding of units could be expanded beyond just pixels ([#389](https://github.com/mapnik/mapnik/issues/389))
+ * Users could gain hooks into the Mapnik rendering process to control scaling directives ([#343](https://github.com/mapnik/mapnik/issues/343)), and tune currently hardcoded map scale assumptions ([#196](https://github.com/mapnik/mapnik/issues/196))
  * More internal objects could be logically scalable
-  * e.g. we need to be able to scale raster graphics which should be feasible (not going to look very good, but still needed: see #155)
-  * and ideally need scalable vector symbols as per #320 (this is likely out of the scope of a GSOC project but should be considered).
- * Other cool stuff can (and should for proper paper output) be drawn on the map: #358 (see also wiki:Legending)
+  * e.g. we need to be able to scale raster graphics which should be feasible (not going to look very good, but still needed: see [#155](https://github.com/mapnik/mapnik/issues/155))
+  * and ideally need scalable vector symbols as per [#320](https://github.com/mapnik/mapnik/issues/320) (this is likely out of the scope of a GSOC project but should be considered).
+ * Other cool stuff can (and should for proper paper output) be drawn on the map: [#358](https://github.com/mapnik/mapnik/issues/358) (see also [[Legending]])
  * Lastly, certain limitations exist in the Cairo API Mapnik uses that might be able to be addressed by student research/coding:
-  * notably Cairo does not currently embedded fonts in SVG output but rather falls back to vectors to represent fonts.(#535)
+  * notably Cairo does not currently embedded fonts in SVG output but rather falls back to vectors to represent fonts.([#535](https://github.com/mapnik/mapnik/issues/535))
 
 So, to recap Mapnik output could be easily adjustable to various scales and point sizes, use vector or multi-scale symbolizers (shields, points, texture fills, etc), svg icons, etc. SVG supports text on a path, perhaps this could be used in the output. Something like scale-9 might be useful for highway shields: http://www.sephiroth.it/tutorials/flashPHP/scale9/ ... all this should be documented, too! In combination with cascadenik, maybe this uses the CSS media attributes, and could be extended to other changes in resolution like mobile cartography too.
 
@@ -137,11 +138,12 @@ I would be interested in co-mentoring this project from an Mapnik/C++ internals 
 
 
 ### Technical Issues
+
   * This could be done in tandem with two students/mentors with OpenStreetMap
-   * *Important*: see discussion also at: http://wiki.openstreetmap.org/wiki/GSoC_Project_Ideas_2010#Paper_Output_Projects
+   * **Important**: see discussion also at: http://wiki.openstreetmap.org/wiki/GSoC_Project_Ideas_2010#Paper_Output_Projects
    * -- dane springmeyer - March 21, 2010
 
-  * Existing tickets that could be advanced/started as part of this project include: #343 and #389
+  * Existing tickets that could be advanced/started as part of this project include: [#343](https://github.com/mapnik/mapnik/issues/343) and [#389](https://github.com/mapnik/mapnik/issues/389)
    * --dane springmeyer - March 21, 2010
 
   * This has many linkages with the idea of [OSGEO Cartographic Library](http://wiki.osgeo.org/wiki/OSGeo_Cartographic_Engine#Ideas_for_Summer_of_Code_2010_Project)
