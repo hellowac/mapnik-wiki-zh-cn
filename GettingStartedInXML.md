@@ -2,7 +2,7 @@
 
 ### Overview
 
-Make sure you have mapnik installed and you've successfully run through [GettingStarted Tutorial 1].
+Make sure you have mapnik installed and you've successfully run through [Getting Started Python Tutorial](GettingStartedInPython).
 
  * This page will guide you through using the Mapnik python bindings along with a separate XML file for your map styles.
 
@@ -13,13 +13,13 @@ Two examples will be shown:
 1) An XML configuration that exactly matches the map output from the pure python example in [GettingStarted The Getting Started Tutorial 1].
  * This is intended to help new users see the common usage of Mapnik style and rule parameters.
  * Note: These samples are intentionally sparse and do not take full advantage of Mapnik capabilities.
-  * See the [source:trunk/demo/python/rundemo.py rundemo.py] script in the downloads for more advanced usage of python bindings.
-  * See the [source:trunk/tests/data/good_maps/osm-styles.xml OSM XML example] in the tests folder for more advanced usage of XML.
+  * See the [rundemo.py](https://github.com/mapnik/mapnik/blob/master/demo/python/rundemo.py) script in the downloads for more advanced usage of python bindings.
+  * See the [OSM XML example](https://github.com/mapnik/mapnik/blob/master/tests/data/good_maps/osm-styles.xml) in the tests folder for more advanced usage of XML.
 
 2) An XML configuration that uses a world borders dataset with population attributes to create a chloropleth map by population size.
  * This is intended to introduce the uses of rule filters and labeling in XML
 
-NOTE: the code for example 1, along with the code from [GettingStarted Tutorial 1] can be downloaded in a zip bundle from a link below. These downloads contain relative paths to a data folder where you should place the world_borders.shp.
+NOTE: the code for example 1, along with the code from [Getting Started Python Tutorial](GettingStartedInPython) can be downloaded in a zip bundle from a link below. These downloads contain relative paths to a data folder where you should place the world_borders.shp.
 
 ## Step 1
 
@@ -94,7 +94,7 @@ Now run that script with this command:
 Attached below and included as code samples, here is a sample python script that accesses a _'population.xml_ map configuration.
 
 Note: you will need to download the [modified world borders shapefile](http://trac.mapnik.org/attachment/wiki/XMLGettingStarted/world_borders.zip). 
- * Note: this file is originally from [Thematic Mapping Blog](http://thematicmapping.org/downloads/world_borders.php). The version attached here is the simpler shapefile provided there with some modification made to avoid problems that occur when displaying the map in projections such as 900913/3785 (this tutorial does not use this projection so you can use the original shapefiles as well). See [ticket 308](http://trac.mapnik.org/ticket/308) for details.
+ * Note: this file is originally from [Thematic Mapping Blog](http://thematicmapping.org/downloads/world_borders.php). The version attached here is the simpler shapefile provided there with some modification made to avoid problems that occur when displaying the map in projections such as 900913/3785 (this tutorial does not use this projection so you can use the original shapefiles as well). See [ticket 308](https://github.com/mapnik/mapnik/issues/308) for details.
 
 This script should result in a graphic like this:
 
