@@ -17,14 +17,15 @@ To check if the ogr plugin built and was installed correctly, try the usual Pyth
 
 # Parameters
 
-|| *parameter*       || *value*  || *description* || *default* ||
-|| file                  || string       || file to display || ||
-|| base                  || string       || base path where to search for file parameter || ||
-|| layer                 || string       || name of the layer to display (a single ogr datasource can contain multiple layers) || ||
-|| layer_by_index        || integer      || index of the layer to display, this becomes mandatory if no "layer" parameter is specified || ||
-|| multiple_geometries   || boolean      || wheter to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)|| false ||
-|| encoding              || string       || internal file encoding || utf-8 ||
-|| string              || string || optional (replaces *file* parameter) string of literal OGR-datasource data, like GeoJSON ||
+| *parameter*       | *value*  | *description* | *default* |
+|-------------------|----------|---------------|-----------|
+| file                  | string       | file to display | |
+| base                  | string       | base path where to search for file parameter | |
+| layer                 | string       | name of the layer to display (a single ogr datasource can contain multiple layers) | |
+| layer_by_index        | integer      | index of the layer to display, this becomes mandatory if no "layer" parameter is specified | |
+| multiple_geometries   | boolean      | wheter to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
+| encoding              | string       | internal file encoding | utf-8 |
+| string              | string | optional (replaces *file* parameter) string of literal OGR-datasource data, like GeoJSON |
 
 
 # Usage
