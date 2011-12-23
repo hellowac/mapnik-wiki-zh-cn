@@ -55,8 +55,8 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[GDAL](http://github.com/mapnik/mapnik/wiki/GDAL)|yes (find a place for python api docs e.g http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-module.html#Gdal not working anymore)|||
 |[GEOS](http://github.com/mapnik/mapnik/wiki/GEOS)|yes|||
 |[GettingStarted](http://github.com/mapnik/mapnik/wiki/GettingStarted)|yes (link to a place for python api docs)|||
-|[GettingStartedInPython](http://github.com/mapnik/mapnik/wiki/GettingStartedInPython)||||
-|[GettingStartedInXML](http://github.com/mapnik/mapnik/wiki/GettingStartedInXML)||||
+|[GettingStartedInPython](http://github.com/mapnik/mapnik/wiki/GettingStartedInPython)|yes|||
+|[GettingStartedInXML](http://github.com/mapnik/mapnik/wiki/GettingStartedInXML)|yes (some images and zip missing for both GettingStarted*, add them in wiki repo from http://www.analysesig.net/mapnik_wiki_ressources.tar.gz)|||
 |[GlyphSymbolizer](http://github.com/mapnik/mapnik/wiki/GlyphSymbolizer)||||
 |[Grouped rendering](http://github.com/mapnik/mapnik/wiki/Grouped-rendering)||||
 |[Google Summer of Code 2010](http://github.com/mapnik/mapnik/wiki/GSOC2010)||||
