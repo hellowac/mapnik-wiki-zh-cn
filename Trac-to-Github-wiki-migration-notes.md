@@ -52,9 +52,9 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Filter](http://github.com/mapnik/mapnik/wiki/Filter)|yes|||
 |[FontSet](http://github.com/mapnik/mapnik/wiki/FontSet)|yes|||
 |[FreeBSDInstallation](http://github.com/mapnik/mapnik/wiki/FreeBSDInstallation)|yes|||
-|[GDAL](http://github.com/mapnik/mapnik/wiki/GDAL)|yes (find a place for python bindings docs e.g http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-module.html#Gdal not working anymore)|||
-|[GEOS](http://github.com/mapnik/mapnik/wiki/GEOS)||||
-|[GettingStarted](http://github.com/mapnik/mapnik/wiki/GettingStarted)||||
+|[GDAL](http://github.com/mapnik/mapnik/wiki/GDAL)|yes (find a place for python api docs e.g http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-module.html#Gdal not working anymore)|||
+|[GEOS](http://github.com/mapnik/mapnik/wiki/GEOS)|yes|||
+|[GettingStarted](http://github.com/mapnik/mapnik/wiki/GettingStarted)|yes (link to a place for python api docs)|||
 |[GettingStartedInPython](http://github.com/mapnik/mapnik/wiki/GettingStartedInPython)||||
 |[GettingStartedInXML](http://github.com/mapnik/mapnik/wiki/GettingStartedInXML)||||
 |[GlyphSymbolizer](http://github.com/mapnik/mapnik/wiki/GlyphSymbolizer)||||
