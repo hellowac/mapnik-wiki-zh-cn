@@ -122,4 +122,5 @@ It is a great honor to be able to apply and thanks for the inspiring work you do
 ## Please select your backup group administrator.
 
 Backup administrators:
+
  * Artem Pavlenko (melange: artemp)
