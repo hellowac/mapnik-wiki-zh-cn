@@ -104,28 +104,28 @@ Mike Migurski (mike@…)
 Unsure who would be a willing mentor - I know what would be a great-looking end result and could help with the math and cartography and XML format bits, but I can't offer C++ help of any kind. Maybe this is a bidirectional mentorship? =)
 ## Technical Issues
 
-    * Maybe is possible to use other free software (like imagemagick) instead Photoshop to study layer composing, i'm interesting to develop this idea, i have a little knowledge of C++ but i can study it in these months before GSOC will start
-          o -- luca delucchi - March 11, 2009 
+* Maybe is possible to use other free software (like imagemagick) instead Photoshop to study layer composing, i'm interesting to develop this idea, i have a little knowledge of C++ but i can study it in these months before GSOC will start  
+o -- luca delucchi - March 11, 2009 
 
-    * GRASS GIS made something similar with r.his
-          o -- luca delucchi - March 12, 2009 
+* GRASS GIS made something similar with r.his  
+o -- luca delucchi - March 12, 2009 
 
-    * Seems perhaps related to #314
-          o -- springmeyer - March 12, 2009 
+* Seems perhaps related to [#314](https://github.com/mapnik/mapnik/issues/314)  
+o -- springmeyer - March 12, 2009 
 
-    * TopOSM does indeed use ImageMagick? for compositing, so that may be a good thing to look at. See http://wiki.openstreetmap.org/wiki/TopOSM/Details for more info about how it is done.
-          o -- Lars Ahlzen - March 13, 2010 
+* TopOSM does indeed use ImageMagick? for compositing, so that may be a good thing to look at. See http://wiki.openstreetmap.org/wiki/TopOSM/Details for more info about how it is done.  
+o -- Lars Ahlzen - March 13, 2010 
 
-    * See also: http://wiki.openstreetmap.org/wiki/User:Kobezda/GSoC
-          o -- Dane Springmeyer - April 6, 2010 
+* See also: http://wiki.openstreetmap.org/wiki/User:Kobezda/GSoC  
+o -- Dane Springmeyer - April 6, 2010
 
-    * Potential spec could look like: http://trac.mapnik.org/wiki/Ideas/Compositing
-          o -- Dane Springmeyer - April 6, 2010 
+* Potential spec could look like: [[Compositing]]  
+o -- Dane Springmeyer - April 6, 2010 
 
-    * Good brainstorming thread on issues around compositing on #mapnik April 7th: http://mapnik.dbsgeo.com/mapnik_logs/2010/04/07/
-          o -- Dane Springmeyer - April 7, 2010 
+* Good brainstorming thread on issues around compositing on #mapnik April 7th: http://mapnik.dbsgeo.com/mapnik_logs/2010/04/07/  
+o -- Dane Springmeyer - April 7, 2010 
 
-    * Ideas/Compositing - shawnbot's idea around a potential syntax 
+* Ideas/Compositing - shawnbot's idea around a potential syntax 
 
 ----
 ## Cascadenik: Native C++ implementation of node.js Carto
@@ -137,6 +137,7 @@ Cascadenik has evolved as we've figured out more and more, and integrating less.
 You'd need to research and maybe develop a parser for the Carto/Cascadenik/less.css syntax, including variables, classes, inheritance, IDs, and the use of attributes from vector features in style declarations - eg. `#mylayer { line-width: expr(1.7 * $POWER); }`
 
 Links:
+
  * Cascadenik: https://github.com/mapnik/Cascadenik
  * Carto: https://github.com/mapbox/carto
 
