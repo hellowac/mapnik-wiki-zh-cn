@@ -30,19 +30,19 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[AlsoFilter](http://github.com/mapnik/mapnik/wiki/AlsoFilter)|yes|||
 |[Installing Mapnik on Arch Linux](http://github.com/mapnik/mapnik/wiki/ArchInstallation)|yes|||
 |[BoundsClipping](http://github.com/mapnik/mapnik/wiki/BoundsClipping)|yes|||
-|[BrokenExceptions](http://github.com/mapnik/mapnik/wiki/BrokenExceptions)||||
-|[BuildBot](http://github.com/mapnik/mapnik/wiki/BuildBot)||||
-|[BuildingSymbolizer](http://github.com/mapnik/mapnik/wiki/BuildingSymbolizer)||||
-|[Building with Autotools](http://github.com/mapnik/mapnik/wiki/BuildingwithAutotools)||||
-|[Cairo Version](http://github.com/mapnik/mapnik/wiki/CairoVersions)||||
-|[CentOS/RHEL Installation](http://github.com/mapnik/mapnik/wiki/CentOS_RHEL)||||
-|[ChangeLog](http://github.com/mapnik/mapnik/wiki/ChangeLog)||||
-|[Coding Standards](http://github.com/mapnik/mapnik/wiki/CodingStandards)||||
-|[Compositing examples (work in progress)](http://github.com/mapnik/mapnik/wiki/Compositing)||||
-|[DebianInstallation](http://github.com/mapnik/mapnik/wiki/DebianInstallation)||||
-|[DebuggingMapnik](http://github.com/mapnik/mapnik/wiki/DebuggingMapnik)||||
-|[Demo Gallery](http://github.com/mapnik/mapnik/wiki/DemoGallery)||||
-|[DeveloperTodo](http://github.com/mapnik/mapnik/wiki/DeveloperTodo)||||
+|[BrokenExceptions](http://github.com/mapnik/mapnik/wiki/BrokenExceptions)|yes|||
+|[BuildBot](http://github.com/mapnik/mapnik/wiki/BuildBot)|yes|||
+|[BuildingSymbolizer](http://github.com/mapnik/mapnik/wiki/BuildingSymbolizer)|yes|||
+|[Building with Autotools](http://github.com/mapnik/mapnik/wiki/BuildingwithAutotools)|yes|||
+|[Cairo Version](http://github.com/mapnik/mapnik/wiki/CairoVersions)|yes|||
+|[CentOS/RHEL Installation](http://github.com/mapnik/mapnik/wiki/CentOS_RHEL)|yes|||
+|[ChangeLog](http://github.com/mapnik/mapnik/wiki/ChangeLog)|yes|||
+|[Coding Standards](http://github.com/mapnik/mapnik/wiki/CodingStandards)|yes|||
+|[Compositing examples (work in progress)](http://github.com/mapnik/mapnik/wiki/Compositing)|yes|||
+|[DebianInstallation](http://github.com/mapnik/mapnik/wiki/DebianInstallation)|yes|||
+|[DebuggingMapnik](http://github.com/mapnik/mapnik/wiki/DebuggingMapnik)|yes|||
+|[Demo Gallery](http://github.com/mapnik/mapnik/wiki/DemoGallery)|yes|||
+|[DeveloperTodo](http://github.com/mapnik/mapnik/wiki/DeveloperTodo)|yes|||
 |[Development Ideas and Topics](http://github.com/mapnik/mapnik/wiki/DeveloperTopics)||||
 |[Developing Mapnik Plugins](http://github.com/mapnik/mapnik/wiki/DevelopingPlugins)||||
 |[Development](http://github.com/mapnik/mapnik/wiki/Development)||||
