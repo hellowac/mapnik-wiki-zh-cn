@@ -4,9 +4,9 @@
 <!-- Author: springmeyer -->
 # Google Summer of Code 2010 Application
 
-*** Submitted Fri Mar 12 18:58:29 UTC 2010 ***
+Submitted Fri Mar 12 18:58:29 UTC 2010
 
-*** Changes can be made until Friday, 12. March 2010 11:00PM ***
+Changes can be made until Friday, 12. March 2010 11:00PM
 
  * Submitted at: http://socghop.appspot.com/gsoc/org_app/take/gsoc_program/google/gsoc2010/orgapp
 
