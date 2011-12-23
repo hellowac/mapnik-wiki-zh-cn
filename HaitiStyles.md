@@ -15,7 +15,7 @@ Note: styles based on maps in EPSG:4326 running Mapnik 0.7.
 
 Mapnik compatible names when using TrueType Fonts ('ersV2txt' from http://www.fgdc.gov/HSWG/index.html):
 
-    #!python
+```python
     >>> from mapnik import *
     >>> fs = FontEngine.instance()
     >>> for i in fs.face_names(): print i
@@ -31,7 +31,7 @@ Mapnik compatible names when using TrueType Fonts ('ersV2txt' from http://www.fg
     ERS v2 Operations Stage 02 Regular
     ERS v2 Operations Stage 03 Regular
     ERS v2 Operations Stage 04 Regular
-
+```
 
 Basic additions to osm2pgsql style for catching OSM tags that are emerging:
 
@@ -45,8 +45,7 @@ Basic additions to osm2pgsql style for catching OSM tags that are emerging:
 
 Example of using TrueType fonts to try to utilize FGDC symbols:
 
-
-    #!xml
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     
     <!DOCTYPE Map [
@@ -303,5 +302,4 @@ Example of using TrueType fonts to try to utilize FGDC symbols:
     </Layer>
     
     </Map>
-    
-    
+```
