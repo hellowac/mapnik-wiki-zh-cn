@@ -31,8 +31,7 @@ More specific information about this switches will follow below. At first you co
 
     $ ./configure
 
-*Hint: * Alternative you could use the _autogen.sh_ script to do the same as with the _configure_ script, but automatically bootstrap the environment:
-
+**Hint:**  Alternative you could use the _autogen.sh_ script to do the same as with the _configure_ script, but automatically bootstrap the environment:
 
     % ./autogen.sh
 
@@ -65,4 +64,4 @@ If any required dependencies are failing, then the _configure_ script will stop 
 
 Some features are activated simply by installing some packages and autodetect. Others need to be activated with the switches above.
 
-*TODO: Describe the switches! *
+**TODO: Describe the switches! **
