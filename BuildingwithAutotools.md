@@ -64,4 +64,4 @@ If any required dependencies are failing, then the _configure_ script will stop 
 
 Some features are activated simply by installing some packages and autodetect. Others need to be activated with the switches above.
 
-**TODO: Describe the switches! **
+**TODO: Describe the switches!**
