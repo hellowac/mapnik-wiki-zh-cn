@@ -10,7 +10,8 @@ Make sure you have mapnik installed and you've successfully run through [Getting
 
 Two examples will be shown:
 
-1) An XML configuration that exactly matches the map output from the pure python example in [GettingStarted The Getting Started Tutorial 1].
+1) An XML configuration that exactly matches the map output from the pure python example in [Getting Started Python Tutorial](GettingStartedInPython).
+
  * This is intended to help new users see the common usage of Mapnik style and rule parameters.
  * Note: These samples are intentionally sparse and do not take full advantage of Mapnik capabilities.
   * See the [rundemo.py](https://github.com/mapnik/mapnik/blob/master/demo/python/rundemo.py) script in the downloads for more advanced usage of python bindings.
