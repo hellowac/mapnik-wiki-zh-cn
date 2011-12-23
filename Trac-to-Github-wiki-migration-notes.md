@@ -57,18 +57,18 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[GettingStarted](http://github.com/mapnik/mapnik/wiki/GettingStarted)|yes (link to a place for python api docs)|||
 |[GettingStartedInPython](http://github.com/mapnik/mapnik/wiki/GettingStartedInPython)|yes|||
 |[GettingStartedInXML](http://github.com/mapnik/mapnik/wiki/GettingStartedInXML)|yes (some images and zip missing for both GettingStarted*, add them in wiki repo from http://www.analysesig.net/mapnik_wiki_ressources.tar.gz)|||
-|[GlyphSymbolizer](http://github.com/mapnik/mapnik/wiki/GlyphSymbolizer)||||
-|[Grouped rendering](http://github.com/mapnik/mapnik/wiki/Grouped-rendering)||||
-|[Google Summer of Code 2010](http://github.com/mapnik/mapnik/wiki/GSOC2010)||||
-|[Google Summer of Code 2010 Application](http://github.com/mapnik/mapnik/wiki/GSOC2010_Application)||||
-|[Google Summer of Code Ideas](http://github.com/mapnik/mapnik/wiki/GSOC2010_Ideas)||||
-|[Google Summer of Code 2011](http://github.com/mapnik/mapnik/wiki/GSOC2011)||||
-|[Google Summer of Code Ideas](http://github.com/mapnik/mapnik/wiki/GSOC2011_Ideas)||||
-|[Haiti Styles](http://github.com/mapnik/mapnik/wiki/HaitiStyles)||||
-|[Home](http://github.com/mapnik/mapnik/wiki)||||
-|[Ideas](http://github.com/mapnik/mapnik/wiki/Ideas)||||
-|[Compositing](http://github.com/mapnik/mapnik/wiki/Ideas_Compositing)||||
-|[Future Features of Mapnik](http://github.com/mapnik/mapnik/wiki/Ideas_FutureMapnik)||||
+|[GlyphSymbolizer](http://github.com/mapnik/mapnik/wiki/GlyphSymbolizer)|yes|||
+|[Grouped rendering](http://github.com/mapnik/mapnik/wiki/Grouped-rendering)|yes|||
+|[Google Summer of Code 2010](http://github.com/mapnik/mapnik/wiki/GSOC2010)|yes|||
+|[Google Summer of Code 2010 Application](http://github.com/mapnik/mapnik/wiki/GSOC2010_Application)|yes|||
+|[Google Summer of Code Ideas](http://github.com/mapnik/mapnik/wiki/GSOC2010_Ideas)|yes|||
+|[Google Summer of Code 2011](http://github.com/mapnik/mapnik/wiki/GSOC2011)|yes|||
+|[Google Summer of Code Ideas](http://github.com/mapnik/mapnik/wiki/GSOC2011_Ideas)|yes|||
+|[Haiti Styles](http://github.com/mapnik/mapnik/wiki/HaitiStyles)|yes|||
+|[Home](http://github.com/mapnik/mapnik/wiki)|yes|||
+|[Ideas](http://github.com/mapnik/mapnik/wiki/Ideas)|yes|||
+|[Compositing](http://github.com/mapnik/mapnik/wiki/Ideas_Compositing)|yes|||
+|[Future Features of Mapnik](http://github.com/mapnik/mapnik/wiki/Ideas_FutureMapnik)|yes (need to change some links to trac)|||
 |[Installation Troubleshooting](http://github.com/mapnik/mapnik/wiki/InstallationTroubleshooting)||||
 |[InstallGuide](http://github.com/mapnik/mapnik/wiki/InstallGuide)||||
 |[How to integrate mapnik with wxPython?](http://github.com/mapnik/mapnik/wiki/IntegrateWithWxPython)||||
