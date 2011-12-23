@@ -87,7 +87,7 @@ Finding a memory-efficient way to apply gradients across multiple polygons, pote
 # Layer Composites
 ## Description
 
-_Note: this was taken over from [ideas GSoC2010](Ideas) in Composites part and amended with the bitmap filter feature_ 
+_Note: this was taken over from [ideas GSoC2010](GSOC2010_Ideas) in Composites part and amended with the bitmap filter feature_ 
 
 Mapnik layers should be able to interact with one another just like layers in Photoshop. They could have transfer modes (e.g. screen, hard light, darken), masks, and groups. The XML description for this would be backward-compatible with the current Mapnik stylesheet language, but when new markup is added, such as a mode or opacity attribute on a layer, a Group element around a group of layers, or a Mask layer inside another layer, new behaviors could be seen. An additional feature could be to make bitmap filters work on those layers (gaussian blur, offset and others).
 ## How it would benefit Mapnik Project
