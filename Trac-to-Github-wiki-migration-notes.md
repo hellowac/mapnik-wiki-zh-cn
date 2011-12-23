@@ -27,9 +27,9 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 | **Pages** | **Syntax review 1** | **Syntax review 2** | **Content update** |
 |:----------|---------------------|---------------------|-------------------:|
 |[About Mapnik](http://github.com/mapnik/mapnik/wiki/About-Mapnik)|yes|||
-|[AlsoFilter](http://github.com/mapnik/mapnik/wiki/AlsoFilter)||||
-|[Installing Mapnik on Arch Linux](http://github.com/mapnik/mapnik/wiki/ArchInstallation)||||
-|[BoundsClipping](http://github.com/mapnik/mapnik/wiki/BoundsClipping)||||
+|[AlsoFilter](http://github.com/mapnik/mapnik/wiki/AlsoFilter)|yes|||
+|[Installing Mapnik on Arch Linux](http://github.com/mapnik/mapnik/wiki/ArchInstallation)|yes|||
+|[BoundsClipping](http://github.com/mapnik/mapnik/wiki/BoundsClipping)|yes|||
 |[BrokenExceptions](http://github.com/mapnik/mapnik/wiki/BrokenExceptions)||||
 |[BuildBot](http://github.com/mapnik/mapnik/wiki/BuildBot)||||
 |[BuildingSymbolizer](http://github.com/mapnik/mapnik/wiki/BuildingSymbolizer)||||
