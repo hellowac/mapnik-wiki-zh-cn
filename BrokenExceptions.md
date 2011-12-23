@@ -78,7 +78,7 @@ You should see a bunch of output like:
     warning: Lowest section in /lib/amd64/librt.so.1 is .dynamic at 00000000000000b0
     warning: Lowest section in /lib/amd64/libpthread.so.1 is .dynamic at 00000000000000b0
     warning: Lowest section in /lib/amd64/libthread.so.1 is .dynamic at 00000000000000b0
-```    
+```
 
 And then if you hit the crash you should see a line like:
 
