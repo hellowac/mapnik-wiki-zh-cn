@@ -11,16 +11,17 @@ Clipping is used primarily to ensure `valid` and appropriate coordinate bounds a
 Clipping can interact in subtle and important ways with a variety of other map and layer level parameters, and became more error prone (but powerful) with the introduction of support for Proj4 in r330.
 
 ### Tickets related to bounding box clipping over time include:
+https://github.com/mapnik/mapnik/issues/
  
-* #127 - BBox clipping fails when there's no intersection
-* #204 - map.buffer_size() does not seem to fetch data within buffer zone
-* #308 - Mapnik bug when features with invalid coordinates for target projection are encountered
-* #402 - Some points from PointDatasource get lost on reprojection
-* #486 - Bounds clipping likely to fail if using map_buffer after r1348
-* #506 - Add a Map level custom extent or max_extent to enhance clipping ability
-* #548 - Layer query bbox not correct on Lambert Map
-* #549 - Problem with local projections and worldwide data extent
-* #751 - Better handling of bounding box transform (avoids need for 'maximum-extent').
+* [#127](https://github.com/mapnik/mapnik/issues/127) BBox clipping fails when there's no intersection
+* [#204](https://github.com/mapnik/mapnik/issues/204) map.buffer_size() does not seem to fetch data within buffer zone
+* [#308](https://github.com/mapnik/mapnik/issues/308) Mapnik bug when features with invalid coordinates for target projection are encountered
+* [#402](https://github.com/mapnik/mapnik/issues/402) Some points from PointDatasource get lost on reprojection
+* [#486](https://github.com/mapnik/mapnik/issues/486) Bounds clipping likely to fail if using map_buffer after r1348
+* [#506](https://github.com/mapnik/mapnik/issues/506) Add a Map level custom extent or max_extent to enhance clipping ability
+* [#548](https://github.com/mapnik/mapnik/issues/548) Layer query bbox not correct on Lambert Map
+* [#549](https://github.com/mapnik/mapnik/issues/549) Problem with local projections and worldwide data extent
+* [#751](https://github.com/mapnik/mapnik/issues/751) Better handling of bounding box transform (avoids need for 'maximum-extent').
 
 ### Key Changesets include:
 
@@ -42,4 +43,4 @@ Clipping can interact in subtle and important ways with a variety of other map a
 
 Discussion of fixing clipping after addition of map_buffer to avoid truncated text at tile edges:
 
-* http://mapnik.dbsgeo.com/mapnik_logs/2009/02/01/ - prediction of #486
+* http://mapnik.dbsgeo.com/mapnik_logs/2009/02/01/ - prediction of [#486](https://github.com/mapnik/mapnik/issues/486)
