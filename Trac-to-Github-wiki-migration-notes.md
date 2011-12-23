@@ -26,144 +26,144 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 
 | **Pages** | **Syntax review 1** | **Syntax review 2** | **Content update** |
 |:----------|---------------------|---------------------|-------------------:|
-|[About Mapnik](http://github/com/mapnik/mapnik/wiki/About-Mapnik)|yes|||
-|[AlsoFilter](http://github/com/mapnik/mapnik/wiki/AlsoFilter)||||
-|[Installing Mapnik on Arch Linux](http://github/com/mapnik/mapnik/wiki/ArchInstallation)||||
-|[BoundsClipping](http://github/com/mapnik/mapnik/wiki/BoundsClipping)||||
-|[BrokenExceptions](http://github/com/mapnik/mapnik/wiki/BrokenExceptions)||||
-|[BuildBot](http://github/com/mapnik/mapnik/wiki/BuildBot)||||
-|[BuildingSymbolizer](http://github/com/mapnik/mapnik/wiki/BuildingSymbolizer)||||
-|[Building with Autotools](http://github/com/mapnik/mapnik/wiki/BuildingwithAutotools)||||
-|[Cairo Version](http://github/com/mapnik/mapnik/wiki/CairoVersions)||||
-|[CentOS/RHEL Installation](http://github/com/mapnik/mapnik/wiki/CentOS_RHEL)||||
-|[ChangeLog](http://github/com/mapnik/mapnik/wiki/ChangeLog)||||
-|[Coding Standards](http://github/com/mapnik/mapnik/wiki/CodingStandards)||||
-|[Compositing examples (work in progress)](http://github/com/mapnik/mapnik/wiki/Compositing)||||
-|[DebianInstallation](http://github/com/mapnik/mapnik/wiki/DebianInstallation)||||
-|[DebuggingMapnik](http://github/com/mapnik/mapnik/wiki/DebuggingMapnik)||||
-|[Demo Gallery](http://github/com/mapnik/mapnik/wiki/DemoGallery)||||
-|[DeveloperTodo](http://github/com/mapnik/mapnik/wiki/DeveloperTodo)||||
-|[Development Ideas and Topics](http://github/com/mapnik/mapnik/wiki/DeveloperTopics)||||
-|[Developing Mapnik Plugins](http://github/com/mapnik/mapnik/wiki/DevelopingPlugins)||||
-|[Development](http://github/com/mapnik/mapnik/wiki/Development)||||
-|[ElseFilter](http://github/com/mapnik/mapnik/wiki/ElseFilter)||||
-|[Example Code](http://github/com/mapnik/mapnik/wiki/ExampleCode)||||
-|[Compiling Mapnik Faster](http://github/com/mapnik/mapnik/wiki/FasterCompiling)||||
-|[Filter](http://github/com/mapnik/mapnik/wiki/Filter)||||
-|[FontSet](http://github/com/mapnik/mapnik/wiki/FontSet)||||
-|[FreeBSDInstallation](http://github/com/mapnik/mapnik/wiki/FreeBSDInstallation)||||
-|[GDAL](http://github/com/mapnik/mapnik/wiki/GDAL)||||
-|[GEOS](http://github/com/mapnik/mapnik/wiki/GEOS)||||
-|[GettingStarted](http://github/com/mapnik/mapnik/wiki/GettingStarted)||||
-|[GettingStartedInPython](http://github/com/mapnik/mapnik/wiki/GettingStartedInPython)||||
-|[GettingStartedInXML](http://github/com/mapnik/mapnik/wiki/GettingStartedInXML)||||
-|[GlyphSymbolizer](http://github/com/mapnik/mapnik/wiki/GlyphSymbolizer)||||
-|[Grouped rendering](http://github/com/mapnik/mapnik/wiki/Grouped-rendering)||||
-|[Google Summer of Code 2010](http://github/com/mapnik/mapnik/wiki/GSOC2010)||||
-|[Google Summer of Code 2010 Application](http://github/com/mapnik/mapnik/wiki/GSOC2010_Application)||||
-|[Google Summer of Code Ideas](http://github/com/mapnik/mapnik/wiki/GSOC2010_Ideas)||||
-|[Google Summer of Code 2011](http://github/com/mapnik/mapnik/wiki/GSOC2011)||||
-|[Google Summer of Code Ideas](http://github/com/mapnik/mapnik/wiki/GSOC2011_Ideas)||||
-|[Haiti Styles](http://github/com/mapnik/mapnik/wiki/HaitiStyles)||||
-|[Home](http://github/com/mapnik/mapnik/wiki)||||
-|[Ideas](http://github/com/mapnik/mapnik/wiki/Ideas)||||
-|[Compositing](http://github/com/mapnik/mapnik/wiki/Ideas_Compositing)||||
-|[Future Features of Mapnik](http://github/com/mapnik/mapnik/wiki/Ideas_FutureMapnik)||||
-|[Installation Troubleshooting](http://github/com/mapnik/mapnik/wiki/InstallationTroubleshooting)||||
-|[InstallGuide](http://github/com/mapnik/mapnik/wiki/InstallGuide)||||
-|[How to integrate mapnik with wxPython?](http://github/com/mapnik/mapnik/wiki/IntegrateWithWxPython)||||
-|[International Text](http://github/com/mapnik/mapnik/wiki/InternationalText)||||
-|[IntroductionToGIS](http://github/com/mapnik/mapnik/wiki/IntroductionToGIS)||||
-|[Kismet](http://github/com/mapnik/mapnik/wiki/Kismet)||||
-|[LabelingSupport](http://github/com/mapnik/mapnik/wiki/LabelingSupport)||||
-|[LearningMapnik](http://github/com/mapnik/mapnik/wiki/LearningMapnik)||||
-|[Discussion of a Legending Spec for Mapnik](http://github/com/mapnik/mapnik/wiki/Legending)||||
-|[LinePatternSymbolizer](http://github/com/mapnik/mapnik/wiki/LinePatternSymbolizer)||||
-|[LineSymbolizer](http://github/com/mapnik/mapnik/wiki/LineSymbolizer)||||
-|[Installing Mapnik on Linux](http://github/com/mapnik/mapnik/wiki/LinuxInstallation)||||
-|[Installing Mapnik Mac OS X](http://github/com/mapnik/mapnik/wiki/MacInstallation)||||
-|[Installing Mapnik on OS X with Framework Installers](http://github/com/mapnik/mapnik/wiki/MacInstallation_Frameworks)||||
-|[Installing Mapnik on OS X with Homebrew](http://github/com/mapnik/mapnik/wiki/MacInstallation_Homebrew)||||
-|[Optional Installs](http://github/com/mapnik/mapnik/wiki/MacInstallation_Optional)||||
-|[Installing Mapnik on OS X from Source](http://github/com/mapnik/mapnik/wiki/MacInstallation_Source)||||
-|[Installing Mapnik on Mac OS X](http://github/com/mapnik/mapnik/wiki/MacInstallationPorts)||||
-|[MacInstallationSource](http://github/com/mapnik/mapnik/wiki/MacInstallationSource)||||
-|[MacPostGIS_Setup](http://github/com/mapnik/mapnik/wiki/MacPostGIS_Setup)||||
-|[MacPythonUpgradeIssues](http://github/com/mapnik/mapnik/wiki/MacPythonUpgradeIssues)||||
-|[Managing complex map files using XML entities](http://github/com/mapnik/mapnik/wiki/ManagingLargeXmlFiles)||||
-|[MapDesign](http://github/com/mapnik/mapnik/wiki/MapDesign)||||
-|[Mapnik API](http://github/com/mapnik/mapnik/wiki/Mapnik-API)||||
-|[Mapnik Development](http://github/com/mapnik/mapnik/wiki/Mapnik-Development)||||
-|[Mapnik Installation](http://github/com/mapnik/mapnik/wiki/Mapnik-Installation)||||
-|[Mapnik2](http://github/com/mapnik/mapnik/wiki/Mapnik2)||||
-|[Changes between Mapnik 0.7.x and Mapnik 2.0](http://github/com/mapnik/mapnik/wiki/Mapnik2_Changes)||||
-|[MapnikCodeSprint](http://github/com/mapnik/mapnik/wiki/MapnikCodeSprint)||||
-|[MapnikCodeSprint_MCS01](http://github/com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01)||||
-|[MapnikCodeSprint_MCS01_Location](http://github/com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Location)||||
-|[MapnikCodeSprint_MCS01_Results](http://github/com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Results)||||
-|[MapnikCodeSprint_MCS01_Schedule](http://github/com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Schedule)||||
-|[MapnikCodeSprint_MCS02](http://github/com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS02)||||
-|[Core Concepts of Mapnik](http://github/com/mapnik/mapnik/wiki/MapnikCoreConcepts)||||
-|[MapnikDependencies](http://github/com/mapnik/mapnik/wiki/MapnikDependencies)||||
-|[MapnikInstallationSvn](http://github/com/mapnik/mapnik/wiki/MapnikInstallationSvn)||||
-|[MapnikReferences](http://github/com/mapnik/mapnik/wiki/MapnikReferences)||||
-|[Mapnik Releases](http://github/com/mapnik/mapnik/wiki/MapnikReleases)||||
-|[Steps for Mapnik Releases](http://github/com/mapnik/mapnik/wiki/MapnikReleaseSteps)||||
-|[Mapnik Renderers](http://github/com/mapnik/mapnik/wiki/MapnikRenderers)||||
-|[Mapnik Tutorials](http://github/com/mapnik/mapnik/wiki/MapnikTutorials)||||
-|[MapnikUtilities](http://github/com/mapnik/mapnik/wiki/MapnikUtilities)||||
-|[MapnikViewer](http://github/com/mapnik/mapnik/wiki/MapnikViewer)||||
-|[MarkersSymbolizer](http://github/com/mapnik/mapnik/wiki/MarkersSymbolizer)||||
-|[MaxScaleDenominator](http://github/com/mapnik/mapnik/wiki/MaxScaleDenominator)||||
-|[MemoryDatasource](http://github/com/mapnik/mapnik/wiki/MemoryDatasource)||||
-|[MetaWriter](http://github/com/mapnik/mapnik/wiki/MetaWriter)||||
-|[MinScaleDenominator](http://github/com/mapnik/mapnik/wiki/MinScaleDenominator)||||
-|[ModServer](http://github/com/mapnik/mapnik/wiki/ModServer)||||
-|[Mapnik Maps on the Command-Line](http://github/com/mapnik/mapnik/wiki/Nik2Img)||||
-|[Notes and caveats](http://github/com/mapnik/mapnik/wiki/Notes-and-caveats)||||
-|[OCCI](http://github/com/mapnik/mapnik/wiki/OCCI)||||
-|[OGR](http://github/com/mapnik/mapnik/wiki/OGR)||||
-|[Installing Mapnik and Dependencies on Open Solaris](http://github/com/mapnik/mapnik/wiki/OpenSolarisInstallation)||||
-|[OpenSolarisInstallation_32bit](http://github/com/mapnik/mapnik/wiki/OpenSolarisInstallation_32bit)||||
-|[OpenSolarisInstallation_64bit](http://github/com/mapnik/mapnik/wiki/OpenSolarisInstallation_64bit)||||
-|[Trouble Shooting on Open Solaris](http://github/com/mapnik/mapnik/wiki/OpenSolarisInstallation_TroubleShooting)||||
-|[OpenSuse](http://github/com/mapnik/mapnik/wiki/OpenSuse)||||
-|[Installing Mapnik on Suse](http://github/com/mapnik/mapnik/wiki/OpenSuseInstallation)||||
-|[Optimize Rendering with PostGIS](http://github/com/mapnik/mapnik/wiki/OptimizeRenderingWithPostGIS)||||
-|[OsmPlugin](http://github/com/mapnik/mapnik/wiki/OsmPlugin)||||
-|[Mapnik Output Formats](http://github/com/mapnik/mapnik/wiki/OutputFormats)||||
-|[Notes on Mapnik Packages](http://github/com/mapnik/mapnik/wiki/PackageBuilding)||||
-|[Paleoserver](http://github/com/mapnik/mapnik/wiki/Paleoserver)||||
-|[PluginArchitecture](http://github/com/mapnik/mapnik/wiki/PluginArchitecture)||||
-|[PointSymbolizer](http://github/com/mapnik/mapnik/wiki/PointSymbolizer)||||
-|[PolygonPatternSymbolizer](http://github/com/mapnik/mapnik/wiki/PolygonPatternSymbolizer)||||
-|[PolygonSymbolizer](http://github/com/mapnik/mapnik/wiki/PolygonSymbolizer)||||
-|[PostGIS](http://github/com/mapnik/mapnik/wiki/PostGIS)||||
-|[Python3k](http://github/com/mapnik/mapnik/wiki/Python3k)||||
-|[Raster](http://github/com/mapnik/mapnik/wiki/Raster)||||
-|[RasterColorizer](http://github/com/mapnik/mapnik/wiki/RasterColorizer)||||
-|[Rasterlite](http://github/com/mapnik/mapnik/wiki/Rasterlite)||||
-|[RasterSymbolizer](http://github/com/mapnik/mapnik/wiki/RasterSymbolizer)||||
-|[Related projects and utilities](http://github/com/mapnik/mapnik/wiki/Related-projects-and-utilities)||||
-|[Release0.6.0](http://github/com/mapnik/mapnik/wiki/Release0.6.0)||||
-|[Release0.6.1](http://github/com/mapnik/mapnik/wiki/Release0.6.1)||||
-|[Mapnik 0.7.0 Release](http://github/com/mapnik/mapnik/wiki/Release0.7.0)||||
-|[Release0.7.1](http://github/com/mapnik/mapnik/wiki/Release0.7.1)||||
-|[Mapnik 2.0.0 release](http://github/com/mapnik/mapnik/wiki/Release2.0.0)||||
-|[ScaleAndPpi](http://github/com/mapnik/mapnik/wiki/ScaleAndPpi)||||
-|[Shapefile Plugin](http://github/com/mapnik/mapnik/wiki/ShapeFile)||||
-|[ShieldSymbolizer](http://github/com/mapnik/mapnik/wiki/ShieldSymbolizer)||||
-|[ShieldSymbolizerTests](http://github/com/mapnik/mapnik/wiki/ShieldSymbolizerTests)||||
-|[SQLite](http://github/com/mapnik/mapnik/wiki/SQLite)||||
-|[Sharing Map Styles](http://github/com/mapnik/mapnik/wiki/StyleShare)||||
-|[Symbology Support](http://github/com/mapnik/mapnik/wiki/SymbologySupport)||||
-|[TextSymbolizer](http://github/com/mapnik/mapnik/wiki/TextSymbolizer)||||
-|[Troubleshooting](http://github/com/mapnik/mapnik/wiki/Troubleshooting)||||
-|[Installing Mapnik on Ubuntu](http://github/com/mapnik/mapnik/wiki/UbuntuInstallation)||||
-|[Build notes specific to older versions of Ubuntu](http://github/com/mapnik/mapnik/wiki/UbuntuInstallationOld)||||
-|[Using Custom Fonts with Mapnik](http://github/com/mapnik/mapnik/wiki/UsingCustomFonts)||||
-|[Using SCons with Mapnik](http://github/com/mapnik/mapnik/wiki/UsingScons)||||
-|[Validating Xml](http://github/com/mapnik/mapnik/wiki/ValidatingXml)||||
-|[Installing Mapnik in Windows](http://github/com/mapnik/mapnik/wiki/WindowsInstallation)||||
-|[XMLConfigReference](http://github/com/mapnik/mapnik/wiki/XMLConfigReference)||||
-|[XmlFormatDiscussion](http://github/com/mapnik/mapnik/wiki/XmlFormatDiscussion)||||
+|[About Mapnik](http://github.com/mapnik/mapnik/wiki/About-Mapnik)|yes|||
+|[AlsoFilter](http://github.com/mapnik/mapnik/wiki/AlsoFilter)||||
+|[Installing Mapnik on Arch Linux](http://github.com/mapnik/mapnik/wiki/ArchInstallation)||||
+|[BoundsClipping](http://github.com/mapnik/mapnik/wiki/BoundsClipping)||||
+|[BrokenExceptions](http://github.com/mapnik/mapnik/wiki/BrokenExceptions)||||
+|[BuildBot](http://github.com/mapnik/mapnik/wiki/BuildBot)||||
+|[BuildingSymbolizer](http://github.com/mapnik/mapnik/wiki/BuildingSymbolizer)||||
+|[Building with Autotools](http://github.com/mapnik/mapnik/wiki/BuildingwithAutotools)||||
+|[Cairo Version](http://github.com/mapnik/mapnik/wiki/CairoVersions)||||
+|[CentOS/RHEL Installation](http://github.com/mapnik/mapnik/wiki/CentOS_RHEL)||||
+|[ChangeLog](http://github.com/mapnik/mapnik/wiki/ChangeLog)||||
+|[Coding Standards](http://github.com/mapnik/mapnik/wiki/CodingStandards)||||
+|[Compositing examples (work in progress)](http://github.com/mapnik/mapnik/wiki/Compositing)||||
+|[DebianInstallation](http://github.com/mapnik/mapnik/wiki/DebianInstallation)||||
+|[DebuggingMapnik](http://github.com/mapnik/mapnik/wiki/DebuggingMapnik)||||
+|[Demo Gallery](http://github.com/mapnik/mapnik/wiki/DemoGallery)||||
+|[DeveloperTodo](http://github.com/mapnik/mapnik/wiki/DeveloperTodo)||||
+|[Development Ideas and Topics](http://github.com/mapnik/mapnik/wiki/DeveloperTopics)||||
+|[Developing Mapnik Plugins](http://github.com/mapnik/mapnik/wiki/DevelopingPlugins)||||
+|[Development](http://github.com/mapnik/mapnik/wiki/Development)||||
+|[ElseFilter](http://github.com/mapnik/mapnik/wiki/ElseFilter)||||
+|[Example Code](http://github.com/mapnik/mapnik/wiki/ExampleCode)||||
+|[Compiling Mapnik Faster](http://github.com/mapnik/mapnik/wiki/FasterCompiling)||||
+|[Filter](http://github.com/mapnik/mapnik/wiki/Filter)||||
+|[FontSet](http://github.com/mapnik/mapnik/wiki/FontSet)||||
+|[FreeBSDInstallation](http://github.com/mapnik/mapnik/wiki/FreeBSDInstallation)||||
+|[GDAL](http://github.com/mapnik/mapnik/wiki/GDAL)||||
+|[GEOS](http://github.com/mapnik/mapnik/wiki/GEOS)||||
+|[GettingStarted](http://github.com/mapnik/mapnik/wiki/GettingStarted)||||
+|[GettingStartedInPython](http://github.com/mapnik/mapnik/wiki/GettingStartedInPython)||||
+|[GettingStartedInXML](http://github.com/mapnik/mapnik/wiki/GettingStartedInXML)||||
+|[GlyphSymbolizer](http://github.com/mapnik/mapnik/wiki/GlyphSymbolizer)||||
+|[Grouped rendering](http://github.com/mapnik/mapnik/wiki/Grouped-rendering)||||
+|[Google Summer of Code 2010](http://github.com/mapnik/mapnik/wiki/GSOC2010)||||
+|[Google Summer of Code 2010 Application](http://github.com/mapnik/mapnik/wiki/GSOC2010_Application)||||
+|[Google Summer of Code Ideas](http://github.com/mapnik/mapnik/wiki/GSOC2010_Ideas)||||
+|[Google Summer of Code 2011](http://github.com/mapnik/mapnik/wiki/GSOC2011)||||
+|[Google Summer of Code Ideas](http://github.com/mapnik/mapnik/wiki/GSOC2011_Ideas)||||
+|[Haiti Styles](http://github.com/mapnik/mapnik/wiki/HaitiStyles)||||
+|[Home](http://github.com/mapnik/mapnik/wiki)||||
+|[Ideas](http://github.com/mapnik/mapnik/wiki/Ideas)||||
+|[Compositing](http://github.com/mapnik/mapnik/wiki/Ideas_Compositing)||||
+|[Future Features of Mapnik](http://github.com/mapnik/mapnik/wiki/Ideas_FutureMapnik)||||
+|[Installation Troubleshooting](http://github.com/mapnik/mapnik/wiki/InstallationTroubleshooting)||||
+|[InstallGuide](http://github.com/mapnik/mapnik/wiki/InstallGuide)||||
+|[How to integrate mapnik with wxPython?](http://github.com/mapnik/mapnik/wiki/IntegrateWithWxPython)||||
+|[International Text](http://github.com/mapnik/mapnik/wiki/InternationalText)||||
+|[IntroductionToGIS](http://github.com/mapnik/mapnik/wiki/IntroductionToGIS)||||
+|[Kismet](http://github.com/mapnik/mapnik/wiki/Kismet)||||
+|[LabelingSupport](http://github.com/mapnik/mapnik/wiki/LabelingSupport)||||
+|[LearningMapnik](http://github.com/mapnik/mapnik/wiki/LearningMapnik)||||
+|[Discussion of a Legending Spec for Mapnik](http://github.com/mapnik/mapnik/wiki/Legending)||||
+|[LinePatternSymbolizer](http://github.com/mapnik/mapnik/wiki/LinePatternSymbolizer)||||
+|[LineSymbolizer](http://github.com/mapnik/mapnik/wiki/LineSymbolizer)||||
+|[Installing Mapnik on Linux](http://github.com/mapnik/mapnik/wiki/LinuxInstallation)||||
+|[Installing Mapnik Mac OS X](http://github.com/mapnik/mapnik/wiki/MacInstallation)||||
+|[Installing Mapnik on OS X with Framework Installers](http://github.com/mapnik/mapnik/wiki/MacInstallation_Frameworks)||||
+|[Installing Mapnik on OS X with Homebrew](http://github.com/mapnik/mapnik/wiki/MacInstallation_Homebrew)||||
+|[Optional Installs](http://github.com/mapnik/mapnik/wiki/MacInstallation_Optional)||||
+|[Installing Mapnik on OS X from Source](http://github.com/mapnik/mapnik/wiki/MacInstallation_Source)||||
+|[Installing Mapnik on Mac OS X](http://github.com/mapnik/mapnik/wiki/MacInstallationPorts)||||
+|[MacInstallationSource](http://github.com/mapnik/mapnik/wiki/MacInstallationSource)||||
+|[MacPostGIS_Setup](http://github.com/mapnik/mapnik/wiki/MacPostGIS_Setup)||||
+|[MacPythonUpgradeIssues](http://github.com/mapnik/mapnik/wiki/MacPythonUpgradeIssues)||||
+|[Managing complex map files using XML entities](http://github.com/mapnik/mapnik/wiki/ManagingLargeXmlFiles)||||
+|[MapDesign](http://github.com/mapnik/mapnik/wiki/MapDesign)||||
+|[Mapnik API](http://github.com/mapnik/mapnik/wiki/Mapnik-API)||||
+|[Mapnik Development](http://github.com/mapnik/mapnik/wiki/Mapnik-Development)||||
+|[Mapnik Installation](http://github.com/mapnik/mapnik/wiki/Mapnik-Installation)||||
+|[Mapnik2](http://github.com/mapnik/mapnik/wiki/Mapnik2)||||
+|[Changes between Mapnik 0.7.x and Mapnik 2.0](http://github.com/mapnik/mapnik/wiki/Mapnik2_Changes)||||
+|[MapnikCodeSprint](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint)||||
+|[MapnikCodeSprint_MCS01](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01)||||
+|[MapnikCodeSprint_MCS01_Location](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Location)||||
+|[MapnikCodeSprint_MCS01_Results](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Results)||||
+|[MapnikCodeSprint_MCS01_Schedule](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Schedule)||||
+|[MapnikCodeSprint_MCS02](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS02)||||
+|[Core Concepts of Mapnik](http://github.com/mapnik/mapnik/wiki/MapnikCoreConcepts)||||
+|[MapnikDependencies](http://github.com/mapnik/mapnik/wiki/MapnikDependencies)||||
+|[MapnikInstallationSvn](http://github.com/mapnik/mapnik/wiki/MapnikInstallationSvn)||||
+|[MapnikReferences](http://github.com/mapnik/mapnik/wiki/MapnikReferences)||||
+|[Mapnik Releases](http://github.com/mapnik/mapnik/wiki/MapnikReleases)||||
+|[Steps for Mapnik Releases](http://github.com/mapnik/mapnik/wiki/MapnikReleaseSteps)||||
+|[Mapnik Renderers](http://github.com/mapnik/mapnik/wiki/MapnikRenderers)||||
+|[Mapnik Tutorials](http://github.com/mapnik/mapnik/wiki/MapnikTutorials)||||
+|[MapnikUtilities](http://github.com/mapnik/mapnik/wiki/MapnikUtilities)||||
+|[MapnikViewer](http://github.com/mapnik/mapnik/wiki/MapnikViewer)||||
+|[MarkersSymbolizer](http://github.com/mapnik/mapnik/wiki/MarkersSymbolizer)||||
+|[MaxScaleDenominator](http://github.com/mapnik/mapnik/wiki/MaxScaleDenominator)||||
+|[MemoryDatasource](http://github.com/mapnik/mapnik/wiki/MemoryDatasource)||||
+|[MetaWriter](http://github.com/mapnik/mapnik/wiki/MetaWriter)||||
+|[MinScaleDenominator](http://github.com/mapnik/mapnik/wiki/MinScaleDenominator)||||
+|[ModServer](http://github.com/mapnik/mapnik/wiki/ModServer)||||
+|[Mapnik Maps on the Command-Line](http://github.com/mapnik/mapnik/wiki/Nik2Img)||||
+|[Notes and caveats](http://github.com/mapnik/mapnik/wiki/Notes-and-caveats)||||
+|[OCCI](http://github.com/mapnik/mapnik/wiki/OCCI)||||
+|[OGR](http://github.com/mapnik/mapnik/wiki/OGR)||||
+|[Installing Mapnik and Dependencies on Open Solaris](http://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation)||||
+|[OpenSolarisInstallation_32bit](http://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation_32bit)||||
+|[OpenSolarisInstallation_64bit](http://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation_64bit)||||
+|[Trouble Shooting on Open Solaris](http://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation_TroubleShooting)||||
+|[OpenSuse](http://github.com/mapnik/mapnik/wiki/OpenSuse)||||
+|[Installing Mapnik on Suse](http://github.com/mapnik/mapnik/wiki/OpenSuseInstallation)||||
+|[Optimize Rendering with PostGIS](http://github.com/mapnik/mapnik/wiki/OptimizeRenderingWithPostGIS)||||
+|[OsmPlugin](http://github.com/mapnik/mapnik/wiki/OsmPlugin)||||
+|[Mapnik Output Formats](http://github.com/mapnik/mapnik/wiki/OutputFormats)||||
+|[Notes on Mapnik Packages](http://github.com/mapnik/mapnik/wiki/PackageBuilding)||||
+|[Paleoserver](http://github.com/mapnik/mapnik/wiki/Paleoserver)||||
+|[PluginArchitecture](http://github.com/mapnik/mapnik/wiki/PluginArchitecture)||||
+|[PointSymbolizer](http://github.com/mapnik/mapnik/wiki/PointSymbolizer)||||
+|[PolygonPatternSymbolizer](http://github.com/mapnik/mapnik/wiki/PolygonPatternSymbolizer)||||
+|[PolygonSymbolizer](http://github.com/mapnik/mapnik/wiki/PolygonSymbolizer)||||
+|[PostGIS](http://github.com/mapnik/mapnik/wiki/PostGIS)||||
+|[Python3k](http://github.com/mapnik/mapnik/wiki/Python3k)||||
+|[Raster](http://github.com/mapnik/mapnik/wiki/Raster)||||
+|[RasterColorizer](http://github.com/mapnik/mapnik/wiki/RasterColorizer)||||
+|[Rasterlite](http://github.com/mapnik/mapnik/wiki/Rasterlite)||||
+|[RasterSymbolizer](http://github.com/mapnik/mapnik/wiki/RasterSymbolizer)||||
+|[Related projects and utilities](http://github.com/mapnik/mapnik/wiki/Related-projects-and-utilities)||||
+|[Release0.6.0](http://github.com/mapnik/mapnik/wiki/Release0.6.0)||||
+|[Release0.6.1](http://github.com/mapnik/mapnik/wiki/Release0.6.1)||||
+|[Mapnik 0.7.0 Release](http://github.com/mapnik/mapnik/wiki/Release0.7.0)||||
+|[Release0.7.1](http://github.com/mapnik/mapnik/wiki/Release0.7.1)||||
+|[Mapnik 2.0.0 release](http://github.com/mapnik/mapnik/wiki/Release2.0.0)||||
+|[ScaleAndPpi](http://github.com/mapnik/mapnik/wiki/ScaleAndPpi)||||
+|[Shapefile Plugin](http://github.com/mapnik/mapnik/wiki/ShapeFile)||||
+|[ShieldSymbolizer](http://github.com/mapnik/mapnik/wiki/ShieldSymbolizer)||||
+|[ShieldSymbolizerTests](http://github.com/mapnik/mapnik/wiki/ShieldSymbolizerTests)||||
+|[SQLite](http://github.com/mapnik/mapnik/wiki/SQLite)||||
+|[Sharing Map Styles](http://github.com/mapnik/mapnik/wiki/StyleShare)||||
+|[Symbology Support](http://github.com/mapnik/mapnik/wiki/SymbologySupport)||||
+|[TextSymbolizer](http://github.com/mapnik/mapnik/wiki/TextSymbolizer)||||
+|[Troubleshooting](http://github.com/mapnik/mapnik/wiki/Troubleshooting)||||
+|[Installing Mapnik on Ubuntu](http://github.com/mapnik/mapnik/wiki/UbuntuInstallation)||||
+|[Build notes specific to older versions of Ubuntu](http://github.com/mapnik/mapnik/wiki/UbuntuInstallationOld)||||
+|[Using Custom Fonts with Mapnik](http://github.com/mapnik/mapnik/wiki/UsingCustomFonts)||||
+|[Using SCons with Mapnik](http://github.com/mapnik/mapnik/wiki/UsingScons)||||
+|[Validating Xml](http://github.com/mapnik/mapnik/wiki/ValidatingXml)||||
+|[Installing Mapnik in Windows](http://github.com/mapnik/mapnik/wiki/WindowsInstallation)||||
+|[XMLConfigReference](http://github.com/mapnik/mapnik/wiki/XMLConfigReference)||||
+|[XmlFormatDiscussion](http://github.com/mapnik/mapnik/wiki/XmlFormatDiscussion)||||
