@@ -57,6 +57,7 @@ It would probably be best to follow Guido van Rossum's preferred coding style, a
 We will need some tools to automatically reformat the code before a commit is done. The initial run of these tools will likely result in a massive commit that only contains formatting changes.
 
 Candidates:
+
  * [astyle](http://astyle.sourceforge.net/)
  * [GC GreatCode](http://sourceforge.net/projects/gcgreatcode/)
  * [indent](http://www.gnu.org/software/indent/)
