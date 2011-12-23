@@ -11,7 +11,6 @@ Clipping is used primarily to ensure `valid` and appropriate coordinate bounds a
 Clipping can interact in subtle and important ways with a variety of other map and layer level parameters, and became more error prone (but powerful) with the introduction of support for Proj4 in r330.
 
 ### Tickets related to bounding box clipping over time include:
-https://github.com/mapnik/mapnik/issues/
  
 * [#127](https://github.com/mapnik/mapnik/issues/127) BBox clipping fails when there's no intersection
 * [#204](https://github.com/mapnik/mapnik/issues/204) map.buffer_size() does not seem to fetch data within buffer zone
@@ -30,14 +29,13 @@ https://github.com/mapnik/mapnik/issues/
 * r789 - Check for layer intersection
 * r851 - ensure clipping always happens against layer extent
 * r853 - switched to use the buffered map extent (map bbox + map.buffer_size)
-* r1348 - changed bounds clipping to buffered map extent, created #486
-* r2776 - added maximum-extent attribute to map (#506)
-* r2782 - if maximum-extent is provided, clip map query to it (#506), which provides one potential, performant, solution to #549
+* r1348 - changed bounds clipping to buffered map extent, created [#486](https://github.com/mapnik/mapnik/issues/486)
+* r2776 - added maximum-extent attribute to map ([#506](https://github.com/mapnik/mapnik/issues/506))
+* r2782 - if maximum-extent is provided, clip map query to it ([#506](https://github.com/mapnik/mapnik/issues/506)), which provides one potential, performant, solution to [#549](https://github.com/mapnik/mapnik/issues/549)
 * r2784 - *switch* to first attempt to clip and intersect against map extent, then falling back to layer extent
-* The fallback to layer clipping should now be rarely needed except where a map buffer pushes potential map extent outside of valid bounds but this can now be solved by supplying 'maximum-extent' (#506)
+* The fallback to layer clipping should now be rarely needed except where a map buffer pushes potential map extent outside of valid bounds but this can now be solved by supplying `maximum-extent` ([#506](https://github.com/mapnik/mapnik/issues/506))
 * r2785 - skip rendering specific coordinates which cannot be back projected from the layer srs into the map srs, avoiding the previous outcome of full skipping of features (this is at the cost of potentially odd looking polygons, but should not impact performance)
 * r3048 - fixed bug in fallback intersection checking that lead to false positive and uneeded clip
-
 
 ### IRC discussions:
 
