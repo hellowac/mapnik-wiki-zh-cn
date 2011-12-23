@@ -10,9 +10,9 @@ Mapnik was accepted to participate in Google Summer of Code 2011.
 
 Three students were accepted this year: http://mapnik.org/news/2011/apr/25/three_students_mapnik_gsoc_2011/
 
-See the main page for more details: wiki:GSOC2011
+See the main page for more details: [[GSOC2011]]
 
-See also steve8's ideas page: http://trac.mapnik.org/wiki/Ideas
+See also steve8's ideas page: [[Ideas]]
 
 
 # Project Ideas
@@ -41,7 +41,7 @@ The Mapnik project would benefit from having PHP bindings by being opened up to 
 PHP/Zend internals and build system; Mapnik internals; unit testing best practices.
 # Submitter
 Roel Vanhout
-= Possible Mentors = 
+# Possible Mentors
 ???
 # Technical Issues
 Technical issues include finding reusable C++ patterns to comfortably work with the Zend extension API, finding ways to optimize the performance hit that comes with scriptings languages and can be substantial for operations that are performed many times and finding a balance in the API design between the idiomatich PHP way and staying close to Mapnik C++.
@@ -62,7 +62,7 @@ Roel Vanhout
 # Technical Issues
 The issues with this project are in finding generic ways to specify map elements, in ways that provide a natural fit with the data and provide as much flexibility to the cartographer as possible for maximum expressiveness. As much of the rendering code in the rest of Mapnik should be re-used, e.g. SVG code for rendering SVG north arrows.
 
-  * See also http://trac.mapnik.org/wiki/Legending and http://trac.mapnik.org/ticket/536 .
+  * See also [[Legending]] and https://github.com/mapnik/mapnik/issues/536 .
 
   * Scale bars, legends, and grid lines are implemented in this evolving work within a python 'printing' module: https://github.com/thjc/mapnik-svg
      o -- Dane Springmeyer - April 5, 2011 
@@ -87,7 +87,7 @@ Finding a memory-efficient way to apply gradients across multiple polygons, pote
 # Layer Composites
 ## Description
 
-_Note: this was taken over from [[GSOC2010/Ideas#LayerComposites | ideas GSoC2010]] and amended with the bitmap filter feature_ 
+_Note: this was taken over from [ideas GSoC2010](Ideas) in Composites part and amended with the bitmap filter feature_ 
 
 Mapnik layers should be able to interact with one another just like layers in Photoshop. They could have transfer modes (e.g. screen, hard light, darken), masks, and groups. The XML description for this would be backward-compatible with the current Mapnik stylesheet language, but when new markup is added, such as a mode or opacity attribute on a layer, a Group element around a group of layers, or a Mask layer inside another layer, new behaviors could be seen. An additional feature could be to make bitmap filters work on those layers (gaussian blur, offset and others).
 ## How it would benefit Mapnik Project
@@ -176,6 +176,7 @@ Being able to compile a set of Cascadenik/Carto styles into corresponding SLD wo
 First priority would be Cascadenik/Carto > SLD. Second priority would be the reverse.
 
 Links:
+
  * SLD standard: http://www.opengeospatial.org/standards/sld
  * SLD in GeoServer: http://docs.geoserver.org/latest/en/user/styling/index.html
  * Cascadenik: https://github.com/mapnik/Cascadenik
