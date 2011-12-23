@@ -2,10 +2,9 @@
 <!-- Version: 2 -->
 <!-- Last-Modified: 2010/06/10 14:56:40 -->
 <!-- Author: cmarqu -->
-** icon rotation: could also be used for amenity=viewpoint when tagged with viewing angles
+
+ * icon rotation: could also be used for amenity=viewpoint when tagged with viewing angles
  * SVG icons: allow replacing colors (e.g. color a black icon in blue); have an alpha parameter
-
-
  * move icon a bit if it would collide with others
  * replace an already placed icon with a collection icon when there is another one to be shown right there
  * push lines apart so that there is a minimum distance between them
