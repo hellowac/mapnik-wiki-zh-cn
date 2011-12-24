@@ -38,7 +38,7 @@ GeoCommons:
  * Using Mapnik for PNG output
  * Pushing Mapnik output into GeoPDF
  * Currently running on SVG symbol support patch written by Koordinates (Robert Coup/Craig Destigter)
-   * This is an issue that needs resolution (http://trac.mapnik.org/ticket/320)
+   * This is an issue that needs resolution (https://github.com/mapnik/mapnik/issues/320)
    * Need to consult with Artem about possibility of using AGG SVG parser in addition to librsvg+cairo
 
  * Actively needing C++ based WMS server
@@ -60,8 +60,8 @@ Compositing/grouping of layers
  * WMS services need ability to flexibly group and combine layers both in rendered map and GetCaps
  * Stamen has ideas around compositing/blend modes in mapnik.Image
 
-  - http://trac.mapnik.org/wiki/Ideas/Compositing
-  - http://trac.mapnik.org/wiki/GSOC2010/Ideas#LayerComposites
+  - https://github.com/mapnik/mapnik/wiki/Ideas_Compositing
+  - https://github.com/mapnik/mapnik/wiki/GSOC2010_Ideas
   - essentially bring TopOSM like functionality into core, expose easily in stylesheets
   - Or expose just essentials to be able to render compositions with extra python wrapper
 
@@ -83,7 +83,7 @@ Better Label Placement
  * Must add ability to try various placement directives, e.g. in cardinal directions (Jeff Johnson)
 
   - Patch for this from kosmosnimki - needs someone to step up to clean up/refactor (or potentially fund further work)
-  - http://trac.mapnik.org/ticket/463
+  - https://github.com/mapnik/mapnik/issues/463
 
 
 Ruby Bindings
