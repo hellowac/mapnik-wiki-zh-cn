@@ -4,11 +4,9 @@
 <!-- Author: springmeyer -->
 
 
-# Compiling Mapnik Faster
 
-```html
-    <a href="http://imgs.xkcd.com/comics/compiling.png"><img src="http://imgs.xkcd.com/comics/compiling.png"></a>
-```
+# Compiling Mapnik Faster
+![source:xkcd.org](http://imgs.xkcd.com/comics/compiling.png)
 
 When you are tired of sword fighting, its time to actually figure out how to compile Mapnik faster.
  
