@@ -47,6 +47,6 @@ Related links
 
 ## Map Design
 
-For a longer treatment of MapDesign in Mapnik, see the MapDesign page.
+For a longer treatment of MapDesign in Mapnik, see the [MapDesign page](MapDesign).
 
 For more a detailed treatment of map design, see the written works of [Cynthia Brewer](http://www.personal.psu.edu/cab38/) and [Alan MacEachren](http://www.google.com/search?q=alan+maceachren+books).
