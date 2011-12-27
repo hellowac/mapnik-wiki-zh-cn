@@ -9,12 +9,12 @@
 It is pretty easy to integrate mapnik with wxPython, here is a simple wxPython application demonstrates how to:
 
 
-    #!python
+```python
     """
     This is a simple wxPython application demonstrates how to
     integrate mapnik, it do nothing but draw the map from the World Poplulation XML
     example:
-    http://trac.mapnik.org/wiki/XMLGettingStarted
+    https://github.com/mapnik/mapnik/wiki/GettingStartedInXML
     
     Victor Lin. (bornstub@gmail.com)
     Blog http://blog.ez2learn.com
@@ -66,25 +66,28 @@ It is pretty easy to integrate mapnik with wxPython, here is a simple wxPython a
         frame = Frame(None, title="wxPython Mapnik Demo By Victor Lin")
         frame.Show()
         app.MainLoop()
+```
 
 The key point of this program is this:
 
 
-    #!python
+```python
     # create a Image32 object
     image = mapnik.Image(self.width, self.height)
     # render map to Image32 object
     mapnik.render(self.map, image)
     # load raw data from Image32 to bitmap
     self.bmp = wx.BitmapFromBufferRGBA(self.width, self.height, image.tostring())
+```
 
 We create an Image32 object, and render map on to that image, then load raw data of image into wxPython's Bitmap object. That's it! Now you can use your memory dc to do whatever you like
 
 
-    #!python
+```python
     memoryDC = wx.MemoryDC(self.bmp)
     # draw map to dc
     dc.Blit(0, 0, self.width, self.height, memoryDC, 0, 0)
+```
 
 Screenshots
 
