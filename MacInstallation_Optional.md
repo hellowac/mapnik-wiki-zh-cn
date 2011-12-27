@@ -73,7 +73,7 @@ You may install Proj.4, PostgreSQL/PostGIS, and GDAL if needed.
 
 Install the Mapnik WMS dependencies if you wish to use the WMS (Web Mapping Service) server (Otherwise optional).
 
- * More details see in the new dedicated repository (https://github.com/mapnik/OGCServer)
+ * More details available in the new dedicated repository (https://github.com/mapnik/OGCServer)
 
 ```sh
     wget ftp://xmlsoft.org/libxml2/libxml2-2.7.6.tar.gz
