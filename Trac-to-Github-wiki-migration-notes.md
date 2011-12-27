@@ -86,7 +86,7 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Installing Mapnik on OS X with Homebrew](http://github.com/mapnik/mapnik/wiki/MacInstallation_Homebrew)|yes|||
 |[Optional Installs](http://github.com/mapnik/mapnik/wiki/MacInstallation_Optional)|yes|||
 |[Installing Mapnik on OS X from Source](http://github.com/mapnik/mapnik/wiki/MacInstallation_Source)|yes|||
-|[Installing Mapnik on Mac OS X](http://github.com/mapnik/mapnik/wiki/MacInstallationPorts)|yes (retrieve SConstruct.osx.patch because lost)|||
+|[Installing Mapnik on Mac OS X](http://github.com/mapnik/mapnik/wiki/MacInstallationPorts)|yes (retrieve SConstruct.osx.patch because lost + what do we do with links to doc generated from rst not available e.g https://github.com/mapnik/sphinx-docs )|||
 |[MacInstallationSource](http://github.com/mapnik/mapnik/wiki/MacInstallationSource)||||
 |[MacPostGIS_Setup](http://github.com/mapnik/mapnik/wiki/MacPostGIS_Setup)||||
 |[MacPythonUpgradeIssues](http://github.com/mapnik/mapnik/wiki/MacPythonUpgradeIssues)||||
