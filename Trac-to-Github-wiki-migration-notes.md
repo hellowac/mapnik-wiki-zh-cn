@@ -71,12 +71,12 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Future Features of Mapnik](http://github.com/mapnik/mapnik/wiki/Ideas_FutureMapnik)|yes (need to change some links to trac)|||
 |[Installation Troubleshooting](http://github.com/mapnik/mapnik/wiki/InstallationTroubleshooting)|yes|||
 |[InstallGuide](http://github.com/mapnik/mapnik/wiki/InstallGuide)|yes? link to the document done but the doc is outdated (trac.mapnik.org links)|||
-|[How to integrate mapnik with wxPython?](http://github.com/mapnik/mapnik/wiki/IntegrateWithWxPython)||||
-|[International Text](http://github.com/mapnik/mapnik/wiki/InternationalText)||||
-|[IntroductionToGIS](http://github.com/mapnik/mapnik/wiki/IntroductionToGIS)||||
-|[Kismet](http://github.com/mapnik/mapnik/wiki/Kismet)||||
-|[LabelingSupport](http://github.com/mapnik/mapnik/wiki/LabelingSupport)||||
-|[LearningMapnik](http://github.com/mapnik/mapnik/wiki/LearningMapnik)||||
+|[How to integrate mapnik with wxPython?](http://github.com/mapnik/mapnik/wiki/IntegrateWithWxPython)|yes|||
+|[International Text](http://github.com/mapnik/mapnik/wiki/InternationalText)|yes|||
+|[IntroductionToGIS](http://github.com/mapnik/mapnik/wiki/IntroductionToGIS)|yes|||
+|[Kismet](http://github.com/mapnik/mapnik/wiki/Kismet)|yes|||
+|[LabelingSupport](http://github.com/mapnik/mapnik/wiki/LabelingSupport)|yes|||
+|[LearningMapnik](http://github.com/mapnik/mapnik/wiki/LearningMapnik)|yes (but link to python api not working|||
 |[Discussion of a Legending Spec for Mapnik](http://github.com/mapnik/mapnik/wiki/Legending)||||
 |[LinePatternSymbolizer](http://github.com/mapnik/mapnik/wiki/LinePatternSymbolizer)||||
 |[LineSymbolizer](http://github.com/mapnik/mapnik/wiki/LineSymbolizer)||||
