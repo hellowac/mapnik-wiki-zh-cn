@@ -20,9 +20,11 @@ components using external entities and XInclude.
 ## Mapnik XML support
 
 Mapnik currently supports three different XML parsers:
-    - the boost spirit based parser
-    - the tinyxml parser 
-    - libxml2
+
+* the boost spirit based parser
+* the tinyxml parser 
+* libxml2
+
 The three parsers differ in size, external dependencies and the number of XML
 features they support. The most comprehensive parser is the libxml2 parser and
 it is the only one that supports XML entities.  As of Mapnik 0.6.0 libxml2 is the default
@@ -34,9 +36,9 @@ when building the Mapnik source with SCons, and available in the Windows binarie
 If not default in your Mapnik version (< 0.6.0) the libxml2 parser is enabled by setting the XMLPARSER option at 
 compile time:
 
-
-    #!sh
+```sh
     $ python scons/scons.py configure XMLPARSER=libxml2
+```
 
 Of course this requires the libxml2 library and, depending on the distribution
 the corresponding devel package. If `xml2-config` is not in the PATH its location
@@ -44,31 +46,31 @@ can be set using the `XML2_CONFIG` option.
 
 For example, if you have installed the latest libxml2 on mac os x via Macports, you might need to do:
 
-
-    #!sh
+```sh
     $ python scons/scons.py configure XML2_CONFIG=/opt/local/bin/xml2-config
-
+```
 
 ## Internal Entities
 
 All XML parsers have some built-in entities to escape otherwise illegal
 characters:
-    - &gt;
-    - &lt;
-    - &amp;
-    - &quot;
-    - &apos;
+
+* &gt;
+* &lt;
+* &amp;
+* &quot;
+* &apos;
 
 The XML document type definition (DTD) provides a way to declare new, user
 defined entities:
 
-
-    #!text/xml
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE Map[
         <!ENTITY water_color "#b5d0d0">
     ]>
     <Map bgcolor="&water_color;"/>
+```
 
 This XML document declares an internal entity named water_color. This entity is
 referenced by the bgcolor attribute of the Map element. The parser replaces all
@@ -85,8 +87,7 @@ reoccurring value is a candidate for an entity.
 
 It is allowed to nest entities:
 
-
-    #!text/xml
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE Map[
         <!ENTITY home_dir "/home/david">
@@ -100,17 +101,16 @@ It is allowed to nest entities:
             </Rule>
         </Style>
     </Map>
+```
 
 However, these internal entities are not suitable for larger blocks. They also
 do not help with sharing common styles and layers between different maps.
-
 
 ## External Entities
 
 External entities are declared by adding the keyword SYSTEM:
 
-
-    #!text/xml
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE Map[
         <!ENTITY db_settings SYSTEM "settings/db_settings">
@@ -127,6 +127,7 @@ External entities are declared by adding the keyword SYSTEM:
             </Datasource>
         </Layer>
     </Map>
+```
 
 The entity declaration assigns the content of the file `settings/db_settings` to
 the entity `&db_settings;`. When parsed the reference to `&db_settings;` in the
@@ -135,12 +136,13 @@ filename is given the file is searched relative to the document. The file
 `settings/db_settings` could look like this:
 
 
-    #!text/xml
-                <Parameter name="type">postgis</Parameter>
-                <Parameter name="host">www.example.org</Parameter>
-                <Parameter name="port">5433</Parameter>     
-                <Parameter name="user">david</Parameter>
-                <Parameter name="dbname">geo</Parameter>
+```xml
+    <Parameter name="type">postgis</Parameter>
+    <Parameter name="host">www.example.org</Parameter>
+    <Parameter name="port">5433</Parameter>     
+    <Parameter name="user">david</Parameter>
+    <Parameter name="dbname">geo</Parameter>
+```
 
 Note that this is not a legal XML document on its own because it does not have
 a single root element. It is a list of elements. But the tags have to be well
@@ -152,7 +154,7 @@ limited form of parameterization. Consider the following example:
 
 File earthquake.map:
 
-    #!text/xml
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE Map[
         <!ENTITY since_year "1970">
@@ -173,23 +175,25 @@ File earthquake.map:
         &common_styles;
         &common_layers;
     </Map>
+```
 
 File earthquakes_since.lay:
 
-    #!text/xml
-        <Layer name="earthquakes_since" status="on">
-            <StyleName>earthquakes</StyleName>
-            <Datasource>
-    
-                <Parameter name="table">
-                    (SELECT * FROM earthquakes 
-                     WHERE year &gt;= &since_year; ) AS earthquakes_since
-                </Parameter>
-    
-                &db_settings;
-    
-            </Datasource>
-        </Layer>
+```xml
+    <Layer name="earthquakes_since" status="on">
+        <StyleName>earthquakes</StyleName>
+        <Datasource>
+
+            <Parameter name="table">
+                (SELECT * FROM earthquakes 
+                 WHERE year &gt;= &since_year; ) AS earthquakes_since
+            </Parameter>
+
+            &db_settings;
+
+        </Datasource>
+    </Layer>
+```
 
 This is a quite flexible setup. It is very easy to add and remove thematic
 overlays. Other overlays may use the same parameters by referencing the
@@ -197,7 +201,6 @@ same entities. Styles can be changed by replacing the reference to
 `&earthquakes_default_style;` with a custom one. It is also possible to have
 many map files all referencing the same set of styles and layer files but with
 different settings.
-
 
 ## Entities Summary
 
@@ -208,7 +211,6 @@ general more maintainable. External entities can store whole blocks of XML.
 This helps to build reusable collections of layers and styles. These reusable
 components can be parameterized using other entities as needed.
 
-
 ## Including external files using XInclude
 
 libxml2 also provides support for decomposing large mapnik XML files through the use of XInclude.
@@ -217,7 +219,7 @@ To enable XInclude in your root file, modify the Map container tag, adding the x
 
 File tests/data/good_maps/xinclude/map.xml:
 
-    #!text/xml
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE Map  >
     <Map xmlns:xi="http://www.w3.org/2001/XInclude" srs="+init=epsg:4326" bgcolor="rgb(255,255,255)" >
@@ -229,6 +231,7 @@ File tests/data/good_maps/xinclude/map.xml:
     <xi:include href="layers.xml" />
     
     </Map>
+```
 
 Included files wrap their content within an Include tag.  XInclude replaces the xi:include tags with the contents of the included file, yielding a single, merged XML document.
 mapnik's XML parser then merges the contents of the Include tag into the Map tag, resulting in an XML document tree identical to one produced by processing a single file containing 
@@ -236,7 +239,7 @@ all Style and Layer tags.
 
 File styles.xml:
 
-    #!text/xml
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     <Include xmlns:xi="http://www.w3.org/2001/XInclude">
     
@@ -254,10 +257,11 @@ File styles.xml:
         </Style>
     
     </Include>
+```
 
 File layers.xml:
 
-    #!text/xml
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     <Include  xmlns:xi="http://www.w3.org/2001/XInclude">
     
@@ -270,6 +274,7 @@ File layers.xml:
         </Layer>
     
     </Include>
+```
 
 ## Combining XInclude and External Entities
 
@@ -279,7 +284,7 @@ A common pattern found in mapnik XML file sets is specifying the zoom levels for
 
 file: zoomsymbols.txt
 
-    #!text/html
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     
     <!ENTITY zoom00max		"750000000" >
@@ -290,14 +295,14 @@ file: zoomsymbols.txt
     
     <!ENTITY zoom02max		"250000000" >
     <!ENTITY zoom02min		"130000000" >
-     
+```
 
 Adding a DOCTYPE line to the layers.xml file to include the external entities file, and adding parameterized minzoom and maxzoom attributes to the layer yields the file below:
 
 
 File layers_with_entities.xml:
 
-    #!text/xml
+```xml
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE Include SYSTEM "zoomsymbols.txt">
     
@@ -312,6 +317,7 @@ File layers_with_entities.xml:
         </Layer>
     
     </Include>
+```
 
 ## Further Reading
 
