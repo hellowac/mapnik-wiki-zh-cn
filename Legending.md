@@ -13,10 +13,7 @@ Should be configured with XML or a python class.
 
 ## XML
 
-
-    #!text/xml
-    
-    
+```xml
     <Legend>
     <Title breakline=true stroke-width="1" stroke="black">Education</title>
     <SubTitle> Level of Education Among Population Over Age 20</Subtitle>
@@ -29,8 +26,9 @@ Should be configured with XML or a python class.
     </Item>
     ....
     </Legend>
-## Python
+```
 
+## Python
 
 # Feature Wishlist
 
@@ -47,7 +45,7 @@ That would look something like:
 Syntax might look like:
 
 
-    #!xml
+```xml
     <Item>
     <Filter>[id] = 1</Filter>
     <Symbolizer>
@@ -57,13 +55,13 @@ Syntax might look like:
     <Item use_feature="true">
     <Symbolizer>
     ...
-    
+```
 
 ### Andy's alternative approach
 
 I'd like to approach things slightly differently. We could keep the stylesheet as close as possible to the "real" one, and concentrate the legend-specific alterations to the layer definitions. For example, if there was a WKT layer (#630) and screen coordinates (#631) then you could have something like
 
-
+```xml
     [... normal style rules ...]
     <Layer name=pubs srs="screen">
       <Datasource type="wkt">
@@ -71,7 +69,10 @@ I'd like to approach things slightly differently. We could keep the stylesheet a
          <Parameter name="attributes">{"amenity","pub"}</Parameter>
       </Datasource>
     </Layer>
-The label text for the legend could then be chosen and placed with other screen+wkt layers to get the desired effect. Although this means creating custom layers, it's likely to be less work than altering the <style> sections of a large map definition.
+```
+
+The label text for the legend could then be chosen and placed with other screen+wkt layers to get the desired effect. Although this means creating custom layers, it's likely to be less work than altering the `<style>` sections of a large map definition.
 
 # See also
+
 Lars Ahlzen has written a Python script for TopOSM which creates HTML snippets with images from a Mapnik style file: http://wiki.openstreetmap.org/wiki/TopOSM/Details#Map_legend
