@@ -11,15 +11,15 @@ Install homebrew as per: http://github.com/mxcl/homebrew/wiki/installation
 
 Basically do:
 
-    #!sh
+```sh
     curl -Lsf http://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C/usr/local
     brew install git
     git clone http://github.com/mxcl/homebrew.git /tmp/homebrew
     mv /tmp/homebrew/.git /usr/local/
     rm -rf /tmp/homebrew
+```
 
 Yes, feel free to chmod /usr/local like:
-
 
     sudo chown -R $USER /usr/local
 
@@ -36,8 +36,9 @@ This can be fixed by simply re-installing postgres (which will fix permissions) 
 Simply type:
 
 
-    #!sh
+```sh
     brew install mapnik
+```
 
 Be aware that this will take a long time - hours maybe. The main reason is that homebrew installs *many* boost libraries that mapnik does not need and mapnik will not start building until boost is done.
 
@@ -47,20 +48,20 @@ Homebrew only provides mapnik 0.7.x currently, so to install mapnik2 we need to 
 
 Assuming that your homebrew installation is standard and in `/usr/local/Library' then just do this:
 
-
-    #!sh
+```sh
     wget https://gist.github.com/raw/983887/mapnik2.rb -O /usr/local/Library/Formula/mapnik2.rb
+```
 
 Then do:
 
-
-    #!sh
+```sh
     brew install mapnik2
+```
 
 Or you could copy the mapnik2.rb formula and apply a simple patch to it:
 
 
-    #!diff
+```diff
     diff --git a/Library/Formula/mapnik.rb b/Library/Formula/mapnik.rb
     index 04be7b7..e160920 100644
     --- a/Library/Formula/mapnik.rb
@@ -87,3 +88,4 @@ Or you could copy the mapnik2.rb formula and apply a simple patch to it:
          icu = Formula.factory("icu4c")
          system "scons",
              "PREFIX=#{prefix}",
+```
