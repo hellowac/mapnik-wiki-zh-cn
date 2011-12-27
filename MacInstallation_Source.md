@@ -8,9 +8,9 @@
 
 Detailed notes for installing from source are below.
 
-There are *three main routes* for getting Mapnik installed on Mac OS X.
+There are three main routes for getting Mapnik installed on Mac OS X.
 
-*Please* take a moment to decide which one fits you best.
+Please take a moment to decide which one fits you best.
 
 | **Choice** | **Difficulty** |
 |:-------|-----------:|
@@ -21,8 +21,10 @@ There are *three main routes* for getting Mapnik installed on Mac OS X.
 
 *Hint*: open Terminal.app and type:
 
-    #!sh
+```sh
     $ which python
+```
+
  * This will give the path to the python executable
   * '/opt/local...' means you are using Macports Python
   * /System/... means you are using the python pre-installed by Apple
@@ -33,28 +35,35 @@ There are *three main routes* for getting Mapnik installed on Mac OS X.
 # Step 1: Install Xcode
 
 First make sure you have XCode installed.
+
  * XCode comes as an optional Installer on Leopard Install Discs
  * If your CD contains at least version 3.1, you can use the CD installer, otherwise download from ADN
 
-*Recommended*: The latest version of XCode can be downloaded from the Apple Developer Network (ADN) site
+**Recommended**: The latest version of XCode can be downloaded from the Apple Developer Network (ADN) site
+
  * [ADN](http://developer.apple.com/technology/Xcode.html) (~900 MB, requires registering with Apple)
  * Either the iPhone SDK or XCode can be used.
 
 # Step 2: Install Macports
 
 No matter what route you take you'll likely want [Macports](http://www.macports.org/install.php) installed.
+
   * Look for the latest dmg: [Current version is 1.8.1](http://www.macports.org/install.php)
   * Nice [overview article by Apple](http://developer.apple.com/mac/articles/opensource/workingwithmacports.html)
 
 
 Check your Macports Installation:
 
-    #!sh
+```sh
     $ port # should take you into 'interactive mode'
     > quit # to leave...
+```
+
  * If the port command is not available then you'll need to add this to your ~/.profile hidden file
 
+```
     'export PATH=/opt/local/bin:/opt/local/sbin:$PATH'
+```
 
 # Step 3: Choose your Route, then begin...
 
@@ -62,68 +71,88 @@ Check your Macports Installation:
 
 Update Macports
 
-    #!sh
+```sh
     sudo port selfupdate
+```
+
  * This will fetch the latest port updates in addition to *syncing* with the remote repository.
  * If this command fails try:
 
-    #!sh
+```sh
     sudo port sync
+```
 
 Install Python 26
 
-    #!sh
+```sh
     $ sudo port install python26 python_select # will take ~ 1 hour
+```
+
  * Note: If you are on a dual-core or quad-core machine use the extra argument ['build.jobs=N'](http://trac.macports.org/wiki/howto/ParallelBuilding) to speed up Macports.
  * The above command on a quad-core machine would be:
 
+```sh
     $ sudo port install python26 python_select build.jobs=4
+```
 
 Switch to using the Macports Python26 (if you are not already using it)
 
-    #!sh
+```sh
     $ sudo python_select python26 # switch to using Macports python just installed
+```
 
 Install core Mapnik dependencies
 
-    #!sh
+```sh
     $ sudo port install boost +python26 icu libpng jpeg libgeotiff libxml2 freetype # go for a long walk!
- * *Note*: The '+' invokes a certain boost variant that includes boost-python (which is needed for mapnik's python bindings). The trick is that this requires Macports downloading its own version of python26. This behavior *REQUIRES* you to switch to using the macports version of PYTHON for building mapnik otherwise you will get a 'VERSION MISMATCH' error when you are trying to `>>> import mapnik' because the boost python bindings are built against a different version of python than the interpreter you are running.
+```
 
-*Optional*: Install extra libraries needed *only* if you want to read custom formats (other than shapefiles) or make maps in PDF/SVG formats
+ * *Note*: The '+' invokes a certain boost variant that includes boost-python (which is needed for mapnik's python bindings). The trick is that this requires Macports downloading its own version of python26. This behavior **REQUIRES** you to switch to using the macports version of PYTHON for building mapnik otherwise you will get a 'VERSION MISMATCH' error when you are trying to `>>> import mapnik' because the boost python bindings are built against a different version of python than the interpreter you are running.
 
-    #!sh
+**Optional**: Install extra libraries needed *only* if you want to read custom formats (other than shapefiles) or make maps in PDF/SVG formats
+
+```sh
     $ sudo port install sqlite3 gdal postgresql83-server postgresql83 postgis cairo cairomm py26-cairo 
+```
+
  * *Note*: if postgis fails with
 
+```
     Error: Checksum (sha1) mismatch for postgis-1.3.3.tar.gz
     Error: Target org.macports.checksum returned: Unable to verify file checksums
     Error: Status 1 encountered during processing.
+```
 
 Then we can update the portfile locally to patch the problem 
 
-    #!sh
+```sh
     $cd `port dir postgis`
     $sudo cp Portfile Portfile.orig
     $port edit postgis
+```
+
 Change line 23 of the port file to: 
 
+```
     checksums		sha1 665abd2869e5c59140ed30c20ba1970ea3880fd4"
-
+```
 
 ## Route A | Option 1 - Install Mapnik Port
 
 
-    #!sh
+```sh
     $ port info py26-mapnik # get options for install, for example +gdal +postgis are needed to get gdal and postgis support
     $ sudo port -d install py26-mapnik +postgis +gdal +cairo # -d turns on debug mode (send any errors to mapnik-users list)
+```
+
  * Note: if you want to see how the *py26-mapnik* portfile works [check out the source](http://www.macports.org/ports.php?by=name&substr=mapnik). 
 
 Then do:
 
-    #!sh
+```sh
     $ python
     >>> import mapnik # if no errors, you're good, your're done, wahoo!
+```
 
 If you get a 'VERSION MISMATCH' this likely means that the 'boost_python.dylib' library (installed by the boost +python26 port) was linked wrong and unfortunately, is a common and re-occurring macports bug (http://trac.macports.org/ticket/21444).
 
@@ -131,25 +160,29 @@ In english, that means that Apple provides a copy of python and so does macports
 
 On snow leopard, usually this exact command fixes the problem:
 
+```
     sudo install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.6/Python /opt/local/Library/Frameworks/Python.framework/Versions/2.6/Python /opt/local/lib/libboost_python-mt.dylib
+```
 
 If that does not fix the problem, please email the mapnik-users list for further assistance and provide the output of:
 
+```
     otool -L /opt/local/lib/libboost_python*
     otool -L /opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/mapnik/_mapnik.so
+```
 
 ## Route A | Option 2  - Install Mapnik Latest release from source
 
-
-    #!sh
+```sh
     $ svn co http://svn.mapnik.org/tags/release-0.7.1/ mapnik
     $ cd mapnik
     $ touch config.py # create a blank python file...
     $ open config.py # to edit in your favorite text editor...
+```
 
 Copy and paste all this text into that 'config.py' file:
 
-    #!python
+```python
     # config.py file that sits in mapnik source directory
     BOOST_INCLUDES = '/opt/local/include'
     BOOST_LIBS = '/opt/local/lib'
@@ -173,28 +206,32 @@ Copy and paste all this text into that 'config.py' file:
     INPUT_PLUGINS = 'gdal,ogr,postgis,raster,shape,sqlite'
     # or use...
     # INPUT_PLUGINS = 'all'
+```
 
 Configure and Install Mapnik
 
-    #!sh
+```sh
     $ cd mapnik # make sure you are inside the source dir
     $ python scons/scons.py configure
     $ python scons/scons.py
     $ sudo python scons/scons.py install
+```
 
 * Note: if *pycairo* is not found during the configure step you need to add a non standard path to PKG_CONFIG_PATH
 
-    #!sh
+```sh
     $ port contents py26-cairo | grep .pc  
     /opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/pkgconfig/pycairo.pc
     $ export PKG_CONFIG_PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/pkgconfig/
 Then rerun the configure step.
+```
 
 If the configure step fails or is interrupted, stale dependency tests can be left over in a directory called .sconf_temp. This can cause future configure attempts to fail. If you're experiencing problems, look for this folder and remove it.
 
 ## Route B and C
 
 These two routes are essentially the same, just make sure:
+
  * You know which Python Version you are using
   * The 'python_select' tool from macports is handy for switching between the macports python and the system python (python 25)
  * If you have used different versions of Python in the past you should confirm that you have edited your PYTHONPATH correctly to point to the correct site-packages or other needed locations
@@ -206,8 +243,7 @@ These two routes are essentially the same, just make sure:
 
 Install Latest Boost from source
 
-
-    #!sh
+```sh
     curl -O http://voxel.dl.sourceforge.net/project/boost/boost/1.42.0/boost_1_42_0.tar.bz2
     tar xjvf boost_1_42_0.tar.bz2
     cd boost_1_42_0
@@ -217,6 +253,7 @@ Install Latest Boost from source
     cd bin.macosxx*
     export PATH=`pwd`:$PATH
     cd $BOOST
+```
 
 Finally, then compile boost with `bjam`
 
@@ -224,7 +261,7 @@ Note: newer macs with 64 bit fireware will default to 64 bit libraries, or x86_6
 
 If you don't want to build both 32 and 64 bit and would rather stick with the single default arch of your compiler remove the below 'address-model' and  'architecture' flags.
 
-
+```
     bjam  --with-python \
       --with-thread --with-filesystem \
       --with-iostreams --with-regex \
@@ -242,15 +279,17 @@ If you don't want to build both 32 and 64 bit and would rather stick with the si
       address-model=32_64 \
       architecture=x86 \
       install
+```
 
 Note: to build boost_regex with icu support you need to pass `-sHAVE_ICU=1`
 To rebuild just boost regex do:
-{{{ 
-sudo bjam  --with-regex \
-  toolset=darwin \
-  -sHAVE_ICU=1 -sICU_PATH=/opt/local \
-  -a install
-}}}
+
+```
+    sudo bjam  --with-regex \
+      toolset=darwin \
+      -sHAVE_ICU=1 -sICU_PATH=/opt/local \
+      -a install
+```
 
 Install remaining dependencies from either Macports, [Kyngchaos Frameworks](http://www.kyngchaos.com/wiki/software:frameworks), or from source.
 
@@ -264,22 +303,25 @@ Then download, configure, and install Mapnik:
 
 Grab from latest release:
 
-    #!sh
+```sh
     $ curl -O http://download.berlios.de/mapnik/mapnik-0.7.1.tar.bz2
     $ tar xjvf mapnik-0.7.1.tar.bz2
     $ cd mapnik-0.7.1
+```
 
 Or grab latest release from subversion:
 
-    #!sh
+```sh
     $ svn co http://svn.mapnik.org/tags/release-0.7.1/ mapnik
     $ cd mapnik
+```
 
 Edit your 'config.py':
 
-    #!sh
+```sh
     $ touch config.py
     $ open config.py
+```
 
  * Mapnik uses `SCons` to find dependencies, a next-generation `make` (see UsingScons for more info).
   * MacPorts installs libraries into `/opt/` while SCons by default expects dependencies in `/usr/`
@@ -287,7 +329,7 @@ Edit your 'config.py':
 
 Here is an example 'config.py':
 
-    #!python
+```python
     # example config.py file
     
     # Uncomment if you want to use Python26 from Python.org (option available in Mapnik >=0.6.1)
@@ -338,20 +380,20 @@ Here is an example 'config.py':
     INPUT_PLUGINS = 'gdal,ogr,postgis,raster,shape,sqlite'
     # or use...
     # INPUT_PLUGINS = 'all'
+```
 
 
-
-    #!sh
+```sh
     $ python scons/scons.py configure DEBUG=True INPUT_PLUGINS='all' # any options provided on command line will OVERRIDE config.py options
     $ python scons/scons.py
     $ sudo python scons/scons.py install
-
+```
 
 ## Testing
 
 If this works without error - Congrats and welcome to Mapnik on Mac OS!
 
-    #!sh
+```sh
     $ python
     >>> import mapnik
     registered datasource : gdal # this will only show up if you build with DEBUG=True
@@ -361,14 +403,17 @@ If this works without error - Congrats and welcome to Mapnik on Mac OS!
     >>> dir(mapnik) # This gets you a list of symbols
     ['BoostPythonMetaclass', 'Color', 'Coord', 'CreateDatasource', ...]
     >>> help(mapnik)
+```
 
 Check out which libraries libmapnik.dylib has linked against:
+
  * Freetype for example could have been linked to either `/opt/` or `/usr/`
 
-    #!sh
+```sh
     otool -L /usr/local/lib/libmapnik.dylib
+```
 
 ## References
 
  * Extended MacInstallationSource guide
- * WORK IN PROGRESS: For _Optional_ dependencies (such as Cairo, GDAL, and PostGIS), also see the *out-of-date* MacInstallation/Optional
+ * WORK IN PROGRESS: For _Optional_ dependencies (such as Cairo, GDAL, and PostGIS), also see the *out-of-date* [MacInstallation/Optional](MacInstallation_Optional)
