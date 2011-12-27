@@ -8,9 +8,7 @@
 
 ## [Installers](https://github.com/mapnik/mapnik/wiki/MacInstallation_Frameworks)
 
-    #!html
-    <img style="float: left; margin-right:15px;" src="http://dbsgeo.com/media/images/mac_pkg_small.png" /> 
-
+![mac_pkg](http://dbsgeo.com/media/images/mac_pkg_small.png)
 [Binary Mapnik installers for Mac OS X are available](http://dbsgeo.com/downloads)  via http://dbsgeo.com
 
 
@@ -18,7 +16,7 @@
 
 Homebrew is the recommended OS X package manager for installing Mapnik.
 
-See [MacInstallation_Homebrew ](https://github.com/mapnik/mapnik/wiki/MacInstallation_Homebrew) for details.
+See [MacInstallation_Homebrew ](MacInstallation_Homebrew) for details.
 
 ## [From Source / Macports](https://github.com/mapnik/mapnik/wiki/MacInstallation_Source)
 
