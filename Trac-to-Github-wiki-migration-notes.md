@@ -69,8 +69,8 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Ideas](http://github.com/mapnik/mapnik/wiki/Ideas)|yes|||
 |[Compositing](http://github.com/mapnik/mapnik/wiki/Ideas_Compositing)|yes|||
 |[Future Features of Mapnik](http://github.com/mapnik/mapnik/wiki/Ideas_FutureMapnik)|yes (need to change some links to trac)|||
-|[Installation Troubleshooting](http://github.com/mapnik/mapnik/wiki/InstallationTroubleshooting)||||
-|[InstallGuide](http://github.com/mapnik/mapnik/wiki/InstallGuide)||||
+|[Installation Troubleshooting](http://github.com/mapnik/mapnik/wiki/InstallationTroubleshooting)|yes|||
+|[InstallGuide](http://github.com/mapnik/mapnik/wiki/InstallGuide)|yes? link to the document done but the doc is outdated (trac.mapnik.org links)|||
 |[How to integrate mapnik with wxPython?](http://github.com/mapnik/mapnik/wiki/IntegrateWithWxPython)||||
 |[International Text](http://github.com/mapnik/mapnik/wiki/InternationalText)||||
 |[IntroductionToGIS](http://github.com/mapnik/mapnik/wiki/IntroductionToGIS)||||
