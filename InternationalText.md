@@ -8,16 +8,16 @@ Mapnik supports unicode text and Right-to-left (RTL) languages (through ICU libr
 
 This page is to document and discuss improvements needed to unicode text handling.
 
-== Current Tickets == 
+## Current Tickets
 
- * #364 / #404 - RTL mirroring
- * #519 - RTL spacing wrong with numbers (UBIDI_MIXED)
- * #112 - Indic RTL font shaping
- * #189 / #409 - RTL wrapping (line breaks)
+ * [#364](https://github.com/mapnik/mapnik/issues/364) / [#404](https://github.com/mapnik/mapnik/issues/404) - RTL mirroring
+ * [#519](https://github.com/mapnik/mapnik/issues/519) - RTL spacing wrong with numbers (UBIDI_MIXED)
+ * [#112](https://github.com/mapnik/mapnik/issues/112) - Indic RTL font shaping
+ * [#189](https://github.com/mapnik/mapnik/issues/189) / [#409](https://github.com/mapnik/mapnik/issues/409) - RTL wrapping (line breaks)
   * from osm trac: http://trac.openstreetmap.org/ticket/2182 and http://trac.openstreetmap.org/ticket/1515
- * #550 - line-follow: perhaps made worse by unicode chars, perhaps not, needs closer look
- * #558 - Character spacing not correct for nepali text
- * #582 - TextSymbolizer bug with Armenian letters
+ * [#550](https://github.com/mapnik/mapnik/issues/550) - line-follow: perhaps made worse by unicode chars, perhaps not, needs closer look
+ * [#558](https://github.com/mapnik/mapnik/issues/558) - Character spacing not correct for nepali text
+ * [#582](https://github.com/mapnik/mapnik/issues/582) - TextSymbolizer bug with Armenian letters
 
 ## Issues
 
