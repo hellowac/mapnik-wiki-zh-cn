@@ -9,13 +9,13 @@
 Mapnik XML files can become quite complex. This tutorial introduces some
 techniques to keep large map files more maintainable. Specifically it
 demonstrates how to avoid duplicate data in the XML file, like:
-    - color values
-    - database connection parameters
-    - icon directories
+
+* color values
+* database connection parameters
+* icon directories
 
 It also shows how to split a single, monolithic map file into reusable
 components using external entities and XInclude. 
-
 
 ## Mapnik XML support
 
@@ -29,7 +29,6 @@ The three parsers differ in size, external dependencies and the number of XML
 features they support. The most comprehensive parser is the libxml2 parser and
 it is the only one that supports XML entities.  As of Mapnik 0.6.0 libxml2 is the default
 when building the Mapnik source with SCons, and available in the Windows binaries as of 0.6.1.
-
 
 ## Compiling mapnik with libxml2 support
 
@@ -55,11 +54,11 @@ For example, if you have installed the latest libxml2 on mac os x via Macports, 
 All XML parsers have some built-in entities to escape otherwise illegal
 characters:
 
-* &gt;
-* &lt;
-* &amp;
-* &quot;
-* &apos;
+* `&gt;`
+* `&lt;`
+* `&amp;`
+* `&quot;`
+* `&apos;`
 
 The XML document type definition (DTD) provides a way to declare new, user
 defined entities:
