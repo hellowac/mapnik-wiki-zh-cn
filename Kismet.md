@@ -80,4 +80,4 @@ See next an example XML file to render WLAN icons on the map.
 
 This [icon](http://openclipart.org/people/pinterb7/pinterb7_wlan_accesspoint.svg) suits perfect for WLAN. I just changed the color and exported it to PNG.
 
-Here is a video: [http://www.youtube.com/watch?v=On9O8d7AOZA]
+Here is a video: http://www.youtube.com/watch?v=On9O8d7AOZA
