@@ -15,43 +15,47 @@ Unlike the MacInstallation guide, this page assumes you grok [the command-line](
 Run
 
 
-    #!sh
+```sh
     $ sudo port install proj libpng jpeg tiff icu jam
     $ sudo port install boost +python25 +icu
+```
 
-For optional dependencies (such as Cairo or PostGIS), see MacInstallation/Optional
+For optional dependencies (such as Cairo or PostGIS), see MacInstallation/Optional (MacInstallation_Optional)
 
 ## Building
 
 Grab source:
 
 
-    #!sh
-    $ svn co http://svn.mapnik.org/trunk mapnik
+```sh
+    $ git clone https://github.com/mapnik/mapnik.git
+```
 
 Patch [SConstruct](http://www.scons.org/doc/1.0.1/HTML/scons-user/x348.html) (get [SConstruct.osx.patch](http://trac.mapnik.org/attachment/wiki/MacInstallationPorts/SConstruct.osx.patch), [download here](http://trac.mapnik.org/raw-attachment/wiki/MacInstallationPorts/SConstruct.osx.patch))
 
 
-    #!sh
+```sh
     $ patch -p1 < SConstruct.osx.patch
+```
 
 Compile/Install
 
 
-    #!sh
+```sh
     $ cd mapnik
     $ python scons/scons.py DEBUG=y
     $ sudo python scons/scons.py install DEBUG=y
+```
 
 Add the following line to your ~/.profile
 
-
-    #!sh
+```sh
     export PYTHONPATH="/usr/lib/python2.5/site-packages"
+```
 
 ## Testing
 
-    #!sh
+```sh
     $ python
     >>> import mapnik
     registered datasource : gdal
@@ -61,6 +65,7 @@ Add the following line to your ~/.profile
     >>> dir(mapnik) # This gets you a list of symbols
     ['BoostPythonMetaclass', 'Color', 'Coord', 'CreateDatasource', ...]
     >>> help(mapnik)
+```
 
 ## References
 
