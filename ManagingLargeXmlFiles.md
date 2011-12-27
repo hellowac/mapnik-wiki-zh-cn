@@ -2,9 +2,8 @@
 <!-- Version: 11 -->
 <!-- Last-Modified: 2010/07/17 10:06:46 -->
 <!-- Author: oldtopos -->
-# Managing complex map files using XML entities
 
-[[PageOutline]]
+# Managing complex map files using XML entities
 
 Mapnik XML files can become quite complex. This tutorial introduces some
 techniques to keep large map files more maintainable. Specifically it
