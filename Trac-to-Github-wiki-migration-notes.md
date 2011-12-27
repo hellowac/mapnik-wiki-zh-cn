@@ -68,7 +68,7 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Home](http://github.com/mapnik/mapnik/wiki)|yes|||
 |[Ideas](http://github.com/mapnik/mapnik/wiki/Ideas)|yes|||
 |[Compositing](http://github.com/mapnik/mapnik/wiki/Ideas_Compositing)|yes|||
-|[Future Features of Mapnik](http://github.com/mapnik/mapnik/wiki/Ideas_FutureMapnik)|yes (need to change some links to trac)|||
+|[Future Features of Mapnik](http://github.com/mapnik/mapnik/wiki/Ideas_FutureMapnik)|yes|||
 |[Installation Troubleshooting](http://github.com/mapnik/mapnik/wiki/InstallationTroubleshooting)|yes|||
 |[InstallGuide](http://github.com/mapnik/mapnik/wiki/InstallGuide)|yes? link to the document done but the doc is outdated (trac.mapnik.org links)|||
 |[How to integrate mapnik with wxPython?](http://github.com/mapnik/mapnik/wiki/IntegrateWithWxPython)|yes|||
@@ -76,7 +76,7 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[IntroductionToGIS](http://github.com/mapnik/mapnik/wiki/IntroductionToGIS)|yes|||
 |[Kismet](http://github.com/mapnik/mapnik/wiki/Kismet)|yes|||
 |[LabelingSupport](http://github.com/mapnik/mapnik/wiki/LabelingSupport)|yes|||
-|[LearningMapnik](http://github.com/mapnik/mapnik/wiki/LearningMapnik)|yes (but link to python api not working|||
+|[LearningMapnik](http://github.com/mapnik/mapnik/wiki/LearningMapnik)|yes (but link to python api not working)|||
 |[Discussion of a Legending Spec for Mapnik](http://github.com/mapnik/mapnik/wiki/Legending)|yes|||
 |[LinePatternSymbolizer](http://github.com/mapnik/mapnik/wiki/LinePatternSymbolizer)|yes|||
 |[LineSymbolizer](http://github.com/mapnik/mapnik/wiki/LineSymbolizer)|yes|||
@@ -87,8 +87,8 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Optional Installs](http://github.com/mapnik/mapnik/wiki/MacInstallation_Optional)|yes|||
 |[Installing Mapnik on OS X from Source](http://github.com/mapnik/mapnik/wiki/MacInstallation_Source)|yes|||
 |[Installing Mapnik on Mac OS X](http://github.com/mapnik/mapnik/wiki/MacInstallationPorts)|yes (retrieve SConstruct.osx.patch because lost + what do we do with links to doc generated from rst not available e.g https://github.com/mapnik/sphinx-docs )|||
-|[MacInstallationSource](http://github.com/mapnik/mapnik/wiki/MacInstallationSource)||||
-|[MacPostGIS_Setup](http://github.com/mapnik/mapnik/wiki/MacPostGIS_Setup)||||
+|[MacInstallationSource](http://github.com/mapnik/mapnik/wiki/MacInstallationSource)|yes|||
+|[MacPostGIS_Setup](http://github.com/mapnik/mapnik/wiki/MacPostGIS_Setup)|yes|||
 |[MacPythonUpgradeIssues](http://github.com/mapnik/mapnik/wiki/MacPythonUpgradeIssues)||||
 |[Managing complex map files using XML entities](http://github.com/mapnik/mapnik/wiki/ManagingLargeXmlFiles)||||
 |[MapDesign](http://github.com/mapnik/mapnik/wiki/MapDesign)||||
