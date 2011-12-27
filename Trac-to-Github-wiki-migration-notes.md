@@ -77,14 +77,14 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Kismet](http://github.com/mapnik/mapnik/wiki/Kismet)|yes|||
 |[LabelingSupport](http://github.com/mapnik/mapnik/wiki/LabelingSupport)|yes|||
 |[LearningMapnik](http://github.com/mapnik/mapnik/wiki/LearningMapnik)|yes (but link to python api not working|||
-|[Discussion of a Legending Spec for Mapnik](http://github.com/mapnik/mapnik/wiki/Legending)||||
-|[LinePatternSymbolizer](http://github.com/mapnik/mapnik/wiki/LinePatternSymbolizer)||||
-|[LineSymbolizer](http://github.com/mapnik/mapnik/wiki/LineSymbolizer)||||
-|[Installing Mapnik on Linux](http://github.com/mapnik/mapnik/wiki/LinuxInstallation)||||
-|[Installing Mapnik Mac OS X](http://github.com/mapnik/mapnik/wiki/MacInstallation)||||
-|[Installing Mapnik on OS X with Framework Installers](http://github.com/mapnik/mapnik/wiki/MacInstallation_Frameworks)||||
-|[Installing Mapnik on OS X with Homebrew](http://github.com/mapnik/mapnik/wiki/MacInstallation_Homebrew)||||
-|[Optional Installs](http://github.com/mapnik/mapnik/wiki/MacInstallation_Optional)||||
+|[Discussion of a Legending Spec for Mapnik](http://github.com/mapnik/mapnik/wiki/Legending)|yes|||
+|[LinePatternSymbolizer](http://github.com/mapnik/mapnik/wiki/LinePatternSymbolizer)|yes|||
+|[LineSymbolizer](http://github.com/mapnik/mapnik/wiki/LineSymbolizer)|yes|||
+|[Installing Mapnik on Linux](http://github.com/mapnik/mapnik/wiki/LinuxInstallation)|yes|||
+|[Installing Mapnik Mac OS X](http://github.com/mapnik/mapnik/wiki/MacInstallation)|yes|||
+|[Installing Mapnik on OS X with Framework Installers](http://github.com/mapnik/mapnik/wiki/MacInstallation_Frameworks)|yes|||
+|[Installing Mapnik on OS X with Homebrew](http://github.com/mapnik/mapnik/wiki/MacInstallation_Homebrew)|yes|||
+|[Optional Installs](http://github.com/mapnik/mapnik/wiki/MacInstallation_Optional)|yes|||
 |[Installing Mapnik on OS X from Source](http://github.com/mapnik/mapnik/wiki/MacInstallation_Source)||||
 |[Installing Mapnik on Mac OS X](http://github.com/mapnik/mapnik/wiki/MacInstallationPorts)||||
 |[MacInstallationSource](http://github.com/mapnik/mapnik/wiki/MacInstallationSource)||||
