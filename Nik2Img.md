@@ -13,4 +13,6 @@ To Install:
  * Download from http://code.google.com/p/mapnik-utils/
  * Or use easy_install:
 
+```sh
     $ sudo easy_install -U nik2img
+```
