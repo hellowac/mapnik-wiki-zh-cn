@@ -104,11 +104,13 @@
     * Customize __init__.py to remove unix specific DL open stuff
     * demo/python/rundemo.py, etc
     
-* Post tarball (gzip and bz2) of source at [berlios](http://developer.berlios.de/projects/mapnik) and http://media.mapnik.org 
+* Post tarball (gzip and bz2) of source at [berlios](http://developer.berlios.de/projects/mapnik)
+
     * mapnik-VERSION.tar.gz
     * mapnik-VERSION.tar.bz2
     
-* Post win32 build (by python version) at [berlios](http://developer.berlios.de/projects/mapnik) and http://media.mapnik.org.
+* Post win32 build (by python version) at [berlios](http://developer.berlios.de/projects/mapnik)
+
     * mapnik-VERSION-win32-pyVERSION.zip
     * make sure to zip with command line to avoid '__MACOSX/' files
 
@@ -129,13 +131,13 @@
     
 ### Trac Post-Release
 
-* Update [[MapnikInstallation]], [MacInstallation](https://github.com/mapnik/mapnik/wiki/MacInstallation), [LinuxInstallation](https://github.com/mapnik/mapnik/wiki/LinuxInstallation) and [WindowsInstallation](https://github.com/mapnik/mapnik/wiki/WindowsInstallation) links
-* Create a release page from the relevant section of CHANGELOG like this page [Release0.7.1](https://github.com/mapnik/mapnik/wiki/Release0.7.1)
-* Update [MapnikReleases](https://github.com/mapnik/mapnik/wiki/MapnikReleases), a starting page for users to learn about Mapnik development
+* Update [[Mapnik-Installation]], [MacInstallation](MacInstallation), [LinuxInstallation](https://github.com/mapnik/mapnik/wiki/LinuxInstallation) and [WindowsInstallation](WindowsInstallation) links
+* Create a release page from the relevant section of CHANGELOG like this page [Release0.7.1](Release0.7.1)
+* Update [MapnikReleases](MapnikReleases), a starting page for users to learn about Mapnik development
     
 ### Announce
     
-* Notify Packagers for Linux distros ([PackageBuilding](https://github.com/mapnik/mapnik/wiki/PackageBuilding))
+* Notify Packagers for Linux distros ([PackageBuilding](PackageBuilding))
 * Notify Packagers for OSGEO4w: http://norbit.de/
 * Mapnik lists
 * Mapnik.org news
