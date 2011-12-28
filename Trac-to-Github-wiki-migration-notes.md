@@ -95,16 +95,16 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Mapnik API](http://github.com/mapnik/mapnik/wiki/Mapnik-API)|yes|||
 |[Mapnik Development](http://github.com/mapnik/mapnik/wiki/Mapnik-Development)|yes|||
 |[Mapnik Installation](http://github.com/mapnik/mapnik/wiki/Mapnik-Installation)|yes|||
-|[Mapnik2](http://github.com/mapnik/mapnik/wiki/Mapnik2)|yes (link to milestone 0.7.2 deleted because not available,  some svn links to change to git)|||
-|[Changes between Mapnik 0.7.x and Mapnik 2.0](http://github.com/mapnik/mapnik/wiki/Mapnik2_Changes)||||
-|[MapnikCodeSprint](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint)||||
-|[MapnikCodeSprint_MCS01](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01)||||
-|[MapnikCodeSprint_MCS01_Location](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Location)||||
-|[MapnikCodeSprint_MCS01_Results](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Results)||||
-|[MapnikCodeSprint_MCS01_Schedule](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Schedule)||||
-|[MapnikCodeSprint_MCS02](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS02)||||
-|[Core Concepts of Mapnik](http://github.com/mapnik/mapnik/wiki/MapnikCoreConcepts)||||
-|[MapnikDependencies](http://github.com/mapnik/mapnik/wiki/MapnikDependencies)||||
+|[Mapnik2](http://github.com/mapnik/mapnik/wiki/Mapnik2)|yes (link to milestone 0.7.2 deleted because not available,  some svn links to change to git)|yes||
+|[Changes between Mapnik 0.7.x and Mapnik 2.0](http://github.com/mapnik/mapnik/wiki/Mapnik2_Changes)|yes|||
+|[MapnikCodeSprint](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint)|yes|||
+|[MapnikCodeSprint_MCS01](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01)|yes|||
+|[MapnikCodeSprint_MCS01_Location](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Location)|yes|||
+|[MapnikCodeSprint_MCS01_Results](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Results)|yes|||
+|[MapnikCodeSprint_MCS01_Schedule](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Schedule)|yes|||
+|[MapnikCodeSprint_MCS02](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS02)|yes|||
+|[Core Concepts of Mapnik](http://github.com/mapnik/mapnik/wiki/MapnikCoreConcepts)|yes|||
+|[MapnikDependencies](http://github.com/mapnik/mapnik/wiki/MapnikDependencies)|yes|||
 |[MapnikInstallationSvn](http://github.com/mapnik/mapnik/wiki/MapnikInstallationSvn)||||
 |[MapnikReferences](http://github.com/mapnik/mapnik/wiki/MapnikReferences)||||
 |[Mapnik Releases](http://github.com/mapnik/mapnik/wiki/MapnikReleases)||||
