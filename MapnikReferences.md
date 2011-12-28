@@ -9,3 +9,7 @@ http://home.fuzzie.org/~bbz/scriptie.pdf
 
 ### Map rotation and resolution
 http://www.ancalime.de/demo.html
+
+### Library for label placement
+
+http://pal.heig-vd.ch
