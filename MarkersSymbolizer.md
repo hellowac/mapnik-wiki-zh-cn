@@ -21,16 +21,17 @@ It can be added to a Rule with line features like:
 <MarkersSymbolizer />
 ```
 
-[[/images/offsets_directions.png)]]
+[[/images/offsets_directions.png]]
 
-The MarkersSymbolizer should draw blue directional arrows *in the direction of the geometry* (for things like one-way streets).
+The [[MarkersSymbolizer]] should draw blue directional arrows *in the direction of the geometry* (for things like one-way streets).
 
 In case you notice arrows pointing the wrong direction, this means that the segment has been coded in the wrong way.
 
 The ST_reverse function of Postgis can fix this (The problem will then be to identify the geometries that need to be updated).
 
 ### SVG markers
-*NEW*: Staring from r1793 MarkersSymbolizer supports [Scalable Vector Graphics (SVG)](http://www.w3.org/TR/SVG/) as input images:
+
+*NEW*: Staring from r1793 [[MarkersSymbolizer]] supports [Scalable Vector Graphics (SVG)](http://www.w3.org/TR/SVG/) as input images:
 
 [[/images/markers_symbolizer.png]]
 
@@ -45,7 +46,7 @@ The ST_reverse function of Postgis can fix this (The problem will then be to ide
 ### Dynamic Ellipses
 *NEW*: Starting from r2158 MarkersSymbolizer supports width/height/fill/stroke properties to dynamically draw circles (w == h) or ellipses (w != h) when no SVG file is supplied:
 
-[Image](dynamic_ellipse_markers.png)
+[[/images/dynamic_ellipse_markers.png]]
 
 
 ```xml
@@ -54,8 +55,7 @@ The ST_reverse function of Postgis can fix this (The problem will then be to ide
 
 CAVEAT: these properties do not apply to SVG files, and SVG transforms are not supported for modifying ellipses (yet).
 
-OSM currently renders one-way street arrows with Mapnik using several stacked LineSymbolizers with varying dash-arrays, but could potentially use the MarkersSymbolizer in the future:
-
+OSM currently renders one-way street arrows with Mapnik using several stacked [LineSymbolizers](LineSymbolizer) with varying dash-arrays, but could potentially use the [[MarkersSymbolizer]] in the future:
 
 ```xml
 <LinePatternSymbolizer file="/home/mapnik/mapnik/symbols/arrow.png" type="png" width="74" height="8" />
