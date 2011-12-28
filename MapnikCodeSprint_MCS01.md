@@ -35,7 +35,7 @@ From Steve Chilton's SotM presentation:
 * apply variable widths to canals and rivers
 * apply vignettes inside polygons
 * produce spread text labels
-* different casing either side of roads (Done as patch for 0.7.1?  see offset lines #180 )
+* different casing either side of roads (Done as patch for 0.7.1?  see offset lines [#180](https://github.com/mapnik/mapnik/issues/180) )
 * text labels either side of a line
 * more Natural Earth data at low-zooms (May apply more to OSM style than Mapnik-core)
 * add your advanced cartography requests
@@ -48,7 +48,7 @@ List of bugs for squishing or topics to discuss:
 
 ### Cascadenik
 
-Rob's going to be working on [Cascadenik](http://code.google.com/p/mapnik-utils/wiki/Cascadenik):
+Rob's going to be working on [Cascadenik](https://github.com/mapnik/Cascadenik/wiki/Cascadenik):
 
 * adding all the currently supported symbolizer attributes
 * supporting Mapnik2 alongside 0.x
@@ -56,7 +56,7 @@ Rob's going to be working on [Cascadenik](http://code.google.com/p/mapnik-utils/
 * merging the `-xmlbad` branch to trunk
 * cleaning, testing, and fixing bugs
 * fixing mapnik bugs uncovered by the above :)
-* one being #612 (dane will try to close during sprint)
+* one being [#612](https://github.com/mapnik/mapnik/issues/612) (dane will try to close during sprint)
 
 ### Profiling
 
