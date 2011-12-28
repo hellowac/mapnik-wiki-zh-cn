@@ -17,8 +17,9 @@ All properties that previously used underscores, ie '_' now use dashes ('-'). So
 * Note: branch of trunk tagged before r2582: https://trac.mapnik.org/browser/branches/mapnik2-pre-dashes
 * properties changed include: 
 
-        #!python
-        ['paths_from_xml','minimum_version','buffer_size','face_name,fonset_name','clear_label_cache','vertical_alignment','halo_fill','halo_radius','text_ratio','wrap_width','wrap_before','wrap_character','text_transform','line_spacing','label_position_tolerance','character_spacing','min_distance','minimum_distance','avoid_edges','allow_overlap','max_char_angle_delta','horizontal_alignment','justify_alignment','unlock_image','no_text']
+```python
+['paths_from_xml','minimum_version','buffer_size','face_name,fonset_name','clear_label_cache','vertical_alignment','halo_fill','halo_radius','text_ratio','wrap_width','wrap_before','wrap_character','text_transform','line_spacing','label_position_tolerance','character_spacing','min_distance','minimum_distance','avoid_edges','allow_overlap','max_char_angle_delta','horizontal_alignment','justify_alignment','unlock_image','no_text']
+```
 
 ### CSSParameters --> Properties
 
@@ -26,17 +27,17 @@ This change affects the PolygonSymbolizer, LineSymbolizer, RasterSymbolizer, and
 
 All CSSParameters have been removed, so for example, this:
 
-
-    #!xml
+```xml
     <PolygonSymbolizer>
         <CssParameter name="fill">yellow</CssParameter>
     </PolygonSymbolizer>
+```
 
 is now:
 
-
-    #!xml
+```xml
     <PolygonSymbolizer fill="yellow" />
+```
 
 ## Changes by Element
 
@@ -89,5 +90,6 @@ is now:
 
 # Planned/Proposed Before Release
 ## Python API
+
  * Image.tostring -> Image.encode() 
  * All remaining uses of 'envelope' -> 'box2d' (like ds.envelope())
