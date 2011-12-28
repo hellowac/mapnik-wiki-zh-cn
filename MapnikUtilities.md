@@ -61,7 +61,7 @@ See [[Paleoserver]] for more info.
 
 A QT Desktop App for interactively viewing XML mapfiles
 
-See MapnikViewer for more info.
+See [[MapnikViewer]] for more info.
 
 ### Quantumnik
 Plugin to QGIS for using Mapnik
@@ -74,6 +74,6 @@ See http://bitbucket.org/springmeyer/quantumnik/
 
 ## Shapeindex
 
-[Shapeindex](https://trac.mapnik.org/browser/trunk/utils/shapeindex) - Quad-tree shapefile indexes for a serious speed boost
+[Shapeindex](https://github.com/mapnik/mapnik/tree/master/utils/shapeindex) - Quad-tree shapefile indexes for a serious speed boost
 
 Installed as part of the SCons build.
