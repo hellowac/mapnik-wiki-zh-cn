@@ -113,7 +113,7 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Mapnik Tutorials](http://github.com/mapnik/mapnik/wiki/MapnikTutorials)|yes|||
 |[MapnikUtilities](http://github.com/mapnik/mapnik/wiki/MapnikUtilities)|yes|||
 |[MapnikViewer](http://github.com/mapnik/mapnik/wiki/MapnikViewer)|yes (lost ref to http://trac.mapnik.org/raw-attachment/wiki/MapnikViewer/viewer.patch, add the missing file)|||
-|[MarkersSymbolizer](http://github.com/mapnik/mapnik/wiki/MarkersSymbolizer)||||
+|[MarkersSymbolizer](http://github.com/mapnik/mapnik/wiki/MarkersSymbolizer)|yes (retrieve offsets_directions.png from http://173.255.217.246:8000/mapnik_trac/raw-attachment/ticket/180/offsets_directions.png|||
 |[MaxScaleDenominator](http://github.com/mapnik/mapnik/wiki/MaxScaleDenominator)||||
 |[MemoryDatasource](http://github.com/mapnik/mapnik/wiki/MemoryDatasource)||||
 |[MetaWriter](http://github.com/mapnik/mapnik/wiki/MetaWriter)||||
