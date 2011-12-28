@@ -32,6 +32,7 @@ The configuration for a MetaWriter is done as a child element of the Map.
 ```
 
 Parameters are:
+
  * `name` (required)
   * Assign a name to your metawriter so that it can be referenced from a symbolizer
  * `type` (required)
