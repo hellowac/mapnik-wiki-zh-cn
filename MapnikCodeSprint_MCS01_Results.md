@@ -37,7 +37,7 @@ This is a quick list of things we started work on or achieved during the sprint:
 
 * Discussed next stable release (.7x series and Mapnik2 work, what to backport)
 * Forward compatibility of .7.x series a priority  (springmeyer)
-* Lots of work on new prototype for documentation (dodobas) #288
+* Lots of work on new prototype for documentation (dodobas) [#288](https://github.com/mapnik/mapnik/issues/288)
 * Moved Cascadenik to github and refactored lots of code, merging in XML-bad branch (migurski, rcoup, ninow) (http://github.com/mapnik/Cascadenik)
 * Came up with lots of new ideas and pushed they into tickets against [Sprint Milestone](http://trac.mapnik.org/milestone/MCS1%20Tickets) 
 * Many sprinters installed Mapnik2 - we updated docs with lessons learned (springmeyer)
@@ -45,26 +45,27 @@ This is a quick list of things we started work on or achieved during the sprint:
 * Work towards native boost::spirit WKT parser (artem)
 * Number of improvements to python api documentation (tmcw)
 * Add functions to set the alpha of overall rendering map image (springmeyer)
-* Started work on better warning output during XML parsing for misspelled property names (springmeyer) #110
+* Started work on better warning output during XML parsing for misspelled property names (springmeyer) [#110](https://github.com/mapnik/mapnik/issues/110)
 * Added function to convert grayscale channel to alpha channel for "World Glass" effect (springmeyer)
-* Added support for faster multi-threaded reprojection through use of proj ctx (#605) (tomhughes)
+* Added support for faster multi-threaded reprojection through use of proj ctx ([#605](https://github.com/mapnik/mapnik/issues/605)) (tomhughes)
 * Addition of RTL test XML (r2244, ajashton)
 * Worked on scoping Cairo context.scale() bugs - no solution quite yet (mishok13)
-* Added support for "late-binding" of datasources for better control over object creation from calling apps like Cascadenik (#622) (rcoup)
+* Added support for "late-binding" of datasources for better control over object creation from calling apps like Cascadenik ([#622](https://github.com/mapnik/mapnik/issues/622)) (rcoup)
 * Various Improvements to shield and text positioning (artem)
 * Improvements to SVG parsing and rendering (artem)
-* Fixed feature caching when using multiple styles for faster rendering (woodpeck) (#624)
-* Brainstormed and scoped on wiki ideas around [Compositing](/wiki:Ideas/Compositing/) and [Legends](/wiki:Legending/) (gravitystorm, ivansanchez)
+* Fixed feature caching when using multiple styles for faster rendering (woodpeck) ([#624](https://github.com/mapnik/mapnik/issues/624))
+* Brainstormed and scoped on wiki ideas around [Compositing](Ideas_Compositing/) and [Legends](Legending) (gravitystorm, ivansanchez)
 * Added Python3 support (haoyu,springmeyer) [[Python3k]]
 * Wrote a render_debug() function to output statistics on rendering times (woodpeck)
-* Added the ability to control the timeout of expensive PostGIS queries (jburgess) #632
+* Added the ability to control the timeout of expensive PostGIS queries (jburgess) [#632](https://github.com/mapnik/mapnik/issues/632)
 * Started writing Spreadnik v2 in python (ivansanchez)
-* Doubled speed of the [Paleoserver](http://trac.mapnik.org/wiki/Paleoserver) for returning transparent tiles (springmeyer)
+* Doubled speed of the [Paleoserver](Paleoserver) for returning transparent tiles (springmeyer)
 * Fixed bugs in nik2img around double-opening of images on linux and recursively registering fonts (springmeyer)
 
 ## Trac timeline
 
-[http://trac.mapnik.org/timeline?from=09%2F29%2F10&daysback=10&ticket=on&ticket_details=on&changeset=on&update=Update]
+http://trac.mapnik.org/timeline?from=09%2F29%2F10&daysback=10&ticket=on&ticket_details=on&changeset=on&update=Update
 
 ## Tickets
-[http://trac.mapnik.org/milestone/MCS1%20Tickets]
+
+http://trac.mapnik.org/milestone/MCS1%20Tickets
