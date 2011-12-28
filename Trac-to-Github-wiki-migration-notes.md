@@ -89,13 +89,13 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Installing Mapnik on Mac OS X](http://github.com/mapnik/mapnik/wiki/MacInstallationPorts)|yes (retrieve SConstruct.osx.patch because lost + what do we do with links to doc generated from rst not available e.g https://github.com/mapnik/sphinx-docs )|||
 |[MacInstallationSource](http://github.com/mapnik/mapnik/wiki/MacInstallationSource)|yes|||
 |[MacPostGIS_Setup](http://github.com/mapnik/mapnik/wiki/MacPostGIS_Setup)|yes|||
-|[MacPythonUpgradeIssues](http://github.com/mapnik/mapnik/wiki/MacPythonUpgradeIssues)||||
-|[Managing complex map files using XML entities](http://github.com/mapnik/mapnik/wiki/ManagingLargeXmlFiles)||||
-|[MapDesign](http://github.com/mapnik/mapnik/wiki/MapDesign)||||
-|[Mapnik API](http://github.com/mapnik/mapnik/wiki/Mapnik-API)||||
-|[Mapnik Development](http://github.com/mapnik/mapnik/wiki/Mapnik-Development)||||
-|[Mapnik Installation](http://github.com/mapnik/mapnik/wiki/Mapnik-Installation)||||
-|[Mapnik2](http://github.com/mapnik/mapnik/wiki/Mapnik2)||||
+|[MacPythonUpgradeIssues](http://github.com/mapnik/mapnik/wiki/MacPythonUpgradeIssues)|yes|||
+|[Managing complex map files using XML entities](http://github.com/mapnik/mapnik/wiki/ManagingLargeXmlFiles)|yes|||
+|[MapDesign](http://github.com/mapnik/mapnik/wiki/MapDesign)|yes|||
+|[Mapnik API](http://github.com/mapnik/mapnik/wiki/Mapnik-API)|yes|||
+|[Mapnik Development](http://github.com/mapnik/mapnik/wiki/Mapnik-Development)|yes|||
+|[Mapnik Installation](http://github.com/mapnik/mapnik/wiki/Mapnik-Installation)|yes|||
+|[Mapnik2](http://github.com/mapnik/mapnik/wiki/Mapnik2)|yes (link to milestone 0.7.2 deleted because not available,  some svn links to change to git)|||
 |[Changes between Mapnik 0.7.x and Mapnik 2.0](http://github.com/mapnik/mapnik/wiki/Mapnik2_Changes)||||
 |[MapnikCodeSprint](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint)||||
 |[MapnikCodeSprint_MCS01](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01)||||
