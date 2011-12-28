@@ -13,4 +13,4 @@ Modserver isn't meant to be a replacement for TileCache - it is quite different 
  * Modserver, like cgiserver, etc., supports WMS, not WMS-C
  * Modserver doesn't have any caching mechanism built in. [We're](http://www.developmentseed.org/) using it with a lightweight PHP cache layer - something Python-based or something that uses memcached is a possibility but right now just plug in what you have.
 
-Currently the code is available on a [Trac ticket here.](http://trac.mapnik.org/ticket/101) A well-polished patch with error handling is in the works.
+Currently the code is available on a [Git ticket here.](https://github.com/mapnik/mapnik/issues/101) A well-polished patch with error handling is in the works.
