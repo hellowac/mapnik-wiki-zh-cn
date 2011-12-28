@@ -2,11 +2,10 @@
 <!-- Version: 25 -->
 <!-- Last-Modified: 2011/07/23 05:22:36 -->
 <!-- Author: herm -->
+
 # MetaWriter
 
-[[subpage(DevFeature,false)]]
-
-MetaWriters are a way of outputting vector features from Mapnik that exactly match the representations of rendered features. The idea is to allow for highly customizable output of specific features rendered into tiles that should also be made available as vectors to a web browser for interactivity. This support was added by Hermann Kraus (mail: herm @@@ scribus.info) in the GSOC project "Hit Areas" http://trac.mapnik.org/wiki/GSOC2010/Ideas#Supportforoutputtinghit-areas.
+MetaWriters are a way of outputting vector features from Mapnik that exactly match the representations of rendered features. The idea is to allow for highly customizable output of specific features rendered into tiles that should also be made available as vectors to a web browser for interactivity. This support was added by Hermann Kraus (mail: herm @@@ scribus.info) in the GSOC project ["Hit Areas"](GSOC2010_Ideas).
 
 A blog post on the idea is at: http://mapnik.org/news/2010/jul/06/gsoc2010_halfway/.
 
@@ -16,13 +15,13 @@ See also Herm's demo, which highlights both visible and invisible features: http
 
 [[/images/metawriter_bbox_around_width_plus_stroke.png]]
 
-The above graphic highlights output (geojson) representing the clickable area of a MarkersSymbolizer rendered circle. This circle can change size dynamically depending on the width/height of the shape plus the thickness of the stroke and the bbox output by the MetaWriter will be intelligent to all rendering parameters.
+The above graphic highlights output (geojson) representing the clickable area of a [[MarkersSymbolizer]] rendered circle. This circle can change size dynamically depending on the width/height of the shape plus the thickness of the stroke and the bbox output by the MetaWriter will be intelligent to all rendering parameters.
 
 ## MetaWriter Configuration
 The configuration for a MetaWriter is done as a child element of the Map.
 
 
-    #!xml
+```xml
     <Map>
     
       <MetaWriter name="meta1" type="json" file="map_meta.json"/>
@@ -30,6 +29,7 @@ The configuration for a MetaWriter is done as a child element of the Map.
     <!--..snip..-->
     
     </Map>
+```
 
 Parameters are:
  * `name` (required)
@@ -49,6 +49,7 @@ Parameters are:
 
 
 ## Caveats
+
  * If no features are encountered no json file is output (unless you pass the option `output-empty="true"`)
  * output projection is currently hardcoded to WGS84/EPSG:4326
  * precision for geometries is currently fixed at 8
@@ -58,34 +59,36 @@ Parameters are:
 To actually trigger a metawriter to output features you need to attach one to a symbolizer.
 
 Parameters that symbolizers accept (the relate to metawriters) are:
+
   * `meta-writer` - the name of the MetaWriter to use
   * `meta-output` - attributes to write out for this specific symbolizer
 
 For example, this would output geojson features  (bbox's as polygons) for every point rendered by the symbolizer:
 
-
-    #!xml
+```xml
     <PointSymbolizer meta-writer="meta1"/>
+```
 
 Example feature output:
 
-    #!py
+```python
     { "type": "Feature",
       "geometry": { "type": "Polygon",
         "coordinates": [ [ [11.07451289, 49.45187982], [11.07481352, 49.45187982], [11.07481352, 49.45218044], [11.07451289, 49.45218044] ] ]},
       "properties": {
     } },
+```
 
 This would do the same but also dump out the values for the attributes of 'amenity' and 'name':
 
-
-    #!xml
+```xml
     <PointSymbolizer meta-writer="meta1" meta-output="amenity,name"/>
+```
 
 Example feature output:
 
 
-    #!py
+```python
     { "type": "Feature",
       "geometry": { "type": "Polygon",
         "coordinates": [ [ [11.07804522, 49.45285684], [11.07834585, 49.45285684], [11.07834585, 49.45315747], [11.07804522, 49.45315747] ] ]},
@@ -93,18 +96,21 @@ Example feature output:
         "amenity":"pharmacy",
         "name":"Spital Apotheke"
     } },
+```
+
 ## Dynamically constructing metawriter file path
 
 To dynamically contruct a file path for where to write out meta-features you can use variable replacement like:
 
 ### in your xml
 
-    #!xml
-      <MetaWriter name="meta1" type="json" file="[tile_dir]/[z]/[x]/[y].json"/>
+```xml
+    <MetaWriter name="meta1" type="json" file="[tile_dir]/[z]/[x]/[y].json"/>
+```
 
 ### in your calling program
 
-    #!py
+```python
     import os
     import mapnik2 as mapnik
     
@@ -121,11 +127,11 @@ To dynamically contruct a file path for where to write out meta-features you can
     if not os.path.exists(dir_):
         os.makedirs(dir_)
     mapnik.render_to_file(m,'%s/%s/%s/%s.png' % (tile_dir,z,x,y))
-
+```
 
 ## Example XML (with PathExpresion)
 
-    #!xml
+```xml
     <Map bgcolor="white" srs="+proj=latlong +datum=WGS84">
     
       <MetaWriter name="points" type="json" file="[tile_dir]/[z]/[x]/[y].json"/>
@@ -146,11 +152,11 @@ To dynamically contruct a file path for where to write out meta-features you can
       </Layer>
     
     </Map>
-
+```
 
 ## Example XML (without PathExpresion)
 
-    #!xml
+```xml
     <Map bgcolor="white" srs="+proj=latlong +datum=WGS84">
     
       <MetaWriter name="points" type="json" file="points.json"/>
@@ -181,4 +187,4 @@ To dynamically contruct a file path for where to write out meta-features you can
       </Layer>
     
     </Map>
-
+```
