@@ -12,11 +12,11 @@
 ## Date
 Friday, 24 September 2010 - Sunday, 26 September 2010
 
-## [Location](/wiki:MapnikCodeSprint/MCS01/Location/)
-MCS01 will be / was held in [London, England](/wiki:MapnikCodeSprint/MCS01/Location/).
+## [Location](MapnikCodeSprint_MCS01_Location)
+MCS01 will be / was held in [London, England](MapnikCodeSprint_MCS01_Location).
 
-## [Schedule](/wiki:MapnikCodeSprint/MCS01/Schedule/)
-This will be a full weekend of Mapnik fun.  For details see the [schedule](/wiki:MapnikCodeSprint/MCS01/Schedule/).
+## [Schedule](MapnikCodeSprint_MCS01_Schedule)
+This will be a full weekend of Mapnik fun.  For details see the [schedule](MapnikCodeSprint_MCS01_Schedule).
 
 ## Code
 Plan here for code to write and bugs to squish.  Please add your thoughts.  Discuss.  Plan.  
@@ -69,7 +69,7 @@ Fred's interested in performance:
 
 ## Results
 
-[https://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Results](https://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Results)
+[https://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Results](MapnikCodeSprint_MCS01_Results)
 
 ## Participants
 
