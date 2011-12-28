@@ -105,14 +105,14 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[MapnikCodeSprint_MCS02](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS02)|yes|||
 |[Core Concepts of Mapnik](http://github.com/mapnik/mapnik/wiki/MapnikCoreConcepts)|yes|||
 |[MapnikDependencies](http://github.com/mapnik/mapnik/wiki/MapnikDependencies)|yes|||
-|[MapnikInstallationSvn](http://github.com/mapnik/mapnik/wiki/MapnikInstallationSvn)||||
-|[MapnikReferences](http://github.com/mapnik/mapnik/wiki/MapnikReferences)||||
-|[Mapnik Releases](http://github.com/mapnik/mapnik/wiki/MapnikReleases)||||
-|[Steps for Mapnik Releases](http://github.com/mapnik/mapnik/wiki/MapnikReleaseSteps)||||
-|[Mapnik Renderers](http://github.com/mapnik/mapnik/wiki/MapnikRenderers)||||
-|[Mapnik Tutorials](http://github.com/mapnik/mapnik/wiki/MapnikTutorials)||||
-|[MapnikUtilities](http://github.com/mapnik/mapnik/wiki/MapnikUtilities)||||
-|[MapnikViewer](http://github.com/mapnik/mapnik/wiki/MapnikViewer)||||
+|[MapnikInstallationSvn](http://github.com/mapnik/mapnik/wiki/MapnikInstallationSvn)|yes|||
+|[MapnikReferences](http://github.com/mapnik/mapnik/wiki/MapnikReferences)|yes|||
+|[Mapnik Releases](http://github.com/mapnik/mapnik/wiki/MapnikReleases)|yes|||
+|[Steps for Mapnik Releases](http://github.com/mapnik/mapnik/wiki/MapnikReleaseSteps)|yes|||
+|[Mapnik Renderers](http://github.com/mapnik/mapnik/wiki/MapnikRenderers)|yes|||
+|[Mapnik Tutorials](http://github.com/mapnik/mapnik/wiki/MapnikTutorials)|yes|||
+|[MapnikUtilities](http://github.com/mapnik/mapnik/wiki/MapnikUtilities)|yes|||
+|[MapnikViewer](http://github.com/mapnik/mapnik/wiki/MapnikViewer)|yes (lost ref to http://trac.mapnik.org/raw-attachment/wiki/MapnikViewer/viewer.patch, add the missing file)|||
 |[MarkersSymbolizer](http://github.com/mapnik/mapnik/wiki/MarkersSymbolizer)||||
 |[MaxScaleDenominator](http://github.com/mapnik/mapnik/wiki/MaxScaleDenominator)||||
 |[MemoryDatasource](http://github.com/mapnik/mapnik/wiki/MemoryDatasource)||||
