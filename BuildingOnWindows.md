@@ -10,6 +10,7 @@ This setup assumes a directory structure where all libraries are stored under a 
 
 Working as of Januari 2011. Don't just blindly copy and paste, it's more a recipe for the steps to take than an actual working script. You still need to follow the instructions in the comments.
 
+```
 @echo off
 
 rem Script to build all prereq libraries for mapnik on Windows
@@ -99,4 +100,4 @@ cd..
 
 rem Back into root directory
 cd ..
-
+```
