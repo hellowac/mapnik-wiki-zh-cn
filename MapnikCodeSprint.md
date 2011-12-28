@@ -8,14 +8,14 @@ us approach complex topics with immediate feedback.
 
 ## Upcoming Mapnik Code Sprints
 
-### [Mapnik Code Sprint 02](/wiki:MapnikCodeSprint/MCS02/)
+### [Mapnik Code Sprint 02](MapnikCodeSprint_MCS02)
 *Date*   To Be Determined, early 2011
 
 *Location*    To Be Determined
 
 ## Previous Mapnik Code Sprints
 
-### [Mapnik Code Sprint 01 - Committers and Cartographers](/wiki:MapnikCodeSprint/MCS01/)
+### [Mapnik Code Sprint 01 - Committers and Cartographers](MapnikCodeSprint_MCS01)
 
 *Date*   Friday, 24 September 2010 - Sunday, 26 September 2010 
 
