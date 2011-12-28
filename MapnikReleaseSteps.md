@@ -63,8 +63,8 @@
 * Then upload these docs to media.mapnik.org/api_docs replacing what is already there.
     
 * Commit in trunk:
-     * Update version number in http://trac.mapnik.org/browser/trunk/include/mapnik/version.hpp
-     * Update `abi_fallback` in http://trac.mapnik.org/browser/trunk/SConstruct
+     * Update version number in https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp
+     * Update `abi_fallback` in https://github.com/mapnik/mapnik/blob/master/SConstruct
      * Update libmapnik.dylib `current_version` and `compatibility_version` in http://trac.mapnik.org/browser/trunk/src/SConscript
     
 * Update CHANGELOG with the svn r the tagged release is made from.
