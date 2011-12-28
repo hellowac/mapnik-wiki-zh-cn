@@ -95,7 +95,7 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Mapnik API](http://github.com/mapnik/mapnik/wiki/Mapnik-API)|yes|||
 |[Mapnik Development](http://github.com/mapnik/mapnik/wiki/Mapnik-Development)|yes|||
 |[Mapnik Installation](http://github.com/mapnik/mapnik/wiki/Mapnik-Installation)|yes|||
-|[Mapnik2](http://github.com/mapnik/mapnik/wiki/Mapnik2)|yes (link to milestone 0.7.2 deleted because not available,  some svn links to change to git)|yes||
+|[Mapnik2](http://github.com/mapnik/mapnik/wiki/Mapnik2)|yes (link to milestone 0.7.2 deleted because not available,  some svn links to change to git)|||
 |[Changes between Mapnik 0.7.x and Mapnik 2.0](http://github.com/mapnik/mapnik/wiki/Mapnik2_Changes)|yes|||
 |[MapnikCodeSprint](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint)|yes|||
 |[MapnikCodeSprint_MCS01](http://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01)|yes|||
