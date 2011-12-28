@@ -15,44 +15,46 @@ Mapnik2 implements a naming change for ease of development and testing .
 
 So in python for now you do:
 
-    #!python
+```python
     >>> import mapnik2 # . This enables running the Mapnik 0.7.x series alongside Mapnik2.
+```
 
 And C++ programs must link against mapnik2:
 
-    #!sh
+```sh
     -L/usr/local/lib -lmapnik2
+```
 
-See also the brainstorming page for Future Mapnik at http://trac.mapnik.org/wiki/Ideas/FutureMapnik
+See also the brainstorming page for Future Mapnik at [[Ideas_FutureMapnik]]
 
 ## Compatibility
 
 The Mapnik2 API has advanced (requiring breakages) and the XML syntax has changed in specific cases.
 
-Therefore Mapnik2 is the [MapnikReleases first release] with significant backward incompatibility. See wiki:Mapnik2/Changes
+Therefore Mapnik2 is the [first release](MapnikReleases) with significant backward incompatibility. See [[Mapnik2_Changes]]
 
 # Upgrade Guide
 
-1) rebuild all shapefile indexes
+1. rebuild all shapefile indexes
 
-2) upgrade stylesheets with a python script:
+2. upgrade stylesheets with a python script:
 
 We have written a python converter to seamlessly upgrade your pre-Mapnik2 stylesheets to be fully compatible with Mapnik2.
 
 After installing Mapnik2 you will have a new command available called 'upgrade_map_xml.py':
 
-
-    #!sh
+```
     $ upgrade_map_xml.py
         Usage: upgrade_map_xml.py <input_file> <output_file>
+```
 
 Also, for osm.xml users, you will note that this script does not preserve entities (sorry). You may be interested in an experimental version of this script (but not installed by default) which does. See:
 
 ***WARNING*** this script has not been kept in sync with the main script mentioned above.
 
-http://trac.mapnik.org/browser/trunk/utils/upgrade_map_xml/upgrade_map_xml_keep_ent.py
+https://github.com/mapnik/mapnik/blob/master/utils/upgrade_map_xml/upgrade_map_xml_keep_ent.py
 
-Also, we have ported support for the new Mapnik2 syntax to the upcoming [0.7.2 release](http://trac.mapnik.org/milestone/0.7.2), so you can stay on the 0.7 series but keep your stylesheets in the cleaner Mapnik2 format.
+Also, we have ported support for the new Mapnik2 syntax to the upcoming 0.7.2 release, so you can stay on the 0.7 series but keep your stylesheets in the cleaner Mapnik2 format.
 
 ## External Applications
 
@@ -62,24 +64,29 @@ Special care will be needed to run various external applications against Mapnik2
 
 Note: you cannot do:
 
+```python
     >>> import mapnik
     >>> import mapnik2
+```
 
-This is because the namespaces will clash. We ultimately plan to release Mapnik2 using the standard '>>> import mapnik' namespace, so its not worth the trouble to make the above work. The rule of thumb is that you can have both installed just only run one at a time.
+This is because the namespaces will clash. We ultimately plan to release Mapnik2 using the standard `>>> import mapnik` namespace, so its not worth the trouble to make the above work. The rule of thumb is that you can have both installed just only run one at a time.
 
 ### Cascadenik
+
 There is a branch of Cascadenik that is adding Mapnik2 compatibility at https://github.com/mapnik/Cascadenik/tree/mapnik2
 
 ### nik2img
+
 Nik2img as of 0.5.0 supports both mapnik and mapnik2 transparently. Pass --mapnik-version 1 or mapnik-version 2 to force the usage of a single one (it will default to using Mapnik2) 
 
 ### mod_tile/renderd
+
 Supports Mapnik2 as of [r22900](http://trac.openstreetmap.org/changeset/22900)
 But requires a patch to the Makefile and moving to the side any non-mapnik2 headers.
 
 Here is the patch needed to the Makefile:
 
-    #!diff
+```diff
     Index: Makefile
     ===================================================================
     --- Makefile	(revision 22899)
@@ -93,6 +100,7 @@ Here is the patch needed to the Makefile:
      
      ifeq ($(UNAME), Darwin)
      RENDER_LDFLAGS += -licuuc -lboost_regex
+```
 
 Because Mapnik2 headers are not renamed 'include/mapnik' it is not possible to simultaneously compile C++ applications against headers of both Mapnik2 and Mapnik 0.7.x.
 
@@ -100,8 +108,7 @@ However, Python applications should be able to work against either Mapnik or Map
 
 So, for C++ compiles if you currently have old mapnik headers installed you must remove them and install mapnik2 headers in their place:
 
-
-    #!sh
+```sh
     rm -rf /usr/local/include/mapnik
     # re-install mapnik2 headers
     cd <mapnik2 sources>
@@ -121,6 +128,7 @@ So, for C++ compiles if you currently have old mapnik headers installed you must
     make clean
     make
     sudo make install
+```
 
 ## Getting Mapnik2 source
 
@@ -128,23 +136,27 @@ Previously Mapnik2 was in a branch, but as of Dec 16th, 2009 is it mainline trun
 
 Checkout trunk with:
 
+```
     svn co http://svn.mapnik.org/trunk mapnik2
+```
 
 Or switch from the old branch to trunk by doing:
 
-
+```
     svn switch http://svn.mapnik.org/trunk .
+```
 
 Similarly, if you wish to stay on the previous trunk code, that is now the 0.7.1 release:
 
-
+```
     svn switch http://svn.mapnik.org/tags/release-0.7.1 .
+```
 
 ## Changes
 
 Mapnik2 is also about harmonizing C++ coding conventions and thus a few class names have changed:
 
-see wiki:Mapnik2/Changes
+see [[Mapnik2_Changes]]
 
 ## Building ICU
 
@@ -152,6 +164,7 @@ Mapnik2 requires at least icu >= 4.2.
 
 1. Get the latest release:
 
+```sh
         wget http://download.icu-project.org/files/icu4c/4.6/icu4c-4_6-src.tgz
         tar xzvf icu4c-4_6-src.tgz
         cd icu/source
@@ -159,6 +172,7 @@ Mapnik2 requires at least icu >= 4.2.
         make
         sudo make install
         sudo ldconfig
+```
 
 ## Building Boost
 
@@ -166,14 +180,15 @@ You need boost >=1.41 for Mapnik2 (ideally 1.42).
 
 Grab some dependencies (this is for debian systems)
 
+```sh
     sudo apt-get install libbz2-dev
+```
 
 If you are compiling on Mac OS X see: http://trac.mapnik.org/wiki/MacInstallation#Step1:RouteBC
 
 Otherwise on linux do:
 
-
-    #!sh
+```sh
     wget http://voxel.dl.sourceforge.net/project/boost/boost/1.46.1/boost_1_46_1.tar.bz2
     tar xjvf boost_1_46_1.tar.bz2
     cd boost_1_46_1
@@ -201,6 +216,7 @@ Otherwise on linux do:
       link=shared \
       install
     sudo ldconfig
+```
 
 Note: see the custom builds of libboost_regex and libboost_python below (if using these then you can remove them from the above lines)
 
@@ -209,16 +225,22 @@ Note: see the custom builds of libboost_regex and libboost_python below (if usin
 To rebuild just boost_regex, for example to compile/link in the right ICU support try:
  * -a forces rebuild/install
 
+```sh
     sudo ./bjam  --with-regex toolset=gcc -sHAVE_ICU=1 -sICU_PATH=/usr/local -a install
+```
 
 Note: If later when compiling mapnik you get and error like...
 
+```
      Checking for C++ library boost_regex... no
-... it might be because you have two versions of libicu on your system. You have to recompile boost such that `ldd /usr/local/lib/libboost_regex.so` is the latest version. Since bjam tends to give some problem when passing parameters, one way to overcome this could be to move the libicu*.so.40 libraries for example and replace them with the ones compiled on /usr/local/lib/libicu* and then rebuild boost with regex support. You could later return them to the same place so that both `import mapnik` and `import mapnik2` work.
+     ...
+```
+
+it might be because you have two versions of libicu on your system. You have to recompile boost such that `ldd /usr/local/lib/libboost_regex.so` is the latest version. Since bjam tends to give some problem when passing parameters, one way to overcome this could be to move the libicu*.so.40 libraries for example and replace them with the ones compiled on /usr/local/lib/libicu* and then rebuild boost with regex support. You could later return them to the same place so that both `import mapnik` and `import mapnik2` work.
 
 Note: you may want to (re)build boost_python against a specific version of python on your system. To do this in the most robust way (because passing command line args to bjam is hard!), create a custom jam file:
 
-
+```
     import option ;
     import feature ;
     if ! gcc in [ feature.values <toolset> ]
@@ -234,9 +256,11 @@ Note: you may want to (re)build boost_python against a specific version of pytho
          : <toolset>gcc # condition
          ;
     libraries = --with-python ;
+```
 
 Then (re) compile the boost python lib using this custom jam file (call it 'user-config.jam'):
 
-    #!sh
+```sh
     bjam --with-python -a -j2 --ignore-site-config --user-config=user-config.jam toolset=gcc stage -d2
     sudo cp stage/lib/libboost_python.so* /path/to/install/dir/lib # modify for your system
+```
