@@ -8,9 +8,8 @@
 
 A in-memory datasource. Sample usage:
 
-
-    #!python
-    
+```python    
     from mapnik2 import Feature, MemoryDatasource, Geometry2d
     ds = MemoryDatasource()
     ds.add_feature(Feature(1, Geometry2d.from_wkt("POINT(2 5)"), name="Alberto"))
+```
