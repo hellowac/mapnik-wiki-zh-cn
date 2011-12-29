@@ -50,21 +50,21 @@ Make sure you have compat-libstdc++-33 installed.
 
 ## Parameters
 
-|| *parameter*       || *value*  || *description* || *default* ||
-|| host                  || string       || name of the oracle host || ||
-|| user                  || string       || username to use for connecting || ||
-|| password              || string       || user password to use for connecting || ||
-|| table                 || string       || name of the table to fetch, this can be a sub-query || ||
-|| geometry_field        || string       || name of the geometry field, in case you have more than one in a single table || GEOLOC ||
-|| extent                || string       || maxextent of the geometries || determined by querying the oracle metadata for the table ||
-|| row_limit             || integer      || max number of rows to return when querying data, 0 means no limit || 0 ||
-|| row_prefetch          || integer      || number of rows to prefetch from the query before converting them to mapnik features (this allows to finetune the balance between transfer time and conversion time) || 1000 ||
-|| initial_size          || integer      || initial size of the stateless connection pool || 1 ||
-|| max_size              || integer      || max size of the stateless connection pool || 10 ||
-|| use_spatial_index     || boolean      || choose wheter to use the oracle spatial index when fetching data || true ||
-|| multiple_geometries   || boolean      || wheter to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)|| false ||
-|| encoding              || string       || internal file encoding || utf-8 ||
-
+| *parameter*       | *value*  | *description* | *default* |
+|:------------------|----------|---------------|----------:|
+| host                  | string       | name of the oracle host | |
+| user                  | string       | username to use for connecting | |
+| password              | string       | user password to use for connecting | |
+| table                 | string       | name of the table to fetch, this can be a sub-query | |
+| geometry_field        | string       | name of the geometry field, in case you have more than one in a single table | GEOLOC |
+| extent                | string       | maxextent of the geometries | determined by querying the oracle metadata for the table |
+| row_limit             | integer      | max number of rows to return when querying data, 0 means no limit | 0 |
+| row_prefetch          | integer      | number of rows to prefetch from the query before converting them to mapnik features (this allows to finetune the balance between transfer time and conversion time) | 1000 |
+| initial_size          | integer      | initial size of the stateless connection pool | 1 |
+| max_size              | integer      | max size of the stateless connection pool | 10 |
+| use_spatial_index     | boolean      | choose wheter to use the oracle spatial index when fetching data | true |
+| multiple_geometries   | boolean      | wheter to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
+| encoding              | string       | internal file encoding | utf-8 |
 
 ## Usage
 
@@ -72,16 +72,17 @@ Make sure you have compat-libstdc++-33 installed.
 
 Instantiate a datasource like:
 
-    #!python
+```python
     lyr = Layer('Geometry from Oracle Spatial')
     lyr.datasource = OCCI(host='localhost',user='scott',password='tiger',table='worldborders',geometry_field='geom')
+```
 
 ### XML
 
 If you are using XML mapfiles to style your data, then using a Oracle datasource looks like:
 
 
-    #!xml
+```xml
       <Layer name="countries" status="on" srs="+proj=latlong +datum=WGS84">
         <StyleName>countries_style_label</StyleName>
         <Datasource>
@@ -94,7 +95,7 @@ If you are using XML mapfiles to style your data, then using a Oracle datasource
           <Parameter name="extent">-180,-90,180,89.99</Parameter>
         </Datasource>
       </Layer>
-
+```
 
 ### C++
 
@@ -102,8 +103,7 @@ Plugin datasource initialization example code can be found on PluginArchitecture
 
 A OCCI datasource may be created as follows:
 
-
-    #!C
+```cpp
     {
         parameters p;
         p["type"]="occi";
@@ -119,3 +119,4 @@ A OCCI datasource may be created as follows:
         lyr.add_style("worldborders");
         m.addLayer(lyr);
     }
+```
