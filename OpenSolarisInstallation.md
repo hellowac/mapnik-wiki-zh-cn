@@ -12,24 +12,22 @@ This is a *non-trivial* exercise. It is highly recommended that you consider usi
 
 In the future hopefully the latest versions of the [GNU compiler (gcc)](http://gcc.gnu.org/) will become better supported on Open Solaris, or better packaging options may be available with  [OpenIndiana](http://openindiana.org/) or [Nexenta](http://www.nexenta.org/).
 
-Basically the challenge here is boost and old, buggy compilers that sun (or sun packages) provide. If you you simply forge ahead compiling boost with suncc or the g++ provided by sun on open solaris you'd hit boost regex, boost python, and boost thread compile errors. You'll likely see problems such as those detailed at the [Open Solaris Troubleshooting page](/wiki:OpenSolarisInstallation/TroubleShooting/).
+Basically the challenge here is boost and old, buggy compilers that sun (or sun packages) provide. If you you simply forge ahead compiling boost with suncc or the g++ provided by sun on open solaris you'd hit boost regex, boost python, and boost thread compile errors. You'll likely see problems such as those detailed at the [Open Solaris Troubleshooting page](OpenSolarisInstallation_TroubleShooting).
 
 If you are finding this guide and do not need to install the boost libraries then this approach is overkill and likely the wrong approach. Most geospatial packages (like geos, proj4, postgis) should compile just fine on open solaris with the existing versions of gcc available. Instead this guide uses a custom compiled gcc44 which makes compiling boost possible, and works great to compile all other packages. The catch is that this approach requires much more care and attention (and some would likely call it insane to built up a whole geostack using a custom compiler not officially supported on the os).
 
 If anyone does forge ahead using the old tools available from sun and can compile Mapnik trunk and run the python nosetest successfully, then the approach of using gcc44 below may be able to be avoided. If you are this daft, then please update this page with what you've learned.
-
-
-
 
 ## Testing Details
 
  * Tested running VirtualBox on OSX 10.6 (64 bit)
  * Tested using the latest OSOL iso release:
 
-    #!sh
+```sh
     $ cat /etc/release
        OpenSolaris 2009.06 snv_111b X86
        Assembled 07 May 2009
+```
 
 ## Mapnik Details
 
@@ -39,23 +37,27 @@ You will need at least:
  * or
  * Mapnik 0.7.2 (>= r2444) (http://svn.mapnik.org/branches/0.7.2-dev/)
 
-For 64 bit builds you need to apply patches from #675 and #676
+For 64 bit builds you need to apply patches from [#675](https://github.com/mapnik/mapnik/issues/675) and [#676](https://github.com/mapnik/mapnik/issues/676)
 
 ## Build Details
+
 This guide will rely heavily on existing tools for package management on Open Solaris
+
  * The 'pkg' tool supplied by Sun
  * The community 'pkgtool/pkgbuild' tools
  * The excellent WikiMedia Toolserver `spec` files for use with `pkgtool`
 
 
 ## OpenSolaris Gotchas
+
  * Don't use `sudo` use `pfexec` (alias sudo="pfexec")
  * Vim keystrokes are broken when logging in via ssh from a mac. But typing `:set nocp` fixes things.
  * Get info on CPUS: `prtdiag -v`
  * `-G` is the solaris compiler flag for creating a shared library, but recently gcc versions need `-shared`
  * If the `-shared` flag is missing then your libs will not be properly 'PIC" (position independent code) and this can be diagnosed with:
-
+```
     elfdump -d /path/to/mylibrary.so | grep TEX # if PIC this should return nothing, if not PIC it will return a few rows
+```
  * Library runtime linking works differently on solaris than linux.
   * It is more like mac osx, where libraries hardcode runtime search paths at build time
   * Except that Solaris needs a special flag to get this to work: `-R/usr/local/lib`
@@ -67,20 +69,21 @@ This guide will rely heavily on existing tools for package management on Open So
 
 Optional: If running VirtualBox, install the guest additions then reboot
 
-    #!sh
+```sh
     pfexec reboot
+```
 
 First we need to update the package manager
 
-    #!sh
+```sh
     pfexec pkg install SUNWipkg
+```
 
 Next, we update to the latest Open Solaris Development environment
 
 *Note:* If we update the base os image after setting the publisher to the "dev", the gnome/x11 user interface will break and we will only have a command line interface remaining. But, we want to update to dev (and the below guide depends upon it) because we want the ease of getting various packages from dev (via`pkg`) that otherwise we would need to install from source with `ts-specs/pkgtool`. The error upon rebooting that you will see (indicating the loss of X11) is `inetd[6270[: Failed to update state of instance svc: /application/x11/xfs:default in repository`. So, if you don't want to update to the dev environment as you don't want to break the GUI, don't set the publisher before running image-update (and know that certain commands in this guide will fail because dependencies are not going to be found).
 
-
-    #!sh
+```sh
     pfexec pkg set-publisher -O http://pkg.opensolaris.org/dev opensolaris.org
     pfexec pkg refresh --full
     # update the package manager if you did not already (otherwise next command will fail)
@@ -90,16 +93,18 @@ Next, we update to the latest Open Solaris Development environment
     # do actual upgrade (note: upgrades not possible on ec2)
     pfexec pkg image-update
     pfexec reboot # then boot into new 'opensolaris-1'
+```
 
 When you reboot you should see the new version reflected in `/etc/release`:
 
-    #!sh
+```sh
     cat /etc/release
     # should get:
                            OpenSolaris Development snv_134 X86
                Copyright 2010 Sun Microsystems, Inc.  All Rights Reserved.
                             Use is subject to license terms.
                                  Assembled 01 March 2010
+```
 
 *Note:* This is a new boot environment, see the [solaris docs](http://developers.sun.com/developer/technicalArticles/opensolaris/bootenvironments/index.html) for more info.
 
@@ -107,17 +112,17 @@ When you reboot you should see the new version reflected in `/etc/release`:
 
 Install Sun Studio and a few other sun provided base development tools you will need to get started:
 
-    #!sh
+```sh
     # install dev tools from sun needed specifically for mapnik build
     pfexec pkg install SUNWsvn SUNWpython26 SUNWgmake SUNWgcc developer/sunstudio12u1
     
     # install other dev tools you'll likely need down the road
     pfexec pkg install gcc-dev SUNWsshd SUNWgnu-readline SUNWcurl SUNWapr13 SUNWapu13 gd
+```
 
  * NOTE: python26 is available only due to the pkg-update to `dev` which brings us to `snv_134`. If you can and want to compile your own python version, then updating to dev is less critical. 
 
  * CRITICAL: boost_python and mapnik, compiled with gcc44 can run just fine, but if used with the sun proved python26 (which will be linked to a different version of libgcc) then exception handling will likely be broken: http://mail.python.org/pipermail/cplusplus-sig/2010-December/015822.html. At this time this guide uses this approach and their is not currently a clean solution for this problem (short of compiling python from source and all the issues that may arise from that).
-
 
 ## Step 3: Setting up WikiMedia Toolserver's 'ts-specs'
 
@@ -129,17 +134,18 @@ So, overally we choose this route because using suncc (Sun's compiler) or the gc
 
 Download the 'ts-spec' repository:
 
-    #!sh
+```sh
     svn co http://svn.toolserver.org/svnroot/toolserver/trunk/ts-specs -r 568 
     cd ts-specs
     # confirm that packages should be downloaded locally
     echo download >~/.pkgtoolrc
+```
 
  *NOTE: we fetch a specific revision above just for caution and so that the below patch will be sure to apply cleanly. You can update to the latest *ts-specs* if you wish.
 
 Now we need the pkgtool program to use these spec files. Ultimately we'll install this tool using ts-specs, but first we fetch it and compile ourselves:
 
-    #!sh
+```sh
     # as the root user build latest pkgbuild
     # http://pkgbuild.sourceforge.net/pkgtool.html
     wget http://prdownloads.sourceforge.net/pkgbuild/pkgbuild-1.3.103.tar.bz2
@@ -148,12 +154,13 @@ Now we need the pkgtool program to use these spec files. Ultimately we'll instal
     ./configure --prefix=/opt/pkgbuild # use a custom prefix so it is easy to uninstall later
     make
     pfexec make install
+```
 
 If you do not already have a non-root user you are using, then set one up now to run the ts-spec installs (pkgtool insists!).
 
 Optional: If you don't already have a non-root user with admin access do:
 
-    #!sh
+```sh
     groupadd dev # or your preferable group name
     export USERNAME=<user> # your new username
     useradd -g dev -d /export/home/$USERNAME -m -s /bin/bash -c "$USERNAME" $USERNAME
@@ -169,21 +176,23 @@ Optional: If you don't already have a non-root user with admin access do:
     usermod -P'Software Installation' $USERNAME
     # giving sudo/admin privs
     usermod -P'Primary Administrator' $USERNAME
+```
 
 Once done, log out and back in as this new user
 
 Then, finally install pkgtool via ts-specs and uninstall the source compiled version.
 
-    #!sh
+```sh
     cd ts-specs # move into ts-specs directory that you download above
     # as non-root user...
     /opt/pkgbuild/bin/pkgtool build sysutils/TSpkgbuild
     # then remove /opt/pkgbuild
     pfexec rm -rf /opt/pkgbuild
+```
 
 The expected output from pkgtool is:
 
-    #!sh
+```sh
     INFO: Copying %use'd or %include'd spec files to SPECS directory
     INFO: Processing spec files
     INFO: Finding sources
@@ -199,19 +208,26 @@ The expected output from pkgtool is:
     ---------------------------------+-------------+-------------------------------
                           TSpkgbuild |      PASSED | 
 
+```
+
 Later on when using pkgtool you will likely see these harmless errors:
 
+```
     pkgparam: ERROR: unable to locate parameter information for "SUNWcar"
     pkgparam: ERROR: unable to locate parameter information for "SUNWkvm"
+```
 
 Now set up the path to the ts-specs install prefix:
 
-    #!sh
+```sh
     export PATH=/opt/ts/bin/:$PATH # or put this in your bashrc...
+```
 
 If you are new to pkgtool check out all the default settings like:
 
+```
     /opt/ts/bin/pkgtool --dumprc
+```
 
 ## Step 4: Patching ts-specs
 
@@ -221,10 +237,11 @@ One *critical* issue is that gnu tools have a circular dependency on *textinfo*.
 
 We just need to patch our ts-specs directory to disable textinfo and bypass this circular dependency. 
 
-    #!sh
+```sh
     cd ts-specs
     wget http://trac.mapnik.org/raw-attachment/wiki/OpenSolarisInstallation/ts-spec1-compile-gcc44.patch
     patch -p0 < ts-spec1-compile-gcc44.patch
+```
 
 ## Step 5: Installing Development Environment
 
@@ -232,7 +249,7 @@ Now we are ready for our base installs via ts-specs.
 
 Here are the commands that work to install gcc4.4:
 
-    #!sh
+```sh
     # build dependencies for gcc4.4
     pkgtool build devel/TSm4
     pkgtool build libs/TSgmp
@@ -254,6 +271,7 @@ Here are the commands that work to install gcc4.4:
     
     # python26 is already available, but grab a few extra python tools
     pfexec pkg install SUNWpython26-setuptools SUNWpython26-lxml
+```
 
 ## Step 6: Installing Core Mapnik Dependencies
 
@@ -261,13 +279,13 @@ We're going to do this from source, rather than use ts-specs just to make any de
 
 ### 6a: 32 bit - Postgres 8.4 from source
 
-Go to -> [32bit](/wiki:OpenSolarisInstallation/32bit/)
+Go to -> [32bit](OpenSolarisInstallation_32bit)
 
 This was my first approach, and it worked great. But, I needed osm2pgsql to run 64 bit (to handle osm planet imports), and postgres to run 64 bit for better performance. So the step below is the current effort.
 
 ### 6b: 64 bit - Postgres 8.3 from sun
 
-Go to -> [64bit](/wiki:OpenSolarisInstallation/64bit/)
+Go to -> [64bit](OpenSolarisInstallation_32bit)
 
 This approach attempts to get the whole stack running 64 bit, and 64 bit postgres and python are used from sun. Integrating with sun's postgres and python is really hairy, but postgres8.3 was desirable because it is known by the osm community to be faster than 8.4 for applying diffs with osm2pgsql and python from sun was desirable because it is highly customized to be able to run both 32 bit and 64 bit. However the *catch* with this approach is that mapnik's exceptions are broken (http://mail.python.org/pipermail/cplusplus-sig/2010-December/015822.html).
 
@@ -277,14 +295,13 @@ This approach attempts to get the whole stack running 64 bit, and 64 bit postgre
 
 Install Mapnik 0.7.2 or trunk (Mapnik2)
 
-For 64 bit builds you may need to apply patches from #675 and #676
+For 64 bit builds you may need to apply patches from [#675](https://github.com/mapnik/mapnik/issues/675) and [#676](https://github.com/mapnik/mapnik/issues/676)
 
 Mapnik 0.7.2:
 
 32bit:
 
-
-    #!sh
+```sh
     cd $SRC
     svn co http://svn.mapnik.org/branches/0.7.2-dev/ mapnik-0.7.2
     cd mapnik-0.7.2
@@ -300,9 +317,11 @@ Mapnik 0.7.2:
     
     python scons/scons.py
     pfexec python scons/scons.py install
+```
 
 64 bit:
 
+```
     python scons/scons.py configure \
       CXX="/opt/ts/gcc/4.4/bin/g++ -m64 -R/opt/ts/gcc/4.4/lib/amd64/ -R/usr/local/lib -R/usr/postgres/8.3/lib/amd64" \
       CC="/opt/ts/gcc/4.4/bin/gcc -m64 -R/opt/ts/gcc/4.4/lib/amd64/ -R/usr/local/lib -R/usr/postgres/8.3/lib/amd64" \
@@ -313,17 +332,19 @@ Mapnik 0.7.2:
       PYTHON_PREFIX=/usr/local/ \
       PYTHON=/usr/bin/amd64/python \
       DEMO=True \
+```
 
 NOTE: in 64 bit mode python exceptions will be broken (you will get segfaults instead) due to incompatible libgcc versions linked to by mapnik (/opt/ts/gcc/4/4/lib/ammd64/libgcc_s.so) vs python (/usr/sfw/lib/amd64/libgcc_s.so). Only know solution at this point is to paste this command before running python process that imports mapnik:
 
-
+```
     LD_PRELOAD=/usr/sfw/lib/amd64/libgcc_s.so /usr/bin/amd64/python
+```
 
 Mapnik2:
 
 32 bit:
 
-    #!sh
+```sh
     # mapnik trunk
     cd $SRC
     svn co http://svn.mapnik.org/trunk/ mapnik-trunk
@@ -340,6 +361,7 @@ Mapnik2:
     
     python scons/scons.py
     pfexec python scons/scons.py install
+```
 
 64bit:
 
@@ -349,7 +371,7 @@ Mapnik2:
 
 Run the nosetests:
 
-    #!sh
+```sh
     cd $SRC
     wget http://somethingaboutorange.com/mrl/projects/nose/nose-0.11.2.tar.gz
     tar xvf nose-0.11.2.tar.gz
@@ -361,11 +383,11 @@ Run the nosetests:
     # with trunk you should get:
     FAILED (TODO=9, errors=8, failures=4)
     # with Mapnik 0.7.1 you should get no errors or failures
+```
 
 Test actual rendering (this assumes you've got an osm db setup up with data using osm2pgsql):
 
-
-    #!sh
+```sh
     # install nik2img
     svn co http://mapnik-utils.googlecode.com/svn/trunk/nik2img/ nik2img-svn
     cd nik2img-svn
@@ -374,14 +396,19 @@ Test actual rendering (this assumes you've got an osm db setup up with data usin
     svn co http://svn.openstreetmap.org/applications/rendering/mapnik/ osm-mapnik
     cd osm-mapnik
     ./generate_xml.py --dbname osm --accept-none
+```
 
 If using Mapnik2:
 
+```
     # if using mapnik trunk upgrade xml into new copy:
     upgrade_map_xml.py osm.xml osm2.xml
     # test rendering
     nik2img.py osm2.xml image.png --mapnik-version 2
+```
 
 Otherwise:
 
+```
     nik2img.py osm.xml image.png
+```
