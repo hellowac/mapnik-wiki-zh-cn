@@ -99,10 +99,11 @@ First all directions are tried, then font size is reduced and all directions are
 For this algorithm horizontal-alignment and vertical-alignment should be set to "auto".
 
 Examples: 
- * N,S,15,10,8 (tries placement above with font-size give in "size" tag, then below and if that fails it tries placement above with size 15, then blow with size 15, above with 10, ...).
- * N,S (only font size from "size" tag)
- * X,10,5 (keep position, but try to reduce size)
- * _Invalid:_ 10,5 (no position specified)
+
+* "N,S,15,10,8" (tries placement above with font-size give in "size" tag, then below and if that fails it tries placement above with size 15, then blow with size 15, above with 10, ...).
+* "N,S" (only font size from "size" tag)
+* "X,10,5" (keep position, but try to reduce size)
+* _Invalid:_ "10,5" (no position specified)
 
 Note: Whitespace is ignored, e.g. "N,S,15,10" and "N, S,15,10" and "N, S, 15, 10" are equivalent.
 
