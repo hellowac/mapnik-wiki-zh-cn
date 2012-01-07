@@ -104,7 +104,7 @@ See the docstring at: http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-mo
 
 ## C++
 
-Plugin datasource initialization example code can be found on PluginArchitecture.
+Plugin datasource initialization example code can be found on [[PluginArchitecture]].
 
 A Raster datasource may be created as follows:
 
