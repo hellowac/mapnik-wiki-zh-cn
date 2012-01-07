@@ -2,13 +2,13 @@
 <!-- Version: 2 -->
 <!-- Last-Modified: 2010/12/08 13:45:47 -->
 <!-- Author: springmeyer -->
-For the main install page see: http://trac.mapnik.org/wiki/OpenSolarisInstallation#Step6:InstallingCoreMapnikDependencies
+For the main install page see: https://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation part InstallingCoreMapnikDependencies
 
 ## 6a: 32 bit - Postgres 8.4 from source
 
 First we set up a few environment variables
 
-    #!sh
+```sh
     TARGET="~/.bashrc"
     echo 'export PATH=/opt/ts/gcc/4.4/bin/:/opt/ts/bin:/usr/local/bin/:/usr/local/pgsql/bin:$PATH' >> $TARGET
     echo 'export PYTHONPATH=/usr/local/lib/python2.6/site-packages:$PYTHONPATH' >>  $TARGET
@@ -16,17 +16,19 @@ First we set up a few environment variables
     echo 'export LANG="C"' >>  $TARGET
     echo 'export LC_ALL="C"' >> $TARGET
     source $TARGET
+```
 
 Then set up a build area:
 
-    #!sh
+```sh
     # set up a directory for source builds of familiar geo libs
     mkdir src
     export SRC=`pwd`/src
+```
 
 Then get on with the installs
 
-    #!sh
+```sh
     # icu
     cd $SRC
     wget http://download.icu-project.org/files/icu4c/4.4.1/icu4c-4_4_1-src.tgz
@@ -160,11 +162,10 @@ Then get on with the installs
     # grab a hard revision that we know works on solaris (based on wikipedia usage, although they compile with suncc)
     svn co -r 19933 http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/
     cd osm2pgsql
+```
+apply patch
 
-# APPLY PATCH
-
-
-    #!diff
+```diff
     Index: Makefile
     ===================================================================
     --- Makefile    (revision 19933)
@@ -177,9 +178,11 @@ Then get on with the installs
      
      SRCS:=$(wildcard *.c) $(wildcard *.cpp)
      OBJS:=$(SRCS:.c=.o)
+```
 
 finish install
 
+```
     make
     pfexec cp osm2pgsql /usr/local/bin
     pfexec chmod +x /usr/local/bin/osm2pgsql
@@ -187,3 +190,4 @@ finish install
     # get latest style and install
     svn up default.style
     pfexec cp default.style /usr/share/osm2pgsql/
+```
