@@ -73,6 +73,7 @@ If you want to add something after the query (for example ORDER BY) you must use
 ## XML
 
 If you are using XML mapfiles to style your data, then using a PostGIS datasource (with a sub-select in this case) looks like:
+
  * *Note*: if you use a sub-select that changes the extents of your features, make sure to use `estimate_extent=false` otherwise Mapnik will return no features. Otherwise you don't need to use the `estimate_extent` or `extent` parameters at all.
 
 ```xml
