@@ -53,7 +53,7 @@ Most render functions like `save_to_string` also take a third argument which mus
  TODO: discussion of tradeoffs and situations to use which format
 
 ### References
- * http://mapserver.org/faq.html#which-image-format-should-i-use
+ * http://mapserver.org/output/index.html
  * http://trac.osgeo.org/mapserver/ticket/2436
  * http://www.perrygeo.net/wordpress/?p=50
  * http://mapserver.org/output/agg.html
