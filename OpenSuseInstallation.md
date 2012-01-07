@@ -24,6 +24,7 @@ TODO
  * In YaST2, make sure to enable "Search in" -> "File list" and search for "gcc".
 
  * Make sure these packages are checked (otherwise Boost will not be found during the scons configure stage of Mapnik installation):
+
   * 'boost-devel'
   * 'cpp43'
   * 'gcc'
@@ -34,21 +35,25 @@ TODO
 
  * As root, issue the following:
 
+```
     $ zypper ar http://download.opensuse.org/repositories/Application:/Geo/SLE_11/ "Geo"
     $ zypper refresh
     $ zypper install libjpeg-devel libtiff-devel libpng-devel boost-devel python-cairo-devel 
     $ zypper install cairomm-devel libicu-devel libtool libxml2-devel libproj0 libproj-devel 
     $ zypper install subversion
+```
 
 ## SLES 11 x86_64: Installing Mapnik
 Still as root:
 
+```
     $ cd && mkdir src && cd src
     $ svn export http://svn.mapnik.org/tags/release-0.7.1 mapnik-0.7.1
     $ cd mapnik-0.7.1/
     $ python scons/scons.py configure
     $ python scons/scons.py install
     $ ldconfig
+```
 
  * Next, start the python REPL and try to import mapnik:
 
