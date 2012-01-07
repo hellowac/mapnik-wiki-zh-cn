@@ -4,9 +4,9 @@ Mapnik supports a Plugin architecture read access to a variety of formats.
 
 Some plugins have been written in C++ and require no external dependencies, while others require access to a supporting C or C++ library (like libpq for postgis/postgresql and libgdal for gdal/org support).
 
-Interested in developing a new plugin see: DevelopingPlugins
+Interested in developing a new plugin see: [[DevelopingPlugins]]
 
-All current plugins are located in source:trunk/plugins/input/
+All current plugins are located in https://github.com/mapnik/mapnik/tree/master/plugins/input/
 
 | **Name**| **Availability**|**Status**|**Build by Default**|**Notes**|
 |:-------:|:---------------:|:--------:|:------------------:|:-------:|
@@ -28,10 +28,10 @@ To request additional plugins to be compiled and installed make sure you have th
 
 
 ```sh
-# attempt to build all plugins possible
-$ python scons/scons.py INPUT_PLUGINS='all'
-# build just the postgis plugin:
-$ python scons/scons.py INPUT_PLUGINS='postgis'
+    # attempt to build all plugins possible
+    $ python scons/scons.py INPUT_PLUGINS='all'
+    # build just the postgis plugin:
+    $ python scons/scons.py INPUT_PLUGINS='postgis'
 ```
 
 ## Querying plugins
