@@ -6,7 +6,7 @@ Mapnik's PluginArchitecture supports the use of different input formats.
 
 One such plugin supports the [PostGIS](http://en.wikipedia.org/wiki/PostGIS) extension to the popular PostgreSQL database.
 
-See also a performance tuning page: OptimizeRenderingWithPostGIS
+See also a performance tuning page: [[OptimizeRenderingWithPostGIS]]
 
 # New 0.7.0 Features
 
@@ -38,6 +38,7 @@ To check if the PostGIS plugin built and was installed correctly, try the usual 
 # Usage
 
 *Note*: 
+
  * Spatial tables read from PostGIS by Mapnik _must_ have a cooresponding entry in `geometry_columns`.
  * Use the `geometry_field` parameter to specify which field to use if you have >1 geometry in the table/query (added in r769).
 
@@ -100,7 +101,7 @@ If you don't do this, you might not see data from this data source at all, even 
 
 ## C++
 
-Plugin datasource initialization example code can be found on PluginArchitecture.
+Plugin datasource initialization example code can be found on [[PluginArchitecture]].
 
 A PostGIS datasource may be created as follows:
 
