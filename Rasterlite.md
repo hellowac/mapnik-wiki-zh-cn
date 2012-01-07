@@ -32,7 +32,7 @@ TODO
 
 # Styling
 
-To style a layer use the RasterSymbolizer
+To style a layer use the [[RasterSymbolizer]]
 
 # Usage
 
@@ -56,7 +56,7 @@ TODO
 
 ## C++
 
-Plugin datasource initialization example code can be found on PluginArchitecture.
+Plugin datasource initialization example code can be found on [[PluginArchitecture]].
 
 A Raster datasource may be created as follows:
 
