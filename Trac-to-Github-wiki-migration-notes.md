@@ -120,21 +120,21 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[MinScaleDenominator](http://github.com/mapnik/mapnik/wiki/MinScaleDenominator)|yes|||
 |[ModServer](http://github.com/mapnik/mapnik/wiki/ModServer)|yes|||
 |[Mapnik Maps on the Command-Line](http://github.com/mapnik/mapnik/wiki/Nik2Img)|yes|||
-|[Notes and caveats](http://github.com/mapnik/mapnik/wiki/Notes-and-caveats)||||
-|[OCCI](http://github.com/mapnik/mapnik/wiki/OCCI)||||
-|[OGR](http://github.com/mapnik/mapnik/wiki/OGR)||||
-|[Installing Mapnik and Dependencies on Open Solaris](http://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation)||||
-|[OpenSolarisInstallation_32bit](http://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation_32bit)||||
-|[OpenSolarisInstallation_64bit](http://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation_64bit)||||
-|[Trouble Shooting on Open Solaris](http://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation_TroubleShooting)||||
-|[OpenSuse](http://github.com/mapnik/mapnik/wiki/OpenSuse)||||
-|[Installing Mapnik on Suse](http://github.com/mapnik/mapnik/wiki/OpenSuseInstallation)||||
-|[Optimize Rendering with PostGIS](http://github.com/mapnik/mapnik/wiki/OptimizeRenderingWithPostGIS)||||
-|[OsmPlugin](http://github.com/mapnik/mapnik/wiki/OsmPlugin)||||
-|[Mapnik Output Formats](http://github.com/mapnik/mapnik/wiki/OutputFormats)||||
-|[Notes on Mapnik Packages](http://github.com/mapnik/mapnik/wiki/PackageBuilding)||||
-|[Paleoserver](http://github.com/mapnik/mapnik/wiki/Paleoserver)||||
-|[PluginArchitecture](http://github.com/mapnik/mapnik/wiki/PluginArchitecture)||||
+|[Notes and caveats](http://github.com/mapnik/mapnik/wiki/Notes-and-caveats)|yes|||
+|[OCCI](http://github.com/mapnik/mapnik/wiki/OCCI)|yes|||
+|[OGR](http://github.com/mapnik/mapnik/wiki/OGR)|yes|||
+|[Installing Mapnik and Dependencies on Open Solaris](http://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation)|yes|||
+|[OpenSolarisInstallation_32bit](http://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation_32bit)|yes|||
+|[OpenSolarisInstallation_64bit](http://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation_64bit)|yes|||
+|[Trouble Shooting on Open Solaris](http://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation_TroubleShooting)|yes|||
+|[OpenSuse](http://github.com/mapnik/mapnik/wiki/OpenSuse)|yes|||
+|[Installing Mapnik on Suse](http://github.com/mapnik/mapnik/wiki/OpenSuseInstallation)|yes|||
+|[Optimize Rendering with PostGIS](http://github.com/mapnik/mapnik/wiki/OptimizeRenderingWithPostGIS)|yes|||
+|[OsmPlugin](http://github.com/mapnik/mapnik/wiki/OsmPlugin)|yes|||
+|[Mapnik Output Formats](http://github.com/mapnik/mapnik/wiki/OutputFormats)|yes|||
+|[Notes on Mapnik Packages](http://github.com/mapnik/mapnik/wiki/PackageBuilding)|yes|||
+|[Paleoserver](http://github.com/mapnik/mapnik/wiki/Paleoserver)|yes|||
+|[PluginArchitecture](http://github.com/mapnik/mapnik/wiki/PluginArchitecture)|yes|||
 |[PointSymbolizer](http://github.com/mapnik/mapnik/wiki/PointSymbolizer)||||
 |[PolygonPatternSymbolizer](http://github.com/mapnik/mapnik/wiki/PolygonPatternSymbolizer)||||
 |[PolygonSymbolizer](http://github.com/mapnik/mapnik/wiki/PolygonSymbolizer)||||
