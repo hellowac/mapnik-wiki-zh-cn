@@ -2,7 +2,7 @@
 <!-- Version: 4 -->
 <!-- Last-Modified: 2010/12/08 14:52:04 -->
 <!-- Author: springmeyer -->
-For the main install page see: http://trac.mapnik.org/wiki/OpenSolarisInstallation#Step6:InstallingCoreMapnikDependencies
+For the main install page see: https://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation part InstallingCoreMapnikDependencies
 
 ## 6b: 64 bit - Postgres 8.3 from sun
 
@@ -10,8 +10,9 @@ NOTE: next step on improving this approach will be to test using Postgres 9.0 an
 
 ### Getting 64 bit builds
 In a best case scenario building a tool 64 bit should be easy if:
- * 1) you can easily pass a few custom CFLAGS and LDFLAGS
- * 2) all the dependencies of that library are also 64 bit and PIC code.
+
+1. you can easily pass a few custom CFLAGS and LDFLAGS
+2. all the dependencies of that library are also 64 bit and PIC code.
 
 So, sometime it is as easy as:
 
@@ -23,38 +24,43 @@ So, sometime it is as easy as:
     pfexec make install
 
 But, lots can go wrong, including:
- * 1) code is not properly PIC
- * 2) different compilers are being invoked during configure such that passing those env flags cause the configure to fail
- * 3) older built tools (gcc, libtool, etc) are invoked and flags conflict in 64 bit mode, like -mt, or -M or -tag=CC
- * 4) the built scripts don't properly propogate your custom flags so that some code is built 32 bit and libraries fail with the -m64 flag
- * 5) some built scripts pull env variables from other apps compiled both 32 and 64 bit (like sun provided postgres)
+
+1. code is not properly PIC
+2. different compilers are being invoked during configure such that passing those env flags cause the configure to fail
+3. older built tools (gcc, libtool, etc) are invoked and flags conflict in 64 bit mode, like -mt, or -M or -tag=CC
+4. the built scripts don't properly propogate your custom flags so that some code is built 32 bit and libraries fail with the -m64 flag
+5. some built scripts pull env variables from other apps compiled both 32 and 64 bit (like sun provided postgres)
   * in this case you *must* have the 64bit commands on your path, such as PATH=/usr/postgres/bin/amd64
 
 
 To get started first we set up a few environment variables
 
-    #!sh
+```sh
     TARGET="~/.bashrc"
     echo 'export PATH=/usr/bin/amd64:/opt/ts/gcc/4.4/bin/:/opt/ts/bin:/usr/local/bin/:/usr/postgres/8.3/bin/amd64:$PATH' >> $TARGET
     echo 'export PYTHONPATH=/usr/local/lib/python2.6/site-packages:$PYTHONPATH' >>  $TARGET
     source $TARGET
+```
 
 Also command like this was needed with the 32 bit approach but appear unneeded with this 64 bit approach:
 
+```
     echo 'export LD_LIBRARY_PATH=/usr/local/lib:/usr/postgres/8.3/lib/amd64' >>  $TARGET
     echo 'export LANG="C"' >>  $TARGET
     echo 'export LC_ALL="C"' >> $TARGET
+```
 
 Then set up a build area:
 
-    #!sh
+```sh
     # set up a directory for source builds of familiar geo libs
     mkdir src
     export SRC=`pwd`/src
+```
 
 Then get on with the installs
 
-    #!sh
+```sh
     # icu
     cd $SRC
     wget http://download.icu-project.org/files/icu4c/4.4.1/icu4c-4_4_1-src.tgz
@@ -68,9 +74,9 @@ Then get on with the installs
     ./runConfigureICU Solaris/GCC --with-library-bits=64
     make
     pfexec make install
+```
 
-
-    #!sh
+```sh
     # boost
     cd $SRC
     wget wget http://voxel.dl.sourceforge.net/project/boost/boost/1.45.0/boost_1_45_0.tar.bz2
@@ -110,9 +116,9 @@ Then get on with the installs
       link=shared \
       release \
       install
+```
 
-
-    #!sh
+```sh
     # proj
     cd $SRC
     VER=4.7.0
@@ -129,9 +135,9 @@ Then get on with the installs
     ./configure
     make
     pfexec make install
+```
 
-
-    #!sh
+```sh
     # geos
     cd $SRC
     VER=3.2.0
@@ -144,27 +150,29 @@ Then get on with the installs
     ./configure
     make
     pfexec make install
+```
 
 For postgres we use the sun provided version (for better or worse):
 
-
+```
     # install postgres 8.3 from sun
     pfexec pkg install SUNWpostgr-83-server SUNWpostgr-83-devel SUNWpostgr-83-client SUNWpostgr-83-contrib
+```
 
 Setup postgres
 
+```
     pfexec mkdir /database/pgdata
     pfexec chown postgres:postgres /database/pgdata
     pfexec su - postgres 
     export PATH=/usr/postgres/8.3/bin/amd64:$PATH
     initdb /database/pgdata
     pg_ctl -D /database/pgdata -l /usr/postgres/data/log start
-
+```
 
 Install postgres (compiled with gcc) against sun provided postgres (likely compiled with ancient suncc version). This is dangerous, but it worked.
 
-
-    #!sh
+```sh
     # postgis
     cd $SRC
     VER=1.5.1
@@ -179,6 +187,7 @@ Install postgres (compiled with gcc) against sun provided postgres (likely compi
     # so symlink them into the same directory as an workaround
     pfexec ln -s /usr/local/lib/libproj.so.0 /usr/postgres/8.3/lib/amd64/libproj.so.0
     pfexec ln -s /usr/local/lib/libgeos_c.so.1 /usr/postgres/8.3/lib/amd64/libgeos_c.so.1
+```
 
 The goal with the nasty bit of flags above is to force the proper gcc + 64 bit build environment for postgis to work at runtime. This is tricky because the sun postgres tries to tell postgis to compile using hardcoded paths to compilers that don't even exist for open solaris (due to pg_config) and also because we cannot modify these settings except by overrides to `make` (not configure).
 
@@ -188,8 +197,7 @@ Mainly we are trying to avoid this error:
 
 Now set up postgis:
 
-
-    #!sh
+```sh
     # create the template_postgis db
     pfexec su - postgres
     export PATH=/usr/local/bin:/usr/postgres/8.3/bin/amd64/:$PATH
@@ -200,9 +208,9 @@ Now set up postgis:
     psql -q -d template_postgis -f $POSTGIS_SQL_PATH/spatial_ref_sys.sql
     # now switch back to your normal user
     exit
+```
 
-
-    #!sh
+```sh
     # gdal
     cd $SRC
     VER=1.7.2
@@ -217,18 +225,19 @@ Now set up postgis:
     pfexec make install
 
 
-    #!sh
+```sh
     # osm2pgsql
     cd $SRC
     #svn co http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/
     # grab a hard revision that we know works on solaris (based on wikipedia usage, although they compile with suncc)
     svn co -r 19933 http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/
     cd osm2pgsql
+```
 
-# APPLY PATCH
+Apply patch
 
 
-    #!diff
+```diff
     Index: Makefile
     ===================================================================
     --- Makefile    (revision 19933)
@@ -241,10 +250,11 @@ Now set up postgis:
      
      SRCS:=$(wildcard *.c) $(wildcard *.cpp)
      OBJS:=$(SRCS:.c=.o)
+```
 
 finish install
 
-    #!sh
+```sh
     make
     pfexec cp osm2pgsql /usr/local/bin
     pfexec chmod +x /usr/local/bin/osm2pgsql
@@ -252,12 +262,11 @@ finish install
     # get latest style and install
     svn up default.style
     pfexec cp default.style /usr/share/osm2pgsql/
-
+```
 
 ## Other stuff
 
 Apache, mod_wsgi, tilecache, pil...
-
 
     export CFLAGS='-m64'
     export CXXFLAGS='-m64'
@@ -308,7 +317,6 @@ Also can test PIL is 64 and PIC with:
     ctypes.CDLL('/usr/local/lib/python2.6/site-packages/PIL/64/_imaging.so')
 
 TileCache gocha:
-
 
     # now source installed PIL does not support `import Image`, so we change the imports in TC:
     pfexec vim TileCache/Layer.py
