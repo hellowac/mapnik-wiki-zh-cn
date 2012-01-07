@@ -38,7 +38,7 @@ If you have problems when running the oracle input plugin and get this when acce
 
     *** glibc detected *** double free or corruption (!prev): 0x08c52568 ***
 
-go to [http://www.oracle.com/technology/tech/oci/occi/occidownloads.html] and download the package 10.2.0.3.0 and overwrite the libraries in your oracle instantclient install path.
+go to http://www.oracle.com/technology/tech/oci/occi/occidownloads.html and download the package 10.2.0.3.0 and overwrite the libraries in your oracle instantclient install path.
 
 Look [here](http://bugs.gentoo.org/show_bug.cgi?id=257431) for references on the problem.
 
