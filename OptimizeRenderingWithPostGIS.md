@@ -155,7 +155,7 @@ SQL to the rescue! Let's have postgresql roll all those choices into 1 simple on
     from planet_osm_line where highway is not null) as foo
 ```
 
-The query is split over multiple lines so it's easy to see what's going on. You can also split your own queries into multiple lines in the stylesheet (Mapnik 0.6.0 > | see #173), if it helps you to understand long queries.
+The query is split over multiple lines so it's easy to see what's going on. You can also split your own queries into multiple lines in the stylesheet (Mapnik 0.6.0 > | see [#173](https://github.com/mapnik/mapnik/issues/173)), if it helps you to understand long queries.
 
 Now you can replace the two filters with these:
 
