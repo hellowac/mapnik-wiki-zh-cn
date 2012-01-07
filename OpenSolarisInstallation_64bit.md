@@ -223,7 +223,7 @@ Now set up postgis:
     ./configure --with-proj --with-geos --with-postgres
     make
     pfexec make install
-
+```
 
 ```sh
     # osm2pgsql
