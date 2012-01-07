@@ -135,16 +135,16 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Notes on Mapnik Packages](http://github.com/mapnik/mapnik/wiki/PackageBuilding)|yes|||
 |[Paleoserver](http://github.com/mapnik/mapnik/wiki/Paleoserver)|yes|||
 |[PluginArchitecture](http://github.com/mapnik/mapnik/wiki/PluginArchitecture)|yes|||
-|[PointSymbolizer](http://github.com/mapnik/mapnik/wiki/PointSymbolizer)||||
-|[PolygonPatternSymbolizer](http://github.com/mapnik/mapnik/wiki/PolygonPatternSymbolizer)||||
-|[PolygonSymbolizer](http://github.com/mapnik/mapnik/wiki/PolygonSymbolizer)||||
-|[PostGIS](http://github.com/mapnik/mapnik/wiki/PostGIS)||||
-|[Python3k](http://github.com/mapnik/mapnik/wiki/Python3k)||||
-|[Raster](http://github.com/mapnik/mapnik/wiki/Raster)||||
-|[RasterColorizer](http://github.com/mapnik/mapnik/wiki/RasterColorizer)||||
-|[Rasterlite](http://github.com/mapnik/mapnik/wiki/Rasterlite)||||
-|[RasterSymbolizer](http://github.com/mapnik/mapnik/wiki/RasterSymbolizer)||||
-|[Related projects and utilities](http://github.com/mapnik/mapnik/wiki/Related-projects-and-utilities)||||
+|[PointSymbolizer](http://github.com/mapnik/mapnik/wiki/PointSymbolizer)|yes|||
+|[PolygonPatternSymbolizer](http://github.com/mapnik/mapnik/wiki/PolygonPatternSymbolizer)|yes|||
+|[PolygonSymbolizer](http://github.com/mapnik/mapnik/wiki/PolygonSymbolizer)|yes|||
+|[PostGIS](http://github.com/mapnik/mapnik/wiki/PostGIS)|yes|||
+|[Python3k](http://github.com/mapnik/mapnik/wiki/Python3k)|yes|||
+|[Raster](http://github.com/mapnik/mapnik/wiki/Raster)|yes|||
+|[RasterColorizer](http://github.com/mapnik/mapnik/wiki/RasterColorizer)|yes|||
+|[Rasterlite](http://github.com/mapnik/mapnik/wiki/Rasterlite)|yes|||
+|[RasterSymbolizer](http://github.com/mapnik/mapnik/wiki/RasterSymbolizer)|yes|||
+|[Related projects and utilities](http://github.com/mapnik/mapnik/wiki/Related-projects-and-utilities)|yes|||
 |[Release0.6.0](http://github.com/mapnik/mapnik/wiki/Release0.6.0)||||
 |[Release0.6.1](http://github.com/mapnik/mapnik/wiki/Release0.6.1)||||
 |[Mapnik 0.7.0 Release](http://github.com/mapnik/mapnik/wiki/Release0.7.0)||||
