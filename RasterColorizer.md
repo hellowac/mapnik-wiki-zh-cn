@@ -6,7 +6,7 @@
 
 *New in 0.8*
 
-(Note: This document has been copied and translated from https://github.com/BenMoores/mapnik-trunk/wiki/RasterColorizer)
+(Note: This document has been copied and translated from https://github.com/BenMoores/mapnik-trunk/wiki/RasterColorizer
 
 The Raster Colorizer allows the palette of rasters to be modified, for example, colorizing a height map.
 
@@ -65,7 +65,7 @@ Optional attributes:
 
 ## Example XML
 
-See [source:trunk/tests/data/good_maps/raster_colorizer.xml] for more examples.
+See https://github.com/mapnik/mapnik/blob/master/tests/data/good_maps/raster_symbolizer.xml for more examples.
 
 In this example XML, the following value to color translation is performed:
 
