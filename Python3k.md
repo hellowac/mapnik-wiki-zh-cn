@@ -5,7 +5,7 @@
 
 Mapnik supports Python 3k as of r2239.  Mapnik uses Boost Python for its Python bindings, and boost gained Python 3 support at the 1.41 release, thanks to the excellent work of Haoyu Bai. Haoyu also provided the patch for initial py3k support for Mapnik.
 
-The ticket tracking support is #334.
+The ticket tracking support is [#334](https://github.com/mapnik/mapnik/issues/334).
 
 ## Building Boost with Python 3
 
