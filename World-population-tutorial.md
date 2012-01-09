@@ -1,3 +1,5 @@
+# Tutorial 3 -- Thematic map of world population
+
 ## Step 2
 
 ### World Population XML
