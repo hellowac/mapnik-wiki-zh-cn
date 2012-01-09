@@ -10,7 +10,7 @@ Make sure you have mapnik installed and you've successfully run through [Getting
 
 Two examples will be shown:
 
-1) An XML configuration that exactly matches the map output from the pure python example in [Getting Started Python Tutorial](GettingStartedInPython).
+1) An XML stylesheet that exactly matches the map output from the pure python example in [Getting Started Python Tutorial](GettingStartedInPython).
 
 2) An XML stylesheet that uses a world borders dataset with population attributes to create a chloropleth map (aka thematic) by population size.
 
@@ -18,18 +18,18 @@ Two examples will be shown:
 
 ### Hello World XML
 
-First you will still need a python script that sets the basic map parameters and points to the XML config file:
+First you will need a python script that sets the basic map parameters and points to the XML stylesheet
 
 
 ```python
-    #!/usr/bin/env python
-    import mapnik
-    stylesheet = 'world_style.xml'
-    image = 'world_style.png'
-    m = mapnik.Map(600, 300)
-    mapnik.load_map(m, stylesheet)
-    m.zoom_all() 
-    mapnik.render_to_file(m, image)
+#!/usr/bin/env python
+import mapnik
+stylesheet = 'world_style.xml'
+image = 'world_style.png'
+m = mapnik.Map(600, 300)
+mapnik.load_map(m, stylesheet)
+m.zoom_all() 
+mapnik.render_to_file(m, image)
 ```
 
  * Copy the above code and save to a file called `world_map.py`
@@ -37,38 +37,36 @@ First you will still need a python script that sets the basic map parameters and
 Next you will need to create the `world_style.xml` file referenced in the `world_map.py` script.
 
 ```xml
-    <Map bgcolor="steelblue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+<Map bgcolor="steelblue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
 
-      <Style name="My Style">
-        <Rule>
-          <PolygonSymbolizer>
-            <CssParameter name="fill">#f2eff9</CssParameter>
-          </PolygonSymbolizer>
-          <LineSymbolizer>
-            <CssParameter name="stroke">rgb(50%,50%,50%)</CssParameter>
-            <CssParameter name="stroke-width">0.1</CssParameter>
-          </LineSymbolizer>
-        </Rule>
-      </Style>
-    
-      <Layer name="world" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
-        <StyleName>My Style</StyleName>
-        <Datasource>
-          <Parameter name="type">shape</Parameter>
-          <Parameter name="file">world_borders.shp</Parameter>
-        </Datasource>
-      </Layer>
-    
-    </Map>
+  <Style name="My Style">
+    <Rule>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">#f2eff9</CssParameter>
+      </PolygonSymbolizer>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(50%,50%,50%)</CssParameter>
+        <CssParameter name="stroke-width">0.1</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+
+  <Layer name="world" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>My Style</StyleName>
+    <Datasource>
+      <Parameter name="type">shape</Parameter>
+      <Parameter name="file">world_borders.shp</Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
 ```
 
  * Copy this XML and save to a file called `world_style.xml` beside the `world_map.py` script.
 
-Now run that script with this command:
+Now run that script:
 
-```sh
     python world_map.py
-```
 
  * It should output a png graphic in the same folder that matches the Getting Started Tutorial.
 
