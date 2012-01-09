@@ -6,7 +6,7 @@ This tutorial is designed to introduce a few more advanced Mapnik styling featur
 
 ## Step 1: data
 
-For this tutorial we'll use the same world borders shapefile from natural earth used for the first two tutorials. Refer to either (Tutorial 1)[GettingStartedInPython] or (Tutorial 2)[XMLGettingStarted] for details.
+For this tutorial we'll use the same world borders shapefile from natural earth used for the first two tutorials. Refer to either [Tutorial 1](GettingStartedInPython) or [Tutorial 2](XMLGettingStarted) for details.
 
 This script should result in a graphic like this:
 
