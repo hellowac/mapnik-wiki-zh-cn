@@ -24,27 +24,21 @@ First you will still need a python script that sets the basic map parameters and
 ```python
     #!/usr/bin/env python
     import mapnik
-    mapfile = 'world_styles.xml'
-    map_output = 'hello_world_using_xml_config.png'
+    stylesheet = 'world_style.xml'
+    image = 'world_style.png'
     m = mapnik.Map(600, 300)
-    mapnik.load_map(m, mapfile)
-    bbox = mapnik.Envelope(mapnik.Coord(-180.0, -90.0), mapnik.Coord(180.0, 90.0))
-    m.zoom_to_box(bbox) 
-    mapnik.render_to_file(m, map_output)
+    mapnik.load_map(m, stylesheet)
+    m.zoom_all() 
+    mapnik.render_to_file(m, image)
 ```
 
- * Copy this code and save to a file called *world_map.py*
+ * Copy the above code and save to a file called `world_map.py`
 
-Next you will need to create the *world_styles.xml* file referenced in the *world_map.py*
-
-Note: you will need to specify the path to the same Mapping Hacks [world borders shapefile](http://mappinghacks.com/data/world_borders.zip) using in Tutorial 1
+Next you will need to create the `world_style.xml` file referenced in the `world_map.py` script.
 
 ```xml
+    <Map bgcolor="steelblue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <!DOCTYPE Map>
-    <Map bgcolor="steelblue" srs="+proj=latlong +datum=WGS84">
-    
       <Style name="My Style">
         <Rule>
           <PolygonSymbolizer>
@@ -57,18 +51,18 @@ Note: you will need to specify the path to the same Mapping Hacks [world borders
         </Rule>
       </Style>
     
-      <Layer name="world" srs="+proj=latlong +datum=WGS84">
+      <Layer name="world" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
         <StyleName>My Style</StyleName>
         <Datasource>
           <Parameter name="type">shape</Parameter>
-          <Parameter name="file">/path/to/your/world_borders</Parameter>
+          <Parameter name="file">world_borders.shp</Parameter>
         </Datasource>
       </Layer>
     
     </Map>
 ```
 
- * Copy this XML and save to a file called *world_styles.xml* beside the *world_map.py* script
+ * Copy this XML and save to a file called `world_style.xml` beside the `world_map.py` script.
 
 Now run that script with this command:
 
