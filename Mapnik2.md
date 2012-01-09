@@ -50,28 +50,9 @@ After installing Mapnik2 you will have a new command available called 'upgrade_m
         Usage: upgrade_map_xml.py <input_file> <output_file>
 ```
 
-Also, for osm.xml users, you will note that this script does not preserve entities (sorry). You may be interested in an experimental version of this script (but not installed by default) which does. See:
+Also, for osm.xml users, you will note that this script does not preserve entities (sorry, it is not feasible).
 
-***WARNING*** this script has not been kept in sync with the main script mentioned above.
-
-https://github.com/mapnik/mapnik/blob/master/utils/upgrade_map_xml/upgrade_map_xml_keep_ent.py
-
-Also, we have ported support for the new Mapnik2 syntax to the upcoming 0.7.2 release, so you can stay on the 0.7 series but keep your stylesheets in the cleaner Mapnik2 format.
-
-## External Applications
-
-Special care will be needed to run various external applications against Mapnik2:
-
-### Python Applications with Mapnik2
-
-Note: you cannot do:
-
-```python
-    >>> import mapnik
-    >>> import mapnik2
-```
-
-This is because the namespaces will clash. We ultimately plan to release Mapnik2 using the standard `>>> import mapnik` namespace, so its not worth the trouble to make the above work. The rule of thumb is that you can have both installed just only run one at a time.
+Also, we have ported support for the new Mapnik2 syntax to the 0.7.2 release, so with 0.7.2 you can stay on the stable 0.7 series but keep your stylesheets in the cleaner Mapnik2 format.
 
 ### Cascadenik
 
@@ -84,7 +65,7 @@ Nik2img as of 0.5.0 supports both mapnik and mapnik2 transparently. Pass --mapni
 ### mod_tile/renderd
 
 Supports Mapnik2 as of [r22900](http://trac.openstreetmap.org/changeset/22900)
-But requires a patch to the Makefile and moving to the side any non-mapnik2 headers.
+But (if using the ==2.0.0 release) requires a patch to the Makefile and moving to the side any non-mapnik2 headers.
 
 Here is the patch needed to the Makefile:
 
@@ -104,55 +85,9 @@ Here is the patch needed to the Makefile:
      RENDER_LDFLAGS += -licuuc -lboost_regex
 ```
 
-Because Mapnik2 headers are not renamed 'include/mapnik' it is not possible to simultaneously compile C++ applications against headers of both Mapnik2 and Mapnik 0.7.x.
+Because Mapnik2 headers are not renamed (they are still 'include/mapnik'_ it is not possible to simultaneously compile C++ applications against headers of both Mapnik2 and Mapnik 0.7.x.
 
 However, Python applications should be able to work against either Mapnik or Mapnik2 if both are installed.
-
-So, for C++ compiles if you currently have old mapnik headers installed you must remove them and install mapnik2 headers in their place:
-
-```sh
-    rm -rf /usr/local/include/mapnik
-    # re-install mapnik2 headers
-    cd <mapnik2 sources>
-    sudo scons install
-    # build mod_tile/renderd with above patch
-    svn co http://svn.openstreetmap.org/applications/utils/mod_tile
-    cd mod_tile
-    make # will take a long time
-    sudo make install
-    # now if you want to later rebuild mod_tile agains Mapnik 0.7.x
-    # just remove the mapnik2 headers and re-install mapnik 0.7.x
-    # this is easy as mapnik2 now supports uninstalling
-    cd <old mapnik sources>
-    sudo scons uninstall # yah!
-    # then recompile mod_tile/ rendered
-    cd mod_tile
-    make clean
-    make
-    sudo make install
-```
-
-## Getting Mapnik2 source
-
-Previously Mapnik2 was in a branch, but as of Dec 16th, 2009 is it mainline trunk
-
-Checkout trunk with:
-
-```
-    svn co http://svn.mapnik.org/trunk mapnik2
-```
-
-Or switch from the old branch to trunk by doing:
-
-```
-    svn switch http://svn.mapnik.org/trunk .
-```
-
-Similarly, if you wish to stay on the previous trunk code, that is now the 0.7.1 release:
-
-```
-    svn switch http://svn.mapnik.org/tags/release-0.7.1 .
-```
 
 ## Changes
 
