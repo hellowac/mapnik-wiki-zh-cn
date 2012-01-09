@@ -28,7 +28,7 @@ print "rendered image to '%s'" % image
 
 ## Step 2: data
 
-Now, we need some data to render, let's use a shapefile of world border polygons from http://naturalearthdata.com. Download the data from this wiki's local cache [here](data/110m-admin-0-countries.zip) or directly from the [Natural Earth Data site](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/110m-admin-0-countries.zip). Unzip the archive in the same directory as the `world_map.py`. Once unzipped, you should see four files like:
+Now, we need some data to render. Let's use a shapefile of world border polygons from http://naturalearthdata.com. Download the data from this wiki's local cache [here](data/110m-admin-0-countries.zip) or directly from the [Natural Earth Data site](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/110m-admin-0-countries.zip). Unzip the archive in the same directory as the `world_map.py`. Once unzipped, you should see four files like:
 
     ne_110m_admin_0_countries.shp
     ne_110m_admin_0_countries.shx
