@@ -1,20 +1,22 @@
-<!-- Name: MapnikTutorials -->
-<!-- Version: 8 -->
-<!-- Last-Modified: 2010/01/25 15:40:55 -->
-<!-- Author: springmeyer -->
 # Mapnik Tutorials
 
-Make sure to see LearningMapnik for more topics
+Make sure to see [LearningMapnik](LearningMapnik) for more topics
 
-## Hello World
+## Hello World in Python
 
-[GettingStarted - 'Hello,world!'](https://github.com/mapnik/mapnik/wiki/GettingStartedInPython) using the Python bindings.  
+[GettingStarted - 'Hello,world!'](GettingStartedInPython) using the Python bindings.  
+
+[[/images/hello.png]]
+
+## Hello World in XML
+
+[GettingStartedInXML - 'Hello,world!'](GettingStartedInXML) using an XML stylesheet.  
 
 [[/images/hello.png]]
 
 ## World Population
 
-[XMLGettingStarted](https://github.com/mapnik/mapnik/wiki/GettingStartedInXML) - Python and XML styling
+[XMLGettingStarted](GettingStartedInXML) - Python and XML styling
 
 [[/images/population.png]]
 
@@ -27,4 +29,4 @@ Make sure to see LearningMapnik for more topics
  * Quantumnik - http://bitbucket.org/springmeyer/quantumnik
  * ExampleCode -- Code snippets from Mapnik users
 
-For details on Mapnik features see [LearningMapnik](https://github.com/mapnik/mapnik/wiki/LearningMapnik)
+For details on Mapnik features see [LearningMapnik](LearningMapnik)
