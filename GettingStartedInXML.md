@@ -10,9 +10,7 @@ Make sure you have mapnik (and the python bindings) installed and you've success
 
 This tutorial covers using an XML stylesheet to rendering output that exactly matches the map output from the pure python example in [Getting Started Python Tutorial](GettingStartedInPython).
 
-## Step 1
-
-### Hello World XML
+## Step 1: rendering script
 
 First you will need a python script that sets the basic map parameters and points to the XML stylesheet. Copy the code below and save to a file called `world_map.py`.
 
@@ -28,6 +26,8 @@ mapnik.render_to_file(m, image)
 print "rendered image to '%s'" % image
 ```
 
+## Step 2: data
+
 Now, we need some data to render, let's use a shapefile of world border polygons from http://naturalearthdata.com. Download the data from this wiki's local cache [here](data/110m-admin-0-countries.zip) or directly from the [Natural Earth Data site](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/110m-admin-0-countries.zip). Unzip the archive in the same directory as the `world_map.py`. Once unzipped, you should see four files like:
 
     ne_110m_admin_0_countries.shp
@@ -40,7 +40,9 @@ To download and unzip on the command line with the do:
     wget https://github.com/mapnik/mapnik/wiki/data/110m-admin-0-countries.zip
     unzip 110m-admin-0-countries.zip # creates ne_110m_admin_0_countries.shp
 
-Next, create the `world_style.xml` file referenced in the `world_map.py` script. Copy this XML and save to a file called `world_style.xml`, also in the same directory as `world_map.py` script.
+## Step 3: style
+
+Finally, create the `world_style.xml` file referenced in the `world_map.py` script. Copy this XML and save to a file called `world_style.xml`, also in the same directory as `world_map.py` script.
 
 ```xml
 <Map background-color="steelblue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
@@ -62,6 +64,8 @@ Next, create the `world_style.xml` file referenced in the `world_map.py` script.
 
 </Map>
 ```
+
+## Step 4: test
 
 Now run the python script:
 
