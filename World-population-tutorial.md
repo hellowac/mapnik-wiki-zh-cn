@@ -1,27 +1,27 @@
 # Tutorial 3 -- Thematic map of world population
 
-## Step 2
+## Overview
 
-### World Population XML
+This tutorial is designed to introduce a few more advanced Mapnik styling features, mainly `Rules` and `Filters`.
 
-Note: you will need to download the [modified world borders shapefile](http://trac.mapnik.org/attachment/wiki/XMLGettingStarted/world_borders.zip).
+## Step 1: data
 
- * Note: this file is originally from [Thematic Mapping Blog](http://thematicmapping.org/downloads/world_borders.php). The version attached here is the simpler shapefile provided there with some modification made to avoid problems that occur when displaying the map in projections such as 900913/3785 (this tutorial does not use this projection so you can use the original shapefiles as well). See [ticket 308](https://github.com/mapnik/mapnik/issues/308) for details.
+For this tutorial we'll use the same world borders shapefile from natural earth used for the first two tutorials. Refer to either (Tutorial 1)[GettingStartedInPython] or (Tutorial 2)[XMLGettingStarted] for details.
 
 This script should result in a graphic like this:
 
 [[/images/world_population_minimized.png]]
 
 ```python
-    #!/usr/bin/env python
-    
-    import mapnik
-    mapfile = "population.xml"
-    m = mapnik.Map(1400, 600)
-    mapnik.load_map(m, mapfile)
-    bbox = mapnik.Envelope(mapnik.Coord(-180.0, -75.0), mapnik.Coord(180.0, 90.0))
-    m.zoom_to_box(bbox) 
-    mapnik.render_to_file(m, 'world_population.png', 'png')
+#!/usr/bin/env python
+
+import mapnik
+mapfile = "population.xml"
+m = mapnik.Map(1400, 600)
+mapnik.load_map(m, mapfile)
+bbox = mapnik.Envelope(mapnik.Coord(-180.0, -75.0), mapnik.Coord(180.0, 90.0))
+m.zoom_to_box(bbox) 
+mapnik.render_to_file(m, 'world_population.png', 'png')
 ```
 
 And here is the xml file:
