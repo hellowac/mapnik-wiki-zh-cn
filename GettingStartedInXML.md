@@ -1,26 +1,18 @@
-## Tutorial 2  -- 'Hello,world!' using XML configuration
+# Tutorial 2  -- 'Hello,world!' using an XML stylesheet
 
-### Overview
+## Overview
 
 Make sure you have mapnik installed and you've successfully run through [Getting Started Python Tutorial](GettingStartedInPython).
 
  * This page will guide you through using the Mapnik python bindings along with a separate XML file for your map styles.
 
- * This is a useful approach to manage your map styles/rules separately from your python code, and can be advantageous for very complex formatting. Therefore, an XML configuration is used by the Open Street Map project to do intense filtering of PostGIS data by attribute.
+ * This is a useful approach to manage your map styles/rules separately from your python code, and can be advantageous for very complex formatting.
 
 Two examples will be shown:
 
 1) An XML configuration that exactly matches the map output from the pure python example in [Getting Started Python Tutorial](GettingStartedInPython).
 
- * This is intended to help new users see the common usage of Mapnik style and rule parameters.
- * Note: These samples are intentionally sparse and do not take full advantage of Mapnik capabilities.
-  * See the [rundemo.py](https://github.com/mapnik/mapnik/blob/master/demo/python/rundemo.py) script in the downloads for more advanced usage of python bindings.
-  * See the [OSM XML example](https://github.com/mapnik/mapnik/blob/master/tests/data/good_maps/osm-styles.xml) in the tests folder for more advanced usage of XML.
-
-2) An XML configuration that uses a world borders dataset with population attributes to create a chloropleth map by population size.
- * This is intended to introduce the uses of rule filters and labeling in XML
-
-NOTE: the code for example 1, along with the code from [Getting Started Python Tutorial](GettingStartedInPython) can be downloaded in a zip bundle from a link below. These downloads contain relative paths to a data folder where you should place the world_borders.shp.
+2) An XML stylesheet that uses a world borders dataset with population attributes to create a chloropleth map (aka thematic) by population size.
 
 ## Step 1
 
