@@ -16,7 +16,7 @@ Make sure to see [LearningMapnik](LearningMapnik) for more topics
 
 ## World Population
 
-[XMLGettingStarted](GettingStartedInXML) - Python and XML styling
+[World population tutorial](World population tutorial) - Python and more advanced XML styling
 
 [[/images/population.png]]
 
