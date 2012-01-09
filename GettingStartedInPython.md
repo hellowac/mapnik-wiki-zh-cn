@@ -204,7 +204,8 @@ layer.styles.append('My Style')
 m.layers.append(layer)
 m.zoom_all()
 mapnik.render_to_file(m,'world.png', 'png')
-print "rendered image to 'world.png'"```
+print "rendered image to 'world.png'"
+```
 
  * Don't forget to ensure the correct path to your `ne_110m_admin_0_countries.shp` shapefile.
  * Mapnik accepts both the absolute path to your data as well as the relative path (Same goes for the path to where you want to save your file)
