@@ -15,9 +15,24 @@ Mapnik2 was over a year in development before formal release for two reasons:
    * Mapnik2 requires at least Boost 1.42, and we waited for major linux distributions to start packaging at least that boost version
    * Mapnik2 simplifies a few elements of the XML syntax in backward incompatible ways.
 
+## Naming conventions
+
 While Mapnik2 was in development (and for the 2.0.0 release) we implemented a naming change for ease of development and testing.
 
-So in python you can do:
+But this is now rolled back, following the first release of 2.0.0. So the basics are:
+
+| *version* | *library* | *python module* |
+------------|-----------|-----------------|
+| 0.7.x     | libmapnik | mapnik |
+| 2.0.0     | libmapnik2 | mapnik2 |
+| >= 2.1 (current master) | libmapnik | mapnik (mapnik2 works but issues warning) |
+
+To get the library name for your install of Mapnik2 do:
+
+    $ mapnik-config --libs
+    -L/usr/local/lib -lmapnik
+
+Specifically in python with Mapnik 2.0.0 and 2.1 you can do:
 
 ```python
     >>> import mapnik2 # . This made it easier for developers to run the Mapnik 0.7.x series alongside Mapnik2.
@@ -50,7 +65,7 @@ After installing Mapnik2 you will have a new command available called 'upgrade_m
         Usage: upgrade_map_xml.py <input_file> <output_file>
 ```
 
-Also, for osm.xml users, you will note that this script does not preserve entities (sorry, it is not feasible).
+For osm.xml users, you will note that this script does not preserve entities. The best approach (until osm.xml is upgraded to require at least mapnik 2.x) is to continue editing the osm.xml and just convert it each time you wish to render with Mapnik2.
 
 Also, we have ported support for the new Mapnik2 syntax to the 0.7.2 release, so with 0.7.2 you can stay on the stable 0.7 series but keep your stylesheets in the cleaner Mapnik2 format.
 
@@ -64,10 +79,11 @@ Nik2img as of 0.5.0 supports both mapnik and mapnik2 transparently. Pass --mapni
 
 ### mod_tile/renderd
 
-Supports Mapnik2 as of [r22900](http://trac.openstreetmap.org/changeset/22900)
-But (if using the ==2.0.0 release) requires a patch to the Makefile and moving to the side any non-mapnik2 headers.
+Supports Mapnik2 as of [r22900](http://trac.openstreetmap.org/changeset/22900).
 
-Here is the patch needed to the Makefile:
+Please note, as per the above naming changes, if using Mapnik 2.0.0 the library name is `libmapnik2`, but all previous and future releases simply use `libmapnik` as the library name. Sorry for the temporarily hassle.
+
+So, if you are using exactly the 2.0.0 release, here is the basic patch needed to the Makefile:
 
 ```diff
     Index: Makefile
@@ -90,8 +106,6 @@ Because Mapnik2 headers are not renamed (they are still 'include/mapnik'_ it is 
 However, Python applications should be able to work against either Mapnik or Mapnik2 if both are installed.
 
 ## Changes
-
-Mapnik2 is also about harmonizing C++ coding conventions and thus a few class names have changed:
 
 see [[Mapnik2_Changes]]
 
