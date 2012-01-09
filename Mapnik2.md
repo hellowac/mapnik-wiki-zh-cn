@@ -1,31 +1,33 @@
-<!-- Name: Mapnik2 -->
-<!-- Version: 64 -->
-<!-- Last-Modified: 2011/04/14 18:26:35 -->
-<!-- Author: springmeyer -->
 # Mapnik2
 
+Mapnik2 is the name for the Mapnik (2.0.0) and 2.x series. In this major release we jumped from 0.7.x to 2.x.
 
-Mapnik2 is current trunk and a new era of the mapnik codebase that uses boost features only available in boost >=1.41, icu >=4.2, and is a testbed for next-generation Mapnik features.
+To get Mapnik 2.x either:
 
-Pre-release installers for Mapnik2 are available for Mac OS X: http://dbsgeo.com/downloads/#mapnik-2.0.0
+1) Download the latest master from github `git clone https://github.com/mapnik/mapnik.git`
 
-For Linux source compiles are required, see instructions below.
+2) Download the latest 2.x series release from https://github.com/mapnik/mapnik/downloads.
 
-Mapnik2 implements a naming change for ease of development and testing .
+3) Or, read about installing for specific platforms: https://github.com/mapnik/mapnik/wiki/Mapnik-Installation
 
-So in python for now you do:
+Mapnik2 was over a year in development before formal release for two reasons:
+
+   * Mapnik2 requires at least Boost 1.42, and we waited for major linux distributions to start packaging at least that boost version
+   * Mapnik2 simplifies a few elements of the XML syntax in backward incompatible ways.
+
+While Mapnik2 was in development (and for the 2.0.0 release) we implemented a naming change for ease of development and testing.
+
+So in python you can do:
 
 ```python
-    >>> import mapnik2 # . This enables running the Mapnik 0.7.x series alongside Mapnik2.
+    >>> import mapnik2 # . This made it easier for developers to run the Mapnik 0.7.x series alongside Mapnik2.
 ```
 
-And C++ programs must link against mapnik2:
+But, the current development code (and the upcoming Mapnik 2.1.0 release) has now moved back to using:
 
-```sh
-    -L/usr/local/lib -lmapnik2
+```python
+    >>> import mapnik #import mapnik2 will still work but will issue a deprecation warning
 ```
-
-See also the brainstorming page for Future Mapnik at [[Ideas_FutureMapnik]]
 
 ## Compatibility
 
