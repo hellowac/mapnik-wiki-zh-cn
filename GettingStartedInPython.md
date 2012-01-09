@@ -165,7 +165,7 @@ open world.png
 start world.png
 ```
 
-Or navigate to your base directory and open world.png and the result should look like this: ![world.png]
+Or navigate to your base directory and open `world.png` and the result should look like this: ![world.png]
 
 ### Step 4
 
@@ -186,42 +186,35 @@ Then add a line at the top of the script like:
 Finally, append the entire text below and save the file.
 
 ```python
-
 import mapnik
-m = mapnik.Map(600,300,"+proj=latlong +datum=WGS84")
+m = mapnik.Map(600,300)
 m.background = mapnik.Color('steelblue')
 s = mapnik.Style()
-r=mapnik.Rule()
-r.symbols.append(mapnik.PolygonSymbolizer(mapnik.Color('#f2eff9')))
-r.symbols.append(mapnik.LineSymbolizer(mapnik.Color('rgb(50%,50%,50%)'),0.1))
+r = mapnik.Rule()
+polygon_symbolizer = mapnik.PolygonSymbolizer(mapnik.Color('#f2eff9'))
+r.symbols.append(polygon_symbolizer)
+line_symbolizer = mapnik.LineSymbolizer(mapnik.Color('rgb(50%,50%,50%)'),0.1)
+r.symbols.append(line_symbolizer)
 s.rules.append(r)
 m.append_style('My Style',s)
-lyr = mapnik.Layer('world',"+proj=latlong +datum=WGS84")
-lyr.datasource = mapnik.Shapefile(file='/Users/path/to/your/data/world_borders')
-lyr.styles.append('My Style')
-m.layers.append(lyr)
-m.zoom_to_box(lyr.envelope())
+ds = mapnik.Shapefile(file='ne_110m_admin_0_countries.shp')
+layer = mapnik.Layer('world')
+layer.datasource = ds
+layer.styles.append('My Style')
+m.layers.append(layer)
+m.zoom_all()
 mapnik.render_to_file(m,'world.png', 'png')
-```
+print "rendered image to 'world.png'"```
 
- * Don't forget to change the path to your world_borders shapefile.
-  * Note: Mapnik accepts both the absolute path to your data as well as the relative path
-  * Note: Same goes for the path to where you want to save your file
+ * Don't forget to ensure the correct path to your `ne_110m_admin_0_countries.shp` shapefile.
+ * Mapnik accepts both the absolute path to your data as well as the relative path (Same goes for the path to where you want to save your file)
 
 Finally run the script with the command:
 
 
 ```sh
-# You must be in the same directory as you saved the script
-./world.py
-# Add a second optional command to open the resulting file with one keystroke
-# On a mac
-./world.py; open world.png
-# On windows
-start world.py && start world.png 
+./world.py # You must be in the same directory as you saved the script
 ```
 
- * Run this way the script will continually write over and open the world.png map.
- * Now you can easily open the script in a separate text editor and try changing the dimensions, colors, or datasource (remember to use the correct projection).
-
-To download this script along with other tutorial scripts see: http://code.google.com/p/mapnik-utils/
+ * Note: if you re-run this script it will will re-write over the world.png map.
+ * Now you can easily open the script in a separate text editor and try changing the dimensions, colors, or datasource (remember to use the correct `srs` if you change the datasource).
