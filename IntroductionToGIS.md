@@ -1,9 +1,3 @@
-<!-- Name: IntroductionToGIS -->
-<!-- Version: 6 -->
-<!-- Last-Modified: 2009/03/06 08:30:10 -->
-<!-- Author: WJHildreth -->
-
-
 As one might guess from [Wikipedia's entry on GIS](http://en.wikipedia.org/wiki/Geographic_information_system), geographic information systems have a long and rich history.
 
 In this brief note, we will sketch out some basic GIS and GIS-related concepts that can be useful in making use of Mapnik!
@@ -41,7 +35,6 @@ For more information on map projections, read the proj.4 documentation, or check
 Related links
 
  * http://spatialreference.org/about/
- * http://www.manifold.net/doc/guide_to_selecting_map_projections.htm
  * http://en.wikipedia.org/wiki/Map_projection
  * http://trac.osgeo.org/proj/wiki/GenParms
 
