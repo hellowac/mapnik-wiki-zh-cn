@@ -2,7 +2,7 @@
 
 ## Install Homebrew
 
-First, make sure you have homebrew [installed](http://github.com/mxcl/homebrew/wiki/installation]
+First, make sure you have homebrew [installed](http://github.com/mxcl/homebrew/wiki/installation)
 
 ## Install Options
 
