@@ -29,5 +29,6 @@ brew install cairo
 git clone https://github.com/mapnik/mapnik.git
 cd mapnik
 ./configure CXX="clang++" JOBS=`sysctl -n hw.ncpu`
+make
 make install
 ```
