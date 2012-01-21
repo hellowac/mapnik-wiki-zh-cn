@@ -145,22 +145,22 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Rasterlite](http://github.com/mapnik/mapnik/wiki/Rasterlite)|yes|||
 |[RasterSymbolizer](http://github.com/mapnik/mapnik/wiki/RasterSymbolizer)|yes|||
 |[Related projects and utilities](http://github.com/mapnik/mapnik/wiki/Related-projects-and-utilities)|yes|||
-|[Release0.6.0](http://github.com/mapnik/mapnik/wiki/Release0.6.0)||||
-|[Release0.6.1](http://github.com/mapnik/mapnik/wiki/Release0.6.1)||||
-|[Mapnik 0.7.0 Release](http://github.com/mapnik/mapnik/wiki/Release0.7.0)||||
-|[Release0.7.1](http://github.com/mapnik/mapnik/wiki/Release0.7.1)||||
-|[Mapnik 2.0.0 release](http://github.com/mapnik/mapnik/wiki/Release2.0.0)||||
-|[ScaleAndPpi](http://github.com/mapnik/mapnik/wiki/ScaleAndPpi)||||
-|[Shapefile Plugin](http://github.com/mapnik/mapnik/wiki/ShapeFile)||||
-|[ShieldSymbolizer](http://github.com/mapnik/mapnik/wiki/ShieldSymbolizer)||||
-|[ShieldSymbolizerTests](http://github.com/mapnik/mapnik/wiki/ShieldSymbolizerTests)||||
-|[SQLite](http://github.com/mapnik/mapnik/wiki/SQLite)||||
-|[Sharing Map Styles](http://github.com/mapnik/mapnik/wiki/StyleShare)||||
-|[Symbology Support](http://github.com/mapnik/mapnik/wiki/SymbologySupport)||||
-|[TextSymbolizer](http://github.com/mapnik/mapnik/wiki/TextSymbolizer)||||
-|[Troubleshooting](http://github.com/mapnik/mapnik/wiki/Troubleshooting)||||
-|[Installing Mapnik on Ubuntu](http://github.com/mapnik/mapnik/wiki/UbuntuInstallation)||||
-|[Build notes specific to older versions of Ubuntu](http://github.com/mapnik/mapnik/wiki/UbuntuInstallationOld)||||
+|[Release0.6.0](http://github.com/mapnik/mapnik/wiki/Release0.6.0)|yes|||
+|[Release0.6.1](http://github.com/mapnik/mapnik/wiki/Release0.6.1)|yes|||
+|[Mapnik 0.7.0 Release](http://github.com/mapnik/mapnik/wiki/Release0.7.0)|yes|||
+|[Release0.7.1](http://github.com/mapnik/mapnik/wiki/Release0.7.1)|yes|||
+|[Mapnik 2.0.0 release](http://github.com/mapnik/mapnik/wiki/Release2.0.0)|yes|||
+|[ScaleAndPpi](http://github.com/mapnik/mapnik/wiki/ScaleAndPpi)|yes|||
+|[Shapefile Plugin](http://github.com/mapnik/mapnik/wiki/ShapeFile)|yes|||
+|[ShieldSymbolizer](http://github.com/mapnik/mapnik/wiki/ShieldSymbolizer)|yes|||
+|[ShieldSymbolizerTests](http://github.com/mapnik/mapnik/wiki/ShieldSymbolizerTests)|yes|||
+|[SQLite](http://github.com/mapnik/mapnik/wiki/SQLite)|yes|||
+|[Sharing Map Styles](http://github.com/mapnik/mapnik/wiki/StyleShare)|yes|||
+|[Symbology Support](http://github.com/mapnik/mapnik/wiki/SymbologySupport)|yes|||
+|[TextSymbolizer](http://github.com/mapnik/mapnik/wiki/TextSymbolizer)|yes|||
+|[Troubleshooting](http://github.com/mapnik/mapnik/wiki/Troubleshooting)|yes|||
+|[Installing Mapnik on Ubuntu](http://github.com/mapnik/mapnik/wiki/UbuntuInstallation)|yes|||
+|[Build notes specific to older versions of Ubuntu](http://github.com/mapnik/mapnik/wiki/UbuntuInstallationOld)|yes|||
 |[Using Custom Fonts with Mapnik](http://github.com/mapnik/mapnik/wiki/UsingCustomFonts)||||
 |[Using SCons with Mapnik](http://github.com/mapnik/mapnik/wiki/UsingScons)||||
 |[Validating Xml](http://github.com/mapnik/mapnik/wiki/ValidatingXml)||||
