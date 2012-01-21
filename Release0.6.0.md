@@ -4,7 +4,7 @@
 <!-- Author: springmeyer -->
 ### Mapnik 0.6.0 Release Changelog
 
-For an overview see the 0.6.0 Milestone: milestone:0.6.0
+For an overview see the 0.6.0 Milestone: [milestone:0.6.0](https://github.com/mapnik/mapnik/issues?milestone=6&state=closed)
 
  * Python: Added support for aspect_fix_mode (r1013)
  * Fixed axis-ordering for WMS 1.3.0 request (r1051) ([#241](https://github.com/mapnik/mapnik/issues/241))
