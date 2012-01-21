@@ -161,9 +161,9 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Troubleshooting](http://github.com/mapnik/mapnik/wiki/Troubleshooting)|yes|||
 |[Installing Mapnik on Ubuntu](http://github.com/mapnik/mapnik/wiki/UbuntuInstallation)|yes|||
 |[Build notes specific to older versions of Ubuntu](http://github.com/mapnik/mapnik/wiki/UbuntuInstallationOld)|yes|||
-|[Using Custom Fonts with Mapnik](http://github.com/mapnik/mapnik/wiki/UsingCustomFonts)||||
-|[Using SCons with Mapnik](http://github.com/mapnik/mapnik/wiki/UsingScons)||||
-|[Validating Xml](http://github.com/mapnik/mapnik/wiki/ValidatingXml)||||
-|[Installing Mapnik in Windows](http://github.com/mapnik/mapnik/wiki/WindowsInstallation)||||
-|[XMLConfigReference](http://github.com/mapnik/mapnik/wiki/XMLConfigReference)||||
-|[XmlFormatDiscussion](http://github.com/mapnik/mapnik/wiki/XmlFormatDiscussion)||||
+|[Using Custom Fonts with Mapnik](http://github.com/mapnik/mapnik/wiki/UsingCustomFonts)|yes|||
+|[Using SCons with Mapnik](http://github.com/mapnik/mapnik/wiki/UsingScons)|yes|||
+|[Validating Xml](http://github.com/mapnik/mapnik/wiki/ValidatingXml)|yes|||
+|[Installing Mapnik in Windows](http://github.com/mapnik/mapnik/wiki/WindowsInstallation)|yes|||
+|[XMLConfigReference](http://github.com/mapnik/mapnik/wiki/XMLConfigReference)|yes (some anchors remaining to fix)|||
+|[XmlFormatDiscussion](http://github.com/mapnik/mapnik/wiki/XmlFormatDiscussion)|yes|||
