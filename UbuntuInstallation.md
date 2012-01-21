@@ -13,7 +13,7 @@ For all versions of Ubuntu make sure you are up to date before starting to insta
     sudo apt-get upgrade
 ```
 
-For previous versions see the archived notes at UbuntuInstallationOld
+For previous versions see the archived notes at [[UbuntuInstallationOld]]
 
 ----
 
@@ -23,8 +23,10 @@ This release has Mapnik packages for 0.7.1 (to check run `apt-cache show libmapn
 
  * Packages are available in the 'universe' repositories so make sure your `/etc/apt/sources.list` has the below lines (or similar):
 
+```
     deb http://us.archive.ubuntu.com/ubuntu/ maverick universe
     deb http://us.archive.ubuntu.com/ubuntu/ maverick-updates universe
+```
 
 ## Install from packages
 
@@ -70,7 +72,7 @@ First, remove any apt installing packages:
 
 ### Then compile and install Mapnik
 
-For instructions on compiling trunk (aka Mapnik2) see: wiki:Mapnik2
+For instructions on compiling trunk (aka Mapnik2) see [[Mapnik2]]
 
 ```sh
     svn co http://svn.mapnik.org/tags/release-0.7.1/ mapnik-0.7.1
