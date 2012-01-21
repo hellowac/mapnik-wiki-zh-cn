@@ -8,7 +8,7 @@
 
 Mapnik binaries can be installed and configured manually, or installed using OSGEO4W. The instructions below highlight these options.
 
-If you are interested in installing Mapnik on other operating systems see: MapnikInstallation
+If you are interested in installing Mapnik on other operating systems see [[Mapnik-Installation]]
 
 If you an interested in compiling Mapnik from source on windows see the windows scripts at https://github.com/mapnik/mapnik-packaging
 
@@ -209,6 +209,7 @@ Problem: When importing mapnik in python you get:
 ```
 
 Solution:
+
  * You likely have an older system and need to install the 2008 Visual Studio Runtime Libraries (msvcrt90.dll) from the [Microsoft Developer Network](http://www.microsoft.com/downloads/details.aspx?familyid=9B2DA534-3E03-4391-8A4D-074B9F2BC1BF&displaylang=en). If that does not fix it you may also be missing the [2005 version](http://www.microsoft.com/downloads/details.aspx?familyid=32BC1BEE-A3F9-4C13-9C99-220B62A191EE&displaylang=en)
  * This problem may also occur on a freshly installed system that is missing some dependecies or has an incompatible version of some DLLs. In my case I had to install the MSVC dependencies (vcredist_x86.exe) and additionally put a downloaded msvcr90.dll into the mapnik/lib folder.
  * You can get more information on what is missing or incompatible by examining mapnik.dll with [Dependency Walker](http://www.dependencywalker.com/). On a 64bit system you must use the 32bit Version.
