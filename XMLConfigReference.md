@@ -155,7 +155,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
   * *RasterSymbolizer*
   * *MarkersSymbolizer*
 
-Also see SymbologySupport for more info on Symbolizers
+Also see [[SymbologySupport]] for more info on Symbolizers
 
 > v.0.7.1: Please note that some Symbolizers require attributes while others require <CssParameter>-elements.
 
