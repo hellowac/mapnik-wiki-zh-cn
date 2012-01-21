@@ -24,14 +24,14 @@
 |dx, dy||Displace label by fixed amount on either axis. Also see note at vertical_alignment|||
 |avoid_edges||Boolean to avoid labeling near intersection edges|||
 |min_distance||Minimum distance between repeated labels such as street names or shield symbols (works across features, added in r490) (named minimum-distance in Mapnik2)|||
-|allow_overlap||Allow labels to overlap other labels - Note: you can also clear the label collision cache at the LAYER level to promote more overlap. See 'clear_label_cache' at wiki:XMLConfigReference#Layer|||
+|allow_overlap||Allow labels to overlap other labels - Note: you can also clear the label collision cache at the LAYER level to promote more overlap. See 'clear_label_cache' at [[XMLConfigReference]] part layer|||
 |placement||"line" to label along lines instead of by point|||
 |vertical_alignment||Position of label relative to point position ("top" (label on top of point), "middle", "bottom", "auto") default is "auto". "auto" is "middle" for dy=0, "bottom" for dy>0, "top" for dy<0 ("auto" since r2626, same behavior since r1527, "middle" before that)|||
 |horizontal-alignment||Position of label relative to point position ("left, "middle", "right", "auto") default is "auto". (Mapnik2)|||
 |justify-alignment||Justify multi-line text ("left, "middle", "right", "auto") default is "auto". (Mapnik2)|||
 |opacity||1 is fully opaque while zero is fully transparent and .5 would be 50% transparent|||
-|minimum_padding||default 0.0, if >0 helps prevents a label (or shield) from being placed too near the edge of the map. added in r2330 (#547)|||
-|minimum-path-length||default 0.0, place labels only on paths longer than this value. Added in r3272 (#865)|||
+|minimum_padding||default 0.0, if >0 helps prevents a label (or shield) from being placed too near the edge of the map. added in r2330 ([#547](https://github.com/mapnik/mapnik/issues/547))|||
+|minimum-path-length||default 0.0, place labels only on paths longer than this value. Added in r3272 ([#865](https://github.com/mapnik/mapnik/issues/865))|||
 |orientation||Rotate text (Mapnik2)|||
 |placement-type||Placement finder algorithm. Currently supported: "dummy" (do nothing) and "simple" (automatically create new positions using a simple configuration; see below) (since r2626)|||
 |placements||List of possible placements. Only valid if placement-type="simple" is used. (since r2626)|||
