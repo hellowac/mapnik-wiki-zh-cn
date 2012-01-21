@@ -5,7 +5,7 @@
 
 See also a reference PDF, created by David Eastcott: http://media.mapnik.org/docs/MapnikXMLDescription.pdf
 
-To validate the XML see ValidatingXml
+To validate the XML see [[ValidatingXml]]
 
 ## General
 
