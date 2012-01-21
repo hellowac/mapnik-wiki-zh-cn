@@ -29,7 +29,7 @@ Make sure to check out LearningMapnik for tips on certain topics, and ExampleCod
     $ ogr2ogr fixed.shp sketchy_natural_earth.shp -skipfailures -t_srs EPSG:900913 -clipsrc -180 -90 180 90
 ```
 
-  * The '-skipfailures' tells ogr2ogr to skip any features containing bogus coordinates, which is good because they will potentially cause mapnik to render fewer shapes that you'd like (see #308).
+  * The '-skipfailures' tells ogr2ogr to skip any features containing bogus coordinates, which is good because they will potentially cause mapnik to render fewer shapes that you'd like (see [#308](https://github.com/mapnik/mapnik/issues/308)).
 
   * Now, if that results in a shapefile missing key chunks of data, then we need to up the ante and call in some sort of tool to actually clean the topology. You may know of some - in our experience importing into PostGIS, cleaning there, then exporting again to a shapefile works nicely. The clean script comes from Horst Duester and can be downloaded from here: http://www.sogis1.so.ch/sogis/dl/postgis/cleanGeometry.sql. Basically the dance looks like:
 
