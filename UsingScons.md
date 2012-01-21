@@ -5,6 +5,7 @@ Mapnik uses a python-based build system called [SCons](http://www.scons.org/wiki
 The build system is composed of a single `SConstruct` file in the main source directory and various `SConscript` files in subdirectories.
 
 For more details see on SCons see:
+
 * SCons documentation: http://www.scons.org/documentation.php
 * Good Overview: http://www.humanized.com/presentations/scons/
 
