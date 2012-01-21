@@ -7,7 +7,7 @@
 For an overview see the 0.6.0 Milestone: milestone:0.6.0
 
  * Python: Added support for aspect_fix_mode (r1013)
- * Fixed axis-ordering for WMS 1.3.0 request (r1051) (#241)
+ * Fixed axis-ordering for WMS 1.3.0 request (r1051) ([#241](https://github.com/mapnik/mapnik/issues/241))
  * Added option to all plugins to support using a 'base' path argument (r1042)
  * Symbolizers: RasterSymbolizer now support composing modes for hillshading (r1027)
  * SCons: Added options to build the rundemo and pgsql2sqlite tools (r989)
@@ -21,13 +21,13 @@ For an overview see the 0.6.0 Milestone: milestone:0.6.0
  * Python: Exposed a number of properties for the Text Symbolizer (r869)
  * Plugins: PostGIS plugin now accepts multi-line queries (r862)
  * Filter parsing: Allow numbers in the filter field name. This allows for shapefiles with columns like '1970'.
- * Plugins: Added OGR driver for reading all OGR supported formats (kunitoki) (r836) (#170)
+ * Plugins: Added OGR driver for reading all OGR supported formats (kunitoki) (r836) ([#170](https://github.com/mapnik/mapnik/issues/170))
  * XML: Added serialization of Fontsets (r807)
  * XML: Added support for reading xml from a string (r806)
  * C++: renamed mapnik::Color to mapnik::color (r796)
  * Python: Made available the scale_denominator property from the map in c++ and python (r794)
  * Python: Added ability to resize map and clear all layers and styles from python (r793)
- * Python: Exposed Proj to/from transformation for projected coordinate systems (r792,r822) (#117)
+ * Python: Exposed Proj to/from transformation for projected coordinate systems (r792,r822) ([#117](https://github.com/mapnik/mapnik/issues/117))
  * Memory Datasource: Added support for dynamically adding Points to map using Point Datasource (r790)
  * XML: Added xml serialization for abstract, title, minzoom, maxzoom, and queryable attributes (r787)
  * Core: Transformation is now skipped if srs values match exactly (r777)
@@ -50,5 +50,5 @@ For an overview see the 0.6.0 Milestone: milestone:0.6.0
  * Core: Added unicode support based on ICU (r650)
  * Core: Added support for single and multi threaded variants of Mapnik (r632,r634)
  * Plugins: Use memory mapped files for reading shape file (r628)
- * Core: Use streams to write images (i/o refactor) (r628) (#15)
+ * Core: Use streams to write images (i/o refactor) (r628) ([#15](https://github.com/mapnik/mapnik/issues/15))
 
