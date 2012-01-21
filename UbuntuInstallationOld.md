@@ -13,8 +13,10 @@ Karmic has Mapnik packages for 0.7.0, so you can either install Mapnik from pack
 
  * Packages are available in the 'universe' repositories so make sure your `/etc/apt/sources.list` has the below lines:
 
+```
     deb http://us.archive.ubuntu.com/ubuntu/ lucid universe
     deb http://us.archive.ubuntu.com/ubuntu/ lucid-updates universe
+```
 
 ## Install from packages
 
@@ -93,9 +95,10 @@ Karmic has Mapnik packages for 0.6.1, so you can either install Mapnik from pack
 
  * Packages are available in the 'universe' repositories so make sure your `/etc/apt/sources.list` has the below lines:
 
+```
     deb http://us.archive.ubuntu.com/ubuntu/ karmic universe
     deb http://us.archive.ubuntu.com/ubuntu/ karmic-updates universe
-
+```
 
 ## Install from packages
 
@@ -225,9 +228,7 @@ This works with the default python-2.6 on jaunty:
 
 # Ubuntu Intrepid Ibex (8.10)
 
-For earlier versions of Ubuntu see UbuntuInstallationOld
-
-Note, these instructions are nearly identical to the DebianInstallation notes (with the exception of libltdl7/3), just more verbose.
+Note, these instructions are nearly identical to the [[DebianInstallation]] notes (with the exception of libltdl7/3), just more verbose.
 
 # Prerequisites
 
