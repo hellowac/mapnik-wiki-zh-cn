@@ -8,7 +8,7 @@ Announcement: http://mapnik.org/news/2009/jul/14/release_0_6_1/
 
 Overview of the 0.6.1 Milestone: milestone:0.6.1
 
-Complete list of [tickets closed against this milestone](http://trac.mapnik.org/query?group=status&milestone=0.6.1)
+Complete list of [tickets closed against this milestone](https://github.com/mapnik/mapnik/issues?milestone=7&state=closed)
 
  * XML: Fixed serialization and parsing bugs related to handling of integers and Enums ([#328](https://github.com/mapnik/mapnik/issues/328),[#353](https://github.com/mapnik/mapnik/issues/353))
  * SCons: Added the ability to set the PKG_CONFIG_PATH env setting ([#217](https://github.com/mapnik/mapnik/issues/217))
