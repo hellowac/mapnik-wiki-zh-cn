@@ -11,7 +11,7 @@ be added to the list of
 [query:status=new|assigned|reopened&keywords=XML XML tasks]
 by adding a ticket with the keyword `XML`.
 
-If we do ticket:58 it would be consequent to make the denominators attributes too:
+If we do ticket [#58](https://github.com/mapnik/mapnik/issues/58) it would be consequent to make the denominators attributes too:
 
 ```xml
     <Style name="some_style">
