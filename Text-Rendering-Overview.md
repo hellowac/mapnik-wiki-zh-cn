@@ -1,5 +1,7 @@
+_(For textplacement branch)_
 ## Abstract
-This page aims to give an explanation of how all the parts in rendering a TextSymbolizer play together. (For textplacement branch)
+This page aims to give an explanation of how all the parts in rendering a TextSymbolizer play together. Only important functions and members are documented here.
+
 
 
 
@@ -50,12 +52,14 @@ Generate a possible placement and store results of placement_finder. This placem
 
 # Members:
 * ```properties```: Properties actually used by placement finder and renderer. Values in here are modified each time next() is called.
+* ```placements```: List of ```text_path```s returned by placement finder. One for each placement. 
 * Some values from the renderer.
 * Values returned by placement_finder.
 
 
 
-
+# text_path
+List of all characters and their positions and formats for a placement.
 
 
 
