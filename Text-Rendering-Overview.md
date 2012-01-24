@@ -1,10 +1,20 @@
 ## Abstract
 This page aims to give an explanation of how all the parts in rendering a TextSymbolizer play together. (For textplacement branch)
 
+
+
+
+
 # TextSymbolizer
 As it's only property contains a pointer to a ```text_placements``` object.
 
+
+
+
+
+
 # text_placements
+_(Abstract class)_
 This object handles the management of all TextSymbolizer properties. It can be used as a base class for own objects which implement new processing semantics. Basically this class just makes sure a pointer of the right class is returned by the ```get_placement_info``` call.
 
 ## Functions
@@ -19,6 +29,34 @@ This function usually is implemented as
 ```
 ## Members
 All properties are grouped into a class ```text_symbolizer_properties``` accessible via public member ```properties```. They are used by subclasses as their default settings.
+
+## Implemented subclasses
+* text_placements_dummy Always takes the default value.
+* text_placement_simple Parse a simple string and created placement based on this string.
+* text_placement_list Take placements from a list
+
+
+
+
+
+# text_placement_list
+_(Abstract class)_
+Generate a possible placement and store results of placement_finder. This placement has first to be tested by placement_finder to verify it can actually be used.
+
+## Functions
+* Constructor: Takes the parent text_placements object as a parameter to read defaults from it.
+* ```next```: _(Abstact function)_ Get next placement. This function is also called before the first placement is tried.
+* ```init```: Initialize values used by placement finder. These values are provided by the renderer and can't be derived from TextSymbolizer properties.
+
+# Members:
+* ```properties```: Properties actually used by placement finder and renderer. Values in here are modified each time next() is called.
+* Some values from the renderer.
+* Values returned by placement_finder.
+
+
+
+
+
 
 
 
