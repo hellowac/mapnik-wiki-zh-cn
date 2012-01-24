@@ -90,13 +90,13 @@ For now, list your styles here!
 
 ## MapBox
 
-*Description*: see http://mapbox.com/tiles
+*Description*: see http://tiles.mapbox.com/
 
-*Type*: Cascadenik MML
+*Type*: [[Carto]]
 
-*URI*: http://github.com/developmentseed/mapbox
+*URI*: http://github.com/mapbox/
 
-*Minimum Mapnik Version*: 0.7.1
+*Minimum Mapnik Version*: 2.0.0
 
 ## Cascadenik Dev OSM Styles, aka "Remapniking OSM"
 
