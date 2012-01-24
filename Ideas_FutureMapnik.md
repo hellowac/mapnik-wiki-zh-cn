@@ -147,7 +147,7 @@ Next Generation Datasources
 
 ##Tools
 
-Fast C++ WMS server
+Fast C++ WMS server: **done with [[paleoserver]]**
 -------------------
  * To support highly scalable, fast access to GeoCommons data as WMS
  * Many more users/orgs need this! Will broaden Mapnik community
@@ -188,7 +188,7 @@ Lithograph
   - and the writing of MML styles from other formats
 
 
-MapShift Library
+MapShift Library: work in [Millstone](http://github.com/mapbox/millstone)
 ----------------
  * Python library Dane Springmeyer is scoping to handle bundling existing datasources, symbols, other files that make up map
  * Perhaps could merge with Lithograph if sources were open.
