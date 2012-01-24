@@ -52,7 +52,7 @@ Generate a possible placement and store results of placement_finder. This placem
 * ```next```: _(Abstact function)_ Get next placement. This function is also called before the first placement is tried.
 * ```init```: Initialize values used by placement finder. These values are provided by the renderer and can't be derived from TextSymbolizer properties.
 
-# Members:
+## Members:
 * ```properties```: Properties actually used by placement finder and renderer. Values in here are modified each time next() is called.
 * ```placements```: List of ```text_path```s returned by placement finder. One for each placement. 
 * Some values from the renderer.
@@ -61,14 +61,14 @@ Generate a possible placement and store results of placement_finder. This placem
 
 
 # text_path
-List of all characters and their positions and formats for a placement.
+List of all characters and their positions and formats for a placement. Produced by placement_finder, consumed by the renderer.
 
 
 
 # text_processor
 Stores formating information and uses this to produce formated text for a given feature.
 
-# Functions
+## Functions
 * ```process```: Takes a feature and produces formated text as output. The output ```processed_text``` object has to be created by the caller and passed in for thread safety.
 * ```get_all_expressions```: Get a list of all expressions used in any placement. This function is used to collect attributes.
 * ```from_xml```:  Construct object from XML.
@@ -78,9 +78,9 @@ Stores formating information and uses this to produce formated text for a given 
 # text_symbolizer_properties
 Contains all text symbolizer properties which are not directly related to text formating.
 
-# Members
+## Members
 * ```processor```: ```text_processor``` object which contains everything related to text formating.
 
-# Functions
+## Functions
 * ```set_values_from_xml```: Load all values and also the ```processor``` object from XML ptree.
 * ```to_xml```: Save all values to XML ptree (but does not create a new parent node!).
