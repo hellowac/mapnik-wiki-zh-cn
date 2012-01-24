@@ -4,10 +4,9 @@
 <!-- Author: victorlin -->
 
 
-# How to integrate mapnik with wxPython?
+# Mapnik with wxPython
 
-It is pretty easy to integrate mapnik with wxPython, here is a simple wxPython application demonstrates how to:
-
+Here's a sample application integrating Mapnik with [wxPython](http://wxpython.org/)
 
 ```python
     """
