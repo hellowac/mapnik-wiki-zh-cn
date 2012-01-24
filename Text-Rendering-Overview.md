@@ -5,7 +5,7 @@ This page aims to give an explanation of how all the parts in rendering a TextSy
 As it's only property contains a pointer to a ```text_placements``` object.
 
 # text_placements
-This object handles the management of all TextSymbolizer properties. It can be used as a base class for own objects which implement new processing semantics.
+This object handles the management of all TextSymbolizer properties. It can be used as a base class for own objects which implement new processing semantics. Basically this class just makes sure a pointer of the right class is returned by the ```get_placement_info``` call.
 
 ## Functions
 * ```get_all_expressions```: Get a list of all expressions used in any placement. This function is used to collect attributes.
@@ -17,6 +17,17 @@ This function usually is implemented as
      return text_placement_info_ptr(new text_placement_info_XXX(this));
 }
 ```
+## Members
+All properties are grouped into a class ```text_symbolizer_properties``` accessible via public member ```properties```. They are used by subclasses as their default settings.
 
-## Properties
-All properties are grouped into a class ```text_symbolizer_properties``` accessible via public member ```properties```. They are used by subclasses as their defaults.
+
+
+# text_symbolizer_properties
+Contains all text symbolizer properties which are not directly related to text formating.
+
+# Members
+* ```processor```: ```text_processor``` object which contains everything related to text formating.
+
+# Functions
+* ```set_values_from_xml```: Load all values and also the ```processor``` object from XML ptree.
+* ```to_xml```: Save all values to XML ptree (but does not create a new parent node!).
