@@ -75,6 +75,18 @@ Stores formating information and uses this to produce formated text for a given 
 * ```to_xml```: Write object to XML ptree.
 
 
+
+
+# char_properties
+Contains all text symbolizer properties which _are_ directly related to text formating.
+
+## Functions
+* ```set_values_from_xml```: Load all values and also the ```processor``` object from XML ptree.
+* ```to_xml```: Save all values to XML ptree (but does not create a new parent node!).
+
+
+
+
 # text_symbolizer_properties
 Contains all text symbolizer properties which are not directly related to text formating.
 
