@@ -118,7 +118,7 @@ An XML example might look like:
 ## New syntax
 Starting with r3354 Mapnik2 supports a new syntax:
 
-```
+```xml
 <TextSymbolizer name="[label]" />
 ```
 
