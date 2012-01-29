@@ -13,7 +13,7 @@ This page aims to give an explanation of how all the parts in rendering a TextSy
 
 
 # TextSymbolizer
-As it's only property contains a pointer to a ```text_placements``` object.
+As its only property contains a pointer to a ```text_placements``` object.
 
 
 
