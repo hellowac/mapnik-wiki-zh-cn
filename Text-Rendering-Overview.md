@@ -7,7 +7,7 @@ Black: Class dependencies
 Dashed: Pointers
 Solid: Members
 Red: Rendering dependencies
-![Dependencies](https://github.com/herm/mapnik/raw/textplacement-merge/docs/textrendering.png)
+![Dependencies](https://github.com/herm/mapnik/raw/textplacement-merge/docs/textrendering.svg)
 
 
 
