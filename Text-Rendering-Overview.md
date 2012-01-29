@@ -3,11 +3,12 @@ _(For textplacement branch)_
 This page aims to give an explanation of how all the parts in rendering a TextSymbolizer play together. Only important functions and members are documented here.
 
 # Visual representation
-Black: Class dependencies
-Dashed: Pointers
-Solid: Members
-Red: Rendering dependencies
-![Dependencies](https://github.com/herm/mapnik/raw/textplacement-merge/docs/textrendering.svg)
+* Black: Class dependencies
+* Dashed: Pointers
+* Solid: Members
+* Red: Rendering dependencies
+
+![Dependencies](https://raw.github.com/herm/mapnik/textplacement-merge/docs/textrendering.png)
 
 
 
