@@ -8,7 +8,7 @@ This page aims to give an explanation of how all the parts in rendering a TextSy
 * Solid: Members
 * Red: Rendering dependencies
 
-![Dependencies](https://raw.github.com/herm/mapnik/textplacement-merge/docs/textrendering.png)
+![Dependencies](https://raw.github.com/mapnik/mapnik/master/docs/textrendering.png)
 
 
 
