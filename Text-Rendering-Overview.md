@@ -70,16 +70,6 @@ List of all characters and their positions and formats for a placement. Produced
 
 
 
-# text_processor
-Stores formating information and uses this to produce formated text for a given feature.
-
-## Functions
-* ```process```: Takes a feature and produces formated text as output. The output ```processed_text``` object has to be created by the caller and passed in for thread safety.
-* ```get_all_expressions```: Get a list of all expressions used in any placement. This function is used to collect attributes.
-* ```from_xml```:  Construct object from XML.
-* ```to_xml```: Write object to XML ptree.
-
-
 
 
 # char_properties
@@ -93,11 +83,13 @@ Contains all text symbolizer properties which _are_ directly related to text for
 
 
 # text_symbolizer_properties
-Contains all text symbolizer properties which are not directly related to text formating.
+Contains all text symbolizer properties. Also stores formating information and uses this to produce formated text for a given feature.
 
 ## Members
-* ```processor```: ```text_processor``` object which contains everything related to text formating.
+* ```tree_```: A tree of ``formating::node``s which contain text and formating information
 
 ## Functions
-* ```set_values_from_xml```: Load all values and also the ```processor``` object from XML ptree.
+* ```from_xml```: Load all values and also the ```processor``` object from XML ptree.
 * ```to_xml```: Save all values to XML ptree (but does not create a new parent node!).
+* ```get_all_expressions```: Get a list of all expressions used in any placement. This function is used to collect attributes.
+* ```process```: Takes a feature and produces formated text as output. The output ```processed_text``` object has to be created by the caller and passed in for thread safety.
