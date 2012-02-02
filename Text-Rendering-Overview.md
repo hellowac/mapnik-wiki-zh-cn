@@ -86,7 +86,7 @@ Contains all text symbolizer properties which _are_ directly related to text for
 Contains all text symbolizer properties. Also stores formating information and uses this to produce formated text for a given feature.
 
 ## Members
-* ```tree_```: A tree of ``formating::node``s which contain text and formating information
+* ```tree_``` (```format_tree()/set_format_tree()```): A tree of ``formating::node``s which contain text and formating information
 
 ## Functions
 * ```from_xml```: Load all values and also the ```processor``` object from XML ptree.
