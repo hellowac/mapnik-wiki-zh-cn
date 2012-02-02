@@ -10,11 +10,14 @@ Mapnik can be used in a variety of ways. The most widely used options are using 
 
 ## Getting started
 
-To get first results, choose your weapon: Choose your weapon: XML, Python or C++
+Mapnik is written in C++, but many users use its bindings to higher-level languages, including Python or Javascript. If you've got a application that wraps Mapnik entirely, you might only need to concern yourself with the XML stylesheets that describe Mapnik's map styles.
+
+To get first results, choose your weapon: XML, Python, C++, or node.js
 
 * [[Getting started using XML|GettingStartedInXML]]
 * [[Getting started using Python|GettingStartedInPython]]
 * [[Getting started using C++|GettingStartedInC]]
+* [node.js bindings](http://github.com/mapnik/node-mapnik)
 
 ### Further Resources:
 
@@ -45,17 +48,14 @@ To get first results, choose your weapon: Choose your weapon: XML, Python or C++
 
 ## Advanced Topics
  
-[[MapnikRenderers]] -- Render with AGG or Cairo
-
-[[LabelingSupport]] -- Discover the intricacies of label placement.
-
-[[OutputFormats]] -- Which format to use based on speed, quality, and rendering tradeoffs.
+* [[MapnikRenderers]] -- Render with AGG or Cairo
+* [[OutputFormats]] -- Which format to use based on speed, quality, and rendering tradeoffs.
+* [[LabelingSupport]] -- Discover the intricacies of label placement.
 
 [Generating Contours](http://wiki.openstreetmap.org/index.php/Contours) - Using Mapnik with GDAL to build contours of the world.
 
 [[ManagingLargeXmlFiles]] -- Do things once and only once using XML entities.
 
 [[Hooking up Mapnik to PostGIS|PostGIS]]
-
 
 [[MapnikReferences]] -- Various other resources related to Mapnik and Mapping
