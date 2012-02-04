@@ -7,7 +7,7 @@ In this brief note, we will sketch out some basic GIS and GIS-related concepts t
 
 ## What is GIS?
 
-First, we should point out that most would not consider Mapnik a "true geographic information system" since it is mainly a [rendering library](http://en.wikipedia.org/wiki/Rendering_(computer_graphics)) rather than a complete information system that may provide tools for rich analysis or data management. That said, Mapnik builds upon existing work on GIS and GIS-related technologies, such as [proj.4](http://trac.osgeo.org/proj/), [PostGIS](http://en.wikipedia.org/wiki/PostGIS), and various raster/vector data formats.
+First, we should point out that most would not consider Mapnik a "true geographic information system" since it is mainly a [rendering library](http://en.wikipedia.org/wiki/Rendering_(computer_graphics\)) rather than a complete information system that may provide tools for rich analysis or data management. That said, Mapnik builds upon existing work on GIS and GIS-related technologies, such as [proj.4](http://trac.osgeo.org/proj/), [PostGIS](http://en.wikipedia.org/wiki/PostGIS), and various raster/vector data formats.
 
 Instead, some might say that Mapnik may be more easily applicable to endeavors in the field of [Neogeography](http://en.wikipedia.org/wiki/Neogeography).
 
