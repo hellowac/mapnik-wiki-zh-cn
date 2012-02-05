@@ -1,4 +1,3 @@
-_(For textplacement branch)_
 ## Abstract
 This page aims to give an explanation of how all the parts in rendering a TextSymbolizer play together. Only important functions and members are documented here.
 
@@ -12,7 +11,7 @@ This page aims to give an explanation of how all the parts in rendering a TextSy
 
 
 
-# TextSymbolizer
+# text_symbolizer
 As its only property contains a pointer to a ```text_placements``` object.
 
 
