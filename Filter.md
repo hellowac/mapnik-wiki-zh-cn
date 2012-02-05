@@ -6,6 +6,7 @@
 Each Style-Rule can optionally have a Filter attached. Mapnik walks through all Rules of a Style and checks if it has a Filter specified and if this Filter matches the Object currently rendered. Filters compare an Objects Key-Value Information against the specified rules. When the Datasource is a Postgis Database, the Filter operates on the tables columns, for Shapefiles the Attributes are used.
 
 In XML [character entities](http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) are used to construct filters. You can use the following characters to specify value-comparisons:
+
  * Greater Than: `&gt;`
  * Greater Then or Equal: `&gt;=`
  * Less Than: `&lt;`
@@ -13,6 +14,7 @@ In XML [character entities](http://en.wikipedia.org/wiki/List_of_XML_and_HTML_ch
  * Equal: `=`
 
 Filters can be combined with the following operators:
+
  * A `and` B
  * A `or` B
  * `not` A
