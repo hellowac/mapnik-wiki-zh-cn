@@ -19,7 +19,7 @@ Here's a small example:
     
      <Style name="font-test">
       <Rule>
-       <TextSymbolizer name="NAME" fontset_name="my-fonts" size="15" fill="black" />
+       <TextSymbolizer name="NAME" fontset-name="my-fonts" size="15" fill="black" />
       </Rule>
      </Style>
     
