@@ -69,20 +69,15 @@ The svg_renderer uses some very cool features of boost karma to generate SVG rea
 
 ## grid_renderer
 
-The Grid renderer is designed to output highly optimized feature "hit grids". It does this by leveraging and extending modular parts of the antigrain geometry library to rasterize feature id's into a buffer, then outputs metadata about the relevant feature attributes for the given ids, all enclosed within a compact, highly compressible json file. The grid_renderer will first be available in the Mapnik 2.0 release and landed in trunk in r2840.
+The Grid renderer is designed to output highly optimized feature "hit grids", known as UTFGrids (based on the final encoding format). It does this by leveraging and extending modular parts of the antigrain geometry library to rasterize feature id's into a buffer, then outputs metadata about the relevant feature attributes for the given ids, all enclosed within a compact, highly compressible json file using utf8 encoded feature ids for space efficiency. The grid_renderer was first available in the Mapnik 2.0.0 release.
 
-There is a sample application showing how to use the output at https://github.com/springmeyer/gridsforkids#readme.
+The UTFGrid spec provides details of the format:
 
-The grid renderer output targets >= 1.1 of the mbtiles interaction spec found at https://github.com/mapbox/mbtiles-spec/. Specifically it targets "grid.json" a  [UTF8 Grid format](https://github.com/mapbox/mbtiles-spec/blob/master/1.1/utfgrid.md) which is then handled by client javascript code as detailed in the [Interaction spec](https://github.com/mapbox/mbtiles-spec/blob/master/1.1/interaction.md).
+https://github.com/mapbox/utfgrid-spec
 
-The client javascript library that works with all major javascript mapping APIs and has the logic to interface with the json grids is called WAX and is located at https://github.com/mapbox/wax. Specifically the control for parsing the grid.json is in https://github.com/mapbox/wax/blob/master/control/lib/gridutil.js and depends on a metadata file called layer.json to instruct about how the feature data should be formatted in the browser.
+See the implementations list for examples:
 
-It should be noted that while the mbtiles spec also talks about leveraging sqlite as a tile cache the interaction and grid.json should work absolutely fine with any caching format on the filesystem. However, at this time the WAX client javascript code (for legacy reasons) assumes that the tile scheme is [TMS](http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification), which is basically the same as the OSM/Google scheme except that the [Y axis is flipped](http://lists.osgeo.org/pipermail/tiling/2010-September/000015.html) (or the origin is [lower left](http://wiki.osgeo.org/wiki/File:Tms.png) not top left). Luckily it is pretty easy to "flip" the y with code like:
-
-```python
-y = (2**z-1) - y
-```
-
+https://github.com/mapbox/utfgrid-spec/wiki/Implementations
 
 ## Further References
 
