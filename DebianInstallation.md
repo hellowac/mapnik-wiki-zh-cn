@@ -17,7 +17,8 @@ Directly bundled in distribution
 **Squeeze**:
 
 A backport was done from Wheezy version
-Follow instructions from http://osm.fsffrance.org/debian-backports/README
+
+Follow instructions from http://osm.fsffrance.org/debian-backports/README to install
 
 ## Dependencies for Debian 6: Squeeze (stable)
 
