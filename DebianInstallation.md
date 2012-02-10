@@ -2,11 +2,11 @@
 <!-- Version: 14 -->
 <!-- Last-Modified: 2011/06/08 10:41:44 -->
 <!-- Author: phispi -->
-## Building Mapnik on Debian
+## Install Mapnik on Debian
 
 ### Install mapnik 2 from packages
 
-Wheezy:
+**Wheezy**:
 
 Directly bundled in distribution
 
@@ -14,7 +14,7 @@ Directly bundled in distribution
     # apt-get install libmapnik2-2.0 mapnik-utils libmapnik2-2.0
 ```
 
-Squeeze:
+**Squeeze**:
 
 A backport was done from Wheezy version
 Follow instructions from http://osm.fsffrance.org/debian-backports/README
