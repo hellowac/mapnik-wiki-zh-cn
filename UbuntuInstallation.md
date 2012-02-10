@@ -30,6 +30,20 @@ This release has Mapnik packages for 0.7.1 (to check run `apt-cache show libmapn
 
 ## Install from packages
 
+**For v 2.0.x version**
+
+Most distributions don't have Mapnik 2 packages bundled.
+You can use [nightly build](https://launchpad.net/~mapnik/+archive/nightly-trunk) if you're not able to compile from source.
+
+```sh
+    sudo add-apt-repository ppa:mapnik/nightly-trunk
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get install mapnik2-utils libmapnik2 python-mapnik2
+```
+
+**For v 0.7.x version**
+
 ```sh
     sudo apt-get install libmapnik0.7 mapnik-utils python-mapnik
 ```
