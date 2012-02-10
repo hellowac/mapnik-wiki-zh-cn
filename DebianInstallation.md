@@ -4,6 +4,21 @@
 <!-- Author: phispi -->
 ## Building Mapnik on Debian
 
+### Install mapnik 2 from packages
+
+Wheezy:
+
+Directly bundled in distribution
+
+```sh
+    # apt-get install libmapnik2-2.0 mapnik-utils libmapnik2-2.0
+```
+
+Squeeze:
+
+A backport was done from Wheezy version
+Follow instructions from http://osm.fsffrance.org/debian-backports/README
+
 ## Dependencies for Debian 6: Squeeze (stable)
 
 ```sh
