@@ -26,7 +26,7 @@ see examples below.
 |horizontal-alignment |  | middle |
 |justify-alignment | | midle|
 |line-spacing | Vertical spacing between lines of multi-line labels, in pixels | 0|
-|min-distance | Minimum distance to the next shield symbol, not necessarily the same shield | 0|
+|minimum-distance | Minimum distance to the next shield symbol, not necessarily the same shield | 0|
 |name | This is the query field you want to use for the label text, e.g. "ref" | |
 |no-text | | false|
 |opacity| opacity of the image used for the shield | 1|
