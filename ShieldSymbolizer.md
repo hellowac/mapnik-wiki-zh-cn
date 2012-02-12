@@ -32,11 +32,12 @@ see examples below.
 |opacity| opacity of the image used for the shield | 1|
 |text-opacity | opacity of the text placed on top of the shield | 1|
 |placement | "line" or "point" | |
+|placement-type| ?||
 |size | Font size of the shield text (a value of zero will prevent text from being written) | |
 |spacing | The spacing between repeated occurrences of the same shield | |
 |text-convert | Allows conversion of text to lower or upper case before display. Values are "none", "toupper", and "tolower". | "none"|
 |type | Type of the shield file, e.g. "png" | |
-|unlock-image | If "false", the symbol is placed relative to the text box center. If "true", the symbol is placed relative to the point position | "false"|
+|unlock-imageplacements | If "false", the symbol is placed relative to the text box center. If "true", the symbol is placed relative to the point position | "false"|
 |vertical-alignment | Position of label relative to point position ("top" to label on top of a point, "middle", "bottom") for dy = 0, "bottom" for dy > 0, "top" for dy < 0 | "middle"|
 |width | The width of the shield file| image's width |
 |wrap-before| | "false"|
