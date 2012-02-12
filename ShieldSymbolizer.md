@@ -35,7 +35,7 @@ see examples below.
 |placement-type| ?||
 |size | Font size of the shield text (a value of zero will prevent text from being written) | |
 |spacing | The spacing between repeated occurrences of the same shield | |
-|text-convert | Allows conversion of text to lower or upper case before display. Values are "none", "toupper", and "tolower". | "none"|
+|text-transform | Allows conversion of text to lower or upper case before display. Values are "none", "uppercase", "lowercase" and "capitalize". | "none"|
 |type | Type of the shield file, e.g. "png" | |
 |unlock-imageplacements | If "false", the symbol is placed relative to the text box center. If "true", the symbol is placed relative to the point position | "false"|
 |vertical-alignment | Position of label relative to point position ("top" to label on top of a point, "middle", "bottom") for dy = 0, "bottom" for dy > 0, "top" for dy < 0 | "middle"|
