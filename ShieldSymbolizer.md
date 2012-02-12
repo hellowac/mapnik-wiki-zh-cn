@@ -14,8 +14,8 @@ see examples below.
 |avoid-edges | Attempts to stay away from the edge of the image | false|
 |base | Base symbol template. See [#574](http://trac.mapnik.org/changeset/574) (XML config only) | |
 |character-spacing | Horizontal spacing between characters (in pixels). Currently works for point placement only, not line placement | 0|
-|dx | Offset the text horizontally. Unit: pixels from the image's center | |
-|dy | Offset the text vertically. Unit: pixels from the image's center. Also see note at vertical_alignment. | |
+|dx | Offset the text horizontally. Unit: pixels from the image's center | 0|
+|dy | Offset the text vertically. Unit: pixels from the image's center. Also see note at vertical_alignment. | 0|
 |face-name | Font name for the shield text | |
 |file | The file to use for the shield background | |
 |fill | Color of the shield text, e.g. #FFFFFF | |
@@ -23,8 +23,8 @@ see examples below.
 |halo-fill | Color of the colored halo around the text, e.g. #AF2304. | white |
 |halo-radius | Thickness of the colored halo around the text as an integer value in pixels | 0 |
 |height | The height of the shield file | image's height | 
-|horizontal-alignment |  | middle |
-|justify-alignment | | midle|
+|horizontal-alignment |  | "middle" |
+|justify-alignment | | "middle"|
 |line-spacing | Vertical spacing between lines of multi-line labels, in pixels | 0|
 |minimum-distance | Minimum distance to the next shield symbol, not necessarily the same shield | 0|
 |name | This is the query field you want to use for the label text, e.g. "ref" | |
