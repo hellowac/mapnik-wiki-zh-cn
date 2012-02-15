@@ -140,9 +140,9 @@ If you are compiling on Mac OS X see: http://trac.mapnik.org/wiki/MacInstallatio
 Otherwise on linux do:
 
 ```sh
-    wget http://voxel.dl.sourceforge.net/project/boost/boost/1.46.1/boost_1_46_1.tar.bz2
-    tar xjvf boost_1_46_1.tar.bz2
-    cd boost_1_46_1
+    wget http://voxel.dl.sourceforge.net/project/boost/boost/1.48.0/boost_1_48_0.tar.bz2
+    tar xjvf boost_1_48_0.tar.bz2
+    cd boost_1_48_0
     ./bootstrap.sh
     ./bjam \
       --with-thread \
