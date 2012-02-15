@@ -3,12 +3,11 @@
 <!-- Last-Modified: 2010/11/22 03:02:02 -->
 <!-- Author: kunitoki -->
 
-
 Mapnik's PluginArchitecture supports the use of different input formats.
 
 One such plugin supports the Oracle Spatial ([Oracle Spatial](http://en.wikipedia.org/wiki/Oracle_Spatial)) extension to the popular ORACLE database.
 
-*At the current time, only oracle 10g version >= 10.2.0.1 is supported*
+*At the current time, only oracle version 10.2.0.x (10g) and 11.2.0.x (11g) are supported*
 
 
 ## Installation (On Linux)
@@ -18,8 +17,8 @@ Install the [Oracle Instant Client](http://www.oracle.com/technology/software/te
 Make sure you define where the includes and library files resides in _config.py_:
 
 
-    OCCI_INCLUDES='/usr/lib/oracle/10.2.0.4/client/include'
-    OCCI_LIBS='/usr/lib/oracle/10.2.0.4/client/lib'
+    OCCI_INCLUDES='/usr/lib/oracle/11.2.0.2/client/include'
+    OCCI_LIBS='/usr/lib/oracle/11.2.0.2/client/lib'
 
 Make sure that running _python scons/scons.py DEBUG=y_ shows the following line
 
@@ -31,10 +30,9 @@ To check if the occi plugin built and was installed correctly, try the usual Pyt
 
 ## Troubleshooting
 
-### double free or corruption error
+### double free or corruption error (oracle 10g only)
 
 If you have problems when running the oracle input plugin and get this when accessing geometries:
-
 
     *** glibc detected *** double free or corruption (!prev): 0x08c52568 ***
 
