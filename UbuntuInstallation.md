@@ -63,6 +63,7 @@ First, remove any apt installing packages:
 ```sh
     # get a build environment going...
     sudo apt-get install -y g++ cpp \
+    libicu-dev \
     libboost-filesystem1.42-dev \
     libboost-iostreams1.42-dev libboost-program-options1.42-dev \
     libboost-python1.42-dev libboost-regex1.42-dev \
