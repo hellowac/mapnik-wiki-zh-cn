@@ -141,19 +141,19 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
  
  * Children:
   * *["Filter"]*      
-  * *ElseFilter*
-  * *MinScaleDenominator*
-  * *MaxScaleDenominator*
-  * *PointSymbolizer*
-  * *LinePatternSymbolizer*
-  * *PolygonPatternSymbolizer*
-  * *TextSymbolizer*
-  * *ShieldSymbolizer*
-  * *LineSymbolizer*
-  * *PolygonSymbolizer*
-  * *BuildingSymbolizer*
-  * *RasterSymbolizer*
-  * *MarkersSymbolizer*
+  * *[[ElseFilter]]*
+  * *[[MinScaleDenominator]]*
+  * *[[MaxScaleDenominator]]*
+  * *[[PointSymbolizer]]*
+  * *[[LinePatternSymbolizer]]*
+  * *[[PolygonPatternSymbolizer]]*
+  * *[[TextSymbolizer]]*
+  * *[[ShieldSymbolizer]]*
+  * *[[LineSymbolizer]]*
+  * *[[PolygonSymbolizer]]*
+  * *[[BuildingSymbolizer]]*
+  * *[[RasterSymbolizer]]*
+  * *[[MarkersSymbolizer]]*
 
 Also see [[SymbologySupport]] for more info on Symbolizers
 
