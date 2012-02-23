@@ -113,7 +113,7 @@ A OCCI datasource may be created as follows:
         p["extent"]="2309554.99818767,5024797.73763923,2318414.90507308,5040447.94690007"; // optional
     
         Layer lyr("World Borders");
-        set_datasource(datasource_cache::instance()->create(p));
+        lyr.set_datasource(datasource_cache::instance()->create(p));
         lyr.add_style("worldborders");
         m.addLayer(lyr);
     }
