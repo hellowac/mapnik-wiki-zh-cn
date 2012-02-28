@@ -55,7 +55,11 @@ A PolygonSymbolizer is often used to render the area enclosed by a [polygon](htt
 
 #### C++
 
-` FIXME `
+``` c++
+    polygon_symbolizer p(color("steelblue"));
+    p.set_gamma(0.65);
+    p.set_opacity(0.7);
+```
 
 ----
 
