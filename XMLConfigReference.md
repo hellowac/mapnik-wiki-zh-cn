@@ -140,7 +140,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
   * *title*
  
  * Children:
-  * *["Filter"]*      
+  * *[[Filter]]*      
   * *[[ElseFilter]]*
   * *[[MinScaleDenominator]]*
   * *[[MaxScaleDenominator]]*
