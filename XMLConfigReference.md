@@ -21,7 +21,7 @@ The Map object defines the master object of a mapnik configuration XML. It defin
   * *bgcolor*: HTML color code for the background-color of the map (for instance #000000)
     * renamed to 'background-color' in Mapnik2.
   * *background-image*: Available in Mapnik2: use an image for the background instead of a color fill.
-  * *font_directory*: Available in Mapnik2: pass a directory that contains fonts, which will automatically be registered if they end in ttf, otf, ttc, pfa, pfb, ttc, or dfont.
+  * *font-directory*: Available in Mapnik2: pass a directory that contains fonts, which will automatically be registered if they end in ttf, otf, ttc, pfa, pfb, ttc, or dfont.
   * *srs*: Coordinate system in which the map is rendered (for instance '+proj=latlong+datum=WGS84' for a WGS84 Geographic coordinate system)
   * *buffer_size*: Default 0; Good value is usually tile size/2 to help avoid cut labels. This influences envelope used by placement detector ( i.e. 'avoid_edges' parameter)
   * *paths_from_xml*: Check if relative paths should be interpreted as relative to/from XML location (default is true)
