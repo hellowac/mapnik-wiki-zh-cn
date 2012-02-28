@@ -61,7 +61,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
  * Attributes:
   * *name*: The Name of the layer
   * *status*: Default "on"; *on* or *off*, "0" or "1"
-  * *clear_label_cache*: Default "off". Setting this to "on" clears the internal placement detector list, causing the items of this layer, and from this layer on, to be rendered without taking previous rendered items into account ('clear collision avoidance list')
+  * *clear-label-cache*: Default "off". Setting this to "on" clears the internal placement detector list, causing the items of this layer, and from this layer on, to be rendered without taking previous rendered items into account ('clear collision avoidance list')
   * *cache-features*: Default "off". Setting this to "on" triggers mapnik to attempt to cache features in memory for rendering when (and only when) a layer has multiple styles attached to it. (only available in >mapnik 2 since r2636).
   * *srs*: Default inherits from map.srs; Reference system from the the project [Proj.4](http://trac.osgeo.org/proj/). e.g. +proj=latlong +datum=WGS84
   * *abstract*: Default ""
