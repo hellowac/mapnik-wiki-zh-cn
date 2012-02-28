@@ -25,7 +25,7 @@ The Map object defines the master object of a mapnik configuration XML. It defin
   * *srs*: Coordinate system in which the map is rendered (for instance '+proj=latlong+datum=WGS84' for a WGS84 Geographic coordinate system)
   * *buffer-size*: Default 0; Good value is usually tile size/2 to help avoid cut labels. This influences envelope used by placement detector ( i.e. 'avoid_edges' parameter)
   * *paths-from-xml*: Check if relative paths should be interpreted as relative to/from XML location (default is true)
-  * *minimum-version*: Declare the minimum version of mapnik to be used with the stylesheet. Example: minimum_version="0.6.1". Will print a notice if you use an older mapnik version. (Since r1453)
+  * *minimum-version*: Declare the minimum version of mapnik to be used with the stylesheet. Example: minimum-version="0.6.1". Will print a notice if you use an older mapnik version. (Since r1453)
 
  * Children:
   * *[#Style Style]*
