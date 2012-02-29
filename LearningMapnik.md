@@ -10,7 +10,7 @@ Mapnik can be used in a variety of ways. The most widely used options are using 
 
 ## Getting started
 
-Mapnik is written in C++, but many users use its bindings to higher-level languages, including Python or Javascript. If you've got a application that wraps Mapnik entirely, you might only need to concern yourself with the XML stylesheets that describe Mapnik's map styles.
+Mapnik is written in C++, but many users use its bindings to higher-level languages, including Python or Javascript. If you've got an application that wraps Mapnik entirely, you might only need to concern yourself with the XML stylesheets that describe Mapnik's map styles.
 
 To get first results, choose your weapon: XML, Python, C++, or node.js
 
