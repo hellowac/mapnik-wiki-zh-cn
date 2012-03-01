@@ -33,3 +33,4 @@ This page is to document and discuss improvements needed to unicode text handlin
     * What about http://www.freedesktop.org/wiki/Software/HarfBuzz?
 
  * http://behdad.org/text/
+ * http://shapecatcher.com/
