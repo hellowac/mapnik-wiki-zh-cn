@@ -39,7 +39,7 @@
 
 Some examples of Mapnik's ability to place text along lines:
 
-![thumb](http://trac.mapnik.org/raw-attachment/ticket/62/output_old.png)
+[[/images/output_old.png]]
 
 ### XML
 
