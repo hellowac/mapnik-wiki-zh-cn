@@ -1,8 +1,8 @@
 # Google Summer of Code Ideas - 2012
 
-Mapnik has applied to participate in Google Summer of Code 2012.
+Mapnik has applied to participate in Google Summer of Code 2012. ([application](Gsoc2012-application))
 
-Three students were accepted last year: http://mapnik.org/news/2011/apr/25/three_students_mapnik_gsoc_2011/
+Three students were accepted last year: http://mapnik.org/news/2011/04/25/three_students_mapnik_gsoc_2011/
 
 See the main page for more details: [[GSOC2012]]
 
