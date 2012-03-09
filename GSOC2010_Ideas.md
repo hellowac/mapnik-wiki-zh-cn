@@ -1,10 +1,4 @@
-<!-- Name: GSOC2010/Ideas -->
-<!-- Version: 26 -->
-<!-- Last-Modified: 2011/02/18 17:22:14 -->
-<!-- Author: springmeyer -->
-
-
-# Google Summer of Code Ideas
+# Google Summer of Code Ideas - 2010
 
 Mapnik will participate in Google Summer of Code 2010.
 
