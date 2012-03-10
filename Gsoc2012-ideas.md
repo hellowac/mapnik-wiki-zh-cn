@@ -13,15 +13,13 @@ See also steve8's ideas page: [[Ideas]]
 
 Format should be:
 
-Format should be:
-
 ## Project Name
 ### Description
 ### How it would benefit Mapnik Project
 ### What student would learn
 ### Submitter
 ### Possible Mentors
-### Technical Issues
+### Discussion
   * Comment/Idea
    * -- name of person commenting - date
 
@@ -38,7 +36,8 @@ Packaging, Shell Scripting and Understanding of Mapnik's code and its complete u
 Parveen Arora
 
 ### Possible Mentors
-### Technical Issues
-  * Comment/Idea
-   * -- name of person commenting - date
+
+### Discussion
+  * What would this provide that is not already done with https://github.com/mapnik/mapnik-packaging/tree/master/debian-nightlies and https://launchpad.net/~mapnik?
+   * -- springmeyer - mar 9th, 2012
 ----
