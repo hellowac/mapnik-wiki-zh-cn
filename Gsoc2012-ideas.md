@@ -25,6 +25,36 @@ Format should be:
 
 ----
 
+
+## Skia/OpenGL backend
+
+### Description
+
+Mapnik has a pluggable rendering backend system, currently supporting numerous renderers: AGG (antigrain geometry, main rendering for image output), Cairo (alternative renderer for image output + vector formats like PDF and SVG), Grid (json format - utf8 hit grids).
+
+[Skia](http://code.google.com/p/skia/) is the rendering library used in Chrome and has some support for OpenGL on certain hardware. An experimental backend using Skia would be interesting to see if the software rendering pipeline was any faster than AGG (and of similar quality) and if the hardware pipeline was useful for rendering on mobile devices. Alternatively a direct OpenGL backend could also be investigated.
+
+### How it would benefit Mapnik Project
+
+Mapnik is about beautiful maps, but also fast maps. In many common performance critical rendering scenarios using Mapnik, the rendering backend is not the bottleneck - e.g. its not AGG that is taking the most time, but rather io and pulling/processing data. But, focused optimizations in Mapnik core are starting to change this and the renderer may become more of the bottleneck in the future - so seeking the fastest possible rendering is desirable.
+
+### What student would learn
+They would learn a lot about the latest advances in GPU's, the tradeoffs of hardware acceleration, and the details of modern graphics libraries for desktop and mobile, like Skia.
+
+### Submitter
+
+Dane Springmeyer
+
+### Possible Mentors
+
+Dane Springmeyer
+
+### Discussion
+  * Comment/Idea
+   * -- name of person commenting - date
+
+----
+
 ## Packaging of Mapnik2
 ### Description:
 This project can bring mapnik2 to use in a very easy way, just like apt-get install mapnik2 and it will be ready to use. This will include all the packaging work to add into linux distribution's main repository specially of Ubuntu's which is being used much more than other distributions and all the scripting work to install the mapnik2 by checking all the required dependencies and then also install them automatically and finally is the troubleshooting i.e if mapnik fails to install in any way then to do troubleshooting by itself to install it on user's machine.
