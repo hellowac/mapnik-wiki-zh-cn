@@ -55,6 +55,40 @@ Dane Springmeyer
 
 ----
 
+## Gorgeous multi-lingual text rendering
+
+### Description
+
+The quality of label placement and text rendering makes the difference between a good map and amazing map. And a beautiful map is useless if the text is not perfectly legible.
+
+Mapnik, through the Freetype library, has pretty nice text display. And through previous GSOC projects by @Herm, has an awesome framework for advanced text placement and formatting. But at this time Mapnik has numerous bugs and problems when it comes to non-latin languages: https://github.com/mapnik/mapnik/wiki/InternationalText.
+
+This is no surprise, text rendering with unicode is extremely hard: http://behdad.org/text.
+
+But, we have to fix this - we need excellent support for text positioning and display in all languages. You could become the master of how text rendering works and make the maps made with Mapnik massively more useful to people around the world, particularly in places like China, India, Cambodia, and the Middle east.
+
+### How it would benefit Mapnik Project
+
+The idea here is to benefit not only the Mapnik project, but primarily projects like OpenStreetMap and all the other users of Mapnik making international, global baselayers.
+
+### What student would learn
+
+Would become an expert in Freetype, ICU, Harfbuzz, and Pango. Would learn the nuances and challenges of label placement algorithms. Would learn about the tradeoffs in text rendering perfection and performance.
+
+### Submitter
+
+Dane Springmeyer
+
+### Possible Mentors
+
+Dane Springmeyer
+
+### Discussion
+  * Comment/Idea
+   * -- name of person commenting - date
+
+----
+
 ## Packaging of Mapnik2
 ### Description:
 This project can bring mapnik2 to use in a very easy way, just like apt-get install mapnik2 and it will be ready to use. This will include all the packaging work to add into linux distribution's main repository specially of Ubuntu's which is being used much more than other distributions and all the scripting work to install the mapnik2 by checking all the required dependencies and then also install them automatically and finally is the troubleshooting i.e if mapnik fails to install in any way then to do troubleshooting by itself to install it on user's machine.
