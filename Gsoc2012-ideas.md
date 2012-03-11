@@ -25,6 +25,17 @@ Format should be:
 
 ----
 
+## Prospective (2.5 Dimension) Rendering 
+### Description
+Mapnik right now print only 2D image. This project could improve a prospective (2.5 Dimension) Rendering. The idea come from Maperitive function that provide map similar these [image 1](http://images2.gazzettaobjects.it/static_images/ciclismo/giroditalia/2012/tappa_19_S03.jpg), [image 2](http://www.gazzetta.it/Speciali/Giroditalia/2011/immagini/zoom/tappa_15_s.jpg)
+### How it would benefit Mapnik Project
+Mapnik could rendering prospective (2.5 Dimension) image, another beautiful type of maps. This kind of rendering it is very important for outdoor sports: ski resort, cycling or hiking stage are often rendering with  prospective (2.5 Dimension) image.
+### What student would learn
+The Mapnik core and prospective (2.5 Dimension) rendering.
+### Submitter
+Luca Delucchi
+### Possible Mentors
+### Discussion
 
 ## Skia/OpenGL backend
 
