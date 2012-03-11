@@ -104,4 +104,6 @@ Parveen Arora
 ### Discussion
   * What would this provide that is not already done with https://github.com/mapnik/mapnik-packaging/tree/master/debian-nightlies and https://launchpad.net/~mapnik?
    * -- springmeyer - mar 9th, 2012
+  * Yeah, I'm not sure there's enough work on top of what David's already doing with debian, and the nightlies/PPA. More Windows support is the big gorilla though, building on Roel's work from last year? -- rcoup - mar 12th, 2012
+
 ----
