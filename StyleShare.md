@@ -128,4 +128,10 @@ For now, list your styles here!
 
 *Minimum Mapnik Version*: Mapnik 0.7.1
 
+## Golf overlay
 
+*Description*: A render of golf course features, for golfers.
+
+*URI*: https://github.com/rweait/Mapnik-golf-overlay
+
+*Minimum Mapnik Version*: Mapnik 2.0.0
