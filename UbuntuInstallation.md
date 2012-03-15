@@ -10,7 +10,7 @@ For previous versions see the archived notes at [[UbuntuInstallationOld]]
 
 ----
 
-# Ubuntu Maverick (11.10)
+# Ubuntu Oneiric (11.10)
 
 ## Install from packages
 
@@ -39,8 +39,6 @@ For previous versions see the archived notes at [[UbuntuInstallationOld]]
     sudo apt-get upgrade
     sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
-
-*Note:* then you will likely also want to install Postgres + PostGIS (see below)
 
 ## Install Mapnik from source
 
@@ -78,8 +76,6 @@ First, remove any apt installing packages:
 ```
 
 ### Then compile and install Mapnik
-
-For instructions on compiling trunk (aka Mapnik2) see [[Mapnik2]]
 
 ```sh
     git clone http://github.com/mapnik/mapnik
