@@ -1,5 +1,6 @@
 # Installing Mapnik on Ubuntu
-For all versions of Ubuntu make sure you are up to date before starting to install:
+
+For all versions of Ubuntu it is a good idea to be fully up to date before starting:
 
 ```sh
     sudo apt-get update
@@ -19,7 +20,6 @@ For previous versions see the archived notes at [[UbuntuInstallationOld]]
 ```sh
     sudo add-apt-repository ppa:mapnik/nightly-trunk
     sudo apt-get update
-    sudo apt-get upgrade
     sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
 **For v2.0.x version**
@@ -27,7 +27,6 @@ For previous versions see the archived notes at [[UbuntuInstallationOld]]
 ```sh
     sudo add-apt-repository ppa:mapnik/nightly-2.0
     sudo apt-get update
-    sudo apt-get upgrade
     sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
 
@@ -36,7 +35,6 @@ For previous versions see the archived notes at [[UbuntuInstallationOld]]
 ```sh
     sudo add-apt-repository ppa:mapnik/nightly-0.7
     sudo apt-get update
-    sudo apt-get upgrade
     sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
 
