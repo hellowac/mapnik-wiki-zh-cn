@@ -1,12 +1,5 @@
-<!-- Name: UbuntuInstallation -->
-<!-- Version: 57 -->
-<!-- Last-Modified: 2010/10/12 16:08:23 -->
-<!-- Author: springmeyer -->
-
-
 # Installing Mapnik on Ubuntu
 For all versions of Ubuntu make sure you are up to date before starting to install:
-
 
 ```sh
     sudo apt-get update
@@ -17,35 +10,34 @@ For previous versions see the archived notes at [[UbuntuInstallationOld]]
 
 ----
 
-# Ubuntu Maverick (10.10)
-
-This release has Mapnik packages for 0.7.1 (to check run `apt-cache show libmapnik*`), so you can either install Mapnik from packages or source.
-
- * Packages are available in the 'universe' repositories so make sure your `/etc/apt/sources.list` has the below lines (or similar):
-
-```
-    deb http://us.archive.ubuntu.com/ubuntu/ maverick universe
-    deb http://us.archive.ubuntu.com/ubuntu/ maverick-updates universe
-```
+# Ubuntu Maverick (11.10)
 
 ## Install from packages
 
-**For v 2.0.x version**
-
-Most distributions don't have Mapnik 2 packages bundled.
-You can use [nightly build](https://launchpad.net/~mapnik/+archive/nightly-trunk) if you're not able to compile from source.
+**For nightly builds from master (2.x)**
 
 ```sh
     sudo add-apt-repository ppa:mapnik/nightly-trunk
     sudo apt-get update
     sudo apt-get upgrade
-    sudo apt-get install mapnik2-utils libmapnik2 python-mapnik2
+    sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
-
-**For v 0.7.x version**
+**For v2.0.x version**
 
 ```sh
-    sudo apt-get install libmapnik0.7 mapnik-utils python-mapnik
+    sudo add-apt-repository ppa:mapnik/nightly-2.0
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get install libmapnik mapnik-utils python-mapnik
+```
+
+**For v0.7.2 version**
+
+```sh
+    sudo add-apt-repository ppa:mapnik/nightly-0.7
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
 
 *Note:* then you will likely also want to install Postgres + PostGIS (see below)
@@ -64,24 +56,24 @@ First, remove any apt installing packages:
     # get a build environment going...
     sudo apt-get install -y g++ cpp \
     libicu-dev \
-    libboost-filesystem1.42-dev \
-    libboost-iostreams1.42-dev libboost-program-options1.42-dev \
-    libboost-python1.42-dev libboost-regex1.42-dev \
-    libboost-system1.42-dev libboost-thread1.42-dev \
+    libboost-filesystem-dev \
+    libboost-program-options-dev \
+    libboost-python-dev libboost-regex-dev \
+    libboost-system-dev libboost-thread-dev \
     python-dev libxml2 libxml2-dev \
     libfreetype6 libfreetype6-dev \
-    libjpeg62 libjpeg62-dev \
+    libjpeg-dev \
     libltdl7 libltdl-dev \
-    libpng12-0 libpng12-dev \
-    libgeotiff-dev libtiff4 libtiff4-dev libtiffxx0c2 \
+    libpng-dev \
+    libgeotiff-dev libtiff-dev libtiffxx0c2 \
     libcairo2 libcairo2-dev python-cairo python-cairo-dev \
     libcairomm-1.0-1 libcairomm-1.0-dev \
     ttf-unifont ttf-dejavu ttf-dejavu-core ttf-dejavu-extra \
-    subversion build-essential python-nose
+    git build-essential python-nose
     
     # install plugin dependencies
     sudo apt-get install libgdal1-dev python-gdal \
-    postgresql-8.4 postgresql-server-dev-8.4 postgresql-contrib-8.4 postgresql-8.4-postgis \
+    postgresql-9.1 postgresql-server-dev-9.1 postgresql-contrib-9.1 postgresql-9.1-postgis \
     libsqlite3-dev
 ```
 
@@ -90,38 +82,13 @@ First, remove any apt installing packages:
 For instructions on compiling trunk (aka Mapnik2) see [[Mapnik2]]
 
 ```sh
-    svn co http://svn.mapnik.org/tags/release-0.7.1/ mapnik-0.7.1
-    cd mapnik-0.7.1
-    python scons/scons.py configure INPUT_PLUGINS=all OPTIMIZATION=3 SYSTEM_FONTS=/usr/share/fonts/
-    python scons/scons.py
-    sudo python scons/scons.py install
-```
-
-Then run:
-
-```sh
-    $ sudo ldconfig
+    git clone http://github.com/mapnik/mapnik
+    cd mapnik
+    ./configure && make && sudo make install
 ```
 
 To test mapnik:
 
-```python
-    $ Python
-    >>> import mapnik
-    >>>
-```
-
- * No output is good. 
-
-Then run the full test suite
-
 ```sh
-    cd mapnik-0.7.1
-    python tests/run_tests.py
-```
-
-If you are interested what libraries mapnik linked against do (for example):
-
-```sh
-    ldd /usr/lib/python2.6/site-packages/mapnik/_mapnik.so | grep boost
+    make test
 ```
