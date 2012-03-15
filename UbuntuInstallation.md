@@ -40,7 +40,7 @@ For previous versions see the archived notes at [[UbuntuInstallationOld]]
 
 ## Install Mapnik from source
 
-First, remove any apt installing packages:
+First, remove any other old mapnik packages:
 
 ```sh
     sudo apt-get remove libmapnik* mapnik-utils python-mapnik
