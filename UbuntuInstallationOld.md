@@ -1,10 +1,45 @@
-<!-- Name: UbuntuInstallationOld -->
-<!-- Version: 9 -->
-<!-- Last-Modified: 2010/10/12 16:02:11 -->
-<!-- Author: springmeyer -->
+
 # Build notes specific to older versions of Ubuntu
 
 See UbuntuInstallation for build notes for the latest version.
+
+# Ubuntu Maverick (10.10)
+
+This release has Mapnik packages for 0.7.1 (to check run `apt-cache show libmapnik*`), so you can either install Mapnik from packages or source.
+
+ * Packages are available in the 'universe' repositories so make sure your `/etc/apt/sources.list` has the below lines (or similar):
+
+```
+    deb http://us.archive.ubuntu.com/ubuntu/ maverick universe
+    deb http://us.archive.ubuntu.com/ubuntu/ maverick-updates universe
+```
+
+### Set up build environment
+
+```sh
+    # get a build environment going...
+    sudo apt-get install -y g++ cpp \
+    libicu-dev \
+    libboost-filesystem1.42-dev \
+    libboost-iostreams1.42-dev libboost-program-options1.42-dev \
+    libboost-python1.42-dev libboost-regex1.42-dev \
+    libboost-system1.42-dev libboost-thread1.42-dev \
+    python-dev libxml2 libxml2-dev \
+    libfreetype6 libfreetype6-dev \
+    libjpeg62 libjpeg62-dev \
+    libltdl7 libltdl-dev \
+    libpng12-0 libpng12-dev \
+    libgeotiff-dev libtiff4 libtiff4-dev libtiffxx0c2 \
+    libcairo2 libcairo2-dev python-cairo python-cairo-dev \
+    libcairomm-1.0-1 libcairomm-1.0-dev \
+    ttf-unifont ttf-dejavu ttf-dejavu-core ttf-dejavu-extra \
+    subversion build-essential python-nose
+    
+    # install plugin dependencies
+    sudo apt-get install libgdal1-dev python-gdal \
+    postgresql-8.4 postgresql-server-dev-8.4 postgresql-contrib-8.4 postgresql-8.4-postgis \
+    libsqlite3-dev
+```
 
 
 # Ubuntu Lucid (10.04)
