@@ -1,10 +1,6 @@
-<!-- Name: InternationalText -->
-<!-- Version: 14 -->
-<!-- Last-Modified: 2011/09/06 11:31:00 -->
-<!-- Author: springmeyer -->
 # International Text
 
-Mapnik supports unicode text and Right-to-left (RTL) languages (through ICU library).
+Mapnik supports unicode text through ICU and has only very rudimentary support for Right-to-left (RTL) languages.
 
 This page is to document and discuss improvements needed to unicode text handling.
 
@@ -19,18 +15,12 @@ This page is to document and discuss improvements needed to unicode text handlin
  * [#558](https://github.com/mapnik/mapnik/issues/558) - Character spacing not correct for nepali text
  * [#582](https://github.com/mapnik/mapnik/issues/582) - TextSymbolizer bug with Armenian letters
 
-## Issues
+## Resources
 
- * Better leveraging of ICU
-  * Does ICU support any mirroring that we are not yet leveraging?
-    * It seems that ICU *does not* support shaping for anything other than Arabic RTL, but need to dig deeper
-
- * Other libraries that solve some of these problems:
-  * In the past developer discussions have mentioned using the [pango library](http://www.pango.org/), or ideas from [liblinebreak](http://vimgadgets.sourceforge.net/liblinebreak/)
-    * If used Pango would need to be an optional dependecy because we don't want to have to depend on whole GLib/GTK stack.
-    * Artem is not interested in a pango dependency
-    * (MapOSMatic is using pango via python: http://news.maposmatic.org/?p=125)
-    * What about http://www.freedesktop.org/wiki/Software/HarfBuzz?
-
- * http://behdad.org/text/
+ * "State of Text Rendering": http://behdad.org/text/
+ * [HarfBuzz](http://www.freedesktop.org/wiki/Software/HarfBuzz)
+ * [pango library](http://www.pango.org/)
+ * [liblinebreak](http://vimgadgets.sourceforge.net/liblinebreak/)
+   * If used Pango would need to be an optional dependency because we don't want to have to depend on whole GLib/GTK stack.
  * http://shapecatcher.com/
+ * Mozilla bug that has good testcases that could be harvested: https://bugzilla.mozilla.org/show_bug.cgi?id=721821
