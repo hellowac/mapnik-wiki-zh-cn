@@ -14,7 +14,7 @@ To validate the Map xml file, reference mapnik's mapfile DTD as in:
     </Map>
 ```
 
-The DTD file can be found here: https://github.com/mapnik/mapnik/blob/master/utils/xml/mapnik2.dtd
+The DTD file can be found here: https://github.com/mapnik/mapnik/blob/master/utils/xml/mapnik.dtd
 
 
 ## Validating in editors
