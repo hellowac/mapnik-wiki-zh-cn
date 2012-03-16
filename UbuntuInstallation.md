@@ -17,18 +17,27 @@ For previous versions see the archived notes at [[UbuntuInstallationOld]]
 
 **For nightly builds from master (2.x)**
 
+This is the bleeding edge, compiled directly from https://github.com/mapnik/mapnik/commits/master
+
 ```sh
     sudo add-apt-repository ppa:mapnik/nightly-trunk
     sudo apt-get update
     sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
+
+Packages come from: https://launchpad.net/~mapnik/+archive/nightly-trunk/+packages
+
 **For v2.0.x version**
+
+This is the stable 2.0.x series, updated whenever there is a commit pushed to the 2.0.x branch (which is only bugfix backports) - the next release in this series is 2.0.1.
 
 ```sh
     sudo add-apt-repository ppa:mapnik/nightly-2.0
     sudo apt-get update
     sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
+
+Packages come from: https://launchpad.net/~mapnik/+archive/nightly-2.0/+packages
 
 **For v0.7.2 version**
 
