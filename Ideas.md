@@ -1,3 +1,5 @@
+http://www.slideshare.net/steve8/what-id-like-to-do-with-mapnik-4756837
+
  * icon rotation: could also be used for amenity=viewpoint when tagged with viewing angles
  * <strike>SVG icons: allow replacing colors (e.g. color a black icon in blue); have an alpha parameter</strike> (done)
  * move icon a bit if it would collide with others
