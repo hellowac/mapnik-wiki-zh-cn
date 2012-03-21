@@ -13,6 +13,7 @@
 | width | width of marker | 5 | no |
 | height |  height of marker | 5 | no |
 | placement | "point" or "line"  | line | no (todo) |
+| ignore-placement | "true" or "false"  | "false" | no (todo) |
 | marker_type | "arrow" "ellipse" | "arrow" if line placement, "ellipse" if point placement | no |
 
 It can be added to a Rule with line features like:
