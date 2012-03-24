@@ -30,5 +30,5 @@ git clone https://github.com/mapnik/mapnik.git
 cd mapnik
 ./configure CXX="clang++" JOBS=`sysctl -n hw.ncpu`
 make
-make install  // sudo make install # Mac OS X Lion
+make install  ( sudo make install # Mac OS X Lion  )
 ```
