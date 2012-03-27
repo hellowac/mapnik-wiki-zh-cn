@@ -2,13 +2,14 @@
 <!-- Version: 18 -->
 <!-- Last-Modified: 2011/08/23 13:51:30 -->
 <!-- Author: springmeyer -->
+
 Mapnik's PluginArchitecture supports the use of different input formats.
 
 One such plugin supports the [PostGIS](http://en.wikipedia.org/wiki/PostGIS) extension to the popular PostgreSQL database.
 
 See also a performance tuning page: [[OptimizeRenderingWithPostGIS]]
 
-# New 0.7.0 Features
+## New 0.7.0 Features
 
 Docs TODO ->
 
@@ -19,7 +20,7 @@ Docs TODO ->
  * subquery best practices -  when to set the 'subquery_extent' to true
  * controlling connection persistence   
 
-# Installation
+## Installation
 
 For Ubuntu, see [[UbuntuInstallation]] (specifically the package install line that includes _postgresql-8.3_)
 
@@ -35,14 +36,38 @@ To check if the PostGIS plugin built and was installed correctly, try the usual 
 
     registered datasource : postgis
 
-# Usage
+## Parameters
+
+| *parameter*       | *value*  | *description* | *default* |
+|:------------------|----------|---------------|----------:|
+| host                  | string       | name of the postgres host | |
+| port                  | integer      | name of the postgres port | |
+| dbname                | string       | name of the database | |
+| user                  | string       | username to use for connecting | |
+| password              | string       | user password to use for connecting | |
+| table                 | string       | name of the table to fetch, this can be a sub-query | |
+| geometry_field        | string       | name of the geometry field, in case you have more than one in a single table | GEOLOC |
+| srid                  | integer      | srid of the table, if this is > 0 then fetching data will avoid an extra database query for knowing the srid of the table | 0 |
+| extent                | string       | maxextent of the geometries | determined by querying the oracle metadata for the table |
+| extent_from_subquery  | boolean      | evaluate the extent of the subquery, this might be a performance issue | false |
+| connect_timeout       | integer      | timeout is seconds for the connection to take place | 4 |
+| persist_connection    | boolean      | choose wheter to share the same connection for subsequent queries | true |
+| row_limit             | integer      | max number of rows to return when querying data, 0 means no limit | 0 |
+features (this allows to finetune the balance between transfer time and conversion time) | 1000 |
+| cursor_size           | integer      | if this is > 0 then server cursor will be used, and will prefetch this number of features | 0 |
+| initial_size          | integer      | initial size of the stateless connection pool | 1 |
+| max_size              | integer      | max size of the stateless connection pool | 10 |
+| multiple_geometries   | boolean      | wheter to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
+| encoding              | string       | internal file encoding | utf-8 |
+
+## Usage
 
 *Note*: 
 
  * Spatial tables read from PostGIS by Mapnik _must_ have a cooresponding entry in `geometry_columns`.
  * Use the `geometry_field` parameter to specify which field to use if you have >1 geometry in the table/query (added in r769).
 
-## Python
+### Python
 
 Instantiate a datasource like:
 
@@ -60,7 +85,6 @@ If you want to do complex queries you can nest subselects in the `table` argumen
 
 If you want to add something after the query (for example ORDER BY) you must use !bbox! dynamic map variable:
 
-    #!python
     lyr = Layer('Order by st_lenght from PostGIS')
     BUFFERED_TABLE = 'table_line where way && !bbox! ORDER BY st_LENGTH(way) DESC'
     lyr.datasource = PostGIS(host='localhost',user='postgres',password='',dbname='your_postgis_database',table=BUFFERED_TABLE, srid='your_srid', geometry_field='way', extent='your_extent')
@@ -70,7 +94,7 @@ If you want to add something after the query (for example ORDER BY) you must use
  * Further references: See Artem's email on [using the PostGIS from Python](https://lists.berlios.de/pipermail/mapnik-users/2007-June/000300.html)
  * Example code at the Mapnik-utils project: http://mapnik-utils.googlecode.com/svn/example_code/postgis/postgis_geometry.py
 
-## XML
+### XML
 
 If you are using XML mapfiles to style your data, then using a PostGIS datasource (with a sub-select in this case) looks like:
 
@@ -100,7 +124,7 @@ If you are using XML mapfiles to style your data, then using a PostGIS datasourc
 
 If you don't do this, you might not see data from this data source at all, even if it does not contain data outside of the valid region. Also note that you always specify the extents in the coordinates of the source system.
 
-## C++
+### C++
 
 Plugin datasource initialization example code can be found on [[PluginArchitecture]].
 
