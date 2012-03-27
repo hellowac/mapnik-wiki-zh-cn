@@ -3,9 +3,7 @@
 <!-- Last-Modified: 2011/08/10 13:41:42 -->
 <!-- Author: springmeyer -->
 
-```html
-    <h2 style="text-align: left; color: red">WARNING: experimental !</h1>
-```
+# WARNING: experimental !</h1>
 
 Mapnik's PluginArchitecture supports the use of different input formats.
 
@@ -24,7 +22,6 @@ Check if you have the GEOS library installed:
 If not, install it from [here](http://trac.osgeo.org/geos/) or use your package system on your distro.
 
 If scons is unable to find the needed headers and library, make sure you define where they are in _config.py_:
-
 
     GEOS_INCLUDES='/usr/local/include'
     GEOS_LIBS='/usr/local/lib'
@@ -93,3 +90,4 @@ A  datasource may be created as follows:
         m.addLayer(lyr);
     }
 ```
+
