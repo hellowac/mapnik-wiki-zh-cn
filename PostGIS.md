@@ -16,7 +16,6 @@ Docs TODO ->
  * Dynamic map variables
   * !bbox!
   * !scale_denominator!
- * manually setting srid,geometry_field,geometry_table
  * subquery best practices -  when to set the 'subquery_extent' to true
  * controlling connection persistence   
 
@@ -46,7 +45,8 @@ To check if the PostGIS plugin built and was installed correctly, try the usual 
 | user                  | string       | username to use for connecting | |
 | password              | string       | user password to use for connecting | |
 | table                 | string       | name of the table to fetch, this can be a sub-query | |
-| geometry_field        | string       | name of the geometry field, in case you have more than one in a single table | GEOLOC |
+| geometry_field        | string       | name of the geometry field, in case you have more than one in a single table | |
+| geometry_table        | string       | name of the geometry table ??? | |
 | srid                  | integer      | srid of the table, if this is > 0 then fetching data will avoid an extra database query for knowing the srid of the table | 0 |
 | extent                | string       | maxextent of the geometries | determined by querying the oracle metadata for the table |
 | extent_from_subquery  | boolean      | evaluate the extent of the subquery, this might be a performance issue | false |
