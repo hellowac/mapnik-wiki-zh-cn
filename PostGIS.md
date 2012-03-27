@@ -53,7 +53,6 @@ To check if the PostGIS plugin built and was installed correctly, try the usual 
 | connect_timeout       | integer      | timeout is seconds for the connection to take place | 4 |
 | persist_connection    | boolean      | choose wheter to share the same connection for subsequent queries | true |
 | row_limit             | integer      | max number of rows to return when querying data, 0 means no limit | 0 |
-features (this allows to finetune the balance between transfer time and conversion time) | 1000 |
 | cursor_size           | integer      | if this is > 0 then server cursor will be used, and will prefetch this number of features | 0 |
 | initial_size          | integer      | initial size of the stateless connection pool | 1 |
 | max_size              | integer      | max size of the stateless connection pool | 10 |
