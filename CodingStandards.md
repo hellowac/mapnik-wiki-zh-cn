@@ -8,6 +8,8 @@ There are no coding standards yet defined for this project. This is an initial a
 
 This needs to be discussed, since the current document is just a single person's draft.
 
+Also read 'Code commits best practices' and 'Coding Conventions' in [Contributing](https://github.com/mapnik/mapnik/blob/master/docs/contributing.markdown), in the Docs. 
+
 ## C++
 
  * Trailing whitespace is never allowed. This includes lines with nothing but spaces or tabs in them, as well as spaces or tabs being the last characters on a line with non-whitespace characters.
@@ -44,6 +46,8 @@ This needs to be discussed, since the current document is just a single person's
     ;;
     (c-set-offset 'template-args-cont 'c-lineup-template-args)
     
+
+
 
 ## Python
 
