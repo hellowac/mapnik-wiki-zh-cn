@@ -52,7 +52,7 @@ Here are some other sets of Example Code to learn from.
  * *Added by:* springmeyer
 
 ### Cairo Renderer
-[Code samples]((MapnikRenderers) for writing to SVG and PDF
+[Code samples](MapnikRenderers) for writing to SVG and PDF
 
 ### mapnik-utils
 
