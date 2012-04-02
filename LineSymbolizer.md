@@ -28,8 +28,11 @@ A LineSymbolizer is used to render a "stroke" along a linear geometry.
 
 ```python
 l = LineSymbolizer(Color('green'),0.1)
-l.stroke.add_dash(.1,.1)
-l.stroke.opacity = .5
+To work directly with the stroke object:
+l = LineSymbolizer()
+s = Stroke(Color('green'),0.1)
+s.add_dash(.1,.1)
+s.opacity = .5
 ```
 Fetch all the possible methods like:
 
