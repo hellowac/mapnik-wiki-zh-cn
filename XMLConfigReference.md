@@ -98,11 +98,10 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
 
  * Additional parameters for type *postgis*    
 see: Parameters on the [[PostGIS]] page. 
-   * *type* (default _utf-8_):
 
- * Additional parameters for type *shape*
-   * *encoding*:	        Character encoding in the shapefile. Default 'utf-8'. ESRI Shapefiles are usually 'latin1'
-   * *file*:		For shape type; location and name (without extension) of the ESRI shapefile
+
+ * Additional parameters for type *shape* see [[ShapeFile]]
+
 
  * Additional parameters for type *gdal*
    * *file*:		Path to the raster file
