@@ -7,6 +7,7 @@ This page is to document and discuss improvements needed to unicode text handlin
 ## Current Tickets
 
  * [#364](https://github.com/mapnik/mapnik/issues/364) / [#404](https://github.com/mapnik/mapnik/issues/404) - RTL mirroring
+ * [#1154](https://github.com/mapnik/mapnik/issues/1154) - Arabic font spacing
  * [#519](https://github.com/mapnik/mapnik/issues/519) - RTL spacing wrong with numbers (UBIDI_MIXED)
  * [#112](https://github.com/mapnik/mapnik/issues/112) - Indic RTL font shaping
  * [#189](https://github.com/mapnik/mapnik/issues/189) / [#409](https://github.com/mapnik/mapnik/issues/409) - RTL wrapping (line breaks)
