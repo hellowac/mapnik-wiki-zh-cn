@@ -110,8 +110,7 @@ see: Parameters on the [[PostGIS]] page.
    * *layer*:		The layer name, run `ogrinfo` on the data to get the layer name (hint: for shapefiles it is the same name as the file)
 
  * Additional parameters for type *osm*
-   * *file*:		location and name (with extension) of the OSM Filename
-   * *parser*:            Parser for the xml file. (Should be 'libxml2')
+ see [[OsmPlugin]]
    * *url*:               URL from which to load the OSM data.  The *bbox* parameter must also be specified.  This is not the full URL, just the base.  For example _http://127.0.0.1:8800/tiledata_
    * *bbox*:              The bounding-box parameter to be added to the URL.  There's no defined format for this, but whatever is included in this value will be appended to the URL after a '?bbox='.  So if *bbox* is *115.136719,-31.802893,116.894531,-33.284620* and URL is _http://127.0.0.1:8800/tiledata_ then the full URL used will be _http://127.0.0.1:8800/tiledata?bbox=115.136719,-31.802893,116.894531,-33.284620_.  Both *url* and *bbox* must be specified to use a URL.
 ----
