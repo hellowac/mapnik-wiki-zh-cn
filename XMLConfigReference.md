@@ -97,22 +97,8 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
   * *extent*:		manually enter an extent if estimate_extent is set to false
 
  * Additional parameters for type *postgis*    
-   * *cursor_size* (default _0_):
-   * *dbname*: Database name.
-   * *extent_from_subquery* (default _false_):
-   * *geometry_field*: Use the geometry_field parameter to specify which field to use if you have >1 geometry in the table/query (added in r769). This field and the SRID will be deduced from the query in most cases, but may need to be manually specified in some cases.
-   * *host*: The name of the PostGIS server.
-   * *initial_size* (default _1_):
-   * *max_size* (default _10_):
-   * *multiple_geometries* (default _false_):
-   * *password*: The password of the username to access the PostGIS database.
-   * *persist_connection* (default _true_):
-   * *port*: The port of the PostGIS server.
-   * *row_limit* (default _0_): The maximum number of rows to query.
-   * *table*: Name of the table or PostGIS query. subquery has to use syntax of:  '( ) as table'.
+see: Parameters on the [[PostGIS]] page. 
    * *type* (default _utf-8_):
-   * *srid* (default _0_): The integer SRID of the geometry in the table's geometry column. This can be deduced from the table parameter in most cases, but doing so requires an extra database query that can be avoided by providing this parameter.
-   * *user*: Username to access the PostGIS database.
 
  * Additional parameters for type *shape*
    * *encoding*:	        Character encoding in the shapefile. Default 'utf-8'. ESRI Shapefiles are usually 'latin1'
