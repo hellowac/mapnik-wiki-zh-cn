@@ -146,7 +146,7 @@ A PostGIS datasource may be created as follows:
     }
 ```
 
-For other PostGIS parameters, see [the postgis_datasource constructor in postgis.cpp:L57](http://trac.mapnik.org/browser/trunk/plugins/input/postgis/postgis.cpp#L57)
+For other PostGIS parameters, see [the postgis_datasource constructor in postgis_datasource.cpp#L48](https://github.com/mapnik/mapnik/blob/master/plugins/input/postgis/postgis_datasource.cpp#L48)
 
 TODO -- more PostGIS query usage
 
