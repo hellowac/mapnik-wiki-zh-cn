@@ -20,13 +20,18 @@ To check if the raster plugin built and was installed correctly you can do:
     True
 ```
 
-# Parameters
+## Parameters
+
+| *parameter*       | *value*  | *description* | *default* |
+|:------------------|----------|---------------|----------:|
+| encoding             | string       | Encoding Used |  utf-8. ESRI Shapefiles are usually 'latin1' |
+| file              | string | name of shapefile (without extension) | | 
 
 See: http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-module.html#Shapefile
 
 # Styling
 
-To style a layer use any of the Symbolizers like Point, Polygon, or Line, depending on the geometry type.
+To style a layer, use any of the Symbolizers like Point, Polygon, or Line, depending on the geometry type.
 
 # Usage
 
