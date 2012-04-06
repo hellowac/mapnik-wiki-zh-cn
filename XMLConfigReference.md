@@ -3,7 +3,7 @@
 
 # Mapnik configuration XML
 
-See also a reference PDF, created by David Eastcott: http://media.mapnik.org/docs/MapnikXMLDescription.pdf
+See also a reference PDF, created by David Eastcott: http://old.nabble.com/attachment/27685172/0/MapnikXMLDescription.pdf (written for 0.7)
 
 To validate the XML see [[ValidatingXml]]
 
