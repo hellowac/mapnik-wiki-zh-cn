@@ -96,21 +96,11 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
   * *estimate_extent*: boolean to tell Mapnik to estimate the extent of the layer (true) or not (false)
   * *extent*:		manually enter an extent if estimate_extent is set to false
 
- * Additional parameters for type *postgis*    
-see: Parameters on the [[PostGIS]] page. 
-
-
+ * Additional parameters for type *postgis* see: Parameters on the [[PostGIS]] page. 
  * Additional parameters for type *shape* see [[ShapeFile]]
-
-
- * Additional parameters for type *gdal*
-   * *file*:		Path to the raster file
-
- * Additional parameters for type *ogr*
-   * *layer*:		The layer name, run `ogrinfo` on the data to get the layer name (hint: for shapefiles it is the same name as the file)
-
- * Additional parameters for type *osm*
- see [[OsmPlugin]]
+ * Additional parameters for type *gdal* see [[GDAL]].
+ * Additional parameters for type *ogr* see [[OGR]].
+ * Additional parameters for type *osm*  see [[OsmPlugin]]
 ----
 
 ## Rule
