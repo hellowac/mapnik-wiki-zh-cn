@@ -8,7 +8,7 @@ If you an interested in compiling Mapnik from source on windows see the windows 
 
 ## Mapnik 2.0 support
 
-For 2.0 binaries see: http://mapnik.org/news/2011/11/29/windows-binaries-progress/
+For 2.0 binaries see: [http://mapnik.org/news/2011/11/29/windows-binaries-progress](http://mapnik.org/news/2011/11/29/windows-binaries-progress/)
 
 ## Supported Features
 
