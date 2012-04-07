@@ -1,9 +1,3 @@
-<!-- Name: WindowsInstallation -->
-<!-- Version: 36 -->
-<!-- Last-Modified: 2011/06/09 09:06:43 -->
-<!-- Author: springmeyer -->
-
-
 # Installing Mapnik in Windows
 
 Mapnik binaries can be installed and configured manually, or installed using OSGEO4W. The instructions below highlight these options.
@@ -12,6 +6,9 @@ If you are interested in installing Mapnik on other operating systems see [[Mapn
 
 If you an interested in compiling Mapnik from source on windows see the windows scripts at https://github.com/mapnik/mapnik-packaging
 
+## Mapnik 2.0 support
+
+For 2.0 binaries see: http://mapnik.org/news/2011/11/29/windows-binaries-progress/
 
 ## Supported Features
 
