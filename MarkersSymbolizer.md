@@ -51,7 +51,7 @@ The ST_reverse function of Postgis can fix this (The problem will then be to ide
 
 
 ```xml
-<MarkersSymbolizer fill="darkorange" opacity=".7" width="20" height="10" stroke="orange" stroke-width="7" stroke-opacity=".2" placement="point" marker_type="ellipse"/>
+<MarkersSymbolizer fill="darkorange" opacity=".7" width="20" height="10" stroke="orange" stroke-width="7" stroke-opacity=".2" placement="point" marker-type="ellipse"/>
 ```
 
 CAVEAT: these properties do not apply to SVG files, and SVG transforms are not supported for modifying ellipses (yet).
