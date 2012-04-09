@@ -39,22 +39,41 @@
   * `make install`, then:
 
 ```
-git commit -a -m "setting up for mapnik `mapnik-config --version` release" 
+MAPNIK_VERSION=`mapnik-config --version`
+git commit -a -m "setting up for mapnik v${MAPNIK_VERSION} release" 
+git push
 ```
 
   * Update CHANGELOG with the git hash of latest commit: `git rev-parse --verify HEAD`
 
+  * Then, push change:
+
+```
+git ci -a -m "update CHANGELOG"
+git push
+```
+
 ### Tagging
 
 ```sh
-make install
-git tag `mapnik-config --version` -m "tagging `mapnik-config --version`"
+MAPNIK_VERSION=`mapnik-config --version`
+git tag "v${MAPNIK_VERSION}" -m "tagging v${MAPNIK_VERSION}"
 git push --tags
+```
+
+Now, edit [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp) again, incrementing version # and changing `MAPNIK_VERSION_IS_RELEASE` back to `0` to set up for the next release:
+
+```
+./configure
+make install
+MAPNIK_VERSION=`mapnik-config --version`
+git ci include/mapnik/version.hpp -m "now working on mapnik v${MAPNIK_VERSION}"
+git push
 ```
 
 ### Post tag updates
 
-* Update [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) in master with the git hash the tagged release was made from.
+* Update [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) in master entries from release (if relevant).
 
 * Generate Python API docs:
 
