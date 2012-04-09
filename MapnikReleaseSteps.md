@@ -35,8 +35,8 @@
 
   * Update version number in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
   * Set `MAPNIK_VERSION_IS_RELEASE` to 1 in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
-  * Update `abi_fallback` in https://github.com/mapnik/mapnik/blob/master/SConstruct
-  * Update libmapnik.dylib `current_version` and `compatibility_version` in http://trac.mapnik.org/browser/trunk/src/SConscript
+  * Update `abi_fallback` in [SConstruct](https://github.com/mapnik/mapnik/blob/master/SConstruct)
+  * Update libmapnik.dylib `current_version` and `compatibility_version` in [src/build.py](https://github.com/mapnik/mapnik/blob/master/src/build.py)
 
 ### Post tag updates
 
