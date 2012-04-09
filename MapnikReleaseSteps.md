@@ -36,10 +36,25 @@
   * Update version number in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
   * Set `MAPNIK_VERSION_IS_RELEASE` to 1 in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
   * Update `abi_fallback` in [SConstruct](https://github.com/mapnik/mapnik/blob/master/SConstruct)
+  * `make install`, then:
+
+```
+git commit -a -m "setting up for mapnik `mapnik-config --version` release" 
+```
+
+  * Update CHANGELOG with the git hash of latest commit: `git rev-parse --verify HEAD`
+
+### Tagging
+
+```sh
+make install
+git tag `mapnik-config --version` -m "tagging `mapnik-config --version`"
+git push --tags
+```
 
 ### Post tag updates
 
-* Update CHANGELOG in master with the git hash the tagged release was made from.
+* Update [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) in master with the git hash the tagged release was made from.
 
 * Generate Python API docs:
 
