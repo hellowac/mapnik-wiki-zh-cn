@@ -8,7 +8,7 @@
     
 * Announce release plans to [group list](http://groups.google.com/group/mapnik)
     
-* Ensure milestone is closed out: https://github.com/mapnik/mapnik/issues/milestones
+* Ensure [milestone](https://github.com/mapnik/mapnik/issues/milestones) is closed out
     
 ### Bundled fonts and scons
     
