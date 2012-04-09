@@ -9,6 +9,8 @@
 * Announce release plans to [group list](http://groups.google.com/group/mapnik)
     
 * Ensure [milestone](https://github.com/mapnik/mapnik/issues/milestones) is closed out
+
+* Ensure all tests pass (`make test`)
     
 ### Bundled fonts and scons
     
@@ -29,7 +31,7 @@
         tar xvf dejavu-fonts-ttf-2.33.tar.bz2
         svn add dejavu-fonts-ttf-2.33
     
-* And unifont from: http://unifoundry.com/unifont.html
+* Check for new [unifont release](http://unifoundry.com/unifont.html)
 
 ### Pre-tag updates
 
@@ -44,7 +46,11 @@ git commit -a -m "setting up for mapnik v${MAPNIK_VERSION} release"
 git push
 ```
 
-  * Update CHANGELOG with the git hash of latest commit: `git rev-parse --verify HEAD`
+  * Update CHANGELOG with the git hash of latest commit using the output of:
+
+```
+git rev-parse --verify HEAD
+```
 
   * Then, push change:
 
@@ -73,7 +79,7 @@ git push
 
 ### Post tag updates
 
-* Update [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) in master entries from release (if relevant).
+* Update master branches entries in [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) from the new release (if relevant).
 
 * Generate Python API docs:
 
@@ -87,18 +93,14 @@ cd utils/epydoc_config
     
 ### Packaging
     
-* Source package - use auto-created downloads via github: https://github.com/mapnik/mapnik/tags and upload to downloads
-    
-### Builds
-
+* Source package - use auto-created downloads via [github tags page](https://github.com/mapnik/mapnik/tags)
 * Package binaries for Windows, Mac, and Ubuntu Linux (PPA)
-    
+* Upload Mac/Win binary packages to the [github downloads page](https://github.com/mapnik/mapnik/downloads)
 * Submit patch for updated [Mapnik Portfile](http://trac.macports.org/browser/trunk/dports/python/py26-mapnik/Portfile) and [homebrew Formula](https://github.com/mxcl/homebrew)
 
 ### Web
       
-* New icon for release at media.mapnik.org/images/release-VERSION.png
-* Add a new 'release' item in the admin to update all links on mapnik.org
+* New blog post at [mapnik.org](http://mapnik.org) updated release links
     
 ### Wiki Post-Release
 
