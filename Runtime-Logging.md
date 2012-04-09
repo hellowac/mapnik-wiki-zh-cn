@@ -19,6 +19,25 @@ Then if we have a file called cairo_renderer.cpp and need to debug a string:
 MAPNIK_LOG_DEBUG(cairo_renderer) << "Log my data, visible at DEBUG severity level";
 ```
 
+## All the logging facilties in C++
+
+```cpp
+// Output a string in INFO severity level
+MAPNIK_LOG_INFO(object_name) << "This is INFO";
+
+// Output a string in DEBUG severity level
+MAPNIK_LOG_DEBUG(object_name) << "This is DEBUG";
+
+// Output a string in WARN severity level
+MAPNIK_LOG_WARN(object_name) << "This is WARN";
+
+// Output a string in ERROR severity level
+MAPNIK_LOG_ERROR(object_name) << "This is ERROR";
+
+// Output a string in FATAL severity level
+MAPNIK_LOG_FATAL(object_name) << "This is FATAL";
+```
+
 ## Best practices
 This has the advantages that it will be optimized automatically by the compiler when ENABLE_LOG is set to False.
 But if you need to perform complex code before outputting a string to debug, then it's better to disable those expensive calls completely when log is not enabled:
