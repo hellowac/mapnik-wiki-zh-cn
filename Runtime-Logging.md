@@ -19,7 +19,7 @@ Then if we have a file called cairo_renderer.cpp and need to debug a string:
 MAPNIK_LOG_DEBUG(cairo_renderer) << "Log my data, visible at DEBUG severity level";
 ```
 
-## All the logging facilties in C++
+## All the logging facilities in C++
 
 ```cpp
 // Output a string in INFO severity level
