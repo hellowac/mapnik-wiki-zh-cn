@@ -67,6 +67,28 @@ git tag "v${MAPNIK_VERSION}" -m "tagging v${MAPNIK_VERSION}"
 git push --tags
 ```
 
+* Create a clean tarball:
+
+```sh
+cd /tmp
+TARBALL_DIR="mapnik-v`mapnik-config --version`"
+git clone --depth=1 \
+  git@github.com:mapnik/mapnik.git $TARBALL_DIR
+cd $TARBALL_DIR
+git checkout "v`mapnik-config --version`"
+cd ../
+rm -rf $TARBALL_DIR/.git
+rm -rf $TARBALL_DIR/.gitignore
+tar cjf $TARBALL_DIR.tar.bz2 $TARBALL_DIR/
+```
+
+Then upload that tarball to the [downloads page](https://github.com/mapnik/mapnik/downloads).
+
+
+### Post tag updates
+
+* Update master branches entries in [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) from the new release (if relevant).
+
 Now, edit [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp) again, incrementing version # and changing `MAPNIK_VERSION_IS_RELEASE` back to `0` to set up for the next release:
 
 ```
@@ -76,10 +98,6 @@ MAPNIK_VERSION=`mapnik-config --version`
 git ci include/mapnik/version.hpp -m "now working on mapnik v${MAPNIK_VERSION}"
 git push
 ```
-
-### Post tag updates
-
-* Update master branches entries in [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) from the new release (if relevant).
 
 * Generate Python API docs:
 
@@ -93,7 +111,6 @@ cd utils/epydoc_config
     
 ### Packaging
     
-* Source package - use auto-created downloads via [github tags page](https://github.com/mapnik/mapnik/tags)
 * Package binaries for Windows, Mac, and Ubuntu Linux (PPA)
 * Upload Mac/Win binary packages to the [github downloads page](https://github.com/mapnik/mapnik/downloads)
 * Submit patch for updated [Mapnik Portfile](http://trac.macports.org/browser/trunk/dports/python/py26-mapnik/Portfile) and [homebrew Formula](https://github.com/mxcl/homebrew)
