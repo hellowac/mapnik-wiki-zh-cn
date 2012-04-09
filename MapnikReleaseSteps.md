@@ -1,27 +1,19 @@
-<!-- Name: MapnikReleaseSteps -->
-<!-- Version: 42 -->
-<!-- Last-Modified: 2011/08/30 14:31:08 -->
-<!-- Author: springmeyer -->
 # Steps for Mapnik Releases
     
 ### Prepare
     
-* Catch up on CHANGELOG by going through all commits
+* Ensure the [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) is up to date.
     
-* Set release date (http://trac.mapnik.org/roadmap), after checkins with development team
+* Set release date (https://github.com/mapnik/mapnik/issues/milestones), after checkins with development team
     
-* Announce release plans to mapnik-devel/mapnik-users
+* Announce release plans to [group list](http://groups.google.com/group/mapnik)
     
-* Recruit volunteers to help with release laundry-list.
-    
-* Develop and add to laundry-list on this page.
-    
-* Sort Trac tickets, prioritize, assign, close or push.
+* Ensure milestone is closed out: https://github.com/mapnik/mapnik/issues/milestones
     
 ### Bundled fonts and scons
     
 * Consider updating Scons-local to latest release.  
-  The last scons update was 2.1.0.alpha
+  The last SCons update was 2.1.0.alpha
     
         wget http://prdownloads.sourceforge.net/scons/scons-local-2.1.0.alpha.20101125.zip
         rm -rf scons
@@ -38,98 +30,43 @@
         svn add dejavu-fonts-ttf-2.33
     
 * And unifont from: http://unifoundry.com/unifont.html
-    
-### Testing
 
-* Buildbot: http://miranda.nwcr.net:8010/waterfall
-    
-### Trac Pre-Release
+### Pre-tag updates
 
-* Update Roadmap details for Milestone
-    
-* Change default Ticket Milestone
-    
-* Change default Ticket Version adding new release
-    
-### SVN updates
+  * Update version number in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
+  * Set `MAPNIK_VERSION_IS_RELEASE` to 1 in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
+  * Update `abi_fallback` in https://github.com/mapnik/mapnik/blob/master/SConstruct
+  * Update libmapnik.dylib `current_version` and `compatibility_version` in http://trac.mapnik.org/browser/trunk/src/SConscript
 
-* Generate Python API docs::
+### Post tag updates
+
+* Update CHANGELOG in master with the git hash the tagged release was made from.
+
+* Generate Python API docs:
         
-        $ sudo easy_install epydoc
-        $ cd docs/epydoc_config
-        $ ./test_build_epydoc.sh # will output sample docs in 'test_api' folder, view the 'index.html' file
-        $ ./build_epydoc.sh # will build and add to to ../api_docs/python
+    sudo easy_install epydoc
+    cd utils/epydoc_config
+    ./test_build_epydoc.sh # will output sample docs in 'test_api' folder, view the 'index.html' file
+    ./build_epydoc.sh # will build and add to to ../api_docs/python
     
-* Then upload these docs to media.mapnik.org/api_docs replacing what is already there.
-    
-* Commit in trunk:
-     * Update version number in https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp
-     * Update `abi_fallback` in https://github.com/mapnik/mapnik/blob/master/SConstruct
-     * Update libmapnik.dylib `current_version` and `compatibility_version` in http://trac.mapnik.org/browser/trunk/src/SConscript
-    
-* Update CHANGELOG with the svn r the tagged release is made from.
-    
-    Tag release
+* Then upload these docs - TODO (where should they go?)
     
 ### Packaging
     
-* Strip autotools/makefiles from tag::
-    
-        rm -rf config/
-        rm bootstrap
-        rm configure.ac
-        rm autogen.sh
-        rm mapnik.anjuta
-        rm mapnik-uninstalled.pc.in
-        rm mapnik.pc.in
-        for i in $(find . -name Makefile*); do rm $i; done;
-      
-* Strip svn data from tag::
-    
-        $ find . -name '.svn' -exec rm -rf {} \;
-    
-* Package tarball/gzip::
-    
-        $ NAME=mapnik_VERSION
-        $ cd ../
-        $ svn co http://svn.mapnik.org/tags/release-0.7.1 $NAME
-        $ cd $NAME
-        $ find . -name '.svn' -exec rm -rf {} \;
-        $ cd ../
-        $ tar --exclude=".*" -cvf $NAME.tar $NAME/*
-        $ gzip $NAME.tar
-    
-* Make sure to include:
-    * Updated Python bindings (__init__.py)
-    * Customize __init__.py to remove unix specific DL open stuff
-    * demo/python/rundemo.py, etc
-    
-* Post tarball (gzip and bz2) of source at [berlios](http://developer.berlios.de/projects/mapnik)
-
-    * mapnik-VERSION.tar.gz
-    * mapnik-VERSION.tar.bz2
-    
-* Post win32 build (by python version) at [berlios](http://developer.berlios.de/projects/mapnik)
-
-    * mapnik-VERSION-win32-pyVERSION.zip
-    * make sure to zip with command line to avoid '__MACOSX/' files
-
-            $ zip -9vr mapnik-0.7.1-win32-py25_26.zip  mapnik-0.7.1/*
+* Source package - use auto-created downloads via github: https://github.com/mapnik/mapnik/tags and upload to downloads
     
 ### Builds
 
-* Windows (debug builds and py25/py26 builds)
-
-* Mac (debug builds and py25/py26 builds)
+* Package binaries for Windoww, Mac, and Ubuntu Linux (PPA)
     
-* Submit patch for updated Mapnik Portfile (http://trac.macports.org/browser/trunk/dports/python/py26-mapnik/Portfile)
+* Submit patch for updated Mapnik Portfile (http://trac.macports.org/browser/trunk/dports/python/py26-mapnik/Portfile) and homebrew Formula: https://github.com/mxcl/homebrew
     
 ### Web
       
 * New icon for release at media.mapnik.org/images/release-VERSION.png
 * Add a new 'release' item in the admin to update all links on mapnik.org
     
-### Trac Post-Release
+### Wiki Post-Release
 
 * Update [[Mapnik-Installation]], [MacInstallation](MacInstallation), [LinuxInstallation](https://github.com/mapnik/mapnik/wiki/LinuxInstallation) and [WindowsInstallation](WindowsInstallation) links
 * Create a release page from the relevant section of CHANGELOG like this page [Release0.7.1](Release0.7.1)
