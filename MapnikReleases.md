@@ -2,7 +2,13 @@
 
 Past, current, and future releases.
 
-## 2.0.0 (Current stable release)
+## 2.0.1 (Current stable release)
+
+Changelog: [[Release2.0.1]]
+
+Small bugfix release. Significance is full compatibility with PostGIS 2.0 and it rolls back library naming from `libmapnik2` to `libmapnik` and in python now again supports `import mapnik`, while still supporting `import mapnik2` in a deprecated mode.
+
+## 2.0.0
 
 Changelog: [[Release2.0.0]]
 
@@ -41,4 +47,3 @@ Changelog: [[Release0.6.1]]
 ## 0.6.0
 
 Changelog:[[Release0.6.0]]
-
