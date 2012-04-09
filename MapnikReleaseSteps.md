@@ -36,19 +36,19 @@
   * Update version number in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
   * Set `MAPNIK_VERSION_IS_RELEASE` to 1 in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
   * Update `abi_fallback` in [SConstruct](https://github.com/mapnik/mapnik/blob/master/SConstruct)
-  * Update libmapnik.dylib `current_version` and `compatibility_version` in [src/build.py](https://github.com/mapnik/mapnik/blob/master/src/build.py)
 
 ### Post tag updates
 
 * Update CHANGELOG in master with the git hash the tagged release was made from.
 
 * Generate Python API docs:
-        
-    sudo easy_install epydoc
-    cd utils/epydoc_config
-    ./test_build_epydoc.sh # will output sample docs in 'test_api' folder, view the 'index.html' file
-    ./build_epydoc.sh # will build and add to to ../api_docs/python
-    
+
+```sh
+sudo pip install epydoc
+cd utils/epydoc_config
+./build_epydoc.sh
+```
+
 * Then upload these docs - TODO (where should they go?)
     
 ### Packaging
@@ -57,10 +57,10 @@
     
 ### Builds
 
-* Package binaries for Windoww, Mac, and Ubuntu Linux (PPA)
+* Package binaries for Windows, Mac, and Ubuntu Linux (PPA)
     
-* Submit patch for updated Mapnik Portfile (http://trac.macports.org/browser/trunk/dports/python/py26-mapnik/Portfile) and homebrew Formula: https://github.com/mxcl/homebrew
-    
+* Submit patch for updated [Mapnik Portfile](http://trac.macports.org/browser/trunk/dports/python/py26-mapnik/Portfile) and [homebrew Formula](https://github.com/mxcl/homebrew)
+
 ### Web
       
 * New icon for release at media.mapnik.org/images/release-VERSION.png
