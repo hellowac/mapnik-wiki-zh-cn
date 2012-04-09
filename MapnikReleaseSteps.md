@@ -4,7 +4,7 @@
     
 * Ensure the [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) is up to date.
     
-* Set release date (https://github.com/mapnik/mapnik/issues/milestones), after checkins with development team
+* Set release date after checkins with development team
     
 * Announce release plans to [group list](http://groups.google.com/group/mapnik)
     
