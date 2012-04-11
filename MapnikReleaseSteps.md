@@ -89,13 +89,16 @@ Then upload that tarball to the [downloads page](https://github.com/mapnik/mapni
 
 * Update master branches entries in [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) from the new release (if relevant).
 
-Now, edit [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp) again, incrementing version # and changing `MAPNIK_VERSION_IS_RELEASE` back to `0` to set up for the next release:
+Now bump versions again:
+
+   * edit [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp) again, incrementing version # and changing `MAPNIK_VERSION_IS_RELEASE` back to `0` to set up for the next release
+   * update the `abi_fallback` in SConstruct
 
 ```
 ./configure
 make install
 MAPNIK_VERSION=`mapnik-config --version`
-git ci include/mapnik/version.hpp -m "now working on mapnik v${MAPNIK_VERSION}"
+git ci include/mapnik/version.hpp SConstruct -m "now working on mapnik v${MAPNIK_VERSION}"
 git push
 ```
 
