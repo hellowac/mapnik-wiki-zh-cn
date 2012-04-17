@@ -1,9 +1,9 @@
 ### Important Note: The Mapnik documentation is currently in the process of being restructured and updated for Mapnik 2.0 and the move to GitHub -- please double check all information found here and fix / report any errors you may find. Thanks for your patience.
----
+
 
 # Mapnik configuration XML
 
-See also a reference PDF, created by David Eastcott: http://old.nabble.com/attachment/27685172/0/MapnikXMLDescription.pdf (written for 0.7)
+See also [a reference PDF](http://old.nabble.com/attachment/27685172/0/MapnikXMLDescription.pdf) created by David Eastcott (written for 0.7)
 
 To validate the XML see [[ValidatingXml]]
 
@@ -30,14 +30,14 @@ The Map object defines the master object of a mapnik configuration XML. It defin
  * Children:
   * *[#Style Style]*
   * *[#Layer Layer]*
-  * *FileSource*: See http://trac.mapnik.org/changeset/574
-  * *Datasource*: See [#Datasource Datasource] and http://trac.mapnik.org/changeset/574
+  * *FileSource*: See [#574](http://trac.mapnik.org/changeset/574)
+  * *Datasource*: See [#Datasource Datasource] and [#574](http://trac.mapnik.org/changeset/574)
   * *FontSet*: Defines a fontset for fallback fonts (if a character isn't found in the first font, proceed through the list until it is found)
   * *Include*: The container tag used to wrap all context in files included via XInclude
 
   * *xmlcomment*: (Ignored by Mapnik)
   * *xmlattr*: (Ignored by Mapnik)
-----
+
 
 ## Style
 A Style object  defines the way objects can be rendered. A Mapnik configuration file can have an unlimited number of Style objects. Style objects are referenced by Layer objects in order to actually be rendered.
@@ -52,7 +52,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
 
   * *xmlcomment*: (Ignored by Mapnik)
   * *xmlattr*: (Ignored by Mapnik)
-----
+
 
 ## Layer
  * Element: *Layer*
@@ -73,7 +73,6 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
  * Children:
   * *StyleName*: The name of a defined [#Style style]. The style must contain the same string in the attribute *name*.
   * *[#Datasource Datasource]*
-----
 
 ## Datasource
  See also the [0.6.0 Python API docs](http://svn.mapnik.org/tags/release-0.6.0/docs/api_docs/python/mapnik-module.html#Datasource)
@@ -101,7 +100,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
  * Additional parameters for type *gdal* see [[GDAL]].
  * Additional parameters for type *ogr* see [[OGR]].
  * Additional parameters for type *osm*  see [[OsmPlugin]]
-----
+
 
 ## Rule
  * Element: *Rule*
@@ -144,7 +143,7 @@ Also see [[SymbologySupport]] for more info on Symbolizers
  * Children:
   * *[#Style Style]*
   * *[#Layer Layer]*
-  * *FileSource*: See http://trac.mapnik.org/changeset/574
-  * *Datasource*: See [#Datasource Datasource] and http://trac.mapnik.org/changeset/574
+  * *FileSource*: See [#574](http://trac.mapnik.org/changeset/574)
+  * *Datasource*: See [#Datasource Datasource] and [#574](http://trac.mapnik.org/changeset/574)
   * *FontSet*: Defines a fontset for fallback fonts (if a character isn't found in the first font, proceed through the list until it is found)
 
