@@ -51,13 +51,16 @@ To check if the PostGIS plugin built and was installed correctly, try the usual 
 | extent                | string       | maxextent of the geometries | determined by querying the oracle metadata for the table |
 | extent_from_subquery  | boolean      | evaluate the extent of the subquery, this might be a performance issue | false |
 | connect_timeout       | integer      | timeout is seconds for the connection to take place | 4 |
-| persist_connection    | boolean      | choose wheter to share the same connection for subsequent queries | true |
+| persist_connection    | boolean      | choose whether to share the same connection for subsequent queries | true |
 | row_limit             | integer      | max number of rows to return when querying data, 0 means no limit | 0 |
 | cursor_size           | integer      | if this is > 0 then server cursor will be used, and will prefetch this number of features | 0 |
 | initial_size          | integer      | initial size of the stateless connection pool | 1 |
 | max_size              | integer      | max size of the stateless connection pool | 10 |
-| multiple_geometries   | boolean      | wheter to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
+| multiple_geometries   | boolean      | whether to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
 | encoding              | string       | internal file encoding | utf-8 |
+| simplify              | boolean      | whether to automatically [reduce input vertices](http://blog.cartodb.com/post/20163722809/speeding-up-tiles-rendering). Available from version 2.1.x up. | false |
+
+
 
 ## Usage
 
