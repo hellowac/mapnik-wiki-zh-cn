@@ -22,6 +22,7 @@ brew link icu4c
 brew install boost
 brew install proj
 brew install jpeg
+brew link jpeg
 brew install libtiff
 brew install gdal --with-libtiff=/usr/local/lib
 brew install postgis
