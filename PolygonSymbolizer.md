@@ -1,7 +1,4 @@
 <!-- Name: PolygonSymbolizer -->
-<!-- Version: 11 -->
-<!-- Last-Modified: 2010/06/01 04:51:30 -->
-<!-- Author: manelclos -->
 ## Configuration Options for PolygonSymbolizer
 
 A PolygonSymbolizer is often used to render the area enclosed by a [polygon](http://en.wikipedia.org/wiki/Polygon). For example, the `rundemo.py` and `rundemo.cpp` applications use PolygonSymbolizer objects to "fill-in" [Canadian provinces with different colors and to make bodies of water look blue](http://trac.mapnik.org/attachment/wiki/PolygonSymbolizer/demo256.png?format=raw).
@@ -32,18 +29,15 @@ A PolygonSymbolizer is often used to render the area enclosed by a [polygon](htt
 
 
 ```xml
-    <PolygonSymbolizer>
-        <CssParameter name="gamma">.65</CssParameter>
-    </PolygonSymbolizer>
+  <PolygonSymbolizer gamma=".65" fill="#bbbbbb"/>
 ```
 
 ### Custom Fill and Opacity
 
 ```xml
-    <PolygonSymbolizer>
-         <CssParameter name="fill">steelblue</CssParameter>
-         <CssParameter name="fill-opacity">0.5</CssParameter>
-    </PolygonSymbolizer>
+      <PolygonSymbolizer fill="steelblue"/>
+      <PolygonSymbolizer fill-opacity="0.05" fill="green"/>
+
 ```
     
 ### Python
