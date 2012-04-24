@@ -1,5 +1,3 @@
-### Important Note: The Mapnik documentation is currently in the process of being restructured and updated for Mapnik 2.0 and the move to GitHub -- please double check all information found here and fix / report any errors you may find. Thanks for your patience.
----
 
 Mapnik can be used in a variety of ways. The most widely used options are using XML config files, using the Python bindings or using the API directly in C++.
 
@@ -42,7 +40,7 @@ To get first results, choose your weapon: XML, Python, C++, or node.js
 
 ## How to use the Mapnik Python Bindings
 
-* See the python api docs [here](http://media.mapnik.org/api_docs/python/)
+* See the python api docs [here](http://mapnik.org/docs/v2.0.1/api/python/)
 * Check out the [[MapnikTutorials]] and  the references at [[ExampleCode]]
 * Study applications like Cascadenik or Nik2img at http://mapnik-utils.googlecode.com/
 
