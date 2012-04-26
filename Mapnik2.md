@@ -51,12 +51,17 @@ The Mapnik2 API has advanced (requiring breakages) and the XML syntax has change
 Therefore Mapnik2 is the [first release](MapnikReleases) with significant backward incompatibility. See [[Mapnik2_Changes]]
 
 # Upgrade Guide
+1. Recommended: rebuild shapefile indexes
 
-1. rebuild all shapefile indexes
+Say you have a directory of shapefiles in a folder named 'shapes'. Then you can regenerate all the indexes at once like:
 
-2. upgrade stylesheets with a python script:
+```
+shapeindex shapes/*.shp
+```
 
-We have written a python converter to seamlessly upgrade your pre-Mapnik2 stylesheets to be fully compatible with Mapnik2.
+2. Required: upgrade stylesheets
+
+We have written a python converter to automatically upgrade your pre-Mapnik2 stylesheets to be fully compatible with Mapnik2.
 
 After installing Mapnik2 you will have a new command available called 'upgrade_map_xml.py':
 
