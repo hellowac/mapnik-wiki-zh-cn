@@ -94,7 +94,7 @@ Some options described here are not available in mapnik versions < 2.0.
 #### XML
 
 ```xml
-    <PointSymbolizer allow_overlap="no" file="/Users/artem/projects/ 
+    <PointSymbolizer allow-overlap="no" file="/Users/artem/projects/ 
     openstreetmap/mapnik/symbols/station_small.png" type="png" width="5"  
     height="5" />
 ```
