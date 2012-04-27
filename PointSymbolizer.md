@@ -16,7 +16,7 @@ Some options described here are not available in mapnik versions < 2.0.
 | width | px | 4 |
 | height | px | 4 |
 | type | png tiff svg | none |
-| allow_overlap | allow text to overlap the point image; true/false | false |
+| allow-overlap | allow text to overlap the point image; true/false | false |
 | opacity | Opacity of the symbolizer: 0.0 - 1.0 | 1.0 | 
 |   transform    |   [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) | identity |
 |   ignore-placement | allow subsequent point/shield symbolizers to overlap this symbol; true/false | false |
@@ -82,7 +82,7 @@ Some options described here are not available in mapnik versions < 2.0.
 #### XML
 
 ```xml
-    <PointSymbolizer allow_overlap="yes" file="/Users/artem/projects/ 
+    <PointSymbolizer allow-overlap="yes" file="/Users/artem/projects/ 
     openstreetmap/mapnik/symbols/station_small.png" type="png" width="5"  
     height="5" />
 ```
