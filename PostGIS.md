@@ -1,39 +1,8 @@
-<!-- Name: PostGIS -->
-<!-- Version: 18 -->
-<!-- Last-Modified: 2011/08/23 13:51:30 -->
-<!-- Author: springmeyer -->
-
 Mapnik's PluginArchitecture supports the use of different input formats.
 
-One such plugin supports the [PostGIS](http://en.wikipedia.org/wiki/PostGIS) extension to the popular PostgreSQL database.
+This plugin supports [PostGIS](http://en.wikipedia.org/wiki/PostGIS), a spatial extension to the popular PostgreSQL database.
 
 See also a performance tuning page: [[OptimizeRenderingWithPostGIS]]
-
-## New 0.7.0 Features
-
-Docs TODO ->
-
- * Dynamic map variables
-  * !bbox!
-  * !scale_denominator!
- * subquery best practices -  when to set the 'subquery_extent' to true
- * controlling connection persistence   
-
-## Installation
-
-For Ubuntu, see [[UbuntuInstallation]] (specifically the package install line that includes _postgresql-8.3_)
-
-On Macs, try the instructions listed on [[MacInstallation_Optional]].
-
-Either way, make sure that running _python scons/scons.py DEBUG=y_ shows the following line
-
-    Checking for C library pq... yes
-
-pq, or rather libpq, is the "C application programmer's interface to PostgreSQL". Without this library, Mapnik will not know how to talk to PostGIS / PostgreSQL, and the PostGIS plugin will neither build nor be installed.
-
-To check if the PostGIS plugin built and was installed correctly, try the usual Python _from mapnik import *_ on a DEBUG=y build, and look for the following debug line
-
-    registered datasource : postgis
 
 ## Parameters
 
@@ -58,18 +27,42 @@ To check if the PostGIS plugin built and was installed correctly, try the usual 
 | max_size              | integer      | max size of the stateless connection pool | 10 |
 | multiple_geometries   | boolean      | whether to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
 | encoding              | string       | internal file encoding | utf-8 |
-| simplify              | boolean      | whether to automatically [reduce input vertices](http://blog.cartodb.com/post/20163722809/speeding-up-tiles-rendering). Available from version 2.1.x up. | false |
-
-
+| simplify_geometries              | boolean      | whether to automatically [reduce input vertices](http://blog.cartodb.com/post/20163722809/speeding-up-tiles-rendering). Available from version 2.1.x up. | false |
 
 ## Usage
 
 *Note*: 
 
- * Spatial tables read from PostGIS by Mapnik _must_ have a cooresponding entry in `geometry_columns`.
- * Use the `geometry_field` parameter to specify which field to use if you have >1 geometry in the table/query (added in r769).
+ * Spatial tables read from PostGIS by Mapnik should ideally have a corresponding entry in `geometry_columns`.
+ * Use the `geometry_field` parameter to specify which field to use if you have >1 geometry in the table/query or if your table does not have a `geometry_columns` entry.
 
-### Python
+## Advanced Usage
+
+The PostGIS plugin supports several special tokens. You can use them in subqueries and Mapnik will replace them at render time.
+
+### bbox token
+
+Under normal circumstances, if you pass to Mapnik `table=mytable` then, when `mytable` is ultimately queried, Mapnik will form up a query like:
+
+```
+ST_AsBinary("geom") AS geom,"name","gid" FROM mytable WHERE "geom" && ST_SetSRID('BOX3D(<map bbox>)'::box3d, 3857)
+```
+
+Using the token !bbox! allows you to write a subquery and leverage the spatial filter in a custom way. So, if you wished to override the `geom &&` and do `ST_Intersects` instead then you could do (in XML):
+
+```xml
+<Parameter name="table">(Select * from mytable where ST_Intersects(geom,!bbox!)) as mysubquery</Parameter>
+```
+
+### other tokens
+
+Other tokens that can be used include:
+
+  * !scale_denominator! (Mapnik >= 0.7.0)
+  * !pixel_width! (Mapnik >= 2.1.0)
+  * !pixel_height! (Mapnik >= 2.1.0)
+
+## Usage from Python
 
 Instantiate a datasource like:
 
@@ -96,7 +89,7 @@ If you want to add something after the query (for example ORDER BY) you must use
  * Further references: See Artem's email on [using the PostGIS from Python](https://lists.berlios.de/pipermail/mapnik-users/2007-June/000300.html)
  * Example code at the Mapnik-utils project: http://mapnik-utils.googlecode.com/svn/example_code/postgis/postgis_geometry.py
 
-### XML
+## Usage from XML
 
 If you are using XML mapfiles to style your data, then using a PostGIS datasource (with a sub-select in this case) looks like:
 
@@ -126,7 +119,7 @@ If you are using XML mapfiles to style your data, then using a PostGIS datasourc
 
 If you don't do this, you might not see data from this data source at all, even if it does not contain data outside of the valid region. Also note that you always specify the extents in the coordinates of the source system.
 
-### C++
+## Usage from C++
 
 Plugin datasource initialization example code can be found on [[PluginArchitecture]].
 
