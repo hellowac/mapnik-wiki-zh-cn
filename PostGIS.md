@@ -59,8 +59,8 @@ Using the token !bbox! allows you to write a subquery and leverage the spatial f
 Other tokens that can be used include:
 
   * !scale_denominator! (Mapnik >= 0.7.0)
-  * !pixel_width! (Mapnik >= 2.1.0)
-  * !pixel_height! (Mapnik >= 2.1.0)
+  * !pixel_width! (Mapnik >= 2.1.0) -- width of a pixel in geographical units
+  * !pixel_height! (Mapnik >= 2.1.0) -- height of a pixel in geographical units
 
 ## Usage from Python
 
