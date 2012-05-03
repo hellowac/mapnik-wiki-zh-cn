@@ -14,9 +14,14 @@ Welcome to the Mapnik wiki.
 - [[About Mapnik]]
 - [[Mapnik Installation]]
 - [[LearningMapnik]]
-- [[API Reference|Mapnik-API]]
 - [[Notes and Caveats|Notes And Caveats]]
 - [[Related Projects and Utilities]]
+
+### Mapnik API
+
+- Syntax: [[XMLConfigReference]]
+- Symbology: [[SymbologySupport]]
+- Datasources: [[PluginArchitecture]]
 
 ### Advanced Topics
 
