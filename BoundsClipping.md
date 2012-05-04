@@ -1,7 +1,3 @@
-<!-- Name: BoundsClipping -->
-<!-- Version: 11 -->
-<!-- Last-Modified: 2011/08/11 10:02:57 -->
-<!-- Author: springmeyer -->
 # BoundsClipping
 
 This is a page to document bounding box clipping in the Mapnik codebase.
@@ -41,4 +37,5 @@ Clipping can interact in subtle and important ways with a variety of other map a
 
 Discussion of fixing clipping after addition of map_buffer to avoid truncated text at tile edges:
 
+* introduction of `maximum-extent`: http://www.mail-archive.com/mapnik-devel@lists.berlios.de/msg00913.html
 * http://mapnik.dbsgeo.com/mapnik_logs/2009/02/01/ - prediction of [#486](https://github.com/mapnik/mapnik/issues/486)
