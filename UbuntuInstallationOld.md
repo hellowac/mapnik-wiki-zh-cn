@@ -1,4 +1,3 @@
-
 # Build notes specific to older versions of Ubuntu
 
 See UbuntuInstallation for build notes for the latest version.
@@ -92,7 +91,8 @@ Karmic has Mapnik packages for 0.7.0, so you can either install Mapnik from pack
     sudo apt-get install libgdal1-dev python-gdal \
     postgresql-8.4 postgresql-server-dev-8.4 postgresql-contrib-8.4 postgresql-8.4-postgis \
     libsqlite3-dev
-```    
+
+```
 
 ### Then compile and install Mapnik
 
