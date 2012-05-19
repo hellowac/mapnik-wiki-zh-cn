@@ -42,7 +42,7 @@ String representing the spatial reference system of the map.
 
 ###styles
 
-a list of mapnik.Style objects
+a list of strings holding the names of styles
 
 ###title
 
