@@ -10,8 +10,8 @@
 | stroke | CSS colour - A Color value such as 'green' or #A3D979 | black | no |
 | stroke-width | 0.0 - n  - Width of outline in pixels | 1.0 | no |
 | stroke-opacity | 0.0 - 1.0 - 1 is fully opaque while zero is fully transparent and .5 would be 50% transparent | 1.0  | no |
-| width | width of marker | 5 | no |
-| height |  height of marker | 5 | no |
+| width | width of marker pixels | 10 | no |
+| height |  height of marker in pixels | 10 | no |
 | placement | "point" or "line"  | line | no (todo) |
 | ignore-placement | "true" or "false"  | "false" | no (todo) |
 | marker-type | "arrow" "ellipse" | "arrow" if line placement, "ellipse" if point placement | no |
