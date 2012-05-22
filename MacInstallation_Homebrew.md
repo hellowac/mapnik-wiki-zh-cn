@@ -34,3 +34,9 @@ cd mapnik
 make
 make install  # sudo make install # Mac OS X Lion. With system default python 2.7 
 ```
+
+Note that on Lion, we need to be more explicit about SQLite.  Change version as needed.
+
+```
+ ./configure CXX="clang++" JOBS=`sysctl -n hw.ncpu` SQLITE_LIBS=/usr/local/Cellar/sqlite/3.7.12/lib/ SQLITE_INCLUDES=/usr/local/Cellar/sqlite/3.7.12/include/
+```
