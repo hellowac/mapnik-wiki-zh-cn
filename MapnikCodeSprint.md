@@ -8,10 +8,10 @@ us approach complex topics with immediate feedback.
 
 ## Upcoming Mapnik Code Sprints
 
-### [Mapnik Code Sprint 02](MapnikCodeSprint_MCS02)
-*Date*   To Be Determined, early 2011
+### [Mapnik Code Sprint 02](Code-sprint)
+*Date*   15-17 June 2012
 
-*Location*    To Be Determined
+*Location*    Washington DC
 
 ## Previous Mapnik Code Sprints
 
