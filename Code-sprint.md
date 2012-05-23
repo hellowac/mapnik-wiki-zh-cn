@@ -16,7 +16,8 @@ Friday through Sunday, 15 - 17 June 2012.
 
 ### Where
 
-<pre>1714 14th Street NW
+<pre>Development Seed
+1714 14th Street NW
 _Rear Entrance_
 Washington, DC 20009</pre> 
 (map coming soon)
