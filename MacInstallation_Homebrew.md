@@ -11,7 +11,19 @@ Now you can either 1) install Mapnik itself with homebrew (which will automatica
 ### To install the latest Mapnik release do:
 
 ```sh
-    brew install mapnik
+brew install mapnik
+```
+
+On 10.6.8, you may need to:
+
+```sh
+brew link pkg-config
+brew install xz libffi
+brew link libtiff
+brew link jpeg
+brew link proj
+brew link boost
+brew install mapnik
 ```
 
 ### To install Mapnik from source using homebrew for dependencies do:
