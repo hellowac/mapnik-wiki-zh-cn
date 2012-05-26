@@ -52,3 +52,18 @@ Note that on Lion, we need to be more explicit about SQLite.  Change version as 
 ```
  ./configure CXX="clang++" JOBS=`sysctl -n hw.ncpu` SQLITE_LIBS=/usr/local/Cellar/sqlite/3.7.12/lib/ SQLITE_INCLUDES=/usr/local/Cellar/sqlite/3.7.12/include/
 ```
+
+## Boost-Python Link Problems
+
+If, when you try to install mapnik, you get `Fatal Python error: Interpreter not initialized (version mismatch?)`, you likely have boost linked with the wrong version of python. To see what version of python boost is linked from, try:
+
+```sh
+otool -L /opt/local/lib/libboost_python-mt.dylib | grep -i python
+```
+
+It's likely that your copy of boost was linked against the system python, but you're trying to use a homebrew python. To fix, uninstall boost, and reinstall with --build-from-source:
+
+```sh
+brew uninstall boost
+brew install --build-from-source boost
+```
