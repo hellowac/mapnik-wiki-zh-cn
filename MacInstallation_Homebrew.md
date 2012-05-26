@@ -55,7 +55,7 @@ Note that on Lion, we need to be more explicit about SQLite.  Change version as 
 
 ## Boost-Python Link Problems
 
-If, when you try to install mapnik, you get `Fatal Python error: Interpreter not initialized (version mismatch?)`, you likely have boost linked with the wrong version of python. To see what version of python boost is linked from, try:
+After you install mapnik, you may try to import it and get `Fatal Python error: Interpreter not initialized (version mismatch?)`. If so, you likely have boost linked with the wrong version of python. To see what version of python boost is linked from, try:
 
 ```sh
 otool -L `brew list boost | grep python.*dylib` | grep -i python
