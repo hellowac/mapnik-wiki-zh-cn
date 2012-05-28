@@ -54,7 +54,7 @@ See [[XMLGettingStarted]] for more XML example uses of TextSymbolizer.
 
 
 ```python
-t = TextSymbolizer('[FIELD_NAME]', 'DejaVu Sans Book', 10, Color('black'))
+t = TextSymbolizer(Expression('[FIELD_NAME]'), 'DejaVu Sans Book', 10, Color('black'))
 t.halo_fill = Color('white')
 t.halo_radius = 1
 t.label_placement = label_placement.LINE_PLACEMENT # POINT_PLACEMENT is default
