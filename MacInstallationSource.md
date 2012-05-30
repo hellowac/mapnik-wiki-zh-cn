@@ -5,7 +5,6 @@
 
 
 ## WARNING - this page is out of date
-If you're using homebrew, installing mapnik should be as simple as running: brew install mapnik.
 
 # Installing Mapnik on Mac OS X (build dependencies from source)
 
