@@ -1,8 +1,8 @@
 ### Mapnik Code Sprint 02 - Washington, DC, USA. 15-17 June 2012
 
-The Mapnik community is gathering for another code sprint to improve Mapnik, set the path for the future and to enjoy the company of other Mapnik developers.  
+The Mapnik community is gathering for another code sprint to improve Mapnik, set the path for the future and to enjoy the company of other Mapnik users and developers.  
 
-You are invited.  Be part of it.  
+You are invited.  Be part of it.
 
 ### When
 
@@ -24,7 +24,7 @@ Washington, DC 20009</pre>
 
 ### Why?
 
-Coding, documentation and fun.  The previous Mapnik code sprint in September 2010 was both great fun and a great success.  Bugs were squashed, capabilities were added, performance was improved and new friends and colleagues were discovered.  [Proof](https://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Results) 
+Coding, documentation and fun.  The previous Mapnik code sprint in September 2010 was both great fun and a great success.  Docs were written, Bugs were squashed, capabilities were added, performance was improved and new friends and colleagues were discovered.  [Proof](https://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Results) 
 
 This time, we'll tackle some more bugs, some of the lingering Top ten Cartography Wishes from last time, and perhaps knock out some awesome new Mapnik documentation for the ever-increasing user community.  
 
@@ -62,15 +62,14 @@ http://www.slideshare.net/steve8/what-id-like-to-do-with-mapnik-4756837
 
 ### Attending
 - Artem Pavlenko (UK), Mapnik Founder and Lead Developer
-- Dane Springmeyer (Oregon), Mapnik Lead Developer 
+- Dane Springmeyer (Seattle), Mapnik Lead Developer 
 - Richard Weait (Ontario)
 - add your name (and origin) here
 - ...
 
 ### More tasks and interests
 Add your personal tasks and interests here.
-- Awesomeness (Artem)
-- Amazingness (Dane)
+- Interested in Docs, testing, carto styling, 2.1 release (Dane)
 - Mapnik documentation and tutorials (Richard)
 - add your tasks and goals
 - ...
