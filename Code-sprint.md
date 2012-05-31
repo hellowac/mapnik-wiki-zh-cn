@@ -44,7 +44,7 @@ Washington, DC 20009
 
 <img src="http://farm8.staticflickr.com/7012/6497243219_2549730dfc_n.jpg" />
 
-### Why?
+## Why?
 
 Coding, documentation and fun.  The previous Mapnik code sprint in September 2010 was both great fun and a great success.  Docs were written, Bugs were squashed, capabilities were added, performance was improved and new friends and colleagues were discovered.  [Proof](https://github.com/mapnik/mapnik/wiki/MapnikCodeSprint_MCS01_Results) 
 
@@ -57,8 +57,8 @@ Last time, the *Top Ten* Advanced Cartography Wishes looked a bit like this: [Id
 - Hermann Kraus (Germany)
 
 ## Attending in DC
-- [Artem Pavlenko](https://github.com/artemp) (UK), Mapnik Founder and Lead Developer
-- [Dane Springmeyer](https://github.com/springmeyer) (Seattle), Mapnik Lead Developer 
+- [Artem Pavlenko](https://github.com/artemp) (UK)
+- [Dane Springmeyer](https://github.com/springmeyer) (Seattle)
 - Richard Weait (Ontario)
 - Maybe: Lars Ahlzen (Boston) 
 - Tom MacWright (DC)
