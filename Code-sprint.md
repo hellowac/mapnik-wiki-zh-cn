@@ -36,6 +36,7 @@ Last time, the *Top Ten* Advanced Cartography Wishes looked a bit like this: [Id
 - Dane Springmeyer (Seattle), Mapnik Lead Developer 
 - Richard Weait (Ontario)
 - Maybe: Lars Ahlzen (Boston) 
+- Tom MacWright (DC)
 - add your name (and origin) here
 - ...
 
