@@ -4,23 +4,45 @@ The Mapnik community is gathering for another code sprint to improve Mapnik, set
 
 You are invited.  Be part of it.
 
+### Where
+
+Development Seed's HQ, Washington, DC:
+
+Map: [Location of DevSeed office with bike shares](http://a.tiles.mapbox.com/v3/devseed.devseed-hq.html#16/38.913/-77.03)
+
+Map: [Location on OSM](http://www.openstreetmap.org/?lat=38.9132590591908&lon=-77.0323643088341&zoom=18)
+
+Address:
+<pre>
+Development Seed
+1714 14th Street NW
+_Rear Entrance_
+Washington, DC 20009
+</pre>
+
+<a href="http://f.cl.ly/items/1J1s2a0u0F1m1J1K2u3e/Screen%20Shot%202012-05-31%20at%201.56.28%20PM.png"><img src="http://f.cl.ly/items/1J1s2a0u0F1m1J1K2u3e/Screen%20Shot%202012-05-31%20at%201.56.28%20PM.png" width="500"/></a>
+
 ### When
 
-Friday through Sunday, 15 - 17 June 2012.
+Saturday/Sunday, 16 - 17 June 2012.
 
 #### Preliminary schedule
 
-- Friday evening: Meet and greet. Pub discussion.  Show and share.  
-- Saturday: Plans and teams.  Lots of coding.
-- Sunday: Lots of coding.
+- Friday evening (15th)
+ * Pub meetup if you are around - Meet at DevSeed office at 8pm, we'll walk from there.
 
-### Where
+- Saturday:
+ * 9:45 AM Doors open to DevSeed office.
+ * 10 AM start: Introductions in the large conference room
+ * 11 AM Skype line opens for remote participants to introduce themselves, share current Mapnik projects and future ideas for features.
+ * 12:30 PM: Lunch break
+ * Afternoon: Whiteboarding, coding, docs, fun, foosball
 
-<pre>Development Seed
-1714 14th Street NW
-_Rear Entrance_
-Washington, DC 20009</pre> 
-(map coming soon)
+- Sunday:
+ * 10 AM doors open
+ * Remainder of day (through ~ 5pm): Lots of coding and breaks to play foosball in the DevSeed garage
+
+<img src="http://farm8.staticflickr.com/7012/6497243219_2549730dfc_n.jpg" />
 
 ### Why?
 
@@ -31,9 +53,13 @@ This time, we'll tackle some more bugs, some of the lingering Top ten Cartograph
 Last time, the *Top Ten* Advanced Cartography Wishes looked a bit like this: [Ideas](Ideas). Those that have been completed in the interim are struck-through. 
 
 
-### Attending
-- Artem Pavlenko (UK), Mapnik Founder and Lead Developer
-- Dane Springmeyer (Seattle), Mapnik Lead Developer 
+### Attending Remotely
+- [Steve Chilton](https://twitter.com/#!/steev8) (UK) - will join for Skype intros on Saturday morning
+- Hermann Kraus (Germany)
+
+### Attending in DC
+- [Artem Pavlenko](https://github.com/artemp) (UK), Mapnik Founder and Lead Developer
+- [Dane Springmeyer](https://github.com/springmeyer) (Seattle), Mapnik Lead Developer 
 - Richard Weait (Ontario)
 - Maybe: Lars Ahlzen (Boston) 
 - Tom MacWright (DC)
