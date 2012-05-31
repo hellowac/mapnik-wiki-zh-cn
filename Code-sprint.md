@@ -26,6 +26,10 @@ Washington, DC 20009
 
 <a href="http://f.cl.ly/items/1J1s2a0u0F1m1J1K2u3e/Screen%20Shot%202012-05-31%20at%201.56.28%20PM.png"><img src="http://f.cl.ly/items/1J1s2a0u0F1m1J1K2u3e/Screen%20Shot%202012-05-31%20at%201.56.28%20PM.png" width="500"/></a>
 
+## Remote participation
+
+If you can't make it in person, join remotely: https://github.com/mapnik/mapnik/issues/1237
+
 ## Schedule
 
 - Friday evening (15th)
