@@ -58,15 +58,18 @@ This time, we'll tackle some more bugs, some of the lingering Top ten Cartograph
 Last time, the *Top Ten* Advanced Cartography Wishes looked a bit like this: [Ideas](Ideas). Those that have been completed in the interim are struck-through. 
 
 ## Attending Remotely
+
 - [Steve Chilton](https://twitter.com/#!/steev8) (UK) - will join for Skype intros on Saturday morning
 - Hermann Kraus (Germany)
+
+Remote coordination will be via [this issue](https://github.com/mapnik/mapnik/issues/1237)]
 
 ## Attending in DC
 - [Artem Pavlenko](https://github.com/artemp) (UK)
 - [Dane Springmeyer](https://github.com/springmeyer) (Seattle)
-- Richard Weait (Ontario)
-- Maybe: Lars Ahlzen (Boston) 
-- Tom MacWright (DC)
+- [Richard Weait](https://github.com/rweait) (Ontario)
+- Maybe: [Lars](https://github.com/ahlzen) Ahlzen (Boston) 
+- [Tom MacWright](https://github.com/tmcw) (DC)
 - add your name (and origin) here
 - ...
 
