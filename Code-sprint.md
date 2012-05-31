@@ -35,6 +35,7 @@ Last time, the *Top Ten* Advanced Cartography Wishes looked a bit like this: [Id
 - Artem Pavlenko (UK), Mapnik Founder and Lead Developer
 - Dane Springmeyer (Seattle), Mapnik Lead Developer 
 - Richard Weait (Ontario)
+- Maybe: Lars Ahlzen (Boston) 
 - add your name (and origin) here
 - ...
 
