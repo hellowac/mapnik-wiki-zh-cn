@@ -1,4 +1,5 @@
-# Mapnik Code Sprint 02
+
+## Mapnik Code Sprint 02
 
 The Mapnik community is gathering for another code sprint to improve Mapnik, set the path for the future and to enjoy the company of other Mapnik users and developers.  
 
