@@ -1,4 +1,3 @@
-
 ## Mapnik Code Sprint 02
 
 The Mapnik community is gathering for another code sprint to improve Mapnik, set the path for the future and to enjoy the company of other Mapnik users and developers.  
@@ -33,14 +32,15 @@ Washington, DC 20009
  * Pub meetup if you are around - Meet at DevSeed office at 8pm, we'll walk from there.
 
 - Saturday:
- * 9:45 AM: Doors open to DevSeed office.
- * 10 AM start: Introductions in the large conference room
- * 11 AM Skype line opens for remote participants to introduce themselves, share current Mapnik projects and future ideas for features.
- * 12:30 PM: Lunch break
- * Afternoon: Whiteboarding, coding, docs, fun, foosball
+ * 9:45 AM - Doors open to DevSeed office.
+ * 10 AM start - Introductions in the large conference room
+ * 11 AM - Skype line opens for remote participants to introduce themselves, share current Mapnik projects and future ideas for features. This is at [15:00 UTC](http://www.timeanddate.com/worldclock/fixedtime.html?iso=20120616T15). Request contact for Dane (my skype username is `d.springmeyer`) beforehand. We will keep the line open for the remainder of the day.
+ * 12:30 PM - Lunch break
+ * Afternoon - Whiteboarding, coding, docs, fun, foosball
 
 - Sunday:
- * 10 AM doors open
+ * 10 AM - doors open
+ * 11 AM - skype line is opened again
  * Remainder of day (through ~ 5pm): Lots of coding and breaks to play foosball in the DevSeed garage
 
 <img src="http://farm8.staticflickr.com/7012/6497243219_2549730dfc_n.jpg" />
