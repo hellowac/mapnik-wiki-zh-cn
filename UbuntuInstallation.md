@@ -3,21 +3,21 @@
 For all versions of Ubuntu it is a good idea to be fully up to date before starting:
 
 ```sh
-    sudo apt-get update
-    sudo apt-get upgrade
+sudo apt-get update
+sudo apt-get upgrade
 ```
 
-For previous versions see the archived notes at [[UbuntuInstallationOld]]
+For older versions see the archived notes at [[UbuntuInstallationOld]]
 
 ----
 
-# Ubuntu Oneiric (11.10)
+# Ubuntu >= (11.10)
 
 ## Install from packages
 
 **For nightly builds from master (2.x)**
 
-This is the bleeding edge, compiled directly from https://github.com/mapnik/mapnik/commits/master
+This is the bleeding edge - build nightly - directly from https://github.com/mapnik/mapnik/commits/master
 
 ```sh
     sudo add-apt-repository ppa:mapnik/nightly-trunk
@@ -25,7 +25,7 @@ This is the bleeding edge, compiled directly from https://github.com/mapnik/mapn
     sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
 
-Packages come from: https://launchpad.net/~mapnik/+archive/nightly-trunk/+packages
+These packages come from: https://launchpad.net/~mapnik/+archive/nightly-trunk/+packages
 
 **For v2.0.x version**
 
@@ -37,7 +37,7 @@ This is the stable 2.0.x series, updated whenever there is a commit pushed to th
     sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
 
-Packages come from: https://launchpad.net/~mapnik/+archive/nightly-2.0/+packages
+These packages come from: https://launchpad.net/~mapnik/+archive/nightly-2.0/+packages
 
 **For v0.7.2 version**
 
@@ -52,7 +52,24 @@ Packages come from: https://launchpad.net/~mapnik/+archive/nightly-2.0/+packages
 First, remove any other old mapnik packages:
 
 ```sh
-    sudo apt-get remove libmapnik* mapnik-utils python-mapnik
+    sudo apt-get purge libmapnik* mapnik-utils python-mapnik
+```
+
+### Ensure your boost version is recent enough
+
+Mapnik master may require a boost version more recent than provided by your Ubuntu distribution.
+
+You can use the latest Boost version (that works with Mapnik) by installing Boost from the `mapnik/boost` PPA:
+
+```sh
+sudo add-apt-repository ppa:mapnik/boost
+sudo apt-get update
+sudo apt-get install libboost-dev libboost-filesystem-dev libboost-program-options-dev libboost-python-dev libboost-regex-dev libboost-system-dev libboost-thread-dev 
+```
+Note: You can see the boost version offered by your distro with the below command. And if you are using the above PPA then its version should show up as a candidate for installation:
+
+```sh
+apt-cache policy libboost-dev
 ```
 
 ### Set up build environment
