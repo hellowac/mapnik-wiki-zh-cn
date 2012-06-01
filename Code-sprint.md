@@ -77,5 +77,7 @@ Remote coordination will be via [this issue](https://github.com/mapnik/mapnik/is
 Add your personal tasks and interests here.
 - Interested in Docs, testing, carto styling, 2.1 release (Dane)
 - Mapnik documentation and tutorials (Richard)
+- High level symbolizers, e.g. "choropleth", Carto (Manel)
+- Transition from old version (0.7.1 -> 2.0) (Manel)
 - add your tasks and goals
 - ...
