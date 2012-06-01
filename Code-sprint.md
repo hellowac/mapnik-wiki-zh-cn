@@ -79,5 +79,6 @@ Add your personal tasks and interests here.
 - Mapnik documentation and tutorials (Richard)
 - High level symbolizers, e.g. "choropleth", Carto (Manel)
 - Transition from old version (0.7.1 -> 2.0) (Manel)
+- Data-driven symbolizer properties
 - add your tasks and goals
 - ...
