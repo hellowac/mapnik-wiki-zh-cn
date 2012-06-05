@@ -70,6 +70,7 @@ Remote coordination will be via [this issue](https://github.com/mapnik/mapnik/is
 - [Richard Weait](https://github.com/rweait) (Ontario)
 - Maybe: [Lars](https://github.com/ahlzen) Ahlzen (Boston) 
 - [Tom MacWright](https://github.com/tmcw) (DC)
+- [AJ Ashton](https://github.com/ajashton) (DC)
 - add your name (and origin) here
 - ...
 
