@@ -3,11 +3,11 @@
 
 A PolygonSymbolizer is often used to render the area enclosed by a [polygon](http://en.wikipedia.org/wiki/Polygon). For example, the `rundemo.py` and `rundemo.cpp` applications use PolygonSymbolizer objects to "fill-in" [Canadian provinces with different colors and to make bodies of water look blue](http://trac.mapnik.org/attachment/wiki/PolygonSymbolizer/demo256.png?format=raw).
 
-| *parameter* | *value*  | *default* |
--------------|---------|------------|
-| fill            |  CSS colour | "grey" |
-| fill-opacity | 0.0 - 1.0 | 1.0 |
-| gamma | 0.0 - 1.0 | 1.0 |
+| *parameter* | *value*  | *default* | * description * |
+-------------|---------|------------|----------------|
+| fill            |  CSS colour | "grey" | Fill color to assign to a polygon, defaults to rgba(128,128,128,1) which means gray and fully opaque (alpha = 1), same as rgb(128,128,128) |
+| fill-opacity | 0.0 - 1.0 | 1.0 | The opacity of the polygon (an alternative way of specifying alpha). Can be used in combination with an rgba color and will be multiplied with the existing alpha component of the color. |
+| gamma | 0.0 - 1.0 | 1.0 | Level of antialiasing of polygon edges - basically gamma 1 (the default) means fully antialiasing, while a lesser gamma reduces the antialiasing level leading to more jaggy polygon edges. Lower gamma may be desirable in cases where you would prefer that the background color not "shine through". |
 
 * Note: gamma is available in Mapnik >= 0.7.0, see #428 for more detail.
 
