@@ -68,7 +68,7 @@ Remote coordination will be via [this issue](https://github.com/mapnik/mapnik/is
 - [Artem Pavlenko](https://github.com/artemp) (UK)
 - [Dane Springmeyer](https://github.com/springmeyer) (Seattle)
 - [Richard Weait](https://github.com/rweait) (Ontario)
-- Maybe: [Lars](https://github.com/ahlzen) Ahlzen (Boston) 
+- [Lars](https://github.com/ahlzen) Ahlzen (Boston) 
 - [Tom MacWright](https://github.com/tmcw) (DC)
 - [AJ Ashton](https://github.com/ajashton) (DC)
 - add your name (and origin) here
@@ -81,5 +81,6 @@ Add your personal tasks and interests here.
 - High level symbolizers, e.g. "choropleth", Carto (Manel)
 - Transition from old version (0.7.1 -> 2.0) (Manel)
 - Data-driven symbolizer properties
+- Compositing, "advanced" symbolizers (Lars)
 - add your tasks and goals
 - ...
