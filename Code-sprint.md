@@ -71,6 +71,7 @@ Remote coordination will be via [this issue](https://github.com/mapnik/mapnik/is
 - [Lars](https://github.com/ahlzen) Ahlzen (Boston) 
 - [Tom MacWright](https://github.com/tmcw) (DC)
 - [AJ Ashton](https://github.com/ajashton) (DC)
+- [Will White](https://github.com/willwhite) (DC)
 - add your name (and origin) here
 - ...
 
