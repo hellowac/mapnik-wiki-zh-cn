@@ -16,7 +16,7 @@ http://www.slideshare.net/steve8/what-id-like-to-do-with-mapnik-4756837
 
 8) <strike>multi-line text constructed from several tags, e.g. for peak name and height (can be done when you accept the same styling for these text fragments)</strike>
 
-9) stronger coupling between icon and text (maybe similar to the ShieldSymbolizer?) so that manual text dy tweaking is not required anymore (want to be able to say: "place this icon in size 20x20  and put the text in size 12pt five pixels below it")
+9) stronger coupling between icon and text (maybe similar to the ShieldSymbolizer?) so that manual text dy tweaking is not required anymore (want to be able to say: "place this icon in size 20x20  and put the text in size 12pt five pixels below it") Idea: “TownSymbolizer”.
 
 10) collapsing of little small areas with the same tags into a single big one (for e.g. a big forest), so that e.g. the name is drawn only once
 
