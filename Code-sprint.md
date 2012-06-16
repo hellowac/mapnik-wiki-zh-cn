@@ -45,7 +45,9 @@ If you can't make it in person, join remotely: https://github.com/mapnik/mapnik/
 - Sunday:
  * 10 AM - doors open
  * 11 AM - skype line is opened again
- * Remainder of day (through ~ 5pm): Lots of coding and breaks to play foosball in the DevSeed garage
+ * 1-2:30 PM - Skype call on CSS and Cartography - status of https://github.com/nvkelso/carto-css-map-styling
+ * 3-3:30 PM - break
+ * Remainder of day: Lots of coding and breaks to play foosball in the DevSeed garage
 
 <img src="http://farm8.staticflickr.com/7012/6497243219_2549730dfc_n.jpg" />
 
