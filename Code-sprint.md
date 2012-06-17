@@ -61,9 +61,6 @@ Last time, the *Top Ten* Advanced Cartography Wishes looked a bit like this: [Id
 
 ## Attending Remotely
 
-- [Steve Chilton](https://twitter.com/#!/steev8) (UK) - will join for Skype intros on Saturday morning
-- Hermann Kraus (Germany)
-
 Remote coordination will be via [this issue](https://github.com/mapnik/mapnik/issues/1237)]
 
 ## Attending in DC
