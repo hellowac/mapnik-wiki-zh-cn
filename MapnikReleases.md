@@ -17,7 +17,7 @@ Changelog: [[Release2.0.0]]
 
 ## 0.7.2
 
-Changelog: TBA
+Changelog: [[Release0.7.2]]
 
 * Bug fix and forward compatibility (with Mapnik 2.0.0) release
 * No backwards incompatible changes, except that it will default to using Mapnik 2 XML syntax for `mapnik.save_map()` format.
