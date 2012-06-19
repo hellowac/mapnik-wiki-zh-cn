@@ -25,6 +25,12 @@ This is the bleeding edge - build nightly - directly from https://github.com/map
     sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
 
+If add-apt-repository is not installed, install it with:
+
+```sh
+    sudo apt-get install python-software-properties
+```
+
 These packages come from: https://launchpad.net/~mapnik/+archive/nightly-trunk/+packages
 
 **For v2.0.x version**
