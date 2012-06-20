@@ -1,15 +1,7 @@
-<!-- Name: FasterCompiling -->
-<!-- Version: 11 -->
-<!-- Last-Modified: 2011/08/11 07:29:20 -->
-<!-- Author: springmeyer -->
-
-
-
 # Compiling Mapnik Faster
 ![source:xkcd.org](http://imgs.xkcd.com/comics/compiling.png)
 
 When you are tired of sword fighting, its time to actually figure out how to compile Mapnik faster.
- 
 
 The use of SCons, templates, and particularly boost::spirit2 grammars, means that for a fairly lightweight library like Mapnik things take a long time to compile.
 
@@ -53,7 +45,7 @@ then compile Mapnik like:
 Be aware that clang provides more warnings that gcc, and this can clog your terminal sometimes when the boost guys get careless. To silence most of the clang warnings that come from boost headers you can do:
 
 ```sh
-    $ python scons/scons.py install WARNING_CXXFLAGS="-Wno-unused-function -Wno-uninitialized -Wno-array-bounds -Wno-parentheses -Wno-char-subscripts"
+    $ python scons/scons.py install WARNING_CXXFLAGS="-Wno-unused-function -Wno-uninitialized -Wno-array-bounds -Wno-parentheses -Wno-char-subscripts -Wno-internal-linkage-in-inline"
 ```
 
 ## Use Precompiled Headers
