@@ -93,6 +93,7 @@ apt-cache policy libboost-dev
     libjpeg-dev \
     libltdl7 libltdl-dev \
     libpng-dev \
+    libproj-dev \
     libgeotiff-dev libtiff-dev libtiffxx0c2 \
     libcairo2 libcairo2-dev python-cairo python-cairo-dev \
     libcairomm-1.0-1 libcairomm-1.0-dev \
