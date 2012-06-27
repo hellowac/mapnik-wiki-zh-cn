@@ -1,13 +1,6 @@
-<!-- Name: GDAL -->
-<!-- Version: 18 -->
-<!-- Last-Modified: 2010/11/13 10:18:41 -->
-<!-- Author: kunitoki -->
-
-
 Mapnik's PluginArchitecture supports the use of different input formats.
 
 This plugin supports the [GDAL](http://www.gdal.org/) library in order to read a lot of spatial geo raster data from multiple formats.
-
 
 # Installation
 
@@ -30,10 +23,10 @@ To check if the gdal plugin built and was installed correctly you can do:
 |:------------|----------|---------------|----------:|
 | file        | string   | file of the raster to be read | |
 | base        | string   | base path where to search for file parameter | |
-| shared      | boolean  | wheter to open the dataset in shared mode (allowing save of resources when using multiple access to the same files) or not | false |
 | band        | integer  | request for a specific raster band index, -1 means all bands | -1 |
 | filter_factor | double | filter to use when querying for raster data | 0.0 |
 | nodata | double | allow setting nodata value on the fly (will override value if nodata is set in data) | |
+| shared | boolean  | Whether to open the dataset in shared mode. Not recommend to enable true unless you can garuntee that one on thread accesses a given file at the same time (unlikely given the way that most tiling software works with mapnik). It is only beneficial therefore if you are rendering multiprocess and singlethreaded and are working in low memory situation. Internally it directs Mapnik to call `GDALOpenShared` instead of `GDALOpen` which means that GDAL will consult its global cache of datasets. GDAL will try to return a copy of the dataset if access from multiple threads (but this defeats the purpose of sharing) | false |
 
 # Styling
 
