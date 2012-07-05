@@ -145,11 +145,11 @@ If you are compiling on Mac OS X see: http://trac.mapnik.org/wiki/MacInstallatio
 Otherwise on linux do:
 
 ```sh
-    wget http://voxel.dl.sourceforge.net/project/boost/boost/1.48.0/boost_1_48_0.tar.bz2
-    tar xjvf boost_1_48_0.tar.bz2
-    cd boost_1_48_0
+    wget http://voxel.dl.sourceforge.net/project/boost/boost/1.50.0/boost_1_50_0.tar.bz2
+    tar xjvf boost_1_50_0.tar.bz2
+    cd boost_1_50_0
     ./bootstrap.sh
-    ./bjam \
+    ./b2 \
       --with-thread \
       --with-filesystem \
       --with-iostreams \
@@ -160,7 +160,7 @@ Otherwise on linux do:
       link=shared \
       toolset=gcc \
       stage
-    sudo ./bjam \
+    sudo ./b2 \
       --with-thread \
       --with-filesystem \
       --with-iostreams \
@@ -182,7 +182,7 @@ To rebuild just boost_regex, for example to compile/link in the right ICU suppor
  * -a forces rebuild/install
 
 ```sh
-    sudo ./bjam  --with-regex toolset=gcc -sHAVE_ICU=1 -sICU_PATH=/usr/local -a install
+    sudo ./b2  --with-regex toolset=gcc -sHAVE_ICU=1 -sICU_PATH=/usr/local -a install
 ```
 
 Note: If later when compiling mapnik you get and error like...
@@ -192,9 +192,9 @@ Note: If later when compiling mapnik you get and error like...
      ...
 ```
 
-it might be because you have two versions of libicu on your system. You have to recompile boost such that `ldd /usr/local/lib/libboost_regex.so` is the latest version. Since bjam tends to give some problem when passing parameters, one way to overcome this could be to move the libicu*.so.40 libraries for example and replace them with the ones compiled on /usr/local/lib/libicu* and then rebuild boost with regex support. You could later return them to the same place so that both `import mapnik` and `import mapnik2` work.
+it might be because you have two versions of libicu on your system. You have to recompile boost such that `ldd /usr/local/lib/libboost_regex.so` is the latest version. Since b2 tends to give some problem when passing parameters, one way to overcome this could be to move the libicu*.so.40 libraries for example and replace them with the ones compiled on /usr/local/lib/libicu* and then rebuild boost with regex support. You could later return them to the same place so that both `import mapnik` and `import mapnik2` work.
 
-Note: you may want to (re)build boost_python against a specific version of python on your system. To do this in the most robust way (because passing command line args to bjam is hard!), create a custom jam file:
+Note: you may want to (re)build boost_python against a specific version of python on your system. To do this in the most robust way (because passing command line args to b2 is hard), create a custom jam file:
 
 ```
     import option ;
