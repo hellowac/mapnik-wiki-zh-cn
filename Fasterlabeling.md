@@ -1,4 +1,7 @@
-# Ideas and designs for faster label rendering
+
+Ideas and designs for faster label rendering
+
+See also a ticket on code changes/ideas: https://github.com/mapnik/mapnik/issues/1300
 
 * Pre-processing - give thought to pre-processing your data. Split or merge lines so they can easily be labeled nicely without fancy options like `spacing` (see below). Simplify vertices. Collapse attribute columns into boolean columns for fast filtering and lookups. Index those columns.
 
