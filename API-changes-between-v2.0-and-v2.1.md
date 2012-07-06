@@ -2,7 +2,10 @@
 
  * `TextSymbolizer` - most attributes moved to either `format` or `placements` properties
    * TODO - doc all these out
- * `RasterSymbolizer` - `mode` is deprecated, now use `comp-op` which supports [many more compositing modes](https://github.com/mapnik/mapnik/blob/master/include/mapnik/image_compositing.hpp#L42-79)
+ * `RasterSymbolizer`
+   *  `mode` is deprecated, now use `comp-op` which supports [many more compositing modes](https://github.com/mapnik/mapnik/blob/master/include/mapnik/image_compositing.hpp#L42-79)
+   *  `scaling=fast` is deprecated. It has always been a synonym for `near`, use `near` going forward
+   *  `scaling` is now exposed in python as enumerations of `mapnik.scaling_method` not as bare strings
 
 ## Removed
 
