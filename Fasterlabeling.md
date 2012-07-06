@@ -1,5 +1,4 @@
-
-Ideas and designs for faster label rendering
+#### Ideas and designs for faster label rendering
 
 See also a ticket on code changes/ideas: https://github.com/mapnik/mapnik/issues/1300
 
