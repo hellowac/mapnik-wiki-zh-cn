@@ -6,7 +6,14 @@ See also a ticket on code changes/ideas: https://github.com/mapnik/mapnik/issues
 
 * `spacing` - do not use this parameter if you can avoid it - see #1299. It can help achieve repeated labels along long lines, but this can also be achieved by splitting lines into more segments or breaking multilinestrings into linestrings. 
 
-* `encoding` - if rendering labels separately from other data - no background, polygons, lines - then tiles may be majority blank. In this case alternative encoding options may provide significantly encoding speeds
+* `encoding` - if rendering labels separately from other data - no background, polygons, lines - then tiles may be majority blank. In this case alternative encoding options may provide significantly encoding speeds, like `png:z=1` might not lead to much larger tiles but will result if much faster encoding. Also, oddly, usually png8 encoding is slower, but it can be just as fast or faster with blank or near-blank tiles so try `png8:z=1`. You could also try reducing colors with `png:c=64` since your labels may only be shades of grey, or even try encoding by passing in a fixed palette. See [https://github.com/mapnik/mapnik/wiki/OutputFormats](OutputFormats) for more details on options, and see the [encoding speed test](https://github.com/mapnik/mapnik/blob/master/tests/python_tests/image_encoding_speed_test.py) that can be run locally from your mapnik source checkout to see the speeds of various combinations of encoding options against test tiles like:
+
+```sh
+$ python tests/python_tests/image_encoding_speed_test.py
+avg: 1.5909ms | min: 1.6526ms | total: 16.669ms <-- blank png8:z=1:c=50:m=h
+avg: 1.5799ms | min: 1.6617ms | total: 16.766ms <-- blank png8:z=1:m=h
+...
+```
 
 * `halos` - good looking text needs halos. When profiling your text rendering and you may see that halo rendering is a major bottleneck and takes an equal amount of time to placement logic. If should not be this way, please follow #1298
 
