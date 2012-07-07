@@ -24,4 +24,6 @@
    * `smooth` - bezier smooth value - 0-1, 0 (default) means no smoothing, 1 means fully smoothed, higher values create wild loopbacks
  * `LineSymbolizer`
    * `offset` - offset lines either in positive (right side) or negative (left side)
- 
+ * Python Bindings:
+   * `mapnik.Image.get_pixel()` - get unsigned int value representing the rgba value, useful for fast pixel comparisons
+   * `mapnik.Grid.get_pixel()` - get int value representing the feature id encoded in the grid pixels
