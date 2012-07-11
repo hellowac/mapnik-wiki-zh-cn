@@ -50,7 +50,7 @@ Fetch all the possible methods like:
 ```cpp
 rule_type rule;
 stroke ls;         // This is the line symbolizer
-ls.set_color(color(255, 255, 255);
+ls.set_color(color(255, 255, 255));
 ls.set_width(4);   // width of the line in pixels
 ls.set_line_join(mapnik::ROUND_JOIN);
 ls.set_line_cap(mapnik::ROUND_CAP);
