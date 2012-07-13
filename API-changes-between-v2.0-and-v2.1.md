@@ -10,11 +10,13 @@
 ## Removed
 
  * `GlyphSymbolizer` - functionality can now be achieved with the `TextSymbolizer`
+ * `MarkersSymbolizer` 
+  * `marker-type` is removed, built in ellipse and arrow types now can be referenced like `file="shape://ellipse"` and `file="shape://arrow"` - although this interface is unstable and may continue to change.
 
 ## Changed
 
  * `MarkersSymbolizer`
-   * `width` and `height` are now expressions rather than raw floats and their values represent diameter in pixel not radii
+   * `width` and `height` are now optional expressions rather than raw floats and their values represent diameter in pixels not radii. If not set they will be `None`, but the default ellipse has a `radius` of `10` meaning that if you set `width="20"` and `height="20"` then there will be no change in the rendering size of the ellipse. The arrow default dimensions can be maintained with `width="27" height="12"`. Altering width or height will scale the marker, but ideally you should use `transform="scale(x,y)" instead.
 
 ## Added
 
