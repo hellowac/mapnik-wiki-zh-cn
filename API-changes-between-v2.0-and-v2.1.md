@@ -9,7 +9,7 @@
 
 ## Removed
 
- * `PointDatasource` - Use `MemoryDatasource` instead, which now supports any types of geometries. PointDatasource was an  incomplete wrapper around MemoryDatasource, and is obsolete now that `Feature` objects can leverage WKB and WKT to create geometries.
+ * `PointDatasource` - Use `MemoryDatasource` instead. PointDatasource was an incomplete wrapper around MemoryDatasource, and is obsolete now that `Feature` objects can leverage WKB and WKT to create geometries and features can be added to MemoryDatasources.
  * `GlyphSymbolizer` - functionality can now be achieved with the `TextSymbolizer`
  * `MarkersSymbolizer` 
   * `marker-type` is removed, built in ellipse and arrow types now can be referenced like `file="shape://ellipse"` and `file="shape://arrow"` - although this interface is unstable and may continue to change.
