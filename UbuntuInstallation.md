@@ -99,7 +99,7 @@ apt-cache policy libboost-dev
     libcairomm-1.0-1 libcairomm-1.0-dev \
     ttf-unifont ttf-dejavu ttf-dejavu-core ttf-dejavu-extra \
     git build-essential python-nose clang \
-    sudo apt-get install libgdal1-dev python-gdal \
+    libgdal1-dev python-gdal \
     postgresql-9.1 postgresql-server-dev-9.1 postgresql-contrib-9.1 postgresql-9.1-postgis \
     libsqlite3-dev
 ```
