@@ -98,9 +98,7 @@ apt-cache policy libboost-dev
     libcairo2 libcairo2-dev python-cairo python-cairo-dev \
     libcairomm-1.0-1 libcairomm-1.0-dev \
     ttf-unifont ttf-dejavu ttf-dejavu-core ttf-dejavu-extra \
-    git build-essential python-nose
-    
-    # install plugin dependencies
+    git build-essential python-nose clang \
     sudo apt-get install libgdal1-dev python-gdal \
     postgresql-9.1 postgresql-server-dev-9.1 postgresql-contrib-9.1 postgresql-9.1-postgis \
     libsqlite3-dev
@@ -111,7 +109,7 @@ apt-cache policy libboost-dev
 ```sh
     git clone http://github.com/mapnik/mapnik
     cd mapnik
-    ./configure && make && sudo make install
+    ./configure CXX=clang++ && make && sudo make install
 ```
 
 To test mapnik:
