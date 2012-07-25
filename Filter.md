@@ -1,9 +1,6 @@
-<!-- Name: Filter -->
-<!-- Version: 10 -->
-<!-- Last-Modified: 2011/08/29 09:04:20 -->
-<!-- Author: MaZderMind -->
 # Filter
-Each Style-Rule can optionally have a Filter attached. Mapnik walks through all Rules of a Style and checks if it has a Filter specified and if this Filter matches the Object currently rendered. Filters compare an Objects Key-Value Information against the specified rules. When the Datasource is a Postgis Database, the Filter operates on the tables columns, for Shapefiles the Attributes are used.
+
+Each Style-Rule can optionally have a Filter attached. Mapnik walks through all Rules of a Style and checks if it has a Filter specified and if this Filter matches the Object currently rendered. Filters compare a Feature's attributes against the specified rules. When the Datasource is a Postgis Database, the Filter operates on the tables columns, for Shapefiles the dbf columns are used.
 
 In XML [character entities](http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) are used to construct filters. You can use the following characters to specify value-comparisons:
 
@@ -19,10 +16,9 @@ Filters can be combined with the following operators:
  * A `or` B
  * `not` A
 
-And be combined to complex rules using brackets: `(` and `)`.
+And they can be combined in complex rules using brackets: `(` and `)`.
 
-Missing Attributes are treated as empty strings. Attributes can be compared against [Regular expressions](http://en.wikipedia.org/wiki/Regular_expression) using the `.match` operator.
-
+Attributes can be compared against [Regular expressions](http://en.wikipedia.org/wiki/Regular_expression) using the `.match` operator.
 
 ## Examples in XML
 Matches all Objects that have an attribute "amenity" with a value of "restaurant":
@@ -30,6 +26,14 @@ Matches all Objects that have an attribute "amenity" with a value of "restaurant
 ```xml
     <Filter>[amenity] = 'restaurant'</Filter> 
 ```
+
+NEW in Mapnik 2.1.x: Matches all features that contain point geometries:
+
+```xml
+    <Filter>[mapnik::geometry_type]=point</Filter> 
+```
+
+Note: the geometry types that can be matched include: `point`,`linestring`,`polygon`, or `collection` (multiple different types per feature).
 
 Matches all Objects that have an attribute "CARTO" with a value that compares greater or equal 2 and lower then 5:
 
