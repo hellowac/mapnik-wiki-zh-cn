@@ -20,7 +20,8 @@
    * `width` and `height` are now optional expressions rather than raw floats and their values represent diameter in pixels not radii. If not set they will be `None`, but the default ellipse has a `radius` of `10` meaning that if you set `width="20"` and `height="20"` then there will be no change in the rendering size of the ellipse. The arrow default dimensions can be maintained with `width="27" height="12"`. Altering width or height will scale the marker, but ideally you should use `transform="scale(x,y)" instead.
 
 ## Added
-
+ 
+ * `Expression` - you can now use the built in keyword of `[mapnik::geometry_type]` to filter features by geometry type either by name or integer key. The mapping is `0:no geometry`, `1:point`, '2:linestring`, `3:polygon`, and `4:collection`. A collection indicates that the `Feature` has more than one geometry of different types. So a `Feature` with three linestrings will be reported as `linestring` but a `Feature` with a point and a linestring will be reported as a `collection`. - for more details see [#](https://github.com/mapnik/mapnik/issues/546)
  * To All symbolizers (in most cases)
    * `comp-op` - All symbolizers now support compositing in the AGG and Cairo renderers
    * `clip` - All(most) symbolizers - boolean of whether to clip geometries before rendering (defaults to `true`)
