@@ -86,6 +86,12 @@ http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba
     shield.min_distance = 50
     shield.label_spacing = 100
     shield.displacement(dx,dy)
+    
+    #Mapnik Version 2:
+    shield = ShieldSymbolizer(Expression('[NAME]'),'DejaVu Sans Bold',6,Color('#000000'),PathExpression('images/ushighway_shield_20.png'))
+    shield.min_distance = 50
+    shield.label_spacing = 100
+    shield.displacement = (dx,dy)
 ```
 
 #### C++
