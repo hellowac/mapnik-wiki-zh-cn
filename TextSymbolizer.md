@@ -119,6 +119,7 @@ An XML example might look like:
 ```
 
 ### List
+(Supported starting with Mapnik 2.1)
 Here a list of styles is defined and tried one by one till a valid position is found. Each style inherits from the previous one.
 
 It is defined in XML by:
