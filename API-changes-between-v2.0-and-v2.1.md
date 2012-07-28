@@ -59,13 +59,20 @@
 
 ## Added
  
- * `Expression` - you can now use the built in keyword of `[mapnik::geometry_type]` to filter features by geometry type either by name or integer key. The mapping is `0:no geometry`, `1:point`, '2:linestring`, `3:polygon`, and `4:collection`. A collection indicates that the `Feature` has more than one geometry of different types. So a `Feature` with three linestrings will be reported as `linestring` but a `Feature` with a point and a linestring will be reported as a `collection`. - for more details see [#](https://github.com/mapnik/mapnik/issues/546)
+ * `Expression` - you can now use the built in keyword of `[mapnik::geometry_type]` to filter features by geometry type either by name or integer key. The mapping is `0:no geometry`, `1:point`, '2:linestring`, `3:polygon`, and `4:collection`. A collection indicates that the `Feature` has more than one geometry of different types. So a `Feature` with three linestrings will be reported as `linestring` but a `Feature` with a point and a linestring will be reported as a `collection`. - for more details see [#546](https://github.com/mapnik/mapnik/issues/546)
  * To All symbolizers (in most cases)
    * `comp-op` - All symbolizers now support compositing in the AGG and Cairo renderers
    * `clip` - All(most) symbolizers - boolean of whether to clip geometries before rendering (defaults to `true`)
    * `smooth` - bezier smooth value - 0-1, 0 (default) means no smoothing, 1 means fully smoothed, higher values create wild loopbacks
  * `LineSymbolizer`
    * `offset` - offset lines either in positive (right side) or negative (left side)
+ * [`TextSymbolizer`](https://github.com/mapnik/mapnik/wiki/TextSymbolizer)
+   * New placement alogrithm: `list`
+   * Text formatting
+
+   Changes documented in TextSymbolizer documentation
  * Python Bindings:
    * `mapnik.Image.get_pixel()` - get unsigned int value representing the rgba value, useful for fast pixel comparisons
    * `mapnik.Grid.get_pixel()` - get int value representing the feature id encoded in the grid pixels
+   * bindings for text placement and formatting work 
+   
