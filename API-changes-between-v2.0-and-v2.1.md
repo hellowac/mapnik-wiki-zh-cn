@@ -1,7 +1,44 @@
 ## Deprecated
 
  * `TextSymbolizer` - most attributes moved to either `format` or `placements` properties
-   * TODO - doc all these out
+
+   `properties`:
+      * label-placement
+      * horizontal-alignment
+      * justify-alignment
+      * vertical-alignment
+      * orientation
+      * displacement
+      * label-spacing
+      * label-position-tolerance
+      * avoid-edges
+      * minimum-distance
+      * minimum-padding
+      * minimum-path-length
+      * maximum-angle-char-delta
+      * force-odd-labels
+      * allow-overlap
+      * largest-bbox-only
+      * text-ratio
+      * wrap-width
+
+   `format`:
+      * face_name
+      * fontset
+      * text-size
+      * character-spacing
+      * line-spacing
+      * text-opacity
+      * wrap-char
+      * wrap-before
+      * text-transform
+      * fill
+      * halo-fill
+      * halo-radius
+
+    Backward compatibility is preserved by python wrappers, however a warning message is printed if the old name is used.
+
+
  * `RasterSymbolizer`
    *  `mode` is deprecated, now use `comp-op` which supports [many more compositing modes](https://github.com/mapnik/mapnik/blob/master/include/mapnik/image_compositing.hpp#L42-79)
    *  `scaling=fast` is deprecated. It has always been a synonym for `near`, use `near` going forward
