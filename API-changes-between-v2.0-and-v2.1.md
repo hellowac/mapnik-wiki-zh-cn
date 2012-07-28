@@ -13,6 +13,7 @@
  * `GlyphSymbolizer` - functionality can now be achieved with the `TextSymbolizer`
  * `MarkersSymbolizer` 
   * `marker-type` is removed, built in ellipse and arrow types now can be referenced like `file="shape://ellipse"` and `file="shape://arrow"` - although this interface is unstable and may continue to change.
+ * `ShieldSymbolizer` attribute `no_text` - Simply leave the text empty if you don't want any text to be rendered.
 
 ## Changed
 
