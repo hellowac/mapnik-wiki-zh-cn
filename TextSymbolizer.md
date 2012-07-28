@@ -84,8 +84,11 @@ The first parameter is the field name of a database field, or from a shape file,
 You must load the needed fonts first, otherwise you'll get a run time error. But you can load as many true type fonts as you like. Mapnik is coming with a couple of fonts in "mapnik/fonts". I recommend to load all of this fonts, regardless if you need them or not. 
 
 ## Placements
-In Mapnik 2 the possibility to try different placements if the text can't be placed at the intended position is introduced. Currently only one algorithm ("simple") is implemented.
+In Mapnik 2 the possibility to try different placements if the text can't be placed at the intended position is introduced. 
 
+Algorithms:
+### Simple
+(This is the only algorithm supported in Mapnik 2.0)
 It expects a string to specify which positions and size should be used. The format is POSITIONS,[SIZES].
 POSITIONS is any combination of N, E, S, W, NE, SE, NW, SW (direction) and X (exact position as give by "displacement") (separated by commas, may not be empty).
 
@@ -115,8 +118,21 @@ An XML example might look like:
 />[label]</TextSymbolizer>
 ```
 
+### List
+Here a list of styles is defined and tried one by one till a valid position is found. Each style inherits from the previous one.
+
+It is defined in XML by:
+```xml
+<TextSymbolizer face-name="DejaVu Sans Book" size="16" placement="point" dy="8" fill="blue" placement-type="list">[name]
+    <Placement size="10" dy="-8" fill="red"/><!-- Reduces text size and changes offset -->
+    <Placement fill="green">[abbreviated_name]</Placement> <!-- size="10", dy="-8", fill="green", shorter text -->
+    <Placement fill="orange" dy="8">[nr]</Placement> <!-- size="10", dy="8", fill="orange", shortest text -->
+</TextSymbolizer>
+```
+(Note [abbreviated_name] and [nr] have to be supplied by the data source!)
+
 ## New syntax
-Starting with r3354 Mapnik2 supports a new syntax:
+Starting with Mapnik 2.0 a new syntax is used:
 
 ```xml
 <TextSymbolizer name="[label]" />
