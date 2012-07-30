@@ -1,14 +1,25 @@
-<!-- Name: InstallationTroubleshooting -->
-<!-- Version: 43 -->
-<!-- Last-Modified: 2011/09/10 10:51:41 -->
-<!-- Author: springmeyer -->
-
-
 # Installation Troubleshooting
 
 *See also: [[UsingScons]] for help on how to properly use SCons to find your dependencies.
 
 ## Build Errors
+
+### Implicit dependency not found
+
+ * *Description*: You get a scons build error like:
+
+```
+scons: *** [bindings/python/mapnik_color.os] Implicit dependency `/usr/include/float.h' not found, needed by target `bindings/python/mapnik_color.os'.
+```
+
+ * *Solution*: Either check out a new copy of mapnik or clear out the scons cache and re-configure:
+
+```sh
+make reset
+./configure
+make
+```
+
 
 ### boost: object_base_initializer was not declared in this scope
 
