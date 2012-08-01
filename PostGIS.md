@@ -80,7 +80,7 @@ If you want to do complex queries you can nest subselects in the `table` argumen
 
 If you want to add something after the query (for example ORDER BY) you must use !bbox! dynamic map variable:
 
-    lyr = Layer('Order by st_lenght from PostGIS')
+    lyr = Layer('Order by st_length from PostGIS')
     BUFFERED_TABLE = 'table_line where way && !bbox! ORDER BY st_LENGTH(way) DESC'
     lyr.datasource = PostGIS(host='localhost',user='postgres',password='',dbname='your_postgis_database',table=BUFFERED_TABLE, srid='your_srid', geometry_field='way', extent='your_extent')
 ```
