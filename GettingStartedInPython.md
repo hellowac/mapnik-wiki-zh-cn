@@ -12,6 +12,11 @@ Make sure you have mapnik installed. You should be able to open a terminal and t
 
 This tutorial expects Mapnik 2.x or greater. Older versions do not provide the `mapnik-config` program, so we recommend upgrading.
 
+
+Please note that if you are using mapnik 2.0.0 then you will need to adjust the "mapnik" module name to "mapnik2" in the python commands. Refer to [[mapnik2]] for details of the naming convention.
+
+
+
 Next test the python bindings. You should be able to open a terminal and type:
 
     python -c "import mapnik;print mapnik.__file__" # should return the path to the python bindings and no errors
