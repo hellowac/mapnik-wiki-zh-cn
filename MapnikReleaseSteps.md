@@ -113,16 +113,18 @@ MAPNIK_VERSION=`mapnik-config --version`
 git ci include/mapnik/version.hpp SConstruct -m "now working on mapnik v${MAPNIK_VERSION}"
 git push
 ```
+
+### Update Mapnik.org
+
+* push python api docs
+* update the [download page](http://mapnik.org/download/)
+* new blog post with updated release links
     
 ### Packaging
     
 * Package binaries for Windows, Mac, and Ubuntu Linux (PPA)
 * Upload Mac/Win binary packages to the [github downloads page](https://github.com/mapnik/mapnik/downloads)
 * Submit patch for updated [Mapnik Portfile](http://trac.macports.org/browser/trunk/dports/python/py26-mapnik/Portfile) and [homebrew Formula](https://github.com/mxcl/homebrew)
-
-### Web
-      
-* New blog post at [mapnik.org](http://mapnik.org) updated release links
     
 ### Wiki Post-Release
 
