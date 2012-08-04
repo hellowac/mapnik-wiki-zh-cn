@@ -2,6 +2,12 @@
 
 Past, current, and future releases.
 
+## 2.0.2 (Current stable release)
+
+Changelog: [[Release2.0.2]]
+
+Small bugfix release. Significance is a several memory leaks and crash possibilities were fixed as well as change to marker width/height was reverted that was originally backported to 2.0.1 and should not have been since it changes the rendered size of marker ellipses.
+
 ## 2.0.1 (Current stable release)
 
 Changelog: [[Release2.0.1]]
