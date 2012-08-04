@@ -116,7 +116,7 @@ git push
 
 ### Update Mapnik.org
 
-* push python api docs
+* push python api docs and update docs/index.markdown
 * update the [download page](http://mapnik.org/download/)
 * new blog post with updated release links
     
