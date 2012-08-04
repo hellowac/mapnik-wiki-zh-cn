@@ -38,9 +38,11 @@
   * Update version number in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
   * Set `MAPNIK_VERSION_IS_RELEASE` to 1 in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
   * Update `abi_fallback` in [SConstruct](https://github.com/mapnik/mapnik/blob/master/SConstruct)
-  * `make install`, then:
+  * then:
 
 ```
+./configure
+make install
 MAPNIK_VERSION=`mapnik-config --version`
 git commit -a -m "setting up for mapnik v${MAPNIK_VERSION} release" 
 git push
@@ -84,6 +86,16 @@ tar cjf $TARBALL_DIR.tar.bz2 $TARBALL_DIR/
 
 Then upload that tarball to the [downloads page](https://github.com/mapnik/mapnik/downloads).
 
+* Generate Python API docs:
+
+```sh
+sudo pip install epydoc
+cd utils/epydoc_config
+./build_epydoc.sh
+PYDOCS_DEST="../../../mapnik.github.com/docs/v`mapnik-config --version`/api/python/"
+mkdir -p $PYDOCS_DEST
+cp -r ./mapnik-python-`mapnik-config --version`/ $PYDOCS_DEST/
+```
 
 ### Post tag updates
 
@@ -101,16 +113,6 @@ MAPNIK_VERSION=`mapnik-config --version`
 git ci include/mapnik/version.hpp SConstruct -m "now working on mapnik v${MAPNIK_VERSION}"
 git push
 ```
-
-* Generate Python API docs:
-
-```sh
-sudo pip install epydoc
-cd utils/epydoc_config
-./build_epydoc.sh
-```
-
-* Then upload these docs - TODO (where should they go?)
     
 ### Packaging
     
