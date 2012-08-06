@@ -15,42 +15,42 @@ For older versions see the archived notes at [[UbuntuInstallationOld]]
 
 ## Install from packages
 
-**For nightly builds from master (2.x)**
-
-This is the bleeding edge - build nightly - directly from https://github.com/mapnik/mapnik/commits/master
+First, ensure `add-apt-repository` is installed:
 
 ```sh
-    sudo add-apt-repository ppa:mapnik/nightly-trunk
-    sudo apt-get update
-    sudo apt-get install libmapnik mapnik-utils python-mapnik
+sudo apt-get install -y python-software-properties
 ```
 
-If add-apt-repository is not installed, install it with:
+**Mapnik v2.0.2**
+
+This is the latest in the stable 2.0.x series.
 
 ```sh
-    sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:mapnik/v2.0.2
+sudo apt-get update
+sudo apt-get install libmapnik mapnik-utils python-mapnik
+```
+
+These packages come from: https://launchpad.net/~mapnik/+archive/v2.0.2/+packages
+
+**For nightly builds from master (2.1.x)**
+
+This is the bleeding edge - built nightly - directly from https://github.com/mapnik/mapnik/commits/master
+
+```sh
+sudo add-apt-repository ppa:mapnik/nightly-trunk
+sudo apt-get update
+sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
 
 These packages come from: https://launchpad.net/~mapnik/+archive/nightly-trunk/+packages
 
-**For v2.0.x version**
-
-This is the stable 2.0.x series, updated whenever there is a commit pushed to the 2.0.x branch (which is only bugfix backports) - the next release in this series is 2.0.1.
-
-```sh
-    sudo add-apt-repository ppa:mapnik/nightly-2.0
-    sudo apt-get update
-    sudo apt-get install libmapnik mapnik-utils python-mapnik
-```
-
-These packages come from: https://launchpad.net/~mapnik/+archive/nightly-2.0/+packages
-
 **For v0.7.2 version**
 
 ```sh
-    sudo add-apt-repository ppa:mapnik/nightly-0.7
-    sudo apt-get update
-    sudo apt-get install libmapnik mapnik-utils python-mapnik
+sudo add-apt-repository ppa:mapnik/nightly-0.7
+sudo apt-get update
+sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
 
 ## Install Mapnik from source
@@ -58,7 +58,7 @@ These packages come from: https://launchpad.net/~mapnik/+archive/nightly-2.0/+pa
 First, remove any other old mapnik packages:
 
 ```sh
-    sudo apt-get purge libmapnik* mapnik-utils python-mapnik
+sudo apt-get purge libmapnik* mapnik-utils python-mapnik
 ```
 
 ### Ensure your boost version is recent enough
@@ -107,13 +107,13 @@ apt-cache policy libboost-dev
 ### Then compile and install Mapnik
 
 ```sh
-    git clone http://github.com/mapnik/mapnik
-    cd mapnik
-    ./configure CXX=clang++ && make && sudo make install
+git clone http://github.com/mapnik/mapnik
+cd mapnik
+./configure CXX=clang++ && make && sudo make install
 ```
 
 To test mapnik:
 
 ```sh
-    make test
+make test
 ```
