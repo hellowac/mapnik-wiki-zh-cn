@@ -72,16 +72,8 @@ git push --tags
 * Create a clean tarball:
 
 ```sh
-cd /tmp
-TARBALL_DIR="mapnik-v`mapnik-config --version`"
-git clone --depth=1 \
-  git@github.com:mapnik/mapnik.git $TARBALL_DIR
-cd $TARBALL_DIR
-git checkout "v`mapnik-config --version`"
-cd ../
-rm -rf $TARBALL_DIR/.git
-rm -rf $TARBALL_DIR/.gitignore
-tar cjf $TARBALL_DIR.tar.bz2 $TARBALL_DIR/
+TARBALL_NAME="mapnik-v`mapnik-config --version`.tar.bz2"
+git archive --format=tar tags/v2.0.2 | bzip2 > ${TARBALL_NAME}
 ```
 
 Then upload that tarball to the [downloads page](https://github.com/mapnik/mapnik/downloads).
