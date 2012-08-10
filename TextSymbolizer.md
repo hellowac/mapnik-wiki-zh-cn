@@ -8,32 +8,33 @@
 |size||Font size|||
 |text-ratio|| Try to keep a given height to width ratio|||
 |wrap-character||Use this character instead of a space to wrap long names|||
-|wrap-width||Length before wrapping long names|||
+|wrap-width||Length before wrapping long names|px|0|
 |wrap-before||Wrap text before wrap-width is reached. If this setting is off your lines will always be a bit longer than wrap-width. If this setting is on the lines will usually be a bit shorter, but can be longer if there is a single word that is longer than your current line limit.|||
-|text-transform||Allows conversion of text to lower or upper case before display. Values are "none" (default), "uppercase", "lowercase" and "capitalize". |||
-|line-spacing||Vertical spacing between lines of multiline labels (in pixels)|||
-|character-spacing||Additional horizontal spacing between characters (in pixels). Currently works for point placement only, not line placement. You will get the normal spacing defined by the font plus this amount of extra space. |||
-|spacing||Space between repeated labels|||
+|text-transform||Allows conversion of text to lower or upper case before display. Values are "none", "uppercase", "lowercase" and "capitalize". || "none" |
+|line-spacing||Vertical spacing between lines of multiline labels. This spacing is in addition to the normal font line spacing|px|0|
+|character-spacing||Additional horizontal spacing between characters. Currently works for point placement only, not line placement. You will get the normal spacing defined by the font plus this amount of extra space. |px|0|
+|spacing||Space between repeated labels. If spacing is 0 only one label is placed.|px|0|
 |label-position-tolerance||Allow labels to be moved from their point in line placement. Lower values indicate that Mapnik tries less positions and generally leads to fewer labels. Higher values lead to Mapnik trying more different positions along a line to find a free spot. If unset or 0, Mapnik sets this value based on the total length of the line to ensure enough labels are placed.|||
-|force-odd-labels||Force an odd amount of labels to be generated. Defaults to false.|||
+|force-odd-labels||Force an odd amount of labels to be generated.|bool|false|
 |max_char_angle_delta||Maximum angle (in degrees) between two consecutive characters in a label allowed. The lower the number the fewer labels placed - this is to stop placing labels around sharp corners. See r365 for more info|||
 |fill||Color of the text fill, e.g. #FFFFFF|||
 |halo-fill||Color of the text halo|||
-|halo-radius||Radius of the halo in whole pixels (fractional pixels are not accepted)|||
-|dx, dy||Displace label by fixed amount on either axis. Also see note at vertical-alignment|||
+|halo-radius||Radius of the halo in whole pixels (fractional pixels are not accepted)|px||
+|dx, dy||Displace label by fixed amount on either axis. Also see note at vertical-alignment|px|0.0|
 |avoid-edges||Boolean to avoid labeling near intersection edges|||
-|minimum-distance||Minimum distance between repeated labels such as street names or shield symbols (works across features)|||
-|allow-overlap||Allow labels to overlap other labels - Note: you can also clear the label collision cache at the LAYER level to promote more overlap. See 'clear_label_cache' at [[XMLConfigReference]] part layer|||
+|minimum-distance||Minimum distance between repeated labels such as street names or shield symbols (works across features)|px|0.0|
+|allow-overlap||Allow labels to overlap other labels - Note: you can also clear the label collision cache at the LAYER level to promote more overlap. See 'clear_label_cache' at [[XMLConfigReference]] part layer|bool|false|
 |placement||"line" to label along lines instead of by point|||
-|vertical-alignment||Position of label relative to point position ("top" (label on top of point), "middle", "bottom", "auto") default is "auto". "auto" is "middle" for dy=0, "bottom" for dy>0, "top" for dy<0|||
-|horizontal-alignment||Position of label relative to point position ("left, "middle", "right", "auto") default is "auto".|||
-|justify-alignment||Justify multi-line text ("left, "middle", "right", "auto") default is "auto". |||
-|opacity||1 is fully opaque while zero is fully transparent and .5 would be 50% transparent|||
-|minimum-padding||default 0.0, if >0 helps prevents a label (or shield) from being placed too near the edge of the map. |||
-|minimum-path-length||default 0.0, place labels only on paths longer than this value.|||
-|orientation||Rotate text|||
-|placement-type||Placement finder algorithm. Currently supported: "dummy" (do nothing) and "simple" (automatically create new positions using a simple configuration; see below)|||
-|placements||List of possible placements. Only valid if placement-type="simple" is used.|||
+|vertical-alignment||Position of label relative to point position ("top" (label on top of point), "middle", "bottom", "auto") "auto" is "middle" for dy=0, "bottom" for dy>0, "top" for dy<0||auto|
+|horizontal-alignment||Position of label relative to point position ("left, "middle", "right", "auto")||auto|
+|justify-alignment||Justify multi-line text ("left, "middle", "right", "auto")||auto|
+|opacity||1 is fully opaque while zero is fully transparent and .5 would be 50% transparent|-|1|
+|minimum-padding||if >0 helps prevents a label (or shield) from being placed too near the edge of the map. |px|0.0|
+|minimum-path-length||place labels only on paths longer than this value.|px|0.0|
+|orientation||Rotate text|degree|0|
+|placement-type||Placement finder algorithm. Currently supported: "dummy" (do nothing) and "simple" (automatically create new positions using a simple configuration; see below)|string|"dummy"|
+|placements||List of possible placements. Only valid if placement-type="simple" is used.|string|"X"|
+|upright|left,right,auto|Select which way direction is used to place characters upright.|-|auto|
 
 ## Examples
 
