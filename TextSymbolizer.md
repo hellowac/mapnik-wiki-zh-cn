@@ -147,3 +147,8 @@ becomes
 ```
 
 This change was made to be forward compatible with changes to text formatting being introduced in later versions.
+
+## New features in HarfBuzz branch
+* upright="auto/left/right" (See table above)
+* dx is also used for line placements
+* Multi-line support for line placements
