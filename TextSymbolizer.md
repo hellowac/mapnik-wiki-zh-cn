@@ -152,3 +152,7 @@ This change was made to be forward compatible with changes to text formatting be
 * upright="auto/left/right" (See table above)
 * dx is also used for line placements
 * Multi-line support for line placements
+* New parameter ``rotate_displacement="yes/no"``
+* justify-alignment, vertical-alignment, text-ratio, wrap-width, wrap-before supported for line placements
+* Line offsets are real offsets instead of fake offsets imitated by calculating the average angle
+* If dy!="0" you have to set vertical-alignment="middle" to get the same behavior as in previous versions.
