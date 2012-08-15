@@ -1,11 +1,10 @@
-<!-- Name: MetaWriter -->
-<!-- Version: 25 -->
-<!-- Last-Modified: 2011/07/23 05:22:36 -->
-<!-- Author: herm -->
-
 # MetaWriter
 
-MetaWriters are a way of outputting vector features from Mapnik that exactly match the representations of rendered features. The idea is to allow for highly customizable output of specific features rendered into tiles that should also be made available as vectors to a web browser for interactivity. This support was added by Hermann Kraus (mail: herm @@@ scribus.info) in the GSOC project ["Hit Areas"](GSOC2010_Ideas).
+NOTE: MetaWriters have been [disabled in the Mapnik 2.1.x series](https://github.com/mapnik/mapnik/issues/1240), so if you wish to use them please use Mapnik 2.0.x.
+
+MetaWriters are a way of outputting vector features, encoded as geojson, from Mapnik that exactly match the representations of rendered features. The idea is to allow for highly customizable output of specific features rendered into tiles that should also be made available as vectors to a web browser for interactivity. This support was added by Hermann Kraus (mail: herm @@@ scribus.info) in the GSOC project ["Hit Areas"](GSOC2010_Ideas).
+
+See also the `grid_renderer` which works better for polygons: https://github.com/mapnik/mapnik/wiki/MapnikRenderers
 
 A blog post on the idea is at: http://mapnik.org/news/2010/jul/06/gsoc2010_halfway/.
 
