@@ -1,4 +1,5 @@
 ## Removed
+ * Python pickling support was removed for `map/style/rule/symbolizers/fontset/query` - these were poorly maintained and future support for fast, core deepcopy should handle most key use cases - see [#1390 (map deepcopy)](https://github.com/mapnik/mapnik/issues/1390)
  * `MetaWriter` - [disabled in 2.1.x series - may be re-enabled in future releases](https://github.com/mapnik/mapnik/issues/1240)
  * `PointDatasource` - Use `MemoryDatasource` instead. PointDatasource was an incomplete wrapper around MemoryDatasource, and is obsolete now that `Feature` objects can leverage WKB and WKT to create geometries and features can be added to MemoryDatasources.
  * `GlyphSymbolizer` - functionality can now be achieved with the `TextSymbolizer`
