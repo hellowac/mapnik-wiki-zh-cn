@@ -90,5 +90,5 @@ http://www.weait.com/content/badges-badges
 | shield-dx, shield-dy | Move shield only. | 0
 | dx, dy | With unlock_image = true: move text only. | 0
 |        | With unlock_image = false: move text and shield | 0
-| unlock_image | False: Shield base point is always the input line/point (usecase: labeling bus stations). | 0
-|              | True: Shield base point is the center of the text (i.e. depends on dx,dy,vertical-alignment, horizontal-alignment) (usecase: highway shields)
+| unlock_image | True: Shield base point is always the input line/point (usecase: labeling bus stations). | 0
+|              | False: Shield base point is the center of the text (i.e. depends on dx,dy,vertical-alignment, horizontal-alignment) (usecase: highway shields)
