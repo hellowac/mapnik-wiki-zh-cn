@@ -91,7 +91,7 @@ tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
 
 Note: if creating a release candidate do instead:
 
-```
+```sh
 cd /tmp
 MAPNIK_VERSION="2.1.0rc0"
 TARBALL_NAME="mapnik-v${MAPNIK_VERSION}"
