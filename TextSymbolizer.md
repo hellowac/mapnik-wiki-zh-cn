@@ -1,7 +1,7 @@
 ## Configuration Options for TextSymbolizer
 
-| *parameter* | *value*  | *description* | *unit* | *default* |
-----------------|---------|----------------|-------|------------|
+| *parameter* | *value*  | *description* | *unit* | *default* | *version* |
+----------------|---------|----------------|-------|------------|---------|
 | name        |    -      | This is the query field you want to use for the label text, e.g. "street_name" (deprecated in Mapnik2, see section "new syntax" below)| - | - |  
 |face-name     |   -      | Font name (see [[UsingCustomFonts]])| - | - |
 |fontset-name|| FontSet name ||
@@ -32,9 +32,9 @@
 |minimum-padding||if >0 helps prevents a label (or shield) from being placed too near the edge of the map. |px|0.0|
 |minimum-path-length||place labels only on paths longer than this value.|px|0.0|
 |orientation||Rotate text|degree|0|
-|placement-type||Placement finder algorithm. Currently supported: "dummy" (do nothing) and "simple" (automatically create new positions using a simple configuration; see below)|string|"dummy"|
-|placements||List of possible placements. Only valid if placement-type="simple" is used.|string|"X"|
-|upright|left,right,auto|Select which way direction is used to place characters upright.|-|auto|
+|placement-type||Placement finder algorithm. Currently supported: "dummy" (do nothing) and "simple" (automatically create new positions using a simple configuration; see below)|string|"dummy"|2.0/2.1
+|placements||List of possible placements. Only valid if placement-type="simple" is used.|string|"X"|2.0
+|upright|left,right,auto|Select which way direction is used to place characters upright.|-|auto|harfbuzz
 
 ## Examples
 
