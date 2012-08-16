@@ -22,20 +22,14 @@ MAPNIK_LOG_DEBUG(cairo_renderer) << "Log my data, visible at DEBUG severity leve
 ## All the logging facilities in C++
 
 ```cpp
-// Output a string in INFO severity level
-MAPNIK_LOG_INFO(object_name) << "This is INFO";
+// Output a string in WARN severity level
+MAPNIK_LOG_WARN(object_name) << "This is INFO";
 
 // Output a string in DEBUG severity level
 MAPNIK_LOG_DEBUG(object_name) << "This is DEBUG";
 
-// Output a string in WARN severity level
-MAPNIK_LOG_WARN(object_name) << "This is WARN";
-
 // Output a string in ERROR severity level
 MAPNIK_LOG_ERROR(object_name) << "This is ERROR";
-
-// Output a string in FATAL severity level
-MAPNIK_LOG_FATAL(object_name) << "This is FATAL";
 ```
 
 ## Best practices
@@ -49,6 +43,6 @@ But if you need to perform complex code before outputting a string to debug, the
   // here we need to output a string that will be output in DEBUG severity level:
   const double a = 1.0 / sin(x);
   const double z = a * connection->get_zoom_from_sql_call();
-  MAPNIK_LOG_INFO(cairo_renderer) << "Log the variable " << z << ", visible at INFO severity level";
+  MAPNIK_LOG_DEBUG(cairo_renderer) << "Log the variable " << z << ", visible at DEBUG severity level";
 #endif
 ```
