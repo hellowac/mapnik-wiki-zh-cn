@@ -79,17 +79,26 @@ git push --tags
 ```sh
 cd /tmp
 MAPNIK_VERSION=`mapnik-config --version`
-TARBALL_DIR="mapnik-v${MAPNIK_VERSION}"
-git clone git@github.com:mapnik/mapnik.git $TARBALL_DIR
-cd $TARBALL_DIR
+TARBALL_NAME="mapnik-v${MAPNIK_VERSION}"
+git clone git@github.com:mapnik/mapnik.git ${TARBALL_NAME}
+cd ${TARBALL_NAME}
 git checkout "tags/v${MAPNIK_VERSION}"
 cd ../
-rm -rf $TARBALL_DIR/.git
-rm -rf $TARBALL_DIR/.gitignore
-tar cjf $TARBALL_DIR.tar.bz2 $TARBALL_DIR/
+rm -rf ${TARBALL_NAME}/.git
+rm -rf ${TARBALL_NAME}/.gitignore
+tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
+```
 
-TARBALL_NAME="mapnik-v`mapnik-config --version`"
-git archive --format=tar tags/v2.0.2 | bzip2 > ${TARBALL_NAME}.tar.bz2
+Note: if creating a release candidate do instead:
+
+```
+cd /tmp
+MAPNIK_VERSION="2.1.0rc0"
+TARBALL_NAME="mapnik-v${MAPNIK_VERSION}"
+git clone git@github.com:mapnik/mapnik.git ${TARBALL_NAME}
+rm -rf ${TARBALL_NAME}/.git
+rm -rf ${TARBALL_NAME}/.gitignore
+tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
 ```
 
 Then upload that tarball to the [downloads page](https://github.com/mapnik/mapnik/downloads).
