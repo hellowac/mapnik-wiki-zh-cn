@@ -10,8 +10,13 @@
     
 * Ensure [milestone](https://github.com/mapnik/mapnik/issues/milestones) is closed out
 
+
+### Testing
+
 * Ensure all tests pass (`make test`)
-    
+
+* Test Mapnik with `INPUT_PLUGINS=''`
+
 ### Bundled fonts and scons
     
 * Consider updating Scons-local to latest release.  
