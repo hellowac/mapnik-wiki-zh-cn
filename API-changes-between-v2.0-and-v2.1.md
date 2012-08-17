@@ -13,7 +13,7 @@
  * `MarkersSymbolizer`
    * default `marker-placement` is now `point` instead of `line` - meaning if you want your symbols (like arrows) to be oriented along lines you now need to specify `placement=line`, whereas previously this was the default. This changes reflects the goal of making the MarkersSymbolizer default behavior more reasonable for any geometry type, including points, lines, and polygons and to make it consistent with the `TextSymbolizer` and `ShieldSymbolizer` which also default to `point` placement.
    * `width` and `height` are now optional expressions rather than raw floats and their values represent diameter in pixels not radii. If not set they will be `None`, but the default ellipse has a `radius` of `10` meaning that if you set `width="20"` and `height="20"` then there will be no change in the rendering size of the ellipse. The arrow default dimensions can be maintained with `width="27" height="12"`. Altering width or height will build a new `ellipse` svg marker internally by default if no custom file type is provided. For non-ellipse types setting `width` and `height` will proportionally scale the marker, but ideally you should use `transform="scale(x,y)" instead.
-   * `opacity` setting now affects (overrides) the opacity of any fill and stroke - use `fill-opacity` and `stroke-opacity` to set each of these opacities individually. This change ensures Mapnik's marker properties and svg rendering matches the svg as close as possible.
+   * A new `fill-opacity` setting is available and now `opacity` reverse to a new overall opacity that will be multiplied against the `fill-opacity` or `stroke-opacity` - this is to match how svg behaves.
 
 ## Added
  * `MarkersSymbolizer`
