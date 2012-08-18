@@ -13,6 +13,9 @@ ShieldSymbolizer supports all options of [[TextSymbolizer]] and the following ad
 |shield-dy|offset the shield image _and text_ vertically | 0 |
 |transform|[[Transform]] image| |
 
+### dx, dy
+dx, dy (from TextSymbolizer) only move the text, but not the Shield. This behavior will be changed in a future release of mapnik. (See below).
+
 ### placement
 `placement="line"` actually means points along a line for ShieldSymbolizer.
 
