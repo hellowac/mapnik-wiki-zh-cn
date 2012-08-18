@@ -17,7 +17,7 @@ its attribute named `callable` will be used as a factory callable. If `module`
 is omitted, then `__main__` is used. Any other parameter aside from `factory` or
 `type` will be passed directly to the callable as keyword arguments. Note that
 these will always be passed as strings even if the parameter can be parsed as an
-integer of floating point value.
+integer or floating point value.
 
 The callable should return an object with the following required attributes:
 
