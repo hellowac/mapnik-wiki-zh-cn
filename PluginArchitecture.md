@@ -21,6 +21,7 @@ All current plugins are located in https://github.com/mapnik/mapnik/tree/master/
 | *[kismet](Kismet)*| SVN| Alpha| no|  support for [Kismet](http://www.kismetwireless.net/) GPS; shows little WLAN nodes on the map| 
 | *[rasterlite](Rasterlite)*| SVN| Experimental| no|  support for [Rasterlite](http://www.gaia-gis.it/spatialite) sqlite raster with wavelet compression| 
 | *[geos](GEOS)*| SVN| Experimental| no|  support for inline WKT geometries using [GEOS](http://trac.osgeo.org/geos/) library| 
+| *[python](PythonPlugin)* | git| Experimental| yes| support for generating features dynamically using the Python programming language.|
 
 *Note*: When compiling Mapnik from source only the PostGIS, Raster, and Shape plugins will be compiled by default.
 
