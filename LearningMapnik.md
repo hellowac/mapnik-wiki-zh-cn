@@ -1,4 +1,3 @@
-
 Mapnik can be used in a variety of ways. The most widely used options are using XML config files, using the Python bindings or using the API directly in C++.
 
 ## General Concepts
@@ -10,12 +9,14 @@ Mapnik can be used in a variety of ways. The most widely used options are using 
 
 Mapnik is written in C++, but many users use its bindings to higher-level languages, including Python or Javascript. If you've got an application that wraps Mapnik entirely, you might only need to concern yourself with the XML stylesheets that describe Mapnik's map styles.
 
-To get first results, choose your weapon: XML, Python, C++, or node.js
+To get first results, choose your weapon: XML, Python, C++, node.js, Ruby, Java (last two are less complete)
 
 * [[Getting started using XML|GettingStartedInXML]]
 * [[Getting started using Python|GettingStartedInPython]]
 * [[Getting started using C++|GettingStartedInC]]
 * [node.js bindings](http://github.com/mapnik/node-mapnik)
+* [Ruby bindings](https://github.com/mapnik/Ruby-Mapnik)
+* [Java bindings](https://github.com/SpatialInteractive/mapnik-jni)
 
 ### Further Resources:
 
