@@ -5,7 +5,7 @@
 
 This plugin supports reading georaster files embedded into sqlite databases using [RasterLite](http://www.gaia-gis.it/spatialite/index.html) of the excellent Spatialite project.
 
-The use of rasterlite allows to use jpeg / wavelets compressed rasters in sqlite files (even 4GB databases !) quite fast than plain geotiff, thanx to the use of the R-Tree and Pyramid features in sqlite.
+The use of rasterlite allows to use jpeg / wavelets compressed rasters in sqlite files (even 4GB databases !) quite fast than plain geotiff, thanks to the use of the R-Tree and Pyramid features in sqlite.
 
  * Note: You must use at least the development version [1.1b] (https://www.gaia-gis.it/fossil/librasterlite/index) to compile the input plugin.
 
