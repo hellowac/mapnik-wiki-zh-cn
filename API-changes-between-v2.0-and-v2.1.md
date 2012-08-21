@@ -26,6 +26,7 @@
    * `smooth` - bezier smooth value - 0-1, 0 (default) means no smoothing, 1 means fully smoothed, higher values create wild loopbacks
  * `LineSymbolizer`
    * `offset` - offset lines either in positive (right side) or negative (left side)
+   * `stroke` `miterlimit` added (https://developer.mozilla.org/en-US/docs/SVG/Attribute/stroke-miterlimit)
  * [`TextSymbolizer`](https://github.com/mapnik/mapnik/wiki/TextSymbolizer)
    * New placement alogrithm: `list`
    * Text formatting
