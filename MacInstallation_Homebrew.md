@@ -26,6 +26,12 @@ brew link boost
 brew install mapnik
 ```
 
+On 10.8 you will also need:
+
+```sh
+brew install libtool
+```
+
 ### To install Mapnik from source using homebrew for dependencies do:
 
 ```sh
@@ -40,6 +46,7 @@ brew install gdal --with-libtiff=/usr/local/lib
 brew link ossp-uuid
 brew install postgis
 brew install cairo
+brew install libtool
 git clone https://github.com/mapnik/mapnik.git
 cd mapnik
 ./configure CXX="clang++" JOBS=`sysctl -n hw.ncpu`
