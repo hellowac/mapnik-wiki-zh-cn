@@ -68,9 +68,11 @@ git push
 
 ### Tagging
 
+Note: we use [annotated tags](http://stackoverflow.com/questions/4971746/why-should-i-care-about-lightweight-vs-annotated-tags/4971817#4971817) below instead of lightweight tags
+
 ```sh
 MAPNIK_VERSION=`mapnik-config --version`
-git tag "v${MAPNIK_VERSION}" -m "tagging v${MAPNIK_VERSION}"
+git tag --annotate "v${MAPNIK_VERSION}" -m "tagging v${MAPNIK_VERSION}"
 git push --tags
 ```
 
