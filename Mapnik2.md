@@ -145,9 +145,9 @@ If you are compiling on Mac OS X see: http://trac.mapnik.org/wiki/MacInstallatio
 Otherwise on linux do:
 
 ```sh
-    wget http://voxel.dl.sourceforge.net/project/boost/boost/1.50.0/boost_1_50_0.tar.bz2
-    tar xjvf boost_1_50_0.tar.bz2
-    cd boost_1_50_0
+    wget http://voxel.dl.sourceforge.net/project/boost/boost/1.51.0/boost_1_51_0.tar.bz2
+    tar xjvf boost_1_51_0.tar.bz2
+    cd boost_1_51_0
     ./bootstrap.sh
     ./b2 \
       --with-thread \
