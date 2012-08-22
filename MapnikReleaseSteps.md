@@ -85,13 +85,16 @@ TARBALL_NAME="mapnik-v${MAPNIK_VERSION}"
 git clone git@github.com:mapnik/mapnik.git ${TARBALL_NAME}
 cd ${TARBALL_NAME}
 git checkout "tags/v${MAPNIK_VERSION}"
+git rev-list --max-count=1 HEAD > GIT_REVISION
 cd ../
 rm -rf ${TARBALL_NAME}/.git
 rm -rf ${TARBALL_NAME}/.gitignore
 tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
 ```
 
-Note: if creating a release candidate do instead:
+Note: the GIT_REVISION file is used as per https://github.com/mapnik/mapnik/issues/1170. We write a file before making the tarball so that systems that do not have git installed or that download the raw tarball can still know the git revision and mapnik-config will report after source build.
+
+If creating a release candidate do instead:
 
 ```sh
 cd /tmp
