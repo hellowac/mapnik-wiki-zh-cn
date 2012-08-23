@@ -42,12 +42,11 @@
 
   * Update version number in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
   * Set `MAPNIK_VERSION_IS_RELEASE` to 1 in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
-  * Update `abi_fallback` in [SConstruct](https://github.com/mapnik/mapnik/blob/master/SConstruct)
+  * Update `abi_fallback` to right version and stripping any `-pre` in [SConstruct](https://github.com/mapnik/mapnik/blob/master/SConstruct)
   * then:
 
 ```
-./configure
-make install
+make uninstall && ./configure && make install
 MAPNIK_VERSION=`mapnik-config --version`
 git commit -a -m "setting up for mapnik v${MAPNIK_VERSION} release" 
 git push
@@ -62,7 +61,7 @@ git rev-parse --verify HEAD
   * Then, push change:
 
 ```
-git ci -a -m "update CHANGELOG"
+git ci -a -m "update CHANGELOG for mapnik v${MAPNIK_VERSION} release"
 git push
 ```
 
@@ -85,7 +84,8 @@ TARBALL_NAME="mapnik-v${MAPNIK_VERSION}"
 git clone git@github.com:mapnik/mapnik.git ${TARBALL_NAME}
 cd ${TARBALL_NAME}
 git checkout "tags/v${MAPNIK_VERSION}"
-git rev-list --max-count=1 HEAD > GIT_REVISION
+# get one commit back to match the changelog
+git rev-list --max-count=2 HEAD | tail -n+2 > GIT_REVISION
 cd ../
 rm -rf ${TARBALL_NAME}/.git
 rm -rf ${TARBALL_NAME}/.gitignore
@@ -97,6 +97,7 @@ Note: the GIT_REVISION file is used as per https://github.com/mapnik/mapnik/issu
 If creating a release candidate do instead:
 
 ```sh
+export MAPNIK_SOURCES=`pwd`
 cd /tmp
 MAPNIK_VERSION="2.1.0rc0"
 TARBALL_NAME="mapnik-v${MAPNIK_VERSION}"
@@ -108,20 +109,32 @@ tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
 
 Then upload that tarball to the [downloads page](https://github.com/mapnik/mapnik/downloads).
 
-* Generate Python API docs:
+* Go back to the mapnik source checkout and generate Python API docs:
 
 ```sh
+cd ${MAPNIK_SOURCES}
 sudo pip install epydoc
 cd utils/epydoc_config
 ./build_epydoc.sh
 PYDOCS_DEST="../../../mapnik.github.com/docs/v`mapnik-config --version`/api/python/"
 mkdir -p $PYDOCS_DEST
-cp -r ./mapnik-python-`mapnik-config --version`/ $PYDOCS_DEST/
+cp -r ./mapnik-python-`mapnik-config --version`/* $PYDOCS_DEST/
+cd ${MAPNIK_SOURCES}
 ```
 
 ### Post tag updates
 
-* Update master branches entries in [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) from the new release (if relevant).
+* Update master branches entries in [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) from the new release (if relevant, e.g. if you are tagging and releasing a stable release not from the master branch).
+
+If this was a major release and a stable series is likely, now branch it, for example a `2.1.0` release would warrant an immediate `2.1.x` branch for a stable series of bugfix releases.
+
+```
+cd ${MAPNIK_SOURCES}
+git branch 2.1.x
+git checkout 2.1.x
+git push origin 2.1.x
+git checkout master
+```
 
 Now bump versions again:
 
@@ -129,18 +142,19 @@ Now bump versions again:
    * update the `abi_fallback` in SConstruct
 
 ```
-./configure
-make install
+make uninstall && ./configure && make install
 MAPNIK_VERSION=`mapnik-config --version`
 git ci include/mapnik/version.hpp SConstruct -m "now working on mapnik v${MAPNIK_VERSION}"
 git push
 ```
 
+_Now also repeat the above for any stable branches created._
+
 ### Update Mapnik.org
 
-* push python api docs and update docs/index.markdown
-* update the [download page](http://mapnik.org/download/)
-* new blog post with updated release links
+* Update the [download page](http://mapnik.org/download/)(download/index.markdown)
+* Write new blog post with updated release links and links to changelog
+* Push python api docs and update docs/index.markdown
     
 ### Packaging
     
