@@ -80,5 +80,12 @@
 
  * `RasterSymbolizer`
    *  `mode` is deprecated, now use `comp-op` which supports [many more compositing modes](https://github.com/mapnik/mapnik/blob/master/include/mapnik/image_compositing.hpp#L42-79)
+   * The new mapping from `mode` to `comp-op` is:
+     * `normal` -> `src_over`
+     * `grain_merge` and `grain_merge2` -> `grain-merge`
+     * `multiply` -> `multiply`
+     * `screen` -> `screen`
+     * `hard_light` -> `hard-light`
+     * `divide` and `divide` -> Not supported anymore, see: https://github.com/mapnik/mapnik/issues/1432
    *  `scaling=fast` is deprecated. It has always been a synonym for `near`, use `near` going forward
    *  `scaling` is now exposed in python as enumerations of `mapnik.scaling_method` not as bare strings
