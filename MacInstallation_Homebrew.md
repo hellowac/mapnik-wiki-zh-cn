@@ -45,7 +45,7 @@ brew install libtiff
 brew install gdal --with-libtiff=/usr/local/lib
 brew link ossp-uuid
 brew install postgis
-brew install cairo
+brew install cairo --without-x
 brew install libtool
 git clone https://github.com/mapnik/mapnik.git
 cd mapnik
