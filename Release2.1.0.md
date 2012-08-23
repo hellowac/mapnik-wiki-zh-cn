@@ -1,6 +1,6 @@
 Released Aug 23, 2012
 
-(Packaged from a25aac8)
+(Packaged from [a25aac8](https://github.com/mapnik/mapnik/commit/a25aac8))
 
 - Feature-level compositing (comp-op) for all symbolizers (except building) in AGG and Cairo renderers ([#1409](http://github.com/mapnik/mapnik/issues/1409))
 
