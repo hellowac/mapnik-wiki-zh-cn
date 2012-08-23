@@ -150,6 +150,8 @@ git push
 
 _Now also repeat the above for any stable branches created._
 
+Finally, create new github milestones for the newly created future release #s.
+
 ### Update Mapnik.org
 
 * Update the [download page](http://mapnik.org/download/)(download/index.markdown)
