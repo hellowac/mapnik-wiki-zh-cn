@@ -10,13 +10,11 @@ See [[UsingScons]] for an introduction to SCons (Mapnik's python build system)
 
 ## Platform-specific installation notes
 
-- [[LinuxInstallation]] -- Notes on a variety of Linux Distributions
-- [[FreeBSDInstallation]]
-- [[WindowsInstallation]]
-- [[BuildingOnWindows]]
-- [[MacInstallation]]
-- [Mac Binary Installers](http://dbsgeo.com/downloads)
-- [[OpenSolarisInstallation]]
+- [Linux](LinuxInstallation) -- Notes on a variety of Linux Distributions
+- [FreeBSD](FreeBSDInstallation)
+- [Windows](WindowsInstallation)
+- [Mac OS X](MacInstallation)
+- [Solaris](OpenSolarisInstallation)
 
 ## Troubleshooting & Gotchas
 
