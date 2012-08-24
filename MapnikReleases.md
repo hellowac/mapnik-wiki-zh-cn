@@ -8,7 +8,7 @@ Changelog: [[Release2.1.0]]
 
 * This release includes significant refactoring in Mapnik core, with many new features like image compositing, geometry i/o formats, image-filters, and geometry clipping and smoothing. It has vastly improved map loading speeds and better rendering performance all around.
 * This release attempts to maintain backward compatibility in the XML styling interface and will issue new deprecation warnings for changes. See [[API-changes-between-v2.0-and-v2.1]] for details.
-* New datasource plugins include: [GeoJSON](https://github.com/mapnik/mapnik/wiki/GeoJSON-Plugin), [CSV](https://github.com/mapnik/mapnik/wiki/Python-Plugin), and [Python](https://github.com/mapnik/mapnik/wiki/Python-Plugin).
+* New datasource plugins include: [GeoJSON](https://github.com/mapnik/mapnik/wiki/GeoJSON-Plugin), [CSV](https://github.com/mapnik/mapnik/wiki/CSV-Plugin), and [Python](https://github.com/mapnik/mapnik/wiki/Python-Plugin).
 * This release does not maintain full backwards compatibility in the python datasource API - notably the mapnik.Feature interface has changed slightly and now requires a mapnik.Context to be passed to the constructor.
 * This release includes major refactoring of the TextSymbolizer, but should still be backwards compatible from XML and python.
 
