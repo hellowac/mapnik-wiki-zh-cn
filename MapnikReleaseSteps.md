@@ -172,12 +172,8 @@ Finally, create new github milestones for the newly created future release #s.
     
 ### Announce
     
+* Mapnik users list
+* Mapnik news twitter account: http://twitter.com/mapnikproject
+* OpenStreetMap : [OSM-Dev]
 * Notify Packagers for Linux distros ([PackageBuilding](PackageBuilding))
 * Notify Packagers for OSGEO4w: http://norbit.de/
-* Mapnik lists
-* Mapnik.org news
-* OSGEO News item: http://www.osgeo.org/content/news/submit_news.html
-* Freshmeat : http://freshmeat.net/projects/mapnik
-* FreeGIS : http://www.freegis.org
-* SlashGeo : http://slashgeo.org/
-* OpenStreetMap : [OSM-Dev] [OSM-Talk] ??
