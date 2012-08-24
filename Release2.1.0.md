@@ -2,9 +2,9 @@ Released Aug 23, 2012
 
 (Packaged from [a25aac8](https://github.com/mapnik/mapnik/commit/a25aac8))
 
-- Feature-level compositing (comp-op) for all symbolizers (except building) in AGG and Cairo renderers ([#1409](http://github.com/mapnik/mapnik/issues/1409))
+- Feature-level compositing (`comp-op`) for all symbolizers (except building) in AGG and Cairo renderers ([#1409](http://github.com/mapnik/mapnik/issues/1409))
 
-- Style-level compositing (comp-op) ([#1409](http://github.com/mapnik/mapnik/issues/1409)) and style-level opacity for AGG renderer ([#314](http://github.com/mapnik/mapnik/issues/314))
+- Style-level compositing (`comp-op`) ([#1409](http://github.com/mapnik/mapnik/issues/1409)) and style-level opacity for AGG renderer ([#314](http://github.com/mapnik/mapnik/issues/314))
 
 - New experimental framework for image manipulation called `image-filters` to allow things to be done across entire layer canvas like burring ([#1412](http://github.com/mapnik/mapnik/issues/1412))
 
@@ -22,9 +22,9 @@ Released Aug 23, 2012
 
 - New support for outputting WKT/WKB/GeoJSON/SVG from mapnik.Geometry objects ([#1411](http://github.com/mapnik/mapnik/issues/1411))
 
-- New experimental python datasource plugin ([#1337](http://github.com/mapnik/mapnik/issues/1337))
+- New experimental `python` datasource plugin ([#1337](http://github.com/mapnik/mapnik/issues/1337))
 
-- New experimental geojson datasource plugin using in-memory rtree indexing ([#1413](http://github.com/mapnik/mapnik/issues/1413))
+- New experimental `geojson` datasource plugin using in-memory rtree indexing ([#1413](http://github.com/mapnik/mapnik/issues/1413))
 
 - Cairo rendering is now much more similiar to AGG rendering as cairo backend now supports `scale_factor` ([#1280](http://github.com/mapnik/mapnik/issues/1280)) and other fixes have landed ([#1343](http://github.com/mapnik/mapnik/issues/1343), [#1233](http://github.com/mapnik/mapnik/issues/1233), [#1344](http://github.com/mapnik/mapnik/issues/), [#1242](http://github.com/mapnik/mapnik/issues/1242), [#687](http://github.com/mapnik/mapnik/issues/687), [#737](http://github.com/mapnik/mapnik/issues/737), [#1006](http://github.com/mapnik/mapnik/issues/1006), [#1071](http://github.com/mapnik/mapnik/issues/1071))
 
@@ -69,7 +69,7 @@ Released Aug 23, 2012
 
 - Added 'ignore-placement` attribute to markers-symbolizer ([#1135](http://github.com/mapnik/mapnik/issues/1135))
 
-- Removed PointDatasource - use more robust MemoryDatasource instead ([#1032](http://github.com/mapnik/mapnik/issues/1032))
+- Removed `PointDatasource` - use more robust MemoryDatasource instead ([#1032](http://github.com/mapnik/mapnik/issues/1032))
 
 - SQLite - Added support for !intersects! token in sql subselects ([#809](http://github.com/mapnik/mapnik/issues/809)) allow custom positioning of rtree spatial filter.
 
