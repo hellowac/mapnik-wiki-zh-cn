@@ -2,6 +2,8 @@ Released Aug 23, 2012
 
 (Packaged from [a25aac8](https://github.com/mapnik/mapnik/commit/a25aac8))
 
+See also: [API-changes-between-v2.0-and-v2.1](https://github.com/mapnik/mapnik/wiki/API-changes-between-v2.0-and-v2.1)
+
 - Feature-level compositing (`comp-op`) for all symbolizers (except building) in AGG and Cairo renderers ([#1409](http://github.com/mapnik/mapnik/issues/1409))
 
 - Style-level compositing (`comp-op`) ([#1409](http://github.com/mapnik/mapnik/issues/1409)) and style-level opacity for AGG renderer ([#314](http://github.com/mapnik/mapnik/issues/314))
