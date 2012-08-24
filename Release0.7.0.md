@@ -1,9 +1,3 @@
-<!-- Name: Release0.7.0 -->
-<!-- Version: 4 -->
-<!-- Last-Modified: 2010/02/03 09:36:14 -->
-<!-- Author: springmeyer -->
-# Mapnik 0.7.0 Release
-
 Announcement: http://mapnik.org/news/2010/jan/19/release_0_7_0/
 
 Overview of the 0.7.0 Milestone: milestone:0.7.0
