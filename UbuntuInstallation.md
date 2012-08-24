@@ -21,6 +21,18 @@ First, ensure `add-apt-repository` is installed:
 sudo apt-get install -y python-software-properties
 ```
 
+**Mapnik v2.1.0**
+
+This is the latest in the 2.1.x series.
+
+```sh
+sudo add-apt-repository ppa:mapnik/v2.1.0
+sudo apt-get update
+sudo apt-get install libmapnik mapnik-utils python-mapnik
+```
+
+These packages come from: https://launchpad.net/~mapnik/+archive/v2.0.2/+packages
+
 **Mapnik v2.0.2**
 
 This is the latest in the stable 2.0.x series.
@@ -33,7 +45,7 @@ sudo apt-get install libmapnik mapnik-utils python-mapnik
 
 These packages come from: https://launchpad.net/~mapnik/+archive/v2.0.2/+packages
 
-**For nightly builds from master (2.1.x)**
+**For nightly builds from master (2.2.x)**
 
 This is the bleeding edge - built nightly - directly from https://github.com/mapnik/mapnik/commits/master
 
