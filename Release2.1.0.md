@@ -42,12 +42,12 @@ Released Aug 23, 2012
 
 - Added support for setting opacity dynamically on images in polygon pattern and markers symbolizers
 
-- Added support for filtering on a features geometry type, either `point`, `linestring`, 'polygon`,
+- Added support for filtering on a features geometry type, either `point`, `linestring`, `polygon`,
   or `collection` using the expression keyword of `[mapnik::geometry_type]` ([#546](http://github.com/mapnik/mapnik/issues/546))
 
 - MarkersSymbolizer width and height moved to expressions ([#1102](http://github.com/mapnik/mapnik/issues/1102))
 
-- PostGIS: Added 'simplify_geometries' option - will trigger ST_Simplify on geometries before returning to Mapnik ([#1179](http://github.com/mapnik/mapnik/issues/1179))
+- PostGIS: Added `simplify_geometries` option - will trigger ST_Simplify on geometries before returning to Mapnik ([#1179](http://github.com/mapnik/mapnik/issues/1179))
 
 - Improved error feedback for invalid values passed to map.query_point
 
@@ -59,15 +59,15 @@ Released Aug 23, 2012
  
 - GDAL: respect nodata for paletted/colormapped images ([#1160](http://github.com/mapnik/mapnik/issues/1160))
 
-- PostGIS: Added a new option called 'autodetect_key_field' (by default false) that if true will
+- PostGIS: Added a new option called `autodetect_key_field` (by default false) that if true will
   trigger autodetection of a given tables' primary key allowing for feature.id() to represent
-  globally unique ids. This option has no effect if the user has not manually supplied the 'key_field' option. ([#804](http://github.com/mapnik/mapnik/issues/804))
+  globally unique ids. This option has no effect if the user has not manually supplied the `key_field` option. ([#804](http://github.com/mapnik/mapnik/issues/804))
 
 - Cairo: Add full rendering support for markers to match AGG renderer functionality ([#1071](http://github.com/mapnik/mapnik/issues/1071))
 
 - Fix Markers rendering so that ellipse height/width units are pixels (previously were unintentionally radii) ([#1134](http://github.com/mapnik/mapnik/issues/1134))
 
-- Added 'ignore-placement` attribute to markers-symbolizer ([#1135](http://github.com/mapnik/mapnik/issues/1135))
+- Added `ignore-placement` attribute to markers-symbolizer ([#1135](http://github.com/mapnik/mapnik/issues/1135))
 
 - Removed `PointDatasource` - use more robust MemoryDatasource instead ([#1032](http://github.com/mapnik/mapnik/issues/1032))
 
