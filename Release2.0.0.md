@@ -1,5 +1,3 @@
-# Mapnik 2.0.0 release
-
 Announcement: [Release 2.0](http://mapnik.org/news/2011/sep/26/release_2_0/) 
 
 ## Mapnik 2.0.0 Changelog
