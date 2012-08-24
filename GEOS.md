@@ -1,10 +1,3 @@
-<!-- Name: GEOS -->
-<!-- Version: 6 -->
-<!-- Last-Modified: 2011/08/10 13:41:42 -->
-<!-- Author: springmeyer -->
-
-# WARNING: experimental !</h1>
-
 Mapnik's PluginArchitecture supports the use of different input formats.
 
 One such plugin supports writing inline [WKT](http://en.wikipedia.org/wiki/Well-known_text) geometries directly in XML files or python, thus allowing to design geometries directly into mapnik withouth the need to access separate files or database. This is extremely useful to build legends, or layer styles images to put in layers controls widgets, or eventually visualize fixed geometries in your maps.
