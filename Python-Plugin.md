@@ -1,5 +1,7 @@
 _Note: this plugin is experimental_
 
+_New in Mapnik 2.1_
+
 This plugin allows you to write data sources in the Python programming language.
 This is useful if you want to rapidly prototype a plugin, perform some custom
 manipulation on data or if you want to bind mapnik to a datasource which is most
