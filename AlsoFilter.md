@@ -30,7 +30,7 @@ For each Object read from the Datasource Mapnik checks if the current ScaleDenom
         
         <PointSymbolizer file="restaurant.png" />
       </Rule>
-      
+      <Rule>
       <Filter>[amenity] = 'pub'</Filter>
         
         <MaxScaleDenominator>25000</MaxScaleDenominator>
