@@ -11,7 +11,7 @@
 Directly bundled in distribution
 
 ```sh
-    # apt-get install libmapnik2-2.0 mapnik-utils libmapnik2-2.0
+apt-get install libmapnik2-2.0 mapnik-utils
 ```
 
 **Squeeze**:
