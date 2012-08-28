@@ -35,6 +35,7 @@
 |placement-type||Placement finder algorithm. Currently supported: "dummy" (do nothing) and "simple" (automatically create new positions using a simple configuration; see below)|string|"dummy"|2.0/2.1
 |placements||List of possible placements. Only valid if placement-type="simple" is used.|string|"X"|2.0
 |upright|left,right,auto|Select which way direction is used to place characters upright.|-|auto|harfbuzz
+|clip|true, false|If true then the geometry is clipped to the view before doing placements. Improves performance but can cause bad placements when the results are used for tiling|bool|true|2.0.0|
 
 ## Examples
 
