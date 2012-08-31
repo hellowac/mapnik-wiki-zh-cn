@@ -121,7 +121,7 @@ apt-cache policy libboost-dev
 ```sh
 git clone http://github.com/mapnik/mapnik
 cd mapnik
-./configure CXX=clang++ && make && sudo make install
+./configure && make && sudo make install
 ```
 
 To test mapnik:
