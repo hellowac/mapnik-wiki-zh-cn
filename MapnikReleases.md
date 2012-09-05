@@ -3,6 +3,7 @@
 Past, current, and future releases.
 
 ## 2.1.0
+_2012-08-23_
 
 Changelog: [[Release2.1.0]]
 
@@ -13,18 +14,21 @@ Changelog: [[Release2.1.0]]
 * This release includes major refactoring of the TextSymbolizer, but should still be backwards compatible from XML and python.
 
 ## 2.0.2
+_2012-08-03_
 
 Changelog: [[Release2.0.2]]
 
 Small bugfix release. Significance is a several memory leaks and crash possibilities were fixed as well as change to marker width/height was reverted that was originally backported to 2.0.1 and should not have been since it changes the rendered size of marker ellipses.
 
 ## 2.0.1
+_2012-04-09_
 
 Changelog: [[Release2.0.1]]
 
 Small bugfix release. Significance is full compatibility with PostGIS 2.0 and it rolls back library naming from `libmapnik2` to `libmapnik` and in python now again supports `import mapnik`, while still supporting `import mapnik2` in a deprecated mode.
 
 ## 2.0.0
+_2011-09-26_
 
 Changelog: [[Release2.0.0]]
 
@@ -32,6 +36,7 @@ Changelog: [[Release2.0.0]]
 * This release is a major new version and brings several deprecation warnings and backward incompatible changes. See [[Mapnik2_Changes]] for more details. 
 
 ## 0.7.2
+_2011-10-18_
 
 Changelog: [[Release0.7.2]]
 
@@ -39,6 +44,7 @@ Changelog: [[Release0.7.2]]
 * No backwards incompatible changes, except that it will default to using Mapnik 2 XML syntax for `mapnik.save_map()` format.
 
 ## 0.7.1
+_2010-11-15_
 
 Changelog: [[Release0.7.1]]
 
@@ -47,6 +53,7 @@ Changelog: [[Release0.7.1]]
 * Better quantized PNG output
 
 ## 0.7.0
+_2010-02-03_
 
 Changelog: [[Release0.7.0]]
 
@@ -55,11 +62,47 @@ Changelog: [[Release0.7.0]]
 * Text vertical_alignment now dependent on dy (#485, r1527).
 
 ## 0.6.1
+_2009-07-14_
 
 Changelog: [[Release0.6.1]]
  
  * No known backward incompatible changes
 
 ## 0.6.0
+_2009-04-01_
 
 Changelog:[[Release0.6.0]]
+
+## 0.5.1
+_2008-04-05_
+
+## 0.5.0 
+_2008-02-07_
+
+## 0.4.0
+_2007-02-26_
+
+## 0.3.0
+_2006-05-22_
+
+## 0.2.5
+_2006-02-13_
+
+## 0.2.4
+_2006-01-02_
+
+## 0.2.3 
+_2005-12-03_
+
+## 0.2.2
+_2005-09-08_
+
+## 0.2.1
+_2005-09-01_
+
+## 0.2.0
+_2005-06-17_
+
+## 0.1.0
+_2005-03-06_
+
