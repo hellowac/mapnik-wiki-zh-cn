@@ -16,7 +16,7 @@
 |spacing||Space between repeated labels. If spacing is 0 only one label is placed.|px|0|
 |label-position-tolerance||Allow labels to be moved from their point in line placement. Lower values indicate that Mapnik tries less positions and generally leads to fewer labels. Higher values lead to Mapnik trying more different positions along a line to find a free spot. If unset or 0, Mapnik sets this value based on the total length of the line to ensure enough labels are placed.|||
 |force-odd-labels||Force an odd amount of labels to be generated.|bool|false|
-|max_char_angle_delta||Maximum angle (in degrees) between two consecutive characters in a label allowed. The lower the number the fewer labels placed - this is to stop placing labels around sharp corners. See r365 for more info|||
+|max-char-angle-delta||Maximum angle (in degrees) between two consecutive characters in a label allowed. The lower the number the fewer labels placed - this is to stop placing labels around sharp corners. See r365 for more info|||
 |fill||Color of the text fill, e.g. #FFFFFF|||
 |halo-fill||Color of the text halo|||
 |halo-radius||Radius of the halo in whole pixels (fractional pixels are not accepted)|px||
