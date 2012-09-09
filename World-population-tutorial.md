@@ -12,7 +12,7 @@ This script should result in a graphic similar to:
 
 ## Step 1: data
 
-For this tutorial we'll use the same world borders shapefile from natural earth used for the first two tutorials. Refer to either [Tutorial 1](GettingStartedInPython) or [Tutorial 2](XMLGettingStarted) for details.
+For this tutorial we'll use the same world borders shapefile from natural earth used for the first two tutorials. Refer to either [Tutorial 1](GettingStartedInPython) or [Tutorial 2](GettingStartedInXML) for details.
 
 ## Step 2: Script
 
