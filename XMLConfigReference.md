@@ -18,14 +18,14 @@ The Map object defines the master object of a mapnik configuration XML. It defin
  * Element type: Root element
 
  * Attributes:
-  * *bgcolor*: HTML color code for the background-color of the map (for instance #000000)
-    * renamed to 'background-color' in Mapnik2.
+  * *background-color*: HTML color code for the background-color of the map (for instance #000000)
+    * 'bg-color' before Mapnik2.
   * *background-image*: Available in Mapnik2: use an image for the background instead of a color fill.
   * *font-directory*: Available in Mapnik2: pass a directory that contains fonts, which will automatically be registered if they end in ttf, otf, ttc, pfa, pfb, ttc, or dfont.
   * *srs*: Coordinate system in which the map is rendered (for instance '+proj=latlong+datum=WGS84' for a WGS84 Geographic coordinate system)
   * *buffer-size*: Default 0; Good value is usually tile size/2 to help avoid cut labels. This influences envelope used by placement detector ( i.e. 'avoid_edges' parameter)
   * *paths-from-xml*: Check if relative paths should be interpreted as relative to/from XML location (default is true)
-  * *minimum-version*: Declare the minimum version of mapnik to be used with the stylesheet. Example: minimum-version="0.6.1". Will print a notice if you use an older mapnik version. (Since r1453)
+  * *minimum-version*: Declare the minimum version of mapnik to be used with the stylesheet. Example: minimum-version="0.6.1". Will print a notice if you use an older mapnik version. 
 
  * Children:
   * *[#Style Style]*
@@ -125,6 +125,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
   * *[[BuildingSymbolizer]]*
   * *[[RasterSymbolizer]]*
   * *[[MarkersSymbolizer]]*
+  * *[[DebugSymbolizer]]*
 
 Also see [[SymbologySupport]] for more info on Symbolizers
 
