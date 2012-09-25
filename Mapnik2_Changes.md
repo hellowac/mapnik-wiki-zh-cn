@@ -86,6 +86,8 @@ is now:
 | mapnik:: |                 mapnik::ImageData32  |                   mapnik::image_data_32 |
 | mapnik:: |                 mapnik::Image32  |                   mapnik::image_32 |
 | mapnik:: |                 mapnik::Image8  |                   mapnik::image_8 |
+| mapnik:: |                 mapnik::rule_type  |                   mapnik::rule |
+| mapnik:: |                 mapnik::create_filter  |                   mapnik::parse_expression |
 
 
 # Planned/Proposed Before Release
