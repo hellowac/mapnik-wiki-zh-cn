@@ -62,20 +62,22 @@ Using the new 0.6.0 release opacity / merging / scaling options:
 
     <Style name="raster">
         <Rule>
-            <RasterSymbolizer>
-                <CssParameter name="opacity">0.5</CssParameter>
-                <!--<CssParameter name="scaling">fast</CssParameter>-->
-                <CssParameter name="scaling">bilinear</CssParameter>
-                <!--<CssParameter name="scaling">bilinear8</CssParameter>-->
+            <RasterSymbolizer
+                opacity="0.5"
+                <!-- scaling="fast" -->
+                scaling="bilinear"
+                <!-- scaling="bilinear8" -->
 
-                <!--<CssParameter name="mode">grain_merge</CssParameter>-->
-                <!--<CssParameter name="mode">grain_merge2</CssParameter>-->
-                <!--<CssParameter name="mode">multiply</CssParameter>-->
-                <CssParameter name="mode">multiply2</CssParameter>
-                <!--<CssParameter name="mode">divide</CssParameter>-->
-                <!--<CssParameter name="mode">divide2</CssParameter>-->
-                <!--<CssParameter name="mode">screen</CssParameter>-->
-                <!--<CssParameter name="mode">hard_light</CssParameter>-->
+                <!-- mode="grain_merge" -->
+                <!-- mode="grain_merge2" -->
+                <!-- mode="multiply" -->
+                mode="multiply2"
+                <!-- mode="divide" -->
+                <!-- mode="divide2" -->
+                <!-- mode="screen" -->
+                <!-- mode="hard_light" -->
+            >
+                <!-- optional <RasterColorizer/> goes here -->
             </RasterSymbolizer>
         </Rule>
     </Style>
