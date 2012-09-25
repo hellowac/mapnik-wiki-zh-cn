@@ -1,7 +1,3 @@
-<!-- Name: RasterSymbolizer -->
-<!-- Version: 19 -->
-<!-- Last-Modified: 2010/03/12 07:06:11 -->
-<!-- Author: albertov -->
 # RasterSymbolizer
 
 The RasterSymbolizer is used to render an image from any [GDAL supported format](http://www.gdal.org/formats_list.html) using the [[GDAL]] plugin or from GeoTiff's using the [[Raster]] plugin.
@@ -29,7 +25,7 @@ Processed as described in http://wiki.openstreetmap.org/wiki/Hillshading_using_t
 | *parameter* | *value* | *description* |
 |--------------|---------|-----------|
 | opacity         |  0.0 - 1.0   | 1 is fully opaque while zero is fully transparent and .5 would be 50% transparent |
-| mode            | grain_merge, grain_merge2, multiply, multiply2, divide, divide2, screen, hard_light | Compositing/Merging effects with image below raster level (?). The formulas for combinding foreground (raster) and background are: grain_merge: bg + fg - 0.5, grain_merge2: bg + 2*fg - 1.0, multiply: fg * bg, multiply2: 2 * fg * bg, divide: bg / fg, divide2: 2*bg / fg, screen: (1-fg)*(1-bg), hardlight: see [[http://docs.gimp.org/en/gimp-concepts-layer-modes.html#id2834930]] |
+| comp-op (previously called `mode` in <= Mapnik 2.0.x) | grain_merge, grain_merge2, multiply, multiply2, divide, divide2, screen, hard_light | Compositing/Merging effects with image below raster level (?). The formulas for combinding foreground (raster) and background are: grain_merge: bg + fg - 0.5, grain_merge2: bg + 2*fg - 1.0, multiply: fg * bg, multiply2: 2 * fg * bg, divide: bg / fg, divide2: 2*bg / fg, screen: (1-fg)*(1-bg), hardlight: see [[http://docs.gimp.org/en/gimp-concepts-layer-modes.html#id2834930]] |
 | scaling         | fast, bilinear, bilinear8 || fast: nearest neighbour, bilinear: bilinear interpolation for all 4 channels (RGBA), bilinear8 like bilinear, but only one channel assumed |
 
 
