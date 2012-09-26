@@ -152,6 +152,8 @@ _Now also repeat the above for any stable branches created._
 
 Finally, create new github milestones for the newly created future release #s.
 
+And create new launchpad PPA for the target release(s) and series at https://launchpad.net/~mapnik, then add these release PPA's to the list that gets build nightly: https://github.com/mapnik/mapnik-packaging/blob/master/debian-nightlies/nightly-build.sh#L22-40
+
 ### Update Mapnik.org
 
 * Update the [download page](http://mapnik.org/download/)(download/index.markdown)
