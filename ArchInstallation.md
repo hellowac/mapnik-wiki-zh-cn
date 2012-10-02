@@ -5,6 +5,7 @@
 # Installing Mapnik on Arch Linux
 
 Mapnik is available as a community package. To install it, just run:
+
     # pacman -Sy mapnik
 
 ## Mapnik 2 from Git
