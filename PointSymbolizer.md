@@ -13,9 +13,9 @@ Some options described here are not available in mapnik versions < 2.0.
 | *parameter* | *value*  | *default* |
 --------------|---------|-----------|
 | file    |  path to image file | none |
-| width | px | 4 |
-| height | px | 4 |
-| type | png tiff svg | none |
+| width **(removed)** | px | 4 |
+| height **(removed)** | px | 4 |
+| type **(removed)** | png tiff svg | none |
 | allow-overlap | allow text to overlap the point image; true/false | false |
 | opacity | Opacity of the symbolizer: 0.0 - 1.0 | 1.0 | 
 |   transform    |   [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) | identity |
