@@ -4,9 +4,9 @@
 |---|---|---|
 | file | path to image file | none |
 | base | base path where to search for file | none |
-| width | px | 4 |
-| height | px | 4 |
-| type | png tiff | none |
+| width **(removed)**| px | 4 |
+| height **(removed)**| px | 4 |
+| type **(removed)**| png tiff | none |
 
 *Note* that the line direction matters!
 
