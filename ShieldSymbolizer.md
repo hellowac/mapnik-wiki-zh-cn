@@ -17,7 +17,8 @@ ShieldSymbolizer supports all options of [[TextSymbolizer]] and the following ad
 dx, dy (from TextSymbolizer) only move the text, but not the Shield. This behavior will be changed in a future release of mapnik. (See below).
 
 ### placement
-`placement="line"` actually means points along a line for ShieldSymbolizer.
+
+`placement="line"` only means placement along a line for ShieldSymbolizer, whereas for TextSymbolizer it rotates the text too. Add the `spacing` parameter to get the ShieldSymbolizer to repeat along the line, otherwise `placement="line"` and `placement="point"` will look the same.
 
 ### base
 Add 
