@@ -3,7 +3,7 @@
 |allow-overlap | Allow the symbolizer to overlap others. | false | yes |
 |spacing | Distance between markers in pixels. | 100 | yes |
 |max-error | Maximum amount the marker can be move from its designated place to avoid collisions. This value is a fraction of "spacing", e.g. spacing = 100, max_error = 0.2 then the maximum the marker can be moved is 20pixels, if this is not enough it isn't drawn at all. | 0.2 |yes |
-|filename | The SVG file to use for the marker | built-in marker | yes |
+|file | The SVG file to use for the marker | built-in marker | yes |
 |transform | [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) | identity | yes |
 |opacity | Opacity | 1.0 | yes |
 |fill | Color of the marker fill, e.g. #FFFFFF. This property is only used when the marker is NOT an SVG graphic. | blue | no |
