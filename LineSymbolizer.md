@@ -7,8 +7,8 @@ A LineSymbolizer is used to render a "stroke" along a linear geometry.
 | stroke            |  CSS colour  | A Color value such as 'green' or #A3D979 | - |  "black" |
 | stroke-width | 0.0 - n | Width of line | pixels |  1.0 |
 | stroke-opacity | 0.0 - 1.0 | 1 is fully opaque while zero is fully transparent and .5 would be 50% transparent| transparency |  1.0  |
-| stroke-linejoin  | miter, round, bevel | See http://www.w3.org/TR/SVG/painting.html#propdef-stroke-linejoin for an example for each value | - |  miter |
-| stroke-linecap   | round, butt, square | See http://www.w3.org/TR/SVG/painting.html#propdef-stroke-linecap for an example for each value | - |  butt  |
+| stroke-linejoin  | miter, round, bevel | See [SVG stroke-linejoin](http://www.w3.org/TR/SVG/painting.html#StrokeLinejoinProperty) for an example for each value | - |  miter |
+| stroke-linecap   | round, butt, square | See [SVG stroke-linecap](http://www.w3.org/TR/SVG/painting.html#StrokeLinecapProperty) for an example for each value | - |  butt  |
 | stroke-dasharray | 0.0 - n,0.0 - n | A pair of length values [a,b], where (a) is the dash length and (b) is the gap length respectively. More than two values are supported as well (e.g. to start the line not with a stroke, but with a gap). | pixels | none |
 
 ## Examples
