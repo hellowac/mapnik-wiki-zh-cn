@@ -31,7 +31,7 @@ sudo apt-get update
 sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
 
-These packages come from: https://launchpad.net/~mapnik/+archive/v2.0.2/+packages
+These packages come from: https://launchpad.net/~mapnik/+archive/v2.1.0/+packages
 
 **Mapnik v2.0.2**
 
