@@ -7,7 +7,9 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-For older versions see the archived notes at [[UbuntuInstallationOld]]
+For older versions, see the archived notes at [[UbuntuInstallationOld]]
+
+If you are intending to install [Tilemill](http://mapbox.com/tilemill/) as well as Mapnik, do not follow the directions below in order to avoid package conflicts. Instead, directly proceed to [install Tilemill](http://mapbox.com/tilemill/docs/linux-install/). Mapnik will automatically be installed with your Tilemill installation. 
 
 ----
 
