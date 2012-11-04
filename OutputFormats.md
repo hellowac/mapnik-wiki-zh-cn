@@ -34,6 +34,8 @@ The options include:
 
  * s=default|filtered|huff|rle - compression stragies for zlib - see zlib docs for more details (available first in Mapnik 2.0.0)
 
+ * e=miniz - enable using experimental [miniz encoder](https://github.com/mapnik/mapnik/issues/1554) (replaces libpng). In some cases this encoder provides better encoding speeds with minor size differences.
+
 So to use new format i.e. in python:
   view.save("test.png",'png256:m=h')
 or other example in c++:
