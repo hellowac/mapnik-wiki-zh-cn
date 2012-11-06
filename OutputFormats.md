@@ -24,7 +24,7 @@ The options include:
 
  * c=256 - limit number of colors (default 256), works with octree and hextree
 
- * t=2 - select transparency mode: 0-no alfa, 1-binary alfa(0 or 255), 2-full alfa range, default is 2, works with octree and hextree
+ * t=2 - select transparency mode: 0-no alfa, 1-binary alfa(0 or 255), 2-full alfa range, default is 2, works with octree and hextree (NOTE: in Mapnik >= 2.2 `png:t=0` can be used to write rgb images as per [#1559](https://github.com/mapnik/mapnik/issues/1559))
 
  * m=o - choose quantization method, available options: o-existing octree, h-new hextree with optimizations, default is octree
 
