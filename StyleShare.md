@@ -88,13 +88,13 @@ For now, list your styles here!
 
 *Minimum Mapnik Version*: 0.6.0
 
-## MapBox
+## MapBox OSM Bright
 
-*Description*: see http://tiles.mapbox.com/
+*Description*: see https://github.com/mapbox/osm-bright/blob/master/README.md
 
 *Type*: [[Carto]]
 
-*URI*: http://github.com/mapbox/
+*URI*: https://github.com/mapbox/osm-bright/
 
 *Minimum Mapnik Version*: 2.0.0
 
