@@ -9,6 +9,10 @@ For some examples of what you can do with this feature see:
 
 Compositing is supported both at the feature level and the style level.
 
+At the time of this writing over 30 different operations are supported. The full list can be see in the code [here](https://github.com/mapnik/mapnik/blob/master/include/mapnik/image_compositing.hpp#L42-79). What each operation does in terms of pixel math is beyond the scope of this documentation. But in general the majority of operations are directly from the SVG spec and will be similar to what you can do in software like Photoshop. The tail end of the [list](https://github.com/mapnik/mapnik/blob/master/include/mapnik/image_compositing.hpp#L42-79) includes some more custom operations like `grain-merge` and `grain-extract` most useful for hillshading and inspired by algorithms in the gimp.
+
+The implementations for the standard operations can be seen in this [agg header](https://github.com/mapnik/mapnik/blob/master/deps/agg/include/agg_pixfmt_rgba.h#L228-1552). More custom operations implemented recently by Mapnik developers are generally found in this [cpp file that extends agg](https://github.com/mapnik/mapnik/blob/master/deps/agg/src/agg_pixfmt_rgba.cpp).
+
 ## Feature level compositing
 
 Feature level compositing can be triggered by setting the `comp-op` property on a symbolizer like:
@@ -17,7 +21,19 @@ Feature level compositing can be triggered by setting the `comp-op` property on 
 <PolygonSymbolizer comp-op="multiply" />
 ```
 
-This means that for every geometry processed the `multiply` operation will be used to blend the rendered pixels of the polygon against the destination pixels (all data previously rendered on the canvas).
+You can also access this property in python:
+
+```python
+>>> import mapnik
+>>> sym = mapnik.PolygonSymbolizer()
+>>> sym.comp_op
+mapnik._mapnik.CompositeOp.src_over
+>>> sym.comp_op = mapnik.CompositeOp.multiply
+>>> sym.comp_op
+mapnik._mapnik.CompositeOp.multiply
+```
+
+Feature-level compositing, during rendering, means that for every geometry processed the `multiply` operation will be used to blend the rendered pixels of the polygon against the destination pixels (all data previously rendered on the canvas whether from previous layers or just another polygon from the same style).
 
 Each symbolizer defaults to `comp-op="src-over"` which means that normal blending of the source and destination pixels will occur. Explicitly setting `comp-op="src-over"` or leaving it off will result in the same exact behavior.
 
@@ -36,7 +52,19 @@ Style level compositing can be triggered by setting the `comp-op` property for a
 </Style>
 ```
 
-This means that an internal, blank (fully alpha) canvas will be created before rendering. The geometries will be rendered as normal (for all symbolizers), but against this temporary canvas instead of against the main canvas. When rendering is finished then this canvas will be blended back into the main canvas using the "multiply" operation.
+You can also access this property in python:
+
+```python
+>>> sty = mapnik.Style()
+>>> sty.comp_op is None # it is not set
+True
+>>> sty.comp_op = mapnik.CompositeOp.multiply
+>>> sty.comp_op
+mapnik._mapnik.CompositeOp.multiply
+>>> sty = mapnik.Style()
+```
+
+Enabling style-level compositing (setting the `comp-op` property) means that an internal, blank (fully alpha) canvas will be created before rendering. The geometries will be rendered as normal (for all symbolizers), but against this temporary canvas instead of against the main canvas. When rendering is finished then this canvas will be blended back into the main canvas using the "multiply" operation.
 
 The default (if no `comp-op` is set on a Style) is to skip the creation of a temporary canvas. So, while setting the `comp-op` on a style to `src-over` will invoke the default blending method, but it will also be triggering the rendering all the entire style to a separate canvas, which can lead to different output - perhaps desirable, perhaps not - just be aware of this.
 
