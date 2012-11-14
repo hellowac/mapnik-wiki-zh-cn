@@ -73,7 +73,7 @@ As of Mapnik 2.1 you can also set an `opacity` property at the style level. This
 
 ## Grouped compositing
 
-Several have ask: So I understand that using Style-level compositing I can control the blending behavior between a given style/layer and all the data rendered before it, but can I also group layers and the control the compositing behavior within a group and then also between different groups? The answer currently is NO, at least via the styling interface (XML) in Mapnik. There is no support for grouping layers yes in Mapnik. But, this could be accomplished with a bit of scripting because much of the compositing functionality of Mapnik is exposed in Python. So, say you have a stylesheet with 4 layers: `layer1, layer2, layer3, and layer4`. You want to composite `layer1` with `layer2` using some custom operation (lets say `multiply`), then composite `layer3` with `layer4` with another composite operation (lets say `overlay`) and the finally blend the first two layers with the second two using `soft-light`. You could break out the two groups of layers into two separate maps, render them each to `mapnik.Image` objects and the composite the result like:
+Several have ask: So I understand that using Style-level compositing I can control the blending behavior between a given style/layer and all the data rendered before it, but can I also group layers and the control the compositing behavior within a group and then also between different groups? The answer currently is NO, at least via the styling interface (XML) in Mapnik. There is no support for grouping layers yet in Mapnik. But, this could be accomplished with a bit of scripting because much of the compositing functionality of Mapnik is exposed in Python. So, say you have a stylesheet with 4 layers: `layer1, layer2, layer3, and layer4`. You want to composite `layer1` with `layer2` using some custom operation (lets say `multiply`), then composite `layer3` with `layer4` with another composite operation (lets say `overlay`) and the finally blend the first two layers with the second two using `soft-light`. You could break out the two groups of layers into two separate maps, render them each to `mapnik.Image` objects and the composite the result like:
 
 ```python
 import mapnik
@@ -89,7 +89,7 @@ im2 = mapnik.Image(256,256)
 mapnik.render(group2,im2)
 im.premultiply()
 im2.premultiply()
-im.composite(b,mapnik.CompositeOp.soft-light)
+im.composite(b,mapnik.CompositeOp.soft_light)
 im.demultiply()
 im.save('final_result.png')
 ```
