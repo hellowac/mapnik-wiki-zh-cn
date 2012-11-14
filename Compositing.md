@@ -7,7 +7,9 @@ For some examples of what you can do with this feature see:
  - http://mapbox.com/blog/announcing-tilemill-0.10.0/
  - http://mapbox.com/blog/tilemill-compositing-operations-preview/
 
-Compositing is supported both at the feature level and the style level.
+Compositing is supported both at the feature level and the style level when authoring stylesheets.
+
+You can also hook into the compositing operations outside of rendering, in pure python. See the [compositing tests](https://github.com/mapnik/mapnik/blob/master/tests/python_tests/compositing_test.py) from some api examples.
 
 At the time of this writing over 30 different operations are supported. The full list can be see in the code [here](https://github.com/mapnik/mapnik/blob/master/include/mapnik/image_compositing.hpp#L42-79). What each operation does in terms of pixel math is beyond the scope of this documentation. But in general the majority of operations are directly from the SVG spec and will be similar to what you can do in software like Photoshop. The tail end of the [list](https://github.com/mapnik/mapnik/blob/master/include/mapnik/image_compositing.hpp#L42-79) includes some more custom operations like `grain-merge` and `grain-extract` most useful for hillshading and inspired by algorithms in the gimp.
 
