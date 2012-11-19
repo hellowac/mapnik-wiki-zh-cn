@@ -10,7 +10,6 @@ A LineSymbolizer is used to render a "stroke" along a linear geometry.
 | stroke-linejoin  | miter, round, bevel | See [SVG stroke-linejoin](http://www.w3.org/TR/SVG/painting.html#StrokeLinejoinProperty) for an example for each value | - |  miter |
 | stroke-linecap   | round, butt, square | See [SVG stroke-linecap](http://www.w3.org/TR/SVG/painting.html#StrokeLinecapProperty) for an example for each value | - |  butt  |
 | stroke-dasharray | 0.0 - n,0.0 - n | A pair of length values [a,b], where (a) is the dash length and (b) is the gap length respectively. More than two values are supported as well (e.g. to start the line not with a stroke, but with a gap). | pixels | none |
-| offset | n | Line offset (can be a negative value) | pixels | none |
 
 ## Examples
 
@@ -20,11 +19,10 @@ A LineSymbolizer is used to render a "stroke" along a linear geometry.
 ```
 #### XML
 ```xml
-<LineSymbolizer
-    stroke="rgba(205,235,235,255)"
-    stroke-width="3"
-    stroke-linejoin="round"
-    stroke-linecap="round"/>
+<LineSymbolizer>
+    <CssParameter name="stroke">#0000ff</CssParameter>
+    <CssParameter name="stroke-width">4</CssParameter>
+</LineSymbolizer>
 ```
 #### Python
 
