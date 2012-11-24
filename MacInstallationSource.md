@@ -3,8 +3,8 @@
 <!-- Last-Modified: 2010/01/29 15:03:43 -->
 <!-- Author: springmeyer -->
 
-
-## WARNING - this page is out of date
+## WARNING - this page is out of date: Use Brew instead
+See [MacInstallation_Brew](https://github.com/mapnik/mapnik/wiki/MacInstallation_Homebrew) for instructions.
 
 # Installing Mapnik on Mac OS X (build dependencies from source)
 
