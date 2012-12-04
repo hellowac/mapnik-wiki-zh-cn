@@ -12,7 +12,7 @@
 | stroke-opacity | 0.0 - 1.0 - 1 is fully opaque while zero is fully transparent and .5 would be 50% transparent | 1.0  | no |
 | width | width of marker pixels | 10 | no |
 | height |  height of marker in pixels | 10 | no |
-| placement | "point" or "line"  | line | no (todo) |
+| placement | "point" or "line"  | line (mapnik <=2.0.x) point (mapnik >= 2.1)| no (todo) |
 | ignore-placement | "true" or "false"  | "false" | no (todo) |
 | marker-type | "arrow" "ellipse" | "arrow" if line placement, "ellipse" if point placement | no |
 
