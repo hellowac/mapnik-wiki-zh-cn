@@ -17,7 +17,7 @@ See also a performance tuning page: [[OptimizeRenderingWithPostGIS]]
 | geometry_field        | string       | name of the geometry field, in case you have more than one in a single table. This field and the SRID will be deduced from the query in most cases, but may need to be manually specified in some cases.| |
 | geometry_table        | string       | name of the geometry table ??? | |
 | srid                  | integer      | srid of the table, if this is > 0 then fetching data will avoid an extra database query for knowing the srid of the table | 0 |
-| extent                | string       | maxextent of the geometries | determined by querying the oracle metadata for the table |
+| extent                | string       | maxextent of the geometries | determined by querying the metadata for the table |
 | extent_from_subquery  | boolean      | evaluate the extent of the subquery, this might be a performance issue | false |
 | connect_timeout       | integer      | timeout is seconds for the connection to take place | 4 |
 | persist_connection    | boolean      | choose whether to share the same connection for subsequent queries | true |
