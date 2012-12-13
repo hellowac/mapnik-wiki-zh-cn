@@ -30,8 +30,8 @@ The Map object defines the master object of a mapnik configuration XML. It defin
  * Children:
   * *[#Style Style]*
   * *[#Layer Layer]*
-  * *FileSource*: See [#574](http://trac.mapnik.org/changeset/574)
-  * *Datasource*: See [#Datasource Datasource] and [#574](http://trac.mapnik.org/changeset/574)
+  * *FileSource*: See [37f49e2](https://github.com/mapnik/mapnik/commit/37f49e29cce2d334fe9839)
+  * *Datasource*: See [#Datasource Datasource] and [37f49e2](https://github.com/mapnik/mapnik/commit/37f49e29cce2d334fe9839)
   * *FontSet*: Defines a fontset for fallback fonts (if a character isn't found in the first font, proceed through the list until it is found)
   * *Include*: The container tag used to wrap all context in files included via XInclude
 
@@ -81,8 +81,8 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
  * Element type: References the map data source and parameters.
 
  * Attributes:
-  * *name*: Create a datasource template [#574](http://trac.mapnik.org/changeset/574)
-  * *base*: Inherit from a datasource template [#574](http://trac.mapnik.org/changeset/574)
+  * *name*: Create a datasource template ([37f49e2](https://github.com/mapnik/mapnik/commit/37f49e29cce2d334fe9839))
+  * *base*: Inherit from a datasource template ([37f49e2](https://github.com/mapnik/mapnik/commit/37f49e29cce2d334fe9839))
  * Generic Parameters:
   * type: Specifies the format of the data source
    * Possible values:
