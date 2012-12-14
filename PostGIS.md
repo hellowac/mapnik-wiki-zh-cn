@@ -27,7 +27,7 @@ See also a performance tuning page: [[OptimizeRenderingWithPostGIS]]
 | max_size              | integer      | max size of the stateless connection pool | 10 |
 | multiple_geometries   | boolean      | whether to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
 | encoding              | string       | internal file encoding | utf-8 |
-| simplify_geometries              | boolean      | whether to automatically [reduce input vertices](http://blog.cartodb.com/post/20163722809/speeding-up-tiles-rendering). Available from version 2.1.x up. | false |
+| simplify_geometries   | boolean      | whether to automatically [reduce input vertices](http://blog.cartodb.com/post/20163722809/speeding-up-tiles-rendering). Only effective when output projection matches (or is similar to) input projection. Available from version 2.1.x up. | false |
 
 ## Usage
 
