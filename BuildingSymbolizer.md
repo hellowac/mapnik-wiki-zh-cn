@@ -21,11 +21,7 @@ A BuildingSymbolizer is used to create a pseudo 3D effect on polygons.
 #### XML
 
 ```xml
-      <BuildingSymbolizer>
-        <CssParameter name="fill">#000000</CssParameter>
-        <CssParameter name="fill-opacity">1</CssParameter>
-        <CssParameter name="height">8</CssParameter>
-      </BuildingSymbolizer>
+      <BuildingSymbolizer fill="#000000" height="8" fill-opacity="1" />
 ```
 
 #### Python
