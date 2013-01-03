@@ -22,7 +22,7 @@ Because the plugin caches data in memory, large file sizes are not recommended. 
 
 ### line breaks
 
-The plugin will read the first 2000 bytes of the file to count the occurrences of `\n` and \r`. Which ever is more plentiful will be the assumed character that signifies line breaks - this allows the plugin to automatically work for both mac, windows, and unix style line breaks.
+The plugin will read the first 2000 bytes of the file to count the occurrences of `\n` and `\r`. Which ever is more plentiful will be the assumed character that signifies line breaks - this allows the plugin to automatically work for both mac, windows, and unix style line breaks.
  
 ### column separator
 
