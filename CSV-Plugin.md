@@ -34,4 +34,4 @@ The plugin defaults to assuming `\` is the escape character. So data like `"This
 
 ### quote character
 
-The plugin defaults to assuming `"` is the quote character that lines needing quoted will be wrapped in. Therefore a line like `"Main street,USA"` would parse fine and the `,` inside would not be interpreted as a column separator, but `'Main street, USA` would not parse unless you passed a custom option like `quote='`.
+The plugin defaults to assuming `"` is the quote character that lines needing quoted will be wrapped in. Therefore a line like `"Main street,USA"` would parse fine and the `,` inside would not be interpreted as a column separator, but `'Main street, USA'` would not parse unless you passed a custom option like `quote='`.
