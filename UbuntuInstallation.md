@@ -96,7 +96,7 @@ apt-cache policy libboost-dev
 
 ```sh
     # get a build environment going...
-    sudo apt-get install -y g++ cpp \
+    sudo apt-get install \
     libicu-dev \
     libboost-filesystem-dev \
     libboost-program-options-dev \
@@ -108,7 +108,7 @@ apt-cache policy libboost-dev
     libltdl7 libltdl-dev \
     libpng-dev \
     libproj-dev \
-    libgeotiff-dev libtiff-dev libtiffxx0c2 \
+    libtiff-dev \
     libcairo2 libcairo2-dev python-cairo python-cairo-dev \
     libcairomm-1.0-1 libcairomm-1.0-dev \
     ttf-unifont ttf-dejavu ttf-dejavu-core ttf-dejavu-extra \
