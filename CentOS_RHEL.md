@@ -9,6 +9,11 @@
 * http://svn.osgeo.org/osgeo/foss4g/benchmarking/wms/2010/mapnik/scripts/install_mapnik_rhel_5.5.sh
 * http://krisarnold.com/2010/07/14/installing-mapnik-on-centos-5/
 
+## Tips for install Mapnik-2.1.0 on RHEL 5.5
+
+* Make sure your boost version is higher than 1.47. A completely reinstallation of boost is preferred if there is already an older version on your machine.
+* Make sure your gcc version is higher than 4.1. The default gcc delivered with RHEL 5.5 does not meet this requirement. An internal compiler error will occur near make_rtl_for_nonlocal_decl in boost during the compilation. Upgrading to gcc44 (included in yum repository with RHEL 5.5) can solve the problem.
+
 ## Installation Notes
 See also: https://lists.berlios.de/pipermail/mapnik-users/2010-March/003034.html
 
