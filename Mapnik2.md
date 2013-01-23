@@ -140,7 +140,7 @@ Grab some dependencies (this is for debian systems)
     sudo apt-get install libbz2-dev
 ```
 
-If you are compiling on Mac OS X see: http://trac.mapnik.org/wiki/MacInstallation#Step1:RouteBC
+If you are compiling on Mac OS X see: http://github.com/mapnik/mapnik/wiki/MacInstallation#Step1:RouteBC
 
 Otherwise on linux do:
 

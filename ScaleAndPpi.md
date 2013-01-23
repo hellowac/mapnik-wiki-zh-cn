@@ -85,6 +85,6 @@ As can be understood from the previous section: even if you project roughly the 
  * [DPI VS PPI](http://www.rideau-info.com/photos/printshop.html)
  * [Scale and PPI Discussion on Mapnik-Users](https://lists.berlios.de/pipermail/mapnik-users/2008-November/001415.html)
  * [SLD Implementation Specification](http://portal.opengeospatial.org/files/?artifact_id=1188)
- * [Mapnik's Scale Denominator Code](http://trac.mapnik.org/browser/trunk/src/scale_denominator.cpp#L37)
+ * [Mapnik's Scale Denominator Code](https://github.com/mapnik/mapnik/blob/master/src/scale_denominator.cpp)
  * [PCL Scale Denominator Code](http://trac.gispython.org/lab/browser/PCL/trunk/PCL-Core/cartography/context/rendering.py#L112)
  * [PPI @ Wikipedia](http://en.wikipedia.org/wiki/Pixels_per_inch)

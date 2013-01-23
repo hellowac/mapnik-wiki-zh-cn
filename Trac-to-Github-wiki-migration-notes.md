@@ -52,7 +52,7 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Filter](http://github.com/mapnik/mapnik/wiki/Filter)|yes|||
 |[FontSet](http://github.com/mapnik/mapnik/wiki/FontSet)|yes|||
 |[FreeBSDInstallation](http://github.com/mapnik/mapnik/wiki/FreeBSDInstallation)|yes|||
-|[GDAL](http://github.com/mapnik/mapnik/wiki/GDAL)|yes (find a place for python api docs e.g http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-module.html#Gdal not working anymore)|||
+|[GDAL](http://github.com/mapnik/mapnik/wiki/GDAL)|yes|||
 |[GEOS](http://github.com/mapnik/mapnik/wiki/GEOS)|yes|||
 |[GettingStarted](http://github.com/mapnik/mapnik/wiki/GettingStarted)|yes (link to a place for python api docs)|yes (dane)||
 |[GettingStartedInPython](http://github.com/mapnik/mapnik/wiki/GettingStartedInPython)|yes|yes (dane)||
@@ -70,7 +70,7 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Compositing](http://github.com/mapnik/mapnik/wiki/Ideas_Compositing)|yes|||
 |[Future Features of Mapnik](http://github.com/mapnik/mapnik/wiki/Ideas_FutureMapnik)|yes|||
 |[Installation Troubleshooting](http://github.com/mapnik/mapnik/wiki/InstallationTroubleshooting)|yes|||
-|[InstallGuide](http://github.com/mapnik/mapnik/wiki/InstallGuide)|yes? link to the document done but the doc is outdated (trac.mapnik.org links)|||
+|[InstallGuide](http://github.com/mapnik/mapnik/wiki/InstallGuide)|yes)|||
 |[How to integrate mapnik with wxPython?](http://github.com/mapnik/mapnik/wiki/IntegrateWithWxPython)|yes|||
 |[International Text](http://github.com/mapnik/mapnik/wiki/InternationalText)|yes|||
 |[IntroductionToGIS](http://github.com/mapnik/mapnik/wiki/IntroductionToGIS)|yes|||
@@ -86,7 +86,6 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Installing Mapnik on OS X with Homebrew](http://github.com/mapnik/mapnik/wiki/MacInstallation_Homebrew)|yes|||
 |[Optional Installs](http://github.com/mapnik/mapnik/wiki/MacInstallation_Optional)|yes|||
 |[Installing Mapnik on OS X from Source](http://github.com/mapnik/mapnik/wiki/MacInstallation_Source)|yes|||
-|[Installing Mapnik on Mac OS X](http://github.com/mapnik/mapnik/wiki/MacInstallationPorts)|yes (retrieve SConstruct.osx.patch because lost + what do we do with links to doc generated from rst not available e.g https://github.com/mapnik/sphinx-docs )|||
 |[MacInstallationSource](http://github.com/mapnik/mapnik/wiki/MacInstallationSource)|yes|||
 |[MacPostGIS_Setup](http://github.com/mapnik/mapnik/wiki/MacPostGIS_Setup)|yes|||
 |[MacPythonUpgradeIssues](http://github.com/mapnik/mapnik/wiki/MacPythonUpgradeIssues)|yes|||
@@ -112,7 +111,7 @@ To get syntax color, see "Syntax highlighting" from http://github.github.com/git
 |[Mapnik Renderers](http://github.com/mapnik/mapnik/wiki/MapnikRenderers)|yes|||
 |[Mapnik Tutorials](http://github.com/mapnik/mapnik/wiki/MapnikTutorials)|yes|||
 |[MapnikUtilities](http://github.com/mapnik/mapnik/wiki/MapnikUtilities)|yes|||
-|[MapnikViewer](http://github.com/mapnik/mapnik/wiki/MapnikViewer)|yes (lost ref to http://trac.mapnik.org/raw-attachment/wiki/MapnikViewer/viewer.patch, add the missing file)|||
+|[MapnikViewer](http://github.com/mapnik/mapnik/wiki/MapnikViewer)|yes |||
 |[MarkersSymbolizer](http://github.com/mapnik/mapnik/wiki/MarkersSymbolizer)|yes (retrieve offsets_directions.png from http://173.255.217.246:8000/mapnik_trac/raw-attachment/ticket/180/offsets_directions.png )|||
 |[MaxScaleDenominator](http://github.com/mapnik/mapnik/wiki/MaxScaleDenominator)|yes|||
 |[MemoryDatasource](http://github.com/mapnik/mapnik/wiki/MemoryDatasource)|yes|||

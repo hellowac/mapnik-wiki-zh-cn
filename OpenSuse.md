@@ -13,14 +13,13 @@ To download and build Mapnik, you first need to install quite a bit of dependenc
 
     sudo zypper install subversion make gcc gcc-c++ libxml2-devel postgresql-devel libgeos-devel libbz2-devel libproj-devel libjpeg-devel libtiff-devel libpng-devel boost-devel python-cairo-devel cairomm-devel libicu-devel libtool
 
-Use Subversion to fetch the latest stable version of Mapnik. At the time of writing, that was 0.7.0.
+Use git to fetch the latest version of Mapnik..
 
-    svn export http://svn.mapnik.org/tags/release-0.7.0 mapnik-0.7.0
+    git clone git://github.com/mapnik/mapnik.git
 
 Build the Mapnik Python module. In the second line, you can omit everything after "scons.py" if you do not want to optimize the build or want to run the build on other machines.
 
-    cd mapnik-0.7.0/
+    cd mapnik/
     python scons/scons.py CXX="g++ -march=native -O2 -fomit-frame-pointer" configure
     python scons/scons.py
     sudo python scons/scons.py install
-    sudo ldconfig

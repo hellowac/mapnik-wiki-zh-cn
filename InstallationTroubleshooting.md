@@ -132,7 +132,7 @@ Then, go recompile (just boost_python) and move the new library into place:
       unsigned short const* boost::re_detail::re_is_set_member<unsigned short const*, int, boost::icu_regex_traits, unsigned long long>(unsigned short const*, unsigned short const*, boost::re_detail::re_set_long<unsigned long long> const*, boost::re_detail::regex_data<int, boost::icu_regex_traits> const&, bool)in agg_renderer.os
 ```
 
- * *Solution*: Likely, your boost library was built without regex+icu support. If you have built libboost from source, you can make your system's relevant .so files be recompiled with that support and reinstalled in place in the /lib/ folders. Go to libboost's source folder and run the following command (which you can find on [latest release install details](http://trac.mapnik.org/wiki/Mapnik2#fromlatestrelease|Mapnik2's)):
+ * *Solution*: Likely, your boost library was built without regex+icu support. If you have built libboost from source, you can make your system's relevant .so files be recompiled with that support and reinstalled in place in the /lib/ folders. Go to libboost's source folder and run the following command (which you can find on [latest release install details](http://github.com/mapnik/mapnik/wiki/Mapnik2#fromlatestrelease|Mapnik2's)):
 
 ```sh
     sudo ./bjam --with-regex toolset=gcc -sHAVE_ICU=1 -sICU_PATH=/usr/local/ -a install
@@ -248,7 +248,7 @@ Note: If the SCons build process simply can't find an include or library and you
     ImportError: /usr/local/lib/libmapnik.so.0.8: undefined symbol: _ZN5boost11basic_regexIiNS_16icu_regex_traitsEE9do_assignEPKiS4_j
 ```
 
- * *Solution*: Likely, your boost library was built without regex+icu support. If you have built libboost from source, you can make your system's relevant .so files be recompiled with that support and reinstalled in place in the /lib/ folders. Go to libboost's source folder and run the following command (which you can find on [latest release install details](http://trac.mapnik.org/wiki/Mapnik2#fromlatestrelease|Mapnik2's)):
+ * *Solution*: Likely, your boost library was built without regex+icu support. If you have built libboost from source, you can make your system's relevant .so files be recompiled with that support and reinstalled in place in the /lib/ folders. Go to libboost's source folder and run the following command (which you can find on [latest release install details](http://github.com/mapnik/mapnik/wiki/Mapnik2#fromlatestrelease|Mapnik2's)):
 
 ```sh
     sudo ./bjam --with-regex toolset=gcc -sHAVE_ICU=1 -sICU_PATH=/usr/local/ -a install

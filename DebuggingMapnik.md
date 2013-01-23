@@ -14,13 +14,13 @@ Currently I have these questions:
 ## Eclipse
 Here I try to describe my setup. I'm sure there are better ways but this works for me:
 
-* Checkout the newest trunk version of the repository: `svn checkout http://svn.mapnik.org/trunk mapnik_trunk`
+* Checkout the latest code: `git clone git://github.com/mapnik/mapnik.git mapnik_trunk`
 
 This has the advantages that
 
-* you always have the newest version (`svn update`)
-* you can quickly add test code and remove it again (`svn revert`)
-* you can easily create patches (`svn diff`)
+* you always have the newest version (`git pull`)
+* you can quickly add test code and remove it again (`svn checkout .`)
+* you can easily create patches (`git diff`)
 * Compile it as described in the INSTALL file provided in the root directory of the checkout. I have the following variables in my `config.py`:
 
 ```python

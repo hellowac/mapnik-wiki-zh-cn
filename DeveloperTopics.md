@@ -45,8 +45,6 @@ Any specific feature request or bug report should be created as a [new ticket](h
 
 [DeveloperTodo](https://github.com/mapnik/mapnik/wiki/DeveloperTodo)
 
-[Tickets by owner](https://trac.mapnik.org/report/8) - Your tickets
-
 
 ## Sandbox
 

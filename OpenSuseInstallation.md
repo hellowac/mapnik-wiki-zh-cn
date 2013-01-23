@@ -48,8 +48,8 @@ Still as root:
 
 ```
     $ cd && mkdir src && cd src
-    $ svn export http://svn.mapnik.org/tags/release-0.7.1 mapnik-0.7.1
-    $ cd mapnik-0.7.1/
+    $ git clone git://github.com/mapnik/mapnik.git
+    $ cd mapnik/
     $ python scons/scons.py configure
     $ python scons/scons.py install
     $ ldconfig

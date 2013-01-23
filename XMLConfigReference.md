@@ -76,7 +76,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
   * *[#Datasource Datasource]*
 
 ## Datasource
- See also the [0.6.0 Python API docs](http://svn.mapnik.org/tags/release-0.6.0/docs/api_docs/python/mapnik-module.html#Datasource)
+ See also the [Python API docs](http://mapnik.org/docs/v2.1.0/api/python/index.html)
 
  * Element: *Datasource*
  * Element type: References the map data source and parameters.
@@ -145,7 +145,7 @@ Also see [[SymbologySupport]] for more info on Symbolizers
  * Children:
   * *[#Style Style]*
   * *[#Layer Layer]*
-  * *FileSource*: See [#574](http://trac.mapnik.org/changeset/574)
-  * *Datasource*: See [#Datasource Datasource] and [#574](http://trac.mapnik.org/changeset/574)
+  * *FileSource*:
+  * *Datasource*: See [#Datasource Datasource]
   * *FontSet*: Defines a fontset for fallback fonts (if a character isn't found in the first font, proceed through the list until it is found)
 

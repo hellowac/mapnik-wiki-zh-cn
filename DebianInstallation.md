@@ -78,26 +78,13 @@ Follow instructions from http://osm.fsffrance.org/debian-backports/README to ins
     postgresql-8.3-postgis postgresql-8.3 \
     postgresql-server-dev-8.3 postgresql-contrib-8.3 \
     libsqlite3-dev  \
-    subversion build-essential python-nose
+    build-essential python-nose
 ```
 
-Install Mapnik 0.7.1
+Mapnik trunk:
 
 ```sh
-    svn co http://svn.mapnik.org/tags/release-0.7.1/ mapnik-0.7.1
-    cd mapnik-0.7.1
-    python scons/scons.py configure INPUT_PLUGINS=all \
-    OPTIMIZATION=3 \
-    SYSTEM_FONTS=/usr/share/fonts/truetype/
-    python scons/scons.py
-    sudo python scons/scons.py install
-    sudo ldconfig
-```
-
-or Mapnik trunk:
-
-```sh
-    svn co http://svn.mapnik.org/trunk mapnik-trunk
+    git clone git://github.com/mapnik/mapnik.git mapnik-trunk
     cd mapnik-trunk
     python scons/scons.py configure INPUT_PLUGINS=all \
     OPTIMIZATION=3 \
@@ -114,7 +101,7 @@ The development libraries have to be present as described above. In the followin
     DIR_MAPNIK_SRC=/home/$USER/mapnik_svn
     DIR_MAPNIK_INSTALL=/home/$USER/mapnik_inst
     
-    svn co http://svn.mapnik.org/trunk $DIR_MAPNIK_SVN
+    git clone git://github.com/mapnik/mapnik.git $DIR_MAPNIK_SVN
     cd $DIR_MAPNIK_SVN
     
     python scons/scons.py configure INPUT_PLUGINS=all \

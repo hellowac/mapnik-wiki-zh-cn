@@ -14,7 +14,6 @@ All properties that previously used underscores, ie '_' now use dashes ('-'). So
 
 * Mapnik 0.7.2 has compatibility with both syntaxes as of r2579
 * Mapnik 2.0 moved to only dashes in r2582
-* Note: branch of trunk tagged before r2582: https://trac.mapnik.org/browser/branches/mapnik2-pre-dashes
 * properties changed include: 
 
 ```python

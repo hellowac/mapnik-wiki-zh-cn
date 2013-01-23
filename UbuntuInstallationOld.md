@@ -184,7 +184,7 @@ Karmic has Mapnik packages for 0.6.1, so you can either install Mapnik from pack
 ### Then compile and install Mapnik
 
 ```
-    svn co http://svn.mapnik.org/tags/release-0.7.1/ mapnik
+    git clone git://github.com/mapnik/mapnik.git
     cd mapnik
     python scons/scons.py configure INPUT_PLUGINS=all OPTIMIZATION=3 SYSTEM_FONTS=/usr/share/fonts/truetype/ttf-dejavu/
     python scons/scons.py
@@ -251,7 +251,7 @@ This works with the default python-2.6 on jaunty:
     libsqlite3-dev  \
     subversion build-essential
     
-    svn co http://svn.mapnik.org/tags/release-0.7.0/ mapnik
+    git clone git://github.com/mapnik/mapnik.git
     cd mapnik
     python scons/scons.py configure INPUT_PLUGINS=all \
     OPTIMIZATION=3 \

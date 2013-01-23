@@ -31,7 +31,7 @@ From Steve Chilton's SotM presentation:
 * iterate alternative label placement
 * apply point within polygon labels
 * allow rotation for icons
-* accept SVG icons (Done? See [Changeset 1793](http://trac.mapnik.org/changeset/1793) )
+* accept SVG icons (Done)
 * apply variable widths to canals and rivers
 * apply vignettes inside polygons
 * produce spread text labels
@@ -40,11 +40,6 @@ From Steve Chilton's SotM presentation:
 * more Natural Earth data at low-zooms (May apply more to OSM style than Mapnik-core)
 * add your advanced cartography requests
 * as it's already able to replace certain strings in the filename of a Symbolizer, other parameters should be changeable too. Say: I want to define a Template for a Symbolizer in the Stylesheet, but define its parameters (color, width, etc.) from database columns.
- 
-### Bug list
-List of bugs for squishing or topics to discuss:
-
-* http://trac.mapnik.org/milestone/MCS1%20Tickets
 
 ### Cascadenik
 

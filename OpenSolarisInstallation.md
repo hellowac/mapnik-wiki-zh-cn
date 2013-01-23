@@ -33,9 +33,7 @@ If anyone does forge ahead using the old tools available from sun and can compil
 
 You will need at least:
 
- * Mapnik trunk (>= r2444) (http://svn.mapnik.org/trunk/)
- * or
- * Mapnik 0.7.2 (>= r2444) (http://svn.mapnik.org/branches/0.7.2-dev/)
+ * Mapnik >= 2.x
 
 For 64 bit builds you need to apply patches from [#675](https://github.com/mapnik/mapnik/issues/675) and [#676](https://github.com/mapnik/mapnik/issues/676)
 
@@ -239,7 +237,7 @@ We just need to patch our ts-specs directory to disable textinfo and bypass this
 
 ```sh
     cd ts-specs
-    wget http://trac.mapnik.org/raw-attachment/wiki/OpenSolarisInstallation/ts-spec1-compile-gcc44.patch
+    wget http://http://github.com/mapnik/mapnik/wiki/raw-attachment/wiki/OpenSolarisInstallation/ts-spec1-compile-gcc44.patch
     patch -p0 < ts-spec1-compile-gcc44.patch
 ```
 
@@ -303,7 +301,8 @@ Mapnik 0.7.2:
 
 ```sh
     cd $SRC
-    svn co http://svn.mapnik.org/branches/0.7.2-dev/ mapnik-0.7.2
+    git clone git://github.com/mapnik/mapnik.git mapnik-0.7.3
+    git checkout v0.7.3
     cd mapnik-0.7.2
     export LANG="C"
     export LC_ALL="C"
@@ -347,7 +346,7 @@ Mapnik2:
 ```sh
     # mapnik trunk
     cd $SRC
-    svn co http://svn.mapnik.org/trunk/ mapnik-trunk
+    git clone git://github.com/mapnik/mapnik.git mapnik-trunk
     cd mapnik-trunk
     export LANG="C"
     export LC_ALL="C"

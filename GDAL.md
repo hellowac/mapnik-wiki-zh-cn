@@ -49,8 +49,6 @@ This plugin in Mapnik >= 0.7.0 supports reading overviews created with http://ww
     lyr.styles.append('Raster Style')
 ```
 
-See the docstring at: http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-module.html#Gdal
-
 ## XML
 
 ```xml

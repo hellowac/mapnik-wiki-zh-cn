@@ -38,7 +38,7 @@ If you are new to compiling source code, or having trouble getting started on a 
   * Checkout the current repository with subversion:
 
 ```sh
-    svn co http://svn.mapnik.org/trunk/ mapnik
+    git clone git://github.com/mapnik/mapnik.git mapnik
 ```
  
  * *Recommended*: Proj.4 - [Cartographic Projections Library](http://www.remotesensing.org/proj/)
@@ -124,17 +124,10 @@ If you are new to compiling source code, or having trouble getting started on a 
 1. Download the Mapnik source code from svn
 
 ```sh
-    $ svn co http://svn.mapnik.org/trunk mapnik_svn
+    $ git clone git://github.com/mapnik/mapnik.git mapnik_svn
     $ cd mapnik_svn
 ```
 
-or the stable release source code:
-
-```sh
-    $ wget http://download.berlios.de/mapnik/mapnik-0.7.0.tar.bz2
-    $ tar xvf mapnik-0.7.0.tar.bz2
-    $ cd mapnik-0.7.0/
-```
 
 2. Read over the INSTALL instructions for your version
 

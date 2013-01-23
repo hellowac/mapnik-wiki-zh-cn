@@ -39,7 +39,7 @@ This is a quick list of things we started work on or achieved during the sprint:
 * Forward compatibility of .7.x series a priority  (springmeyer)
 * Lots of work on new prototype for documentation (dodobas) [#288](https://github.com/mapnik/mapnik/issues/288)
 * Moved Cascadenik to github and refactored lots of code, merging in XML-bad branch (migurski, rcoup, ninow) (http://github.com/mapnik/Cascadenik)
-* Came up with lots of new ideas and pushed they into tickets against [Sprint Milestone](http://trac.mapnik.org/milestone/MCS1%20Tickets) 
+* Came up with lots of new ideas and pushed they into tickets against [Sprint Milestone](http://http://github.com/mapnik/mapnik/wiki/milestone/MCS1%20Tickets) 
 * Many sprinters installed Mapnik2 - we updated docs with lessons learned (springmeyer)
 * Extensive review and prioritization of tickets relating to cartographic features (ldp)
 * Work towards native boost::spirit WKT parser (artem)
@@ -64,8 +64,8 @@ This is a quick list of things we started work on or achieved during the sprint:
 
 ## Trac timeline
 
-http://trac.mapnik.org/timeline?from=09%2F29%2F10&daysback=10&ticket=on&ticket_details=on&changeset=on&update=Update
+http://http://github.com/mapnik/mapnik/wiki/timeline?from=09%2F29%2F10&daysback=10&ticket=on&ticket_details=on&changeset=on&update=Update
 
 ## Tickets
 
-http://trac.mapnik.org/milestone/MCS1%20Tickets
+http://http://github.com/mapnik/mapnik/wiki/milestone/MCS1%20Tickets

@@ -85,8 +85,6 @@ To style a layer use the [[RasterSymbolizer]]
 
 ## Python
 
-See the docstring at: http://svn.mapnik.org/trunk/docs/api_docs/python/mapnik-module.html#Raster
-
 ```xml
 <!-- NOTE: must be in the same SRS as your map-->
 <Layer name="Raster">

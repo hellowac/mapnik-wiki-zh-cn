@@ -4,7 +4,7 @@
 <!-- Author: ivansanchez -->
 # Compositing
 
-[TopOSM](http://wiki.openstreetmap.org/wiki/TopOSM/Details) is pretty inspirational. How about an XML dialect for specifying the composition of multiple Mapnik-rendered layers into a single map. This example is based on [TopOSM's compositing steps](http://wiki.openstreetmap.org/wiki/TopOSM/Details#Combining_images_into_a_final_composite), which also incorporate `gdalwarp`-generated hill shadings. (These could be integrated using a [RasterSymbolizer](http://trac.mapnik.org/wiki/RasterSymbolizer), or a thin wrapper could be generated at runtime.)
+[TopOSM](http://wiki.openstreetmap.org/wiki/TopOSM/Details) is pretty inspirational. How about an XML dialect for specifying the composition of multiple Mapnik-rendered layers into a single map. This example is based on [TopOSM's compositing steps](http://wiki.openstreetmap.org/wiki/TopOSM/Details#Combining_images_into_a_final_composite), which also incorporate `gdalwarp`-generated hill shadings. (These could be integrated using a [RasterSymbolizer](http://github.com/mapnik/mapnik/wiki/RasterSymbolizer), or a thin wrapper could be generated at runtime.)
 
 * Note: see also [artem's test images](Compositing) (generated with AGG)
 * Note: see also the GSOC page on related ideas part [Layer Composites](GSOC2010_Ideas)

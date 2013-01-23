@@ -21,7 +21,7 @@ While Mapnik was the first to use AGG rendering for mapping, the AGG renderer is
 The [Cairo](http://cairographics.org/) renderer is an auxiliary renderer in Mapnik.
 
 * Cairo was added in r656 due to its similar reputation for high quality graphics output to various formats
- * http://trac.mapnik.org/log/trunk/src/cairo_renderer.cpp
+ * http://http://github.com/mapnik/mapnik/wiki/log/trunk/src/cairo_renderer.cpp
 * Cairo has the '''added advantage''' of supporting both Vector and Raster output.
 * Mapnik can render to any [surface](http://www.cairographics.org/manual/cairo-surfaces.html) supported by cairo, either directly or by rendering to a cairo [context](http://www.cairographics.org/manual/cairo-context.html).
  * You can demo the PNG, JPEG, SVG, PDF, and PS formats using the [OSM export tool](http://openstreetmap.org/export/)

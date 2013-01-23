@@ -1,6 +1,6 @@
 # Mapnik 0.7.2 Release
 
-- Added forward compatibility for Mapnik 2.0 XML syntax (https://trac.mapnik.org/wiki/Mapnik2/Changes)
+- Added forward compatibility for Mapnik 2.0 XML syntax (https://http://github.com/mapnik/mapnik/wiki/wiki/Mapnik2/Changes)
 
 - Build fixes to ensure boost_threads are not used unless THREADING=multi build option is used
 

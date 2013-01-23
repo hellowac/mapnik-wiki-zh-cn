@@ -8,7 +8,7 @@ See also the `grid_renderer` which works better for polygons: https://github.com
 
 A blog post on the idea is at: http://mapnik.org/news/2010/jul/06/gsoc2010_halfway/.
 
-Slides from State of the Map Europe 2011 are [available](http://trac.mapnik.org/attachment/wiki/MetaWriter/metawriter-slides-sotmeu.pdf).
+Slides from State of the Map Europe 2011 are [available](http://http://github.com/mapnik/mapnik/wiki/attachment/wiki/MetaWriter/metawriter-slides-sotmeu.pdf).
 
 See also Herm's demo, which highlights both visible and invisible features: http://r2d2.stefanm.com/mapnik/demo.html
 
