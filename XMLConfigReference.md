@@ -5,8 +5,6 @@
 
 See also [a reference PDF](http://old.nabble.com/attachment/27685172/0/MapnikXMLDescription.pdf) created by David Eastcott (written for 0.7)
 
-To validate the XML see [[ValidatingXml]]
-
 ## General
 
 Comments can be placed in the configuration file using the default xml <!-- --> syntax

@@ -6,7 +6,7 @@
  * `MarkersSymbolizer` 
   * `marker-type` is removed, built in ellipse and arrow types now can be referenced like `file="shape://ellipse"` and `file="shape://arrow"` - although this interface is unstable and may continue to change.
  * `ShieldSymbolizer` attribute `no_text` - Simply leave the text empty if you don't want any text to be rendered.
- * `XML DTD` in `utils/xml` since it was unmaintained: https://github.com/mapnik/mapnik/issues/1402
+ * Removed `XML DTD` in `utils/xml` since it was unmaintained: https://github.com/mapnik/mapnik/issues/1402
  * `RasterSymbolizer` `mode` `divide` (see below)
 
 ## Changed
