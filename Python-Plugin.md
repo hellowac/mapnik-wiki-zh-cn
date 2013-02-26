@@ -230,7 +230,7 @@ if __name__ == '__main__':
     r.symbols.append(mapnik.LineSymbolizer())
     s.rules.append(r)
     m.append_style('point_style',s)
-    ds = mapnik.Python(factory='CirclesDatasource', circle_x='4', circle_y='50')
+    ds = mapnik.Python(factory='CirclesDatasource', centre_x='4', centre_y='50')
     layer = mapnik.Layer('python')
     layer.datasource = ds
     layer.styles.append('point_style')
