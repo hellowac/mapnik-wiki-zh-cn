@@ -30,7 +30,7 @@ To check if the gdal plugin built and was installed correctly you can do:
 
 # Styling
 
-To style a layer from GDAL use the RasterSymbolizer
+To style a layer from GDAL use the [[RasterSymbolizer]]
 
 # Usage
 
