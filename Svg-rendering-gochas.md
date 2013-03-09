@@ -8,7 +8,7 @@ In short Mapnik is not great a pixel fitting icons (see http://dcurt.is/pixel-fi
 
 Bilinear resampling is used for rendering raster markers. So if the markers are scaled to a size that is not cleanly divisible into the original size then resampling will not produce a crisp result.
 
-With SVG rendering the same kind of blurryness can result if the final rendered dimensions of the svg are not cleanly divisible. This is a common problem if you attempt to set the width/height of a marker symbolizer using svg because the scaling is done against the bounding box of the svg paths (see below for more details).
+With SVG rendering the same kind of blurriness can result if the final rendered dimensions of the svg are not cleanly divisible. This is a common problem if you attempt to set the width/height of a marker symbolizer using svg because the scaling is done against the bounding box of the svg paths (see below for more details).
 
 # Setting width/height properties
 
@@ -28,4 +28,4 @@ If only the width or height is supplied then only a single scaling transform is 
 
 ## Raster file
 
-If a png, jpeg, or tiff image is loaded from a file and the user supplies a width or height value then behavior is the same as svg loaded except that the scaling transform will be set up against the image dimensions and and alpha pixels will not be used to try to clip the extent of the image.
+If a png, jpeg, or tiff image is loaded from a file and the user supplies a width or height value then behavior is the same as svg loaded except that the scaling transform will be set up against the image dimensions and alpha pixels will not be used to try to clip the extent of the image.
