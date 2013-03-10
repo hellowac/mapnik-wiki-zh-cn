@@ -1,1 +1,1 @@
-The configure script points to this site, so where is it?
+Page has moved, see [[Mapnik-Installation]]
