@@ -10,8 +10,9 @@ You can create a spatialite enabled db also using ogr:
 
     ogr2ogr -f SQLite test.sqlite some.shp -dsco SPATIALITE=YES
 
+For more details see: http://www.gdal.org/ogr/drv_sqlite.html
 
-The main difference is that a spatialite enabled db will include a spatial index inside the database. A pure SQLite db will not contain a spatial index, but Mapnik will create one on the fly.
+The main difference is that a spatialite enabled db will include a spatial index inside the database. A pure SQLite db will not contain a spatial index, but Mapnik can create one on the fly.
 
 # Parameters
 
