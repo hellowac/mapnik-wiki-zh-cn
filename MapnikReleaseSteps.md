@@ -86,13 +86,14 @@ cd ${TARBALL_NAME}
 git checkout "tags/v${MAPNIK_VERSION}"
 # get one commit back to match the changelog
 git rev-list --max-count=2 HEAD | tail -n+2 > GIT_REVISION
+git describe > GIT_DESCRIBE
 cd ../
 rm -rf ${TARBALL_NAME}/.git
 rm -rf ${TARBALL_NAME}/.gitignore
 tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
 ```
 
-Note: the GIT_REVISION file is used as per https://github.com/mapnik/mapnik/issues/1170. We write a file before making the tarball so that systems that do not have git installed or that download the raw tarball can still know the git revision and mapnik-config will report after source build.
+Note: the GIT_REVISION/GIT_DESCRIBE files are used as per https://github.com/mapnik/mapnik/issues/1170. We write a file before making the tarball so that systems that do not have git installed or that download the raw tarball can still know the git revision and describe output mapnik-config will report after source build.
 
 If creating a release candidate do instead:
 
