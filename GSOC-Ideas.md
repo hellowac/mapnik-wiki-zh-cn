@@ -77,7 +77,7 @@ How a modern map rendering framework works. How test frameworks catering to 1000
 
 The anti-meridian (aka 'date line'/180th meridian/+180°/-180°/end of the world) causes problems (eg. [1](http://trac.osgeo.org/mapserver/attachment/ticket/15/mswms_gmap.gif), [2](http://www.youtube.com/watch?v=-t0AV27t8tQ&feature=youtu.be&noredirect=1), [3](https://earth-issues.googlecode.com/issues/attachment?aid=13400000000&name=PolygonCross.jpg&token=DznRVkFPn0C7yeqygJ3rkGEZp8g%3A1364419894395&inline=1), [4](http://cdn.cruisersforum.com/forums/attachment.php?attachmentid=37372&d=1329218601), [5](http://wiki.openstreetmap.org/wiki/180th_meridian) ) for most mapping and geospatial software, since they naively treat our round world as flat. Mapnik is no exception.
 
-* Features with components (eg. MultiPolygons) where [parts are on different sides](http://data.linz.govt.nz/#/layer/785-nz-land-districts/) of the anti-meridian. Think a 
+* Features with components (eg. MultiPolygons) where [parts are on different sides](http://data.linz.govt.nz/#/layer/785-nz-land-districts/) of the anti-meridian. 
 * [Geometries that span](http://koordinates.com/#/layer/1541-new-zealand-region-bathymetry/) the antimeridian  
 * [Rasters that span](http://koordinates.com/#/layer/1720-new-zealand-250m-bathymetry-rainbow-2008/) the anti-meridian
 * lines/polygons whose coordinates go from +175 to +185 (into the 'next world'), or -175 to -185 (into the 'previous world'), or +175 to -175 (theoretically 'right')
