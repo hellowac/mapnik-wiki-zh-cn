@@ -1,6 +1,6 @@
 # Google Summer of Code Ideas
 
-Mapnik has participated in Google Summer of Code in 2010 (2 students) & 2011 (3 students). In 2012 we had a GSoC student via the OpenStreetMap umbrella project, and in 2013 students can apply via either OSGeo or OpenStreetMap (*not both*). 
+Mapnik has participated in Google Summer of Code in 2010 (2 students) & 2011 (3 students). In 2012 we had a GSoC student via the OpenStreetMap umbrella project, and in 2013 students can apply via either OSGeo or OpenStreetMap (**not both**). 
 
 Below are some projects we've come up with, which hopefully will interest you! See also [@steve8s ideas page](Ideas) for more "what Mapnik would do in an ideal world".
 
@@ -8,7 +8,7 @@ In general, students will need to:
 * have a solid coding (C/C++/Python)
 * ideally have had some exposure to mapping/geo (or, get started and experimenting now!)
 * be good communicators, we expect weekly public blog posts with progress/successes/problems.
-* be motivated and self-driven - we're not going to drag you through this, you need to *want* it!
+* be motivated and self-driven - we're not going to drag you through this, you need to _want_ it!
 
 Questions? Email [Rob](/rcoup) at robert@coup.net.nz
 
