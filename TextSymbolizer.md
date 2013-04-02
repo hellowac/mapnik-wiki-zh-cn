@@ -34,7 +34,7 @@
 |orientation||Rotate text|degree|0|
 |placement-type||Placement finder algorithm. Currently supported: "dummy" (do nothing), "simple" (automatically create new positions using a simple configuration; see below) and "list" (mapnik >=2.1, see below)|string|"dummy"|2.0/2.1
 |placements||List of possible placements. Only valid if placement-type="simple" is used.|string|"X"|2.0
-|upright|left,right,auto|Select which way direction is used to place characters upright.|-|auto|harfbuzz
+|upright|left,right,auto,left_only,right_only|Select which way direction is used to place characters upright. The XXX_only variant place text only if more than 50% of all character are upright. Together with placement-type="list" this can be used to implement alternate texts. See below for an example. |-|auto|harfbuzz
 |clip|true, false|If true then the geometry is clipped to the view before doing placements. Improves performance but can cause bad placements when the results are used for tiling|bool|true|2.0.0|
 |rotate-displacement|Rotates the displacement around the placement origin by the angle given by "orientation"|bool|false|harfbuzz|
 
@@ -149,6 +149,16 @@ becomes
 ```
 
 This change was made to be forward compatible with changes to text formatting being introduced in later versions.
+
+## Alternate texts for upside down rendering
+If some of your text depends on the line direction you need to supply different texts for each direction. This can be done like this:
+```xml
+<TextSymbolizer face-name="DejaVu Sans Book" size="10" 
+   placement="line" upright="left_only" placement-type="list">
+       "left only &lt;--"
+       <Placement upright="right_only">"right only --&gt;"</Placement>
+</TextSymbolizer>
+```
 
 ## New features in HarfBuzz branch
 * upright="auto/left/right" (See table above)
