@@ -74,3 +74,11 @@ It's likely that your copy of boost was linked against the system python, but yo
 brew uninstall boost
 brew install --build-from-source boost
 ```
+
+## Building with Cairo
+
+If you need Cairo and its Python bindings, install and link these (cairo and py2cairo) with homebrew as normal. Then, to build Mapnik from source with Cairo bindings:
+
+```
+./configure CXX="clang++" JOBS=`sysctl -n hw.ncpu` CAIRO=True CAIRO_INCLUDES=/usr/local CAIRO_LIBS=/usr/local PKG_CONFIG_PATH=/usr/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/X11/lib/pkgconfig
+```
