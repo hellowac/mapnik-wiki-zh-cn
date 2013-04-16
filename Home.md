@@ -12,16 +12,16 @@ Welcome to the Mapnik wiki.
 
 ### Mapnik API
 
-- Syntax: [[XMLConfigReference]]
-- Symbology: [[SymbologySupport]]
-- Datasources: [[PluginArchitecture]]
+- Syntax: [[XML Config Reference|XMLConfigReference]]
+- Symbology: [[Symbology Support|SymbologySupport]]
+- Datasources: [[Plugin Architecture|PluginArchitecture]]
 
 ### Advanced Topics
 
 - [Building Mapnik](https://github.com/mapnik/mapnik/blob/master/INSTALL.md)
 - [[Migrating to Mapnik2 from older Versions|Mapnik2]]
 - [[Mapnik Development|Development]]
-- [[MapnikReleases]]
+- [[Mapnik Releases|MapnikReleases]]
 
 ### Community
 
