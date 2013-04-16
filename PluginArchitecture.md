@@ -33,6 +33,8 @@ To request additional plugins to be compiled and installed make sure you have th
     $ python scons/scons.py INPUT_PLUGINS='all'
     # build just the postgis plugin:
     $ python scons/scons.py INPUT_PLUGINS='postgis'
+    # to compile the plugins statically with mapnik library
+    $ python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static' 
 ```
 
 ## Querying plugins
