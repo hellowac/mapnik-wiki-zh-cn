@@ -31,7 +31,7 @@ Any specific feature request or bug report should be created as a [new ticket](h
 
 [Build bot](https://github.com/mapnik/mapnik/wiki/BuildBot)
 
-[Runtime logging](https://github.com/mapnik/mapnik/wiki/RuntimeLogging)
+[Runtime logging](https://github.com/mapnik/mapnik/wiki/Runtime-Logging)
 
 [Debugging mapnik](https://github.com/mapnik/mapnik/wiki/DebuggingMapnik) -- TODO!
 
@@ -59,4 +59,3 @@ Any specific feature request or bug report should be created as a [new ticket](h
 [XmlFormatDiscussion](https://github.com/mapnik/mapnik/wiki/XmlFormatDiscussion) -- freeform discussion on Mapnik's XML format
 
 [ShieldSymbolizerTests](https://github.com/mapnik/mapnik/wiki/ShieldSymbolizerTests)
-
