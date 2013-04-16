@@ -6,7 +6,7 @@ Welcome to the Mapnik wiki.
 
 - [[About Mapnik]]
 - [[Mapnik Installation]]
-- [[LearningMapnik]]
+- [[LearningMapnik|Learning Mapnik]]
 - [[Notes and Caveats|Notes And Caveats]]
 - [[Related Projects and Utilities]]
 
