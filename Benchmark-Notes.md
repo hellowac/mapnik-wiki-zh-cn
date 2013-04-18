@@ -35,3 +35,39 @@ Thread model: posix
 20) threaded -> clipping polygon with mapnik::polygon_clipper: 5090 milliseconds
 21) threaded -> font_engihe: created 220000 faces in : 3280 milliseconds
 ```
+
+## OS X 10.8, c++11/libc++, April 18, 2013 
+
+```sh
+$ mapnik-config --git-describe
+v2.1.0-1097-g21b9327
+
+$ clang++ --version
+clang version 3.3 (179091)
+Target: x86_64-apple-darwin12.3.0
+Thread model: posix
+```
+
+```sh
+1) encoding blank image as png: 170 milliseconds
+2) encoding multicolor image as png8:m=h: 13550 milliseconds
+3) threaded -> encoding blank image as png: 40 milliseconds
+4) threaded -> encoding multicolor image as png8:m=h: 4690 milliseconds
+5) double to string conversion with std::ostringstream: 450 milliseconds
+6) double to string conversion with mapnik::util_to_string: 240 milliseconds
+7) double to string conversion with snprintf: 250 milliseconds
+8) threaded -> double to string conversion with std::ostringstream: 2280 milliseconds
+9) threaded -> double to string conversion with mapnik::util_to_string: 650 milliseconds
+10) threaded -> double to string conversion with snprintf: 640 milliseconds
+11) threaded -> lonlat -> merc coord transformation (epsg): 450 milliseconds
+12) threaded -> merc -> lonlat coord transformation (epsg): 450 milliseconds
+13) threaded -> lonlat -> merc coord transformation (literal): 2660 milliseconds
+14) threaded -> merc -> lonlat coord transformation (literal): 2680 milliseconds
+15) threaded -> expression parsing with grammer per parse: 4600 milliseconds
+16) threaded -> expression parsing by re-using grammar: 1100 milliseconds
+17) threaded -> rule caching using boost::move: 320 milliseconds
+18) threaded -> rule caching using heap allocation: 330 milliseconds
+19) threaded -> clipping polygon with agg_conv_clipper: 2400 milliseconds
+20) threaded -> clipping polygon with mapnik::polygon_clipper: 3320 milliseconds
+21) threaded -> font_engihe: created 220000 faces in : 3480 milliseconds
+```
