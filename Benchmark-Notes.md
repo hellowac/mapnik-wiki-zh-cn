@@ -12,6 +12,7 @@ Thread model: posix
 ```
 
 ```sh
+~/projects/mapnik[master]$ ./benchmark/run
 1) encoding blank image as png: 170 milliseconds
 2) encoding multicolor image as png8:m=h: 13660 milliseconds
 3) threaded -> encoding blank image as png: 50 milliseconds
