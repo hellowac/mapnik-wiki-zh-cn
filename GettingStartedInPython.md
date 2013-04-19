@@ -2,7 +2,7 @@
 
 ## Overview
 
-This tutorial will ensure that Mapnik and its python bindings are properly installed and introduce you to some of the basic programming concepts for Mapnik.
+This tutorial will ensure that Mapnik and its Python bindings are properly installed and introduce you to some of the basic programming concepts for Mapnik.
 
 ## Step 1: check installation 
 
@@ -13,11 +13,11 @@ Make sure you have mapnik installed. You should be able to open a terminal and t
 This tutorial expects Mapnik 2.x or greater. Older versions do not provide the `mapnik-config` program, so we recommend upgrading.
 
 
-Please note that if you are using mapnik 2.0.0 then you will need to adjust the "mapnik" module name to "mapnik2" in the python commands. Refer to [[mapnik2]] for details of the naming convention.
+Please note that if you are using mapnik 2.0.0 then you will need to adjust the "mapnik" module name to "mapnik2" in the Python commands. Refer to [[mapnik2]] for details of the naming convention.
 
 
 
-Next test the python bindings. You should be able to open a terminal and type:
+Next test the Python bindings. You should be able to open a terminal and type:
 
     python -c "import mapnik;print mapnik.__file__" # should return the path to the python bindings and no errors
 
@@ -25,7 +25,7 @@ If the above does not work (e.g. throws an `ImportError`) then please go back an
 
 ## Step 2
 
-Now, we need some data to render. Let's use a shapefile of world border polygons from http://naturalearthdata.com. Download the data from this wiki's local cache [here](data/110m-admin-0-countries.zip) or directly from the [Natural Earth Data site](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/110m-admin-0-countries.zip). Unzip the archive in an easily accessible location of your choosing. In *Step 3* we will be referencing the path to this shapefile in python code, so make sure you know where you put it.
+Now, we need some data to render. Let's use a shapefile of world border polygons from http://naturalearthdata.com. Download the data from this wiki's local cache [here](data/110m-admin-0-countries.zip) or directly from the [Natural Earth Data site](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/110m-admin-0-countries.zip). Unzip the archive in an easily accessible location of your choosing. In *Step 3* we will be referencing the path to this shapefile in Python code, so make sure you know where you put it.
 
 Once unzipped, you should see four files like:
 
@@ -42,19 +42,19 @@ To download and unzip on the command line with the do:
 
 ## Step 3
 
-Now we're going to program in Python and Mapnik, using sample code and the python interpreter.
+Now we're going to program in Python and Mapnik, using sample code and the Python interpreter.
 
 The idea here is not that you have to interact with Mapnik via Python, but that this is a good way to build foundational skills for how Mapnik works.
 
-So, let's begin! Open a python interpreter simply by typing in your terminal:
+So, let's begin! Open a Python interpreter simply by typing in your terminal:
 
-   python
+    python
 
 The code below can be pasted into your interpreter. Ideally paste line by line so you can confirm each step is working. The commented lines (#) should be able to be pasted without trouble, but depending on your interpreter setting may cause errors.
 
 ### Import Mapnik
 
-Import the Mapnik python bindings:
+Import the Mapnik Python bindings:
 
     import mapnik
 
@@ -91,9 +91,9 @@ m.append_style('My Style',s) # Styles are given names only as they are applied t
 
 ### Create a Datasource
 
-In *Step 2* above you should have downloaded a sample shapefile of polygons of world countries. We are now going to load that into a `mapnik.Datasource` object in python.
+In *Step 2* above you should have downloaded a sample shapefile of polygons of world countries. We are now going to load that into a `mapnik.Datasource` object in Python.
 
-If your python interpreter was launched from the same directory as you downloaded the natural earth shapefile to you should be able to use a relative path to create the datasource like:
+If your Python interpreter was launched from the same directory as you downloaded the natural earth shapefile to you should be able to use a relative path to create the datasource like:
 
 ``` python
 ds = mapnik.Shapefile(file='ne_110m_admin_0_countries.shp')
@@ -157,7 +157,7 @@ Finish up by rendering your map image:
 # Write the data to a png image called world.png the current directory
 mapnik.render_to_file(m,'world.png', 'png')
 
-# Exit the python interpreter
+# Exit the Python interpreter
 exit() # or ctrl-d
 ```
 
@@ -174,7 +174,7 @@ Or navigate to your base directory and open `world.png` and the result should lo
 
 ### Step 4
 
-The next logical step is to run that same code all at once as a python script from your shell/terminal (rather than pasted into the python interpreter line-by-line). This way you will be able to modify and experiment with the settings, then simply re-run the script.
+The next logical step is to run that same code all at once as a Python script from your shell/terminal (rather than pasted into the Python interpreter line-by-line). This way you will be able to modify and experiment with the settings, then simply re-run the script.
 
 So, create a blank text file called `world.py`.
 
