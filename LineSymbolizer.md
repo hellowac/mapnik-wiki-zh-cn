@@ -19,10 +19,7 @@ A LineSymbolizer is used to render a "stroke" along a linear geometry.
 ```
 #### XML
 ```xml
-<LineSymbolizer>
-    <CssParameter name="stroke">#0000ff</CssParameter>
-    <CssParameter name="stroke-width">4</CssParameter>
-</LineSymbolizer>
+<LineSymbolizer stroke="#0000ff" stroke-width="4" />
 ```
 #### Python
 
