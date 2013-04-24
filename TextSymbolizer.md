@@ -1,24 +1,14 @@
 ## Configuration Options for TextSymbolizer
+### Options for whole Symbolizer
 | *parameter* | *values/ type*  | *description* | *unit* | *default* | *version* |
 ----------------|---------|----------------|-------|------------|---------|
-| name|expression|This is the query field you want to use for the label text, e.g. "street_name" (deprecated in Mapnik2, see section "new syntax" below)| |  |  
-|face-name|string| Font name (see [[UsingCustomFonts]])| | |
-|fontset-name|string| FontSet name ||
-|size|double|Font size|px|10.0|
 |text-ratio|double| Try to keep a given height to width ratio. Use 0 to disable this feature.|ratio|0|
-|wrap-character|char|Use this character instead of a space to wrap long names. (Harfbuzz branch ignores this and uses Unicode rules for line breaks.)|||
 |wrap-width|double|Length before wrapping long names. Use 0 to disable this feature.|px|0|
 |wrap-before|true,false|Wrap text before wrap-width is reached. If this setting is off your lines will always be a bit longer than wrap-width. If this setting is on the lines will usually be a bit shorter, but can be longer if there is a single word that is longer than your current line limit.|||
-|text-transform|none, uppercase, lowercase, capitalize|Allows conversion of text to lower or upper case before display.|| "none" |
-|line-spacing|double|Vertical spacing between lines of multi-line labels. This spacing is in addition to the normal font line spacing|px|0|
-|character-spacing|double|Additional horizontal spacing between characters. Currently works for point placement only, not line placement. You will get the normal spacing defined by the font plus this amount of extra space. (Also works for line placements in harfbuzz branch.)|px|0|
 |spacing|double|Space between repeated labels. If spacing is 0 only one label is placed.|px|0|
 |label-position-tolerance|double|Allow labels to be moved from their point in line placement. Lower values indicate that Mapnik tries less positions and generally leads to fewer labels. Higher values lead to Mapnik trying more different positions along a line to find a free spot. If unset or 0, Mapnik sets this value based on the total length of the line to ensure enough labels are placed.|?|0|
 |force-odd-labels|true, false|Force an odd amount of labels to be generated.|bool|false|
 |max-char-angle-delta|duble|Maximum angle (in degrees) between two consecutive characters in a label allowed. The lower the number the fewer labels placed - this is to stop placing labels around sharp corners.|degree|22.5|
-|fill|color|Color of the text fill, e.g. #FFFFFF||black|
-|halo-fill|color|Color of the text halo||white|
-|halo-radius|double|Radius of the halo in pixels (Fractional pixels are accepted. See halo-rasterizer for limitations.)|px|0|
 |halo-rasterizer|fast, full|(Only for AGG renderer) Choose between good and fast halo rasterizer. Both produce equally good results for halo-radius <= 1.0. Only full rasterizer supports fractional values > 1.0. Other values are truncated by fast rasterizer (e.g. 1.8px = 1px). [Visual comparision](https://raw.github.com/mapnik/mapnik/master/tests/visual_tests/images/text-halo-rasterizer-600-400-1.0-agg-reference.png)||full|git only (2013-04-25)|
 |dx, dy|double|Displace label by fixed amount on either axis. Actual displacement also depends on vertical-alignment and horizontal-alignment|px|0.0|
 |avoid-edges|true, false|Boolean to avoid labeling near intersection edges|bool|false|
@@ -38,6 +28,26 @@
 |upright|left, right, auto, left_only, right_only|Select which way direction is used to place characters upright. The XXX_only variants place text only if more than 50% of all character are upright. Together with placement-type="list" this can be used to implement alternate texts. See below for an example. ||auto|harfbuzz
 |clip|true, false|If true then the geometry is clipped to the view before doing placements. Improves performance but can cause bad placements when the results are used for tiling|bool|true|2.0.0|
 |largest_bbox_only|true, false|?||true|?|
+
+### Character formatting options
+| *parameter* | *values/ type*  | *description* | *unit* | *default* | *version* |
+----------------|---------|----------------|-------|------------|---------|
+|face-name|string| Font name (see [[UsingCustomFonts]])| | |
+|fontset-name|string| FontSet name ||
+|size|double|Font size|px|10.0|
+|fill|color|Color of the text fill, e.g. #FFFFFF||black|
+|halo-fill|color|Color of the text halo||white|
+|halo-radius|double|Radius of the halo in pixels (Fractional pixels are accepted. See halo-rasterizer for limitations.)|px|0|
+|character-spacing|double|Additional horizontal spacing between characters. Currently works for point placement only, not line placement. You will get the normal spacing defined by the font plus this amount of extra space. (Also works for line placements in harfbuzz branch.)|px|0|
+|line-spacing|double|Vertical spacing between lines of multi-line labels. This spacing is in addition to the normal font line spacing|px|0|
+|wrap-character|char|Use this character instead of a space to wrap long names. (Harfbuzz branch ignores this and uses Unicode rules for line breaks.)|||
+|text-transform|none, uppercase, lowercase, capitalize|Allows conversion of text to lower or upper case before display.||none|
+
+### Deprecated options
+| *parameter* | *values/ type*  | *description* | *unit* | *default* | *version* |
+----------------|---------|----------------|-------|------------|---------|
+|name|expression|This is the query field you want to use for the label text, e.g. "street_name" (deprecated in Mapnik2, see section "new syntax" below)| |  |  
+
 ## Examples
 
 Some examples of Mapnik's ability to place text along lines:
