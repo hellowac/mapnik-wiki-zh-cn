@@ -92,7 +92,7 @@ For now, list your styles here!
 
 *Description*: see https://github.com/mapbox/osm-bright/blob/master/README.md
 
-*Type*: [[Carto]]
+*Type*: Carto MML
 
 *URI*: https://github.com/mapbox/osm-bright/
 
@@ -135,3 +135,13 @@ For now, list your styles here!
 *URI*: https://github.com/rweait/Mapnik-golf-overlay
 
 *Minimum Mapnik Version*: Mapnik 2.0.0
+
+## Open Streets Style
+
+*Description*: A TileMill/Carto style for OpenStreetMap PostGIS databases that you can export later to XML Mapnik format.
+
+*Type*: Carto MML 
+
+*URI*: https://github.com/mapbox/open-streets-style
+
+*Minimum Mapnik Version*:  2.2.0
