@@ -33,7 +33,7 @@ For now, list your styles here!
 
 *Type*: Mapnik XML
 
-*URI*: http://trac.openstreetmap.org/browser/applications/rendering/mapnik
+*URI*: https://github.com/openstreetmap/mapnik-stylesheets
 
 *Minimum Mapnik Version*: Mapnik 0.7.1 (recommended)
 
