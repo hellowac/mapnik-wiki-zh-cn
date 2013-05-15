@@ -29,7 +29,7 @@ MAPNIK_LOG_ERROR(object_name) << "This is an error message";
 
 Also, at runtime, severity level can be used by users to control verbosity.
 
-Here is an example in python:
+For example if a user wants to disable all log output, here is how that would be done in python:
 
 ```python
 import mapnik
@@ -60,6 +60,7 @@ When you configure Mapnik you have several options that can be set during the co
 - ENABLE_LOG - This option controls which severity levels should be compiled into the Mapnik binary. The default value is `False`. This default means that not all severity types will be compiled into Mapnik: only `error` and `none` levels will be available to toggle at runtime. The reason for this is to ensure that Mapnik runs fast by default, because verbose logging can slow down code execution. If set to `True` then logging of all severity types will be enabled and available at runtime. NOTE: This option defaults to `True` if `DEBUG=True` (see option below).
 - DEFAULT_LOG_SEVERITY - The `DEFAULT_LOG_SEVERITY` option controls which severity level will be used by default at runtime - the value it will be initialized to at startup. It is not recommended to change this option at configuration time, unless you are a developer or doing customized packaging of Mapnik. Users can change the severity level easily at runtime. The default level is `error`. Other named severity levels are: `debug`, `warn`, `none`. An important caveat is that the `ENABLE_LOG` option controls which severity levels are compiled into Mapnik by default, so setting `DEFAULT_LOG_SEVERITY` to `warn` or `debug` will have no effect unless `ENABLE_LOG` is `True`.
 - DEBUG - Default `False`. This flag adds various compile flags that add debugging information to the Mapnik binary. Mapnik runs slower and the binary will be much larger when build in debug mode than release mode (`DEBUG=False`). For this reason - that performance is not critical if you are building in debug mode - `ENABLE-LOG` is set to `True` in this mode to ensure that all possible logging verbosity is available.
+- RENDERING_STATS - This is an experimental option that may be removed in future releases. It defaults to `False`, but can be set to `True` to enable verbose logging of rendering behavior providing the timing of style and layer processing.
 
 ### Examples
 
