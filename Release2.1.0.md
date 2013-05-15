@@ -55,7 +55,7 @@ See also: [API-changes-between-v2.0-and-v2.1](https://github.com/mapnik/mapnik/w
 
 - Fixed rendering of thin svg lines ([#1129](https://github.com/mapnik/mapnik/issues/1129))
 
-- Improved logging/debugging system with release logs and file redirection (https://github.com/mapnik/mapnik/wiki/Runtime-Logging) ([#937](https://github.com/mapnik/mapnik/issues/937) and partially [#986](https://github.com/mapnik/mapnik/issues/986), [#467](https://github.com/mapnik/mapnik/issues/467))
+- Improved logging/debugging system with release logs and file redirection (https://github.com/mapnik/mapnik/wiki/Logging) ([#937](https://github.com/mapnik/mapnik/issues/937) and partially [#986](https://github.com/mapnik/mapnik/issues/986), [#467](https://github.com/mapnik/mapnik/issues/467))
 
 - GDAL: allow setting nodata value on the fly (will override value if nodata is set in data) ([#1161](https://github.com/mapnik/mapnik/issues/1161))
  

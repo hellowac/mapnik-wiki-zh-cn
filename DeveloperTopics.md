@@ -31,7 +31,7 @@ Any specific feature request or bug report should be created as a [new ticket](h
 
 [Build bot](https://github.com/mapnik/mapnik/wiki/BuildBot)
 
-[Runtime logging](https://github.com/mapnik/mapnik/wiki/Runtime-Logging)
+[Logging Framework](https://github.com/mapnik/mapnik/wiki/Logging)
 
 [Debugging mapnik](https://github.com/mapnik/mapnik/wiki/DebuggingMapnik) -- TODO!
 
