@@ -1,4 +1,15 @@
-Here we collect the guidelines and tricks to leverage debugging and logging Mapnik when developing in **the upcoming 2.1.0 release**.
+Mapnik >= 2.1.x supports a variety of logging options to make it possible for the developer or user to see what Mapnik is doing under the hood.
+
+The amount of possible logging functionality is determined at compile time, but the logging verbosity can also be controlled at runtime.
+
+## Compile time options
+
+When you configure Mapnik you have several options that can be set during the configure stage of building which impact how logging behaves
+
+- DEFAULT_LOG_SEVERITY - Default `error`. Other named severity levels are: `['debug', `warn`, `none`.
+- ENABLE_LOG - Default `False`. If set to `True` then logging of all severity types will be enabled. This is `True` by default if `DEBUG=True` (see option below).
+- ENABLE_STATS - 
+- DEBUG
 
 ## The runtime logger
 TODO
