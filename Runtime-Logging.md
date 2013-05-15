@@ -79,7 +79,7 @@ To compile Mapnik in release mode but will all logging severity levels and perfo
 To compile Mapnik such that it is completely silent by default:
 
 ```sh
-./configure DEFAULT_LOG_SEVERITY=none DEBUG=False ENABLE_STATS=False
+./configure DEFAULT_LOG_SEVERITY=none ENABLE_LOG=False DEBUG=False ENABLE_STATS=False
 ```
 
 NOTE: options are cached in the `config.py` file. So, make sure to override any options that you previously used, or remove them from your `config.py` file.
