@@ -20,12 +20,12 @@
 ### Bundled fonts and scons
     
 * Consider updating Scons-local to latest release.  
-  The last SCons update was 2.1.0.alpha
+  The last SCons update was 2.3.0.alpha
     
-        wget http://prdownloads.sourceforge.net/scons/scons-local-2.1.0.alpha.20101125.zip
+        wget http://prdownloads.sourceforge.net/scons/scons-local-2.3.0.zip
         rm -rf scons
-        unzip -o scons-local-2.1.0.alpha.20101125.zip -d scons/
-        rm scons-local-2.1.0.alpha.20101125.zip
+        unzip -o scons-local-2.3.0.zip -d scons/
+        rm scons-local-2.3.0.zip
     
 * Consider updating DeJaVu Fonts:  
   The last version updated was 2.33
