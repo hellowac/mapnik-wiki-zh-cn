@@ -136,7 +136,10 @@ git clone http://github.com/mapnik/mapnik
 
 # Or instead download the latest version (currently 2.1.0):
 wget https://github.com/downloads/mapnik/mapnik/mapnik-v2.1.0.tar.bz2
+tar xfj mapnik-v2.1.0.tar.bz2 
+mv mapnik-v2.1.0 mapnik
 
+# Then start compiling
 cd mapnik
 ./configure && make && sudo make install
 ```
