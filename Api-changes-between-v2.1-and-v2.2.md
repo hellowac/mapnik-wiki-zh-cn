@@ -5,6 +5,7 @@
  - Removed the `bind` option for datasources (#1654)
 
 ## Added
+ - Added Logging framework documentation synced with 2.2 status: https://github.com/mapnik/mapnik/wiki/Logging
  - `DebugSymbolizer` - if used it will draw the invisible collision boxes collected up to that point in rendering the stylesheet. Also can be used to draw all verticies of geometries with `mode=vertex` (#1366)
  - Added new `mapnik-config` flags: `--all-flags`, `--defines`, `--git-describe`, `--includes`, `--dep-includes`, `--cxxflags`, `--cxx` (#1443)
  - Added support for reading images from in memory streams (#1805) in c++ and python.
