@@ -75,11 +75,11 @@ First, remove any other old mapnik packages:
 sudo apt-get purge libmapnik* mapnik-utils python-mapnik
 ```
 
-### Ensure your boost version is recent enough
+### Ensure your boost version is recent enough (at least 1.47)
 
-Mapnik master may require a boost version more recent than provided by your Ubuntu distribution.
+Mapnik master may require a boost version more recent than provided by your Ubuntu distribution. 
 
-You can use the latest Boost version (that works with Mapnik) by installing Boost from the `mapnik/boost` PPA:
+Ubuntu 12.04 Precise ships with 2 different boost versions: 1.46 and 1.48. Make sure you install the correct version (see below) or use the latest Boost version (that works with Mapnik) by installing Boost from the `mapnik/boost` PPA:
 
 ```sh
 sudo add-apt-repository ppa:mapnik/boost
@@ -95,13 +95,23 @@ apt-cache policy libboost-dev
 ### Set up build environment
 
 ```sh
-    # get a build environment going...
-    sudo apt-get install \
-    libicu-dev \
+    # On Ubuntu 12.04 Precise, make sure you get the 1.48 boost packages:
+    sudo apt-get install \ 
+    libboost-filesystem1.48-dev \
+    libboost-program-options1.48-dev \
+    libboost-python1.48-dev libboost-regex1.48-dev \
+    libboost-system1.48-dev libboost-thread1.48-dev
+
+    # On newer system or if you've activated the mapnik PPA, then use this:
+    sudo apt-get install \ 
     libboost-filesystem-dev \
     libboost-program-options-dev \
     libboost-python-dev libboost-regex-dev \
     libboost-system-dev libboost-thread-dev \
+
+    # get a build environment going...
+    sudo apt-get install \
+    libicu-dev \
     python-dev libxml2 libxml2-dev \
     libfreetype6 libfreetype6-dev \
     libjpeg-dev \
@@ -121,7 +131,12 @@ apt-cache policy libboost-dev
 ### Then compile and install Mapnik
 
 ```sh
+# For the development branch:
 git clone http://github.com/mapnik/mapnik
+
+# Or instead download the latest version (currently 2.1.0):
+wget https://github.com/downloads/mapnik/mapnik/mapnik-v2.1.0.tar.bz2
+
 cd mapnik
 ./configure && make && sudo make install
 ```
