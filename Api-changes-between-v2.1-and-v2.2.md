@@ -1,3 +1,20 @@
 ## Removed
 
- - Map.aspect_fix_mode (see https://github.com/mapnik/mapnik/issues/1758)
+ - `geos` and `kismet` plugins were removed (#1809,#1833)
+ - `ltdl`, `cairomm`, and `libsigc++` dependencies were removed
+ - Removed the `bind` option for datasources (#1654)
+
+## Added
+ - `DebugSymbolizer` - if used it will draw the invisible collision boxes collected up to that point in rendering the stylesheet. Also can be used to draw all verticies of geometries with `mode=vertex` (#1366)
+ - Added new `mapnik-config` flags: `--all-flags`, `--defines`, `--git-describe`, `--includes`, `--dep-includes`, `--cxxflags`, `--cxx` (#1443)
+ - Added support for reading images from in memory streams (#1805) in c++ and python.
+ - Added `text-halo-rasterizer` property. Set to `fast` for lower quality but faster halo rendering (#1298) which matched new default method when radius is < 1.
+ - Added C++ api for overriding scale_denominator to enable rendering at fixed scale (#1582)
+ - Added Layer `buffer-size` that can be used to override Map `buffer-size` (#1566)
+ - Added `mapnik::map_request` class, a special object to allow passing mutable map objects to renderer (#1737)
+ - Added `is_solid` method to python mapnik.Image and mapnik.ImageView classes (#1728)
+ - Added support for controlling rendering behavior of markers on multi-geometries `marker-multi-policy` (#1555,#1573)
+ - Added alternative PNG/ZLIB implementation (`miniz`) that can be enabled with `e=miniz` (#1554)
+ - Added support for setting zlib `Z_FIXED` strategy with format string: `png:z=fixed`
+ - Added ability to re-use `mapnik::image_32` and `mapnik::grid` by exposing a `clear` method (#1571)
+ - Added support for writing RGB (no A) png images by using the format string of `png:t=0` (#1559)
