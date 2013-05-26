@@ -38,6 +38,24 @@
     
 * Check for new [unifont release](http://unifoundry.com/unifont.html)
 
+### Release candidate
+
+Consider first promoting a release candidate from master:
+
+```sh
+cd /tmp
+MAPNIK_VERSION="2.2.0-rc1"
+TARBALL_NAME="mapnik-v${MAPNIK_VERSION}"
+git clone git@github.com:mapnik/mapnik.git ${TARBALL_NAME}
+cd ${TARBALL_NAME}
+git rev-list --max-count=2 HEAD | tail -n+2 > GIT_REVISION
+git describe > GIT_DESCRIBE
+cd ../
+rm -rf ${TARBALL_NAME}/.git
+rm -rf ${TARBALL_NAME}/.gitignore
+tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
+```
+
 ### Pre-tag updates
 
   * Update version number in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
@@ -94,21 +112,6 @@ tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
 ```
 
 Note: the GIT_REVISION/GIT_DESCRIBE files are used as per https://github.com/mapnik/mapnik/issues/1170. We write a file before making the tarball so that systems that do not have git installed or that download the raw tarball can still know the git revision and describe output mapnik-config will report after source build.
-
-If creating a release candidate do instead:
-
-```sh
-export MAPNIK_SOURCES=`pwd`
-cd /tmp
-MAPNIK_VERSION="2.1.0rc0"
-TARBALL_NAME="mapnik-v${MAPNIK_VERSION}"
-git clone git@github.com:mapnik/mapnik.git ${TARBALL_NAME}
-rm -rf ${TARBALL_NAME}/.git
-rm -rf ${TARBALL_NAME}/.gitignore
-tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
-```
-
-Then upload that tarball to the [downloads page](https://github.com/mapnik/mapnik/downloads).
 
 * Go back to the mapnik source checkout and generate Python API docs:
 
