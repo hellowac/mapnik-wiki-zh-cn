@@ -96,7 +96,7 @@ apt-cache policy libboost-dev
 
 ```sh
     # On Ubuntu 12.04 Precise, make sure you get the 1.48 boost packages:
-    sudo apt-get install \ 
+    sudo apt-get install \
     libboost-filesystem1.48-dev \
     libboost-program-options1.48-dev \
     libboost-python1.48-dev libboost-regex1.48-dev \
