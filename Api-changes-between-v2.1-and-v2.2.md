@@ -6,6 +6,7 @@
 
 ## Changed
  - `<Filter>[attr] != ''</Filter>` now matches only empty strings. This syntax previously matched both empty strings and nulls but this behavior was unintended and buggy given that Mapnik has supported a `null` type since 2.0.0. If you wish to filter out all `attr` values that are not `empty strings` or `null` or `false boolean type` then you can do `Filter>[attr]</Filter>` or `<Filter>[attr] != '' and [attr] != null and [attr] != false</Filter>`
+ - Proj4 init errors due to invalid `srs` values will now cause exceptions when a map is loaded from XML as well as when encountered during rendering. The latter will very unlikely happen now that validation is done at map loading time. Previously errors were not reported except at render time and only as warnings printed to stderr (#646)
 
 ## Added
  - Added Logging framework documentation synced with 2.2 status: https://github.com/mapnik/mapnik/wiki/Logging
