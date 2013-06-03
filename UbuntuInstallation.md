@@ -132,7 +132,7 @@ apt-cache policy libboost-dev
 
 ```sh
 # For the development branch:
-git clone http://github.com/mapnik/mapnik
+git clone https://github.com/mapnik/mapnik
 
 # Or instead download the latest version (currently 2.1.0):
 wget https://github.com/downloads/mapnik/mapnik/mapnik-v2.1.0.tar.bz2
