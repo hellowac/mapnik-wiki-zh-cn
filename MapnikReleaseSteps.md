@@ -73,7 +73,7 @@ git push
   * Update CHANGELOG with the git hash of latest commit using the output of:
 
 ```
-git rev-parse --verify HEAD
+git describe # take hash after 'g'
 ```
 
   * Then, push change:
