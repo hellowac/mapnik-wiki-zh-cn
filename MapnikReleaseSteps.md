@@ -109,6 +109,8 @@ cd ../
 rm -rf ${TARBALL_NAME}/.git
 rm -rf ${TARBALL_NAME}/.gitignore
 tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
+# upload to s3
+s3cmd --acl-public put ${TARBALL_NAME}.tar.bz2 s3://mapnik/dist/v${MAPNIK_VERSION}/
 ```
 
 Note: the GIT_REVISION/GIT_DESCRIBE files are used as per https://github.com/mapnik/mapnik/issues/1170. We write a file before making the tarball so that systems that do not have git installed or that download the raw tarball can still know the git revision and describe output mapnik-config will report after source build.
