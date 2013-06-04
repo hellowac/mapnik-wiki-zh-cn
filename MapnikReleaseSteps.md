@@ -170,7 +170,7 @@ And create new launchpad PPA for the target release(s) and series at https://lau
     
 * Package binaries for Windows, Mac, and Ubuntu Linux (PPA)
 * Upload Mac/Win binary packages to the s3 bucket: <http://mapnik.s3.amazonaws.com/dist/>
-* Submit patch for updated [Mapnik Portfile](http://trac.macports.org/browser/trunk/dports/python/py26-mapnik/Portfile) and [homebrew Formula](https://github.com/mxcl/homebrew)
+* Submit pull request for homebrew formula: <https://github.com/mxcl/homebrew/blob/master/Library/Formula/mapnik.rb>
     
 ### Wiki Post-Release
 
