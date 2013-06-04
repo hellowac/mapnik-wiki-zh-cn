@@ -23,6 +23,18 @@ First, ensure `add-apt-repository` is installed:
 sudo apt-get install -y python-software-properties
 ```
 
+**Mapnik v2.2.0**
+
+This is the latest in the 2.2.x series.
+
+```sh
+sudo add-apt-repository ppa:mapnik/v2.2.0
+sudo apt-get update
+sudo apt-get install libmapnik mapnik-utils python-mapnik
+```
+
+These packages come from: https://launchpad.net/~mapnik/+archive/v2.2.0/+packages
+
 **Mapnik v2.1.0**
 
 This is the latest in the 2.1.x series.
@@ -35,21 +47,9 @@ sudo apt-get install libmapnik mapnik-utils python-mapnik
 
 These packages come from: https://launchpad.net/~mapnik/+archive/v2.1.0/+packages
 
-**Mapnik v2.0.2**
+**For nightly builds from master (3.0.0-pre)**
 
-This is the latest in the stable 2.0.x series.
-
-```sh
-sudo add-apt-repository ppa:mapnik/v2.0.2
-sudo apt-get update
-sudo apt-get install libmapnik mapnik-utils python-mapnik
-```
-
-These packages come from: https://launchpad.net/~mapnik/+archive/v2.0.2/+packages
-
-**For nightly builds from master (2.2.x)**
-
-This is the bleeding edge - built nightly - directly from https://github.com/mapnik/mapnik/commits/master
+This is the latest development code - built nightly - directly from https://github.com/mapnik/mapnik/commits/master
 
 ```sh
 sudo add-apt-repository ppa:mapnik/nightly-trunk
@@ -58,14 +58,6 @@ sudo apt-get install libmapnik mapnik-utils python-mapnik
 ```
 
 These packages come from: https://launchpad.net/~mapnik/+archive/nightly-trunk/+packages
-
-**For v0.7.2 version**
-
-```sh
-sudo add-apt-repository ppa:mapnik/nightly-0.7
-sudo apt-get update
-sudo apt-get install libmapnik mapnik-utils python-mapnik
-```
 
 ## Install Mapnik from source
 
