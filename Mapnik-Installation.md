@@ -1,6 +1,6 @@
-Mapnik 2.1 is the current stable release. 
+Mapnik 2.2 is the current stable release. 
 
-You can download the source code archive for Mapnik 2.1.0 from [here](https://github.com/mapnik/mapnik/downloads).
+You can download the source code archive for Mapnik 2.2.0 from <http://mapnik.org/download/>
 
 ## Installing / Building
 
