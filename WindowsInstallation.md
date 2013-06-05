@@ -10,22 +10,25 @@ If you an interested in compiling Mapnik from source on windows see the windows 
 
 The Windows builds have a slightly less complete feature set than is possible from source builds. Full support is planned, and this table tracks the versions in which new features are added:
 
-| *Mapnik Feature*                |    *0.5.0*  |  *0.5.1*  |     *0.6.0* | *0.6.1*   | *0.7.0*   | *0.7.1* |
-|:--------------------------------|-------------|-----------|-------------|-----------|-----------|--------:|
-| Cairo Rendering                    | -                 | -               | -                | -               | -               | -              |
-| ICU Unicode Support            | -                  | -               |  ***          |  ***         |  ***         | ***          |
-| Python 2.5 Support               |  ***           |  ***         |  ***           |  ***         |  ***         | ***         |
-| Python 2.6 Support               | -                 | -               | -                | -               |  ***         | ***         |
-| Libxml2 Parser Support        | -                 | -               | -                | ***          |  ***         | ***         |
-| Shapefile Plugin                     |  ***            |  ***         |  ***          |  ***          |  ***         | ***         |
-| Raster Plugin                          |  ***            |  ***         |  ***          |  ***          |  ***         | ***         |
-| PostGIS Plugin                        |  ***            |  ***         |  ***          |  ***          |  ***         | ***         |
-| GDAL Plugin                           | -                  | -               |  ***          |  ***          |  ***         | ***         |
-| OGR Plugin                             | -                  | -               | -                | ***          |  ***         | ***         |
-| SQLite Plugin                          | -                  | -               |  ***          |  ***          |  ***         | ***         |
-| OSM Plugin                             | -                  | -               | -                | -               | -               | -              |
-| shapeindex.exe                     | -                  | ***           |  ***          |  ***          |  ***         | ***         |
-| pgsql2sqlite.exe                   | -                  | -                |  ***          |  ***          |  ***         | ***         |
+| *Mapnik Feature* |*0.5.0*  |  *0.5.1*  | *0.6.0* | *0.6.1* | *0.7.0* | *0.7.1* | *2.2.0* |
+|:-----------------|---------|-----------|---------|---------|---------|---------|--------:|
+| Cairo Rendering | -| -| - | -| -| - | *** |
+| ICU Unicode Support| - | -|  ***  |  *** |  *** | ***  | *** |
+| Python 2.5 Support|  ***   |  *** |  ***   |  *** |  *** | *** | - |
+| Python 2.6 Support| -| -| - | -|  *** | *** | - |
+| Python 2.7 Support| -| -| - | -|  *** | *** | *** |
+| Libxml2 Parser Support| -| -| - | ***  |  *** | *** | *** |
+| Shapefile Plugin|  ***|  *** |  ***  |  ***  |  *** | *** | *** |
+| Raster Plugin |  ***|  *** |  ***  |  ***  |  *** | *** | *** |
+| PostGIS Plugin   |  ***|  *** |  ***  |  ***  |  *** | *** | *** |
+| GDAL Plugin  | - | -|  ***  |  ***  |  *** | *** | *** |
+| OGR Plugin| - | -| - | ***  |  *** | *** | *** |
+| SQLite Plugin | - | -|  ***  |  ***  |  *** | *** | *** |
+| GeoJSON Plugin | - | -|  -  |  -  |  - | - | *** |
+| CSVJSON Plugin | - | -|  -  |  -  |  - | - | *** |
+| OSM Plugin| - | -| - | -| -| -  | -  |
+| shapeindex.exe| - | ***   |  ***  |  ***  |  *** | *** | *** |
+| pgsql2sqlite.exe  | - | - |  ***  |  ***  |  *** | *** | *** |
 
  * - : not available
  * ***: available
