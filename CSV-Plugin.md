@@ -9,12 +9,14 @@ For more details on the motivations and design of this plugin see: https://githu
 Details on auto-detection:
 
 ### headers
-The plugin requires headers be present that give each column a name. It will parse the first line of the file as headers. If the first line is not actually headers then parsing behavior will be unpredictable because the plugin makes no attempt to detect whether the first line is pure data. You should ideally edit your CSV, adding headers if it does not have them. For cases where the CSV file may be very large or it is not feasible to add headers, then the plugin can be asked to dynamically accept them. Simply pass the option called `headers`, providing a comma delimited list of names like: `headers=x,y,name`. This would work for a csv file lacking headers like:
+The plugin requires headers be present that give each column a name. It will parse the first line of the file as headers. If the first line is not actually headers then parsing behavior will be unpredictable because the plugin makes no attempt to detect whether the first line is pure data. You should ideally edit your CSV, adding headers if it does not have them. For cases where the CSV file may be very large or it is not feasible to add headers, then the plugin can be asked to dynamically accept them. Simply pass the option called `headers`, providing a list of names separated by your delimiter of choice like: `headers=x,y,name`. This would work for a csv file lacking headers like:
 
 ```csv
 -122,48,Seattle
 0,51,London
 ```
+
+Or `headers=x|y|name` if your data is `|` delimited.
 
 ### file size
 
