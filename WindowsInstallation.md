@@ -49,18 +49,19 @@ This Guide will walk you through installing Mapnik and then running a test scrip
  
  3. Set your system and/or users environment variables:
   * Hint: _Control Panel->System->Advanced->Environment Variables_
-   a.  add *"C:\mapnik-v2.2.0\lib"* to the `PATH` variable.
+   a.  add `;C:\mapnik-v2.2.0\lib;` to the `PATH` variable.
+    * Note: The `;` characters are separators so add them before or after other entries that may be in your `PATH` variable. If you are only adding `C:\mapnik-v2.2.0\lib` (and your `PATH` has not been modified/added to yet then technically you can leave out the `;` until you add more entries.
     * Note: you may also need to set your user path environment variable.
     * If the variable `PATH` is not already present, add it.
     * Setting this correctly allows the Mapnik python bindings to find the `mapnik.dll`
    b. for PYTHON support add:
-    * PYTHON 2.7:   '''"C:\mapnik-v2.2.0\python\2.7\site-packages"''' to the `PYTHONPATH` variable.
+    * PYTHON 2.7:   `;C:\mapnik-v2.2.0\python\2.7\site-packages;` to the `PYTHONPATH` variable.
     * Setting this correctly allows Python to find the Mapnik python bindings when you do `>>> import mapnik`
 
  4. Open a new console by running "cmd" to test settings:
-  * Type "path" to make sure your PATH contains *"C:\mapnik-v2.2.0\lib"*
+  * Type "path" to make sure your PATH contains `C:\mapnik-v2.2.0\lib`
 
- 5. Run "C:\Python27\python.exe" , then type at a python prompt:
+ 5. Run `C:\Python27\python.exe`, then type at a python prompt:
 
 ```python
 import mapnik
@@ -69,7 +70,7 @@ import mapnik
   * If you get no error message, you made it!
   * If you do get an error message, see *Troubleshooting* below
  
- 6. open explorer, go to *"C:\mapnik-v2.2.0\demo\python"*, double click `rundemo.py`
+ 6. open explorer, go to `C:\mapnik-v2.2.0\demo\python`, double click `rundemo.py`
   * you should see several demo.* files output.
 
  7. If you run into errors, confirm that you've added the right paths to your environment.
@@ -99,7 +100,7 @@ Problem: When importing mapnik in python you get:
     ImportError: No module named mapnik
 ```
 
-Solution: make sure that you have put the 'site-packages' folder on your PYTHONPATH by completing *Step 3.b.*
+Solution: make sure that you have put the `site-packages` folder on your PYTHONPATH by completing *Step 3.b.*
 
 ### Unknown (Windows) Dependency not found
 
