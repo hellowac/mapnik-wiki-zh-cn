@@ -7,3 +7,5 @@ BY this estimation how long would it take to generate planet.osm.pbf tiles?
 What P.C. config is recommended?
 Please provide some data.
 And are my estimations rite?
+
+Please post questions like this to the osm-dev or mapnik users list and not as a wiki page. I will delete this entry shortly.
