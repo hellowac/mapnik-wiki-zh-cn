@@ -12,7 +12,7 @@ The Raster Colorizer allows the palette of rasters to be modified, for example, 
 
 To use the colorizer, create a style with a raster symbolizer and add a raster colorizer to it.
 
-The DataSource making use of the syle must be a single band raster opened with the gdal input plugin. It will not work with other input plugins; and it will not work if more than one band is loaded.
+The DataSource making use of the style must be a single band raster opened with the GDAL input plugin. It will not work with other input plugins; and it will not work if more than one band is loaded.
 
 The colorizer works in the following way:
 
@@ -40,7 +40,9 @@ Inherit is only valid for stops, and not the default colorizer mode. It means th
 # XML
 
 ## RasterColorizer element
+
 Required attributes: none
+
 Optional attributes:
 
  * _default-mode_ This can be either "discrete", "linear" or "exact". If it is not specified then the default is "linear".
@@ -69,8 +71,8 @@ See https://github.com/mapnik/mapnik/blob/master/tests/data/good_maps/raster_sym
 
 In this example XML, the following value to color translation is performed:
 
- * -inf <= x < -1000   white
- * -1000 <= x < -500    blue
+ * -inf <= x < -1000 white
+ * -1000 <= x < -500 blue
  * -500 <= x < 0 red
  * 0 <= x < 5 yellow blending to white
  * 5 <= x < 10 white blending to red
