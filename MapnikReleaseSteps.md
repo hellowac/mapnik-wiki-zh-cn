@@ -15,7 +15,9 @@
 
 * Ensure all tests pass (`make test`)
 
-* Test Mapnik with `INPUT_PLUGINS=''`
+* Test Mapnik with `INPUT_PLUGINS=''` and ensure tests gracefully test just what is available
+
+* Test with `./configure WARNING_CXXFLAGS="-Wextra"` to ensure all problematic warnings are solved or triaged.
 
 ### Bundled fonts and scons
     
