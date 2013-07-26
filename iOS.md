@@ -11,9 +11,8 @@ It includes:
  - All libraries and headers of all Mapnik dependencies
  - Mapnik datasource input plugins compiled statically into `libmapnik.a`
 
-Gochas:
 
-1) Supporting reading images
+## Supporting reading images
 
 If you need Mapnik to support reading images, then you need to compile the image readers directly into your app because otherwise they will not be available. Specifically what this means is that if you want Mapnik to be able to load PNG's and you are using Mapnik v2.2.0 then you need to:
 
@@ -24,7 +23,7 @@ If you need Mapnik to support reading images, then you need to compile the image
  - At app startup (like in `viewDidLoad`) call `register_image_reader("png",mapnik::create_png_reader);`
  - If you want to support reading images from a in memory stream also do `register_image_reader("png",mapnik::create_png_reader2);`
 
-2) Profiling
+## Profiling
 
 If you want to use the `Time profiler` in Instruments.app to profile your app using Mapnik by default what you see will be something like this when inspecting the call graph:
 
