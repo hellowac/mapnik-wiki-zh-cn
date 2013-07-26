@@ -25,13 +25,13 @@ If you need Mapnik to support reading images, then you need to compile the image
 
 ## Profiling
 
-If you want to use the `Time profiler` in Instruments.app to profile your app using Mapnik by default what you see will be something like this when inspecting the call graph:
+Read this if you want to use the `Time profiler` in Instruments.app to profile your app using Mapnik. By default if you try this you will see a call graph like this:
 
 <img src="images/call-graph-no-symbols.png"/>
 
-Where `mapnik-test` is the name of the app and notice the actual symbol names are missing. This makes it impossible to know which functions are being called.
+Where `mapnik-test` is the name of the app: notice the actual symbol names are missing. This makes it impossible to know which functions are being called.
 
-To fix this you need to know several things and then you willbe equipped to set up Instruments to get access to your function symbols (and the ones inside Mapnik).
+To fix this you need to know several things about your build setup and XCode and then you will be equipped to set up Instruments to get access to your function symbols (and the ones inside Mapnik).
 
  - Check whether your Profile `scheme` (as xcode calls different build variants) is being build as debug or release. Both will work for profiling as far as symbols go. To know the scheme go to the Xcode menu and choose `Product > Scheme > Edit Scheme` and then on the left side of the drawer choose "Profile" then note whether the "Build Configuration" is Release or Debug for your given app and destination device.
 
