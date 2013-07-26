@@ -33,6 +33,10 @@ Where `mapnik-test` is the name of the app: notice the actual symbol names are m
 
 To fix this you need to know several things about your build setup and XCode and then you will be equipped to set up Instruments to get access to your function symbols (and the ones inside Mapnik).
 
+You also need to have you project in XCode configured to write `.dSYM` files for debugging (which sit next to your app):
+
+<img src="http://f.cl.ly/items/0J08141k2n2q0c33402u/xcode-debug-format.png" />
+
  - Check whether your Profile `scheme` (as xcode calls different build variants) is being build as debug or release. Both will work for profiling as far as symbols go. To know the scheme go to the Xcode menu and choose `Product > Scheme > Edit Scheme` and then on the left side of the drawer choose "Profile" then note whether the "Build Configuration" is Release or Debug for your given app and destination device.
 
  - Find your XCode `DerivedData` folder, which is where builds actually go. It is normally at `~/Library/Developer/Xcode/DerivedData`
