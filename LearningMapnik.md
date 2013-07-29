@@ -13,7 +13,6 @@ To get first results, choose your weapon: XML, Python, C++, node.js, Ruby, Java 
 
 * [[Getting started using XML|GettingStartedInXML]]
 * [[Getting started using Python|GettingStartedInPython]]
-* [[Getting started using C++|GettingStartedInC]]
 * [node.js bindings](http://github.com/mapnik/node-mapnik)
 * [Ruby bindings](https://github.com/mapnik/Ruby-Mapnik)
 * [Java bindings](https://github.com/SpatialInteractive/mapnik-jni)
