@@ -94,3 +94,9 @@ And finally, run the python demo, just to make sure everything works OK.  The de
 If you see that output, no errors, and find those 3 images in the current directory, all went well.
 
 Otherwise, time to debug, or ask the mailing list for help!
+
+## Red Hat 4.6
+
+I did need to install extra packages to install on Red Hat 4.6:
+
+    # yum install libxml2-devel
