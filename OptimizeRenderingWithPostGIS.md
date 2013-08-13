@@ -121,7 +121,7 @@ Then you don't need to include a filter to test for tunnel in the Mapnik rules. 
     <Filter>[highway] = 'motorway' and ([tunnel] = 'yes' or [tunnel] = 'true' or [tunnel] = '1')</Filter>
 ```
     
-    becomes
+becomes
 
 ```xml    
     <Filter>[highway] = 'motorway'</Filter>
