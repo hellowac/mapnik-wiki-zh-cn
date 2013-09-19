@@ -45,6 +45,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
  * Element type: Collection of Rules
  * Attributes
   * *name*: Name for this Style object. Needs to be unique per configuration file. A Style is referenced by a Layer through the corresponding StyleName parameter. If a name is ommited, what will happen?
+  * *opacity*: Style level opacity: 1 is fully opaque while zero is fully transparent and .5 would be 50% transparent. See [#314](https://github.com/mapnik/mapnik/issues/314)
 
  * Children:
   * *[#Rule Rule]*
