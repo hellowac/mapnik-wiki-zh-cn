@@ -133,7 +133,7 @@ A PostGIS datasource may be created as follows:
         parameters p;
         p["type"]="postgis";
         p["host"]=database_hostname;
-        p["port"]=5432;
+        p["port"]="5432";
         p["dbname"]="gis";
         p["user"]=your_username;
         p["password"]="";
