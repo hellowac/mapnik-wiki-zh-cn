@@ -126,6 +126,9 @@ Plugin datasource initialization example code can be found on [[PluginArchitectu
 A PostGIS datasource may be created as follows:
 
 ```cpp
+#include <mapnik/version.hpp>
+#include <mapnik/datasource_cache.hpp>
+
     {
         parameters p;
         p["type"]="postgis";
@@ -136,7 +139,11 @@ A PostGIS datasource may be created as follows:
         p["password"]="";
     
         Layer lyr("Roads");
+#if MAPNIK_VERSION >= 200200
+        set_datasource(datasource_cache::instance().create(p));
+#else
         set_datasource(datasource_cache::instance()->create(p));
+#endif
         lyr.add_style("roads");
         m.addLayer(lyr);
     }
