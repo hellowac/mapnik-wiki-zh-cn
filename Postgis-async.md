@@ -16,7 +16,7 @@ The `asynchronous_request` parameter in PostGIS pulgin aims to parallelize rende
 
 ## When to use it
 Mandatory :
-* You have already applyed the [rendering optimizations with PoistGIS](OptimizeRenderingWithPostGIS)
+* You have already applied the [rendering optimizations with PoistGIS](OptimizeRenderingWithPostGIS)
 * you have a lot of PostGIS layers, at least six
 
 Nice to have :
