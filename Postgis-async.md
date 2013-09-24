@@ -87,15 +87,15 @@ Set a value to `max_async_connection` and `asynchronous_request` to `true` in yo
 ### How to set max_async_connection
 `max_async_connection` sets the size of the number of databases connections that can run in parallel for the rendering of one map. Concretely, it means how many layers to load features ahead. If you want to benefit from parallelization, you must ensure that the heaviest layer to draw does not wait for the geographic features, ie the PostGIS query must have been launched early enought.
 
-Let's consider an example, with the number of layers geographical features for 7 layers :
+Let's consider the number of geographical features for 7 layers :
 
-1. countries   500
-1. urban areas 550
-1. parcs   620
-1. commercial areas 580
-1. lakes   570
-1. roads   2500
-1. cities  300
+1. countries ->  500
+1. urban areas -> 550
+1. parcs -> 620
+1. commercial areas -> 580
+1. lakes -> 570
+1. roads -> 2500
+1. cities -> 300
 
 For the example, we will assume database query time and drawing time are equal and proportional to the number of features in the layer (1).
 
