@@ -2,33 +2,73 @@ Since Mapnik 2.3 the PostGIS pluging can be used asynchrnonously to reduce the o
 
 ## How it works
 Mapnik uses the painter's algorithm to render maps. It means that layers are drawn sequentially. The inner algorithmer is :
+```
     For each layer
        Query the features from the layer
+       Wait for the features...
        For each feature in this layer
-           Draw the layer
+           Draw the feature
+```
+In this case, the renderer spends a lot of time waiting for PostGIS to perform the query that will feed with features.
 
-In this case, the renderer spends a lot of time waiting for PostGis to perform the query that will feed with features.
-
-The asynchronous_request parameter in PostGIS pulgin aims to parallelize queries on the remote server and rendering : while a layer is rendering, queries are sent ahead.
+The asynchronous_request parameter in PostGIS pulgin aims to parallelize rendering and queries on the database server : while a layer is rendering, SQL queries for further layers are sent ahead.
 
 
 ## When to use it
-Must have :
-* You have already applyed all the [rendering optimizations with PoistGIS](/wiki:OptimizeRenderingWithPostGIS/)
-* you have a lot of PostGIS layers
+Mandatory :
+* You have already applyed the [rendering optimizations with PoistGIS](OptimizeRenderingWithPostGIS)
+* you have a lot of PostGIS layers, at least six
 
 Nice to have :
 * rendering time for layers are quite homogeneous
+* you already use cache-features=true to reduce rendering time
 * your PostGIS database is on another server
 
 ## When not to use it
 * you use cache-features=false ; if you want to reduce map rendering time, you should not send the same data base query twice if you have enough RAM to store the query restults
-* you have less thant 3 PostGIS layers
+* you have less than 3 PostGIS layers
 * you have very heterogenous layers : for example, a huge road layers that takes 8 times longer to render than the other layers
 
 ## How to use it
+### Usage from Python
+
+Instantiate a datasource like:
+
+```python
+    lyr = Layer('Geometry from PostGIS')
+    lyr.datasource = PostGIS(host='localhost',user='postgres',password='',dbname='your_postgis_database',table='your_table', asynchronous_request=True,max_async_connection=4)
+```
+
+
+## Usage from C++
+
+A PostGIS asynchronous datasource may be created as follows:
+
+```cpp
+#include <mapnik/version.hpp>
+#include <mapnik/datasource_cache.hpp>
+
+    {
+        parameters p;
+        p["type"]="postgis";
+        p["host"]=database_hostname;
+        p["port"]="5432";
+        p["dbname"]="gis";
+        p["user"]=your_username;
+        p["password"]="";
+        p["asynchronous_request"]=true;
+        p["max_async_connection"]=4;
+    
+        Layer lyr("Roads");
+        set_datasource(datasource_cache::instance().create(p));
+        lyr.add_style("roads");
+        m.addLayer(lyr);
+    }
+```
+
 ### Usage from XML 
-Set a value to *max_async_connection* and *asynchronous_request* to *true* in your existing PostGIS datasources :
+Set a value to `max_async_connection` and `asynchronous_request` to `true` in your existing PostGIS datasources :
+```xml
 <Layer name="countries" status="on" srs="+proj=latlong +datum=WGS84">
       <StyleName>countries_style_label</StyleName>
       <Datasource>
@@ -38,13 +78,17 @@ Set a value to *max_async_connection* and *asynchronous_request* to *true* in yo
         <Parameter name="user">postgres</Parameter>      
         <Parameter name="password"></Parameter>
         <Parameter name="table">world_worldborders</Parameter>
+        <Parameter name="max_size">5</Parameter>
         <Parameter name="asynchronous_request">true</Parameter>
         <Parameter name="max_async_connection">4</Parameter>
       </Datasource>
   </Layer>
+```
 ### How to set max_async_connection
-*max_async_connection* sets the size of the number of databases connections that can run in parallel for the rendering of one map. Concretely, it means how many layers to load features ahead.
+`max_async_connection` sets the size of the number of databases connections that can run in parallel for the rendering of one map. Concretely, it means how many layers to load features ahead. If you want to benefit from parallelization, you must ensure that the heaviest layer to draw does not wait for the geographic features, ie the PostGIS query must have been launched early enought.
+
 Let's consider an example, with the number of layers geographical features for 7 layers :
+
 1. countries   500
 1. urban areas 550
 1. parcs   620
@@ -52,5 +96,21 @@ Let's consider an example, with the number of layers geographical features for 7
 1. lakes   570
 1. roads   2500
 1. cities  300
-Let's we assume database query time and drawing time are equal and proportionnal to the number of features in the layer.
+
+For the example, we will assume database query time and drawing time are equal and proportional to the number of features in the layer (1).
+
 The largest layer is *roads* ; it is 4 time larger thant the others. Hence we should launch the query to get the features for roads before the drawing of layer *urban areas*, so that the query is finished when the drawing of roads is about to start.
+
+If you have no idea at all, **4** is a good start.
+
+
+(1) If you use two identical servers, and you have optimized layers according to [rendering optimizations with PoistGIS](OptimizeRenderingWithPostGIS), you can assume queries and drawing are about the same time, except for drawing labels that are slower than queries.
+
+
+### Impact on the database server
+If `max_async_connection` is set to 4, and the pool of database connection (`max_size`), when rendering one map, the database is likely to receveive 20 SQL queries at the same time.
+
+You must ensure the parameter `max_connections` in [postgresql.conf](http://www.postgresql.org/docs/9.3/static/runtime-config-connection.html) can handle at least `max_async_connection` x `max_size`. Be carrefull when changing `max_connections`, because it might use more memory on the server (see `work_mem` in http://www.postgresql.org/docs/9.3/static/runtime-config-resource.html)
+
+### Tip : how to mesure the drawing / waiting for the database ratio
+Monitor your CPU activity while rendering maps in a loop, for exemple with htop under Linux. You must have removed all non-PostGIS layers and set the `asynchronous_request` parameter to **false**. If the activity of the only CPU used is 40%, you can deduce that Mapnik spends 40% of time drawing and 60% waiting for the result of database queries.
