@@ -7,10 +7,11 @@ Mapnik uses the painter's algorithm to render maps. It means that layers are dra
 
 ```
     For each layer
-       Query the features from the layer
-       Wait for the features...
-       For each feature in this layer
-           Draw the feature
+       For each style attached to the layer
+         Query the features from the layer
+         Wait for the features...
+         For each feature in this layer for given style
+             For each matching rule draw the feature
 ```
 In this case, the renderer spends a lot of time waiting for PostGIS to perform the query that will feed with features.
 
