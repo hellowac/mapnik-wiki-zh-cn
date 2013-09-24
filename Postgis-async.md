@@ -9,7 +9,7 @@ Mapnik uses the painter's algorithm to render maps. It means that layers are dra
 
 In this case, the renderer spends a lot of time waiting for PostGis to perform the query that will feed with features.
 
-The asynchronous_request parameter in PostGIS pulgin aims to parallelize querries on the remote server and rendering : while a layer is rendering, queries are sent ahead.
+The asynchronous_request parameter in PostGIS pulgin aims to parallelize queries on the remote server and rendering : while a layer is rendering, queries are sent ahead.
 
 
 ## When to use it
@@ -39,6 +39,18 @@ Set a value to *max_async_connection* and *asynchronous_request* to *true* in yo
         <Parameter name="password"></Parameter>
         <Parameter name="table">world_worldborders</Parameter>
         <Parameter name="asynchronous_request">true</Parameter>
-        <Parameter name="max_async_connection">3</Parameter>
+        <Parameter name="max_async_connection">4</Parameter>
       </Datasource>
   </Layer>
+### How to set max_async_connection
+*max_async_connection* sets the size of the number of databases connections that can run in parallel for the rendering of one map. Concretely, it means how many layers to load features ahead.
+Let's consider an example, with the number of layers geographical features for 7 layers :
+1. countries   500
+1. urban areas 550
+1. parcs   620
+1. commercial areas 580
+1. lakes   570
+1. roads   2500
+1. cities  300
+Let's we assume database query time and drawing time are equal and proportionnal to the number of features in the layer.
+The largest layer is *roads* ; it is 4 time larger thant the others. Hence we should launch the query to get the features for roads before the drawing of layer *urban areas*, so that the query is finished when the drawing of roads is about to start.
