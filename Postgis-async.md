@@ -13,27 +13,33 @@ Mapnik uses the painter's algorithm to render maps. It means that layers are dra
          For each feature in this layer for given style
              For each matching rule draw the feature
 ```
-In this case, the renderer spends a lot of time waiting for PostGIS to perform the query that will feed with features.
+In this case, the renderer potentially spends a lot of time waiting for PostGIS to perform and return the query results that will provide the feature resultset.
 
-The `asynchronous_request` parameter in PostGIS plugin aims to parallelize rendering and queries on the database server : while a layer is rendering, SQL queries for further layers are sent ahead.
+The new `asynchronous_request` parameter in PostGIS plugin aims to parallelize rendering and queries on the database server : while a layer is rendering, SQL queries for further layers are sent ahead.
 
 
 ## When to use it
-Mandatory :
-* You have already applied the [rendering optimizations with PostGIS](OptimizeRenderingWithPostGIS)
-* you have a lot of PostGIS layers, at least six
 
-Nice to have :
-* rendering time for layers are quite homogeneous
-* you already use cache-features=true to reduce rendering time
-* your PostGIS database is on another server
+A good idea:
+* You have already applied the [rendering optimizations with PostGIS](OptimizeRenderingWithPostGIS)
+* You have at least six PostGIS layers in your stylesheet
+
+Nice to have:
+* Rendering time for layers are quite homogeneous
+* You already use `cache-features=true` to reduce rendering time in the case of layers with multiple styles
+* Your PostGIS database is on another server (so that the extra load on the database from parallel queries can be handled well)
+
+## Problems it will not solve
+
+It will only parallelize queries on different layers. If your layer has multiple styles (like for drawing road casings) then the multiple queries issued for that same layer will not be parallelized. Therefore if you want to speed up this scenario you should instead try using `cache-features=true` which will trigger caching of data on the first pass to avoid issuing the same query twice. Just make sure you have enough RAM to store the query results (this is why `cache-features=true` is not the default).
 
 ## When not to use it
-* you use cache-features=false... If you want to reduce map rendering time, you should first consider not  querying the database twice, if you have enough RAM to store the query results
-* you have less than 3 PostGIS layers
-* you have very heterogenous layers : for example, a huge road layers that takes 8 times longer to render than the other layers
+
+* You have less than 3 PostGIS layers - unlikely any benefit.
+* You have very heterogenous layers : for example, a huge road layers that takes 8 times longer to render than the other layers. Issuing multiple queries in this case may just slow down the fetch for that single really slow layer and will not benefit your overall rendering times.
 
 ## How to use it
+
 ### Usage from Python
 
 Instantiate a datasource like:
@@ -71,7 +77,8 @@ A PostGIS asynchronous datasource may be created as follows:
 ```
 
 ### Usage from XML 
-Set a value to `max_async_connection` and `asynchronous_request` to `true` in your existing PostGIS datasources :
+Set the value of `max_async_connection` and `asynchronous_request` in your existing PostGIS datasources:
+
 ```xml
 <Layer name="countries" status="on" srs="+proj=latlong +datum=WGS84">
       <StyleName>countries_style_label</StyleName>
@@ -88,8 +95,9 @@ Set a value to `max_async_connection` and `asynchronous_request` to `true` in yo
       </Datasource>
   </Layer>
 ```
-### How to set max_async_connection
-`max_async_connection` sets the size of the number of databases connections that can run in parallel for the rendering of one map. Concretely, it means how many layers to load features ahead. If you want to benefit from parallelization, you must ensure that the heaviest layer to draw does not wait for the geographic features, ie the PostGIS query must have been launched early enough.
+### What value to use for max_async_connection and when/for what layers to set it?
+
+`max_async_connection` sets the database connection size that can run in parallel for the rendering of one map. Concretely, it means how many layers to load features for ahead of rendering. If you want to benefit from parallelization, you must ensure that the heaviest layer to draw does not wait for the geographic features, ie the PostGIS query must have been launched early enough.
 
 Let's consider the number of geographical features for 7 layers :
 
@@ -101,9 +109,9 @@ Let's consider the number of geographical features for 7 layers :
 1. roads -> 2500
 1. cities -> 300
 
-For the example, we will assume database query time and drawing time are equal and proportional to the number of features in the layer (1).
+In this example we assume database query time and drawing time are equal and proportional to the number of features in the layer (1).
 
-The largest layer is *roads* ; it is 4 time larger than the others. Hence we should launch the query to get the features for roads before the drawing of layer *urban areas*, so that the query is finished when the drawing of roads is about to start. So `max_async_connection` can be set to 4.
+The largest layer is *roads*; it is 4 time larger than the others. Hence we should launch the query to get the features for roads before the drawing of layer *urban areas*, so that the query is finished when the drawing of roads is about to start. So `max_async_connection` can be set to 4.
 
 
 Anyway, if you have no idea at all, **4** is a good start.
