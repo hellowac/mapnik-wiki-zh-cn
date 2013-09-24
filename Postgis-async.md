@@ -11,7 +11,7 @@ Mapnik uses the painter's algorithm to render maps. It means that layers are dra
 ```
 In this case, the renderer spends a lot of time waiting for PostGIS to perform the query that will feed with features.
 
-The asynchronous_request parameter in PostGIS pulgin aims to parallelize rendering and queries on the database server : while a layer is rendering, SQL queries for further layers are sent ahead.
+The `asynchronous_request` parameter in PostGIS pulgin aims to parallelize rendering and queries on the database server : while a layer is rendering, SQL queries for further layers are sent ahead.
 
 
 ## When to use it
