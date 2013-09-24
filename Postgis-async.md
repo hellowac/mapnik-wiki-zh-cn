@@ -113,5 +113,5 @@ If `max_async_connection` is set to 4, and the pool of database connection (`max
 
 You must ensure the parameter `max_connections` in [postgresql.conf](http://www.postgresql.org/docs/9.3/static/runtime-config-connection.html) can handle at least `max_async_connection` x `max_size`. Be carrefull when changing `max_connections`, because it might use more memory on the server (see `work_mem` in http://www.postgresql.org/docs/9.3/static/runtime-config-resource.html)
 
-### Tip : how to mesure the drawing / waiting for the database ratio
+### Tip : how to mesure the drawing / waiting-for-database ratio
 Monitor your CPU activity while rendering maps in a loop, for exemple with htop under Linux. You must have removed all non-PostGIS layers and set the `asynchronous_request` parameter to **false**. If the activity of the only CPU used is 40%, you can deduce that Mapnik spends 40% of time drawing and 60% waiting for the result of database queries.
