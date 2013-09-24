@@ -25,7 +25,7 @@ Nice to have :
 * your PostGIS database is on another server
 
 ## When not to use it
-* you use cache-features=false ; if you want to reduce map rendering time, you should not send the same data base query twice if you have enough RAM to store the query restults
+* you use cache-features=false... If you want to reduce map rendering time, you should first consider not  querying the database twice, if you have enough RAM to store the query restults
 * you have less than 3 PostGIS layers
 * you have very heterogenous layers : for example, a huge road layers that takes 8 times longer to render than the other layers
 
