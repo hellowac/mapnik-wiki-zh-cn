@@ -99,9 +99,10 @@ Let's consider the number of geographical features for 7 layers :
 
 For the example, we will assume database query time and drawing time are equal and proportional to the number of features in the layer (1).
 
-The largest layer is *roads* ; it is 4 time larger thant the others. Hence we should launch the query to get the features for roads before the drawing of layer *urban areas*, so that the query is finished when the drawing of roads is about to start.
+The largest layer is *roads* ; it is 4 time larger thant the others. Hence we should launch the query to get the features for roads before the drawing of layer *urban areas*, so that the query is finished when the drawing of roads is about to start. So `max_async_connection` can be set to 4.
 
-If you have no idea at all, **4** is a good start.
+
+Anyway, if you have no idea at all, **4** is a good start.
 
 
 (1) If you use two identical servers, and you have optimized layers according to [rendering optimizations with PoistGIS](OptimizeRenderingWithPostGIS), you can assume queries and drawing are about the same time, except for drawing labels that are slower than queries.
