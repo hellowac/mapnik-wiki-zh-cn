@@ -29,7 +29,7 @@ See also a performance tuning page: [[OptimizeRenderingWithPostGIS]]
 | encoding              | string       | internal file encoding | utf-8 |
 | simplify_geometries   | boolean      | whether to automatically [reduce input vertices](http://blog.cartodb.com/post/20163722809/speeding-up-tiles-rendering). Only effective when output projection matches (or is similar to) input projection. Available from version 2.1.x up. | false |
 | asynchronous_request  | boolean       | Postgres querries are sent asynchronously : wile rendering a layer, querries for further layers will run in parallel in the remote server. Full doc [here](Postgis-async) Available from version 2.3.x up. | false |
-| max_async_connection  | integer       | max number of PostGIS querries for rendering one map in asynchronous mode. Has no effect when asynchronous_request=false | 5 |
+| max_async_connection  | integer       | max number of PostGIS querries for rendering one map in asynchronous mode. Used only when asynchronous_request=true. Default value (1) has no effect. | 1 |
 
 ## Usage
 
