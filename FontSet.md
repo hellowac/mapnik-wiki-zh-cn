@@ -13,8 +13,8 @@ Here's a small example:
     <!DOCTYPE Map>
     <Map srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
      <FontSet name="my-fonts">
-      <Font face_name="DejaVu Sans Book" />
-      <Font face_name="TSC FMing S TT Regular" />
+      <Font face-name="DejaVu Sans Book" />
+      <Font face-name="TSC FMing S TT Regular" />
      </FontSet>
     
      <Style name="font-test">
