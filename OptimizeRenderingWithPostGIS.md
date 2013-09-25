@@ -196,6 +196,9 @@ Also, if you are filtering or sorting on a specific field, an index on that fiel
     CREATE INDEX idx_buildings_code ON buildings USING btree(code);
 ```
 
+## Use asynchronous PostGIS datasource
+PostGIS datasource can be used asynchronously so SQL querries are processed by the postgres server while mapnik does actual rendering. Fine tuning explained in [[Postgis-async]].
+
 ## General Postgresql maintenance
 
 Keep your database optimized. You should run this SQL command from time to time:
