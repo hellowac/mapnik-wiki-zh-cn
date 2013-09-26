@@ -35,5 +35,6 @@ Say we wanted to change the mode to `ADJUST_BBOX_HEIGHT` and we have a map in me
 ```python
 m.aspect_fix_mode = mapnik.aspect_fix_mode.ADJUST_BBOX_HEIGHT
 ```
+For a python example of this in action see <https://gist.github.com/andrewharvey/1290744>
 
 In Javascript [this is not yet exposed](https://github.com/mapnik/node-mapnik/issues/177).
