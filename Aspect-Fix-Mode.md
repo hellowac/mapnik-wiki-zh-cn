@@ -4,7 +4,7 @@ Mapnik's `aspect_fix_mode` is both wonderful and evil. This page explains why.
 
 Mapnik uses a bounding box (aka. envelope or bounding rectangle) to decide what data to query and where to place it on a given map.
 
-A bounding box (BBOX) is made up of 2 x,y coordinate pairs representing the lower left corner and the upper right and is expressed as `minx,miny,maxx,maxy`. So a BBOX that represents the entire world is `-180,-90,180,90` if we are speaking in long/lat degrees. The coordinate values are specific to the spatial reference system you are using, so another common BBOX is the global extents in [web mercator](http://wiki.openstreetmap.org/wiki/Mercator): `-20037508.342789244,-20037508.342789244,20037508.342789244,20037508.342789244`
+A bounding box (BBOX) is made up of 2 x,y coordinate pairs representing the lower left corner and the upper right and is expressed as `minx,miny,maxx,maxy`. So a BBOX that represents the entire world is `-180,-90,180,90` if we are speaking in long/lat degrees. The coordinate values are specific to the spatial reference system you are using, so another common BBOX is the global extents in [web mercator](http://wiki.openstreetmap.org/wiki/Mercator): `-20037508.342789244,-20037508.342789244,20037508.342789244,20037508.342789244`. Curious how these were calculated? See [this code](https://github.com/mapbox/tilelive-mapnik/blob/2af055024e74414e75c714cbd47a115f43cfb3f2/lib/render.js#L8-L12).
 
 With common tiling schemes it is easy to know the BBOX based on a given zoom level and x/y tile id and to know the reverse. Learn more at <http://www.maptiler.org/google-maps-coordinates-tile-bounds-projection/> and see some code that does this at <https://github.com/mapbox/node-sphericalmercator>.
 
