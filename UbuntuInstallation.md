@@ -95,7 +95,7 @@ apt-cache policy libboost-dev
     libboost-system1.48-dev libboost-thread1.48-dev
 
     # On newer system or if you've activated the mapnik PPA, then use this:
-    sudo apt-get install \ 
+    sudo apt-get install \
     libboost-filesystem-dev \
     libboost-program-options-dev \
     libboost-python-dev libboost-regex-dev \
