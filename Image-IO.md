@@ -16,7 +16,7 @@ Mapnik functions like `mapnik.Image.save` in python or `mapnik::save_to_string` 
 
 So, for example to create a full color, 32 bit PNG with a custom compression level you could do:
 
-```
+```python
 im = mapnik.Image(256,256)
 im.save('file.png','png32:z=1')
 ```
