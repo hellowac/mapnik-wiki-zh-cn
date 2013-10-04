@@ -94,7 +94,7 @@ The `image_hint` details (from the webp sources) are:
 | 0 | default / `WEBP_HINT_DEFAUL` |
 | 1 | picture / `WEBP_HINT_PICTURE` (digital picture, like portrait, inner shot) |
 | 2 | photo / `WEBP_HINT_PHOTO` (outdoor photograph, with natural lighting) |
-| 2 | graph / `WEBP_HINT_GRAPH` (Discrete tone image (graph, map-tile etc).) |
+| 3 | graph / `WEBP_HINT_GRAPH` (Discrete tone image (graph, map-tile etc).) |
 
 And all the `WebPConfig` based advanced options are:
 
