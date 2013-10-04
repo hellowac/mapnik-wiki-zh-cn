@@ -4,6 +4,10 @@
 
 ## Changed
 
+ - Default PNG output now is paletted using the high quality alpha-preserving `hextree` encoder (what used to be only possible with `png8:m=h`. This is now triggered when the `png` format string is used. Use `png32` to maintain rendering of full color rgba images as previously. More details at [this ticket](https://github.com/mapnik/mapnik/issues/2028) and [[Image-IO]]
+ - `colorize-alpha` filter now takes a single color argument (rather than requiring more than one) and will use this single color to paint in place of the existing alpha values.
+
 ## Added
- - `webp` image support
+ - `webp` image support. See [[Image-IO]] for more details
  - `scale-hsla` image filter
+ - `color-to-alpha` image filter
