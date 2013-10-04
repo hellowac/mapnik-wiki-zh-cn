@@ -3,7 +3,7 @@ Mapnik supports reading and writing a variety of image formats.
 These formats can be used as:
 
  - Output formats for rendered map tiles
- - Input formats for symbols or icons for symbolizers like the `MarkersSymbolizer`
+ - Input formats for symbols or icons for symbolizers like the [[MarkersSymbolizer]]
  - Input formats for the [[Raster]] datasource plugin. Note: if you are looking for what raster geodata formats are supported see also what the [[GDAL]] datasource plugin supports.
 
 ## Format strings
@@ -41,6 +41,9 @@ In Mapnik >= 2.3.x by default:
  - PNG output is paletted png with no greater than 256 colors (aka. `png8`)
  - JPEG output uses a `quality` of 85.
  - TIFF output uses `PHOTOMETRIC_RGB` and `COMPRESSION_DEFLATE`
+ - WEBP output uses `WEBP_HINT_GRAPH` as an `image_hint` to indicate to the encoder that the image is likely a discrete tone image (this may change in the future) and otherwise uses WEBP encoder defaults.
+
+See the C++ [image_util.cpp](https://github.com/mapnik/mapnik/blob/master/src/image_util.cpp) file for definitive defaults that are set for various encoders (as this wiki page may become out of date).
 
 ### TIFF output options
 
