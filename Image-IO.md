@@ -66,8 +66,8 @@ So, the two main types can be requested using the formats names:
 
 | Name | Type |
 | ---- | -----: |
-| png/png8/png256 | Creates reduced color/quantized paletted png NOTE: in Mapnik versions older than 2.3.x the `png` keyword used to map to full color png|
-| png24/png32     | Creates full color png with millions of possible colors (and much larger file size) |
+| `png`, `png8` , or `png256` | Creates reduced color/quantized paletted png NOTE: in Mapnik versions older than 2.3.x the `png` keyword used to map to full color png|
+| `png24` or `png32`     | Creates full color png with millions of possible colors (and much larger file size) |
 
 And the key:value options can be controlled as follows:
 
