@@ -65,7 +65,7 @@ There generally two types of PNG Mapnik can author: 1) reduced color paletted pn
 So, the two main types can be requested using the formats names:
 
 | Name | Type |
-| ---- | -----: |
+| ---- | ----- |
 | `png`, `png8` , or `png256` | Creates reduced color/quantized paletted png NOTE: in Mapnik versions older than 2.3.x the `png` keyword used to map to full color png|
 | `png24` or `png32`     | Creates full color png with millions of possible colors (and much larger file size) |
 
@@ -82,3 +82,57 @@ And the key:value options can be controlled as follows:
 | e    | string, `miniz` or `libpng` | 'libpng` | Experimental: not recommended to set this option. `e=miniz` triggers using the experimental miniz encoder support instead of `libpng`. In some cases this encoder provides better encoding speeds with minor size differences but it also does not work fully yet (bugs we need to track down) |
 
 ### WEBP output options
+
+We support one custom option called `alpha`. If you pass `alpha=false` then an `rgb` webp image will be created instead of an `rgba` image. It is unclear yet whether there is any major benefit to encoding `rgb` webp images and so this option may be removed in the future.
+
+We support every option in the [Advanced Encoding API](https://developers.google.com/speed/webp/docs/api#advanced_encoding_api) except `show_compressed`.
+
+The `image_hint` details (from the webp sources) are:
+
+| value | meaning |
+| ----- | ------- |
+| 0 | default / `WEBP_HINT_DEFAUL` |
+| 1 | picture / `WEBP_HINT_PICTURE` (digital picture, like portrait, inner shot) |
+| 2 | photo / `WEBP_HINT_PHOTO` (outdoor photograph, with natural lighting) |
+| 2 | graph / `WEBP_HINT_GRAPH` (Discrete tone image (graph, map-tile etc).) |
+
+And all the `WebPConfig` based advanced options are:
+
+```c++
+struct WebPConfig {
+  int lossless;           // Lossless encoding (0=lossy(default), 1=lossless).
+  float quality;          // between 0 (smallest file) and 100 (biggest)
+  int method;             // quality/speed trade-off (0=fast, 6=slower-better)
+
+  WebPImageHint image_hint;  // Hint for image type (lossless only for now).
+
+  // Parameters related to lossy compression only:
+  int target_size;        // if non-zero, set the desired target size in bytes.
+                          // Takes precedence over the 'compression' parameter.
+  float target_PSNR;      // if non-zero, specifies the minimal distortion to
+                          // try to achieve. Takes precedence over target_size.
+  int segments;           // maximum number of segments to use, in [1..4]
+  int sns_strength;       // Spatial Noise Shaping. 0=off, 100=maximum.
+  int filter_strength;    // range: [0 = off .. 100 = strongest]
+  int filter_sharpness;   // range: [0 = off .. 7 = least sharp]
+  int filter_type;        // filtering type: 0 = simple, 1 = strong (only used
+                          // if filter_strength > 0 or autofilter > 0)
+  int autofilter;         // Auto adjust filter's strength [0 = off, 1 = on]
+  int alpha_compression;  // Algorithm for encoding the alpha plane (0 = none,
+                          // 1 = compressed with WebP lossless). Default is 1.
+  int alpha_filtering;    // Predictive filtering method for alpha plane.
+                          //  0: none, 1: fast, 2: best. Default if 1.
+  int alpha_quality;      // Between 0 (smallest size) and 100 (lossless).
+                          // Default is 100.
+  int pass;               // number of entropy-analysis passes (in [1..10]).
+
+  int show_compressed;    // if true, export the compressed picture back.
+                          // In-loop filtering is not applied.
+  int preprocessing;      // preprocessing filter (0=none, 1=segment-smooth)
+  int partitions;         // log2(number of token partitions) in [0..3]
+                          // Default is set to 0 for easier progressive decoding.
+  int partition_limit;    // quality degradation allowed to fit the 512k limit on
+                          // prediction modes coding (0: no degradation,
+                          // 100: maximum possible degradation).
+};
+```
