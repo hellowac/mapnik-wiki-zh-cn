@@ -83,7 +83,7 @@ And the key:value options can be controlled as follows:
 
 ### WEBP output options
 
-We support one custom option called `alpha`. If you pass `alpha=false` then an `rgb` webp image will be created instead of an `rgba` image. It is unclear yet whether there is any major benefit to encoding `rgb` webp images and so this option may be removed in the future.
+We support one custom option called `alpha`. If you pass `webp:alpha=false` then an `rgb` webp image will be created instead of an `rgba` image. It is unclear yet whether there is any major benefit to encoding `rgb` webp images and so this option may be removed in the future.
 
 We support every option in the [Advanced Encoding API](https://developers.google.com/speed/webp/docs/api#advanced_encoding_api) except `show_compressed`.
 
