@@ -41,7 +41,7 @@ In Mapnik >= 2.3.x by default:
  - PNG output is paletted png with no greater than 256 colors (aka. `png8`)
  - JPEG output uses a `quality` of 85.
  - TIFF output uses `PHOTOMETRIC_RGB` and `COMPRESSION_DEFLATE`
- - WEBP output uses `WEBP_HINT_GRAPH` as an `image_hint` to indicate to the encoder that the image is likely a discrete tone image (this may change in the future) and otherwise uses WEBP encoder defaults.
+ - WEBP output uses all WEBP encoder defaults meaning lossy compression (`lossless=0`) and a default quality of `75` (`quality=75`).
 
 See the C++ [image_util.cpp](https://github.com/mapnik/mapnik/blob/master/src/image_util.cpp) file for definitive defaults that are set for various encoders (as this wiki page may become out of date).
 
@@ -87,11 +87,13 @@ We support one custom option called `alpha`. If you pass `webp:alpha=false` then
 
 We support every option in the [Advanced Encoding API](https://developers.google.com/speed/webp/docs/api#advanced_encoding_api) except `show_compressed`.
 
+We default to all webp defaults. This means that the default encoding is `quality=75` and `lossless=0`.
+
 The `image_hint` details (from the webp sources) are:
 
 | value | meaning |
 | ----- | ------- |
-| 0 | default / `WEBP_HINT_DEFAUL` |
+| 0 | default / `WEBP_HINT_DEFAULT` |
 | 1 | picture / `WEBP_HINT_PICTURE` (digital picture, like portrait, inner shot) |
 | 2 | photo / `WEBP_HINT_PHOTO` (outdoor photograph, with natural lighting) |
 | 3 | graph / `WEBP_HINT_GRAPH` (Discrete tone image (graph, map-tile etc).) |
