@@ -106,3 +106,6 @@ Calls ```placement_finder.next_position``` and then repeatedly ```placement_find
 Shield symbolizer: Calculates bounding box and disables text along line.
 
 No i18n required.
+## placement_finder
+### next_position
+Selects the next style in the ```text_placement_info``` list. Processes the feature into a list of texts with associated styles stored in a text_layout by calling ```text_layout.add_text```. Then it calls ```text_layout.layout``` which updates metrics of the ```text_layout``` objects and converts the text into a list of glyphs. These glyphs are always in left to right order so no special care has to be taken while processing them. **If you are trying to add i18n code to ```placement_finder``` you are doing it wrong!**
