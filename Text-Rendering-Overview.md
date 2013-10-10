@@ -92,3 +92,17 @@ Contains all text symbolizer properties. Also stores formating information and u
 * ```to_xml```: Save all values to XML ptree (but does not create a new parent node!).
 * ```get_all_expressions```: Get a list of all expressions used in any placement. This function is used to collect attributes.
 * ```process```: Takes a feature and produces formated text as output. The output ```processed_text``` object has to be created by the caller and passed in for thread safety.
+
+# Rendering in harfbuzz branch
+## Renderer code 
+Delegates all processing to ```text_symbolizer_helper``` to avoid code duplication in individual renderers. Gets a list of glyphs and their positions. Doesn't have to care about i18n in any way.
+
+Shield symbolizer: Uses ```shield_symbolizer_helper``` and renders shield in addition to text.
+## text_symbolizer_helper
+Selects starting points for ```placement_finder```. 
+
+Calls ```placement_finder.next_position``` and then repeatedly ```placement_finder.find_point_placement``` or ```placement_finder.find_line_placements```. If there wasn't a placement for every geometry is calls ```next_position``` again to find alternate positions or styles that work. Repeats this process till either ```next_position``` returns false or no unlabeled points remain. 
+
+Shield symbolizer: Calculates bounding box and disables text along line.
+
+No i18n required.
