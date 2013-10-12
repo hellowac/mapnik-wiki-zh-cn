@@ -10,7 +10,7 @@ Have a look at some online uses of Mapnik!
  * [Cycle Map](http://www.gravitystorm.co.uk/osm/)
  * [Freemap](http://www.free-map.org.uk/)
  * [People's Map](http://www.peoplesmap.com)
- * [EveryBlock.com: A news feed for your block](http://www.everyblock.com/) ([blog post](http://blog.everyblock.com/2008/feb/18/maps/))
+
 
  * [Bulgarianmaps.com - Свободна Карта на Велико Търново](http://www.bulgarianmaps.com/)
  * [Heritage Walks - The Engineering Heritage of Auckland](http://www.heritagewalks.co.nz/rw/aklhistoric/)
