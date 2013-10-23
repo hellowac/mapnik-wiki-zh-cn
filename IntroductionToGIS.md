@@ -26,7 +26,7 @@ As you start writing C++ or Python code, or tweaking existing XML files, you'll 
 
     <Map srs="+proj=latlong +datum=WGS84 +k=1.0 +units=m +over +no_defs"> <!-- XML -->
 
-The "srs" attribute here stands for [Spatial reference system](http://en.wikipedia.org/wiki/Spatial_referencing_systems). In the "srs" above, note the specification of a map projection and a [datum](http://en.wikipedia.org/wiki/Datum_&#40;geodesy&#41; ) type.
+The "srs" attribute here stands for [Spatial reference system](http://en.wikipedia.org/wiki/Spatial_referencing_systems). In the "srs" above, note the specification of a map projection and a [datum](http://en.wikipedia.org/wiki/Datum_(geodesy) ) type.
 
 TODO -- more text here.
 
