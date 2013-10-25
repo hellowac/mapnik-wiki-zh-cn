@@ -12,3 +12,4 @@
  - `webp` image support. See [[Image-IO]] for more details
  - `scale-hsla` image filter
  - `color-to-alpha` image filter
+ - `Map` level `background-image-opacity` and `background-image-comp-op`: https://github.com/mapnik/mapnik/pull/1966
