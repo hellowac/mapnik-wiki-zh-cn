@@ -132,6 +132,8 @@ cd ${MAPNIK_SOURCES}
 
 ### Post tag updates
 
+* Create a new `mapnik-reference` entry for the release: https://github.com/mapnik/mapnik-reference
+
 * Update master branches entries in [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) from the new release (if relevant, e.g. if you are tagging and releasing a stable release not from the master branch).
 
 If this was a major release and a stable series is likely, now branch it, for example a `2.1.0` release would warrant an immediate `2.1.x` branch for a stable series of bugfix releases.
