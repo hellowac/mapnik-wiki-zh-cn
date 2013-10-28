@@ -23,6 +23,7 @@ brew install mapnik
 ### To install Mapnik from source using homebrew for dependencies do:
 
 ```sh
+brew install cairo --without-x --without-glib
 brew install icu4c
 brew link icu4c
 brew install boost
@@ -33,7 +34,6 @@ brew install libtiff
 brew install gdal --with-libtiff=/usr/local/lib
 brew link ossp-uuid
 brew install postgis
-brew install cairo --without-x
 git clone https://github.com/mapnik/mapnik.git
 cd mapnik
 ./configure
