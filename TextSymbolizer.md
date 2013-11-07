@@ -8,7 +8,7 @@
 |spacing|double|Space between repeated labels. If spacing is 0 only one label is placed.|px|0|
 |label-position-tolerance|double|Allow labels to be moved from their point in line placement. Lower values indicate that Mapnik tries less positions and generally leads to fewer labels. Higher values lead to Mapnik trying more different positions along a line to find a free spot. If unset or 0, Mapnik sets this value based on the total length of the line to ensure enough labels are placed.|?|0|
 |force-odd-labels|true, false|Force an odd amount of labels to be generated.|bool|false|
-|max-char-angle-delta|duble|Maximum angle (in degrees) between two consecutive characters in a label allowed. The lower the number the fewer labels placed - this is to stop placing labels around sharp corners.|degree|22.5|
+|max-char-angle-delta|double|Maximum angle (in degrees) between two consecutive characters in a label allowed. The lower the number the fewer labels placed - this is to stop placing labels around sharp corners.|degree|22.5|
 |halo-rasterizer|fast, full|(Only for AGG renderer) Choose between good and fast halo rasterizer. Both produce equally good results for halo-radius <= 1.0. Only full rasterizer supports fractional values > 1.0. Other values are truncated by fast rasterizer (e.g. 1.8px = 1px). [Visual comparision](https://raw.github.com/mapnik/mapnik/master/tests/visual_tests/images/text-halo-rasterizer-600-400-1.0-agg-reference.png)||full|git only (2013-04-25)|
 |dx, dy|double|Displace label by fixed amount on either axis. Actual displacement also depends on vertical-alignment and horizontal-alignment|px|0.0|
 |avoid-edges|true, false|Boolean to avoid labeling near intersection edges|bool|false|
