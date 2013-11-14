@@ -18,7 +18,20 @@ The testcase should be easy to set up. This means that any data should be refere
 
 CSV testcases are ideal because the [Mapnik CSV Plugin](https://github.com/mapnik/mapnik/wiki/CSV-Plugin) supports reading data from a `inline` string in the XML. This allows the Mapnik XML to be completely standalone.
 
-Here is an example of using a WKT string with a CSV datasource inside an XML to create a map that could serve as a testcase for point rendering: https://gist.github.com/springmeyer/7459452
+Here is an example of using a WKT string with a CSV datasource inside an XML to create a map that could serve as a testcase for point rendering: https://gist.github.com/springmeyer/7459452. A simplified version is:
+
+```xml
+   <Layer name="layer" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+        <StyleName>point</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+id|name|wkt
+1|null island|Point(0 0)
+            </Parameter>
+        </Datasource>
+    </Layer>
+````
 
 ### Simple
 
