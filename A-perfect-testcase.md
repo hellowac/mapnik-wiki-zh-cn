@@ -1,5 +1,7 @@
 Solving hard software bugs for developers can be time consuming, requiring many hours of uninterrupted focus. When time is short the most important ingredient to properly solving bugs is good a testcase.
 
+### Anything helps, but a testcase best
+
 If you are a user reporting a bug just reporting the bug is enough. But if you can afford the time to create a good testcase for the bug then the likelyhood of it being solved is much greater.
 
 A good testcase enables the bug to be replicated and quickly isolated. And once a bug is solved a good testcase can be translated into a [regression test](http://en.wikipedia.org/wiki/Regression_testing) to ensure that the bug never reappears again without quickly being noticed. A good testcase makes the hardest of bugs approachable by anyone. The lack of a good testcase can make the easiest of bugs potentially out of reach to solve for even the developer most familiar with the code because that developer may not have time or energy to create a testcase to replicate the bug. Yes, creating a testcase often takes more time than solving the actual bug. And creating a good regression test can also take more time than solving the bug.
