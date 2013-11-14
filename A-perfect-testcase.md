@@ -16,7 +16,13 @@ The data involved in the testcase should ideally be small enough that it is fast
 
 ### Portable
 
-The testcase should be easy to set up. This means that any data should be referenced locally in your stylesheet and should be converted to file based formats and moved out of databases. It also means a small README explaining how to set up the data to replicate is important. If the bug only occurs when data is being pulled from a database then try dumping the data to a file and reloading it: if you can still replicate the bug this way then post the file-based data (like a shapefile or CSV) and instructions for loading the data into a database. 
+The testcase should be easy to set up. This means that any data should be referenced locally in your stylesheet and should be converted to file based formats and moved out of databases. It also means a small README explaining how to set up the data to replicate is important.
+
+If the bug does not relate to png image symbols make sure to strip them from the stylesheet.
+
+If the bug is replicable no matter what font is use make sure to use Mapnik's default font of `DejaVu Sans Book`.
+
+If the bug only occurs when data is being pulled from a database then try dumping the data to a file and reloading it: if you can still replicate the bug this way then post the file-based data (like a shapefile or CSV) and instructions for loading the data into a database. 
 
 CSV testcases are ideal because the [Mapnik CSV Plugin](https://github.com/mapnik/mapnik/wiki/CSV-Plugin) supports reading data from a `inline` string in the XML. This allows the Mapnik XML to be completely standalone.
 
