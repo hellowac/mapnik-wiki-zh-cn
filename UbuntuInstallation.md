@@ -30,7 +30,7 @@ This is the latest in the 2.2.x series.
 ```sh
 sudo add-apt-repository ppa:mapnik/v2.2.0
 sudo apt-get update
-sudo apt-get install libmapnik mapnik-utils python-mapnik
+sudo apt-get install libmapnik libmapnik-dev mapnik-utils python-mapnik
 ```
 
 These packages come from: https://launchpad.net/~mapnik/+archive/v2.2.0/+packages
@@ -42,7 +42,7 @@ This is the nightly build of the upcoming 2.3.0 release
 ```sh
 sudo add-apt-repository ppa:mapnik/nightly-2.3
 sudo apt-get update
-sudo apt-get install libmapnik mapnik-utils python-mapnik
+sudo apt-get install libmapnik libmapnik-dev mapnik-utils python-mapnik
 # also install datasource plugins if you need them
 sudo apt-get install mapnik-input-plugin-gdal mapnik-input-plugin-ogr\
   mapnik-input-plugin-postgis \
@@ -59,7 +59,7 @@ This is the latest development code - built nightly - directly from https://gith
 ```sh
 sudo add-apt-repository ppa:mapnik/nightly-trunk
 sudo apt-get update
-sudo apt-get install libmapnik mapnik-utils python-mapnik
+sudo apt-get install libmapnik libmapnik-dev mapnik-utils python-mapnik
 sudo apt-get install mapnik-input-plugin-gdal mapnik-input-plugin-ogr\
   mapnik-input-plugin-postgis \
   mapnik-input-plugin-sqlite \
