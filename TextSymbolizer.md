@@ -58,7 +58,7 @@ Some examples of Mapnik's ability to place text along lines:
 
 
 ```xml
-<TextSymbolizer face-name="DejaVu Sans Book" size="10" fill="black" halo-fill= "white" halo-radius="1" placement="line" allow-overlap="false">[FIELD_NAME]></TextSymbolizer>
+<TextSymbolizer face-name="DejaVu Sans Book" size="10" fill="black" halo-fill= "white" halo-radius="1" placement="line" allow-overlap="false">[FIELD_NAME]</TextSymbolizer>
 ```
 
 See [[XMLGettingStarted]] for more XML example uses of TextSymbolizer.
