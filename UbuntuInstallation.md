@@ -129,6 +129,16 @@ apt-cache policy libboost-dev
     libsqlite3-dev
 ```
 
+### Download, compile and install harfbuzz
+```sh
+wget http://mapnik.s3.amazonaws.com/deps/harfbuzz-0.9.24.tar.bz2
+tar xf harfbuzz-0.9.24.tar.bz2
+cd harfbuzz-0.9.24
+./configure && make && sudo make install
+sudo ldconfig
+cd ../
+```
+
 ### Then compile and install Mapnik
 
 ```sh
