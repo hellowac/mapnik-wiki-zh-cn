@@ -154,6 +154,7 @@ Then upgrade your compiler to at least g++ 4.7 so it supports c++11 features and
 
 ```sh
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test;
+sudo apt-get update -y
 sudo apt-get install -y gcc-4.7 g++-4.7;
 export CXX="g++-4.7" && export CC="gcc-4.7";
 git clone https://github.com/mapnik/mapnik
