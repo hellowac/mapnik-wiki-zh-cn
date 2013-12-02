@@ -45,7 +45,11 @@ This Guide will walk you through installing Mapnik and then running a test scrip
 
 ### Step 1: Download the Mapnik binary
 
-### Step 2: Place the unzipped folder into *"C:\mapnik-v2.2.0\"*
+Get the latest Windows binaries at http://mapnik.org/download/
+
+### Step 2: Unzip and place Mapnik
+
+Place the unzipped folder into `C:\mapnik-v2.2.0\`
  
 ### Step 3: Set your system and/or users environment variables:
 
