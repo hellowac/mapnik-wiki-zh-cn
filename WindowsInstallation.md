@@ -115,5 +115,5 @@ Problem: When importing mapnik in python you get:
 
 Solution:
 
- * You likely have an older system and need to install the 2010 Microsoft Visual C++ 2010 Redistributable Package (`vcredist.exe`) from the [Microsoft](http://www.microsoft.com/en-us/download/details.aspx?id=5555).
+ * You may need to install the 2010 Microsoft Visual C++ 2010 Redistributable Package (`vcredist.exe`) from the [Microsoft](http://www.microsoft.com/en-us/download/details.aspx?id=5555).
  * You can get more information on what is missing or incompatible by examining mapnik.dll with [Dependency Walker](http://www.dependencywalker.com/). On a 64bit system you must use the 32bit Version.
