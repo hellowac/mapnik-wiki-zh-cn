@@ -129,9 +129,20 @@ apt-cache policy libboost-dev
     libsqlite3-dev
 ```
 
-### Download, compile and install harfbuzz
+### Source install of Mapnik 2.3.x
+
 ```sh
-wget http://mapnik.s3.amazonaws.com/deps/harfbuzz-0.9.24.tar.bz2
+# For the development branch:
+git clone https://github.com/mapnik/mapnik mapnik-2.3.x -b 2.3.x
+cd mapnik-2.3.x
+./configure && make && sudo make install
+```
+
+### Source install of Mapnik Master (3.x)
+
+First download, compile and install harfbuzz
+```sh
+wget http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.24.tar.bz2
 tar xf harfbuzz-0.9.24.tar.bz2
 cd harfbuzz-0.9.24
 ./configure && make && sudo make install
@@ -139,21 +150,19 @@ sudo ldconfig
 cd ../
 ```
 
-### Then compile and install Mapnik
+Then upgrade your compiler to at least g++ 4.7 so it supports c++11 features and then build mapnik:
 
 ```sh
-# For the development branch:
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test;
+sudo apt-get install -y gcc-4.7 g++-4.7;
+export CXX="g++-4.7" && export CC="gcc-4.7";
 git clone https://github.com/mapnik/mapnik
-
-# Or instead download the latest version (currently 2.1.0):
-wget https://github.com/downloads/mapnik/mapnik/mapnik-v2.1.0.tar.bz2
-tar xfj mapnik-v2.1.0.tar.bz2 
-mv mapnik-v2.1.0 mapnik
-
-# Then start compiling
 cd mapnik
-./configure && make && sudo make install
+./configure CXX=${CXX} CC=${CC}
+make && sudo make install
 ```
+
+### Testing
 
 To test mapnik:
 
