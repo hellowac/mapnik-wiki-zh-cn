@@ -32,6 +32,12 @@ In python:
 
 Say we wanted to change the mode to `ADJUST_BBOX_HEIGHT` and we have a map in memory with the variable `m`:
 
+C++:
+```cpp
+m.set_aspect_fix_mode(mapnik::Map::ADJUST_BBOX_HEIGHT);
+```
+
+Python:
 ```python
 m.aspect_fix_mode = mapnik.aspect_fix_mode.ADJUST_BBOX_HEIGHT
 ```
