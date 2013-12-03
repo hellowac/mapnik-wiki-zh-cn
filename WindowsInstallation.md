@@ -115,6 +115,14 @@ Problem: When importing mapnik in python you get:
 
 Solution: make sure that you have put the `site-packages` folder on your PYTHONPATH by completing *Step 3.b.*
 
+Problem: When importing mapnik in python you get:
+
+```
+ImportError: DLL load failed: The specified procedure could not be found.
+```
+
+One possible reason is an `libxml2` conflict. See http://stackoverflow.com/questions/7576751/installing-mapnik-on-windows-xp-fails-with-the-message-importerror-dll-load-fa for details on how to workaround and follow https://github.com/mapnik/mapnik-packaging/issues/109.
+
 ### Unknown (Windows) Dependency not found
 
 Problem: When importing mapnik in python you get:
