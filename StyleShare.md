@@ -38,6 +38,24 @@ For now, list your styles here!
 
 
 
+## OpenStreetMap France
+
+*Description*: http://tile.openstreetmap.fr  An early fork of the "standard" cartoCSS OpenStreetMap style with various interesting refinements including more shops, and fat roads and other details at zoom 19.
+
+*Type*: CartoCSS
+
+*URI*: https://github.com/cquest/osmfr-cartocss
+
+
+## Humanitarian style
+
+*Description*: A style by the Humanitarian OpenStreetMap Team emphasising details for developing world/crisis features from the "Humanitarian Data Model". [More on the HOT blog]( http://hot.openstreetmap.org/updates/2013-09-29_a_new_window_on_openstreetmap_data)
+
+*Type*: CartoCSS
+
+*URI*: https://github.com/hotosm/HDM-CartoCSS
+
+
 ## OpenStreetMap Old stylesheets
 
 *Description*: The original mapnik XML style sheet used by openstreetmap.org
