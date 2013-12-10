@@ -27,9 +27,20 @@ For now, list your styles here!
 *Minimum Mapnik Version*: What Mapnik version do these style depend on?
 
 
-## OSM
 
-*Description*: The default style sheet used by openstreetmap.org
+## OpenStreetMap "standard" style
+
+*Description*: Current stylesheet used by openstreetmap.org for the "standard" default map
+
+*Type*: CartoCSS
+
+*URI*: https://github.com/gravitystorm/openstreetmap-carto
+
+
+
+## OpenStreetMap Old stylesheets
+
+*Description*: The original mapnik XML style sheet used by openstreetmap.org
 
 *Type*: Mapnik XML
 
