@@ -12,7 +12,7 @@ All current plugins are located in https://github.com/mapnik/mapnik/tree/master/
 |:-------:|:---------------:|:--------:|:------------------:|:-------:|
 | *[postgis](PostGIS)*| 0.2.0| Stable| yes| support for accessing geospatial data through [[PostGIS]], the spatial database extension for [PostgreSQL](http://en.wikipedia.org/wiki/PostgreSQL)|
 | *[raster](Raster)*| 0.2.0| Stable| yes|  stripped or tiled raster TIFF image dataset support|
-| *[shape](Shape)*| 0.2.0| Stable| yes|  vector SHP ([ESRI Shapefile](http://en.wikipedia.org/wiki/Shapefile)) parsing|
+| *[shape](ShapeFile)*| 0.2.0| Stable| yes|  vector SHP ([ESRI Shapefile](http://en.wikipedia.org/wiki/Shapefile)) parsing|
 | *[gdal](GDAL/)*| 0.5.0| Beta| no|  support for [GDAL](http://en.wikipedia.org/wiki/GDAL) datasets|
 | *[ogr](OGR)* | 0.6.0| Beta| no|  support for [OGR](http://en.wikipedia.org/wiki/GDAL) datasets|
 | *[osm](OsmPlugin)*| 0.6.0| Beta| no|  support for reading OpenStreetMap (OSM) xml datasets|
