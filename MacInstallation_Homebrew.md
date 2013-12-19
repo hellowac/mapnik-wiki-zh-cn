@@ -34,6 +34,7 @@ brew install libtiff
 brew install gdal --with-libtiff=/usr/local/lib
 brew link ossp-uuid
 brew install postgis
+brew install harfbuzz
 git clone https://github.com/mapnik/mapnik.git
 cd mapnik
 ./configure
