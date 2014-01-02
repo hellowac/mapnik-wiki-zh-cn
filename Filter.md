@@ -21,10 +21,15 @@ And they can be combined in complex rules using brackets: `(` and `)`.
 Attributes can be compared against [Regular expressions](http://en.wikipedia.org/wiki/Regular_expression) using the `.match` operator.
 
 ## Examples in XML
-Matches all Objects that have an attribute "amenity" with a value of "restaurant":
+Matches all objects that have an attribute "amenity" with a value of "restaurant":
 
 ```xml
     <Filter>[amenity] = 'restaurant'</Filter> 
+```
+
+Match if a value is NULL:
+```xml
+    <Filter>[amenity] = 'restaurant' and not ([name] = null)</Filter> 
 ```
 
 NEW in Mapnik 2.1.x: Matches all features that contain point geometries:
