@@ -32,6 +32,11 @@ Match if a value is NULL:
     <Filter>[amenity] = 'restaurant' and not ([name] = null)</Filter> 
 ```
 
+Also, doing modulo is possible:
+```xml
+    <Filter>[height] % 50 = 0</Filter> 
+```
+
 NEW in Mapnik 2.1.x: Matches all features that contain point geometries:
 
 ```xml
