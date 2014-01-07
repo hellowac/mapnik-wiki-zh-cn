@@ -56,8 +56,10 @@ Place the unzipped folder into `C:\mapnik-v2.2.0\`
 Do this at _Control Panel->System->Advanced->Environment Variables_
 
 - Add `;C:\mapnik-v2.2.0\lib;` to the `PATH` variable.
-- Note: The `;` characters are separators so add them before or after other entries that may be in your `PATH` variable. If you are only adding `C:\mapnik-v2.2.0\lib` (and your `PATH` has not been modified/added to yet then technically you can leave out the `;` until you add more entries.
-- Note: you may also need to set your user path environment variable.
+- **Note:** The `;` characters are separators so add them before or after other entries that may be in your `PATH` variable. If you are only adding `C:\mapnik-v2.2.0\lib` (and your `PATH` has not been modified/added to yet then technically you can leave out the `;` until you add more entries.
+- **Note:** you may also need to set your user path environment variable.
+- **Note:** Adding `;C:\mapnik-v2.2.0\bin;` to the `PATH` variable is for the following commands:
+ - mapnik-config, pgsql2sqlite, shapeindex, svg2png, upgrade_map_xml
 - If the variable `PATH` is not already present, add it.
 - Setting this correctly allows the Mapnik python bindings to find the `mapnik.dll`
 - for PYTHON support add:
