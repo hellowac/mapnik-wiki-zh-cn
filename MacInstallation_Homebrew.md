@@ -12,15 +12,34 @@ brew update
 
 ## Install Options
 
-Now you can either 1) install Mapnik itself with homebrew (which will automatically install all dependencies at the same time) or 2) install all Mapnik dependencies via homebrew and then Mapnik from source.
+Now you can either:
 
-### To install the latest Mapnik release do:
+ - Install Mapnik itself with homebrew (which will automatically install all dependencies at the same time)
+ - Install all Mapnik dependencies via homebrew and then Mapnik from source.
+
+### Understanding build options
+
+To see the options available for the build do:
+
+```sh
+brew info mapnik
+```
+For instance you should see `--with-cairo`, `--with-gdal`, and `--with-postgis`. Unless you supply `--with-cairo` Mapnik will not be built with Cairo rendering support. If you pass `--with-gdal` or `--with-postgis` then Homebrew will automatically install these dependencies before building Mapnik.
 
 ```sh
 brew install mapnik
 ```
 
-### To install Mapnik from source using homebrew for dependencies do:
+### pycairo support
+
+If you want both cairo rendering support and the ability to work with cairo objects (and pass them to mapnik) in python do:
+
+```sh
+brew install pycairo
+brew install mapnik --with-cairo
+```
+
+### To install the latest Mapnik release from Homebrew do:
 
 ```sh
 brew install cairo --without-x --without-glib
