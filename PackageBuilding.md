@@ -1,7 +1,3 @@
-<!-- Name: PackageBuilding -->
-<!-- Version: 8 -->
-<!-- Last-Modified: 2010/06/05 15:06:46 -->
-<!-- Author: springmeyer -->
 # Notes on Mapnik Packages
 
 Mapnik is packaged by a number of talented individuals for various linux distributions.
@@ -9,7 +5,7 @@ Mapnik is packaged by a number of talented individuals for various linux distrib
 This page is intended to serve as a starting point for learning more about the where, who, and how of packaging Mapnik.
 
 ## Debian
- * Packages releases
+ * https://buildd.debian.org/status/package.php?p=mapnik
  * http://packages.qa.debian.org/m/mapnik.html
  * http://patch-tracker.debian.org/package/mapnik/
  * http://wiki.debian.org/DebianGis/BugsReporting
