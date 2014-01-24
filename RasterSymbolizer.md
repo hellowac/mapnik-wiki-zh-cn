@@ -1,5 +1,3 @@
-# RasterSymbolizer
-
 The RasterSymbolizer is used to render an image from any [GDAL supported format](http://www.gdal.org/formats_list.html) using the [[GDAL]] plugin or from GeoTiff's using the [[Raster]] plugin.
 
  * Mapnik does not yet support on-the-fly reprojection of raster layers (like it does for vector layers)
