@@ -55,5 +55,3 @@ Otherwise, get a listing of available plugins with this command:
     $ python -c "from mapnik import DatasourceCache as c; print ','.join(c.plugin_names())"
     These are the registered datasource plugins that Mapnik's python binding currently knows about.
 ```
-
-*TODO:* Propose icons at OSM
