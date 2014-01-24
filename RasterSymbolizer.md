@@ -1,7 +1,7 @@
 The RasterSymbolizer is used to render an image from any [GDAL supported format](http://www.gdal.org/formats_list.html) using the [[GDAL]] plugin or from GeoTiff's using the [[Raster]] plugin.
 
- * Mapnik does not yet support on-the-fly reprojection of raster layers (like it does for vector layers)
-  * Therefore it is necessary to first (externally) warp an image to the Spatial Reference System (srs) used in the map (e.g. using the `gdalwarp` command from the gdal-utilities).
+ * Mapnik supports on-the-fly reprojection of raster layers (like it does for vector layers)
+  * However, for optimal performance it can be best to first (externally) warp an image to the Spatial Reference System (srs) used in the map (e.g. using the `gdalwarp` command from the gdal-utilities).
 
  * As of Mapnik 0.6.0 the RasterSymbolizer supports transparency and composition modes.
   * See the original ticket for details: [#259](https://github.com/mapnik/mapnik/issues/259)
