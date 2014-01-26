@@ -1,5 +1,7 @@
 ## Removed
 
+ - Support for `-ansi` flag / non-c++11 compile. Starting at 3.x a compiler that recognizes `-std=c++11` is required.
+
 ## Changed
 
  - In C++ `mapnik::Map::addLayer` was changed to `mapnik::Map::add_layer`
