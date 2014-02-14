@@ -10,7 +10,8 @@
 |force-odd-labels|true, false|Force an odd amount of labels to be generated.|bool|false|
 |max-char-angle-delta|double|Maximum angle (in degrees) between two consecutive characters in a label allowed. The lower the number the fewer labels placed - this is to stop placing labels around sharp corners.|degree|22.5|
 |halo-rasterizer|fast, full|(Only for AGG renderer) Choose between good and fast halo rasterizer. Both produce equally good results for halo-radius <= 1.0. Only full rasterizer supports fractional values > 1.0. Other values are truncated by fast rasterizer (e.g. 1.8px = 1px). [Visual comparision](https://raw.github.com/mapnik/mapnik/master/tests/visual_tests/images/text-halo-rasterizer-600-400-1.0-agg-reference.png)||full|git only (2013-04-25)|
-|dx, dy|double|Displace label by fixed amount on either axis. Actual displacement also depends on vertical-alignment and horizontal-alignment|px|0.0|
+|dx, dy|double|Displace label by fixed amount on either axis. Actual displacement also depends on vertical-alignment and horizontal-alignment|px|0.0|0.7
+|displacement|(x,y)/tuple|Move text position by this many pixels|px|(0,0)|2.1
 |avoid-edges|true, false|Boolean to avoid labeling near intersection edges|bool|false|
 |minimum-distance|double|Minimum distance between repeated labels such as street names or shield symbols (works across features)|px|0.0|
 |allow-overlap|true, false|Allow labels to overlap other labels - Note: you can also clear the label collision cache at the LAYER level to promote more overlap. See 'clear_label_cache' at [[XMLConfigReference]] part layer|bool|false|
