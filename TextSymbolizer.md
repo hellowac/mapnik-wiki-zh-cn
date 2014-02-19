@@ -10,7 +10,7 @@
 |displacement|(x,y)/tuple|Move text position by this many pixels|px|(0,0)|2.1
 |avoid-edges|true, false|Boolean to avoid labeling near intersection edges|bool|false|
 |minimum-distance|double|Minimum distance between repeated labels such as street names or shield symbols (works across features)|px|0.0|
-|allow-overlap|true, false|Allow labels to overlap other labels - Note: you can also clear the label collision cache at the LAYER level to promote more overlap. See 'clear_label_cache' at [[XMLConfigReference]] part layer|bool|false|
+|allow-overlap|true, false|Allow labels to overlap other labels - Note: you can also clear the label collision cache at the LAYER level to promote more overlap. See 'clear-label-cache' at [[XMLConfigReference]] part layer|bool|false|
 |placement|line, point, vertex, interior|"line" to label along lines instead of by point. TODO: Document other options.||point|
 |opacity|double|1 is fully opaque while zero is fully transparent and .5 would be 50% transparent||1|
 |minimum-padding|double|if >0 helps prevents a label (or shield) from being placed too near the edge of the map.|px|0.0|
