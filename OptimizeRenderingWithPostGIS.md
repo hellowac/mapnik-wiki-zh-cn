@@ -201,10 +201,12 @@ PostGIS datasource can be used asynchronously so SQL querries are processed by t
 
 ## General Postgresql maintenance
 
-Keep your database optimized. You should run this SQL command from time to time:
+Keep your database optimized. You should have autovacuum turned on. If you have a datasource which is being updated (e.g. OpenStreetMap data) you will need to periodically ``ANALYZE`` and ``REINDEX`` the database. You should run this SQL command from time to time:
 
 ```sql
-    vacuum full analyze
+    ANALYZE; REINDEX;
 ```
+
+Depending on your needs you may want to also ``CLUSTER`` the data periodically.
 
 If there is any active connection Postgresql will wait until it is closed, so if you are running Ogcserver restart Apache to close the connections.
