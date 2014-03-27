@@ -24,7 +24,7 @@ If your BBOX is square then `(maxx-minx)/(maxy-miny)` will equal 1 meaning your 
 
 Mapnik automatically adjusts the BBOX. So, the aspect ratio of the map width and height is calculated and used to grow the appropriate dimension of the BBOX so that the ratios match.
 
-This default internally in Mapnik is called `aspect_fix_mode.GROX_BBOX` and is the default because of [this line](https://github.com/mapnik/mapnik/blob/b315eb2167b08a302ef4c8b20db69d23e9cc070c/src/map.cpp#L72). The other possible behaviors are to shrink the BBOX, or grow or shrink the map dimensions. All the options can be see [here](https://github.com/mapnik/mapnik/blob/b315eb2167b08a302ef4c8b20db69d23e9cc070c/src/map.cpp#L53-L59). Whenever the map bbox is set or the image dimensions are modified [this code](https://github.com/mapnik/mapnik/blob/b315eb2167b08a302ef4c8b20db69d23e9cc070c/src/map.cpp#L72) is triggered to "fix" the aspect ratios.
+This default internally in Mapnik is called `aspect_fix_mode.GROW_BBOX` and is the default because of [this line](https://github.com/mapnik/mapnik/blob/b315eb2167b08a302ef4c8b20db69d23e9cc070c/src/map.cpp#L72). The other possible behaviors are to shrink the BBOX, or grow or shrink the map dimensions. All the options can be see [here](https://github.com/mapnik/mapnik/blob/b315eb2167b08a302ef4c8b20db69d23e9cc070c/src/map.cpp#L53-L59). Whenever the map bbox is set or the image dimensions are modified [this code](https://github.com/mapnik/mapnik/blob/b315eb2167b08a302ef4c8b20db69d23e9cc070c/src/map.cpp#L72) is triggered to "fix" the aspect ratios.
 
 ### How to change the defaults
 
