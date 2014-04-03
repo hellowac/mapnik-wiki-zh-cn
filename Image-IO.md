@@ -83,9 +83,11 @@ And the key:value options can be controlled as follows:
 
 ### WEBP output options
 
-We support one custom option called `alpha`. If you pass `webp:alpha=false` then an `rgb` webp image will be created instead of an `rgba` image. It is unclear yet whether there is any major benefit to encoding `rgb` webp images and so this option may be removed in the future.
+The WEBP API supports a lot of options and types of customization.
 
-We support every option in the [Advanced Encoding API](https://developers.google.com/speed/webp/docs/api#advanced_encoding_api) except `show_compressed`. See [cwebp encoder](https://developers.google.com/speed/webp/docs/cwebp) for more detailed descriptions of encoding options.
+We support every option in the [Advanced Encoding API](https://developers.google.com/speed/webp/docs/api#advanced_encoding_api) except `show_compressed`. Below we provide basic descriptions for each option name pulled from the Advanced Encoding API documentation. Be aware that they are terse and you should also likely review the [cwebp encoder docs](https://developers.google.com/speed/webp/docs/cwebp) for more detailed descriptions of encoding options.
+
+In addition to the webp core options that we expose we support one custom option called `alpha`. If you pass `webp:alpha=false` then an `rgb` webp image will be created instead of an `rgba` image. It is unclear yet whether there is any major benefit to encoding `rgb` webp images and so this option may be removed in the future. It is not recommended to use it. There is also some performance overhead to using this option along with image views (commonly used when metatiling) because, due to the nature of the webp API, [we have to make a copy of the image buffer in order to strip alpha](https://github.com/mapnik/mapnik/blob/e618a654985194a95f7cf9c8d48f82e2d1062057/include/mapnik/webp_io.hpp#L92-L113). At least this was the case when this functionality was developed against libwebp 1.3.1.
 
 We default to all webp defaults. This means that the default encoding is `quality=75` and `lossless=0`.
 
