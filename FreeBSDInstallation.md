@@ -32,3 +32,4 @@ Once these libs are installed, you should be able to compile/install source by d
 ### Other references
 
  - discussion of installing TileMill: http://support.mapbox.com/discussions/tilemill/2776-tilemill-installation-on-freebsd#comment_21576061
+ - https://gist.github.com/springmeyer/fabd05d5535e086d5d51
