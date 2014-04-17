@@ -123,7 +123,7 @@ For now, list your styles here!
 
 *Type*: Carto MML
 
-*URI*: https://github.com/mapbox/osm-bright/
+*URI*: https://github.com/mapbox/osm-bright.tm2 is TileMill2 reboot of https://github.com/mapbox/osm-bright/ 
 
 *Minimum Mapnik Version*: 2.0.0
 
