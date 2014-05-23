@@ -174,3 +174,11 @@ For now, list your styles here!
 *URI*: https://github.com/mapbox/open-streets-style
 
 *Minimum Mapnik Version*:  2.2.0
+
+## OpenStreetMap Argentina
+
+*Description*: A localized TileMill/Carto style for OpenStreetMap PostGIS databases that you can export later to XML Mapnik format. Forked from https://github.com/gravitystorm/openstreetmap-carto
+
+*Type*: Carto MML 
+
+*URI*: https://github.com/osm-ar/osm-ar-carto
