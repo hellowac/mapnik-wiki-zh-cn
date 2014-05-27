@@ -13,7 +13,7 @@ If you are intending to install [Tilemill](http://mapbox.com/tilemill/) from a p
 
 ----
 
-# Ubuntu >= (11.10)
+# Ubuntu >= (11.10) and < (14.04)
 
 ## Install from packages
 
