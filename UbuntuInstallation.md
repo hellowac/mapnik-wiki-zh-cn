@@ -116,17 +116,22 @@ apt-cache policy libboost-dev
     python-dev libxml2 libxml2-dev \
     libfreetype6 libfreetype6-dev \
     libjpeg-dev \
-    libltdl7 libltdl-dev \
     libpng-dev \
     libproj-dev \
     libtiff-dev \
     libcairo2 libcairo2-dev python-cairo python-cairo-dev \
     libcairomm-1.0-1 libcairomm-1.0-dev \
     ttf-unifont ttf-dejavu ttf-dejavu-core ttf-dejavu-extra \
-    git build-essential python-nose clang \
+    git build-essential python-nose \
     libgdal1-dev python-gdal \
     postgresql-9.1 postgresql-server-dev-9.1 postgresql-contrib-9.1 postgresql-9.1-postgis \
     libsqlite3-dev
+```
+
+Note: for Ubuntu >=14.04 postgres/postgis versions have shifted, so do:
+
+```
+sudo apt-get install -y postgresql-9.3 postgresql-server-dev-9.3 postgresql-contrib-9.3 postgresql-9.3-postgis-2.1
 ```
 
 ### Source install of Mapnik 2.3.x
