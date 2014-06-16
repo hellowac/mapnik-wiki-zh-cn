@@ -182,3 +182,12 @@ For now, list your styles here!
 *Type*: Carto MML 
 
 *URI*: https://github.com/osm-ar/osm-ar-carto
+
+
+## VeloRoad
+
+*Description*: VeloRoad style by Zverik is specifically made for printing in black and white at at least 150 dpi with a route overlayed. Contrast is high, labels are small and aplenty. You can see a demo at http://osmz.ru/veloroad.html
+
+*Type*: Carto MML 
+
+*URI*: https://github.com/Zverik/veloroad
