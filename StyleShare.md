@@ -191,3 +191,13 @@ For now, list your styles here!
 *Type*: Carto MML 
 
 *URI*: https://github.com/Zverik/veloroad
+
+
+
+## Hydda
+
+*Description*: Based on an old version of OSMBright, but patched to add more features such as piers, stadiums, pitches, and more. Colors set to allow for looking good when adding transparent red-yellow-green overlays. Apache licensed. See the stylesheet in action hosted by OpenStreetMap Sweden, and [viewable via umap](http://umap.openstreetmap.fr/en/map/new/#15/51.5281/-0.1213)
+
+*Type*: Carto MML 
+
+*URI*: https://github.com/karlwettin/tilemill-style-hydda
