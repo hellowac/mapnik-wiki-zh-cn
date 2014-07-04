@@ -12,7 +12,7 @@ The Raster Colorizer allows the palette of rasters to be modified, for example, 
 
 To use the colorizer, create a style with a raster symbolizer and add a raster colorizer to it.
 
-The DataSource making use of the style must be a single band raster opened with the GDAL input plugin. It will not work with other input plugins; and it will not work if more than one band is loaded.
+The DataSource making use of the style must be a single band raster file opened with the GDAL input plugin. It will not work with other input plugins; and it will not work if more than one band is loaded. It will not work unless you explicitly request the band to be loaded (the default band=-1 does not work even if the input has a single band). It will not work with the PostGIS Raster gdal driver (as of GDAL-0.11).
 
 The colorizer works in the following way:
 
