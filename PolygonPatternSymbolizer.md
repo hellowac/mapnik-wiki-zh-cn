@@ -4,12 +4,12 @@
 <!-- Author: floledermann -->
 ## Configuration Options for PolygonPatternSymbolizer
 
-| *parameter* | *value* | *default* |
---------------|---------|-----------|
-| file | path to image file | none |
-| width **(removed)**| px | 4 |
-| height **(removed)**| px | 4 |
-| type **(removed)**| png tiff | none |
+| *parameter* | *value* | *default* | *accepts expressions* |
+--------------|---------|-----------|-----------------------|
+| file | path to image file | none | mapnik >= 2.0 |
+| width **(removed)**| px | 4 | |
+| height **(removed)**| px | 4 | |
+| type **(removed)**| png tiff | none | |
 
 ## Examples
 
