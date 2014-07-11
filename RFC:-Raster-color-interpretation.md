@@ -26,6 +26,7 @@ The band parameter could have the following values:
     Same as `rgba:1,2,3,4`
 
  - `grayscale[:<n>]`
+
    Where `<n>` is an integer representing 1-based band indexes.
 
  - 'grayscale'
@@ -38,8 +39,8 @@ The band parameter could have the following values:
 
  - `<n>`
 
-   Same as `data:<n>`
-   This is for backward compatibility with the GDAL plugin
+   Same as `data:<n>`.
+   **This is for backward compatibility with the GDAL plugin**
 
  - `auto`
 
@@ -50,5 +51,10 @@ The band parameter could have the following values:
 
  - `-1`
 
-   Same as `auto`
-   This is for backward compatibility with the GDAL plugin
+   Same as `auto`.
+   **This is for backward compatibility with the GDAL plugin**
+
+ - `0`
+
+   Same as `auto`.
+   This is for consistency (since band numbers are 1-based)
