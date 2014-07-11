@@ -1,3 +1,7 @@
+Author: `Sandro Santilli <strk@keybit.net>`
+Last Updated: 2014-07-11 
+Status: draft
+
 Reading raster data into a mapnik::raster requires interpreting it as either RGB(A) or data.
 When the style uses a [[RasterColorizer]], a "data" interpretation is expected.
 Otherwise an "RGB(A)" interpretation is expected.
