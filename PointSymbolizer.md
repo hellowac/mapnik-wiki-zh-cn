@@ -20,6 +20,7 @@ Some options described here are not available in mapnik versions < 2.0.
 | opacity | Opacity of the symbolizer: 0.0 - 1.0 | 1.0 |  no |
 |   transform    |   [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) | identity | mapnik >= 3.0<br>you have to specify transform, but you can use expressions for its parameters, e.g. `"rotate([value1]) scale([value2])"` |
 |   ignore-placement | allow subsequent point/shield symbolizers to overlap this symbol; true/false | false | no |
+| comp-op | [[Compositing]] | none | no |
 
 ## Examples
 
