@@ -10,16 +10,16 @@ If you want to draw a graphic symbol and a text you would better use a ShieldSym
 
 Some options described here are not available in mapnik versions < 2.0.
 
-| *parameter* | *value*  | *default* |
---------------|---------|-----------|
-| file    |  path to image file | none |
-| width **(removed)** | px | 4 |
-| height **(removed)** | px | 4 |
-| type **(removed)** | png tiff svg | none |
-| allow-overlap | allow text to overlap the point image; true/false | false |
-| opacity | Opacity of the symbolizer: 0.0 - 1.0 | 1.0 | 
-|   transform    |   [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) | identity |
-|   ignore-placement | allow subsequent point/shield symbolizers to overlap this symbol; true/false | false |
+| *parameter* | *value*  | *default* | *accepts expressions* |
+--------------|---------|-----------|-----------------------|
+| file    |  path to image file | none | mapnik >= 2.0 | 
+| width **(removed)** | px | 4 | |
+| height **(removed)** | px | 4 | |
+| type **(removed)** | png tiff svg | none | |
+| allow-overlap | allow text to overlap the point image; true/false | false | no |
+| opacity | Opacity of the symbolizer: 0.0 - 1.0 | 1.0 |  no |
+|   transform    |   [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) | identity | mapnik >= 3.0<br>you have to specify transform, but you can use expressions for its parameters, e.g. `"rotate([value1]) scale([value2])"` |
+|   ignore-placement | allow subsequent point/shield symbolizers to overlap this symbol; true/false | false | no |
 
 ## Examples
 
