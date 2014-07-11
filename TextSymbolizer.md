@@ -20,7 +20,7 @@
 |upright|left, right, auto, left_only, right_only|Select which way direction is used to place characters upright. The XXX_only variants place text only if more than 50% of all character are upright. Together with placement-type="list" this can be used to implement alternate texts. See below for an example. ||auto|harfbuzz
 |clip|true, false|If true then the geometry is clipped to the view before doing placements. Improves performance but can cause bad placements when the results are used for tiling|bool|true|2.0.0|
 |largest_bbox_only|true, false| controls default labeling behavior on multipolygons. The default is `true` and means that only the largest polygon part is labeled. NOTE: this option may change or be renamed in the future|bool|true|2.1|
-| comp-op | [[Compositing]] | none | no |
+| comp-op | | [[Compositing]] | | none | 2.1 |
 
 ### Text layout options
 | *parameter* | *values/ type*  | *description* | *unit* | *default* | *version* |
