@@ -1,12 +1,12 @@
 ## Configuration Options for LinePatternSymbolizer
 
-| *parameter* | *value* | *default* |
-|---|---|---|
-| file | path to image file | none |
-| base | base path where to search for file | none |
-| width **(removed)**| px | 4 |
-| height **(removed)**| px | 4 |
-| type **(removed)**| png tiff | none |
+| *parameter* | *value* | *default* | *accepts expressions* |
+|---|---|---|---|
+| file | path to image file | none | mapnik >= 2.0 |
+| base | base path where to search for file | none | no |
+| width **(removed)**| px | 4 | |
+| height **(removed)**| px | 4 | |
+| type **(removed)**| png tiff | none | |
 
 *Note* that the line direction matters!
 
