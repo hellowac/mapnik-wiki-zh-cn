@@ -7,6 +7,7 @@
 | width **(removed)**| px | 4 | |
 | height **(removed)**| px | 4 | |
 | type **(removed)**| png tiff | none | |
+| comp-op | [[Compositing]] | none | no |
 
 *Note* that the line direction matters!
 
