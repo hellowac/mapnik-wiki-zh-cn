@@ -29,7 +29,7 @@ The band parameter could have the following values:
 
    Where `<n>` is an integer representing 1-based band indexes.
 
- - 'grayscale'
+ - `grayscale`
 
    Same as `grayscale:1`
 
