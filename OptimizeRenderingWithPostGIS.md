@@ -13,7 +13,7 @@ This page will detail some measures you can take to make sure you're not wasting
 ## Keep the SQL resultset as small as possible
 
 ### Basics
-First, you have to understand how the Datasource table parameter works for each Layer. What happens is that Mapnik takes what you have defined in your `<Parameter name="table>...</Parameter>`, and slaps a `SELECT AsBinary("way"),column,names,needed AS geom ` in front of it, and ending with some SQL to limit results to the BBOX used for the map that's rendering. Mapnik will intelligently limit the columns queried for to what's actually needed in the Styles referenced in the Layer.
+First, you have to understand how the Datasource table parameter works for each Layer. What happens is that Mapnik takes what you have defined in your `<Parameter name="table>...</Parameter>`, and slaps a `SELECT AsBinary("way") AS geom,column,names,needed` in front of it, and ending with some SQL to limit results to the BBOX used for the map that's rendering. Mapnik will intelligently limit the columns queried for to what's actually needed in the Styles referenced in the Layer.
 
 Often, when making a new layer and not paying much attention to the Datasource, you may be doing:
 
