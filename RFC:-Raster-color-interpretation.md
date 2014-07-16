@@ -18,6 +18,7 @@ The band parameter could have the following values:
 
  - `rgb[:<r>,<g>,<b>]`
 
+   Red, green and blue channels found in input.
    Where `<r>`, `<g>` and `<b>` are integer representing 1-based band indexes.
  
  - `rgb`
@@ -26,6 +27,7 @@ The band parameter could have the following values:
 
  - `rgba[:<r>,<g>,<b>,<a>]`
 
+    Red, green, blue and alpha channels found in input.
     Where `<r>`, `<g>`, `<b>` and `<a>` are integer representing 1-based band indexes.
    
  - `rgba`
@@ -34,16 +36,18 @@ The band parameter could have the following values:
 
  - `g[:<n>]`
 
-   Grayscale.
+   Grayscale channel found in input.
    Where `<n>` is an integer representing 1-based band indexes.
 
  - `ga[:<g>,<a>]
 
-   Grayscale with alpha.
+   Grayscale and alpha channels found in input.
    Where `<g>` and `<a>` are integer representing 1-based band indexes.
 
  - `d[:<n>]`
 
+   Input values should not be interpreted by the reader.
+   [[RasterColorizer]] could then be used to map values to colors.
    Where `<n>` is an integer representing 1-based band indexes.
 
  - `<n>`
