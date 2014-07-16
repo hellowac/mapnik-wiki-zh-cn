@@ -39,7 +39,7 @@ The band parameter could have the following values:
    Grayscale channel found in input.
    Where `<n>` is an integer representing 1-based band indexes.
 
- - `ga[:<g>,<a>]
+ - `ga[:<g>,<a>]`
 
    Grayscale and alpha channels found in input.
    Where `<g>` and `<a>` are integer representing 1-based band indexes.
