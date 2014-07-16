@@ -1,6 +1,7 @@
 ```
 Author: Sandro Santilli <strk@keybit.net>
-Last Updated: 2014-07-11 
+Last Updated: 2014-07-16
+Version: 0.2 
 Status: draft
 ```
 
@@ -31,29 +32,32 @@ The band parameter could have the following values:
 
     Same as `rgba:1,2,3,4`
 
- - `grayscale[:<n>]`
+ - `g[:<n>]`
 
+   Grayscale.
    Where `<n>` is an integer representing 1-based band indexes.
 
- - `grayscale`
+ - `ga[:<g>,<a>]
 
-   Same as `grayscale:1`
+   Grayscale with alpha.
+   Where `<g>` and `<a>` are integer representing 1-based band indexes.
 
- - `data[:<n>]`
+ - `d[:<n>]`
 
    Where `<n>` is an integer representing 1-based band indexes.
 
  - `<n>`
 
-   Same as `data:<n>`.
+   Same as `d:<n>`.
    **This is for backward compatibility with the GDAL plugin**
 
  - `auto`
 
    The default value, if band parameter is omitted, enables guess based on input raster:
+   - If the input has 1 band, `g` assumed
+   - If the input has 2 band, `ga` assumed
    - If the input has 3 bands, `rgb` assumed
    - If the input has 4 bands, `rgba` assumed
-   - If the input has 1 band, `grayscale` assumed
 
  - `-1`
 
