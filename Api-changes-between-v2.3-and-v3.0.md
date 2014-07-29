@@ -2,6 +2,7 @@
 
  - Support for `-ansi` flag / non-c++11 compile. Starting at 3.x a compiler that recognizes `-std=c++11` is required.
  - Removed `paths-from-xml` option from the `<Map>` XML parser (https://github.com/mapnik/mapnik/issues/1893)
+ - `ExpressionFormat` in `TextSymbolizer`. Just use `Format` which now supports expressions for all properties.
 
 ## Changed
 
