@@ -79,4 +79,4 @@ We are planning to add registration support within XML in [#168](https://github.
 ## Further references
 
  * Nice Summary at: http://weait.com/content/add-fonts-your-openstreetmap-server
- * `load_fonts()` recursive C++ function in http://trac.openstreetmap.org/browser/applications/utils/mod_tile/gen_tile.cpp#L111
+ * `load_fonts()` recursive C++ function in https://github.com/openstreetmap/mod_tile/blob/master/src/gen_tile.cpp#L138-L170
