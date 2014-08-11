@@ -12,7 +12,7 @@
 | stroke-opacity | 0.0 - 1.0 - 1 is fully opaque while zero is fully transparent and .5 would be 50% transparent | 1.0  | no |
 | width | width of marker pixels | 10 | no |
 | height |  height of marker in pixels | 10 | no |
-| placement | "point", "interior", "line", "vertex-first" (manik >= 3), "vertex-last" (manik >= 3) | line (mapnik <=2.0.x) point (mapnik >= 2.1)| no (todo) |
+| placement | "point", "interior", "line", "vertex-first" (mapnik >= 3), "vertex-last" (mapnik >= 3) | line (mapnik <=2.0.x) point (mapnik >= 2.1)| no (todo) |
 | ignore-placement | "true" or "false"  | "false" | no (todo) |
 | marker-type | "arrow" "ellipse" | "arrow" if line placement, "ellipse" if point placement | no |
 
