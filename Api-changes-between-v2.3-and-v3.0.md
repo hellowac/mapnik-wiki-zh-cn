@@ -12,5 +12,6 @@
  - In C++ `mapnik::Map::removeLayer` was changed to `mapnik::Map::remove_layer`
  - In C++ `mapnik::Map::getLayer` was changed to `mapnik::Map::get_layer`
  - Changed `polygon_pattern_symbolizer` to default to `global` rather than `local` for the `alignment`.
+ - CSV plugin now parses and stores the strings of `"true"`, and `"false"` as boolean types (rather than strings) - https://github.com/mapnik/mapnik/issues/1540
 
 ## Added
