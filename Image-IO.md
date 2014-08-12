@@ -38,10 +38,14 @@ As of Mapnik 2.3.x the following formats are supported:
 
 In Mapnik >= 2.3.x by default:
 
- - PNG output is paletted png with no greater than 256 colors (aka. `png8`)
+ - PNG output is full color png (aka. `png24` or `png32)
  - JPEG output uses a `quality` of 85.
  - TIFF output uses `PHOTOMETRIC_RGB` and `COMPRESSION_DEFLATE`
  - WEBP output uses all WEBP encoder defaults meaning lossy compression (`lossless=0`) and a default quality of `75` (`quality=75`).
+
+In Mapnik >= 3.x by default:
+
+ - PNG output is paletted png with no greater than 256 colors (aka. `png8`)
 
 See the C++ [image_util.cpp](https://github.com/mapnik/mapnik/blob/master/src/image_util.cpp) file for definitive defaults that are set for various encoders (as this wiki page may become out of date).
 
