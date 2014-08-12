@@ -4,6 +4,7 @@
  - Removed `paths-from-xml` option from the `<Map>` XML parser (https://github.com/mapnik/mapnik/issues/1893)
  - `ExpressionFormat` in `TextSymbolizer`. Just use `Format` which now supports expressions for all properties.
  - `wrap-char` (aka `wrap-character`) property for `TextSymbolizer`: https://github.com/mapnik/mapnik/issues/2333
+ - `bilinear8` (raster scaling option) was obsolete and therefore removed.
 
 ## Changed
 
