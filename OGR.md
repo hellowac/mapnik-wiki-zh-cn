@@ -23,9 +23,12 @@ To check if the ogr plugin built and was installed correctly, try the usual Pyth
 | base                  | string       | base path where to search for file parameter | |
 | layer                 | string       | name of the layer to display (a single ogr datasource can contain multiple layers) | |
 | layer_by_index        | integer      | index of the layer to display, this becomes mandatory if no "layer" parameter is specified | |
-| multiple_geometries   | boolean      | wheter to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
+| layer_by_sql | string | SQL statement to execute against the OGR-datasource. The result set is used as the layer definition.|
+| multiple_geometries   | boolean      | whether to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
 | encoding              | string       | internal file encoding | utf-8 |
 | string              | string | optional (replaces *file* parameter) string of literal OGR-datasource data, like GeoJSON |
+| extent | string | maximum extent of the layer. should be provided when an extent cannot be automatically determined by OGR |
+
 
 
 # Usage
@@ -85,6 +88,19 @@ However the best way to discover the layer names is to use the OGR provided util
                <Parameter name="layer">us_states</Parameter>
             </Datasource>
         </Layer>
+```
+
+```xml
+    <Layer name="mssql" srs="+proj=latlong +datum=WGS84">
+        <StyleName>mssql_style</StyleName>
+        <Datasource>
+            <!-- mssql database must contain geometry_columns and spatial_ref_sys metadata tables-->
+            <Parameter name="type">ogr</Parameter>
+            <Parameter name="string">MSSQL:server=localhost;database=gis;trusted_connection=yes</Parameter>
+            <Parameter name="layer_by_sql">SELECT * FROM dbo.planet_osm_line</Parameter>
+            <Parameter name="extent">-180,-90,180,89.99</Parameter>
+        </Datasource>
+    </Layer>
 ```
 
 ## C++
