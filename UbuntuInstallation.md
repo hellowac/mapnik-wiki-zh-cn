@@ -73,7 +73,7 @@ These packages come from: https://launchpad.net/~mapnik/+archive/nightly-trunk/+
 First, remove any other old mapnik packages:
 
 ```sh
-sudo apt-get purge libmapnik* mapnik-utils python-mapnik
+sudo apt-get purge libmapnik* mapnik-* python-mapnik
 ```
 
 ### Ensure your boost version is recent enough (at least 1.47)
