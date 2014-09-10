@@ -9,8 +9,8 @@
 |halo-rasterizer|fast, full|(Only for AGG renderer) Choose between good and fast halo rasterizer. Both produce equally good results for halo-radius <= 1.0. Only full rasterizer supports fractional values > 1.0. Other values are truncated by fast rasterizer (e.g. 1.8px = 1px). [Visual comparision](https://raw.github.com/mapnik/mapnik/master/tests/visual_tests/images/text-halo-rasterizer-600-400-1.0-agg-reference.png)||full|git only (2013-04-25)|
 |displacement|(x,y)/tuple|Move text position by this many pixels|px|(0,0)|2.1
 |avoid-edges|true, false|Boolean to avoid labeling near intersection edges|bool|false|
-|minimum-distance|double|Minimum distance that a label can be placed from any other label or shield (works across features)|px|0.0|
-|repeat-distance|double|Minimum distance between repeated labels such as street names or shield symbols (works across features)|px|0.0|
+|margin|double|Minimum distance that a label can be placed from any other label or shield (works across features)|px|0.0|3.0|
+|repeat-distance|double|Minimum distance between repeated labels such as street names or shield symbols (works across features)|px|0.0|3.0|
 |allow-overlap|true, false|Allow labels to overlap other labels - Note: you can also clear the label collision cache at the LAYER level to promote more overlap. See 'clear-label-cache' at [[XMLConfigReference]] part layer|bool|false|
 |placement|line, point, vertex, interior|"line" to label along lines instead of by point. TODO: Document other options.||point|
 |opacity|double|1 is fully opaque while zero is fully transparent and .5 would be 50% transparent||1|
@@ -53,7 +53,8 @@
 ### Deprecated options
 | *parameter* | *values/ type*  | *description* | *unit* | *default* | *version* |
 ----------------|---------|----------------|-------|------------|---------|
-|name|expression|This is the query field you want to use for the label text, e.g. "street_name" (deprecated in Mapnik2, see section "new syntax" below)| |  |  
+|name|expression|This is the query field you want to use for the label text, e.g. "street_name" (deprecated in Mapnik2, see section "new syntax" below)| |  |
+|minimum-distance|double|Point placement: Minimum distance that a label can be placed from any other label or shield<br/> Line placement: Minimum distance between repeated labels such as street names or shield symbols<br/> (works across features)|px|0.0|
 
 ## Examples
 
