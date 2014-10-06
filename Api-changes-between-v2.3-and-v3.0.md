@@ -2,8 +2,7 @@
 
  - Support for `-ansi` flag / non-c++11 compile. Starting at 3.x a compiler that recognizes `-std=c++11` is required.
  - Removed `paths-from-xml` option from the `<Map>` XML parser (https://github.com/mapnik/mapnik/issues/1893)
- - `ExpressionFormat` in `TextSymbolizer`. Just use `Format` which now supports expressions for all properties.
- - `wrap-char` (aka `wrap-character`) property for `TextSymbolizer`: https://github.com/mapnik/mapnik/issues/2333
+ - `ExpressionFormat` in `TextSymbolizer`. Just use `Format` which now supports expressions for all properties (For now `ExpressionFormat` is deprecated and will be parsed automatically into `Format`).
  - `bilinear8` (raster scaling option) was obsolete and therefore removed.
 
 ## Changed
@@ -14,6 +13,8 @@
  - In C++ `mapnik::Map::getLayer` was changed to `mapnik::Map::get_layer`
  - Changed `polygon_pattern_symbolizer` to default to `global` rather than `local` for the `alignment`.
  - CSV plugin now parses and stores the strings of `"true"`, and `"false"` as boolean types (rather than strings) - https://github.com/mapnik/mapnik/issues/1540
+ - `TextSymbolizer` line wrapping behavior has now changed: previously line wrapping only happened on ascii whitespace (if `wrap-character` was not provided) but now it happens on any valid wrapping characters as determined by the default locale and the behavior of the `ICU::BreakIterator`(http://userguide.icu-project.org/boundaryanalysis).
+ - `wrap-character` property for `TextSymbolizer` should behave similarly as 2.3 but the code to support it was completely re-written so there may be slight differences in render: https://github.com/mapnik/mapnik/issues/2333
 
 ## Added
 
