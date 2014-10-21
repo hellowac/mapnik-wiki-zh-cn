@@ -21,7 +21,8 @@ wget http://prdownloads.sourceforge.net/scons/scons-local-2.3.4.zip
 rm -rf scons
 unzip -o scons-local-*.zip -d scons/
 rm scons-local-*.zip
-    
+```
+
 Consider updating DeJaVu Fonts: The last version updated was 2.33
 
 ```sh
