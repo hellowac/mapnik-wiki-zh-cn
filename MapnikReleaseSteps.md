@@ -2,43 +2,37 @@
     
 ### Prepare
     
-* Ensure the [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) is up to date.
-    
-* Set release date after checkins with development team
-    
-* Announce release plans to [group list](http://groups.google.com/group/mapnik)
-    
-* Ensure [milestone](https://github.com/mapnik/mapnik/issues/milestones) is closed out
-
+- Ensure the [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) is up to date.
+- Announce release plans to [group list](http://groups.google.com/group/mapnik)
+- Ensure [milestone](https://github.com/mapnik/mapnik/milestones) is closed out
 
 ### Testing
 
-* Ensure all tests pass (`make test`)
-
-* Test Mapnik with `INPUT_PLUGINS=''` and ensure tests gracefully test just what is available
-
-* Test with `./configure WARNING_CXXFLAGS="-Wextra"` to ensure all problematic warnings are solved or triaged.
+- Ensure all tests pass (`make test`)
+- Test Mapnik with `INPUT_PLUGINS=''` and ensure tests pass for what functionality is available
+- Test with `./configure WARNING_CXXFLAGS="-Wextra"` to ensure all problematic warnings are solved or triaged.
 
 ### Bundled fonts and scons
+
+Consider updating Scons-local to latest release: The last SCons update was 2.3.4.
     
-* Consider updating Scons-local to latest release.  
-  The last SCons update was 2.3.0.alpha
+```sh
+wget http://prdownloads.sourceforge.net/scons/scons-local-2.3.4.zip
+rm -rf scons
+unzip -o scons-local-*.zip -d scons/
+rm scons-local-*.zip
     
-        wget http://prdownloads.sourceforge.net/scons/scons-local-2.3.0.zip
-        rm -rf scons
-        unzip -o scons-local-2.3.0.zip -d scons/
-        rm scons-local-2.3.0.zip
+Consider updating DeJaVu Fonts: The last version updated was 2.33
+
+```sh
+cd fonts
+svn rm dejavu-fonts-ttf-
+wget http://sourceforge.net/projects/dejavu/files/dejavu/2.33/dejavu-fonts-ttf-2.33.tar.bz2
+tar xvf dejavu-fonts-ttf-2.33.tar.bz2
+svn add dejavu-fonts-ttf-2.33
+```
     
-* Consider updating DeJaVu Fonts:  
-  The last version updated was 2.33
-    
-        cd fonts
-        svn rm dejavu-fonts-ttf-
-        wget http://sourceforge.net/projects/dejavu/files/dejavu/2.33/dejavu-fonts-ttf-2.33.tar.bz2
-        tar xvf dejavu-fonts-ttf-2.33.tar.bz2
-        svn add dejavu-fonts-ttf-2.33
-    
-* Check for new [unifont release](http://unifoundry.com/unifont.html)
+Check for new [unifont release](http://unifoundry.com/unifont.html)
 
 ### Release candidate
 
