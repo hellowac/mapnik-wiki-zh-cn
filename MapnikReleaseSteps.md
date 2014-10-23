@@ -37,28 +37,17 @@ Check for new [unifont release](http://unifoundry.com/unifont.html)
 
 ### Release candidate
 
-Consider first promoting a release candidate from master:
+Consider first promoting a release candidate tag:
 
 ```sh
-cd /tmp
-MAPNIK_VERSION="2.2.0-rc1"
-TARBALL_NAME="mapnik-v${MAPNIK_VERSION}"
-git clone git@github.com:mapnik/mapnik.git ${TARBALL_NAME}
-cd ${TARBALL_NAME}
-git rev-list --max-count=2 HEAD | tail -n+2 > GIT_REVISION
-git describe > GIT_DESCRIBE
-cd ../
-rm -rf ${TARBALL_NAME}/.git
-rm -rf ${TARBALL_NAME}/.gitignore
-tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
+git tag -a v3.0.0-rc1 -m 'Release Candidate 1 for Mapnik v3.0.0'
+git push --tags
 ```
 
 ### Pre-tag updates
 
   * Update version number in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
   * Set `MAPNIK_VERSION_IS_RELEASE` to 1 in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
-  * Update `abi_fallback` to right version and stripping any `-pre` in [SConstruct](https://github.com/mapnik/mapnik/blob/master/SConstruct)
-  * then:
 
 ```
 make uninstall && ./configure && make install
@@ -99,9 +88,6 @@ TARBALL_NAME="mapnik-v${MAPNIK_VERSION}"
 git clone git@github.com:mapnik/mapnik.git ${TARBALL_NAME}
 cd ${TARBALL_NAME}
 git checkout "tags/v${MAPNIK_VERSION}"
-# get one commit back to match the changelog
-git rev-list --max-count=2 HEAD | tail -n+2 > GIT_REVISION
-git describe > GIT_DESCRIBE
 cd ../
 rm -rf ${TARBALL_NAME}/.git
 rm -rf ${TARBALL_NAME}/.gitignore
@@ -110,7 +96,6 @@ tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
 s3cmd --acl-public put ${TARBALL_NAME}.tar.bz2 s3://mapnik/dist/v${MAPNIK_VERSION}/
 ```
 
-Note: the GIT_REVISION/GIT_DESCRIBE files are used as per https://github.com/mapnik/mapnik/issues/1170. We write a file before making the tarball so that systems that do not have git installed or that download the raw tarball can still know the git revision and describe output mapnik-config will report after source build.
 
 * Go back to the mapnik source checkout and generate Python API docs:
 
@@ -144,7 +129,6 @@ git checkout master
 Now bump versions again:
 
    * edit [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp) again, incrementing version # and changing `MAPNIK_VERSION_IS_RELEASE` back to `0` to set up for the next release
-   * update the `abi_fallback` in SConstruct
 
 ```
 make uninstall && ./configure && make install
