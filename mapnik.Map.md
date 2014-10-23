@@ -1,5 +1,4 @@
 
-
 Below are a list of methods and properties available in mapnik.Map.
 
 * __Map.append_style__ - adds a style to the map
@@ -436,7 +435,7 @@ zoom_to_box( (Map)arg1, (Box2d)Boxd2) -> None :
     by specifying a Mapnik Box2d.
     
     Usage:
-    >>> extext = Box2d(-180.0, -90.0, 180.0, 90.0)
+    >>> extent = Box2d(-180.0, -90.0, 180.0, 90.0)
     >>> m.zoom_to_box(extent)
     
 
