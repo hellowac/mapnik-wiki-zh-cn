@@ -168,6 +168,20 @@ cd mapnik
 make && sudo make install
 ```
 
+_Update 10.24.14:_<br>
+The libraries g++-4.8 and gcc-4.8 are now available via apt-get upgrade, so this should do the trick:
+```
+apt-get update
+apt-get upgrade
+git clone https://github.com/mapnik/mapnik
+cd mapnik
+./configure
+make && sudo make install
+```
+
+
+
+
 ### Testing
 
 To test mapnik:
