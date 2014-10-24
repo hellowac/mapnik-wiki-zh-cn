@@ -155,7 +155,16 @@ sudo ldconfig
 cd ../
 ```
 
-Then upgrade your compiler to at least g++ 4.7 so it supports c++11 features and then build mapnik:
+Upgrade your compiler to at least g++ 4.7 so it supports c++11 features. <br>`apt-get upgrade` should give you g++-4.8 and gcc-4.8):
+```sh
+apt-get update
+apt-get upgrade
+git clone https://github.com/mapnik/mapnik
+cd mapnik
+./configure
+make && sudo make install
+```
+If that doesn't work, force install of g++/cc-4.7 and `./configure` with designated complier version:
 
 ```sh
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test;
@@ -168,16 +177,6 @@ cd mapnik
 make && sudo make install
 ```
 
-_Update 10.24.14:_<br>
-The libraries g++-4.8 and gcc-4.8 are now available via apt-get upgrade, so this should do the trick:
-```
-apt-get update
-apt-get upgrade
-git clone https://github.com/mapnik/mapnik
-cd mapnik
-./configure
-make && sudo make install
-```
 
 
 
