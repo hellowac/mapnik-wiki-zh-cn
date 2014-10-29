@@ -30,7 +30,7 @@ The "srs" attribute here stands for [Spatial reference system](http://en.wikiped
 
 TODO -- more text here.
 
-For more information on map projections, read the proj.4 documentation, or check out this [guide to selecting map projections](http://www.manifold.net/doc/guide_to_selecting_map_projections.htm).
+For more information on map projections, read the proj.4 documentation, or check out this [guide to selecting map projections](http://www.georeference.org/doc/guide_to_selecting_map_projections.htm).
 
 Related links
 
