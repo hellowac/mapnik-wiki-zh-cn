@@ -150,6 +150,27 @@ Note the -a setting which makes your system's installed regex symbols to be upda
 
  * *Solution*: The above errors tells basically that function UnicodeString::fromUTF32(...) used in Mapnik code isn't provided by your current ICU installation (above is 3.8). You need at least 4.1.4 (see [#482](https://github.com/mapnik/mapnik/issues/482) for more details). Likely, you are compiling Mapnik from svn or a more recent version than the 7.0 branch with your distribution's (above was Ubuntu 8.04) outdated ICU package (version<4.1.4). Remove update your ICU package or both remove your distribution's ICU package (eg. sudo apt-get remove libicu*) and compile and install ICU from source (from [http://icu-project.org/download/](http://icu-project.org/download/)).
 
+### Harfbuzz not found
+
+    $ brew install harfbuzz
+    ...
+    $ ./configure
+    ...
+    Checking for C++ library harfbuzz... no
+    Could not find required header or shared library for harfbuzz
+    ...
+    Exiting... the following required dependencies were not found:
+     - harfbuzz (HarfBuzz text shaping library | configure with HB_LIBS & HB_INCLUDES)
+
+ * *Solution*: HB_LIBS and HB_INCLUDES are directories, not cflags/ldflags, and HB_INCLUDES needs not to include the "harfbuzz" directory itself. If pkg-config says:
+
+    $ pkg-config --libs --cflags harfbuzz
+    -I/usr/local/Cellar/harfbuzz/0.9.35_1/include/harfbuzz -L/usr/local/Cellar/harfbuzz/0.9.35_1/lib -lharfbuzz
+
+what you actually need is
+
+    $ ./configure HB_LIBS=/usr/local/Cellar/harfbuzz/0.9.35_1/lib HB_INCLUDES=/usr/local/Cellar/harfbuzz/0.9.35_1/include
+
 ### ICU not found
 
     $ python
