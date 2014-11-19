@@ -162,7 +162,9 @@ Note the -a setting which makes your system's installed regex symbols to be upda
     Exiting... the following required dependencies were not found:
      - harfbuzz (HarfBuzz text shaping library | configure with HB_LIBS & HB_INCLUDES)
 
- * *Solution*: HB_LIBS and HB_INCLUDES are directories, not cflags/ldflags, and HB_INCLUDES needs not to include the "harfbuzz" directory itself. If pkg-config says:
+ * *Solution*: HB_LIBS and HB_INCLUDES are directories, not cflags/ldflags, and HB_INCLUDES needs not to include the "harfbuzz" directory itself.
+
+If pkg-config says:
 
     $ pkg-config --libs --cflags harfbuzz
     -I/usr/local/Cellar/harfbuzz/0.9.35_1/include/harfbuzz -L/usr/local/Cellar/harfbuzz/0.9.35_1/lib -lharfbuzz
