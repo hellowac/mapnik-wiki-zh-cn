@@ -8,7 +8,7 @@ ShieldSymbolizer supports all options of [[TextSymbolizer]] and the following ad
 |file | The file to use for the shield background | |
 |opacity| opacity of the image used for the shield | 1|
 |text-opacity | opacity of the text placed on top of the shield | 1|
-|unlock-image | No known function | "false" |
+|unlock-image | If true the shield image doesn't move | "false" |
 |shield-dx|offset the shield image _and text_ horizontally | 0 |
 |shield-dy|offset the shield image _and text_ vertically | 0 |
 |transform|[[Transform]] image| |
