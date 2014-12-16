@@ -29,7 +29,7 @@
 |dx, dy|double|Displace label by fixed amount on either axis. Actual displacement also depends on vertical-alignment and horizontal-alignment|px|0.0|0.7
 |vertical-alignment|top, middle, bottom, auto|Position of label relative to point position. "auto" is "middle" for dy=0, "bottom" for dy>0, "top" for dy<0||auto|
 |horizontal-alignment|left, middle, right, auto|Position of label relative to point position||auto|
-|justify-alignment|left, middle, right, "auto|Justify multi-line text||auto|
+|justify-alignment|left, center, right, auto|Justify multi-line text||auto|
 |text-ratio|double| Try to keep a given height to width ratio. Use 0 to disable this feature.|ratio|0|
 |wrap-width|double|Length before wrapping long names. Use 0 to disable this feature.|px|0|
 |wrap-before|true,false|Wrap text before wrap-width is reached. If this setting is off your lines will always be a bit longer than wrap-width. If this setting is on the lines will usually be a bit shorter, but can be longer if there is a single word that is longer than your current line limit.|bool|false|
