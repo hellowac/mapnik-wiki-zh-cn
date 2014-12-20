@@ -21,7 +21,7 @@ For each Object read from the Datasource Mapnik checks if the current ScaleDenom
  * If the Object _misses_ these tests, none of the rules is evaluated.
 
 ```xml
-    <Style name="contours">
+    <Style name="poi-food">
       <Rule>
         <Filter>[amenity] = 'restaurant'</Filter>
         
