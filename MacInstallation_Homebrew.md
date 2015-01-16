@@ -52,7 +52,7 @@ brew install jpeg
 brew link jpeg
 brew install libtiff
 brew install gdal --with-libtiff=/usr/local/lib
-brew link ossp-uuid
+brew install ossp-uuid
 brew install postgis
 brew install harfbuzz
 git clone https://github.com/mapnik/mapnik.git
