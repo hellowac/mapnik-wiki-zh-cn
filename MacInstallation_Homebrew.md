@@ -36,7 +36,7 @@ brew install mapnik
 If you want both cairo rendering support and the ability to work with cairo objects (and pass them to mapnik) in python do:
 
 ```sh
-brew install pycairo
+brew install py2cairo
 brew install mapnik --with-cairo
 ```
 
