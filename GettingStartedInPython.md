@@ -112,21 +112,19 @@ Note: optionally (to learn about your data) you can call the `envelope()` functi
 Box2d(-180.0,-90.0,180.0,83.64513)
 ```
 
-That shows the minx, miny, maxx, and maxy of the data. Because the above coordinates are between -180 and 180 for the x or longitude values and -90 and 90 for the y or latitude values we know this data is in *geographic* coordinates and uses degrees for units - a pretty good indication this is `WGS84 (aka EPSG:4326)`. This specific shapefile also stores this projection information as a `WKT` string in the `ne_110m_admin_0_countries.prj` file. But Mapnik need to know this specific, common spatial references system by its [Proj.4](http://trac.osgeo.org/proj/wiki/FAQ) string of `+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs`. See the `layer.srs` value below for why this matters.
+That shows the minx, miny, maxx, and maxy of the data. Because the above coordinates are between -180 and 180 for the x or longitude values and -90 and 90 for the y or latitude values we know this data is in *geographic* coordinates and uses degrees for units - a pretty good indication this is `WGS84 (aka EPSG:4326)`. This specific shapefile also stores this projection information as a `WKT` string in the `ne_110m_admin_0_countries.prj` file. See the `layer.srs` value below for why this matters.
 
 
 ### Create a Layer
 
-Mapnik Layers are basically containers around datasources, that store useful properties.
-
-So, lets now create a Layer object and add the datasource to it.
+Mapnik Layers are basically containers around datasources, that store useful properties. Lets now create a Layer object and add the datasource to it.
 
 ``` python
 layer = mapnik.Layer('world') # new layer called 'world' (we could name it anything)
 # note: layer.srs will default to '+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs'
 ```
 
-Note: the 'layer.srs' is the source projection of the Datasource and *must* match the projection of the coordinates of that data or else your map will likely be blank. In this case, the default `srs` Mapnik assumes happens to also match the projection of the data. When this is not the case you need to set the layer.srs to the correct value (which is beyond the scope of this tutorial).
+Note: the 'layer.srs' is the source projection of the Datasource and *must* match the projection of the coordinates of that data or else your map will likely be blank. Mapnik uses [Proj.4](http://trac.osgeo.org/proj/wiki/FAQ) strings to specify the spatial references system. In this case, the default `srs` Mapnik assumes (`+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs`) happens to match the projection of the data. When this is not the case you must set the layer.srs to the correct value (which is beyond the scope of this tutorial).
 
 Now attach the datasource to the layer, and reference:
 
