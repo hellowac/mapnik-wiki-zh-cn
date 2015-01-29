@@ -5,6 +5,7 @@
  - `ExpressionFormat` in `TextSymbolizer`. Just use `Format` which now supports expressions for all properties (For now `ExpressionFormat` is deprecated and will be parsed automatically into `Format`).
  - `bilinear8` (raster scaling option) was obsolete and therefore removed.
  - `blend` method removed from `Image` object in python bindings. The same actions can be accomplished with the `composite` function and src_over method.
+ - `background` property in python bindings has been removed, added the `fill` method to replace all its functionality.
 
 ## Changed
 
