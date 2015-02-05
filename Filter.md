@@ -5,7 +5,7 @@ Each Style-Rule can optionally have a Filter attached. Mapnik walks through all 
 In XML [character entities](http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) are used to construct filters. You can use the following characters to specify value-comparisons:
 
  * Greater Than: `&gt;`
- * Greater Then or Equal: `&gt;=`
+ * Greater Than or Equal: `&gt;=`
  * Less Than: `&lt;`
  * Less Than or Equal: `&lt;=`
  * Equal: `=`
