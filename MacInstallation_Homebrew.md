@@ -47,6 +47,7 @@ brew install cairo --without-x --without-glib
 brew install icu4c
 brew link icu4c
 brew install boost
+brew install boost-python
 brew install proj
 brew install jpeg
 brew link jpeg
