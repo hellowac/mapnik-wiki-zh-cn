@@ -201,3 +201,17 @@ For now, list your styles here!
 *Type*: Carto MML 
 
 *URI*: https://github.com/karlwettin/tilemill-style-hydda
+
+
+## OSM swiss
+
+*Description*: Based on OSMBright. CC-BY-SA4.0. See it here http://umap.osm.ch/de/map/vegan-in-bern_76
+
+*Type*: Carto MML 
+
+*URI*: https://github.com/xyztobixyz/OSM-Swiss-Style 
+
+
+
+
+
