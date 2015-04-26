@@ -164,13 +164,17 @@ cd mapnik
 ./configure
 make && sudo make install
 ```
-If that doesn't work, force install of g++/cc-4.7 and `./configure` with designated complier version:
+
+If that doesn't work, here is an example for ubuntu precise to upgrade compilers:
 
 ```sh
+CLANG_VERSION=3.6
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test;
+sudo add-apt-repository "deb http://llvm.org/apt/precise/ llvm-toolchain-precise-${CLANG_VERSION} main";
+wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -
 sudo apt-get update -y
-sudo apt-get install -y gcc-4.7 g++-4.7;
-export CXX="g++-4.7" && export CC="gcc-4.7";
+sudo apt-get install -y clang-3.6;
+export CXX="clang++-3.6" && export CC="clang-3.6";
 git clone https://github.com/mapnik/mapnik
 cd mapnik
 ./configure CXX=${CXX} CC=${CC}
