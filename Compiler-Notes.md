@@ -24,3 +24,13 @@ real	16m31.347s
 user	29m1.430s
 sys	1m7.557s
 ```
+
+rebuilding with ccache (first run):
+
+```
+$ ./configure CXX="/Users/dane/.homebrew/bin/ccache clang++"
+$ time make
+real	11m3.394s
+user	28m36.684s
+sys	1m36.502s
+```
