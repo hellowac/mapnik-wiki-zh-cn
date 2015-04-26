@@ -4,3 +4,23 @@ Random notes on compiler results in terms of runtime speed and library size
 - -Os: libmapnik.dylib is `16.2` MB and tests run in `3.9s`
 - -O2: libmapnik.dylib is `12.8` MB and tests run in `3.7s`
 - -O3: libmapnik.dylib is `12.5` MB and tests run in `3.7s`
+
+#### Mapnik 3.x
+
+OS X duel core: `2.8 GHz Intel Core i7`
+
+At https://github.com/mapnik/mapnik/commit/66ad95cbbe755c9e905406b6f1227b06b24f60e1
+
+```
+$ clang++ -v
+Apple LLVM version 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
+Target: x86_64-apple-darwin14.3.0
+Thread model: posix
+```
+
+```
+$ source bootstrap.sh && time make
+real	16m31.347s
+user	29m1.430s
+sys	1m7.557s
+```
