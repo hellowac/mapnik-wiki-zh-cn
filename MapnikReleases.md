@@ -2,6 +2,9 @@
 
 Past, current, and future releases.
 
+Future release: 3.0 (see [Pre-announcment on 05 May 2015](http://mapnik.org/news/2015/05/05/approaching-3.0/))
+
+
 ## 2.2.0
 _2013-06-03_
 
