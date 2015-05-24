@@ -12,6 +12,7 @@ You will need to install the following ports/packages to ensure that mapnik will
     print/freetype2
     graphics/cairo
     graphics/cairomm
+    print/harfbuzz
     devel/pkg-config
     graphics/py-cairo
     devel/boost-python-libs
@@ -25,9 +26,12 @@ If you want postgres support, ensure that the postgres libs are installed:
 
 Once these libs are installed, you should be able to compile/install source by doing:
 
-
-    python scons/scons.py configure
-    python scons/scons.py install
+```sh
+./configure CXX=c++ CC=cc \
+   HB_INCLUDES=/usr/local/include HB_LIBS=/usr/local/lib 
+gmake
+gmake install
+```
 
 ### Other references
 
