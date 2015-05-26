@@ -19,16 +19,16 @@ You will need to install the following ports/packages to ensure that mapnik will
     devel/libtool22
     devel/libltdl22
 
-If you want postgres support, ensure that the postgres libs are installed:
+There may be other ports/packages that need installing
 
+If you want postgres support, ensure that the postgres libs are installed:
 
     database/postgresqlXX-client (where XX is the version of Postgres libs you'd like to install)
 
 Once these libs are installed, you should be able to compile/install source by doing:
 
 ```sh
-./configure CXX=c++ CC=cc \
-   HB_INCLUDES=/usr/local/include HB_LIBS=/usr/local/lib 
+./configure HB_INCLUDES=/usr/local/include HB_LIBS=/usr/local/lib 
 gmake
 gmake install
 ```
