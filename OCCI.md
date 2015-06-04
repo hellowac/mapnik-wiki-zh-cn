@@ -106,7 +106,7 @@ A OCCI datasource may be created as follows:
         parameters p;
         p["type"]="occi";
         p["host"]=oracle_server_hostname;
-        p["username"]=oracle_server_username;
+        p["user"]=oracle_server_username;
         p["password"]=oracle_server_password;
         p["table"]="worldborders";
         p["geometry_field"]="geom";
