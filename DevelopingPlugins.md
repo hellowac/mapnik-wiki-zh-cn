@@ -1,7 +1,3 @@
-<!-- Name: DevelopingPlugins -->
-<!-- Version: 3 -->
-<!-- Last-Modified: 2010/10/27 20:21:46 -->
-<!-- Author: rcoup -->
 # Developing Mapnik Plugins
 
 ## Understanding the Architecture
@@ -39,22 +35,4 @@ To specify the kind of datasource, note that we specified p's "type" as "shape".
 
 ## Examples
 
-See [master/plugins/input/templates](https://github.com/mapnik/mapnik/tree/master/plugins/input/templates) in the source tree, and specifically the [master/plugins/input/templates/helloworld](https://github.com/mapnik/mapnik/tree/master/plugins/input/templates) HelloWorld plugin.
-
-## Required functions
-
-TODO
-
-## The Query object
-
-TODO
-
-## Writing a SConscript file
-
-TODO
-
-## Gochas
-
-TODO
-
-
+See the [hello world](https://github.com/mapnik/hello-world-input-plugin) input plugin for an example to get started.
