@@ -65,7 +65,7 @@ git describe # take hash after 'g'
   * Then, push change:
 
 ```
-git ci -a -m "update CHANGELOG for mapnik v${MAPNIK_VERSION} release"
+git commit -a -m "update CHANGELOG for mapnik v${MAPNIK_VERSION} release"
 git push
 ```
 
