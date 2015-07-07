@@ -99,7 +99,8 @@ rm -rf .gitignore
 cd ../
 tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
 # upload to s3
-aws s3 cp --acl public-read ${TARBALL_NAME}.tar.bz2 s3://mapnik/dist/v${MAPNIK_VERSION}/```
+aws s3 cp --acl public-read ${TARBALL_NAME}.tar.bz2 s3://mapnik/dist/v${MAPNIK_VERSION}/
+```
 
 
 * Go back to the mapnik source checkout and generate Python API docs:
