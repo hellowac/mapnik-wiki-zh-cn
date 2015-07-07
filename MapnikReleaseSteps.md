@@ -88,13 +88,18 @@ TARBALL_NAME="mapnik-v${MAPNIK_VERSION}"
 git clone git@github.com:mapnik/mapnik.git ${TARBALL_NAME}
 cd ${TARBALL_NAME}
 git checkout "tags/v${MAPNIK_VERSION}"
+git submodule init
+git submodule update
+rm -rf test/data/.git
+rm -rf test/data/.gitignore
+rm -rf test/data-visual/.git
+rm -rf test/data-visual/.gitignore
+rm -rf .git
+rm -rf .gitignore
 cd ../
-rm -rf ${TARBALL_NAME}/.git
-rm -rf ${TARBALL_NAME}/.gitignore
 tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
 # upload to s3
-s3cmd --acl-public put ${TARBALL_NAME}.tar.bz2 s3://mapnik/dist/v${MAPNIK_VERSION}/
-```
+aws s3 cp --acl public-read ${TARBALL_NAME}.tar.bz2 s3://mapnik/dist/v${MAPNIK_VERSION}/```
 
 
 * Go back to the mapnik source checkout and generate Python API docs:
