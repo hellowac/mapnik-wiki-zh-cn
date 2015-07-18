@@ -13,7 +13,7 @@ See also a performance tuning page: [[OptimizeRenderingWithPostGIS]]
 | dbname                | string       | name of the database | |
 | user                  | string       | username to use for connecting | |
 | password              | string       | user password to use for connecting | |
-| table                 | string       | name of the table to fetch, this can be a sub-query;  subquery has to use syntax of:  '( ) as table'. | |
+| table                 | string       | name of the table to fetch, this can be a sub-query;  subquery has to use syntax of:  '( ) as subquery'. | |
 | geometry_field        | string       | name of the geometry field, in case you have more than one in a single table. This field and the SRID will be deduced from the query in most cases, but may need to be manually specified in some cases.| |
 | geometry_table        | string       | name of the table containing the returned geometry; for determining RIDs with subselects | |
 | srid                  | integer      | srid of the table, if this is > 0 then fetching data will avoid an extra database query for knowing the srid of the table | 0 |
