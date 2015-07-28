@@ -90,7 +90,19 @@ Before running this you'll need:
 make release
 ```
 
-* Go back to the mapnik source checkout and generate Python API docs:
+* Test the uploaded tarball:
+
+```sh
+cd /tmp
+rm -rf mapnik-v${MAPNIK_VERSION}.tar.bz2
+wget https://mapnik.s3.amazonaws.com/dist/v${MAPNIK_VERSION}/mapnik-v${MAPNIK_VERSION}.tar.bz2
+tar xf mapnik-v${MAPNIK_VERSION}.tar.bz2
+cd mapnik-v${MAPNIK_VERSION}
+source bootstrap.sh
+./configure && make && make test
+```
+
+* CURRENTLY NOT WORKING (https://github.com/mapnik/mapnik/pull/2906): Go back to the mapnik source checkout and generate Python API docs:
 
 ```sh
 cd ${MAPNIK_SOURCES}
