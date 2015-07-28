@@ -79,29 +79,16 @@ git tag --annotate "v${MAPNIK_VERSION}" -m "tagging v${MAPNIK_VERSION}"
 git push --tags
 ```
 
-* Create a clean tarball:
+* Create and upload clean tarball:
+
+Before running this you'll need:
+
+ - The submodules update to date (otherwise the --depth 1 will fail) (TODO: use branches or tags for submodules?)
+ - Ability to post to s3://mapnik/dist/. Test like `aws s3 ls s3://mapnik/dist/`
 
 ```sh
-cd /tmp
-MAPNIK_VERSION=`mapnik-config --version`
-TARBALL_NAME="mapnik-v${MAPNIK_VERSION}"
-git clone git@github.com:mapnik/mapnik.git ${TARBALL_NAME}
-cd ${TARBALL_NAME}
-git checkout "tags/v${MAPNIK_VERSION}"
-git submodule init
-git submodule update
-rm -rf test/data/.git
-rm -rf test/data/.gitignore
-rm -rf test/data-visual/.git
-rm -rf test/data-visual/.gitignore
-rm -rf .git
-rm -rf .gitignore
-cd ../
-tar cjf ${TARBALL_NAME}.tar.bz2 ${TARBALL_NAME}/
-# upload to s3
-aws s3 cp --acl public-read ${TARBALL_NAME}.tar.bz2 s3://mapnik/dist/v${MAPNIK_VERSION}/
+make release
 ```
-
 
 * Go back to the mapnik source checkout and generate Python API docs:
 
