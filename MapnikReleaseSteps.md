@@ -14,7 +14,7 @@
 
 ### Bundled fonts and scons
 
-Consider updating Scons-local to latest release: The last SCons update was 2.3.4.
+Consider updating Scons-local to [latest release](http://www.scons.org/download.php): The last SCons update was 2.3.4.
     
 ```sh
 wget http://prdownloads.sourceforge.net/scons/scons-local-2.3.4.zip
@@ -23,7 +23,7 @@ unzip -o scons-local-*.zip -d scons/
 rm scons-local-*.zip
 ```
 
-Consider updating DeJaVu Fonts: The last version updated was 2.33
+Consider updating DeJaVu Fonts: The [last version](http://dejavu-fonts.org/wiki/Download) updated was 2.33
 
 ```sh
 cd fonts
@@ -50,8 +50,8 @@ git push --tags
   * Set `MAPNIK_VERSION_IS_RELEASE` to 1 in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
 
 ```
-make uninstall && ./configure && make install
-MAPNIK_VERSION=`mapnik-config --version`
+make uninstall && ./configure && make
+MAPNIK_VERSION=`./utils/mapnik-config/mapnik-config --version`
 git commit -a -m "setting up for mapnik v${MAPNIK_VERSION} release" 
 git push
 ```
