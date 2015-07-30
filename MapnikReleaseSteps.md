@@ -155,11 +155,28 @@ And create new launchpad PPA for the target release(s) and series at https://lau
 * Push python api docs and update docs/index.markdown
     
 ### Packaging
-    
-* Package binaries for Windows, Mac, and Ubuntu Linux (PPA)
-* Upload Mac/Win binary packages to the s3 bucket: <http://mapnik.s3.amazonaws.com/dist/>
-* Submit pull request for homebrew formula: <https://github.com/mxcl/homebrew/blob/master/Library/Formula/mapnik.rb>
-    
+
+1) Submit pull request for homebrew formula
+
+ - Fork homebrew
+ - Edit https://github.com/mxcl/homebrew/blob/master/Library/Formula/mapnik.rb
+ - Change the version
+ - Run `brew install mapnik`, will fail on `sha256` check
+ - grab expected `sha256` from error message, edit `mapnik.rb`
+ - test building `brew install mapnik`
+ - submit pull request - learning from older ones like https://github.com/Homebrew/homebrew/pull/41474
+   
+2) Package binaries for Ubuntu Linux (PPA)
+
+ - Scripts are at https://github.com/mapnik/debian
+ - Create a new version by copying `master` scripts (or appropriate dir)
+ - Add an entry for the new version to https://github.com/mapnik/debian/blob/master/nightly-build.sh
+ - The `nighly-build.sh` is run on a cron by robert.coup@koordinates.com (@rcoup) - TODO - should we move this to travis?
+
+3) Upload Mac/Win binary packages to the s3 bucket: <http://mapnik.s3.amazonaws.com/dist/>
+
+TODO - currently do not have bandwidth or set process for this. For Mac: In the past @springmeyer created mac easy installer but just recommending homebrew is better now (since they support binaries/bottles). For Windows: https://github.com/mapbox/windows-builds is used to create SDK's but we've not yet formalized document how these can be used (those they are viable).
+
 ### Wiki Post-Release
 
 * Add https://github.com/mapnik/mapnik/wiki/Release${VERSION} (needed by ubuntu packages)
