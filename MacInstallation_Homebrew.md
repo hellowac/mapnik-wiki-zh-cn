@@ -25,7 +25,7 @@ To see the options available for the build do:
 brew info mapnik
 ```
 For instance you should see `--with-cairo`, `--with-gdal`, and `--with-postgresql`. Unless you supply `--with-cairo` Mapnik will not be built with Cairo rendering support. If you pass `--with-gdal` or `--with-postgresql` then Homebrew will automatically install these dependencies before building Mapnik. 
-In order to work with a PostGIS Database you have to supply `--with-postgresql` (the formulae only adds PG/GDAL support if stated explicitly: [see formulae](https://github.com/Homebrew/homebrew/blob/master/Library/Formula/mapnik.rb#L68))
+In order to work with a PostGIS Database you have to supply `--with-postgresql` (the formula only adds PG/GDAL support if stated explicitly: [see formula](https://github.com/Homebrew/homebrew/blob/master/Library/Formula/mapnik.rb#L79-L80))
 
 ```sh
 brew install mapnik
