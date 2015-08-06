@@ -16,6 +16,9 @@ This tutorial expects Mapnik 2.x or greater. Older versions do not provide the `
 Please note that if you are using mapnik 2.0.0 then you will need to adjust the "mapnik" module name to "mapnik2" in the Python commands. Refer to [[mapnik2]] for details of the naming convention.
 
 
+Please also note that unlike Mapnik 2.x, [version 3.x does not include Python bindings anymore](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md#300). You can find the new Python bindings [here](https://github.com/mapnik/python-mapnik).
+
+
 
 Next test the Python bindings. You should be able to open a terminal and type:
 
