@@ -98,6 +98,12 @@ To style a layer use the [[RasterSymbolizer]]
         <Parameter name="hiy">max_y</Parameter>
     </Datasource>
 </Layer>
+
+from mapnik import Raster, Layer
+raster = Raster(base='/home/mapnik/data',file='/path/to/my/raster/file.tiff',lox=minx,loy=min_y,hix=max_x,hiy=max_y)
+lyr = Layer('Tiff Layer')
+lyr.datasource = raster
+
 ```
 
 ## C++
