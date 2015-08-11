@@ -15,6 +15,7 @@ The Map object defines the master object of a mapnik configuration XML. It defin
  * Attributes:
   * *background-color*: HTML color code for the background-color of the map (for instance #000000)
     * 'bg-color' before Mapnik2.
+    * Opacity is controlled by the last two digits of an 8-digit value. #00000000 means transparent background. The default value is #000000FF.
   * *background-image*: Available in Mapnik2: use an image for the background instead of a color fill.
   * *font-directory*: Available in Mapnik2: pass a directory that contains fonts, which will automatically be registered if they end in ttf, otf, ttc, pfa, pfb, ttc, or dfont.
   * *srs*: Coordinate system in which the map is rendered (for instance '+proj=latlong+datum=WGS84' for a WGS84 Geographic coordinate system)
