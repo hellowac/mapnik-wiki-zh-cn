@@ -17,20 +17,20 @@
 Consider updating Scons-local to [latest release](http://www.scons.org/download.php): The last SCons update was 2.3.4.
     
 ```sh
-wget http://prdownloads.sourceforge.net/scons/scons-local-2.3.4.zip
+wget http://prdownloads.sourceforge.net/scons/scons-local-2.3.6.zip
 rm -rf scons
 unzip -o scons-local-*.zip -d scons/
 rm scons-local-*.zip
 ```
 
-Consider updating DeJaVu Fonts: The [last version](http://dejavu-fonts.org/wiki/Download) updated was 2.33
+Consider updating DeJaVu Fonts: The [last version](http://dejavu-fonts.org/wiki/Download) updated was 2.35
 
 ```sh
 cd fonts
 git rm -r dejavu-fonts-ttf-
-wget http://sourceforge.net/projects/dejavu/files/dejavu/2.33/dejavu-fonts-ttf-2.33.tar.bz2
-tar xvf dejavu-fonts-ttf-2.33.tar.bz2
-git add dejavu-fonts-ttf-2.33
+wget http://sourceforge.net/projects/dejavu/files/dejavu/2.35/dejavu-fonts-ttf-2.35.tar.bz2
+tar xvf dejavu-fonts-ttf-2.35.tar.bz2
+git add dejavu-fonts-ttf-2.35
 ```
     
 Check for new [unifont release](http://unifoundry.com/unifont.html)
