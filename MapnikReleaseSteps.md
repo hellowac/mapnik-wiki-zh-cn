@@ -14,7 +14,7 @@
 
 ### Bundled fonts and scons
 
-Consider updating Scons-local to [latest release](http://www.scons.org/download.php): The last SCons update was 2.3.4.
+Consider updating Scons-local to [latest release](http://www.scons.org/download.php): The last SCons update was 2.3.6.
     
 ```sh
 wget http://prdownloads.sourceforge.net/scons/scons-local-2.3.6.zip
