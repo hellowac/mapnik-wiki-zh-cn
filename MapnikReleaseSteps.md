@@ -27,10 +27,10 @@ Consider updating DeJaVu Fonts: The [last version](http://dejavu-fonts.org/wiki/
 
 ```sh
 cd fonts
-svn rm dejavu-fonts-ttf-
+git rm -r dejavu-fonts-ttf-
 wget http://sourceforge.net/projects/dejavu/files/dejavu/2.33/dejavu-fonts-ttf-2.33.tar.bz2
 tar xvf dejavu-fonts-ttf-2.33.tar.bz2
-svn add dejavu-fonts-ttf-2.33
+git add dejavu-fonts-ttf-2.33
 ```
     
 Check for new [unifont release](http://unifoundry.com/unifont.html)
