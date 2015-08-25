@@ -31,6 +31,12 @@ In order to work with a PostGIS Database you have to supply `--with-postgresql` 
 brew install mapnik
 ```
 
+Note that the current `mapnik` package in Homebrew is based on Mapnik 3 and does not include the Python bindings by default. To install the older Mapnik 2.2 package with Python bindings:
+
+```sh
+brew install homebrew/versions/mapnik2
+```
+
 ### pycairo support
 
 If you want both cairo rendering support and the ability to work with cairo objects (and pass them to mapnik) in python do:
