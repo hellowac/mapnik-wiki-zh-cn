@@ -150,7 +150,7 @@ And create new launchpad PPA for the target release(s) and series at https://lau
 
 ### Update Mapnik.org
 
-* Update the [download page](http://mapnik.org/download/)(download/index.markdown)
+* Update the [download page](http://mapnik.org/download/)(pages/downloads.html)
 * Write new blog post with updated release links and links to changelog
 * Push python api docs and update docs/index.markdown
     
