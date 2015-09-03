@@ -1,6 +1,6 @@
 Mapnik 3.0 is the current stable release. 
 
-You can download the source code archive for Mapnik 3.0.6 from <http://mapnik.org/download/>
+You can download the source code archive for Mapnik 3.0.6 from <strike><http://mapnik.org/download/></strike> (Page offline)
 
 ## Installing / Building
 
