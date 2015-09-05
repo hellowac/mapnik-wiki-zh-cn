@@ -45,7 +45,7 @@ This Guide will walk you through installing Mapnik and then running a test scrip
 
 ### Step 1: Download the Mapnik binary
 
-Get the latest Windows binaries at http://mapnik.org/download/
+Get the latest Windows binaries at http://mapnik.org/pages/downloads.html
 
 ### Step 2: Unzip and place Mapnik
 
