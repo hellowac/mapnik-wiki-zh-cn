@@ -2,7 +2,6 @@ Mapnik is a Free Toolkit for developing mapping applications. It is written in m
 
 *Mapnik is about making beautiful maps*. It uses the AGG graphics library, which offers world-class anti-aliasing rendering with subpixel accuracy for geographic data.
 
-See the [the Mapnik FAQ](http://mapnik.org/faq/) for more information.
 
 ## Blog posts about Mapnik
  
