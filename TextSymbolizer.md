@@ -182,7 +182,7 @@ If some of your text depends on the line direction you need to supply different 
 * upright="auto/left/right" (See table above)
 * dx is also used for line placements
 * Multi-line support for line placements
-* New parameter ``rotate_displacement="yes/no"``
+* New parameter ``rotate-displacement="yes/no"``
 * Parameters now supported for `line` placement (that only previously supported for `point` placement): justify-alignment, vertical-alignment, text-ratio, wrap-width, wrap-before
 * Line offsets are real offsets instead of fake offsets imitated by calculating the average angle
 * If dy!="0" you have to set vertical-alignment="middle" to get the same behavior as in previous versions.
