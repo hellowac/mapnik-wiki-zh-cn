@@ -138,7 +138,7 @@ sudo apt-get install -y postgresql-9.3 postgresql-server-dev-9.3 postgresql-cont
 
 ```sh
 # For the development branch:
-git clone https://github.com/mapnik/mapnik mapnik-2.3.x -b 2.3.x
+git clone https://github.com/mapnik/mapnik mapnik-2.3.x -b 2.3.x --depth 10
 cd mapnik-2.3.x
 ./configure && make && sudo make install
 ```
@@ -159,7 +159,7 @@ Upgrade your compiler to at least g++ 4.7 so it supports c++11 features. <br>`ap
 ```sh
 apt-get update
 apt-get upgrade
-git clone https://github.com/mapnik/mapnik
+git clone https://github.com/mapnik/mapnik --depth 10
 cd mapnik
 ./configure
 make && sudo make install
@@ -175,7 +175,7 @@ wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -
 sudo apt-get update -y
 sudo apt-get install -y clang-3.6;
 export CXX="clang++-3.6" && export CC="clang-3.6";
-git clone https://github.com/mapnik/mapnik
+git clone https://github.com/mapnik/mapnik --depth 10
 cd mapnik
 ./configure CXX=${CXX} CC=${CC}
 make && sudo make install
