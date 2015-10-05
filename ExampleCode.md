@@ -21,7 +21,7 @@ Here are some other sets of Example Code to learn from.
  * *Added by:* lwu
 
 ### Servers
- * http://svn.openstreetmap.org/applications/utils/mod_tile/
+ * https://github.com/openstreetmap/mod_tile/
 
 ### C++ profiling tests
  * http://github.com/jflemer/mapnik-glitz-demo
