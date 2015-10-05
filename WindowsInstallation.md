@@ -1,6 +1,6 @@
 # Installing Mapnik in Windows
 
-Mapnik binaries can be installed and configured manually on windows. See http://mapnik.org/download/ for the latest download and instructions on installing.
+Mapnik binaries can be installed and configured manually on windows. See http://mapnik.org/pages/downloads.html for the latest download and instructions on installing.
 
 If you are interested in installing Mapnik on other operating systems see [[Mapnik-Installation]]
 
