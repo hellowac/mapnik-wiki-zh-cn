@@ -51,7 +51,7 @@ git push --tags
 ```
 make uninstall && ./configure && make
 MAPNIK_VERSION=`./utils/mapnik-config/mapnik-config --version`
-git commit -a -m "setting up for mapnik v${MAPNIK_VERSION} release" 
+git commit -a -m "setting up for mapnik v${MAPNIK_VERSION} release [skip ci]" 
 git push
 ```
 
@@ -64,7 +64,7 @@ git describe # take hash after 'g'
   * Then, push change:
 
 ```
-git commit -a -m "update CHANGELOG for mapnik v${MAPNIK_VERSION} release"
+git commit -a -m "update CHANGELOG for mapnik v${MAPNIK_VERSION} release [skip ci]"
 git push
 ```
 
@@ -132,12 +132,12 @@ git checkout master
 
 Now bump versions again:
 
-   * edit [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp) again, incrementing version # and changing `MAPNIK_VERSION_IS_RELEASE` back to `0` to set up for the next release
+   * edit [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp) again, incrementing version
 
 ```
 make uninstall && ./configure && make install
 MAPNIK_VERSION=`mapnik-config --version`
-git ci include/mapnik/version.hpp SConstruct -m "now working on mapnik v${MAPNIK_VERSION}"
+git ci include/mapnik/version.hpp -m "now working on mapnik v${MAPNIK_VERSION} [skip ci]"
 git push
 ```
 
