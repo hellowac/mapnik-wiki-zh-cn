@@ -14,7 +14,7 @@
 
 ### Bundled fonts and scons
 
-Consider updating Scons-local to [latest release](http://www.scons.org/download.php): The last SCons update was 2.3.6.
+OPTIONAL: Consider updating Scons-local to [latest release](http://www.scons.org/download.php): The last SCons update was 2.3.6.
     
 ```sh
 wget http://prdownloads.sourceforge.net/scons/scons-local-2.3.6.zip
@@ -23,7 +23,7 @@ unzip -o scons-local-*.zip -d scons/
 rm scons-local-*.zip
 ```
 
-Consider updating DeJaVu Fonts: The [last version](http://dejavu-fonts.org/wiki/Download) updated was 2.35
+OPTIONAL: Consider updating DeJaVu Fonts: The [last version](http://dejavu-fonts.org/wiki/Download) updated was 2.35
 
 ```sh
 cd fonts
@@ -37,7 +37,7 @@ Check for new [unifont release](http://unifoundry.com/unifont.html)
 
 ### Release candidate
 
-Consider first promoting a release candidate tag:
+OPTIONAL: If it has been > 3 months since the last official release, consider first promoting a release candidate first:
 
 ```sh
 git tag -a v3.0.0-rc1 -m 'Release Candidate 1 for Mapnik v3.0.0'
@@ -47,7 +47,6 @@ git push --tags
 ### Pre-tag updates
 
   * Update version number in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
-  * Set `MAPNIK_VERSION_IS_RELEASE` to 1 in [version.hpp](https://github.com/mapnik/mapnik/blob/master/include/mapnik/version.hpp)
 
 ```
 make uninstall && ./configure && make
@@ -71,7 +70,7 @@ git push
 
 ### Tagging
 
-Note: we use [annotated tags](http://stackoverflow.com/questions/4971746/why-should-i-care-about-lightweight-vs-annotated-tags/4971817#4971817) below instead of lightweight tags
+We use [annotated tags](http://stackoverflow.com/questions/4971746/why-should-i-care-about-lightweight-vs-annotated-tags/4971817#4971817) below instead of lightweight tags
 
 ```sh
 MAPNIK_VERSION=`mapnik-config --version`
@@ -83,7 +82,7 @@ git push --tags
 
 Before running this you'll need:
 
- - The submodules update to date (otherwise the --depth 1 will fail) (TODO: use branches or tags for submodules?)
+ - The submodules up to date (otherwise the --depth 1 will fail) (TODO: use branches or tags for submodules?)
  - Ability to post to s3://mapnik/dist/. Test like `aws s3 ls s3://mapnik/dist/`
 
 ```sh
