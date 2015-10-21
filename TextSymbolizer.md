@@ -45,6 +45,7 @@
 |fill|color|Color of the text fill, e.g. #FFFFFF||black|
 |halo-fill|color|Color of the text halo, e.g. rgba(255,255,255,0.5)||white|
 |halo-radius|double|Radius of the halo in pixels (Fractional pixels are accepted. See halo-rasterizer for limitations.)|px|0|
+|halo-comp-op|string|Composition only with the halo|||
 |character-spacing|double|Additional horizontal spacing between characters. Currently works for point placement only, not line placement. You will get the normal spacing defined by the font plus this amount of extra space. (Also works for line placements in harfbuzz branch.)|px|0|
 |line-spacing|double|Vertical spacing between lines of multi-line labels. This spacing is in addition to the normal font line spacing|px|0|
 |wrap-character|char|Use this character instead of a space to wrap long names. (Harfbuzz branch ignores this and uses Unicode rules for line breaks.)|||
