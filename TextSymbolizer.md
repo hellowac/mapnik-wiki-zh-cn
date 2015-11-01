@@ -211,3 +211,8 @@ Example
     [name] + "\n" <Format size="10">"(" + [ele] + ")"</Format>
 </TextSymbolizer>
 ```
+This could result in this:
+
+![](https://cloud.githubusercontent.com/assets/3618939/10868868/bc94ced6-809c-11e5-9b9d-36c587a4378c.png)
+
+(See [#3158](https://github.com/mapnik/mapnik/issues/3158))
