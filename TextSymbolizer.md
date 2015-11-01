@@ -202,3 +202,12 @@ A simple XML example:
 ```
 
 The above specifies two offset text layouts to be placed along opposite sides of a line.
+
+## Formats
+When you want to change attributes within the text symbolizer, you can use the ``<Format>`` element.
+Example
+```xml
+<TextSymbolizer placement="point" size="20" face-name="DejaVu Sans Book" fill="black" justify-alignment="center">
+    [name] + "\n" <Format size="10">"(" + [ele] + ")"</Format>
+</TextSymbolizer>
+```
