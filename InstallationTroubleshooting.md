@@ -198,6 +198,8 @@ what you actually need is
 
  * *Solution*: If g++ is available then ICU must be in a custom location so set the paths to the libs and includes - ie. ICU_LIBS=/usr/local/lib and ICU_INCLUDES=/usr/local/include.
 
+ * *Solution*: sudo aptitude install g++ make expat libicu-dev
+
 ### Boost not found during SCons build
 
  * *Description*: Often the various packages that install the Boost libraries do not properly symlink to the .so such that mapnik's Scons build process does not automatically find the boost libraries.
