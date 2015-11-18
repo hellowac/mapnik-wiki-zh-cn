@@ -28,8 +28,8 @@ See also a performance tuning page: [[OptimizeRenderingWithPostGIS]]
 | multiple_geometries   | boolean      | whether to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
 | encoding              | string       | internal file encoding | utf-8 |
 | simplify_geometries   | boolean      | whether to automatically [reduce input vertices](http://blog.cartodb.com/post/20163722809/speeding-up-tiles-rendering). Only effective when output projection matches (or is similar to) input projection. Available from version 2.1.x up. | false |
-| ~~asynchronous_request~~  | boolean       | ~~Postgres queries are sent asynchronously : while rendering a layer, queries for further layers will run in parallel in the remote server. Full doc [here](Postgis-async) Available from version 2.3.x up.~~ | *DEPRECATED* (automatically set internally based on `max_async_connection > 1` condition) |
-| max_async_connection  | integer       | max number of PostGIS queries for rendering one map in asynchronous mode. ~~Used only when asynchronous_request=true.~~ Default value (1) has no effect. | 1 |
+| ~~asynchronous_request~~  | boolean       | ~~Postgres queries are sent asynchronously : while rendering a layer, queries for further layers will run in parallel in the remote server.  Available from version 2.3.x up.~~ | *DEPRECATED* (automatically set internally based on `max_async_connection > 1` condition) |
+| max_async_connection  | integer       | max number of PostGIS queries for rendering one map in asynchronous mode. Full doc [here](Postgis-async). ~~Used only when asynchronous_request=true.~~ Default value (1) has no effect. | 1 |
 
 ## Usage
 
