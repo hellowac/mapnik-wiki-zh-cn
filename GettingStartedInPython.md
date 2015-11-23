@@ -155,7 +155,7 @@ m.zoom_all()
 Finish up by rendering your map image:
 
 ```python
-# Write the data to a png image called world.png the current directory
+# Write the data to a png image called world.png in the current directory
 mapnik.render_to_file(m,'world.png', 'png')
 
 # Exit the Python interpreter
