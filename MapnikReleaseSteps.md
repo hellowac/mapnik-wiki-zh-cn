@@ -14,10 +14,10 @@
 
 ### Bundled fonts and scons
 
-OPTIONAL: Consider updating Scons-local to [latest release](http://www.scons.org/download.php): The last SCons update was 2.3.6.
+OPTIONAL: Consider updating Scons-local to [latest release](http://www.scons.org/download.php): The last SCons update was 2.4.1.
     
 ```sh
-wget http://prdownloads.sourceforge.net/scons/scons-local-2.3.6.zip
+wget http://prdownloads.sourceforge.net/scons/scons-local-2.4.1.zip
 rm -rf scons
 unzip -o scons-local-*.zip -d scons/
 rm scons-local-*.zip
