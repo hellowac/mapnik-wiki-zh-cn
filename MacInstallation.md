@@ -2,7 +2,7 @@
 
 ## Binary Installers
 
-Binary Mapnik installers for Mac OS X are available at [mapnik.org/download](http://mapnik.org/download/)
+Binary Mapnik installers for Mac OS X are available at [mapnik.org/pages/downloads.html](http://mapnik.org/pages/downloads.html)
 
 ## Using Homebrew
 
