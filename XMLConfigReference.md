@@ -114,7 +114,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
   * *[[ElseFilter]]*
   * *[[MinScaleDenominator]]*
   * *[[MaxScaleDenominator]]*
-  * *[[PointSymbolizer]]*
+  * *[[PointSymbolizer]]* (deprecated according to [#2115](https://github.com/mapnik/mapnik/issues/2115). Use MarkersSymbolizer instead!)
   * *[[LineSymbolizer]]*
   * *[[LinePatternSymbolizer]]*
   * *[[MarkersSymbolizer]]*
