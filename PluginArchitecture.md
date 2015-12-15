@@ -6,7 +6,7 @@ Some plugins have been written in C++ and require no external dependencies, whil
 
 Interested in developing a new plugin see: [[DevelopingPlugins]]
 
-All current plugins are located in https://github.com/mapnik/mapnik/tree/master/plugins/input/
+All current plugins are either located in [plugins/input](https://github.com/mapnik/mapnik/tree/master/plugins/input/) in the source tree, or in the [mapnik/non-core-plugins](https://github.com/mapnik/non-core-plugins) repository.
 
 | **Name**| **Availability**|**Status**|**Build by Default**|**Notes**|
 |:-------:|:---------------:|:--------:|:------------------:|:-------:|
