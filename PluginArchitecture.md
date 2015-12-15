@@ -18,10 +18,12 @@ All current plugins are located in https://github.com/mapnik/mapnik/tree/master/
 | *[osm](OsmPlugin)*| 0.6.0| Beta| no|  support for reading OpenStreetMap (OSM) xml datasets|
 | *[sqlite](SQLite)*| 0.6.0| Beta| no|  support for [SQLite](http://en.wikipedia.org/wiki/SQLite) / [Spatialite](http://www.gaia-gis.it/spatialite) sql vector format|
 | *[occi](OCCI)*| 0.6.0| Beta| no|  support for oracle spatial 10g/11g (versions 10.2.0.x and 11.2.0.x) ([Oracle Spatial](http://en.wikipedia.org/wiki/Oracle_Spatial)) sql vector format|
-| *[kismet](Kismet)*| git| Alpha| no|  support for [Kismet](http://www.kismetwireless.net/) GPS; shows little WLAN nodes on the map| 
-| *[rasterlite](Rasterlite)*| git| Experimental| no|  support for [Rasterlite](http://www.gaia-gis.it/spatialite) sqlite raster with wavelet compression| 
-| *[geos](GEOS)*| git| Experimental| no|  support for inline WKT geometries using [GEOS](http://trac.osgeo.org/geos/) library| 
-| *[python](Python Plugin)* | git| Experimental| yes| support for generating features dynamically using the Python programming language.|
+| *[kismet](Kismet)*| 2.1?| Alpha| no|  support for [Kismet](http://www.kismetwireless.net/) GPS; shows little WLAN nodes on the map| 
+| *[rasterlite](Rasterlite)*| 2.1?| Experimental| no|  support for [Rasterlite](http://www.gaia-gis.it/spatialite) sqlite raster with wavelet compression| 
+| *[geos](GEOS)*| 2.1?| Experimental| no|  support for inline WKT geometries using [GEOS](http://trac.osgeo.org/geos/) library| 
+| *[python](Python Plugin)* | 2.1| Experimental| yes| support for generating features dynamically using the Python programming language.|
+| *[geojson](GeoJSON Plugin)*| 2.1| Experimental| no| support for reading features from [GeoJSON](http://geojson.org/) data.|
+| *[csv](CSV Plugin)*| 2.1| *unknown*| no| support for reading lon/lat, GeoJSON, or WKT from [CSV](https://www.wikiwand.com/en/Comma-separated_values) data.|
 
 *Note*: When compiling Mapnik from source only the PostGIS, Raster, and Shape plugins will be compiled by default.
 
