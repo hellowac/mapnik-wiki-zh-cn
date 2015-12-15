@@ -21,9 +21,11 @@ All current plugins are located in https://github.com/mapnik/mapnik/tree/master/
 | *[kismet](Kismet)*| 2.1?| Alpha| no|  support for [Kismet](http://www.kismetwireless.net/) GPS; shows little WLAN nodes on the map| 
 | *[rasterlite](Rasterlite)*| 2.1?| Experimental| no|  support for [Rasterlite](http://www.gaia-gis.it/spatialite) sqlite raster with wavelet compression| 
 | *[geos](GEOS)*| 2.1?| Experimental| no|  support for inline WKT geometries using [GEOS](http://trac.osgeo.org/geos/) library| 
-| *[python](Python Plugin)* | 2.1| Experimental| yes| support for generating features dynamically using the Python programming language.|
-| *[geojson](GeoJSON Plugin)*| 2.1| Experimental| no| support for reading features from [GeoJSON](http://geojson.org/) data.|
-| *[csv](CSV Plugin)*| 2.1| *unknown*| no| support for reading lon/lat, GeoJSON, or WKT from [CSV](https://www.wikiwand.com/en/Comma-separated_values) data.|
+| *[python](Python Plugin)* | 2.1| Experimental| yes| support for generating features dynamically using the Python programming language|
+| *[geojson](GeoJSON Plugin)*| 2.1| Experimental| no| support for reading features from [GeoJSON](http://geojson.org/) data|
+| *[csv](CSV Plugin)*| 2.1| *unknown*| no| support for reading lon/lat, GeoJSON, or WKT from [CSV](https://www.wikiwand.com/en/Comma-separated_values) data|
+| *[pgraster](PGRaster Plugin)*| 3.0| *unknown*| no| support for loading raster data from PostGIS|
+| *[topojson](TopoJSON Plugin)*| 3.0| *unknown*| no| support for loading features from [TopoJSON](https://github.com/mbostock/topojson/wiki) data|
 
 *Note*: When compiling Mapnik from source only the PostGIS, Raster, and Shape plugins will be compiled by default.
 
