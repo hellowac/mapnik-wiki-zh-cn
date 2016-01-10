@@ -6,7 +6,7 @@
 |file | The SVG file to use for the marker | built-in marker | yes |
 |transform | [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) | identity | yes |
 |opacity | Opacity | 1.0 | yes |
-|fill | Color of the marker fill, e.g. #FFFFFF. This property is only used when the marker is NOT an SVG graphic. | blue | no |
+|fill | Color of the marker fill, e.g. #FFFFFF. | blue | no |
 | stroke | CSS colour - A Color value such as 'green' or #A3D979 | black | no |
 | stroke-width | 0.0 - n  - Width of outline in pixels | 1.0 | no |
 | stroke-opacity | 0.0 - 1.0 - 1 is fully opaque while zero is fully transparent and .5 would be 50% transparent | 1.0  | no |
