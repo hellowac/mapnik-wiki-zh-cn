@@ -161,6 +161,7 @@ apt-get update
 apt-get upgrade
 git clone https://github.com/mapnik/mapnik --depth 10
 cd mapnik
+git submodule update --init deps/mapbox/variant
 ./configure
 make && sudo make install
 ```
