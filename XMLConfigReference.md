@@ -25,10 +25,10 @@ The Map object defines the master object of a mapnik configuration XML. It defin
   * *minimum-version*: Declare the minimum version of mapnik to be used with the stylesheet. Example: minimum-version="0.6.1". Will print a notice if you use an older mapnik version. 
 
  * Children:
-  * *[#Style Style]*
-  * *[#Layer Layer]*
+  * *[Style](#style)* 
+  * *[Layer](#layer)*
   * *FileSource*: See [37f49e2](https://github.com/mapnik/mapnik/commit/37f49e29cce2d334fe9839)
-  * *Datasource*: See [#Datasource Datasource] and [37f49e2](https://github.com/mapnik/mapnik/commit/37f49e29cce2d334fe9839)
+  * *Datasource*: See [Datasource](#datasource) and [37f49e2](https://github.com/mapnik/mapnik/commit/37f49e29cce2d334fe9839)
   * *FontSet*: Defines a fontset for fallback fonts (if a character isn't found in the first font, proceed through the list until it is found)
   * *Include*: The container tag used to wrap all context in files included via XInclude
 
@@ -47,7 +47,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
   * *filter-mode*: Whether *all* rules in the Style should be evaluated (default) or if rendering should stop after the *first* matching rule. See [#706](https://github.com/mapnik/mapnik/issues/706)
 
  * Children:
-  * *[#Rule Rule]*
+  * *[Rule](#rule)*
 
   * *xmlcomment*: (Ignored by Mapnik)
   * *xmlattr*: (Ignored by Mapnik)
@@ -71,7 +71,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
 
  * Children:
   * *StyleName*: The name of a defined [#Style style]. The style must contain the same string in the attribute *name*.
-  * *[#Datasource Datasource]*
+  * *[Datasource](#datasource)*
 
 ## Datasource
  See also the [Python API docs](http://mapnik.org/docs/v2.1.0/api/python/index.html)
@@ -142,9 +142,8 @@ Also see [[SymbologySupport]] for more info on Symbolizers
  * Attributes - None
 
  * Children:
-  * *[#Style Style]*
-  * *[#Layer Layer]*
+  * *[Style](#style)*
+  * *[Layer](#layer)*
   * *FileSource*:
-  * *Datasource*: See [#Datasource Datasource]
+  * *Datasource*: See [Datasource](#datasource) 
   * *FontSet*: Defines a fontset for fallback fonts (if a character isn't found in the first font, proceed through the list until it is found)
-
