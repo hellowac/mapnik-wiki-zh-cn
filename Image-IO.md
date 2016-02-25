@@ -83,7 +83,7 @@ And the key:value options can be controlled as follows:
 | m    | string, `o` or `h` | `h` | Applies to paletted png only. This is the quantization method: `o` stands for `octree` and `h` stands for `hextree`. The `octree` quantizer only supports limited alpha ranges and so for images with detailed alpha this may produce a poorer quality image. However the `octree` encoder is faster than the `hextree` encoder. The `hextree` encoder is default (as of >= Mapnik 2.3.x) because it produces the highest quality output - nearly visually identical to full color png. If your maps do no contain any alpha (e.g. they have a completely opaque background) then full color png or `png8:m=o` may produce smaller pngs at a faster rate, however we plan to optimize this pathway automatically [in the future](https://github.com/mapnik/mapnik/issues/2029). |
 | g    | float, 1.0 - 2.0 |  2.0 | Not likely that you need to change this option. It is the gamma correction for pixel arithmetic in hextree method. 1.0 means no gamma correction |
 | s    | string, `default`, `filtered`, `huff`, or `rle` | `default` | Not likely that you need to change this option. It is the ZLIB compression strategy. See zlib docs for more details (available in Mapnik >= 2.x) |
-| e    | string, `miniz` or `libpng` | 'libpng` | REMOVED in Mapnik 3.0.10 ~~Experimental: not recommended to set this option. `e=miniz` triggers using the experimental miniz encoder support instead of `libpng`. In some cases this encoder provides better encoding speeds with minor size differences but it also does not work fully yet (bugs we need to track down)~~ |
+| e    | string, `miniz` or `libpng` | 'libpng` | REMOVED in Mapnik 3.0.10 |
 
 ### WEBP output options
 
