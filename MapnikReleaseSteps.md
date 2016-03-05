@@ -116,7 +116,7 @@ cd ${MAPNIK_SOURCES}
 
 ### Post tag updates
 
-* Create a new `mapnik-reference` entry for the release: https://github.com/mapnik/mapnik-reference
+* If there are new styling or datasource options, create a new `mapnik-reference` entry for the release: https://github.com/mapnik/mapnik-reference
 
 * Update master branches entries in [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) from the new release (if relevant, e.g. if you are tagging and releasing a stable release not from the master branch).
 
