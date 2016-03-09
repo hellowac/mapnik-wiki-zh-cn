@@ -25,7 +25,7 @@ Welcome to the Mapnik wiki.
 
 ### Community
 
-- [Mailing List](http://mapnik.org/contact/)
+- [Mailing List](https://groups.google.com/forum/#!forum/mapnik)
 - #mapnik channel on irc.freenode.net [Webchat](http://webchat.freenode.net/?channels=#mapnik)
 - [[Code sprint]] Washington DC, June 15-17, 2012
 - [Code sprint 2010 - Committers and Cartographers](http://173.255.217.246:8000/mapnik_trac/wiki/MapnikCodeSprint/MCS01) London, England, 24-26 September 2010
