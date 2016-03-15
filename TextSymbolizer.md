@@ -137,7 +137,7 @@ An XML example might look like:
   face-name="DejaVu Sans Book"
   placement-type="simple"
   placements="N,S,15,10,8"
-/>[label]</TextSymbolizer>
+>[label]</TextSymbolizer>
 ```
 
 ### List
