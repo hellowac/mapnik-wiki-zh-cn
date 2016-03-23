@@ -87,6 +87,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
    * Possible values:
      * '''shape'''	:	ESRI shapefile
      * '''postgis'''	:	Postgis table or query
+     * '''pgraster'''	:	Postgis table or query (containing or returning raster)
      * '''raster'''	:	Tiled or stripped TIFF
      * '''gdal'''	:	GDAL supported raster dataset (not build by default)
      * '''ogr'''          :       OGR supported vector datasource (not build by default)
@@ -95,6 +96,7 @@ A Style object  defines the way objects can be rendered. A Mapnik configuration 
   * *extent*:		manually enter an extent if estimate_extent is set to false
 
  * Additional parameters for type *postgis* see: Parameters on the [[PostGIS]] page. 
+ * Additional parameters for type *pgraster* see: Parameters on the [[PgRaster]] page. 
  * Additional parameters for type *shape* see [[ShapeFile]]
  * Additional parameters for type *gdal* see [[GDAL]].
  * Additional parameters for type *ogr* see [[OGR]].
