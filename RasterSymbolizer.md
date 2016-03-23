@@ -1,4 +1,4 @@
-The RasterSymbolizer is used to render an image from any [GDAL supported format](http://www.gdal.org/formats_list.html) using the [[GDAL]] plugin or from GeoTiff's using the [[Raster]] plugin.
+The RasterSymbolizer is used to render an image from any [GDAL supported format](http://www.gdal.org/formats_list.html) using the [[GDAL]] plugin, from GeoTiff's using the [[Raster]] plugin or from PostGIS using the [[PgRaster]] plugin.
 
  * Mapnik supports on-the-fly reprojection of raster layers (like it does for vector layers)
   * However, for optimal performance it can be best to first (externally) warp an image to the Spatial Reference System (srs) used in the map (e.g. using the `gdalwarp` command from the gdal-utilities).
@@ -27,14 +27,15 @@ Processed as described in http://wiki.openstreetmap.org/wiki/Hillshading_using_t
 | scaling         | fast, bilinear, bilinear8 || fast: nearest neighbour, bilinear: bilinear interpolation for all 4 channels (RGBA), bilinear8 like bilinear, but only one channel assumed |
 
 
-There are two types of raster datasources: *gdal* or *raster*:
+There are three types of raster datasources: *gdal*, *raster* or *pgraster*:
 
  * The [[GDAL]] plugin is more convenient as it can read the file extents automatically and supports any GDAL-supported type of file
  * The [[Raster]] driver only works with Tiled or Stripped GeoTIFF files and requires manually setting the file bounds, but can be faster.
+ * The [[PgRaster]] driver requires manually setting the band number to use as databand.
 
 ## XML Layers
 
-See the [[GDAL]] plugin and [[Raster]] plugin pages for more info
+See the [[GDAL]], [[Raster]] and [[PgRaster]] plugin pages for more info
 
 
 ## XML Styles
