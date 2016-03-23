@@ -39,6 +39,5 @@ To check if the gdal plugin built and was installed correctly you can do:
 | prescale_rasters      | boolean      | whether to automatically scale input rasters | false |
 | use_overviews         | boolean      | whether to use raster overviews when available | false |
 | clip_rasters          | boolean      | whether to automatically clip input rasters | false |
-| ~~asynchronous_request~~  | boolean       | ~~Postgres queries are sent asynchronously : while rendering a layer, queries for further layers will run in parallel in the remote server.  Available from version 2.3.x up.~~ | *DEPRECATED* (automatically set internally based on `max_async_connection > 1` condition) |
-| max_async_connection  | integer       | max number of PostGIS queries for rendering one map in asynchronous mode. Full doc [here](Postgis-async). ~~Used only when asynchronous_request=true.~~ Default value (1) has no effect. | 1 |
+| max_async_connection  | integer       | max number of PostGIS queries for rendering one map in asynchronous mode. Full doc [here](Postgis-async). | 1 |
 | band        | integer  | request for a specific raster band index (1-based). 0 means to read all bands. Note that a band read from a single band raster gets interpreted as Grayscale if band=0 is specified while they retain their original value when explicitly referenced with the "band" parameter. This affects effectiveness of [[RasterColorizer]]  | 0 |
