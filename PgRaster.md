@@ -24,7 +24,7 @@ To check if the gdal plugin built and was installed correctly you can do:
 | user                  | string       | username to use for connecting | |
 | password              | string       | user password to use for connecting | |
 | table                 | string       | name of the table to fetch, this can be a sub-query;  subquery has to use syntax of:  '( ) as subquery'. | |
-| raster_field          | string       | name of the raster field, in case you have more than one in a single table. This field and the SRID will be deduced from the query in most cases, but may need to be manually specified in some cases.| |
+| raster_field          | string       | name of the raster field, in case you have more than one in a single table. | Deduced from metadata tables if possible |
 | raster_table          | string       | name of the table containing the returned raster; for determining SRIDs with subselects | |
 | srid                  | integer      | srid of the table, if this is > 0 then fetching data will avoid an extra database query for knowing the srid of the table | 0 |
 | extent                | string       | maxextent of the rasters | determined by querying the metadata for the table |
