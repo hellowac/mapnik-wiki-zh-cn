@@ -24,7 +24,7 @@ All current plugins are either located in [plugins/input](https://github.com/map
 | *[python](Python Plugin)* | 2.1| Experimental| yes| support for generating features dynamically using the Python programming language|
 | *[geojson](GeoJSON Plugin)*| 2.1| Experimental| no| support for reading features from [GeoJSON](http://geojson.org/) data|
 | *[csv](CSV Plugin)*| 2.1| *unknown*| no| support for reading lon/lat, GeoJSON, or WKT from [CSV](https://www.wikiwand.com/en/Comma-separated_values) data|
-| *[pgraster](PGRaster Plugin)*| 3.0| *unknown*| no| support for loading raster data from PostGIS|
+| *[PgRaster](PGRaster Plugin)*| 3.0| Stable | yes | support for loading raster data from PostGIS|
 | *[topojson](TopoJSON Plugin)*| 3.0| *unknown*| no| support for loading features from [TopoJSON](https://github.com/mbostock/topojson/wiki) data|
 
 *Note*: When compiling Mapnik from source only the PostGIS, Raster, and Shape plugins will be compiled by default.
