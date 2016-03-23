@@ -41,3 +41,8 @@ To check if the gdal plugin built and was installed correctly you can do:
 | clip_rasters          | boolean      | whether to automatically clip input rasters | false |
 | max_async_connection  | integer       | max number of PostGIS queries for rendering one map in asynchronous mode. Full doc [here](Postgis-async). | 1 |
 | band        | integer  | request for a specific raster band index (1-based). 0 means to read all bands. Note that a band read from a single band raster gets interpreted as Grayscale if band=0 is specified while they retain their original value when explicitly referenced with the "band" parameter. This affects effectiveness of [[RasterColorizer]]  | 0 |
+
+
+# Styling
+
+To style a layer from PgRaster use the [[RasterSymbolizer]]
