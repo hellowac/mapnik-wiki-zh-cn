@@ -90,6 +90,12 @@ brew uninstall boost
 brew install --build-from-source boost
 ```
 
+## Mapbox Variant not found problem
+After git clone of mapnik, execute the following to pull down additional dependencies
+```
+git submodule update --init deps/mapbox/variant
+```
+
 ## Building with Cairo
 
 If you need Cairo and its Python bindings, install and link these (cairo and py2cairo) with homebrew as normal. Then, to build Mapnik from source with Cairo:
