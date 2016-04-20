@@ -75,9 +75,9 @@ A GDAL datasource may be created as follows:
     
         set_datasource(datasource_cache::instance()->create(p));
     
-        Layer lyr("GDAL Layer from TIFF file");
+        layer lyr("GDAL Layer from TIFF file");
         lyr.add_style("raster");
-        m.addLayer(lyr);
+        m.add_layer(lyr);
     }
 ```
 
