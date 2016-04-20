@@ -125,8 +125,8 @@ A Raster datasource may be created as follows:
 
     set_datasource(datasource_cache::instance()->create(p));
 
-    Layer lyr("Raster");
+    layer lyr("Raster");
     lyr.add_style("raster");
-    m.addLayer(lyr);
+    m.add_layer(lyr);
 }
 ```
