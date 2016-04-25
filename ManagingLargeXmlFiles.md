@@ -5,7 +5,7 @@
 
 # Managing complex map files using XML entities
 
-**Note**: you will need a copy of mapnik built against libxml2.  This is not the default, please read the **Mapnik XML Support** for details.
+**Note**: you will need a copy of mapnik built against libxml2.  This is not the default, please read the **Mapnik XML Support** or [issue here](https://github.com/mapnik/mapnik/issues/3191) for details.
 
 Mapnik XML files can become quite complex. This tutorial introduces some
 techniques to keep large map files more maintainable. Specifically it
