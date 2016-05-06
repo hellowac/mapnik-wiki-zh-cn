@@ -11,6 +11,26 @@ For older versions, see the archived notes at [[UbuntuInstallationOld]]
 
 If you are intending to install [Tilemill](http://mapbox.com/tilemill/) from a package/ppa, do not follow the directions below in order to avoid package conflicts. Instead, directly proceed to [install Tilemill](http://mapbox.com/tilemill/docs/linux-install/). Mapnik will automatically be installed with your Tilemill installation because it is available in the [TileMill PPA](https://launchpad.net/~developmentseed/+archive/mapbox/). 
 
+# Ubuntu (16.04)
+
+Install Mapnik latest (3.x series)
+
+```
+git clone https://github.com/mapnik/mapnik mapnik-3.x --depth 10
+cd mapnik-3.x
+git submodule update --init
+sudo apt-get install python zlib1g-dev clang make pkg-config
+source bootstrap.sh
+./configure
+make
+make test
+sudo make install
+```
+
+sudo add-apt-repository ppa:mapnik/v2.2.0
+sudo apt-get update
+sudo apt-get install libmapnik libmapnik-dev mapnik-utils python-mapnik
+```
 ----
 
 # Ubuntu >= (11.10) and < (14.04)
