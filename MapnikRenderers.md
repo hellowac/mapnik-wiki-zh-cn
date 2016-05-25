@@ -10,7 +10,7 @@ The AGG renderer ([Antigrain Geometry](http://antigrain.com)) is the primary ren
  * [Anti-Aliasing](http://en.wikipedia.org/wiki/Antialiasing) and [Subpixel Rendering](http://en.wikipedia.org/wiki/Subpixel_rendering) on Wikipedia 
 * The AGG renderer's buffer can easily be encoded in a variety of formats. Currently Mapnik supports writing to png and jpeg.
 * Version 2.3 of the AGG C++ library is included/embedded within the source tree of Mapnik and compiled automatically during the Scons process.
-* Because the primary developer of AGG has moved on to other endeavors, we happily maintain our own version of AGG with bugfixes.
+* The primary developer of AGG, Maxim Shemanarev, passed away in November 2013. Because AGG is open source, we happily maintain our own version with bugfixes.
 * Mapnik can also build against a system version of AGG, but this is NOT RECOMMENDED since packaged versions have likely not been updated with critical bug fixes
     
 While Mapnik was the first to use AGG rendering for mapping, the AGG renderer is also now an optional rendering engine in the [MapServer](http://mapserver.gis.umn.edu/docs/howto/agg-rendering-specifics) and [MapGuide](http://trac.osgeo.org/mapguide/wiki/MapGuideRfc40) projects.
