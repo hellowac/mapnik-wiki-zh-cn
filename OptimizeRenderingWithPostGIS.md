@@ -214,13 +214,16 @@ If there is any active connection Postgresql will wait until it is closed, so if
 ## Use an extent parameter
 If an extent parameter is not set, mapnik will perform a query like this...
 
-`SELECT ST_XMin(ext),ST_YMin(ext),ST_XMax(ext),ST_YMax(ext)`
-`FROM (SELECT ST_Extent(geom) as ext from planet_osm_line) as tmp`
+```
+SELECT ST_XMin(ext),ST_YMin(ext),ST_XMax(ext),ST_YMax(ext)
+FROM (SELECT ST_Extent(geom) as ext from planet_osm_line) as tmp
+```
 
 ...which requires PostGIS to walk the entire result set of the queried table each time the DataSource is used for the first time in a rendering session.  There are three parameters available for use
 
 ### extent_from_subquery
 E.g. `<Parameter name="extent_from_subquery">true</Parameter>`
+
 **Pros:**
 * Precise estimate of extent
 
@@ -237,6 +240,7 @@ E.g. `<Parameter name="extent_from_subquery">true</Parameter>`
 
 ### extent
 E.g. `<Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>`
+
 **Pros:**
 * No database overhead
 
@@ -256,6 +260,7 @@ E.g. `<Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
 
 ### estimate_extent
 E.g. `<Parameter name="estimate_extent">true</Parameter>`
+
 **Pros:**
 * Faster than not setting any extent parameters; significantly for large result sets
 
