@@ -219,7 +219,7 @@ SELECT ST_XMin(ext),ST_YMin(ext),ST_XMax(ext),ST_YMax(ext)
 FROM (SELECT ST_Extent(geom) as ext from planet_osm_line) as tmp
 ```
 
-...which requires PostGIS to walk the entire result set of the queried table each time the DataSource is used for the first time in a rendering session.  There are three parameters available for use
+...which requires PostGIS to walk the entire result set of the queried table each time the DataSource is used for the first time in a rendering session.  There are three parameters available for use to avoid this process:
 
 ### extent_from_subquery
 E.g. `<Parameter name="extent_from_subquery">true</Parameter>`
