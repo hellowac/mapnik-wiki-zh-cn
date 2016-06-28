@@ -268,7 +268,7 @@ E.g.
 E.g.
 ```xml
 <Parameter name="estimate_extent">true</Parameter>
-```xml
+```
 
 **Pros:**
 * Faster than not setting any extent parameters; significantly for large result sets
