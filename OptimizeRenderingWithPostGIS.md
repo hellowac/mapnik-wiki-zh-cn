@@ -210,3 +210,60 @@ Keep your database optimized. You should have autovacuum turned on. If you have 
 Depending on your needs you may want to also ``CLUSTER`` the data periodically.
 
 If there is any active connection Postgresql will wait until it is closed, so if you are running Ogcserver restart Apache to close the connections.
+
+## Use an extent parameter
+If an extent parameter is not set, mapnik will perform a query like this...
+
+`SELECT ST_XMin(ext),ST_YMin(ext),ST_XMax(ext),ST_YMax(ext)`
+`FROM (SELECT ST_Extent(geom) as ext from planet_osm_line) as tmp`
+
+...which requires PostGIS to walk the entire result set of the queried table each time the DataSource is used for the first time in a rendering session.  There are three parameters available for use
+
+### extent_from_subquery
+E.g. `<Parameter name="extent_from_subquery">true</Parameter>`
+**Pros:**
+* Precise estimate of extent
+
+**Cons:**
+* Performance gains only on small result sets
+
+**Prerequisites:**
+* table parameter uses a subquery, not just a table name
+* extent parameter is not set
+* estimate_extent parameter is not set or false
+
+**Example use case:**
+* tile server where render requests return small features sets or any render requests with large feature sets are pre-rendered and cached
+
+### extent
+E.g. `<Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>`
+**Pros:**
+* No database overhead
+
+**Cons:**
+* XML needs to be updated if alterations to source data affects extent
+* Less precision -- bad because [I don't know -- something to do with clipping calculations?]
+
+**Prerequisites:**
+* coordinates must be provided in appropriate SRS
+
+**Overrides:**
+* extent_from_subquery
+* estimate_extent
+
+**Example use case:**
+* Seldom changing result set with few updates
+
+### estimate_extent
+E.g. `<Parameter name="estimate_extent">true</Parameter>`
+**Pros:**
+* Faster than not setting any extent parameters; significantly for large result sets
+
+**Cons:**
+* For PostgreSQL>=8.0.0 statistics are gathered by VACUUM ANALYZE and resulting extent will be about 95% of the real one. -- [PostGIS docs](http://postgis.net/docs/ST_EstimatedExtent.html)
+
+**Overrides**
+* extent_from_subquery
+
+**Example use case:**
+* [TODO]
