@@ -182,7 +182,7 @@ You could even expand the `case when ... end` to also handle the `no` cases, and
 
 In these examples, the SQL will get more elaborate, but actual filters will be greatly simplified. Since there is only a single datasource query for a layer, and potentially lots of rules and filters to test these results, it stands to reason to do the hard work in a single location, and leave it to the component that does this the best: PostGIS.
 
-## PostGIS layers
+## Create indices
 
 Creating indexes can also help fetching the rows faster. To create a GIST index:
 
