@@ -14,25 +14,26 @@
 
 ### Bundled fonts and scons
 
-OPTIONAL: Consider updating Scons-local to [latest release](http://www.scons.org/download.php): The last SCons update was 2.4.1.
+OPTIONAL: Consider updating Scons-local to [latest release](http://www.scons.org/download.php): The last SCons update was 2.5.0.
     
 ```sh
-wget http://prdownloads.sourceforge.net/scons/scons-local-2.4.1.zip
+wget http://prdownloads.sourceforge.net/scons/scons-local-2.5.0.zip
 rm -rf scons
 unzip -o scons-local-*.zip -d scons/
 rm scons-local-*.zip
 ```
 
-OPTIONAL: Consider updating DeJaVu Fonts: The [last version](http://dejavu-fonts.org/wiki/Download) updated was 2.35
+OPTIONAL: Consider updating DeJaVu Fonts: The [last version](http://dejavu-fonts.org/wiki/Download) updated was 2.37
 
 ```sh
 cd fonts
 git rm -r dejavu-fonts-ttf-
-wget http://sourceforge.net/projects/dejavu/files/dejavu/2.35/dejavu-fonts-ttf-2.35.tar.bz2
-tar xvf dejavu-fonts-ttf-2.35.tar.bz2
-git add dejavu-fonts-ttf-2.35
+wget http://sourceforge.net/projects/dejavu/files/dejavu/2.35/dejavu-fonts-ttf-2.37.tar.bz2
+tar xvf dejavu-fonts-ttf-2.37.tar.bz2
+git add dejavu-fonts-ttf-2.37
 ```
-    
+Make sure to update font paths in `demo/c++/rundemo.cpp` 
+
 Check for new [unifont release](http://unifoundry.com/unifont.html)
 
 ### Release candidate
