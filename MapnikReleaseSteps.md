@@ -28,7 +28,7 @@ OPTIONAL: Consider updating DeJaVu Fonts: The [last version](http://dejavu-fonts
 ```sh
 cd fonts
 git rm -r dejavu-fonts-ttf-
-wget http://sourceforge.net/projects/dejavu/files/dejavu/2.35/dejavu-fonts-ttf-2.37.tar.bz2
+wget http://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2.37.tar.bz2
 tar xvf dejavu-fonts-ttf-2.37.tar.bz2
 git add dejavu-fonts-ttf-2.37
 ```
