@@ -1,3 +1,5 @@
+`This page is outdated (see #3438). Please don't trust it.`
+
 # Mapnik Renderers
 
 Mapnik supports a variety of rendering backends. See [[OutputFormats]] for comparisons of different output formats.
