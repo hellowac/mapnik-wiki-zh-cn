@@ -1,4 +1,4 @@
-Welcome to the Mapnik wiki.
+Welcome to the Mapnik wiki. Please be aware that a lot of pages are extremely outdated.
 
 [All Pages](https://github.com/mapnik/mapnik/wiki/_pages)
 
