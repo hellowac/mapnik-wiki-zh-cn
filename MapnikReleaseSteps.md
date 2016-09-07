@@ -83,8 +83,9 @@ git push --tags
 
 Before running this you'll need:
 
- - The submodules up to date (otherwise the --depth 1 will fail) (TODO: use branches or tags for submodules?)
- - Ability to post to s3://mapnik/dist/. Test like `aws s3 ls s3://mapnik/dist/`
+ - Your mapnik clone needs to be on a tag checkout (either master after tagging or with a tag checked out explicitly) such that `git describe` gives a clean tag (no trailing `-gGITSHA`).
+ - An environment variable called `GITHUB_TOKEN_MAPNIK_PUBLIC_REPO` set with a token with `public_repo` scope.
+ - The submodules up to date
 
 ```sh
 make release
@@ -93,26 +94,7 @@ make release
 * Test the uploaded tarball:
 
 ```sh
-cd /tmp
-rm -rf mapnik-v${MAPNIK_VERSION}.tar.bz2
-wget https://mapnik.s3.amazonaws.com/dist/v${MAPNIK_VERSION}/mapnik-v${MAPNIK_VERSION}.tar.bz2
-tar xf mapnik-v${MAPNIK_VERSION}.tar.bz2
-cd mapnik-v${MAPNIK_VERSION}
-source bootstrap.sh
-./configure && make && make test
-```
-
-* CURRENTLY NOT WORKING (https://github.com/mapnik/mapnik/pull/2906): Go back to the mapnik source checkout and generate Python API docs:
-
-```sh
-cd ${MAPNIK_SOURCES}
-sudo pip install epydoc
-cd utils/epydoc_config
-./build_epydoc.sh
-PYDOCS_DEST="../../../mapnik.github.com/docs/v`mapnik-config --version`/api/python/"
-mkdir -p $PYDOCS_DEST
-cp -r ./mapnik-python-`mapnik-config --version`/* $PYDOCS_DEST/
-cd ${MAPNIK_SOURCES}
+make test-release
 ```
 
 ### Post tag updates
