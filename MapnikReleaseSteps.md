@@ -97,6 +97,8 @@ make release
 make test-release
 ```
 
+If the `make test-release` build works then go to https://github.com/mapnik/mapnik/releases, find the latest draft release created by `make release` and publish it publically.
+
 ### Post tag updates
 
 * If there are new styling or datasource options, create a new `mapnik-reference` entry for the release: https://github.com/mapnik/mapnik-reference
