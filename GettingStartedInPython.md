@@ -78,10 +78,14 @@ Create the Styles which determines how the data is rendered:
 s = mapnik.Style() # style object to hold rules
 r = mapnik.Rule() # rule object to hold symbolizers
 # to fill a polygon we create a PolygonSymbolizer
-polygon_symbolizer = mapnik.PolygonSymbolizer(mapnik.Color('#f2eff9'))
+polygon_symbolizer = mapnik.PolygonSymbolizer()
+polygon_symbolizer.fill = mapnik.Color('#f2eff9')
 r.symbols.append(polygon_symbolizer) # add the symbolizer to the rule object
+
 # to add outlines to a polygon we create a LineSymbolizer
-line_symbolizer = mapnik.LineSymbolizer(mapnik.Color('rgb(50%,50%,50%)'),0.1)
+line_symbolizer = mapnik.LineSymbolizer()
+line_symbolizer.stroke = mapnik.Color('rgb(50%,50%,50%)')
+line_symbolizer.stroke_width = 0.1
 r.symbols.append(line_symbolizer) # add the symbolizer to the rule object
 s.rules.append(r) # now add the rule to the style and we're done
 ```
