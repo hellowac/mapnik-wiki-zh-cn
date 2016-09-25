@@ -19,7 +19,7 @@ Install Mapnik latest (3.x series)
 git clone https://github.com/mapnik/mapnik mapnik-3.x --depth 10
 cd mapnik-3.x
 git submodule update --init
-sudo apt-get install python zlib1g-dev clang make pkg-config
+sudo apt-get install python zlib1g-dev clang make pkg-config curl
 source bootstrap.sh
 ./configure CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
 make
