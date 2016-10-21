@@ -1,6 +1,6 @@
 # Mapnik configuration XML
 
-See also [a reference PDF](http://old.nabble.com/attachment/27685172/0/MapnikXMLDescription.pdf) created by David Eastcott (written for 0.7)
+See also [a reference PDF](http://gis.19327.n8.nabble.com/attachment/5340415/0/MapnikXMLDescription.pdf) created by David Eastcott (written for 0.7)
 
 ## General
 
