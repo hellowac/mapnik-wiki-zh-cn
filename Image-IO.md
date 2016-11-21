@@ -57,7 +57,7 @@ TIFF output support in Mapnik is experimental and does not yet support any user-
 
 JPEG output support in Mapnik is robust but simple. You can control just one option: the `quality` of the jpeg authored.
 
-`quality` can be an integer value between `1` and `100` and can be passed to Mapnik by appending the number to the format string like:
+`quality` can be an integer value between `0` and `100` and can be passed to Mapnik by appending the number to the format string like:
 
  - `jpeg100` - will use a quality of `100`
  - `jpeg50` - will use a quality of `50`
