@@ -51,7 +51,16 @@ See the C++ [image_util.cpp](https://github.com/mapnik/mapnik/blob/master/src/im
 
 ### TIFF output options
 
-TIFF output support in Mapnik is experimental and does not yet support any user-configurable options. It also does not output geotiff tags. These are features we may support in the future if there is interest
+TIFF output support in Mapnik is experimental and does not output geotiff tags.
+
+| Key            | Type   | Available values                 | Description |
+| -------------- | ------ | -------------------------------- | ----------- |
+| compression    | string | deflate, none, lzw, adobedeflate |             |
+| method         | string | scanline, stripped, tiled        |             |
+| zlevel         | int    |                                  |             |
+| tile_height    | int    |                                  |             |
+| tile_width     | int    |                                  |             |
+| rows_per_strip | int    |                                  |             |
 
 ### JPEG output options
 
