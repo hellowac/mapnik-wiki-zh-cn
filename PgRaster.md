@@ -52,6 +52,7 @@ If you are using out-of-db raster files, then the ["outasin" parameter](http://p
 ```
 <Parameter name="table">(SELECT ST_AsBinary("rast", TRUE) FROM <table_name> WHERE "rast" &amp;&amp; !bbox!) as rast</Parameter>
 ```
+Note: the above is *only* required if parameters `prescale_rasters` or `clip_rasters` are *not* used.
 
 Additionally make sure you have set the `POSTGIS_ENABLE_OUTDB_RASTERS` and `POSTGIS_GDAL_ENABLED_DRIVERS`environment variables for PostGIS. See the [PostGIS installation page](http://postgis.net/docs/postgis_installation.html).
 
