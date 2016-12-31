@@ -163,9 +163,9 @@ cd mapnik-2.3.x
 
 First download, compile and install harfbuzz
 ```sh
-wget http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.26.tar.bz2
-tar xf harfbuzz-0.9.26.tar.bz2
-cd harfbuzz-0.9.26
+wget http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.34.tar.bz2
+tar xf harfbuzz-0.9.34.tar.bz2
+cd harfbuzz-0.9.34
 ./configure && make && sudo make install
 sudo ldconfig
 cd ../
