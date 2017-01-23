@@ -42,7 +42,7 @@ OPTIONAL: If it has been > 3 months since the last official release, consider fi
 
 ```sh
 git tag -a v3.0.0-rc1 -m 'Release Candidate 1 for Mapnik v3.0.0'
-git push --tags
+git push origin v3.0.0-rc1
 ```
 
 ### Pre-tag updates
@@ -76,7 +76,7 @@ We use [annotated tags](http://stackoverflow.com/questions/4971746/why-should-i-
 ```sh
 MAPNIK_VERSION=`mapnik-config --version`
 git tag --annotate "v${MAPNIK_VERSION}" -m "tagging v${MAPNIK_VERSION}"
-git push --tags
+git push origin v${MAPNIK_VERSION}
 ```
 
 * Create and upload clean tarball:
