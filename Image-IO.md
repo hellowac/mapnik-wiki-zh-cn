@@ -93,7 +93,7 @@ And the key:value options can be controlled as follows:
 | g    | float, 1.0 - 2.0 |  2.0 | Not likely that you need to change this option. It is the gamma correction for pixel arithmetic in hextree method. 1.0 means no gamma correction |
 | s    | string, `default`, `filtered`, `huff`, or `rle` | `default` | Not likely that you need to change this option. It is the ZLIB compression strategy. See zlib docs for more details (available in Mapnik >= 2.x) |
 | e    | string, `miniz` or `libpng` | 'libpng` | REMOVED in Mapnik 3.0.10 |
-
+| f    | `no`,`all`,`fast` or a combination of `none`,`sub`,`up`,`avg`,`paeth` (for example ```f=sub|up|paeth```)| `none` | Filter algorithms that can be applied before compression. The purpose of these filters is to prepare the image data for optimum compression. Only useful for `truecolor` images (available in Mapnik >= 3.1) |
 ### WEBP output options
 
 The WEBP API supports a lot of options and types of customization.
