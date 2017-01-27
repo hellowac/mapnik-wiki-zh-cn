@@ -84,16 +84,17 @@ So, the two main types can be requested using the formats names:
 
 And the key:value options can be controlled as follows:
 
-| Key  | Value | Default| Description   |
-| ---- | ----- | -------| ------------- |
+| Key  | Value | Default| Description |
+| ---- | ----- | ------ | ----------- |
 | c    | integer, 0-256 | 256 | Max number of colors to allow in the image, the fewer colors the smaller the final size, but potential lower visual quality. It is not recommended to reduce this value below 64 unless your rendered map style is very simple because otherwise adjacent tiles might end up with different final colors for the same original color. |
-| z    | integer, -1 to 9 | -1 (Z_DEFAULT_COMPRESSION) | Level of compression - directly maps to [zlib](http://www.zlib.net/) options:  0 is no compression, 1 is BEST_SPEED, and 9 is BEST_COMPRESSION (available in >= Mapnik 2.x) |
+| z    | integer, -1 to 9 | -1 | Level of compression - directly maps to [zlib](http://www.zlib.net/) options:  -1 is Z_DEFAULT_COMPRESSION, 0 is no compression, 1 is BEST_SPEED, and 9 is BEST_COMPRESSION (available in >= Mapnik 2.x) |
 | t    | integer, 0 to 2| 2 | Transparency mode: 0-no alpha, 1-binary alpha(0 or 255), 2-full alpha range, default is 2, works differently depending on whether you have requested full color png or paletted png. In >= Mapnik 2.2.x `png32:t=0` will create full color png that is `rgb` and not `rgba` ([more details](https://github.com/mapnik/mapnik/issues/1559). If using paletted png then this option is most meaningful for the `octree` encoder (see `m=o` below).
 | m    | string, `o` or `h` | `h` | Applies to paletted png only. This is the quantization method: `o` stands for `octree` and `h` stands for `hextree`. The `octree` quantizer only supports limited alpha ranges and so for images with detailed alpha this may produce a poorer quality image. However the `octree` encoder is faster than the `hextree` encoder. The `hextree` encoder is default (as of >= Mapnik 2.3.x) because it produces the highest quality output - nearly visually identical to full color png. If your maps do no contain any alpha (e.g. they have a completely opaque background) then full color png or `png8:m=o` may produce smaller pngs at a faster rate, however we plan to optimize this pathway automatically [in the future](https://github.com/mapnik/mapnik/issues/2029). |
 | g    | float, 1.0 - 2.0 |  2.0 | Not likely that you need to change this option. It is the gamma correction for pixel arithmetic in hextree method. 1.0 means no gamma correction |
 | s    | string, `default`, `filtered`, `huff`, or `rle` | `default` | Not likely that you need to change this option. It is the ZLIB compression strategy. See zlib docs for more details (available in Mapnik >= 2.x) |
 | e    | string, `miniz` or `libpng` | 'libpng` | REMOVED in Mapnik 3.0.10 |
 | f    | `no`,`all`,`fast` or a combination of `none`,`sub`,`up`,`avg`,`paeth` (for example ```f=sub|up|paeth```)| `none` | Filter algorithms that can be applied before compression. The purpose of these filters is to prepare the image data for optimum compression. Only useful for `truecolor` images (available in Mapnik >= 3.1) |
+
 ### WEBP output options
 
 The WEBP API supports a lot of options and types of customization.
