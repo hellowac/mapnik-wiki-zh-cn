@@ -84,8 +84,8 @@ So, the two main types can be requested using the formats names:
 
 And the key:value options can be controlled as follows:
 
-| Key  | Value | Default | Description |
-| ---- | ----- | ------- | ----------- |
+| Key  | Value | Default| Description   |
+| ---- | ----- | -------| ------------- |
 | c    | integer, 0-256 | 256 | Max number of colors to allow in the image, the fewer colors the smaller the final size, but potential lower visual quality. It is not recommended to reduce this value below 64 unless your rendered map style is very simple because otherwise adjacent tiles might end up with different final colors for the same original color. |
 | z    | integer, -1 to 9 | -1 (Z_DEFAULT_COMPRESSION) | Level of compression - directly maps to [zlib](http://www.zlib.net/) options:  0 is no compression, 1 is BEST_SPEED, and 9 is BEST_COMPRESSION (available in >= Mapnik 2.x) |
 | t    | integer, 0 to 2| 2 | Transparency mode: 0-no alpha, 1-binary alpha(0 or 255), 2-full alpha range, default is 2, works differently depending on whether you have requested full color png or paletted png. In >= Mapnik 2.2.x `png32:t=0` will create full color png that is `rgb` and not `rgba` ([more details](https://github.com/mapnik/mapnik/issues/1559). If using paletted png then this option is most meaningful for the `octree` encoder (see `m=o` below).
