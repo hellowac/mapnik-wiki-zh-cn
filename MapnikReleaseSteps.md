@@ -104,7 +104,7 @@ If the `make test-release` build works then go to https://github.com/mapnik/mapn
 * If there are new styling or datasource options, create a new `mapnik-reference` entry for the release: https://github.com/mapnik/mapnik-reference
 
 * Update master branches entries in [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) from the new release (if relevant, e.g. if you are tagging and releasing a stable release not from the master branch).
-For example to sync up master [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) with `v3.0.x` branch:
+For example, to sync up master [CHANGELOG](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md) with `v3.0.x` branch:
  
 ```
 git checkout master
