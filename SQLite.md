@@ -27,7 +27,7 @@ The main difference is that a spatialite enabled db will include a spatial index
 | extent                | string       | maxextent of the geometries | determined by querying the metadata table |
 | row_offset            | integer      | number of rows to skip when querying data | 0 |
 | row_limit             | integer      | max number of rows to return when querying data, 0 means no limit | 0 |
-| wkb_format            | string       | type of WKB in the geometry field blob, this can be "sqlite" or "spatialite" | sqlite |
+| wkb_format            | string       | type of WKB in the geometry field blob, this can be "generic",  "spatialite", or "twkb" | not set, determined automatically by testing for generic (WKB) or spatialite content |
 | use_spatial_index     | boolean      | choose wheter to use the spatial index when fetching data | true |
 | multiple_geometries   | boolean      | wheter to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
 | encoding              | string       | internal file encoding | utf-8 |
