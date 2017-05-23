@@ -38,9 +38,9 @@ Here are some other sets of Example Code to learn from.
  * *Name*: `world_map_and_styles.py`, `world_map.py`
  * *Description*: A mirror of the GettingStarted tutorial along with sample data.
  * *Source*: 
-  * [Pure Python example](http://mapnik-utils.googlecode.com/svn/example_code/hello_world/pure_python/)
-  * [Python with XML Mapfile](http://mapnik-utils.googlecode.com/svn/example_code/hello_world/xml_config)
-  * [Sample Data for each example](http://mapnik-utils.googlecode.com/svn/example_code/hello_world/data/)
+  * ~~[Pure Python example](http://mapnik-utils.googlecode.com/svn/example_code/hello_world/pure_python/)~~ Code removed
+  * ~~[Python with XML Mapfile](http://mapnik-utils.googlecode.com/svn/example_code/hello_world/xml_config)~~ Code Removed
+  * ~~[Sample Data for each example](http://mapnik-utils.googlecode.com/svn/example_code/hello_world/data/)~~ Code removed
  * *Tested On*: Mac OS 10.5
  * *Added by:* (original mapnik tutorial)
 
