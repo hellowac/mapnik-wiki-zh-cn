@@ -32,9 +32,8 @@ wget http://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2
 tar xvf dejavu-fonts-ttf-2.37.tar.bz2
 git add dejavu-fonts-ttf-2.37
 ```
-Make sure to update font paths in `demo/c++/rundemo.cpp` 
 
-Check for new [unifont release](http://unifoundry.com/unifont.html)
+Make sure to update font paths in `demo/c++/rundemo.cpp` and `benchmark/data/roads.xml`
 
 ### Release candidate
 
