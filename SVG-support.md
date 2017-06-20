@@ -14,7 +14,8 @@ https://github.com/mapnik/mapnik/tree/svg-strict-parsing
 
 
 ### `<path>`
-
+#### Global attributes
+[transform](#Global-attributes)
 #### Specific attributes
 
 | attribute | value |
@@ -85,6 +86,9 @@ https://github.com/mapnik/mapnik/tree/svg-strict-parsing
 | ry        |       |
 
 ### `<g>`
+#### Global attributes
+
+##### transform
 
 #### Specific attributes
 
@@ -120,6 +124,11 @@ __________________________________
 
 _Not supported_
 
+------------------------
+
+### Global attributes
+
+#### `transform`
 
 ------------------------ 
 
