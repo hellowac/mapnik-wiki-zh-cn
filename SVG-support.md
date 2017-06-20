@@ -108,3 +108,15 @@ https://github.com/mapnik/mapnik/tree/svg-strict-parsing
 ### `<defs>`
 
 #### Specific attributes
+
+__________________________________
+
+### Style Attributes
+
+#### `<style`
+
+
+#### `<class>`
+
+_Not supported_
+
