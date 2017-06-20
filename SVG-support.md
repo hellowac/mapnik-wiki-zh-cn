@@ -171,8 +171,8 @@ _Not supported_
 #### ~~`font-style`~~
 #### ~~`font-variant`~~
 #### ~~`font-weight`~~
-#### ~~`glyph-orientation-horizontal`
-#### ~~`glyph-orientation-vertical`
+#### ~~`glyph-orientation-horizontal`~~
+#### ~~`glyph-orientation-vertical`~~
 #### ~~`image-rendering`~~
 #### ~~`kerning`~~
 #### ~~`letter-spacing`~~
