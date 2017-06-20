@@ -4,6 +4,8 @@ https://github.com/mapnik/mapnik/tree/svg-strict-parsing
 
 ### `<svg>`
 
+#### Specific attributes
+
 | attribute | value |
 | --------- | ----- |
 | width     |       |
@@ -13,6 +15,8 @@ https://github.com/mapnik/mapnik/tree/svg-strict-parsing
 
 ### `<path>`
 
+#### Specific attributes
+
 | attribute | value |
 | --------- | ----- |
 | d         |       |
@@ -20,17 +24,23 @@ https://github.com/mapnik/mapnik/tree/svg-strict-parsing
 
 ### `<polygon>`
 
+#### Specific attributes
+
 | attribute | value |
 | --------- | ----- |
 | points    |       |
 
 ### `<polyline>`
 
+#### Specific attributes
+
 | attribute | value |
 | --------- | ----- |
 | points    |       |
 
 ### `<line>`
+
+#### Specific attributes
 
 | attribute | value |
 | --------- | ----- |
@@ -40,6 +50,8 @@ https://github.com/mapnik/mapnik/tree/svg-strict-parsing
 | y2        |       |
 
 ### `<rect>`
+
+#### Specific attributes
 
 | attribute | value |
 | --------- | ----- |
@@ -52,6 +64,8 @@ https://github.com/mapnik/mapnik/tree/svg-strict-parsing
 
 ### `<circle>`
 
+#### Specific attributes
+
 | attribute | value |
 | --------- | ----- |
 | cx        |       |
@@ -60,6 +74,8 @@ https://github.com/mapnik/mapnik/tree/svg-strict-parsing
 
 
 ### `<ellipse>`
+
+#### Specific attributes
 
 | attribute | value |
 | --------- | ----- |
@@ -70,13 +86,25 @@ https://github.com/mapnik/mapnik/tree/svg-strict-parsing
 
 ### `<g>`
 
+#### Specific attributes
+
 
 ### `<use>`
 
+#### Specific attributes
+
 ### `<linearGradient>`
+
+#### Specific attributes
 
 ### `<radialGradient>`
 
+#### Specific attributes
+
 ### `<symbol>`
 
+#### Specific attributes
+
 ### `<defs>`
+
+#### Specific attributes
