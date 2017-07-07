@@ -35,7 +35,7 @@ Below are a list of methods and properties available in mapnik.Map.
 * __Map.zoom_to_box__ - takes an Envelope as an argument and zooms to that
        location
 
-###append_style
+### append_style
 
 
 append_style( (Map)arg1, (str)style_name, (Style)style_object) -> bool :
@@ -53,22 +53,22 @@ append_style( (Map)arg1, (str)style_name, (Style)style_object) -> bool :
     C++ signature :
         bool append_style(mapnik::Map {lvalue},std::string,mapnik::feature_type_style)
 
-###aspect_fix_mode
+### aspect_fix_mode
 
 None
 
-###background
+### background
 
 None
 
-###base
+### base
 
 str(object) -> string
 
 Return a nice string representation of the object.
 If the argument is a string, the return value is the same object.
 
-###buffer_size
+### buffer_size
 
 int(x[, base]) -> integer
 
@@ -80,7 +80,7 @@ non-string.  If base is zero, the proper base is guessed based on the
 string content.  If the argument is outside the integer range a
 long object will be returned instead.
 
-###buffered_envelope
+### buffered_envelope
 
 
 buffered_envelope( (Map)arg1) -> Box2d :
@@ -101,7 +101,7 @@ buffered_envelope( (Map)arg1) -> Box2d :
     C++ signature :
         mapnik::box2d<double> buffered_envelope(mapnik::Map {lvalue})
 
-###envelope
+### envelope
 
 
 envelope( (Map)arg1) -> Box2d :
@@ -121,7 +121,7 @@ envelope( (Map)arg1) -> Box2d :
     C++ signature :
         mapnik::box2d<double> envelope(mapnik::Map {lvalue})
 
-###extra_attributes
+### extra_attributes
 
 
 extra_attributes( (Map)arg1) -> Parameters :
@@ -130,7 +130,7 @@ extra_attributes( (Map)arg1) -> Parameters :
     C++ signature :
         mapnik::parameters extra_attributes(mapnik::Map {lvalue})
 
-###find_inmem_metawriter
+### find_inmem_metawriter
 
 
 find_inmem_metawriter( (Map)arg1, (str)name) -> MetaWriterInMem :
@@ -141,7 +141,7 @@ find_inmem_metawriter( (Map)arg1, (str)name) -> MetaWriterInMem :
     C++ signature :
         boost::shared_ptr<mapnik::metawriter_inmem> find_inmem_metawriter(mapnik::Map,std::string)
 
-###find_style
+### find_style
 
 
 find_style( (Map)arg1, (str)style_name) -> Style :
@@ -157,7 +157,7 @@ find_style( (Map)arg1, (str)style_name) -> Style :
     C++ signature :
         mapnik::feature_type_style find_style(mapnik::Map,std::string)
 
-###get_metawriter_property
+### get_metawriter_property
 
 
 get_metawriter_property( (Map)arg1, (str)name) -> str :
@@ -173,7 +173,7 @@ get_metawriter_property( (Map)arg1, (str)name) -> str :
     C++ signature :
         std::string get_metawriter_property(mapnik::Map {lvalue},std::string)
 
-###has_metawriter
+### has_metawriter
 
 
 has_metawriter( (Map)arg1) -> bool :
@@ -187,7 +187,7 @@ has_metawriter( (Map)arg1) -> bool :
     C++ signature :
         bool has_metawriter(mapnik::Map)
 
-###height
+### height
 
 int(x[, base]) -> integer
 
@@ -199,14 +199,14 @@ non-string.  If base is zero, the proper base is guessed based on the
 string content.  If the argument is outside the integer range a
 long object will be returned instead.
 
-###layers
+### layers
 
 None
 
-###maximum_extent
+### maximum_extent
 
 
-###pan
+### pan
 
 
 pan( (Map)arg1, (int)x, (int)y) -> None :
@@ -225,7 +225,7 @@ pan( (Map)arg1, (int)x, (int)y) -> None :
     C++ signature :
         void pan(mapnik::Map {lvalue},int,int)
 
-###pan_and_zoom
+### pan_and_zoom
 
 
 pan_and_zoom( (Map)arg1, (int)x, (int)y, (float)factor) -> None :
@@ -246,7 +246,7 @@ pan_and_zoom( (Map)arg1, (int)x, (int)y, (float)factor) -> None :
     C++ signature :
         void pan_and_zoom(mapnik::Map {lvalue},int,int,double)
 
-###query_map_point
+### query_map_point
 
 
 query_map_point( (Map)arg1, (int)layer_idx, (float)pixel_x, (float)pixel_y) -> Featureset :
@@ -268,7 +268,7 @@ query_map_point( (Map)arg1, (int)layer_idx, (float)pixel_x, (float)pixel_y) -> F
     C++ signature :
         boost::shared_ptr<mapnik::Featureset> query_map_point(mapnik::Map,int,double,double)
 
-###query_point
+### query_point
 
 
 query_point( (Map)arg1, (int)layer idx, (float)x, (float)y) -> Featureset :
@@ -290,7 +290,7 @@ query_point( (Map)arg1, (int)layer idx, (float)x, (float)y) -> Featureset :
     C++ signature :
         boost::shared_ptr<mapnik::Featureset> query_point(mapnik::Map,int,double,double)
 
-###remove_all
+### remove_all
 
 
 remove_all( (Map)arg1) -> None :
@@ -303,7 +303,7 @@ remove_all( (Map)arg1) -> None :
     C++ signature :
         void remove_all(mapnik::Map {lvalue})
 
-###remove_style
+### remove_style
 
 
 remove_style( (Map)arg1, (str)style_name) -> None :
@@ -316,7 +316,7 @@ remove_style( (Map)arg1, (str)style_name) -> None :
     C++ signature :
         void remove_style(mapnik::Map {lvalue},std::string)
 
-###resize
+### resize
 
 
 resize( (Map)arg1, (int)width, (int)height) -> None :
@@ -329,7 +329,7 @@ resize( (Map)arg1, (int)width, (int)height) -> None :
     C++ signature :
         void resize(mapnik::Map {lvalue},unsigned int,unsigned int)
 
-###scale
+### scale
 
 
 scale( (Map)arg1) -> float :
@@ -342,7 +342,7 @@ scale( (Map)arg1) -> float :
     C++ signature :
         double scale(mapnik::Map {lvalue})
 
-###scale_denominator
+### scale_denominator
 
 
 scale_denominator( (Map)arg1) -> float :
@@ -355,7 +355,7 @@ scale_denominator( (Map)arg1) -> float :
     C++ signature :
         double scale_denominator(mapnik::Map {lvalue})
 
-###set_metawriter_property
+### set_metawriter_property
 
 
 set_metawriter_property( (Map)arg1, (str)name, (str)value) -> None :
@@ -373,14 +373,14 @@ set_metawriter_property( (Map)arg1, (str)name, (str)value) -> None :
     C++ signature :
         void set_metawriter_property(mapnik::Map {lvalue},std::string,std::string)
 
-###srs
+### srs
 
 str(object) -> string
 
 Return a nice string representation of the object.
 If the argument is a string, the return value is the same object.
 
-###view_transform
+### view_transform
 
 
 view_transform( (Map)arg1) -> ViewTransform :
@@ -395,9 +395,9 @@ view_transform( (Map)arg1) -> ViewTransform :
     C++ signature :
         mapnik::CoordTransform view_transform(mapnik::Map {lvalue})
 
-###width
+### width
 
-###zoom
+### zoom
 
 
 zoom( (Map)arg1, (float)factor) -> None :
@@ -413,7 +413,7 @@ zoom( (Map)arg1, (float)factor) -> None :
     C++ signature :
         void zoom(mapnik::Map {lvalue},double)
 
-###zoom_all
+### zoom_all
 
 
 zoom_all( (Map)arg1) -> None :
@@ -427,7 +427,7 @@ zoom_all( (Map)arg1) -> None :
     C++ signature :
         void zoom_all(mapnik::Map {lvalue})
 
-###zoom_to_box
+### zoom_to_box
 
 
 zoom_to_box( (Map)arg1, (Box2d)Boxd2) -> None :
