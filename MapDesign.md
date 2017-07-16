@@ -4,7 +4,7 @@ Mapnik offers a base level of functionality which can be used to design great lo
 
 ### Finding map data
 
-First, you'll need some data. Mapnik [can currently read](http://mapnik.org/faq/) ESRI Shapefiles, TIFF image files, and can query the PostGIS spatial database. It can also read all OGR and GDAL supported vector and raster datasets.
+First, you'll need some data. Mapnik [can currently read](http://mapnik.org/faq/) ESRI Shapefiles, TIFF image files, and can query the PostGIS spatial database and [sql server database](https://github.com/gaspardle/mapnik-mssql). It can also read all OGR and GDAL supported vector and raster datasets.
 
 [Shapefiles](http://en.wikipedia.org/wiki/Shapefile) can be downloaded for many locations in the world (for example, data from the [nationalatlas.gov](http://www.nationalatlas.gov/atlasftp.html) or USGS is freely available). Furthermore, Mapnik is one of the key rendering engines used to render the [OpenStreetMap.org](http://openstreetmap.org/) project. While the OpenStreetMap project offers XML dumps of their datasets, it takes some work to configure a rendering pipeline to draw the entire world.
 
