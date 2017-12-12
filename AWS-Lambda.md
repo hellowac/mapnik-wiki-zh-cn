@@ -69,7 +69,7 @@ On `Ubuntu` follow instructions on https://docs.docker.com/engine/installation/l
 
 `make test`
 
-Congrats! you have working copy of node-mapnik suitable for deployment on AWS Lambda
+Congrats! you have a working copy of node-mapnik/mapnik suitable for deploying on AWS Lambda
 
 
 
