@@ -18,7 +18,7 @@ On `Ubuntu` follow instructions on https://docs.docker.com/engine/installation/l
 
 #### Run interactive session
 
-`docker run -it lambci/lambda:build bash`
+`sudo docker run -it lambci/lambda:build bash`
 
 #### Install `mason` and build `mapnik` from source
 
