@@ -24,7 +24,7 @@ Next test the Python bindings. You should be able to open a terminal and type:
 
     python -c "import mapnik;print mapnik.__file__" # should return the path to the python bindings and no errors
 
-If the above does not work (e.g. throws an `ImportError`) then please go back and ensure Mapnik is properly [installed](Mapnik-Installation). If you need help, sign up for the [mailing list](http://mapnik.org/contact/) to ask questions or join the [#mapnik room on freenode IRC](irc://irc.freenode.net/mapnik)
+If the above does not work (e.g. throws an `ImportError`) then please go back and ensure [Mapnik](Mapnik-Installation) and the [Mapnik Python bindings](https://github.com/mapnik/python-mapnik/blob/master/README.md) are properly installed. If you need help, sign up for the [mailing list](http://mapnik.org/contact/) to ask questions or join the [#mapnik room on freenode IRC](irc://irc.freenode.net/mapnik)
 
 ## Step 2
 
