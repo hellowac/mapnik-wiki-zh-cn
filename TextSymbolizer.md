@@ -1,4 +1,8 @@
-## Configuration Options for TextSymbolizer
+Specifies the rendering of text at a point or along a line (for example, for a road name).
+
+[[/images/output_old.png]]
+
+## Configuration Options
 ### Options for whole Symbolizer
 | *parameter* | *values/ type*  | *description* | *unit* | *default* | *version* |
 ----------------|---------|----------------|-------|------------|---------|
@@ -39,7 +43,7 @@
 ### Character formatting options
 | *parameter* | *values/ type*  | *description* | *unit* | *default* | *version* |
 ----------------|---------|----------------|-------|------------|---------|
-|face-name|string| Font name (see [[UsingCustomFonts]])| | |
+|face-name|string| Font name (font must be registered in mapnik or you won't see anything. see [[UsingCustomFonts]]) | | |
 |fontset-name|string| FontSet name ||
 |size|double|Font size|px|10.0|
 |fill|color|Color of the text fill, e.g. #FFFFFF||black|
@@ -59,21 +63,17 @@
 
 ## Examples
 
-Some examples of Mapnik's ability to place text along lines:
-
-[[/images/output_old.png]]
-
 ### XML
-
-
 ```xml
-<TextSymbolizer face-name="DejaVu Sans Book" size="10" fill="black" halo-fill= "white" halo-radius="1" placement="line" allow-overlap="false">[FIELD_NAME]</TextSymbolizer>
+<TextSymbolizer
+    face-name="DejaVu Sans Book" size="10" fill="black" 
+    halo-fill="white" halo-radius="1"
+    placement="line" allow-overlap="false">
+    [FIELD_NAME]
+</TextSymbolizer>
 ```
 
-See [[XMLGettingStarted]] for more XML example uses of TextSymbolizer.
-
 ### Python
-
 
 ```python
 t = TextSymbolizer(Expression('[FIELD_NAME]'), 'DejaVu Sans Book', 10, Color('black'))
@@ -84,7 +84,6 @@ dir(t) # for the rest of the attributes
 ```
 
 ### C++
-
 
 ```cpp
 #include <mapnik/map.hpp>
