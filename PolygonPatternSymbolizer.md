@@ -2,7 +2,10 @@
 <!-- Version: 8 -->
 <!-- Last-Modified: 2011/10/14 08:15:29 -->
 <!-- Author: floledermann -->
-## Configuration Options for PolygonPatternSymbolizer
+[[Symbolizer|SymbologySupport]] that specifies rendering of an area enclosed by a polygon filling it with a repeated tiff, png, or svg image. An alternative to a [[PolygonSymbolizer]].
+
+[[/images/polygon_pattern.png]]
+## Configuration Options
 
 | *parameter* | *value* | *default* | *accepts expressions* |
 --------------|---------|-----------|-----------------------|
@@ -14,8 +17,6 @@
 
 ## Examples
 
-[[/images/polygon_pattern.png]]
-
 ### Default
 
 ` FIXME: Add image `
@@ -23,7 +24,7 @@
 #### XML
 
 ```xml
-    <PolygonPatternSymbolizer width="16" height="16" type="png" file="/path/to/icon.png"/>
+    <PolygonPatternSymbolizer file="/path/to/icon.png"/>
 ```
 
 #### Python
