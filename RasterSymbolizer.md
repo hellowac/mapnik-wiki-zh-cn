@@ -1,4 +1,6 @@
-The RasterSymbolizer is used to render an image from any [GDAL supported format](http://www.gdal.org/formats_list.html) using the [[GDAL]] plugin, from GeoTiff's using the [[Raster]] plugin or from PostGIS using the [[PgRaster]] plugin.
+[[Symbolizer|SymbologySupport]] that specifies rendering of an image from any [GDAL supported format](http://www.gdal.org/formats_list.html) using the [[GDAL]] plugin, from GeoTiff's using the [[Raster]] plugin or from PostGIS using the [[PgRaster]] plugin.
+
+![](http://1.tiles.ump.waw.pl/ump_tiles/12/2265/1395.png)
 
  * Mapnik supports on-the-fly reprojection of raster layers (like it does for vector layers)
   * However, for optimal performance it can be best to first (externally) warp an image to the Spatial Reference System (srs) used in the map (e.g. using the `gdalwarp` command from the gdal-utilities).
