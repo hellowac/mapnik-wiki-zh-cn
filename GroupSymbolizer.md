@@ -1,8 +1,10 @@
-Group symbolizer is used to place multiple road shields or other labels, grouped as single point placements on a feature. Multiple labels can be represented on a single feature using indexed column names. These indexed columns are matched to a single set of rules within the group symbolizer. This single set of style rules greatly simplifies the style definition needed to represent many different combinations of shields or labels. For example, if your shield styles use the data columns "type" and "number", you can provide columns "type1", "type2", "number1", and "number2". You can then reference these in the style rules and symbolizers as [type%] and [number%], such that both pairs of values will be matched separately to create two different shields. The individual labels in the group get positioned automatically by a group layout defined within the symbolizer.
+[[Symbolizer|SymbologySupport]] that specifies rendering of multiple road shields or other labels, grouped as single point placements on a feature. 
+
+Multiple labels can be represented on a single feature using indexed column names. These indexed columns are matched to a single set of rules within the group symbolizer. This single set of style rules greatly simplifies the style definition needed to represent many different combinations of shields or labels. For example, if your shield styles use the data columns "type" and "number", you can provide columns "type1", "type2", "number1", and "number2". You can then reference these in the style rules and symbolizers as [type%] and [number%], such that both pairs of values will be matched separately to create two different shields. The individual labels in the group get positioned automatically by a group layout defined within the symbolizer.
 
 See [examples](#wiki-examples) below.
 
-## Configuration Options for GroupSymbolizer
+## Configuration Options
 ### Data column options
 | *parameter* | *type*  | *description* | *default* |
 |----------------|---------|----------------|------------|
@@ -25,19 +27,19 @@ See [examples](#wiki-examples) below.
 |force-odd-labels|true, false|Force an odd amount of labels to be generated.|bool|false|
 |largest_bbox_only|true, false|Controls default labeling behavior on multipolygons. The default is `true` and means that only the largest polygon part is labeled. NOTE: this option may change or be renamed in the future|bool|true|2.1|
 
-##Children of GroupSymbolizer
+## Children of GroupSymbolizer
 
-###Layout
+### Layout
 
 The layout defines how the group of shields or labels should be arranged. There are two types available: SimpleLayout and PairLayout. Only one layout should be defined inside of a group symbolizer.
 
-####SimpleLayout
+#### SimpleLayout
 Simple layout arranges the labels in a horizontal row, centered on the placement point.
 
-####PairLayout
+#### PairLayout
 Pair layout arranges the labels in horizontal pairs. The first is aligned left of the placement point, and the second is aligned right. If more than two labels are present, the pairs stack vertically above and below the placement point.
 
-###GroupRule
+### GroupRule
 
 A group rule is defined very similar to a regular style rule. It contains a filter and any number of symbolizers. A group rule can also override the repeat key defined at the group symbolizer level. When the repeat key is defined on the group rule, any label matching this rule will use the rule's repeat key.
 
