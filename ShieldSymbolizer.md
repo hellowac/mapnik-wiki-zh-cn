@@ -1,6 +1,10 @@
-# New documentation
-## Configuration Options for ShieldSymbolizer
-ShieldSymbolizer supports all options of [[TextSymbolizer]] and the following additional options:
+Specifies the rendering of a png, tiff, or svg graphic symbol **and** label text at a point.
+
+Effectively, this is a (working) combination of [[TextSymbolizer]] and [[PointSymbolizer]]. If you try to use a TextSymbolizer and a PointSymbolizer separated you will often see points without texts and/or texts without points.
+
+[[/images/120px-Mapnik-highway-motorway.png]]
+## Configuration Options
+Supports all options of [[TextSymbolizer]] with additional options:
 
 | *parameter*      | *value* | *default* |
 |------------------|---------|-----------|
@@ -13,44 +17,38 @@ ShieldSymbolizer supports all options of [[TextSymbolizer]] and the following ad
 |shield-dy|offset the shield image _and text_ vertically | 0 |
 |transform|[[Transform]] image| |
 
-### dx, dy
-dx, dy (from TextSymbolizer) only move the text, but not the Shield. This behavior will be changed in a future release of mapnik. (See below).
-
-### placement
-
-`placement="line"` only means placement along a line for ShieldSymbolizer, whereas for TextSymbolizer it rotates the text too. Add the `spacing` parameter to get the ShieldSymbolizer to repeat along the line, otherwise `placement="line"` and `placement="point"` will look the same.
-
 ### base
 Add 
 `<FileSource name="foo">/home/bar/baz/</FileSource>`
 to the beginning of your stylesheet and then use
-`<ShieldSymboliser base="foo" name="bridge">`
+`<ShieldSymbolizer base="foo" name="bridge" />`
 to refer to /home/bar/baz/bridge.
 
-## Good to know
+### dx, dy
+To draw labeled points configure `placement="point"` (which is the default) and set dx/dy to move the text.
 
-ShieldSymbolizer can be used to label points.
+dx, dy from TextSymbolizer moves only the text, and not the shield. This behavior will be changed in a future release of mapnik. (See below).
 
-E.G. If you want to place points on cities and their name above it. If you try to use a TextSymbolizer and a PointSymbolizer separated you will often see points without texts and/or texts without points.
+#### New interface in HarfBuzz branch
+| *parameter*      | *value* | *default*
+|------------------|---------|----------
+| shield-dx, shield-dy | Move shield only. | 0
+| dx, dy | With unlock_image = true: move text only. | 0
+|        | With unlock_image = false: move text and shield | 0
+| unlock_image | True: Shield base point is always the input line/point (usecase: labeling bus stations). | 0
+|              | False: Shield base point is the center of the text (i.e. depends on dx,dy,vertical-alignment, horizontal-alignment) (usecase: highway shields)
 
-To draw labeled points configure your shield symbolizer with placement = point and custom value for dx/dy to move the text around the point
-
-
+### placement
+`placement="line"` only means placement along a line for ShieldSymbolizer, whereas for TextSymbolizer it rotates the text too. Add the `spacing` parameter to get the ShieldSymbolizer to repeat along the line, otherwise `placement="line"` and `placement="point"` will look the same.
 
 ## Examples
-
-[[/images/120px-Mapnik-highway-motorway.png]]
 
 Setting up a sample shield symbolizer, from the Cascade Users of OpenSource GeoSpatial (CUGOS) list:
 http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba
 
 #### XML
 ```xml
-    <Style name="My Style">
-        <Rule>
-            <ShieldSymbolizer face-name="DejaVu Sans Bold" size="6" fill="#000000" file="images/shield.svg" width="20" height="20" spacing="100" transform="scale(2.0,2.0)" min-distance="50">[NAME]</ShieldSymbolizer>
-        </Rule>
-    </Style>
+    <ShieldSymbolizer face-name="DejaVu Sans Bold" size="6" fill="#000000" file="images/shield.svg" spacing="100" transform="scale(2.0,2.0)" min-distance="50">[NAME]</ShieldSymbolizer>
 ```
 
 #### Python
@@ -87,12 +85,3 @@ http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba
 
 http://www.routemarkers.com/  
 http://www.weait.com/content/badges-badges
-
-## New interface in HarfBuzz branch
-| *parameter*      | *value* | *default*
-|------------------|---------|----------
-| shield-dx, shield-dy | Move shield only. | 0
-| dx, dy | With unlock_image = true: move text only. | 0
-|        | With unlock_image = false: move text and shield | 0
-| unlock_image | True: Shield base point is always the input line/point (usecase: labeling bus stations). | 0
-|              | False: Shield base point is the center of the text (i.e. depends on dx,dy,vertical-alignment, horizontal-alignment) (usecase: highway shields)
