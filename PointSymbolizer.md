@@ -2,11 +2,11 @@
 <!-- Version: 19 -->
 <!-- Last-Modified: 2011/03/02 01:02:42 -->
 <!-- Author: Ldp -->
-Specifies the rendering of a png, tiff, or svg graphic symbol at a point.
+[[Symbolizer|SymbologySupport]] that specifies rendering of a png, tiff, or svg graphic symbol at a point.
 
-Use a [[ShieldSymbolizer]] to combine a graphic symbol with a text label.
+To combine a graphic symbol with a text label, use a [[ShieldSymbolizer]]. If you want to change the image offset, use a [[MarkersSymbolizer]].
 
-Use a [[MarkerSymbolizer]] when you want to change the offset.
+[[/images/point_symbolizer_1.png]] [[/images/streets2.png]]
 
 ## Configuration Options
 
@@ -26,11 +26,7 @@ Some options described here are not available in mapnik versions < 2.0.
 
 ## Examples
 
-#### Default
-
-[[/images/point_symbolizer_1.png]]
-
-[[/images/streets2.png]]
+### Default
 
 #### XML
 
