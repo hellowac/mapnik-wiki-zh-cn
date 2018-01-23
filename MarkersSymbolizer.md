@@ -32,7 +32,7 @@ The ST_reverse function of Postgis can fix this (The problem will then be to ide
 
 ### SVG markers
 
-*NEW*: Staring from r1793 [[MarkersSymbolizer]] supports [Scalable Vector Graphics (SVG)](http://www.w3.org/TR/SVG/) as input images:
+*NEW*: Starting from r1793 [[MarkersSymbolizer]] supports [Scalable Vector Graphics (SVG)](http://www.w3.org/TR/SVG/) as input images:
 
 [[/images/markers_symbolizer.png]]
 
