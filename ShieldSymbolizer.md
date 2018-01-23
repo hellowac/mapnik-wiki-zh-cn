@@ -48,7 +48,12 @@ http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba
 
 #### XML
 ```xml
-    <ShieldSymbolizer face-name="DejaVu Sans Bold" size="6" fill="#000000" file="images/shield.svg" spacing="100" transform="scale(2.0,2.0)" min-distance="50">[NAME]</ShieldSymbolizer>
+    <ShieldSymbolizer
+        face-name="DejaVu Sans Bold" size="6" fill="#000000"
+        file="images/shield.svg" spacing="100" transform="scale(2.0,2.0)" 
+        min-distance="50">
+            [NAME]
+    </ShieldSymbolizer>
 ```
 
 #### Python
