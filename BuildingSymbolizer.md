@@ -2,15 +2,17 @@
 <!-- Version: 3 -->
 <!-- Last-Modified: 2009/02/06 07:56:36 -->
 <!-- Author: jamierob -->
-## Configuration Options for BuildingSymbolizer
+Specifies the rendering of a pseudo 3D effect for polygons giving them a building-like appearance.
 
-A BuildingSymbolizer is used to create a pseudo 3D effect on polygons.
+Often used instead of a [[PolygonSymbolizer]].
 
+[[/images/BuildingSymbolizer.png]]
+## Configuration Options
 |**parameter**|**value**|**default**|
 |:-----------:|:-------:|:---------:|
 | fill             |  CSS colour    | gray      |
 | fill-opacity     |  float         | 1.0       |
-| height           |  float         | 0         |
+| height           |  float (static value or expression) | 0         |
 
 ## Examples
 
@@ -21,12 +23,12 @@ A BuildingSymbolizer is used to create a pseudo 3D effect on polygons.
 #### XML
 
 ```xml
-      <BuildingSymbolizer fill="#000000" height="8" fill-opacity="1" />
+    <BuildingSymbolizer fill="#000000" height="8" fill-opacity="1" />
 ```
 Height as expression:
 
 ```xml
-      <BuildingSymbolizer fill="#000000" height="[height_db]" fill-opacity="1" />
+    <BuildingSymbolizer fill="#000000" height="[height_db]" fill-opacity="1" />
 ```
 
 #### Python
@@ -36,9 +38,3 @@ Height as expression:
 #### C++
 
 ` FIXME `
-
-----
-
-Example output:
-
-[[/images/BuildingSymbolizer.png]]
