@@ -1,8 +1,10 @@
-<!-- Name: PolygonSymbolizer -->
-## Configuration Options for PolygonSymbolizer
+[[Symbolizer|SymbologySupport]] that specifies rendering of an area enclosed by a polygon. 
 
-A PolygonSymbolizer is often used to render the area enclosed by a [polygon](http://en.wikipedia.org/wiki/Polygon). For example, the `rundemo.py` and `rundemo.cpp` applications use PolygonSymbolizer objects to "fill-in" [Canadian provinces with different colors and to make bodies of water look blue](https://raw.githubusercontent.com/wiki/mapnik/mapnik/images/demo256.png).
+For example, the `rundemo.py` and `rundemo.cpp` applications use PolygonSymbolizer objects to "fill-in" Canadian provinces with different colors and to make bodies of water look blue.
 
+[[/images/demo256.png]]
+
+## Configuration Options
 | *parameter* | *value*  | *default* | * description * | *accepts expressions* |
 -------------|---------|------------|----------------|-----------------------|
 | fill            |  CSS colour | "grey" | Fill color to assign to a polygon, defaults to rgba(128,128,128,1) which means gray and fully opaque (alpha = 1), same as rgb(128,128,128) | mapnik >= 3.0 |
@@ -55,9 +57,3 @@ A PolygonSymbolizer is often used to render the area enclosed by a [polygon](htt
     p.set_gamma(0.65);
     p.set_opacity(0.7);
 ```
-
-----
-
-Example output of the `rundemo.py` utilizing the PolygonSymbolizer for provinces and water bodies:
-
-[[/images/demo256.png]]
