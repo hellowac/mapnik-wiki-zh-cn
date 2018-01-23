@@ -4,9 +4,9 @@
 <!-- Author: Ldp -->
 # PointSymbolizer
 
-A PointSymbolizer specifies the rendering of a "graphic symbol" at a point.
+Specifies the rendering of a png, tiff, or svg graphic symbol at a point.
 
-If you want to draw a graphic symbol and a text you would better use a ShieldSymbolizer.
+A [ShieldSymbolizer] will combine a graphic symbol with a text label.
 
 Some options described here are not available in mapnik versions < 2.0.
 
@@ -51,13 +51,12 @@ Some options described here are not available in mapnik versions < 2.0.
     
 ### Image label
     
-
-    [[/images/point_symbolizer_2.png]]
+[[/images/point_symbolizer_2.png]]
     
 #### XML
 
 ```xml
-    <PointSymbolizer file="/tmp/pub.png" width="16" height="16" type="png" /> 
+    <PointSymbolizer file="/tmp/pub.png" transform="scale(2)" /> 
 ```
 
 #### Python
@@ -84,8 +83,7 @@ Some options described here are not available in mapnik versions < 2.0.
 
 ```xml
     <PointSymbolizer allow-overlap="yes" file="/Users/artem/projects/ 
-    openstreetmap/mapnik/symbols/station_small.png" type="png" width="5"  
-    height="5" />
+    openstreetmap/mapnik/symbols/station_small.png" />
 ```
 
 ### Do Not Allow Overlap
@@ -96,8 +94,7 @@ Some options described here are not available in mapnik versions < 2.0.
 
 ```xml
     <PointSymbolizer allow-overlap="no" file="/Users/artem/projects/ 
-    openstreetmap/mapnik/symbols/station_small.png" type="png" width="5"  
-    height="5" />
+    openstreetmap/mapnik/symbols/station_small.png" />
 ```
 
 ## SVG symbols (trunk)
