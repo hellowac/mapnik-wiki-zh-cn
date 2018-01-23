@@ -1,4 +1,4 @@
-Specifies the rendering of text at a point or along a line (for example, for a road name).
+[[Symbolizer|SymbologySupport]] that specifies rendering of text at a point or along a line (for example, for a road name).
 
 [[/images/output_old.png]]
 
