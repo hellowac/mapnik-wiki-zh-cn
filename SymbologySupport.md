@@ -39,4 +39,4 @@ Symbolizers describe how features should appear on a map.
  * [[ShieldSymbolizer]]
  * [[BuildingSymbolizer]]
  * [[MarkersSymbolizer]]
- * [[GlyphSymbolizer]]
+ * [[GlyphSymbolizer]] (deprecated)
