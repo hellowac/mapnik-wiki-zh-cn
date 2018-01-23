@@ -1,7 +1,6 @@
+[[Symbolizer|SymbologySupport]] that specifies rendering of a TrueType Glyph .
 
-# GlyphSymbolizer
-
-*New in 0.8 (aka Mapnik2) but removed in Mapnik 2.1* after the [[TextSymbolizer]] gained the ability to render raw strings using Expressions and gained the ability to rotate text using the expression-based `orientation` property.
+**New in 0.8 (aka Mapnik2) but removed in Mapnik 2.1** after the [[TextSymbolizer]] gained the ability to render raw strings using Expressions and gained the ability to rotate text using the expression-based `orientation` property.
 
 Renders a TrueType Glyph at the Feature's label location (usually the center of polygons/lines and on the point themselves).
 
