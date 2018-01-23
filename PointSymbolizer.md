@@ -2,11 +2,13 @@
 <!-- Version: 19 -->
 <!-- Last-Modified: 2011/03/02 01:02:42 -->
 <!-- Author: Ldp -->
-# PointSymbolizer
-
 Specifies the rendering of a png, tiff, or svg graphic symbol at a point.
 
-A [[ShieldSymbolizer]] will combine a graphic symbol with a text label.
+Use a [[ShieldSymbolizer]] to combine a graphic symbol with a text label.
+
+Use a [[MarkerSymbolizer]] when you want to change the offset.
+
+## Configuration Options
 
 Some options described here are not available in mapnik versions < 2.0.
 
