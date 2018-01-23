@@ -1,7 +1,5 @@
-# LineSymbolizer
-
-A LineSymbolizer is used to render a "stroke" along a linear geometry.
-
+[[Symbolizer|SymbologySupport]] that specifies rendering of a "stroke" along a linear geometry.
+## Configuration Options
 | *parameter* | *value*  | *description* | *unit* | *default* | *accepts expressions*
 ----------------|---------|----------------|-------|------------|--------------------|
 | stroke            |  CSS colour  | A Color value such as 'green' or #A3D979 | - |  "black" | mapnik >= 3.0 |
