@@ -1,3 +1,10 @@
+[[Symbolizer|SymbologySupport]] that specifies rendering of a tiff, png or svg image as a directional marker.
+
+Can be used as an alternative to a [[PointSymbolizer]] to give more control over positioning of the image.
+
+[[/images/markers_symbolizer.png]]
+
+## Configuration Options
 |*Name*|*Description*|*Default*|Applies to SVG |
 --------|------------|---------|----------------|
 |allow-overlap | Allow the symbolizer to overlap others. | false | yes |
@@ -24,7 +31,7 @@ It can be added to a Rule with line features like:
 
 [[/images/offsets_directions.png]]
 
-The [[MarkersSymbolizer]] should draw blue directional arrows *in the direction of the geometry* (for things like one-way streets).
+The MarkersSymbolizer should draw blue directional arrows *in the direction of the geometry* (for things like one-way streets).
 
 In case you notice arrows pointing the wrong direction, this means that the segment has been coded in the wrong way.
 
@@ -38,10 +45,7 @@ The ST_reverse function of Postgis can fix this (The problem will then be to ide
 
 
 ```xml
-<Rule>
-    <MaxScaleDenominator>10000</MaxScaleDenominator>
     <MarkersSymbolizer spacing="100" file="/Users/artem/Desktop/svg/ladybird.svg" transform="translate(0 -16) scale(2.0)"/>
-</Rule>
 ```
 
 ### Dynamic Ellipses
@@ -49,15 +53,14 @@ The ST_reverse function of Postgis can fix this (The problem will then be to ide
 
 [[/images/dynamic_ellipse_markers.png]]
 
-
 ```xml
-<MarkersSymbolizer fill="darkorange" opacity=".7" width="20" height="10" stroke="orange" stroke-width="7" stroke-opacity=".2" placement="point" marker-type="ellipse"/>
+    <MarkersSymbolizer fill="darkorange" opacity=".7" width="20" height="10" stroke="orange" stroke-width="7" stroke-opacity=".2" placement="point" marker-type="ellipse"/>
 ```
 
 CAVEAT: these properties do not apply to SVG files, and SVG transforms are not supported for modifying ellipses (yet).
 
-OSM currently renders one-way street arrows with Mapnik using several stacked [LineSymbolizers](LineSymbolizer) with varying dash-arrays, but could potentially use the [[MarkersSymbolizer]] in the future:
+OSM currently renders one-way street arrows with Mapnik using several stacked instances of [LineSymbolizer] with varying dash-arrays, but could potentially use the MarkersSymbolizer in the future:
 
 ```xml
-<LinePatternSymbolizer file="/home/mapnik/mapnik/symbols/arrow.png" type="png" width="74" height="8" />
+    <LinePatternSymbolizer file="/home/mapnik/mapnik/symbols/arrow.png" type="png" width="74" height="8" />
 ```
