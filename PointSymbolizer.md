@@ -6,7 +6,7 @@
 
 Specifies the rendering of a png, tiff, or svg graphic symbol at a point.
 
-A [ShieldSymbolizer] will combine a graphic symbol with a text label.
+A [[ShieldSymbolizer]] will combine a graphic symbol with a text label.
 
 Some options described here are not available in mapnik versions < 2.0.
 
