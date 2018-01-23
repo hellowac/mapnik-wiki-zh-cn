@@ -27,16 +27,17 @@ See [[Filter]] for more details (especially regarding how this is different for 
 
 ## Symbolizers
 
-Symbolizers describe how features should appear on a map.
+Symbolizers describe how features appear on a map.
 
+ * [[BuildingSymbolizer]]
+ * [[GlyphSymbolizer]] (deprecated)
+ * [[GroupSymbolizer]]
  * [[LineSymbolizer]]
  * [[LinePatternSymbolizer]]
+ * [[MarkersSymbolizer]]
  * [[PolygonSymbolizer]]
  * [[PolygonPatternSymbolizer]]
  * [[PointSymbolizer]]
- * [[TextSymbolizer]]
  * [[RasterSymbolizer]]
  * [[ShieldSymbolizer]]
- * [[BuildingSymbolizer]]
- * [[MarkersSymbolizer]]
- * [[GlyphSymbolizer]] (deprecated)
+ * [[TextSymbolizer]]
