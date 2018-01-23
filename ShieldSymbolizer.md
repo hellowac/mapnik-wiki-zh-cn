@@ -1,4 +1,4 @@
-Specifies the rendering of a png, tiff, or svg graphic symbol **and** label text at a point.
+[[Symbolizer|SymbologySupport]] that specifies rendering of a png, tiff, or svg graphic symbol **and** label text at a point.
 
 Effectively, this is a (working) combination of [[TextSymbolizer]] and [[PointSymbolizer]]. If you try to use a TextSymbolizer and a PointSymbolizer separated you will often see points without texts and/or texts without points.
 
