@@ -67,8 +67,6 @@ Optional attributes:
 
 ## Example XML
 
-See https://github.com/mapnik/mapnik/blob/master/tests/data/good_maps/raster_symbolizer.xml for more examples.
-
 In this example XML, the following value to color translation is performed:
 
  * -inf <= x < -1000 white
