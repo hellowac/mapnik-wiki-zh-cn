@@ -135,7 +135,7 @@ See [[SymbologySupport]] for more info on Symbolizers
 
 See also the [Python API docs](http://mapnik.org/docs/v2.1.0/api/python/index.html)
 
-## &lt;Include&lt;
+## &lt;Include&rt;
  * Element type: Provides a container for included XML.  Should be used only in included files as the outermost tag.
  * Attributes - None
  * Children:
