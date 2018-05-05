@@ -83,7 +83,7 @@ t.label_placement = label_placement.LINE_PLACEMENT # POINT_PLACEMENT is default
 dir(t) # for the rest of the attributes
 ```
 
-#### Python (Mapnik 3)
+### Python (Mapnik 3)
 
 *No support.*
 
