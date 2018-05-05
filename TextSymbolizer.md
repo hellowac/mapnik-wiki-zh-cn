@@ -73,7 +73,7 @@
 </TextSymbolizer>
 ```
 
-### Python
+### Python (Mapnik 2)
 
 ```python
 t = TextSymbolizer(Expression('[FIELD_NAME]'), 'DejaVu Sans Book', 10, Color('black'))
@@ -82,6 +82,10 @@ t.halo_radius = 1
 t.label_placement = label_placement.LINE_PLACEMENT # POINT_PLACEMENT is default
 dir(t) # for the rest of the attributes
 ```
+
+#### Python (Mapnik 3)
+
+*No support.*
 
 ### C++
 
