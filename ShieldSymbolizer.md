@@ -56,7 +56,7 @@ http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba
     </ShieldSymbolizer>
 ```
 
-#### Python
+#### Python (Mapnik 2)
 
 ```python
     shield = ShieldSymbolizer(Expression('[NAME]'),'DejaVu Sans Bold',6,Color('#000000'),PathExpression('images/ushighway_shield_20.png'))
@@ -64,6 +64,10 @@ http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba
     shield.label_spacing = 100
     shield.displacement = (dx,dy)
 ```
+
+#### Python (Mapnik 3)
+
+*No support.*
 
 #### C++
 
