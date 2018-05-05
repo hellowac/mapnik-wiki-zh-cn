@@ -1,4 +1,5 @@
 # Tutorial 1 -- Getting started in Python
+**Warning: the current Python bindings offer only [limited support](https://github.com/mapnik/python-mapnik/issues/7) for Mapnik 3 and are [barely documented](https://github.com/mapnik/python-mapnik/issues/184).**
 
 ## Overview
 
