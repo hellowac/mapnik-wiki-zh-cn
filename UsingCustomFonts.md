@@ -39,6 +39,20 @@ We are planning to add registration support within XML in [#168](https://github.
 
 ...where file_name is the full path to the directory where the font is located (e.g., "/home/user/mapnik/fonts/unifont-Medium.ttf"). The c++ demo (source:trunk/demo/c++/rundemo) also provides an good example of how to add additional fonts.
 
+### NodeJS
+
+```js
+var mapnik = require('mapnik');
+mapnik.register_default_fonts();
+mapnik.fonts().forEach( function(e) { console.log(e); });
+```
+
+The NodeJS interpreter might add an extra line in interactive mode. To avoid this, do
+
+```shell
+nodejs -e "var mapnik = require('mapnik');mapnik.register_default_fonts();mapnik.fonts().forEach( function(e) { console.log(e); });"
+```
+
 ## 2) Figure out the exact 'face_name'
 
   * Ask Mapnik to print all registered face names (*note*: this only will show fonts already auto-registered in the `fontscollectionpath`):
