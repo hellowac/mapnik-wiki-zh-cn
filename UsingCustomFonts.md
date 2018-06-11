@@ -58,7 +58,7 @@ nodejs -e "var mapnik = require('mapnik');mapnik.register_default_fonts();mapnik
   * Ask Mapnik to print all registered face names (*note*: this only will show fonts already auto-registered in the `fontscollectionpath`):
 
 ```sh
-    python -c "from mapnik import FontEngine as e;print '\n'.join(e.instance().face_names())"
+    python -c "from mapnik import FontEngine as e;print '\n'.join(e.face_names())"
     DejaVu Sans Bold
     DejaVu Sans Bold Oblique
     DejaVu Sans Book
