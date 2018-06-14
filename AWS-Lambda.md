@@ -1,7 +1,5 @@
 ## Developing with `mapnik`+`node-mapnik` for AWS Lambda locally
 
-Current AWS Lambda image comes with outdated versions of c++ compiler, linker and runtime. To install and test `mapnik` and `node-mapnik` follow the steps below: 
-
 #### Prerequisite
 
 Working `docker` - consult your OS specific guide on how to install and run docker
@@ -20,7 +18,11 @@ On `Ubuntu` follow instructions on https://docs.docker.com/engine/installation/l
 
 `sudo docker run -it lambci/lambda:build bash`
 
-#### Install `mason` and build `mapnik` from source
+#### Install node-mapnik
+
+If you just need node-mapnik, see See https://github.com/mapnik/node-mapnik/issues/863
+
+If you want to source compile mapnik core, read on...
 
 `git clone https://github.com/mapbox/mason.git`
 
