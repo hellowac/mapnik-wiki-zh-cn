@@ -24,11 +24,12 @@ SELECT ... WHERE trait = !@variable!
 <Parameter name="geometry_table">"rolling stones"</Parameter>
 ```
 
-- `load_map()` with `strict=true` throws an exception on duplicate style names. Refs [#3770](https://github.com/mapnik/mapnik/pull/3770), [#3917](https://github.com/mapnik/mapnik/pull/3917).
+- `load_map()` with `strict=true` throws an exception on duplicate style names (refs [#3770](https://github.com/mapnik/mapnik/pull/3770), [#3917](https://github.com/mapnik/mapnik/pull/3917)).
 
 
 ## Added
 
  - PGraster: Variable interpolation just like PostGIS plugin (refs [#3618](https://github.com/mapnik/mapnik/pull/3618)).
+ - Text simple placement `C` for no displacement (refs [#3596](https://github.com/mapnik/mapnik/pull/3596)).
 
 TODO
