@@ -29,6 +29,7 @@ SELECT ... WHERE trait = !@variable!
 ## Added
 
  - PGraster: Variable interpolation just like PostGIS plugin (refs [#3618](https://github.com/mapnik/mapnik/pull/3618)).
+ - Geobuf input plugin (refs [3715](https://github.com/mapnik/mapnik/pull/3715)).
  - Layers can be nested, `comp-op` and `opacity` on Layer level are supported (refs [3474](https://github.com/mapnik/mapnik/pull/3474)).
  - `extend` option of TextSymbolizer (refs [3512](https://github.com/mapnik/mapnik/pull/3512)).
  - Text simple placement `C` for no displacement (refs [#3596](https://github.com/mapnik/mapnik/pull/3596)).
