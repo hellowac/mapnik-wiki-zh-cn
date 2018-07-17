@@ -33,7 +33,8 @@ To style a layer from GDAL use the [[RasterSymbolizer]]
 
 # Usage
 
-This plugin in Mapnik >= 0.7.0 supports reading overviews created with http://www.gdal.org/gdaladdo.html
+This plugin in Mapnik >= 0.7.0 supports reading overviews created with [gdaladdo](http://www.gdal.org/gdaladdo.html).
+Parallel creation of GDAL datasources from TIFF files in a multi-threaded program requires [libgdal >= 2.0.2](https://trac.osgeo.org/gdal/wiki/Release/2.0.2-News#GDALdrivers).
 
 ## Python
 
