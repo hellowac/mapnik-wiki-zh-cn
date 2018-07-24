@@ -16,7 +16,7 @@ Here are some other sets of Example Code to learn from.
 ### California
  * *Name*: `cali.cpp`
  * *Description*: A sample program, adapted from demo/c++/rundemo.cpp which demonstrates how one might use the Mapnik C++ API to render the state of California from USGS Shapefile data.
- * *Source*: http://gist.github.com/5009
+ * *Source*: https://gist.github.com/lwu/5009
  * *Tested On*: Mac OS 10.5
  * *Added by:* lwu
 
