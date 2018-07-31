@@ -27,7 +27,7 @@ to refer to /home/bar/baz/bridge.
 ### dx, dy
 To draw labeled points configure `placement="point"` (which is the default) and set dx/dy to move the text.
 
-dx, dy from TextSymbolizer moves only the text, and not the shield. This behavior will be changed in a future release of mapnik. (See below).
+dx, dy from TextSymbolizer moves only the text, and not the shield. This behavior will be changed in a future release of mapnik. (See below). 
 
 #### New interface in HarfBuzz branch
 | *parameter*      | *value* | *default*
@@ -37,6 +37,8 @@ dx, dy from TextSymbolizer moves only the text, and not the shield. This behavio
 |        | With unlock_image = false: move text and shield | 0
 | unlock_image | True: Shield base point is always the input line/point (usecase: labeling bus stations). | 0
 |              | False: Shield base point is the center of the text (i.e. depends on dx,dy,vertical-alignment, horizontal-alignment) (usecase: highway shields)
+
+When symbols are still moving with dx/dy after setting unlock_image = true, try unlock-image="true" instead.
 
 ### placement
 `placement="line"` only means placement along a line for ShieldSymbolizer, whereas for TextSymbolizer it rotates the text too. Add the `spacing` parameter to get the ShieldSymbolizer to repeat along the line, otherwise `placement="line"` and `placement="point"` will look the same.
