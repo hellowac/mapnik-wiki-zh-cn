@@ -47,13 +47,8 @@ sudo apt-get purge libmapnik* mapnik-* python-mapnik
 
 Mapnik master may require a boost version more recent than provided by your Ubuntu distribution. 
 
-Ubuntu 12.04 Precise ships with 2 different boost versions: 1.46 and 1.48. Make sure you install the correct version (see below) or use the latest Boost version (that works with Mapnik) by installing Boost from the `mapnik/boost` PPA:
+Ubuntu 12.04 Precise ships with 2 different boost versions: 1.46 and 1.48. Make sure you install the correct version.
 
-```sh
-sudo add-apt-repository ppa:mapnik/boost
-sudo apt-get update
-sudo apt-get install libboost-dev libboost-filesystem-dev libboost-program-options-dev libboost-python-dev libboost-regex-dev libboost-system-dev libboost-thread-dev 
-```
 Note: You can see the boost version offered by your distro with the below command. And if you are using the above PPA then its version should show up as a candidate for installation:
 
 ```sh
