@@ -49,7 +49,7 @@ Mapnik master may require a boost version more recent than provided by your Ubun
 
 Ubuntu 12.04 Precise ships with 2 different boost versions: 1.46 and 1.48. Make sure you install the correct version.
 
-Note: You can see the boost version offered by your distro with the below command. And if you are using the above PPA then its version should show up as a candidate for installation:
+Note: You can see the boost version offered by your distro with the below command.
 
 ```sh
 apt-cache policy libboost-dev
@@ -65,7 +65,7 @@ apt-cache policy libboost-dev
     libboost-python1.48-dev libboost-regex1.48-dev \
     libboost-system1.48-dev libboost-thread1.48-dev
 
-    # On newer system or if you've activated the mapnik PPA, then use this:
+    # On on some systems just:
     sudo apt-get install \
     libboost-filesystem-dev \
     libboost-program-options-dev \
