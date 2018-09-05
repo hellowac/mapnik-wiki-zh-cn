@@ -4,7 +4,7 @@ Mapnik binaries can be installed and configured manually on windows. See http://
 
 If you are interested in installing Mapnik on other operating systems see [[Mapnik-Installation]]
 
-If you an interested in compiling Mapnik from source on windows see the windows scripts at https://github.com/mapnik/mapnik-packaging
+If you are interested in compiling Mapnik from source on windows see the windows scripts at https://github.com/mapnik/mapnik-packaging
 
 ## Supported Features
 
