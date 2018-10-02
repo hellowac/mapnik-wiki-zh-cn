@@ -1,213 +1,122 @@
-## Supported SVG elements
+## Elements
 
-https://github.com/mapnik/mapnik/tree/svg-strict-parsing
+### Supported
+| **Elements** | **Attributes** |
+|:--------------:|:-----------------------------:|
+| rect  | (x, y, width, height, rx, ry) |
+| path | (d) |
+| polygon | (points) |
+| polyline | (points) |
+| line  | (x1, y1, x2, y2) |
+| circle | (cx, cy, r) |
+| ellipse | (cx, cy, rx, ry) |
+| svg  | (width, height, viewBox) |
+| linearGradient |  |
+| radialGradient |  |
+| g |  |
+| use |  |
+| defs |  |
 
-### `<svg>`
-
-#### Specific attributes
-
-| attribute | value |
-| --------- | ----- |
-| width     |       |
-| height    |       |
-| viewBox   |       |
-
-
-### `<path>`
-#### Global attributes
-[transform](#Global-attributes)
-#### Specific attributes
-
-| attribute | value |
-| --------- | ----- |
-| d         |       |
-
-
-### `<polygon>`
-
-#### Specific attributes
-
-| attribute | value |
-| --------- | ----- |
-| points    |       |
-
-### `<polyline>`
-
-#### Specific attributes
-
-| attribute | value |
-| --------- | ----- |
-| points    |       |
-
-### `<line>`
-
-#### Specific attributes
-
-| attribute | value |
-| --------- | ----- |
-| x1        |       |
-| y1        |       |
-| x2        |       |
-| y2        |       |
-
-### `<rect>`
-
-#### Specific attributes
-
-| attribute | value |
-| --------- | ----- |
-| x         |       |
-| y         |       |
-| width     |       |
-| height    |       |
-| rx        |       |
-| ry        |       |
-
-### `<circle>`
-
-#### Specific attributes
-
-| attribute | value |
-| --------- | ----- |
-| cx        |       |
-| cy        |       |
-| r         |       |
-
-
-### `<ellipse>`
-
-#### Specific attributes
-
-| attribute | value |
-| --------- | ----- |
-| cx        |       |
-| cy        |       |
-| rx        |       |
-| ry        |       |
-
-### `<g>`
-#### Global attributes
-
-##### transform
-
-#### Specific attributes
-
-
-### `<use>`
-
-#### Specific attributes
-
-### `<linearGradient>`
-
-#### Specific attributes
-
-### `<radialGradient>`
-
-#### Specific attributes
-
-### `<symbol>`
-
-#### Specific attributes
-
-### `<defs>`
-
-#### Specific attributes
+### Not-supported
+| **Elements** |
+|:------------:|
+| marker |
+| view |
+| text |
+| switch |
+| image |
+| a |
+| symbol |
 
 __________________________________
 
-### Style Attributes
+## Attributes
+### Supported
+| **Support** |
+|:-------------------:|
+| transform |
+| fill |
+| fill-opacity |
+| fill-rule |
+| stroke |
+| stroke-width |
+| stroke-opacity |
+| stroke-linecap |
+| stroke-linejoin |
+| stroke-miterlimit |
+| stroke-dasharray |
+| stroke-dashoffset |
+| opacity |
+| visibility |
+| display |
+| stop-color |
+| stop-opacity |
+| preserveAspectRatio |
+| viewBox |
+| height |
+| width |
+| href |
+| id |
+| d |
+| x |
+| x1 |
+| x2 |
+| y |
+| y1 |
+| y2 |
+| cs |
+| cy |
+| r |
+| fx |
+| fy |
+| style |
+| gradientUnits |
+| gradientTransform |
+| points |
+| offset |
 
-#### `<style`
-
-
-#### `<class>`
-
-_Not supported_
-
-------------------------
-
-### Global attributes
-
-#### `transform`
-
------------------------- 
-
-### Presentation attributes
-
-#### ~~`alignment-baseline`~~
-
-#### ~~`baseline-shift`~~
-
-#### ~~`clip`~~
-
-#### ~~`clip-path`~~
-
-#### ~~`clip-rule`~~
-
-#### `color`
-
-#### ~~`color-interpolation`~~
-
-#### ~~`color-interpolation-filters`~~
-
-#### ~~`color-profile`~~
-
-#### ~~`color-rendering`~~
-
-#### ~~`cursor`~~
-
-#### ~~`direction`~~
-
-#### `display`
-
-#### ~~`dominant-baseline`~~
-
-#### ~~`enable-background`~~
-
-#### `fill`
-
-#### `fill-opacity`
-
-#### `fill-rule`
-
-#### ~~`filter`~~
-#### ~~`flood-color`~~
-#### ~~`flood-opacity`~~
-#### ~~`font-family`~~
-#### ~~`font-size`~~
-#### ~~`font-size-adjust`~~
-#### ~~`font-stretch`~~
-#### ~~`font-style`~~
-#### ~~`font-variant`~~
-#### ~~`font-weight`~~
-#### ~~`glyph-orientation-horizontal`~~
-#### ~~`glyph-orientation-vertical`~~
-#### ~~`image-rendering`~~
-#### ~~`kerning`~~
-#### ~~`letter-spacing`~~
-#### ~~`lighting-color`~~
-#### ~~`marker-end`~~
-#### ~~`marker-mid`~~
-#### ~~`marker-start`~~
-#### ~~`mask`~~
-#### `opacity` 
-#### ~~`overflow`~~ 
-#### ~~`pointer-events`~~ 
-#### ~~`shape-rendering`~~ 
-#### `stop-color` 
-#### `stop-opacity` 
-#### `stroke` 
-#### `stroke-dasharray` 
-#### `stroke-dashoffset`
-#### `stroke-linecap` 
-#### `stroke-linejoin` 
-#### `stroke-miterlimit` 
-#### `stroke-opacity` 
-#### `stroke-width` 
-#### ~~`text-anchor`~~
-#### ~~`text-decoration`~~
-#### ~~`text-rendering`~~
-#### ~~`unicode-bidi`~~
-#### `visibility` 
-#### ~~`word-spacing`~~ 
-#### ~~`writing-mode`~~
+### Not-supported
+| **Not support** |
+|:----------------------------:|
+| alignment-baseline |
+| baseline-shift |
+| clip |
+| clip-path |
+| clip-rule |
+| color-interpolation |
+| color-interpolation-filters |
+| color-profile |
+| color-rendering |
+| cursor |
+| direction |
+| dominant-baseline |
+| enable-background |
+| filter |
+| flood-color |
+| flood-opacity |
+| font-family |
+| font-size |
+| font-size-adjust |
+| font-stretch |
+| font-style |
+| font-variant |
+| font-weight |
+| glyph-orientation-horizontal |
+| glyph-orientation-vertical |
+| image-rendering |
+| kerning |
+| letter-spacing |
+| lighting-color |
+| marker-end |
+| marker-mid |
+| marker-start |
+| mask |
+| overflow |
+| pointer-events |
+| shape-rendering |
+| text-anchor |
+| text-decoration |
+| text-rendering |
+| unicode-bidi |
+| word-spacing |
+| writing-mode |
