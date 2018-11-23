@@ -44,4 +44,7 @@ m.aspect_fix_mode = mapnik.aspect_fix_mode.ADJUST_BBOX_HEIGHT
 ```
 For a python example of this in action see <https://gist.github.com/andrewharvey/1290744>
 
-In Javascript [this is not yet exposed](https://github.com/mapnik/node-mapnik/issues/177).
+Javascript:
+```javascript
+m.aspect_fix_mode = mapnik.Map.ADJUST_BBOX_HEIGHT;
+```
