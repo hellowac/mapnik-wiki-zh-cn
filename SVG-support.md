@@ -1,5 +1,5 @@
 ## Elements
-
+Note that all colors must be in HEX. RGB is not supported
 ### Supported
 | **Elements** | **Attributes** |
 |:--------------:|:-----------------------------:|
