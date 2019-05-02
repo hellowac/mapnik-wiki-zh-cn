@@ -97,6 +97,12 @@ Note: for Ubuntu >=14.04 postgres/postgis versions have shifted, so do:
 sudo apt-get install -y postgresql-9.3 postgresql-server-dev-9.3 postgresql-contrib-9.3 postgresql-9.3-postgis-2.1
 ```
 
+In Ubuntu >=18 :
+
+```
+sudo apt install postgresql-server-dev-10 postgresql-10 postgresql-contrib postgresql-10-postgis-scripts
+```
+
 ### Source install of Mapnik 2.3.x
 
 ```sh
