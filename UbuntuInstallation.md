@@ -81,8 +81,8 @@ apt-cache policy libboost-dev
     libpng-dev \
     libproj-dev \
     libtiff-dev \
-    libcairo2 libcairo2-dev python-cairo python-cairo-dev \
-    libcairomm-1.0-1 libcairomm-1.0-dev \
+    libcairo2-dev python-cairo-dev \
+    libcairomm-1.0-dev \
     ttf-unifont ttf-dejavu ttf-dejavu-core ttf-dejavu-extra \
     git build-essential python-nose \
     libgdal-dev python-gdal
