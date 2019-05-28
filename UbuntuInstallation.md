@@ -65,7 +65,7 @@ apt-cache policy libboost-dev
     libboost-python1.48-dev libboost-regex1.48-dev \
     libboost-system1.48-dev libboost-thread1.48-dev
 
-    # On on some systems just:
+    # On some systems just:
     sudo apt-get install \
     libboost-filesystem-dev \
     libboost-program-options-dev \
