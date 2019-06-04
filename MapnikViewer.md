@@ -62,3 +62,12 @@ or
 ```sh
     # ./viewer your.xml -1,50,1,52
 ```
+
+## Register plugins directory
+Plugin directory is default to /usr/local/lib/mapnik/input/  
+To override it: create a viewer.ini file for example:
+
+```ini
+[mapnik]
+plugins_dir=/usr/lib/mapnik/3.0/input/ 
+```
