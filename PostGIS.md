@@ -13,6 +13,7 @@ See also a performance tuning page: [[OptimizeRenderingWithPostGIS]]
 | dbname                       | string  | name of the database |
 | user                         | string  | username to use for connecting |
 | password                     | string  | user password to use for connecting |
+| application_name             | string  | connection [application_name](https://www.postgresql.org/docs/current/runtime-config-logging.html#GUC-APPLICATION-NAME). If omitted, then [fallback_application_name](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-FALLBACK-APPLICATION-NAME) = "mapnik" will be set instead. <br>Available in Mapnik >= 4.0 |
 | table                        | string  | name of the table to fetch, this can be a sub-query;  subquery has to use syntax of:  '( ) as subquery'. |
 | geometry_field               | string  | name of the geometry field, in case you have more than one in a single table. This field and the SRID will be deduced from the query in most cases, but may need to be manually specified in some cases. |
 | geometry_table               | string  | name of the table containing the returned geometry; for determining RIDs with subselects |

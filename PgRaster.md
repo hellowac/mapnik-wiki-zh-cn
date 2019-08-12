@@ -23,6 +23,7 @@ To check if the gdal plugin built and was installed correctly you can do:
 | dbname                       | string  | name of the database |
 | user                         | string  | username to use for connecting |
 | password                     | string  | user password to use for connecting |
+| application_name             | string  | connection [application_name](https://www.postgresql.org/docs/current/runtime-config-logging.html#GUC-APPLICATION-NAME). If omitted, then [fallback_application_name](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-FALLBACK-APPLICATION-NAME) = "mapnik" will be set instead. <br>Available in Mapnik >= 4.0 |
 | table                        | string  | name of the table to fetch, this can be a sub-query;  subquery has to use syntax of:  '( ) as subquery'. |
 | raster_field                 | string  | name of the raster field, in case you have more than one in a single table. Deduced from metadata tables if possible |
 | raster_table                 | string  | name of the table containing the returned raster; for determining SRIDs with subselects |
