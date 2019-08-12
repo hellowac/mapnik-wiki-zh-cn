@@ -1,1 +1,0 @@
-https://github.com/mapnik/mapnik.wiki.git
