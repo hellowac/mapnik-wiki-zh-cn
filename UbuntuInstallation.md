@@ -77,6 +77,7 @@ apt-cache policy libboost-dev
     libicu-dev \
     python-dev libxml2 libxml2-dev \
     libfreetype6 libfreetype6-dev \
+    libharfbuzz-dev \
     libjpeg-dev \
     libpng-dev \
     libproj-dev \
@@ -113,16 +114,6 @@ cd mapnik-2.3.x
 ```
 
 ### Source install of Mapnik Master (3.x)
-
-First download, compile and install harfbuzz
-```sh
-wget http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.34.tar.bz2
-tar xf harfbuzz-0.9.34.tar.bz2
-cd harfbuzz-0.9.34
-./configure && make && sudo make install
-sudo ldconfig
-cd ../
-```
 
 Upgrade your compiler to at least g++ 4.7 so it supports c++11 features. <br>`apt-get upgrade` should give you g++-4.8 and gcc-4.8):
 ```sh
