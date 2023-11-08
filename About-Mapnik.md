@@ -7,7 +7,7 @@ Mapnik is a Free Toolkit for developing mapping applications. It is written in m
  
  * [Michal Migurski: making sense of mapnik](http://mike.teczno.com/notes/mapnik.html)
  * [A List Apart: take control of your maps!](http://www.alistapart.com/articles/takecontrolofyourmaps)
- * [Dan Karran: Using the OSM export tab to render mapnik maps with no programming](http://www.dankarran.com/blog/archives/2008/09/16/making_maps_from_openstreetmap_geodata.php)
+ * [Dan Karran: Using the OSM export tab to render mapnik maps with no programming](https://web.archive.org/web/20140718065421/http://www.dankarran.com/blog/2008/09/making-maps-from-openstreetmap-geodata) (**archived**) 
  * [GeospatialPython.com: Mapnik - Maybe the best Python Mapping Platform Yet](http://geospatialpython.com/2009/02/mapnik-maybe-best-python-mapping.html)
 
 ## Mapnik Example Gallery
