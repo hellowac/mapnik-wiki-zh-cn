@@ -14,7 +14,7 @@
 
 ### Bundled fonts and scons
 
-OPTIONAL: Consider updating Scons-local to [latest release](http://www.scons.org/download.php): The last SCons update was 2.5.0.
+OPTIONAL: Consider updating Scons-local to [latest release](https://scons.org/tag/releases.html): The last SCons update was 4.7.0.
     
 ```sh
 wget http://prdownloads.sourceforge.net/scons/scons-local-2.5.0.zip
@@ -23,7 +23,7 @@ unzip -o scons-local-*.zip -d scons/
 rm scons-local-*.zip
 ```
 
-OPTIONAL: Consider updating DeJaVu Fonts: The [last version](http://dejavu-fonts.org/wiki/Download) updated was 2.37
+OPTIONAL: Consider updating DeJaVu Fonts: The [last version](https://dejavu-fonts.github.io/) updated was 2.37
 
 ```sh
 cd fonts
@@ -40,8 +40,8 @@ Make sure to update font paths in `demo/c++/rundemo.cpp` and `benchmark/data/roa
 OPTIONAL: If it has been > 3 months since the last official release, consider first promoting a release candidate first:
 
 ```sh
-git tag -a v3.0.0-rc1 -m 'Release Candidate 1 for Mapnik v3.0.0'
-git push origin v3.0.0-rc1
+git tag -a v4.0.0-rc1 -m 'Release Candidate 1 for Mapnik v4.0.0'
+git push origin v4.0.0-rc1
 ```
 
 ### Pre-tag updates
