@@ -8,7 +8,7 @@
 
 ### Testing
 
-- Ensure all tests pass (`make test`)
+- Ensure all unit tests are passing (`./test/unit/run`)
 - Test Mapnik with `INPUT_PLUGINS=''` and ensure tests pass for what functionality is available
 - Test with `./configure WARNING_CXXFLAGS="-Wextra"` to ensure all problematic warnings are solved or triaged.
 
@@ -87,13 +87,13 @@ Before running this you'll need:
  - The submodules up to date
 
 ```sh
-make release
+./scripts/publish_release.sh 
 ```
 
 * Test the uploaded tarball:
 
 ```sh
-make test-release
+./scripts/test-release.sh
 ```
 
 If the `make test-release` build works then go to https://github.com/mapnik/mapnik/releases, find the latest draft release created by `make release` and publish it publically.
