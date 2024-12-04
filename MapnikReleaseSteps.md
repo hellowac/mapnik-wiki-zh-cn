@@ -14,13 +14,13 @@
 
 ### Bundled fonts and scons
 
-OPTIONAL: Consider updating Scons-local to [latest release](https://scons.org/tag/releases.html): The last SCons update was 4.7.0.
+OPTIONAL: Consider updating Scons-local to [latest release](https://scons.org/tag/releases.html): The last SCons update was 4.8.1.
     
 ```sh
-wget http://prdownloads.sourceforge.net/scons/scons-local-2.5.0.zip
+curl -OL http://prdownloads.sourceforge.net/scons/scons-local-4.8.1.tar.gz 
 rm -rf scons
-unzip -o scons-local-*.zip -d scons/
-rm scons-local-*.zip
+tar xvf scons-local-*.zip -d scons/
+rm scons-local-*.tar.gz
 ```
 
 OPTIONAL: Consider updating DeJaVu Fonts: The [last version](https://dejavu-fonts.github.io/) updated was 2.37
@@ -28,7 +28,7 @@ OPTIONAL: Consider updating DeJaVu Fonts: The [last version](https://dejavu-font
 ```sh
 cd fonts
 git rm -r dejavu-fonts-ttf-
-wget http://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2.37.tar.bz2
+curl -OL http://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2.37.tar.bz2
 tar xvf dejavu-fonts-ttf-2.37.tar.bz2
 git add dejavu-fonts-ttf-2.37
 ```
