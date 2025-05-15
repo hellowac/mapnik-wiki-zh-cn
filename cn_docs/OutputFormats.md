@@ -1,8 +1,8 @@
 # Mapnik Output Formats
 
-THIS PAGE IS OLD AND DEPRECATED, PLEASE SEE [[Image-IO]] for more up to date details on Mapnik output formats.
+THIS PAGE IS OLD AND DEPRECATED, PLEASE SEE [Image-IO](Image-IO) for more up to date details on Mapnik output formats.
 
-Mapnik supports rendering with both AGG and Cairo (see [[MapnikRenderers]] for more detail), and can create maps or map tiles in a variety of formats.
+Mapnik supports rendering with both AGG and Cairo (see [MapnikRenderers](MapnikRenderers) for more detail), and can create maps or map tiles in a variety of formats.
 
 ## Tradeoffs
 

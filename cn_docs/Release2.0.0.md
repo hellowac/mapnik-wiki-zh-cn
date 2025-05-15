@@ -6,7 +6,7 @@ Announcement: [Release 2.0](http://mapnik.org/news/2011/sep/26/release_2_0/)
 
 - Add support for png quantization using fixed palettes ([#843](https://github.com/mapnik/mapnik/issues/843))
 
-- Add AlsoFilter functionality - [[AlsoFilter]]
+- Add AlsoFilter functionality - [AlsoFilter](AlsoFilter)
 
 - SQLite Plugin: optimize i/o using shared cache and no mutexes ([#797](https://github.com/mapnik/mapnik/issues/797))
 

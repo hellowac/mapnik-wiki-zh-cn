@@ -1,8 +1,8 @@
-Mapnik's [[PluginArchitecture]] supports the use of different input formats.
+Mapnik's [PluginArchitecture](PluginArchitecture) supports the use of different input formats.
 
 This plugin allows for the direct reading of data from the [OpenStreetMap XML format](http://wiki.openstreetmap.org/wiki/.osm).
 
-*NOTE*: the primary way that Mapnik is used to render OpenStreetMap data is to import an [extract](http://wiki.openstreetmap.org/wiki/Planet.osm) into Postgres using the [osm2pgsql](http://wiki.openstreetmap.org/wiki/Osm2pgsql) tool and then read it using [[PostGIS]] plugin.
+*NOTE*: the primary way that Mapnik is used to render OpenStreetMap data is to import an [extract](http://wiki.openstreetmap.org/wiki/Planet.osm) into Postgres using the [osm2pgsql](http://wiki.openstreetmap.org/wiki/Osm2pgsql) tool and then read it using [PostGIS](PostGIS) plugin.
 
 
 # Dependencies

@@ -1,7 +1,10 @@
+# Scale and ppi
+
 <!-- Name: ScaleAndPpi -->
 <!-- Version: 10 -->
 <!-- Last-Modified: 2009/07/09 11:56:56 -->
 <!-- Author: bettercom -->
+
 ## Scale and Scale denominators
 
 There are two aspects that play a role when you want to make a digital map and determine what the scale is: the projection you use, and the resolution at which you display or print the map. Both will be explained here.
@@ -11,7 +14,7 @@ Map scale has traditionally been about how the real world translates into the pa
 
 For large maps, this difference will be even larger, for example, if we look at the world map below, it should be obvious that no scale can be given. On this map Africa looks the same size as Greenland, in reality it is 14 times as large. The pink circles indicate areas of equal size on the real world. Mapnik will still give a ‘scale’ for such a projection, but one should be aware that for these projections that cover a large area, such a number might not be very useful, or only be valid for a specific part of the map.
 
-[[/images/Tissot_mercator.png]]
+![](images/Tissot_mercator.png)
 
 One can see a similar issue on Google Maps, if you follow [this link](http://maps.google.com/?ie=UTF8&ll=46.589069,2.548828&spn=7.504362,14.150391&z=6), you'll see a map centered on France, with a scale marker indicating 100 mile and 200km, if you drag the map in small steps to Norway or to the equator (without changing the zoom level) you can see how these scale markers change in order to adjust for the deformation introduced by the projection Google uses.
 
@@ -66,9 +69,9 @@ Apart from the scale, there's also the scale denominator, which plays a further 
 
 ### Scale denominator
 
-[[/images/scale.png]]
+![](images/scale.png)
 
-The above image illustrates how scale dependent rendering and resolution interact. Each map has the same extent and proportions. The large map was printed at 1000px by 1000px and the smaller inset at 250px250px, these were both reduced by 50% for display here. What you should notice is that resolution matters for scale. Each of these maps, made with [[Nik2Img]], have different levels of detail, because they are at different scales, even though the extents are the same. 
+The above image illustrates how scale dependent rendering and resolution interact. Each map has the same extent and proportions. The large map was printed at 1000px by 1000px and the smaller inset at 250px250px, these were both reduced by 50% for display here. What you should notice is that resolution matters for scale. Each of these maps, made with [Nik2Img](Nik2Img), have different levels of detail, because they are at different scales, even though the extents are the same. 
 
 What determines the actual scale of the map when printed, is determined by an additional factor which is the number of pixels that make up an inch--Pixels per inch(PPI). Various digital screens have different pixel sizes and therefore PPI differs in ways that software often cannot be aware of.  Mapnik calculates it's default at about 90.7 PPI, which originates from an assumed standard pixel size of 0.28 millimeters as defined by the OGC (Open Geospatial Consortium) SLD (Styled Layer Descriptor) [Specification](http://www.opengeospatial.org/standards/sld).
 

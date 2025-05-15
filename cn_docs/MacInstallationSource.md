@@ -1,9 +1,12 @@
+# Macinstallation Source
+
 <!-- Name: MacInstallationSource -->
 <!-- Version: 14 -->
 <!-- Last-Modified: 2010/01/29 15:03:43 -->
 <!-- Author: springmeyer -->
 
 ## WARNING - this page is out of date: Use Brew instead
+
 See [MacInstallation_Brew](https://github.com/mapnik/mapnik/wiki/MacInstallation_Homebrew) for instructions.
 
 # Installing Mapnik on Mac OS X (build dependencies from source)
@@ -139,7 +142,7 @@ If you are new to compiling source code, or having trouble getting started on a 
 
 3. Install Proj.4, PostgreSQL/PostGIS, and GDAL if necessary.
 
-See [[MacInstallation_Optional]] for details.
+See [MacInstallation Optional](MacInstallation_Optional) for details.
 
 ### Install Necessary Libraries
 
@@ -254,7 +257,7 @@ And compile icu to pull out headers like:
 
 ### Install WMS dependencies
 
-6. See [[MacInstallation_Optional]] for details.
+6. See [MacInstallation Optional](MacInstallation_Optional) for details.
 
 ### Finally, build and install Mapnik
 
@@ -318,11 +321,11 @@ And compile icu to pull out headers like:
 8. Now test your mapnik installation in the python interpreter:
 
 ```python
-    $ python
-    >>> import mapnik
-    Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
-    ImportError: No module named mapnik
+$ python
+>>> import mapnik
+Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+ImportError: No module named mapnik
 ```
 
  * Whoops, the mapnik module is not on sys.path! 
@@ -330,45 +333,45 @@ And compile icu to pull out headers like:
  * This command will show you what *is* on your PYTHONPATH:
 
 ```python
-    $ python
-    >>> import sys
-    >>> sys.path
-    ['', '/Library/Python/2.5/site-packages/ ....
+$ python
+>>> import sys
+>>> sys.path
+['', '/Library/Python/2.5/site-packages/ ....
 ```
 
 9. If you got the ImportError put your mapnik module in your PYTHONPATH like so:
  * Place this text in either /etc/profile or ~/.bash_profile
 
 ```sh
-    export PYTHONPATH=/usr/lib/python2.5/site-packages/
+export PYTHONPATH=/usr/lib/python2.5/site-packages/
 ```
 
  * Or Symlink to your Mapnik module from the default site-packages directory (it should be on your path automatically)
 
 ```sh
-    # ln -s /System/Library/Frameworks/Python.framework/Versions/2.5/lib/python2.5/site-packages/mapnik /Library/Python/2.5/site-packages/mapnik
+# ln -s /System/Library/Frameworks/Python.framework/Versions/2.5/lib/python2.5/site-packages/mapnik /Library/Python/2.5/site-packages/mapnik
 ```
 
  * Find your default site-packages directory like so:
 
 ```sh
-    $ python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
+$ python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
 ```
 
 10. Now return to the python interpreter:
 
 ```sh
-    $ python
-    >>> import mapnik
-    registered datasource : gdal
-    registered datasource : postgis
-    registered datasource : raster
-    registered datasource : shape
-    >>> dir(mapnik) # This gets you a list of symbols
-    ['BoostPythonMetaclass', 'Color', 'Coord', 'CreateDatasource'
-     [.....]
-     'scale_denominator', 'setdlopenflags']
-    >>> help(mapnik)
+$ python
+>>> import mapnik
+registered datasource : gdal
+registered datasource : postgis
+registered datasource : raster
+registered datasource : shape
+>>> dir(mapnik) # This gets you a list of symbols
+['BoostPythonMetaclass', 'Color', 'Coord', 'CreateDatasource'
+    [.....]
+    'scale_denominator', 'setdlopenflags']
+>>> help(mapnik)
 ```
 
  * Congrats: you can now head to the [GettingStarted Getting Started page] for a 'Hello World' demo of using Mapnik via the python bindings.

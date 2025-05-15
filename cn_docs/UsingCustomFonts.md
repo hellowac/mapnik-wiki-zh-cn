@@ -29,7 +29,7 @@ Or register a custom location:
 ### XML
 We are planning to add registration support within XML in [#168](https://github.com/mapnik/mapnik/issues/168)
 
-  * Also, the [[Nik2Img]] allows you to pass the `--fonts` argument to register custom fonts when reading and XML
+  * Also, the [Nik2Img](Nik2Img) allows you to pass the `--fonts` argument to register custom fonts when reading and XML
 
 ### C++
 

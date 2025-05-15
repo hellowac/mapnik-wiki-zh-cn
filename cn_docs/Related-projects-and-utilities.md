@@ -1,2 +1,5 @@
-- [[MapnikUtilities]]
-- [[StyleShare]]
+# Related projects and utilties
+
+
+- [MapnikUtilities](MapnikUtilities)
+- [StyleShare](StyleShare)

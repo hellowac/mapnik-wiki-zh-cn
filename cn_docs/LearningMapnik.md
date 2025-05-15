@@ -43,7 +43,7 @@ To get first results, choose your weapon: XML, Python, C++, node.js, Ruby, Java 
 ## How to use the Mapnik Python Bindings
 
 * See the python api docs [here](http://mapnik.org/docs/v2.0.1/api/python/)
-* Check out the [MapnikTutorials](MapnikTutorials) and  the references at [[ExampleCode]]
+* Check out the [MapnikTutorials](MapnikTutorials) and  the references at [ExampleCode](ExampleCode)
 * Study applications like Cascadenik or Nik2img at <http://mapnik-utils.googlecode.com/>
 
 ## Advanced Topics

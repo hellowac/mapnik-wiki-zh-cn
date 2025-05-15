@@ -4,9 +4,9 @@ Mapnik was accepted to participate in Google Summer of Code 2011.
 
 Three students were accepted this year: http://mapnik.org/news/2011/apr/25/three_students_mapnik_gsoc_2011/
 
-See the main page for more details: [[GSOC2011]]
+See the main page for more details: [GSOC2011](GSOC2011)
 
-See also steve8's ideas page: [[Ideas]]
+See also steve8's ideas page: [Ideas](Ideas)
 
 
 # Project Ideas
@@ -56,7 +56,7 @@ Roel Vanhout
 # Technical Issues
 The issues with this project are in finding generic ways to specify map elements, in ways that provide a natural fit with the data and provide as much flexibility to the cartographer as possible for maximum expressiveness. As much of the rendering code in the rest of Mapnik should be re-used, e.g. SVG code for rendering SVG north arrows.
 
-  * See also [[Legending]] and https://github.com/mapnik/mapnik/issues/536 .
+  * See also [Legending](Legending) and https://github.com/mapnik/mapnik/issues/536 .
 
   * Scale bars, legends, and grid lines are implemented in this evolving work within a python 'printing' module: https://github.com/thjc/mapnik-svg
      o -- Dane Springmeyer - April 5, 2011 
@@ -113,7 +113,7 @@ o -- Lars Ahlzen - March 13, 2010
 * See also: http://wiki.openstreetmap.org/wiki/User:Kobezda/GSoC  
 o -- Dane Springmeyer - April 6, 2010
 
-* Potential spec could look like: [[Compositing]]  
+* Potential spec could look like: [Compositing](Compositing)  
 o -- Dane Springmeyer - April 6, 2010 
 
 * Good brainstorming thread on issues around compositing on #mapnik April 7th: http://mapnik.dbsgeo.com/mapnik_logs/2010/04/07/  

@@ -12,7 +12,7 @@ Mapnik evaluates all Rules in a Style sequentially from top to bottom, testing e
 
 An `<AlsoFilter />` is useful when you want to draw a bunch of similar things (like POI-Icons) and you would want to add another Symbolizer to each and every Rule in the style. Using a separate `<AlsoFilter />`-Rule avoids duplicating the other Symbolizer over and over.
 
-Please note, that there are different methods of creating such combined styles, each having their own pros and cons. One possibility would be using [[ShieldSymbolizer]]s, which would keep the Icon and the Text together and would never lead to an icon without text or vice versa. In complex styles it's sometimes necessary to place the [[PointSymbolizer]]s into a different Style then the [[TextSymbolizer]]s in order to gain greater control about the drawing order.
+Please note, that there are different methods of creating such combined styles, each having their own pros and cons. One possibility would be using [ShieldSymbolizer](ShieldSymbolizer)s, which would keep the Icon and the Text together and would never lead to an icon without text or vice versa. In complex styles it's sometimes necessary to place the [PointSymbolizer](PointSymbolizer)s into a different Style then the [TextSymbolizer](TextSymbolizer)s in order to gain greater control about the drawing order.
 
 ## Behavior regarding filter-mode="first"
 

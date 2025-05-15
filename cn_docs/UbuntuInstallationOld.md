@@ -263,7 +263,7 @@ This works with the default python-2.6 on jaunty:
 
 # Ubuntu Intrepid Ibex (8.10)
 
-Note, these instructions are nearly identical to the [[DebianInstallation]] notes (with the exception of libltdl7/3), just more verbose.
+Note, these instructions are nearly identical to the [DebianInstallation](DebianInstallation) notes (with the exception of libltdl7/3), just more verbose.
 
 # Prerequisites
 

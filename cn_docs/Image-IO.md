@@ -3,8 +3,8 @@ Mapnik supports reading and writing a variety of image formats.
 These formats can be used as:
 
  - Output formats for rendered map tiles
- - Input formats for symbols or icons for symbolizers like the [[MarkersSymbolizer]]
- - Input formats for the [[Raster]] datasource plugin. Note: if you are looking for what raster geodata formats are supported see also what the [[GDAL]] datasource plugin supports.
+ - Input formats for symbols or icons for symbolizers like the [MarkersSymbolizer](MarkersSymbolizer)
+ - Input formats for the [Raster](Raster) datasource plugin. Note: if you are looking for what raster geodata formats are supported see also what the [GDAL](GDAL) datasource plugin supports.
 
 ## Format strings
 

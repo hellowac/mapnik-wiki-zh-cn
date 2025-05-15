@@ -10,7 +10,7 @@ Detailed build instructions are included in the source tree:
 
 - [Master INSTALL.md](https://github.com/mapnik/mapnik/blob/master/INSTALL.md)
 
-See [[UsingScons]] for an introduction to SCons (Mapnik's python build system)
+See [UsingScons](UsingScons) for an introduction to SCons (Mapnik's python build system)
 
 ## Platform-specific installation notes
 

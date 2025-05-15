@@ -18,7 +18,7 @@ The basic Mapnik object is the Map. Other important objects include _Layers, Fil
 
 Mapnik users typically only deal with Map Layers, Filters, Rules, and Symbolizers. Whereas Filters and Rules serve as predicates that determine _when_ geometric features are displayed, Mapnik Symbolizers take input data and turn them into graphical form, whether as Points, Lines, Polygons, Raster Images, or Textual Labels.
 
-For more information on Symbolizers, Filters, and Rules, see [[SymbologySupport]].
+For more information on Symbolizers, Filters, and Rules, see [SymbologySupport](SymbologySupport).
 
 Internally, a mapnik Map object may have multiple Layers, where each Layer should have a reference to a Datasource (mapnik::datasource_ptr). A typical Datasource (for example, a Shapefile Datasource, an in-memory Datasource, or a Raster Datasource) has multiple features.
 

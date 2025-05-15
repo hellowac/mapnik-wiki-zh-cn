@@ -1,8 +1,10 @@
+# Raster
+
 This plugin supports reading tiff and geotiff files.
 
-Tiled or Stripped tiff files are required and when rasters are small < 200-300 MB this driver is faster that the [[GDAL]] plugin.
+Tiled or Stripped tiff files are required and when rasters are small < 200-300 MB this driver is faster that the [GDAL](GDAL) plugin.
 
-If files are larger it is recommended to build GDAL overviews (with gdaladdo command) and instead read with the [[GDAL]] plugin.
+If files are larger it is recommended to build GDAL overviews (with gdaladdo command) and instead read with the [GDAL](GDAL) plugin.
 
 **Note: overviews support is available only in Mapnik >= 0.7.0**
 
@@ -10,9 +12,9 @@ A drawback(or advantage!) of this plugin is that it requires manually setting th
 
  * hint: create a GDAL datasource from your tiff in python, call the envelope() method to get the bounds, and use those.
 
-For other plugins see: [[PluginArchitecture]]
+For other plugins see: [PluginArchitecture](PluginArchitecture)
 
-# Installation
+## Installation
 
 To check if the raster plugin built and was installed correctly you can do:
 
@@ -77,13 +79,13 @@ True
 </table>
 
 
-# Styling
+## Styling
 
-To style a layer use the [[RasterSymbolizer]]
+To style a layer use the [RasterSymbolizer](RasterSymbolizer)
 
-# Usage
+## Usage
 
-## Python
+### Python
 
 ```xml
 <!-- NOTE: must be in the same SRS as your map-->
@@ -106,9 +108,9 @@ lyr.datasource = raster
 
 ```
 
-## C++
+### C++
 
-Plugin datasource initialization example code can be found on [[PluginArchitecture]].
+Plugin datasource initialization example code can be found on [PluginArchitecture](PluginArchitecture).
 
 A Raster datasource may be created as follows:
 

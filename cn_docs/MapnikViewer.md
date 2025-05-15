@@ -1,9 +1,11 @@
+# Mapnik Viewer
+
 The Mapnik Viewer is a GUI tool for rendering and viewing maps based on Mapnik XML mapfiles.
 
 It's available in the `demo/viewer` folder of your mapnik source code. It is not compiled by default, but can be built separately after installing Mapnik.
 
 ----
-[[/images/mapnik_viewer.png]]
+![](images/mapnik_viewer.png)
 ----
 
 ## Requirements

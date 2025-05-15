@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-For older versions, see the archived notes at [[UbuntuInstallationOld]]
+For older versions, see the archived notes at [UbuntuInstallationOld](UbuntuInstallationOld)
 
 ## Install Mapnik from source
 

@@ -1,8 +1,10 @@
+# PostGIS
+
 Mapnik's PluginArchitecture supports the use of different input formats.
 
 This plugin supports [PostGIS](http://en.wikipedia.org/wiki/PostGIS), a spatial extension to the popular PostgreSQL database.
 
-See also a performance tuning page: [[OptimizeRenderingWithPostGIS]]
+See also a performance tuning page: [OptimizeRenderingWithPostGIS](OptimizeRenderingWithPostGIS)
 
 ## Parameters
 
@@ -124,7 +126,7 @@ If you don't do this, you might not see data from this data source at all, even 
 
 ## Usage from C++
 
-Plugin datasource initialization example code can be found on [[PluginArchitecture]].
+Plugin datasource initialization example code can be found on [PluginArchitecture](PluginArchitecture).
 
 A PostGIS datasource may be created as follows:
 

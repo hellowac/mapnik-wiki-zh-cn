@@ -1,6 +1,6 @@
 # Installation Troubleshooting
 
-*See also: [[UsingScons]] for help on how to properly use SCons to find your dependencies.
+*See also: [UsingScons](UsingScons) for help on how to properly use SCons to find your dependencies.
 
 ## Build Errors
 
@@ -379,7 +379,7 @@ Do the same as above but you'll just need to add an entry of '/usr/local/lib64' 
     TypeError: __init__() should return None, not 'NoneType'
 ```
 
- * *Solution*: In general you must rebuild Mapnik to link against the same version of Python as you are running. On Mac OS X recent versions of Mapnik >= 0.7 should prevent this from happening, but just in case you can manually use the `FRAMEWORK_SEARCH_PATH` option to point SCons (see [[UsingScons]]) at the directory where the desired 'Python.framework' exists.
+ * *Solution*: In general you must rebuild Mapnik to link against the same version of Python as you are running. On Mac OS X recent versions of Mapnik >= 0.7 should prevent this from happening, but just in case you can manually use the `FRAMEWORK_SEARCH_PATH` option to point SCons (see [UsingScons](UsingScons)) at the directory where the desired 'Python.framework' exists.
 
 ### Python Version Mismatch
 
@@ -479,7 +479,7 @@ Do the same as above but you'll just need to add an entry of '/usr/local/lib64' 
     Not a map file. Node 'Map' not found.
 ```
 
- * *Solution*: Rebuild mapnik with support for XML entities by installing libxml2 and specifying the XMLParser as a Scons option. Libxml2 is not the default parser used by Mapnik but the only one capable of handling XML entities (see: [[MapnikXMLsupport]])
+ * *Solution*: Rebuild mapnik with support for XML entities by installing libxml2 and specifying the XMLParser as a Scons option. Libxml2 is not the default parser used by Mapnik but the only one capable of handling XML entities (see: [MapnikXMLsupport](MapnikXMLsupport))
 
 ```sh
     python scons/scons.py install XMLPARSER=libxml2

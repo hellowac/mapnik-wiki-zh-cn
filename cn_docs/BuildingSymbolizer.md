@@ -1,12 +1,14 @@
+# Building Symbolizer
+
 <!-- Name: BuildingSymbolizer -->
 <!-- Version: 3 -->
 <!-- Last-Modified: 2009/02/06 07:56:36 -->
 <!-- Author: jamierob -->
-[[Symbolizer|SymbologySupport]] that specifies rendering of a pseudo 3D effect for polygons giving them a building-like appearance.
+[Symbolizer](SymbologySupport) that specifies rendering of a pseudo 3D effect for polygons giving them a building-like appearance.
 
-Often used instead of a [[PolygonSymbolizer]].
+Often used instead of a [PolygonSymbolizer](PolygonSymbolizer).
 
-[[/images/BuildingSymbolizer.png]]
+![123](/images/BuildingSymbolizer.png)
 
 ## Configuration Options
 

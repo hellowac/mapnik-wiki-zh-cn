@@ -1,3 +1,5 @@
+# RFC: Raster color interpretation
+
 ```
 Author: Sandro Santilli <strk@keybit.net>
 Last Updated: 2014-07-16
@@ -6,11 +8,11 @@ Status: draft
 ```
 
 Reading raster data into a mapnik::raster requires interpreting it as either RGB(A) or data.
-When the style uses a [[RasterColorizer]], a "data" interpretation is expected.
+When the style uses a [RasterColorizer](RasterColorizer), a "data" interpretation is expected.
 Otherwise an "RGB(A)" interpretation is expected.
 
-The only raster plugin supporting "data" interpretation is currently the [[GDAL]] one.
-The [[PgRaster]] plugin under development at time of writing is currently using the same strategy used by the GDAL plugin to decide how to interpret the input rasters. But such strategy has limitations. For example it cannot re-order RGB(A) bands, nor find a grayscale in a band which is not the first one.
+The only raster plugin supporting "data" interpretation is currently the [GDAL](GDAL) one.
+The [PgRaster](PgRaster) plugin under development at time of writing is currently using the same strategy used by the GDAL plugin to decide how to interpret the input rasters. But such strategy has limitations. For example it cannot re-order RGB(A) bands, nor find a grayscale in a band which is not the first one.
 
 This page is an attempt to standardize bands extraction and interpretation in a way that is backward compatible and improves flexibility. Plugins that are willing to adhere to this specification would accept a "band" parameter as the one supported by GDAL but with extended semantic.
 
@@ -47,7 +49,7 @@ The band parameter could have the following values:
  - `d[:<n>]`
 
    Input values should not be interpreted by the reader.
-   [[RasterColorizer]] could then be used to map values to colors.
+   [RasterColorizer](RasterColorizer) could then be used to map values to colors.
    Where `<n>` is an integer representing 1-based band indexes.
 
  - `<n>`

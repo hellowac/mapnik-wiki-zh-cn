@@ -1,4 +1,5 @@
 # Tutorial 1 -- Getting started in Python
+
 **Warning: the current Python bindings offer only [limited support](https://github.com/mapnik/python-mapnik/issues/7) for Mapnik 3 and are [barely documented](https://github.com/mapnik/python-mapnik/issues/184).**
 
 ## Overview
@@ -14,7 +15,7 @@ Make sure you have mapnik installed. You should be able to open a terminal and t
 This tutorial expects Mapnik 2.x or greater. Older versions do not provide the `mapnik-config` program, so we recommend upgrading.
 
 
-Please note that if you are using mapnik 2.0.0 then you will need to adjust the "mapnik" module name to "mapnik2" in the Python commands. Refer to [[mapnik2]] for details of the naming convention.
+Please note that if you are using mapnik 2.0.0 then you will need to adjust the "mapnik" module name to "mapnik2" in the Python commands. Refer to [mapnik2](mapnik2) for details of the naming convention.
 
 
 Please also note that unlike Mapnik 2.x, [version 3.x does not include Python bindings anymore](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md#300). You can find the new Python bindings [here](https://github.com/mapnik/python-mapnik).

@@ -1,3 +1,5 @@
+# Tract to Github wiki migration notes
+
 **Delete all content related to Trac**
 
 For the moment, we deleted
@@ -18,7 +20,7 @@ We deleted too
 _**Images links changed done**_
 Images from trac have been checked into wiki github repo in an `/images` subfolder and can be referenced in pages like: `[/images/world.png]]` to produce:
 
-[[/images/world.png]]
+![](images/world.png)
 
 **Code blocks**
 

@@ -1,6 +1,6 @@
 # Core Concepts of Mapnik
 
-Mapnik can be used with XML, Python or C++, but the key concepts are the same across these technologies. For details on how to use the different APIs, see [[LearningMapnik]].
+Mapnik can be used with XML, Python or C++, but the key concepts are the same across these technologies. For details on how to use the different APIs, see [LearningMapnik](LearningMapnik).
 
 Mapnik creates maps. The *map* object is therefore central to Mapnik's API. The map object provides methods for rendering a map to a graphical output format (usually PNG or PDF).
 
@@ -17,9 +17,9 @@ There are 3 different coordinate systems in Mapnik.
 
 ## Further Reading
 
-- [[SymbologySupport]]
-- [[GettingStartedInPython]]
-- [[Mapnik API]] 
+- [SymbologySupport](SymbologySupport)
+- [GettingStartedInPython](GettingStartedInPython)
+- [Mapnik API](XMLConfigReference) 
 
 ---
-Back to [[LearningMapnik]]
+Back to [LearningMapnik](LearningMapnik)

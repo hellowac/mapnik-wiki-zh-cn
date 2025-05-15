@@ -1,9 +1,13 @@
-[[Symbolizer|SymbologySupport]] that specifies rendering of text at a point or along a line (for example, for a road name).
+# Text Symbolizer
 
-[[/images/output_old.png]]
+[Symbolizer](SymbologySupport) that specifies rendering of text at a point or along a line (for example, for a road name).
+
+![](images/output_old.png)
 
 ## Configuration Options
+
 ### Options for whole Symbolizer
+
 | *parameter* | *values/ type*  | *description* | *unit* | *default* | *version* |
 ----------------|---------|----------------|-------|------------|---------|
 |spacing|double|Space between repeated labels. If spacing is 0 only one label is placed.|px|0|
@@ -15,7 +19,7 @@
 |avoid-edges|true, false|Boolean to avoid labeling near intersection edges|bool|false|
 |margin|double|Minimum distance that a label can be placed from any other label or shield (works across features)|px|0.0|3.0|
 |repeat-distance|double|Minimum distance between repeated labels such as street names or shield symbols (works across features)|px|0.0|3.0|
-|allow-overlap|true, false|Allow labels to overlap other labels - Note: you can also clear the label collision cache at the LAYER level to promote more overlap. See 'clear-label-cache' at [[XMLConfigReference]] part layer|bool|false|
+|allow-overlap|true, false|Allow labels to overlap other labels - Note: you can also clear the label collision cache at the LAYER level to promote more overlap. See 'clear-label-cache' at [XMLConfigReference](XMLConfigReference) part layer|bool|false|
 |placement|line, point, vertex, interior|"line" to label along lines instead of by point. TODO: Document other options.||point|
 |opacity|double|1 is fully opaque while zero is fully transparent and .5 would be 50% transparent||1|
 |minimum-padding|double|if >0 helps prevents a label (or shield) from being placed too near the edge of the map.|px|0.0|
@@ -25,9 +29,10 @@
 |upright|left, right, auto, left_only, right_only|Select which way direction is used to place characters upright. The XXX_only variants place text only if more than 50% of all character are upright. Together with placement-type="list" this can be used to implement alternate texts. See below for an example. ||auto|harfbuzz
 |clip|true, false|If true then the geometry is clipped to the view before doing placements. Improves performance but can cause bad placements when the results are used for tiling|bool|true|2.0.0|
 |largest-bbox-only|true, false| controls default labeling behavior on multipolygons. The default is `true` and means that only the largest polygon part is labeled. NOTE: this option may change or be renamed in the future|bool|true|2.1|
-| comp-op | | [[Compositing]] | | none | 2.1 |
+| comp-op | | [Compositing](Compositing) | | none | 2.1 |
 
 ### Text layout options
+
 | *parameter* | *values/ type*  | *description* | *unit* | *default* | *version* |
 ----------------|---------|----------------|-------|------------|---------|
 |dx, dy|double|Displace label by fixed amount on either axis. Actual displacement also depends on vertical-alignment and horizontal-alignment|px|0.0|0.7
@@ -41,9 +46,10 @@
 |rotate-displacement|true, false|Rotates the displacement around the placement origin by the angle given by "orientation".|bool|false|harfbuzz|
 
 ### Character formatting options
+
 | *parameter* | *values/ type*  | *description* | *unit* | *default* | *version* |
 ----------------|---------|----------------|-------|------------|---------|
-|face-name|string| Font name (font must be registered in mapnik or you won't see anything. see [[UsingCustomFonts]]) | | |
+|face-name|string| Font name (font must be registered in mapnik or you won't see anything. see [UsingCustomFonts](UsingCustomFonts)) | | |
 |fontset-name|string| FontSet name ||
 |size|double|Font size|px|10.0|
 |fill|color|Color of the text fill, e.g. #FFFFFF||black|
@@ -56,6 +62,7 @@
 |text-transform|none, uppercase, lowercase, capitalize|Allows conversion of text to lower or upper case before display.||none|
 
 ### Deprecated options
+
 | *parameter* | *values/ type*  | *description* | *unit* | *default* | *version* |
 ----------------|---------|----------------|-------|------------|---------|
 |name|expression|This is the query field you want to use for the label text, e.g. "street_name" (deprecated in Mapnik2, see section "new syntax" below)| |  |
@@ -109,10 +116,13 @@ The first parameter is the field name of a database field, or from a shape file,
 You must load the needed fonts first, otherwise you'll get a run time error. But you can load as many true type fonts as you like. Mapnik is coming with a couple of fonts in "mapnik/fonts". I recommend to load all of this fonts, regardless if you need them or not. 
 
 ## Placements
+
 In Mapnik 2 the possibility to try different placements if the text can't be placed at the intended position is introduced. 
 
 Algorithms:
+
 ### Simple
+
 (This is the only algorithm supported in Mapnik 2.0)
 It expects a string to specify which positions and size should be used. The format is POSITIONS,[SIZES].
 POSITIONS is any combination of N, E, S, W, NE, SE, NW, SW (direction) and X (exact position as give by "displacement") (separated by commas, may not be empty).
@@ -144,6 +154,7 @@ An XML example might look like:
 ```
 
 ### List
+
 (Supported starting with Mapnik 2.1)
 Here a list of styles is defined and tried one by one till a valid position is found. Each style inherits from the previous one.
 
@@ -183,6 +194,7 @@ If some of your text depends on the line direction you need to supply different 
 ```
 
 ## New features in Mapnik 3.x
+
 * upright="auto/left/right" (See table above)
 * dx is also used for line placements
 * Multi-line support for line placements
@@ -207,8 +219,10 @@ A simple XML example:
 The above specifies two offset text layouts to be placed along opposite sides of a line.
 
 ## Formats
+
 When you want to change attributes within the text symbolizer, you can use the ``<Format>`` element.
 Example
+
 ```xml
 <TextSymbolizer placement="point" size="20" face-name="DejaVu Sans Book" fill="black" justify-alignment="center">
     [name] + "\n" <Format size="10">"(" + [ele] + ")"</Format>

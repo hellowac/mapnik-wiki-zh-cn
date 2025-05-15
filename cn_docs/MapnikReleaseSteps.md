@@ -171,7 +171,7 @@ TODO - currently do not have bandwidth or set process for this. For Mac: In the 
 ### Wiki Post-Release
 
 * Add https://github.com/mapnik/mapnik/wiki/Release${VERSION} (needed by ubuntu packages)
-* Update [[Mapnik-Installation]], [MacInstallation](MacInstallation), [LinuxInstallation](https://github.com/mapnik/mapnik/wiki/LinuxInstallation) and [WindowsInstallation](WindowsInstallation) links
+* Update [Mapnik-Installation](Mapnik-Installation), [MacInstallation](MacInstallation), [LinuxInstallation](https://github.com/mapnik/mapnik/wiki/LinuxInstallation) and [WindowsInstallation](WindowsInstallation) links
 * Create a release page from the relevant section of CHANGELOG like this page [Release0.7.1](Release0.7.1)
 * Update [MapnikReleases](MapnikReleases), a starting page for users to learn about Mapnik development
     

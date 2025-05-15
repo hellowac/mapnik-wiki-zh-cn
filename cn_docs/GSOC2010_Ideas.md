@@ -109,7 +109,7 @@ Potential subtopics include:
  * More internal objects could be logically scalable
   * e.g. we need to be able to scale raster graphics which should be feasible (not going to look very good, but still needed: see [#155](https://github.com/mapnik/mapnik/issues/155))
   * and ideally need scalable vector symbols as per [#320](https://github.com/mapnik/mapnik/issues/320) (this is likely out of the scope of a GSOC project but should be considered).
- * Other cool stuff can (and should for proper paper output) be drawn on the map: [#358](https://github.com/mapnik/mapnik/issues/358) (see also [[Legending]])
+ * Other cool stuff can (and should for proper paper output) be drawn on the map: [#358](https://github.com/mapnik/mapnik/issues/358) (see also [Legending](Legending))
  * Lastly, certain limitations exist in the Cairo API Mapnik uses that might be able to be addressed by student research/coding:
   * notably Cairo does not currently embedded fonts in SVG output but rather falls back to vectors to represent fonts.([#535](https://github.com/mapnik/mapnik/issues/535))
 

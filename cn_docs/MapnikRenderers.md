@@ -2,7 +2,7 @@
 
 # Mapnik Renderers
 
-Mapnik supports a variety of rendering backends. See [[OutputFormats]] for comparisons of different output formats.
+Mapnik supports a variety of rendering backends. See [OutputFormats](OutputFormats) for comparisons of different output formats.
 
 ## agg_renderer | Anti-Grain Geometry
 

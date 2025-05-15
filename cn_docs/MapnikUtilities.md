@@ -53,7 +53,7 @@ See [OgcServer](https://github.com/mapnik/OGCServer) for more info.
 
 C++ WMS server.
 
-See [[Paleoserver]] for more info.
+See [Paleoserver](Paleoserver) for more info.
 
 ## Desktop Tools
 
@@ -61,7 +61,7 @@ See [[Paleoserver]] for more info.
 
 A QT Desktop App for interactively viewing XML mapfiles
 
-See [[MapnikViewer]] for more info.
+See [MapnikViewer](MapnikViewer) for more info.
 
 ### Quantumnik
 Plugin to QGIS for using Mapnik

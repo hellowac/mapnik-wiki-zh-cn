@@ -197,7 +197,7 @@ Also, if you are filtering or sorting on a specific field, an index on that fiel
 ```
 
 ## Use asynchronous PostGIS datasource
-PostGIS datasource can be used asynchronously so SQL querries are processed by the postgres server while mapnik does actual rendering. Fine tuning explained in [[Postgis-async]].
+PostGIS datasource can be used asynchronously so SQL querries are processed by the postgres server while mapnik does actual rendering. Fine tuning explained in [Postgis-async](Postgis-async).
 
 ## General Postgresql maintenance
 

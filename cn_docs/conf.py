@@ -14,7 +14,12 @@ release = "1.0"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["myst_parser"]
+extensions = [
+    "myst_parser",
+              
+    'sphinx.ext.autodoc',  # 示例扩展
+    'sphinx.ext.viewcode',  # 可选：显示源码链接
+]
 
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
@@ -38,3 +43,7 @@ myst_enable_extensions = [
     "colon_fence",  # 允许 ::: 作为代码块分隔符
     "dollarmath",  # 更灵活的数学公式
 ]
+
+
+highlight_language = 'python'
+pygments_style = 'sphinx'

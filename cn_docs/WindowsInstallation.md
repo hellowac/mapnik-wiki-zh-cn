@@ -2,7 +2,7 @@
 
 Mapnik binaries can be installed and configured manually on windows. See http://mapnik.org/pages/downloads.html for the latest download and instructions on installing.
 
-If you are interested in installing Mapnik on other operating systems see [[Mapnik-Installation]]
+If you are interested in installing Mapnik on other operating systems see [Mapnik Installation](Mapnik-Installation)
 
 If you are interested in compiling Mapnik from source on windows see the windows scripts at https://github.com/mapnik/mapnik-packaging
 
@@ -39,7 +39,7 @@ The Windows builds have a slightly less complete feature set than is possible fr
 
 This Guide will walk you through installing Mapnik and then running a test script to generate the sample map below:
 
-[[/images/demo.png]]
+![](images/demo.png)
 
 ## Manual Instructions
 
@@ -91,7 +91,7 @@ import mapnik
 
 ### Step 7: Learn more
 
-Head over to [[GettingStarted]] for your first tutorial on the Mapnik Python API.
+Head over to [Getting Started](GettingStarted) for your first tutorial on the Mapnik Python API.
 
 ## Trouble Shooting
 

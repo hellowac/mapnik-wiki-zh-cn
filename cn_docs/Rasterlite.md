@@ -1,3 +1,5 @@
+# Rasterlite
+
 <!-- Name: Rasterlite -->
 <!-- Version: 3 -->
 <!-- Last-Modified: 2010/11/15 07:26:29 -->
@@ -7,16 +9,16 @@ This plugin supports reading georaster files embedded into sqlite databases usin
 
 The use of rasterlite allows to use jpeg / wavelets compressed rasters in sqlite files (even 4GB databases !) quite fast than plain geotiff, thanks to the use of the R-Tree and Pyramid features in sqlite.
 
- * Note: You must use at least the development version [1.1b] (https://www.gaia-gis.it/fossil/librasterlite/index) to compile the input plugin.
+* Note: You must use at least the development version [1.1b] (https://www.gaia-gis.it/fossil/librasterlite/index) to compile the input plugin.
 
-For other plugins see: [[PluginArchitecture]]
+For other plugins see: [PluginArchitecture](PluginArchitecture)
 
-# Installation
+## Installation
 
 TODO
 
 
-# Parameters
+## Parameters
 
 | *parameter* | *value*  | *description* | *default* |
 |-------------|----------|---------------|-----------|
@@ -24,17 +26,17 @@ TODO
 | base            | string       | optional base path where to search for the sqlite database file  | |
 | table           | string       | table in database which contains raster data  | |
 
-# Styling
+## Styling
 
-To style a layer use the [[RasterSymbolizer]]
+To style a layer use the [RasterSymbolizer](RasterSymbolizer)
 
-# Usage
+## Usage
 
-## Python
+### Python
 
 TODO
 
-## XML
+### XML
 
 ```xml
     <!-- NOTE: must be in the same SRS as your map-->
@@ -50,7 +52,7 @@ TODO
 
 ## C++
 
-Plugin datasource initialization example code can be found on [[PluginArchitecture]].
+Plugin datasource initialization example code can be found on [PluginArchitecture](PluginArchitecture).
 
 A Raster datasource may be created as follows:
 
@@ -69,6 +71,6 @@ A Raster datasource may be created as follows:
     }
 ```
 
-## Further References
+### Further References
 
 * [Rasterlite How-To](http://www.gaia-gis.it/gaia-sins/rasterlite-docs/rasterlite-how-to.pdf)

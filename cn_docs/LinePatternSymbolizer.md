@@ -1,6 +1,8 @@
-[[Symbolizer|SymbologySupport]] that specifies rendering of repeated png, tiff, or svg symbol to create a line. For example, a cliff edge.
+# LinePattern Symbolizer
 
-Used as an alternative to a [[LineSymbolizer]].
+[Symbolizer](SymbologySupport) that specifies rendering of repeated png, tiff, or svg symbol to create a line. For example, a cliff edge.
+
+Used as an alternative to a [LineSymbolizer](LineSymbolizer).
 
 ![Showing a cliff on openstreetmap.org](http://a.tile.openstreetmap.org/18/141423/87855.png)
 
@@ -12,7 +14,7 @@ Used as an alternative to a [[LineSymbolizer]].
 | width **(removed)**| px | 4 | |
 | height **(removed)**| px | 4 | |
 | type **(removed)**| png tiff | none | |
-| comp-op | [[Compositing]] | none | no |
+| comp-op | [Compositing](Compositing) | none | no |
 
 *Note* that the line direction matters!
 

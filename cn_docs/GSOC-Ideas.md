@@ -32,7 +32,7 @@ $ python
 162
 ```
 
-Combine those 162 properties with the many different [types of datasources](https://github.com/mapnik/mapnik-reference/blob/master/latest/datasources.json) and [output formats]([[OutputFormats]]) Mapnik supports, and all their options and you end up with thousands of combinations of things that interact with variable and massive geodata in interesting ways.
+Combine those 162 properties with the many different [types of datasources](https://github.com/mapnik/mapnik-reference/blob/master/latest/datasources.json) and [output formats](OutputFormats) Mapnik supports, and all their options and you end up with thousands of combinations of things that interact with variable and massive geodata in interesting ways.
 
 Add sources like OSM, which do not restrict geometry validity and to forge forward in this wild world you need amazing test cases and an amazing framework for creating, evaluating, summarizing, and understanding the test results. They have to be visual so that developers to look at the results to learn about the impact of code and because the visual output is the goal. Regressions need to be prevented, but developers also need easy ways to understand how their code changes potentially many hundreds of test results. So, a code change that fixes a bug, for example in the way that text is placed, should break hundreds of tests because tests should exist already to validate current behavior. But it should also be very easy to update all those tests and confirm, visually that the updates look good.
 

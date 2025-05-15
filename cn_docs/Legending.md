@@ -9,7 +9,8 @@ Should be configured with XML or a python class.
 #536 tracks progress on this feature.
 
 # Possible Example
-[[/images/legend_example.png]]
+
+![](images/legend_example.png)
 
 ## XML
 
@@ -40,7 +41,7 @@ But an optional filter could be applied to direct the legend renderer to use a s
 
 That would look something like:
 
-[[/images/legend_feature_example.png]]
+![](images/legend_feature_example.png)
 
 Syntax might look like:
 

@@ -9,18 +9,18 @@
 
 Attending:
 
- * Nino Walker & Tim Caro-Bruce (Urban Mapping | http://urbanmapping.com/)
+ * Nino Walker & Tim Caro-Bruce (Urban Mapping | <http://urbanmapping.com/>)
  * Peter Keum (King County GIS)
- * Andrew Turner (GeoCommons | http://highearthorbit.com/)
- * Jeff Johnson (http://twitter.com/ortelius)
- * Dane Springmeyer (http://twitter.com/springmeyer | http://dbsgeo.com)
+ * Andrew Turner (GeoCommons | <http://highearthorbit.com/>)
+ * Jeff Johnson (<http://twitter.com/ortelius>)
+ * Dane Springmeyer (<http://twitter.com/springmeyer> | <http://dbsgeo.com>)
  * Rich Gibson (MappingHacks/Gigapan)
  * Dan Lyke (flutterby.com)
- * Brett Camper (Kickstarter | http://kickstarter.com) (formerly http://patch.com/)
- * Sylvain Carlyle (http://twitter.com/afrognthevalley)
- * Dan Dye (WeoGeo | http://weogeo.com)
- * Barbara Hui (UCLA | http://twitter.com/barbarahui)
- * Marc Pfister (http://www.drwelby.net)
+ * Brett Camper (Kickstarter | <http://kickstarter.com>) (formerly <http://patch.com/>)
+ * Sylvain Carlyle (<http://twitter.com/afrognthevalley>)
+ * Dan Dye (WeoGeo | <http://weogeo.com>)
+ * Barbara Hui (UCLA | <http://twitter.com/barbarahui>)
+ * Marc Pfister (<http://www.drwelby.net>)
  * Embeddedlinuxguy
  * Sobelito
  * Svogel186
@@ -38,7 +38,7 @@ GeoCommons:
  * Using Mapnik for PNG output
  * Pushing Mapnik output into GeoPDF
  * Currently running on SVG symbol support patch written by Koordinates (Robert Coup/Craig Destigter)
-   * This is an issue that needs resolution (https://github.com/mapnik/mapnik/issues/320)
+   * This is an issue that needs resolution (<https://github.com/mapnik/mapnik/issues/320>)
    * Need to consult with Artem about possibility of using AGG SVG parser in addition to librsvg+cairo
 
  * Actively needing C++ based WMS server
@@ -46,7 +46,7 @@ GeoCommons:
 
 Urban Mapping:
 
- * Visualization, query, and thematic maps api around Mapnik using Django (http://MapFluence.com)
+ * Visualization, query, and thematic maps api around Mapnik using Django (<http://MapFluence.com>)
  * Have done thinking around EC2 and OSM Elastic Block for Mapnik/OSM deployments
  * Confirmed interest in further coordinating with DevSeed and Stamen on amazon deployment wrappers
  * Have written a django dashboard to tile rendering / cache wiping / style preview as a r&d project
@@ -60,8 +60,8 @@ Compositing/grouping of layers
  * WMS services need ability to flexibly group and combine layers both in rendered map and GetCaps
  * Stamen has ideas around compositing/blend modes in mapnik.Image
 
-  - https://github.com/mapnik/mapnik/wiki/Ideas_Compositing
-  - https://github.com/mapnik/mapnik/wiki/GSOC2010_Ideas
+  - <https://github.com/mapnik/mapnik/wiki/Ideas_Compositing>
+  - <https://github.com/mapnik/mapnik/wiki/GSOC2010_Ideas>
   - essentially bring TopOSM like functionality into core, expose easily in stylesheets
   - Or expose just essentials to be able to render compositions with extra python wrapper
 
@@ -83,7 +83,7 @@ Better Label Placement
  * Must add ability to try various placement directives, e.g. in cardinal directions (Jeff Johnson)
 
   - Patch for this from kosmosnimki - needs someone to step up to clean up/refactor (or potentially fund further work)
-  - https://github.com/mapnik/mapnik/issues/463
+  - <https://github.com/mapnik/mapnik/issues/463>
 
 
 Ruby Bindings
@@ -93,7 +93,7 @@ Ruby Bindings
  * e.g. Since boost::ruby does not exist (although it has been discussed), what method to bind C++ is best?
  * Aubrey Holland has some github code that lightly wraps, but he mostly uses Python+TileCache still at this point
 
-   - http://github.com/aub/ruby-mapnik
+   - <http://github.com/aub/ruby-mapnik>
 
 
 Not Just XML
@@ -113,7 +113,7 @@ Thematic Mapping
  * Expressions are needed for dynamic, data driving symbolizers
 
   - Excellent foundation is recently in trunk 
-  - See: http://mapnik.org/news/2009/dec/08/future_mapnik2/
+  - See: <http://mapnik.org/news/2009/dec/08/future_mapnik2/>
   - Needs more feedback, testing, funding, and additional properties exposed as expressions
  
 * Urban Mapping doing quite a bit of thematic cartography in new "MapFluence" API - need more feedback about pain points
@@ -147,7 +147,7 @@ Next Generation Datasources
 
 ##Tools
 
-Fast C++ WMS server: **done with [[paleoserver]]**
+Fast C++ WMS server: **done with [paleoserver](paleoserver)**
 -------------------
  * To support highly scalable, fast access to GeoCommons data as WMS
  * Many more users/orgs need this! Will broaden Mapnik community

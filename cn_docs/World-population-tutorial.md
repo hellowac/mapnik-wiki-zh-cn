@@ -6,7 +6,7 @@ This tutorial is designed to introduce a few more advanced Mapnik styling featur
 
 This script should result in a graphic similar to:
 
-[[/images/world_population.png]]
+![](images/world_population.png)
 
  * Note: text labeling positions may be different between Mapnik versions.
 

@@ -1,1 +1,4 @@
-Page moved to [[Logging]]
+# Runtime logging
+
+
+Page moved to [Logging](Logging)
