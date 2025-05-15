@@ -36,7 +36,7 @@ Thread model: posix
 21) threaded -> font_engihe: created 220000 faces in : 3280 milliseconds
 ```
 
-## OS X 10.8, c++11/libc++, April 18, 2013 
+## OS X 10.8, c++11/libc++, April 18, 2013
 
 ```sh
 $ mapnik-config --git-describe

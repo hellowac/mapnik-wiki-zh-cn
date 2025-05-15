@@ -7,12 +7,14 @@
 Often used instead of a [[PolygonSymbolizer]].
 
 [[/images/BuildingSymbolizer.png]]
+
 ## Configuration Options
-|**parameter**|**value**|**default**|
-|:-----------:|:-------:|:---------:|
-| fill             |  CSS colour    | gray      |
-| fill-opacity     |  float         | 1.0       |
-| height           |  float (static value or expression) | 0         |
+
+| **parameter** |             **value**              | **default** |
+| :-----------: | :--------------------------------: | :---------: |
+|     fill      |             CSS colour             |    gray     |
+| fill-opacity  |               float                |     1.0     |
+|    height     | float (static value or expression) |      0      |
 
 ## Examples
 
@@ -25,6 +27,7 @@ Often used instead of a [[PolygonSymbolizer]].
 ```xml
     <BuildingSymbolizer fill="#000000" height="8" fill-opacity="1" />
 ```
+
 Height as expression:
 
 ```xml

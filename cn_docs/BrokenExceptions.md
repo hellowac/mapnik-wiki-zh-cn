@@ -16,9 +16,8 @@ Run the python executable in gdb:
 
 ( in this example we use the full path to apps for clarity, your system will differ )
 
-
 ```sh
-    $ gdb /usr/bin/amd64/python
+    gdb /usr/bin/amd64/python
 ```
 
 You should get some basic gdb startup output:
@@ -39,7 +38,6 @@ Now you have a gdb prompt and you need to run your actual program that is crashi
 For example, is it happening in a datasource plugin? If so that would point toward a problem configuring the paths to shapefiles or the database connections for postgres.
 
 Below we run nik2img by typing 'r' then the path to the command and its arguments:
-
 
 ```sh
     (gdb) r /usr/bin/nik2img.py osm.xml image.png
@@ -83,7 +81,6 @@ You should see a bunch of output like:
 And then if you hit the crash you should see a line like:
 
     Program received signal SIGSEGV, Segmentation fault.
-
 
 Now, type 'bt' in the interpreter to get the backtrace:
 
@@ -143,9 +140,7 @@ To leave gdb do:
 
     quit
 
-
 It is a sad thing, but perhaps the only definitive way to figure out what is wrong without being able to fix the ultimate problem is to replace any `throw`s with std::exit like:
-
 
 ```cpp
 

@@ -22,11 +22,11 @@ If the bug does not relate to png image symbols make sure to strip them from the
 
 If the bug is replicable no matter what font is use make sure to use Mapnik's default font of `DejaVu Sans Book`.
 
-If the bug only occurs when data is being pulled from a database then try dumping the data to a file and reloading it: if you can still replicate the bug this way then post the file-based data (like a shapefile or CSV) and instructions for loading the data into a database. 
+If the bug only occurs when data is being pulled from a database then try dumping the data to a file and reloading it: if you can still replicate the bug this way then post the file-based data (like a shapefile or CSV) and instructions for loading the data into a database.
 
 CSV testcases are ideal because the [Mapnik CSV Plugin](https://github.com/mapnik/mapnik/wiki/CSV-Plugin) supports reading data from a `inline` string in the XML. This allows the Mapnik XML to be completely standalone.
 
-Here is an example of using a WKT string with a CSV datasource inside an XML to create a map that could serve as a testcase for point rendering: https://gist.github.com/springmeyer/7459452. A simplified version is:
+Here is an example of using a WKT string with a CSV datasource inside an XML to create a map that could serve as a testcase for point rendering: <https://gist.github.com/springmeyer/7459452>. A simplified version is:
 
 ```xml
    <Layer name="layer" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
@@ -55,6 +55,7 @@ psql rumap_tc -c "select ST_AsText(geom) as wkt, 'label' as label from topo_sz w
 ```
 
 The XML testcase then was:
+
 ```xml
 <Map srs="+proj=merc +datum=WGS84 +over">
 <Style name="poly">
@@ -73,7 +74,7 @@ The XML testcase then was:
 </Map>
 ```
 
-The resulting `out.wkt` was a large so I held back from embedding inline in the CSV, but for testcases replicable with very small data inlining is ideal. Here is a full example that uses inline WKT data in CSV: https://gist.github.com/springmeyer/7459452
+The resulting `out.wkt` was a large so I held back from embedding inline in the CSV, but for testcases replicable with very small data inlining is ideal. Here is a full example that uses inline WKT data in CSV: <https://gist.github.com/springmeyer/7459452>
 
 ### Describes process
 

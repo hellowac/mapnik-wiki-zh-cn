@@ -1,6 +1,6 @@
 # Symbology Support
 
-Also see [[XMLConfigReference]] for descriptions of these elements within the xml mapfile.
+Also see [XMLConfigReference](XMLConfigReference) for descriptions of these elements within the xml mapfile.
 
 ## Styles
 
@@ -18,26 +18,26 @@ Syntax for filter expressions is very simple, you enclose variables (evaluated a
 
 Support for:
 
- * Arithmetic: `+`, `-`, `*`, `/`
- * Comparison: `>`, `<`, `=`, `<>`, `>=`, `<=`
- * Logical operators: `and`, `or`, `not`
- * Regular expression matching: `[attribute_name].match('reg_ex')`
+* Arithmetic: `+`, `-`, `*`, `/`
+* Comparison: `>`, `<`, `=`, `<>`, `>=`, `<=`
+* Logical operators: `and`, `or`, `not`
+* Regular expression matching: `[attribute_name].match('reg_ex')`
 
-See [[Filter]] for more details (especially regarding how this is different for XML).
+See [Filter](Filter) for more details (especially regarding how this is different for XML).
 
 ## Symbolizers
 
 Symbolizers describe how features appear on a map.
 
- * [[BuildingSymbolizer]]
- * [[GlyphSymbolizer]] (deprecated)
- * [[GroupSymbolizer]]
- * [[LineSymbolizer]]
- * [[LinePatternSymbolizer]]
- * [[MarkersSymbolizer]]
- * [[PolygonSymbolizer]]
- * [[PolygonPatternSymbolizer]]
- * [[PointSymbolizer]]
- * [[RasterSymbolizer]]
- * [[ShieldSymbolizer]]
- * [[TextSymbolizer]]
+* [BuildingSymbolizer](BuildingSymbolizer)
+* [GlyphSymbolizer](GlyphSymbolizer) (deprecated)
+* [GroupSymbolizer](GroupSymbolizer)
+* [LineSymbolizer](LineSymbolizer)
+* [LinePatternSymbolizer](LinePatternSymbolizer)
+* [MarkersSymbolizer](MarkersSymbolizer)
+* [PolygonSymbolizer](PolygonSymbolizer)
+* [PolygonPatternSymbolizer](PolygonPatternSymbolizer)
+* [PointSymbolizer](PointSymbolizer)
+* [RasterSymbolizer](RasterSymbolizer)
+* [ShieldSymbolizer](ShieldSymbolizer)
+* [TextSymbolizer](TextSymbolizer)

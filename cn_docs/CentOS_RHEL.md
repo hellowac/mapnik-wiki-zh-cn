@@ -6,8 +6,8 @@
 
 *Note:* These instructions are out of date. Until these are updated better references are:
 
-* http://svn.osgeo.org/osgeo/foss4g/benchmarking/wms/2010/mapnik/scripts/install_mapnik_rhel_5.5.sh
-* http://krisarnold.com/2010/07/14/installing-mapnik-on-centos-5/
+* <http://svn.osgeo.org/osgeo/foss4g/benchmarking/wms/2010/mapnik/scripts/install_mapnik_rhel_5.5.sh>
+* <http://krisarnold.com/2010/07/14/installing-mapnik-on-centos-5/>
 
 ## Tips for installing Mapnik-2.1.0 on RHEL 5.5
 
@@ -15,14 +15,14 @@
 * Make sure your gcc version is higher than 4.1. The default gcc delivered with RHEL 5.5 does not meet this requirement. An internal compiler error will occur near make_rtl_for_nonlocal_decl in boost during the compilation. Upgrading to gcc44 (included in yum repository with RHEL 5.5) can solve the problem.
 
 ## Installation Notes
-See also: https://lists.berlios.de/pipermail/mapnik-users/2010-March/003034.html
+
+See also: <https://lists.berlios.de/pipermail/mapnik-users/2010-March/003034.html>
 
 Some tips and hints for installing Mapnik on CentOS 5.2, default "Server" install.
 
 All this is done as root.  You don't HAVE to be root, but doing it as a regular user is much more complicated and I'm not going to document it here.
 
 You will need to add, at the very LEAST, the following development packages:
-
 
     # yum install freetype-devel
     # yum install libtool-ltdl-devel
@@ -46,7 +46,6 @@ Installing it is fairly trivial, using the usual paradigm, though compilation ca
 
 I did:
 
-
     # ./configure --with-libraries=all
     # make
     # make install
@@ -67,7 +66,6 @@ You can now download and install Mapnik.
 
 Once you've extracted the source tree from the archive you downloaded, run:
 
-
     # python scons/scons.py BOOST_INCLUDES=/usr/local/include/boost-1_37/ BOOST_TOOLKIT=gcc41 install
 
 This will build and install the Mapnik library, the default fonts, the input plugins and the Python bindings.
@@ -75,7 +73,6 @@ This will build and install the Mapnik library, the default fonts, the input plu
 Run "ldconfig" once more to make sure the linker sees the new Mapnik stuff.
 
 And finally, run the python demo, just to make sure everything works OK.  The demo is in the source tree, under demo/python.
-
 
     # cd /path/to/source/demo/python
     # python rundemo.py
