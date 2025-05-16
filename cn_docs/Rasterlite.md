@@ -9,7 +9,7 @@ This plugin supports reading georaster files embedded into sqlite databases usin
 
 The use of rasterlite allows to use jpeg / wavelets compressed rasters in sqlite files (even 4GB databases !) quite fast than plain geotiff, thanks to the use of the R-Tree and Pyramid features in sqlite.
 
-* Note: You must use at least the development version [1.1b] (https://www.gaia-gis.it/fossil/librasterlite/index) to compile the input plugin.
+* Note: You must use at least the development version [1.1b] (<https://www.gaia-gis.it/fossil/librasterlite/index>) to compile the input plugin.
 
 For other plugins see: [PluginArchitecture](PluginArchitecture)
 
@@ -17,14 +17,13 @@ For other plugins see: [PluginArchitecture](PluginArchitecture)
 
 TODO
 
-
 ## Parameters
 
-| *parameter* | *value*  | *description* | *default* |
-|-------------|----------|---------------|-----------|
-| file            | string       | sqlite database file path  | |
-| base            | string       | optional base path where to search for the sqlite database file  | |
-| table           | string       | table in database which contains raster data  | |
+| *parameter* | *value* | *description*                                                   | *default* |
+| ----------- | ------- | --------------------------------------------------------------- | --------- |
+| file        | string  | sqlite database file path                                       |           |
+| base        | string  | optional base path where to search for the sqlite database file |           |
+| table       | string  | table in database which contains raster data                    |           |
 
 ## Styling
 

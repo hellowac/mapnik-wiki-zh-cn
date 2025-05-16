@@ -1,3 +1,5 @@
+# Mapnik 2.0.1 Changelog
+
 (Packaged from [5cd3cb2](https://github.com/mapnik/mapnik/commit/5cd3cb2efdaf7e9990a57e8e00b652a81aaa39ae))
 
 - Support for PostGIS 2.0 ([#956](https://github.com/mapnik/mapnik/issues/956),[#1083](https://github.com/mapnik/mapnik/issues/1083))
@@ -16,7 +18,7 @@
 
 - Removed `svn_revision` info from mapnik-config and python bindings as git is now used
 
-- Removed OGCServer from core - now at https://github.com/mapnik/OGCServer ([e7f6267](https://github.com/mapnik/mapnik/commit/e7f6267))
+- Removed OGCServer from core - now at <https://github.com/mapnik/OGCServer> ([e7f6267](https://github.com/mapnik/mapnik/commit/e7f6267))
 
 - Fixed SQLite open stability across platforms/versions ([#854](https://github.com/mapnik/mapnik/issues/854))
 

@@ -1,3 +1,5 @@
+# Mapnik 2.1.0 Changelog
+
 Released Aug 23, 2012
 
 (Packaged from [a25aac8](https://github.com/mapnik/mapnik/commit/a25aac8))
@@ -55,10 +57,10 @@ See also: [API-changes-between-v2.0-and-v2.1](https://github.com/mapnik/mapnik/w
 
 - Fixed rendering of thin svg lines ([#1129](https://github.com/mapnik/mapnik/issues/1129))
 
-- Improved logging/debugging system with release logs and file redirection (https://github.com/mapnik/mapnik/wiki/Logging) ([#937](https://github.com/mapnik/mapnik/issues/937) and partially [#986](https://github.com/mapnik/mapnik/issues/986), [#467](https://github.com/mapnik/mapnik/issues/467))
+- Improved logging/debugging system with release logs and file redirection (<https://github.com/mapnik/mapnik/wiki/Logging>) ([#937](https://github.com/mapnik/mapnik/issues/937) and partially [#986](https://github.com/mapnik/mapnik/issues/986), [#467](https://github.com/mapnik/mapnik/issues/467))
 
 - GDAL: allow setting nodata value on the fly (will override value if nodata is set in data) ([#1161](https://github.com/mapnik/mapnik/issues/1161))
- 
+
 - GDAL: respect nodata for paletted/colormapped images ([#1160](https://github.com/mapnik/mapnik/issues/1160))
 
 - PostGIS: Added a new option called `autodetect_key_field` (by default false) that if true will
@@ -79,7 +81,7 @@ See also: [API-changes-between-v2.0-and-v2.1](https://github.com/mapnik/mapnik/w
 
 - Fixed bug in shield line placement when dx/dy are used to shift the label relative to the placement point (Matt Amos) ([#908](https://github.com/mapnik/mapnik/issues/908))
 
-- Added <layer_by_sql> parameter in OGR plugin to select a layer by SQL query (besides name or index): see https://www.gdal.org/ogr/ogr_sql.html for specifications (kunitoki) ([#472](https://github.com/mapnik/mapnik/issues/472))
+- Added <layer_by_sql> parameter in OGR plugin to select a layer by SQL query (besides name or index): see <https://www.gdal.org/ogr/ogr_sql.html> for specifications (kunitoki) ([#472](https://github.com/mapnik/mapnik/issues/472))
 
 - Added support for output maps as tiff files (addresses [#967]((https://github.com/mapnik/mapnik/issues/967)) partially)
 

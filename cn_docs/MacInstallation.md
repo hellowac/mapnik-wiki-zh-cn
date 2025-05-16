@@ -8,4 +8,4 @@ Binary Mapnik installers for Mac OS X are available at [mapnik.org/pages/downloa
 
 Homebrew is the recommended OS X package manager for installing Mapnik.
 
-See [MacInstallation_Homebrew ](MacInstallation_Homebrew) for details.
+See [MacInstallation_Homebrew](MacInstallation_Homebrew) for details.

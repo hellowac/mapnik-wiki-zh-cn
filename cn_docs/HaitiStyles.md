@@ -6,14 +6,11 @@
 
 Sandbox for keeping haiti specific style renderings.
 
- 
-
 ![](images/fgdc_and_osm.png)
-
 
 Note: styles based on maps in EPSG:4326 running Mapnik 0.7.
 
-Mapnik compatible names when using TrueType Fonts ('ersV2txt' from http://www.fgdc.gov/HSWG/index.html):
+Mapnik compatible names when using TrueType Fonts ('ersV2txt' from <http://www.fgdc.gov/HSWG/index.html>):
 
 ```python
 >>> from mapnik import *
@@ -35,13 +32,11 @@ ERS v2 Operations Stage 04 Regular
 
 Basic additions to osm2pgsql style for catching OSM tags that are emerging:
 
-
     # haiti
     node,way   refugee       text         linear
     node,way  earthquake:damage  text  polygon
     node,way  impassable  text        linear
     node,way  name:ht      text        linear
-
 
 Example of using TrueType fonts to try to utilize FGDC symbols:
 

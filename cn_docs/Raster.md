@@ -10,14 +10,13 @@ If files are larger it is recommended to build GDAL overviews (with gdaladdo com
 
 A drawback(or advantage!) of this plugin is that it requires manually setting the file bounds.
 
- * hint: create a GDAL datasource from your tiff in python, call the envelope() method to get the bounds, and use those.
+* hint: create a GDAL datasource from your tiff in python, call the envelope() method to get the bounds, and use those.
 
 For other plugins see: [PluginArchitecture](PluginArchitecture)
 
 ## Installation
 
 To check if the raster plugin built and was installed correctly you can do:
-
 
 ```python
 >>> from mapnik import DatasourceCache as c
@@ -26,7 +25,6 @@ True
 ```
 
 # Parameters
-
 
 <table>
 <tr>
@@ -78,7 +76,6 @@ True
 </tr>
 </table>
 
-
 ## Styling
 
 To style a layer use the [RasterSymbolizer](RasterSymbolizer)
@@ -113,7 +110,6 @@ lyr.datasource = raster
 Plugin datasource initialization example code can be found on [PluginArchitecture](PluginArchitecture).
 
 A Raster datasource may be created as follows:
-
 
 ```cpp
 {

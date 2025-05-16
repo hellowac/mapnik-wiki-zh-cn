@@ -9,28 +9,26 @@ Mapnik supports a variety of rendering backends. See [OutputFormats](OutputForma
 The AGG renderer ([Antigrain Geometry](http://antigrain.com)) is the primary renderer in Mapnik.
 
 * AGG 's fast scanline rendering with subpixel *anti-aliasing* is the standout reason for the beauty of Mapnik output.
- * [Anti-Aliasing](http://en.wikipedia.org/wiki/Antialiasing) and [Subpixel Rendering](http://en.wikipedia.org/wiki/Subpixel_rendering) on Wikipedia 
+* [Anti-Aliasing](http://en.wikipedia.org/wiki/Antialiasing) and [Subpixel Rendering](http://en.wikipedia.org/wiki/Subpixel_rendering) on Wikipedia
 * The AGG renderer's buffer can easily be encoded in a variety of formats. Currently Mapnik supports writing to png and jpeg.
 * Version 2.3 of the AGG C++ library is included/embedded within the source tree of Mapnik and compiled automatically during the Scons process.
 * The primary developer of AGG, Maxim Shemanarev, passed away in November 2013. Because AGG is open source, we happily maintain our own version with bugfixes.
 * Mapnik can also build against a system version of AGG, but this is NOT RECOMMENDED since packaged versions have likely not been updated with critical bug fixes
-    
+
 While Mapnik was the first to use AGG rendering for mapping, the AGG renderer is also now an optional rendering engine in the [MapServer](http://mapserver.gis.umn.edu/docs/howto/agg-rendering-specifics) and [MapGuide](http://trac.osgeo.org/mapguide/wiki/MapGuideRfc40) projects.
-    
-    
+
 ## cairo_renderer | Cairographics
   
 The [Cairo](http://cairographics.org/) renderer is an auxiliary renderer in Mapnik.
 
 * Cairo was added in r656 due to its similar reputation for high quality graphics output to various formats
- * http://github.com/mapnik/mapnik/wiki/log/trunk/src/cairo_renderer.cpp
+* <http://github.com/mapnik/mapnik/wiki/log/trunk/src/cairo_renderer.cpp>
 * Cairo has the '''added advantage''' of supporting both Vector and Raster output.
 * Mapnik can render to any [surface](http://www.cairographics.org/manual/cairo-surfaces.html) supported by cairo, either directly or by rendering to a cairo [context](http://www.cairographics.org/manual/cairo-context.html).
- * You can demo the PNG, JPEG, SVG, PDF, and PS formats using the [OSM export tool](http://openstreetmap.org/export/)
+* You can demo the PNG, JPEG, SVG, PDF, and PS formats using the [OSM export tool](http://openstreetmap.org/export/)
 * Cairo is optional during Mapnik Scons build process but is enabled automatically if found (using pkg-config).
- * Pkg-config must find libcairo as well as Cairomm(C++ bindings) and Pycairo (python bindings)
- * If Pkg-config is successful you will see the added compiler flags: `-DHAVE_CAIRO -DHAVE_PYCAIRO`
-
+* Pkg-config must find libcairo as well as Cairomm(C++ bindings) and Pycairo (python bindings)
+* If Pkg-config is successful you will see the added compiler flags: `-DHAVE_CAIRO -DHAVE_PYCAIRO`
 
 ### Python Example Code
 
@@ -59,9 +57,8 @@ Writing to SVG with Mapnik's Cairo renderer:
     surface.finish()
 ```
 
- * Note: Cairo can also write to PostScript and other image formats
- * Note: 'mapnik.render()' can also render to Cairo Contexts
-
+* Note: Cairo can also write to PostScript and other image formats
+* Note: 'mapnik.render()' can also render to Cairo Contexts
 
 ## svg_renderer
 
@@ -75,17 +72,17 @@ The Grid renderer is designed to output highly optimized feature "hit grids", kn
 
 The UTFGrid spec provides details of the format:
 
-https://github.com/mapbox/utfgrid-spec
+<https://github.com/mapbox/utfgrid-spec>
 
 See the implementations list for examples:
 
-https://github.com/mapbox/utfgrid-spec/wiki/Implementations
+<https://github.com/mapbox/utfgrid-spec/wiki/Implementations>
 
 ## Further References
 
- * [OSGEO Discussion of Rendering](http://wiki.osgeo.org/wiki/OSGeo_Cartographic_Library)
- * [GRASS GIS use of Cairo](http://trac.osgeo.org/grass/browser/grass/trunk/lib/cairodriver)
- * [Cairo Vs. AGG Comparison](http://goodythoughts.blogspot.com/2008/03/why-cairo-vs-agg.html)
- * [Blog post on Skia (Chrome Renderer) in context of AGG and Cairo](http://www.gnashdev.org/?q=node/57)
- * [Agg inclusion in Boost thread - see 'A preliminary proposal: AGG project'](http://lists.boost.org/Archives/boost/2002/05/index.php)
- * [Good intro into anti-aliased font issues](http://www.joelonsoftware.com/items/2007/06/12.html)
+* [OSGEO Discussion of Rendering](http://wiki.osgeo.org/wiki/OSGeo_Cartographic_Library)
+* [GRASS GIS use of Cairo](http://trac.osgeo.org/grass/browser/grass/trunk/lib/cairodriver)
+* [Cairo Vs. AGG Comparison](http://goodythoughts.blogspot.com/2008/03/why-cairo-vs-agg.html)
+* [Blog post on Skia (Chrome Renderer) in context of AGG and Cairo](http://www.gnashdev.org/?q=node/57)
+* [Agg inclusion in Boost thread - see 'A preliminary proposal: AGG project'](http://lists.boost.org/Archives/boost/2002/05/index.php)
+* [Good intro into anti-aliased font issues](http://www.joelonsoftware.com/items/2007/06/12.html)

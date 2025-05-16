@@ -4,13 +4,14 @@
 <!-- Author: Petr Dlouhy -->
 
 # Discussion of a Legending Spec for Mapnik
+
 Should be configured with XML or a python class.
 
-#536 tracks progress on this feature.
+# 536 tracks progress on this feature
 
 # Possible Example
 
-![](images/legend_example.png)
+![123](images/legend_example.png)
 
 ## XML
 
@@ -31,7 +32,7 @@ Should be configured with XML or a python class.
 
 ## Python
 
-# Feature Wishlist
+## Feature Wishlist
 
 ### Layer symbolization using representative feature geometry
 
@@ -41,10 +42,9 @@ But an optional filter could be applied to direct the legend renderer to use a s
 
 That would look something like:
 
-![](images/legend_feature_example.png)
+![123](images/legend_feature_example.png)
 
 Syntax might look like:
-
 
 ```xml
     <Item>
@@ -76,4 +76,4 @@ The label text for the legend could then be chosen and placed with other screen+
 
 # See also
 
-Lars Ahlzen has written a Python script for TopOSM which creates HTML snippets with images from a Mapnik style file: http://wiki.openstreetmap.org/wiki/TopOSM/Details#Map_legend
+Lars Ahlzen has written a Python script for TopOSM which creates HTML snippets with images from a Mapnik style file: <http://wiki.openstreetmap.org/wiki/TopOSM/Details#Map_legend>

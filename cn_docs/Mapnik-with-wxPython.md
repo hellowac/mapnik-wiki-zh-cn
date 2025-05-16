@@ -3,7 +3,6 @@
 <!-- Last-Modified: 2008/12/13 22:15:55 -->
 <!-- Author: victorlin -->
 
-
 # Mapnik with wxPython
 
 Here's a sample application integrating Mapnik with [wxPython](http://wxpython.org/)
@@ -69,7 +68,6 @@ if __name__ == '__main__':
 
 The key point of this program is this:
 
-
 ```python
 # create a Image32 object
 image = mapnik.Image(self.width, self.height)
@@ -80,7 +78,6 @@ self.bmp = wx.BitmapFromBufferRGBA(self.width, self.height, image.tostring())
 ```
 
 We create an Image32 object, and render map on to that image, then load raw data of image into wxPython's Bitmap object. That's it! Now you can use your memory dc to do whatever you like
-
 
 ```python
 memoryDC = wx.MemoryDC(self.bmp)

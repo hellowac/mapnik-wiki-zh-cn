@@ -22,11 +22,10 @@ To check if the raster plugin built and was installed correctly you can do:
 
 ## Parameters
 
-| *parameter*       | *value*  | *description* | *default* |
-|:------------------|----------|---------------|----------:|
-| encoding             | string       | Encoding Used |  utf-8. ESRI Shapefiles are usually 'latin1' |
-| file              | string | name of shapefile (without extension) | | 
-
+| *parameter* | *value* | *description*                         |                                   *default* |
+| :---------- | ------- | ------------------------------------- | ------------------------------------------: |
+| encoding    | string  | Encoding Used                         | utf-8. ESRI Shapefiles are usually 'latin1' |
+| file        | string  | name of shapefile (without extension) |                                             |
 
 # Styling
 

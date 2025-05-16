@@ -1,6 +1,8 @@
-###datasource
+# Mapnik Layer
 
-###envelope
+## datasource
+
+## envelope
 
 envelope( (Layer)arg1) -> Box2d :
     Return the geographic envelope/bounding box.
@@ -18,48 +20,45 @@ C++ signature :
 
     mapnik::box2d<double> envelope(mapnik::layer {lvalue})
 
-###maxzoom
+## maxzoom
 
 Float
 
-###minzoom
+## minzoom
 
 Float
 
-###name
+## name
 
 String
 
-
-###queryable
+## queryable
 
 Boolean
 
-
-###srs
+## srs
 
 String representing the spatial reference system of the map.
 
-###styles
+## styles
 
 a list of strings holding the names of styles
 
-###title
+## title
 
 String
 
-###visible
-
+## visible
 
 visible( (Layer)arg1, (float)arg2) -> bool :
     Return True if this layer's data is active and visible at a given scale.
-    
+
     Otherwise returns False.
     Accepts a scale value as an integer or float input.
     Will return False if:
-    	scale >= minzoom - 1e-6
-    	or:
-    	scale < maxzoom + 1e-6
+     scale >= minzoom - 1e-6
+     or:
+     scale < maxzoom + 1e-6
     
 Usage:
 

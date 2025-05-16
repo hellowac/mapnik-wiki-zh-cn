@@ -2,7 +2,9 @@
 <!-- Version: 3 -->
 <!-- Last-Modified: 2009/04/03 14:37:17 -->
 <!-- Author: tmcw -->
-Activates the rule, if [ScaleAndPpi scale] >= minScaleDenominator - 1e-6 
+# Min Scale Denominator
+
+Activates the rule, if [ScaleAndPpi scale] >= minScaleDenominator - 1e-6
 
 Example:
 

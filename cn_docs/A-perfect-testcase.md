@@ -1,6 +1,8 @@
+# A perfect testcase
+
 Solving hard software bugs for developers can be time consuming, requiring many hours of uninterrupted focus. When time is short the most important ingredient to properly solving bugs is good a testcase.
 
-### Anything helps, but a testcase best
+## Anything helps, but a testcase best
 
 If you are a user reporting a bug just reporting the bug is enough. But if you can afford the time to create a good testcase for the bug then the likelyhood of it being solved is much greater.
 

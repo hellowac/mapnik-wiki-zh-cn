@@ -1,3 +1,5 @@
+# API changes between v2.2 and v2.3
+
 ## Removed
 
 - `filter_factor` removed from `GDAL` datasource options. This has always been available as a `RasterSymbolizer` property and can continue to be set there.

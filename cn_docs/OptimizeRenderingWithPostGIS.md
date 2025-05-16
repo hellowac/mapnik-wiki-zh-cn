@@ -3,7 +3,6 @@
 <!-- Last-Modified: 2010/11/10 02:52:19 -->
 <!-- Author: manelclos -->
 
-
 # Optimize Rendering with PostGIS
 
 When rendering maps with Mapnik, using a [PostGIS](/wiki:PostGIS/) database as the backend, there is often a large speed gain to be made by employing several optimizations. These optimizations relate to the interaction of PostGIS SQL queries and Mapnik's layers, rules, and filters.
@@ -13,6 +12,7 @@ This page will detail some measures you can take to make sure you're not wasting
 ## Keep the SQL resultset as small as possible
 
 ### Basics
+
 First, you have to understand how the Datasource table parameter works for each Layer. What happens is that Mapnik takes what you have defined in your `<Parameter name="table>...</Parameter>`, and slaps a `SELECT AsBinary("way") AS geom,column,names,needed` in front of it, and ending with some SQL to limit results to the BBOX used for the map that's rendering. Mapnik will intelligently limit the columns queried for to what's actually needed in the Styles referenced in the Layer.
 
 Often, when making a new layer and not paying much attention to the Datasource, you may be doing:
@@ -23,7 +23,6 @@ Often, when making a new layer and not paying much attention to the Datasource, 
 
 This is fine, and will get your data from the database. In fact, it will get *all* data from that table that is within the area that you're rendering. Taking the above explanation, Mapnik expands this to:
 
-
 ```sql
     SELECT AsBinary("way") AS geom
     FROM planet_osm_point 
@@ -33,7 +32,6 @@ This is fine, and will get your data from the database. In fact, it will get *al
 The SELECT will also add all columns needed to satisfy the styles for this layer. The "WHERE ..." ending will only return rows with an actual geometry (or there'd be nothing to draw for that row anyway) limited to the BBOX given. The coordinates above are just an example.
 
 This type of query is not very efficient. Other than the check for a valid geometry, it will simply fetch each and every row from that table. When the results get to the rules, most of the rows will be filtered out and discarded.
-
 
 ### Limiting the amount of rows to fetch
 
@@ -86,7 +84,7 @@ You may be building some rules that render elements based on the length of a fie
     (SELECT way,highway,ref,char_length(ref) as length from planet_osm_line where highway is not null and ref is not null) as foo
 ```
 
-Notice again that you only need to fetch data from the database that will actually render for this style. Assuming that you're rendering highway shields, it makes no sense to fetch highways without a _ref_.
+Notice again that you only need to fetch data from the database that will actually render for this style. Assuming that you're rendering highway shields, it makes no sense to fetch highways without a *ref*.
 
 ## Move filtering from Mapnik to PostGIS
 
@@ -104,7 +102,6 @@ used together with:
 
 But this means that you a) select all rows from the database from that table and b) Mapnik then needs to discard most of those rows. Same as in the examples above. If your style only contains a single type of data to render, you can omit the Mapnik filtering altogether and do all filtering in SQL:
 
-
 ```sql
     (SELECT way,power from planet_osm_point where power='tower') as foo
 ```
@@ -120,10 +117,10 @@ Then you don't need to include a filter to test for tunnel in the Mapnik rules. 
 ```xml
     <Filter>[highway] = 'motorway' and ([tunnel] = 'yes' or [tunnel] = 'true' or [tunnel] = '1')</Filter>
 ```
-    
+
 becomes
 
-```xml    
+```xml
     <Filter>[highway] = 'motorway'</Filter>
 ```
 
@@ -197,6 +194,7 @@ Also, if you are filtering or sorting on a specific field, an index on that fiel
 ```
 
 ## Use asynchronous PostGIS datasource
+
 PostGIS datasource can be used asynchronously so SQL querries are processed by the postgres server while mapnik does actual rendering. Fine tuning explained in [Postgis-async](Postgis-async).
 
 ## General Postgresql maintenance
@@ -212,6 +210,7 @@ Depending on your needs you may want to also ``CLUSTER`` the data periodically.
 If there is any active connection Postgresql will wait until it is closed, so if you are running Ogcserver restart Apache to close the connections.
 
 ## Use an extent parameter
+
 If an extent parameter is not set, mapnik will perform a query like this...
 
 ```sql
@@ -222,62 +221,81 @@ FROM (SELECT ST_Extent(geom) as ext from planet_osm_line) as tmp
 ...which requires PostGIS to walk the entire result set of the queried table each time the DataSource is used for the first time in a rendering session.  There are three parameters available for use to avoid this process:
 
 ### extent_from_subquery
+
 E.g.
+
 ```xml
 <Parameter name="extent_from_subquery">true</Parameter>
 ```
 
 **Pros:**
+
 * Precise estimate of extent
 
 **Cons:**
+
 * Performance gains only on small result sets
 
 **Prerequisites:**
+
 * table parameter uses a subquery, not just a table name
 * extent parameter is not set
 * estimate_extent parameter is not set or false
 
 **Example use case:**
+
 * tile server where render requests return small features sets or any render requests with large feature sets are pre-rendered and cached
 
 ### extent
+
 E.g.
+
 ```xml
 <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
 ```
 
 **Pros:**
+
 * No database overhead
 
 **Cons:**
+
 * XML needs to be updated if alterations to source data affects extent
 * Less precision -- bad because [I don't know -- something to do with clipping calculations?]
 
 **Prerequisites:**
+
 * coordinates must be provided in appropriate SRS
 
 **Overrides:**
+
 * extent_from_subquery
 * estimate_extent
 
 **Example use case:**
+
 * Seldom changing result set with few updates
 
 ### estimate_extent
+
 E.g.
+
 ```xml
 <Parameter name="estimate_extent">true</Parameter>
 ```
 
 **Pros:**
+
 * Faster than not setting any extent parameters; significantly for large result sets
 
 **Cons:**
+
 * For PostgreSQL>=8.0.0 statistics are gathered by VACUUM ANALYZE and resulting extent will be about 95% of the real one. -- [PostGIS docs](http://postgis.net/docs/ST_EstimatedExtent.html)
 
 **Overrides**
+
 * extent_from_subquery
 
 **Example use case:**
+
 * [TODO]

@@ -1,3 +1,5 @@
+# Logging
+
 Mapnik >= 2.1.x supports a variety of logging options to make it possible to see what is happening under the hood.
 
 ## Overview
@@ -106,11 +108,13 @@ mapnik.logger.set_severity(mapnik.severity_type.Warn)
 # or
 mapnik.logger.set_severity(mapnik.severity_type.Debug)
 ```
+
 In C++ to use the runtime logger from your program first include this header:
 
 ```cpp
 #include <mapnik/debug.hpp>
 ```
+
 Then in your C++ code you could disable all logging by doing:
 
 ```
@@ -118,6 +122,7 @@ mapnik::logger::instance().set_severity(mapnik::logger::none);
 ```
 
 ## Developer Best practices
+
 When `ENABLE_LOG` is set to `False` the logging framework optimizes away `Warn` and `Debug` logging macros leaving in place all `Error` macros, since these are considered useful enough to be show no matter what and not likely to harm performance.
 
 But if you want to put logging in performance critical code or need to perform complex code before outputting a string to debug, then it's better to disable the macro manually to avoid the chance that it adds overhead even if not used. The way to do this is to wrap the entire block of code in `#ifdef MAPNIK_LOG`.

@@ -6,7 +6,7 @@
 
 This tutorial will ensure that Mapnik and its Python bindings are properly installed and introduce you to some of the basic programming concepts for Mapnik.
 
-## Step 1: check installation 
+## Step 1: check installation
 
 Make sure you have mapnik installed. You should be able to open a terminal and type:
 
@@ -14,13 +14,9 @@ Make sure you have mapnik installed. You should be able to open a terminal and t
 
 This tutorial expects Mapnik 2.x or greater. Older versions do not provide the `mapnik-config` program, so we recommend upgrading.
 
-
 Please note that if you are using mapnik 2.0.0 then you will need to adjust the "mapnik" module name to "mapnik2" in the Python commands. Refer to [mapnik2](mapnik2) for details of the naming convention.
 
-
 Please also note that unlike Mapnik 2.x, [version 3.x does not include Python bindings anymore](https://github.com/mapnik/mapnik/blob/master/CHANGELOG.md#300). You can find the new Python bindings [here](https://github.com/mapnik/python-mapnik).
-
-
 
 Next test the Python bindings. You should be able to open a terminal and type:
 
@@ -30,7 +26,7 @@ If the above does not work (e.g. throws an `ImportError`) then please go back an
 
 ## Step 2
 
-Now, we need some data to render. Let's use a shapefile of world border polygons from http://naturalearthdata.com. Download the data from this wiki's local cache [here](data/110m-admin-0-countries.zip) or directly from the [Natural Earth Data site](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip). Unzip the archive in an easily accessible location of your choosing. In *Step 3* we will be referencing the path to this shapefile in Python code, so make sure you know where you put it.
+Now, we need some data to render. Let's use a shapefile of world border polygons from <http://naturalearthdata.com>. Download the data from this wiki's local cache [here](data/110m-admin-0-countries.zip) or directly from the [Natural Earth Data site](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip). Unzip the archive in an easily accessible location of your choosing. In *Step 3* we will be referencing the path to this shapefile in Python code, so make sure you know where you put it.
 
 Once unzipped, you should see four files like:
 
@@ -43,7 +39,6 @@ To download and unzip on the command line with the do:
 
     wget https://github.com/mapnik/mapnik/wiki/data/110m-admin-0-countries.zip
     unzip 110m-admin-0-countries.zip # creates ne_110m_admin_0_countries.shp
-
 
 ## Step 3
 
@@ -122,7 +117,6 @@ Box2d(-180.0,-90.0,180.0,83.64513)
 ```
 
 That shows the minx, miny, maxx, and maxy of the data. Because the above coordinates are between -180 and 180 for the x or longitude values and -90 and 90 for the y or latitude values we know this data is in *geographic* coordinates and uses degrees for units - a pretty good indication this is `WGS84 (aka EPSG:4326)`. This specific shapefile also stores this projection information as a `WKT` string in the `ne_110m_admin_0_countries.prj` file. See the `layer.srs` value below for why this matters.
-
 
 ### Create a Layer
 
@@ -224,15 +218,14 @@ mapnik.render_to_file(m,'world.png', 'png')
 print "rendered image to 'world.png'"
 ```
 
- * Don't forget to ensure the correct path to your `ne_110m_admin_0_countries.shp` shapefile.
- * Mapnik accepts both the absolute path to your data as well as the relative path (Same goes for the path to where you want to save your file)
+* Don't forget to ensure the correct path to your `ne_110m_admin_0_countries.shp` shapefile.
+* Mapnik accepts both the absolute path to your data as well as the relative path (Same goes for the path to where you want to save your file)
 
 Finally run the script with the command:
-
 
 ```sh
 ./world.py # You must be in the same directory as you saved the script
 ```
 
- * Note: if you re-run this script it will will re-write over the world.png map.
- * Now you can easily open the script in a separate text editor and try changing the dimensions, colors, or datasource (remember to use the correct `srs` if you change the datasource).
+* Note: if you re-run this script it will will re-write over the world.png map.
+* Now you can easily open the script in a separate text editor and try changing the dimensions, colors, or datasource (remember to use the correct `srs` if you change the datasource).

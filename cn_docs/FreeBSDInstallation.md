@@ -1,4 +1,4 @@
-## Installing on FreeBSD
+# Installing on FreeBSD
 
 In most cases the FreeBSD port of Mapnik (located in /usr/ports/graphics/mapnik) will work. However, if the port is broken, or you'd like to install another version the following instructions will help.
 
@@ -27,13 +27,13 @@ If you want postgres support, ensure that the postgres libs are installed:
 
 Once these libs are installed, you should be able to compile/install source by doing:
 
-```sh
+```bash
 ./configure HB_INCLUDES=/usr/local/include HB_LIBS=/usr/local/lib 
 gmake
 gmake install
 ```
 
-### Other references
+## Other references
 
- - discussion of installing TileMill: http://support.mapbox.com/discussions/tilemill/2776-tilemill-installation-on-freebsd#comment_21576061
- - https://gist.github.com/springmeyer/fabd05d5535e086d5d51
+- discussion of installing TileMill: <http://support.mapbox.com/discussions/tilemill/2776-tilemill-installation-on-freebsd#comment_21576061>
+- <https://gist.github.com/springmeyer/fabd05d5535e086d5d51>

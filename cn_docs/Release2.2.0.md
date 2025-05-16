@@ -1,3 +1,5 @@
+# Mapnik 2.2.0 Changelog
+
 Released June 3rd, 2013
 
 (Packaged from [9231205](https://github.com/mapnik/mapnik/commit/9231205))
@@ -28,7 +30,7 @@ See also: [API-changes-between-v2.1-and-v2.2](https://github.com/mapnik/mapnik/w
 
 - Removed muffling of projection errors while rendering (#646)
 
-- Improved logging system (https://github.com/mapnik/mapnik/wiki/Logging)
+- Improved logging system (<https://github.com/mapnik/mapnik/wiki/Logging>)
 
 - Added support for reading images from in memory streams (#1805)
 

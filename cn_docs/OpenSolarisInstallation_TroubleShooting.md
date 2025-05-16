@@ -16,7 +16,6 @@
 
 *solution*: You are likely compiling boost with the default gcc on Open Solaris (`gcc version 3.4.3 (csl-sol210-3_4-20050802)`). The only solution found is to upgrade to gcc 4.4
 
-
 ### Boost python:  'non-static const member const boost::python::type_info'
 
 *description*: You get a compile error when building boost python like:
@@ -45,9 +44,8 @@ The only solution known is to upgrade to gcc 4.4
 
 *description:* Scons can't "find" C++ apps during configure. But the `config.log` shows some odd errors with g++ like:
 
-
     ld: fatal: file /usr/lib/libgcc_s.so: version `GCC_4.2.0' does not exist:
-    	required by file /opt/ts/gcc/4.4/lib/gcc/i386-pc-solaris2.11/4.4.4/../../../libstdc++.so
+     required by file /opt/ts/gcc/4.4/lib/gcc/i386-pc-solaris2.11/4.4.4/../../../libstdc++.so
 
 *solution:* Basically, Scons is running compile tests and they fail because g++ is broken because our custom built g++'s c++ standard lib is linked again the system g++, and we need to get it to link its own g++ version. Normally `export LD_LIBRARY_PATH=/opt/ts/gcc/4.4/lib/` would fix this by prioritizing linking, but on solaris LD_LIBRARY_PATH does not take precedence like on linux (read: it's broke). So, the (only known) workaround is to forcefully change the symlink:
 
@@ -68,7 +66,7 @@ The only solution known is to upgrade to gcc 4.4
     std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)/usr/local/lib/libboost_regex.so
 ```
 
-or 
+or
 
 ```
     Undefined                       first referenced
@@ -78,29 +76,26 @@ or
 
 *solution:* The Mapnik SCons dependency checks are using an old version of g++ and you need to force gcc44:
 
-
     python scons/scons.py CXX=/opt/ts/gcc/4.4/bin/g++
 
 ## Mapnik Runtime errors
 
 ### Locale name not valid error
-*description:* Mapnik seems to compile okay but running it immediately results in:
 
+*description:* Mapnik seems to compile okay but running it immediately results in:
 
     terminate called after throwing an instance of 'std::runtime_error'
         what(): locale::facet::_S_create_c_locale name not valid
 
 *solution:* Something is broken (perhaps in the dev upgrade) with the locale, so you must set it:
 
-
     # setting as C works, POSIX likely will as well:
     export LANG="C"
     export LC_ALL="C"
 
-
 ### PSQL Error: could not receive data from server: Error 0
-*description:* Mapnik is able to connect to a postgres/postgis database but queries fail with "Error 0":
 
+*description:* Mapnik is able to connect to a postgres/postgis database but queries fail with "Error 0":
 
     An error occurred: PSQL error:
     could not receive data from server: Error 0
@@ -111,7 +106,6 @@ or
           ) as placenames WHERE "way" && SetSRID('BOX3D(-135 -45,-90 0)'::box3d, 4326)'
 
 *solution:* Postgres was likely built without thread support, which surprisingly is not on by default, but the majority of packages use. Go back and re-configure and install postgres:
-
 
     ./configure --enable-thread-safety
     make && sudo make install

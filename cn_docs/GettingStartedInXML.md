@@ -4,9 +4,9 @@
 
 Make sure you have mapnik (and the python bindings) installed and you've successfully run through [Getting Started Python Tutorial](GettingStartedInPython).
 
- * This page will guide you through using the Mapnik python bindings along with a separate XML file for your map styles.
+* This page will guide you through using the Mapnik python bindings along with a separate XML file for your map styles.
 
- * This tutorial expects that you are running Mapnik 2.x or greater. The command `mapnik-config -v` will show you which version you are running.
+* This tutorial expects that you are running Mapnik 2.x or greater. The command `mapnik-config -v` will show you which version you are running.
 
 This tutorial covers using an XML stylesheet to rendering output that exactly matches the map output from the pure python example in [Getting Started Python Tutorial](GettingStartedInPython).
 
@@ -28,7 +28,7 @@ print "rendered image to '%s'" % image
 
 ## Step 2: data
 
-Now, we need some data to render. Let's use a shapefile of world border polygons from http://naturalearthdata.com. Download the data from this wiki's local cache [here](data/110m-admin-0-countries.zip) or directly from the [Natural Earth Data site](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/110m-admin-0-countries.zip). Unzip the archive in the same directory as the `world_map.py`. Once unzipped, you should see four files like:
+Now, we need some data to render. Let's use a shapefile of world border polygons from <http://naturalearthdata.com>. Download the data from this wiki's local cache [here](data/110m-admin-0-countries.zip) or directly from the [Natural Earth Data site](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/110m-admin-0-countries.zip). Unzip the archive in the same directory as the `world_map.py`. Once unzipped, you should see four files like:
 
     ne_110m_admin_0_countries.shp
     ne_110m_admin_0_countries.shx
@@ -71,7 +71,7 @@ Now run the python script:
 
     python world_map.py
 
- * It should output a png graphic in the same folder that matches the Getting Started Tutorial.
+* It should output a png graphic in the same folder that matches the Getting Started Tutorial.
 
 Hint: if you would like to run the script without first typing `python` you can do:
 

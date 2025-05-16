@@ -12,7 +12,7 @@
 | stroke-linejoin  | miter, round, bevel | See [SVG stroke-linejoin](http://www.w3.org/TR/SVG/painting.html#StrokeLinejoinProperty) for an example for each value                                                                                     | -            | miter     | no                    |
 | stroke-linecap   | round, butt, square | See [SVG stroke-linecap](http://www.w3.org/TR/SVG/painting.html#StrokeLinecapProperty) for an example for each value                                                                                       | -            | butt      | no                    |
 | stroke-dasharray | 0.0 - n,0.0 - n     | A pair of length values [a,b], where (a) is the dash length and (b) is the gap length respectively. More than two values are supported as well (e.g. to start the line not with a stroke, but with a gap). | pixels       | none      | no                    |
-| comp-op          |                     | [Compositing](Compositing)                                                                                                                                                                                            |              | none      | no                    |
+| comp-op          |                     | [Compositing](Compositing)                                                                                                                                                                                 |              | none      | no                    |
 | smooth           | 0.0 - 1.0           | 1 means completely smoothed lines, 0 means no change                                                                                                                                                       | -            | 0.0       |
 
 ## Examples
@@ -34,6 +34,7 @@
 ```python
 l = LineSymbolizer(Color('green'),0.1)
 ```
+
 To work directly with the stroke object:
 
 ```python
@@ -43,6 +44,7 @@ s.add_dash(.1,.1)
 s.opacity = .5
 l.stroke = s
 ```
+
 Fetch all the possible methods like:
 
 ```python

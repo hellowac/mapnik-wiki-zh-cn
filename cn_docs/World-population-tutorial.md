@@ -8,7 +8,7 @@ This script should result in a graphic similar to:
 
 ![](images/world_population.png)
 
- * Note: text labeling positions may be different between Mapnik versions.
+* Note: text labeling positions may be different between Mapnik versions.
 
 ## Step 1: data
 

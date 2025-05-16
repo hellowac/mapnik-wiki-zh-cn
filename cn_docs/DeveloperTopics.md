@@ -18,7 +18,6 @@ Any specific feature request or bug report should be created as a [new ticket](h
 
 [Developing plugins](https://github.com/mapnik/mapnik/wiki/DevelopingPlugins) - Writing new datasource plugins
 
-
 ## Resources
 
 [Faster compiling](https://github.com/mapnik/mapnik/wiki/FasterCompiling)
@@ -45,14 +44,13 @@ Any specific feature request or bug report should be created as a [new ticket](h
 
 [DeveloperTodo](https://github.com/mapnik/mapnik/wiki/DeveloperTodo)
 
-
 ## Sandbox
 
 [GSOC2010](https://github.com/mapnik/mapnik/wiki/GSOC2010)
 
 [Mapnik2](https://github.com/mapnik/mapnik/wiki/Mapnik2) - notes on getting running with the experimental Mapnik2 code
 
-[Compositing](https://github.com/mapnik/mapnik/wiki/Compositing) Compositing modes 
+[Compositing](https://github.com/mapnik/mapnik/wiki/Compositing) Compositing modes
 
 [Legending](https://github.com/mapnik/mapnik/wiki/Legending)
 

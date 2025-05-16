@@ -44,7 +44,6 @@ p = PolygonPatternSymbolizer(PathExpression('/path/to/icon.png'))
 
 #### C++
 
-
 ```cpp
 ruly_type rule;
 rule.append(polygon_pattern_symbolizer("path/to/icon.png", "png", 20, 20)); // file, type, width, height

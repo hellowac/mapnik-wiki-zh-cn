@@ -2,6 +2,8 @@
 <!-- Version: 4 -->
 <!-- Last-Modified: 2010/02/06 16:38:24 -->
 <!-- Author: TomasC -->
+# Open Suse
+
 These instructions are verified on a clean Opensuse 11.2 install.
 
 First, add the Geo repository:

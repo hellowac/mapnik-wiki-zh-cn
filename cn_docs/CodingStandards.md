@@ -8,29 +8,29 @@ There are no coding standards yet defined for this project. This is an initial a
 
 This needs to be discussed, since the current document is just a single person's draft.
 
-Also read 'Code commits best practices' and 'Coding Conventions' in [Contributing](https://github.com/mapnik/mapnik/blob/master/docs/contributing.markdown), in the Docs. 
+Also read 'Code commits best practices' and 'Coding Conventions' in [Contributing](https://github.com/mapnik/mapnik/blob/master/docs/contributing.markdown), in the Docs.
 
 ## C++
 
- * Trailing whitespace is never allowed. This includes lines with nothing but spaces or tabs in them, as well as spaces or tabs being the last characters on a line with non-whitespace characters.
- * Indentation is four spaces.
-  * Case statements?
-  * Public and private declarations?
-  * Line continuation?
- * Should a maximum line limit be enforced?
- * Single spaces should surround all binary operators (e.g. +, -. =, /, <<, >>).
- * Parenthesis should not contain padding spaces:
-  * Acceptable: (a == b)
-  * Not Acceptable: ( a == b )
- * Function definitions should not be separated from their arguments:
-  * Acceptable: void foo(int a) { ... }
-  * Not Acceptable: void foo (int a) { ... }
- * Keywords should be separated from their arguments by a single space:
-  * Acceptable: if (a == b)
-  * Not Acceptable: if(a == b)
- * Braces should always be on a separate line, and indented to the same level as the line that they're associated with.
- * Functions should be separated from each other by a single blank line.
- * Comma-separated lists should have spaces after each comma.
+* Trailing whitespace is never allowed. This includes lines with nothing but spaces or tabs in them, as well as spaces or tabs being the last characters on a line with non-whitespace characters.
+* Indentation is four spaces.
+* Case statements?
+* Public and private declarations?
+* Line continuation?
+* Should a maximum line limit be enforced?
+* Single spaces should surround all binary operators (e.g. +, -. =, /, <<, >>).
+* Parenthesis should not contain padding spaces:
+* Acceptable: (a == b)
+* Not Acceptable: ( a == b )
+* Function definitions should not be separated from their arguments:
+* Acceptable: void foo(int a) { ... }
+* Not Acceptable: void foo (int a) { ... }
+* Keywords should be separated from their arguments by a single space:
+* Acceptable: if (a == b)
+* Not Acceptable: if(a == b)
+* Braces should always be on a separate line, and indented to the same level as the line that they're associated with.
+* Functions should be separated from each other by a single blank line.
+* Comma-separated lists should have spaces after each comma.
 
 (Emacs C++ mode - copy & paste into .emacs file)
 
@@ -47,14 +47,12 @@ Also read 'Code commits best practices' and 'Coding Conventions' in [Contributin
     (c-set-offset 'template-args-cont 'c-lineup-template-args)
     
 
-
-
 ## Python
 
 It would probably be best to follow Guido van Rossum's preferred coding style, as documented in [PEP 8](http://www.python.org/dev/peps/pep-0008/).
 
- * Trailing whitespace is never allowed. This includes lines with nothing but spaces or tabs in them, as well as spaces or tabs being the last characters on a line with non-whitespace characters.
- * Indentation is four spaces.
+* Trailing whitespace is never allowed. This includes lines with nothing but spaces or tabs in them, as well as spaces or tabs being the last characters on a line with non-whitespace characters.
+* Indentation is four spaces.
 
 ## Tools
 
@@ -62,6 +60,6 @@ We will need some tools to automatically reformat the code before a commit is do
 
 Candidates:
 
- * [astyle](http://astyle.sourceforge.net/)
- * [GC GreatCode](http://sourceforge.net/projects/gcgreatcode/)
- * [indent](http://www.gnu.org/software/indent/)
+* [astyle](http://astyle.sourceforge.net/)
+* [GC GreatCode](http://sourceforge.net/projects/gcgreatcode/)
+* [indent](http://www.gnu.org/software/indent/)

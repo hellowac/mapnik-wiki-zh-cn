@@ -1,11 +1,11 @@
-## Mapnik Utilities
+# Mapnik Utilities
 
 Third party scripts, applications, and approaches for working with mapnik
 
 Add more here as you find them.
 
-
 ## Styling Tools
+
 ### Cascadenik
 
 [Mapnik-utils](http://code.google.com/p/mapnik-utils/) - Cascading Stylesheets For Mapnik
@@ -26,20 +26,19 @@ Add more here as you find them.
 
 ### Polymaps
 
-http://polymaps.org/
-
+<http://polymaps.org/>
 
 ## Tile Servers
 
 ### Mod Tile
 
-[Mod Tile](http://wiki.openstreetmap.org/index.php/Mod_tile) - The tool OSM uses to render mapnik tiles for http://tile.openstreetmap.org/  
- * [OSM Slippy Map](http://wiki.openstreetmap.org/index.php/Slippy_Map) - Overview OSM rendering | [Roll your own](http://wiki.openstreetmap.org/index.php/Deploying_your_own_Slippy_Map)
+[Mod Tile](http://wiki.openstreetmap.org/index.php/Mod_tile) - The tool OSM uses to render mapnik tiles for <http://tile.openstreetmap.org/>  
+
+* [OSM Slippy Map](http://wiki.openstreetmap.org/index.php/Slippy_Map) - Overview OSM rendering | [Roll your own](http://wiki.openstreetmap.org/index.php/Deploying_your_own_Slippy_Map)
 
 ### TileCache
 
 [TileCache](http://tilecache.org/) - Use WMS-C to render tiles dynamically, or cached | [Example in OL](http://labs.metacarta.com/osm/)
-
 
 ## WMS Servers
 
@@ -64,9 +63,10 @@ A QT Desktop App for interactively viewing XML mapfiles
 See [MapnikViewer](MapnikViewer) for more info.
 
 ### Quantumnik
+
 Plugin to QGIS for using Mapnik
 
-See http://bitbucket.org/springmeyer/quantumnik/
+See <http://bitbucket.org/springmeyer/quantumnik/>
 
 ## Nik2Img
 

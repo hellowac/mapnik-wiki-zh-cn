@@ -5,15 +5,16 @@ The Mapnik Viewer is a GUI tool for rendering and viewing maps based on Mapnik X
 It's available in the `demo/viewer` folder of your mapnik source code. It is not compiled by default, but can be built separately after installing Mapnik.
 
 ----
+
 ![](images/mapnik_viewer.png)
 ----
 
 ## Requirements
 
- * A working Mapnik installation
- * A Mapnik XML file to view
- * Qt4 including dev files (for example, see [Qt/Mac Open Source Edition](http://trolltech.com/developer/downloads/qt/mac))
- * Qmake
+* A working Mapnik installation
+* A Mapnik XML file to view
+* Qt4 including dev files (for example, see [Qt/Mac Open Source Edition](http://trolltech.com/developer/downloads/qt/mac))
+* Qmake
 
 ## Building
 
@@ -44,9 +45,9 @@ On OS X, if a viewer.xcodeproj was built then open the project in Apple's XCode 
 
 Double click on the resulting application (viewer.app on Mac OS)
 
- * You can then load map files from the file menu (make sure you have absolute paths set to datasources).
- * Hit the *Home* button to zoom to the data extent.
- * The rest should be obvious.
+* You can then load map files from the file menu (make sure you have absolute paths set to datasources).
+* Hit the *Home* button to zoom to the data extent.
+* The rest should be obvious.
 
 You can also load your XML files when launching the viewer from a terminal:
 
@@ -66,6 +67,7 @@ or
 ```
 
 ## Register plugins directory
+
 Plugin directory is default to /usr/local/lib/mapnik/input/  
 To override it: create a viewer.ini file for example:
 

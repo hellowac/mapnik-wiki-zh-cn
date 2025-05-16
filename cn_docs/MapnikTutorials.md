@@ -24,9 +24,9 @@ Make sure to see [LearningMapnik](LearningMapnik) for more topics
 
 ![](images/14__5531__9871.png)
 
- * MapsFromScratch - http://mapsfromscratch.com/
- * Cascadenik Tutorial - http://mapnik-utils.googlecode.com/svn/trunk/serverside/cascadenik/doc/index.html
- * Quantumnik - http://bitbucket.org/springmeyer/quantumnik
- * ExampleCode -- Code snippets from Mapnik users
+* MapsFromScratch - <http://mapsfromscratch.com/>
+* Cascadenik Tutorial - <http://mapnik-utils.googlecode.com/svn/trunk/serverside/cascadenik/doc/index.html>
+* Quantumnik - <http://bitbucket.org/springmeyer/quantumnik>
+* ExampleCode -- Code snippets from Mapnik users
 
 For details on Mapnik features see [LearningMapnik](LearningMapnik)

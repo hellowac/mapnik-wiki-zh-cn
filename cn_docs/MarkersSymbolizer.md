@@ -7,23 +7,24 @@ Can be used as an alternative to a [PointSymbolizer](PointSymbolizer) to give mo
 ![](images/markers_symbolizer.png)
 
 ## Configuration Options
-|*Name*|*Description*|*Default*|Applies to SVG |
---------|------------|---------|----------------|
-|allow-overlap | Allow the symbolizer to overlap others. | false | yes |
-|spacing | Distance between markers in pixels. | 100 | yes |
-|max-error | Maximum amount the marker can be move from its designated place to avoid collisions. This value is a fraction of "spacing", e.g. spacing = 100, max_error = 0.2 then the maximum the marker can be moved is 20pixels, if this is not enough it isn't drawn at all. | 0.2 |yes |
-|file | The SVG file to use for the marker | built-in marker | yes |
-|transform | [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) | identity | yes |
-|opacity | Opacity | 1.0 | yes |
-|fill | Color of the marker fill, e.g. #FFFFFF. | blue | no |
-| stroke | CSS colour - A Color value such as 'green' or #A3D979 | black | no |
-| stroke-width | 0.0 - n  - Width of outline in pixels | 1.0 | no |
-| stroke-opacity | 0.0 - 1.0 - 1 is fully opaque while zero is fully transparent and .5 would be 50% transparent | 1.0  | no |
-| width | width of marker pixels | 10 | no |
-| height |  height of marker in pixels | 10 | no |
-| placement | "point", "interior", "line", "vertex-first" (mapnik >= 3), "vertex-last" (mapnik >= 3) | line (mapnik <=2.0.x) point (mapnik >= 2.1)| no (todo) |
-| ignore-placement | "true" or "false"  | "false" | no (todo) |
-| marker-type | "arrow" "ellipse" | "arrow" if line placement, "ellipse" if point placement | no |
+
+| *Name*           | *Description*                                                                                                                                                                                                                                                      | *Default*                                               | Applies to SVG |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- | -------------- |
+| allow-overlap    | Allow the symbolizer to overlap others.                                                                                                                                                                                                                            | false                                                   | yes            |
+| spacing          | Distance between markers in pixels.                                                                                                                                                                                                                                | 100                                                     | yes            |
+| max-error        | Maximum amount the marker can be move from its designated place to avoid collisions. This value is a fraction of "spacing", e.g. spacing = 100, max_error = 0.2 then the maximum the marker can be moved is 20pixels, if this is not enough it isn't drawn at all. | 0.2                                                     | yes            |
+| file             | The SVG file to use for the marker                                                                                                                                                                                                                                 | built-in marker                                         | yes            |
+| transform        | [SVG transform](http://www.w3.org/TR/SVG/coords.html#TransformAttribute)                                                                                                                                                                                           | identity                                                | yes            |
+| opacity          | Opacity                                                                                                                                                                                                                                                            | 1.0                                                     | yes            |
+| fill             | Color of the marker fill, e.g. #FFFFFF.                                                                                                                                                                                                                            | blue                                                    | no             |
+| stroke           | CSS colour - A Color value such as 'green' or #A3D979                                                                                                                                                                                                              | black                                                   | no             |
+| stroke-width     | 0.0 - n  - Width of outline in pixels                                                                                                                                                                                                                              | 1.0                                                     | no             |
+| stroke-opacity   | 0.0 - 1.0 - 1 is fully opaque while zero is fully transparent and .5 would be 50% transparent                                                                                                                                                                      | 1.0                                                     | no             |
+| width            | width of marker pixels                                                                                                                                                                                                                                             | 10                                                      | no             |
+| height           | height of marker in pixels                                                                                                                                                                                                                                         | 10                                                      | no             |
+| placement        | "point", "interior", "line", "vertex-first" (mapnik >= 3), "vertex-last" (mapnik >= 3)                                                                                                                                                                             | line (mapnik <=2.0.x) point (mapnik >= 2.1)             | no (todo)      |
+| ignore-placement | "true" or "false"                                                                                                                                                                                                                                                  | "false"                                                 | no (todo)      |
+| marker-type      | "arrow" "ellipse"                                                                                                                                                                                                                                                  | "arrow" if line placement, "ellipse" if point placement | no             |
 
 It can be added to a Rule with line features like:
 
@@ -45,12 +46,12 @@ The ST_reverse function of Postgis can fix this (The problem will then be to ide
 
 ![](images/markers_symbolizer.png)
 
-
 ```xml
 <MarkersSymbolizer spacing="100" file="/Users/artem/Desktop/svg/ladybird.svg" transform="translate(0 -16) scale(2.0)"/>
 ```
 
 ### Dynamic Ellipses
+
 *NEW*: Starting from r2158 MarkersSymbolizer supports width/height/fill/stroke properties to dynamically draw circles (w == h) or ellipses (w != h) when no SVG file is supplied:
 
 ![](images/dynamic_ellipse_markers.png)

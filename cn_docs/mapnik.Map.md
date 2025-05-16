@@ -1,8 +1,9 @@
+# Mapnik Map
 
 Below are a list of methods and properties available in mapnik.Map.
 
 * __Map.append_style__ - adds a style to the map
-* __Map.aspect_fix_mode__ 
+* __Map.aspect_fix_mode__
 * __Map.background__
 * __Map.base__
 * __Map.buffer_size__
@@ -37,10 +38,9 @@ Below are a list of methods and properties available in mapnik.Map.
 
 ### append_style
 
-
 append_style( (Map)arg1, (str)style_name, (Style)style_object) -> bool :
     Insert a Mapnik Style onto the map by appending it.
-    
+
     Usage:
     >>> sty
     <mapnik._mapnik.Style object at 0x6a330>
@@ -82,11 +82,10 @@ long object will be returned instead.
 
 ### buffered_envelope
 
-
 buffered_envelope( (Map)arg1) -> Box2d :
     Get the Box2d() of the Map given
     the Map.buffer_size.
-    
+
     Usage:
     >>> m = Map(600,400)
     >>> m.envelope()
@@ -103,12 +102,11 @@ buffered_envelope( (Map)arg1) -> Box2d :
 
 ### envelope
 
-
 envelope( (Map)arg1) -> Box2d :
     Return the Map Box2d object
     and print the string representation
     of the current extent of the map.
-    
+
     Usage:
     >>> m.envelope()
     Box2d(-0.185833333333,-0.96,0.189166666667,-0.71)
@@ -123,7 +121,6 @@ envelope( (Map)arg1) -> Box2d :
 
 ### extra_attributes
 
-
 extra_attributes( (Map)arg1) -> Parameters :
     TODO
 
@@ -132,23 +129,20 @@ extra_attributes( (Map)arg1) -> Parameters :
 
 ### find_inmem_metawriter
 
-
 find_inmem_metawriter( (Map)arg1, (str)name) -> MetaWriterInMem :
     Gets an inmem metawriter, or None if no such metawriter exists.
     Use this after the map has been rendered to retrieve information about the hit areas rendered on the map.
-    
 
     C++ signature :
         boost::shared_ptr<mapnik::metawriter_inmem> find_inmem_metawriter(mapnik::Map,std::string)
 
 ### find_style
 
-
 find_style( (Map)arg1, (str)style_name) -> Style :
     Query the Map for a style by name and return
     a style object if found or raise KeyError
     style if not found.
-    
+
     Usage:
     >>> m.find_style('Style Name')
     <mapnik._mapnik.Style object at 0x654f0>
@@ -159,11 +153,10 @@ find_style( (Map)arg1, (str)style_name) -> Style :
 
 ### get_metawriter_property
 
-
 get_metawriter_property( (Map)arg1, (str)name) -> str :
     Reads a metawriter property.
     These properties are completely user-defined and can be used tocreate filenames, etc.
-    
+
     Usage:
     >>> map.set_metawriter_property("x", "10")
     >>> map.get_metawriter_property("x")
@@ -175,10 +168,9 @@ get_metawriter_property( (Map)arg1, (str)name) -> str :
 
 ### has_metawriter
 
-
 has_metawriter( (Map)arg1) -> bool :
     Check if the Map has any active metawriters
-    
+
     Usage:
     >>> m.has_metawriter()
     False
@@ -205,14 +197,12 @@ None
 
 ### maximum_extent
 
-
 ### pan
-
 
 pan( (Map)arg1, (int)x, (int)y) -> None :
     Set the Map center at a given x,y location
     as integers in the coordinates of the pixmap or map surface.
-    
+
     Usage:
     >>> m = Map(600,400)
     >>> m.envelope().center()
@@ -227,11 +217,10 @@ pan( (Map)arg1, (int)x, (int)y) -> None :
 
 ### pan_and_zoom
 
-
 pan_and_zoom( (Map)arg1, (int)x, (int)y, (float)factor) -> None :
     Set the Map center at a given x,y location
     and zoom factor as a float.
-    
+
     Usage:
     >>> m = Map(600,400)
     >>> m.envelope().center()
@@ -248,15 +237,14 @@ pan_and_zoom( (Map)arg1, (int)x, (int)y, (float)factor) -> None :
 
 ### query_map_point
 
-
 query_map_point( (Map)arg1, (int)layer_idx, (float)pixel_x, (float)pixel_y) -> Featureset :
-    Query a Map Layer (by layer index) for features 
+    Query a Map Layer (by layer index) for features
     intersecting the given x,y location in the pixel
     coordinates of the rendered map image.
     Layer index starts at 0 (first layer in map).
     Will return a Mapnik Featureset if successful
     otherwise will return None.
-    
+
     Usage:
     >>> featureset = m.query_map_point(0,200,200)
     >>> featureset
@@ -270,15 +258,14 @@ query_map_point( (Map)arg1, (int)layer_idx, (float)pixel_x, (float)pixel_y) -> F
 
 ### query_point
 
-
 query_point( (Map)arg1, (int)layer idx, (float)x, (float)y) -> Featureset :
-    Query a Map Layer (by layer index) for features 
+    Query a Map Layer (by layer index) for features
     intersecting the given x,y location in the coordinates
     of map projection.
     Layer index starts at 0 (first layer in map).
     Will return a Mapnik Featureset if successful
     otherwise will return None.
-    
+
     Usage:
     >>> featureset = m.query_point(0,-122,48)
     >>> featureset
@@ -292,10 +279,9 @@ query_point( (Map)arg1, (int)layer idx, (float)x, (float)y) -> Featureset :
 
 ### remove_all
 
-
 remove_all( (Map)arg1) -> None :
     Remove all Mapnik Styles and layers from the Map.
-    
+
     Usage:
     >>> m.remove_all()
     
@@ -305,10 +291,9 @@ remove_all( (Map)arg1) -> None :
 
 ### remove_style
 
-
 remove_style( (Map)arg1, (str)style_name) -> None :
     Remove a Mapnik Style from the map.
-    
+
     Usage:
     >>> m.remove_style('Style Name')
     
@@ -318,10 +303,9 @@ remove_style( (Map)arg1, (str)style_name) -> None :
 
 ### resize
 
-
 resize( (Map)arg1, (int)width, (int)height) -> None :
     Resize a Mapnik Map.
-    
+
     Usage:
     >>> m.resize(64,64)
     
@@ -331,11 +315,10 @@ resize( (Map)arg1, (int)width, (int)height) -> None :
 
 ### scale
 
-
 scale( (Map)arg1) -> float :
     Return the Map Scale.
     Usage:
-    
+
     >>> m.scale()
     
 
@@ -344,11 +327,10 @@ scale( (Map)arg1) -> float :
 
 ### scale_denominator
 
-
 scale_denominator( (Map)arg1) -> float :
     Return the Map Scale Denominator.
     Usage:
-    
+
     >>> m.scale_denominator()
     
 
@@ -357,11 +339,10 @@ scale_denominator( (Map)arg1) -> float :
 
 ### set_metawriter_property
 
-
 set_metawriter_property( (Map)arg1, (str)name, (str)value) -> None :
     Sets a metawriter property.
     These properties are completely user-defined and can be used tocreate filenames, etc.
-    
+
     Usage:
     >>> map.set_metawriter_property("x", str(x))
     >>> map.set_metawriter_property("y", str(y))
@@ -382,12 +363,11 @@ If the argument is a string, the return value is the same object.
 
 ### view_transform
 
-
 view_transform( (Map)arg1) -> ViewTransform :
     Return the map ViewTransform object
     which is used internally to convert between
     geographic coordinates and screen coordinates.
-    
+
     Usage:
     >>> m.view_transform()
     
@@ -399,12 +379,11 @@ view_transform( (Map)arg1) -> ViewTransform :
 
 ### zoom
 
-
 zoom( (Map)arg1, (float)factor) -> None :
     Zoom in or out by a given factor.
     Positive number zooms in, negative number
     zooms out.
-    
+
     Usage:
     
     >>> m.zoom(0.25)
@@ -415,11 +394,10 @@ zoom( (Map)arg1, (float)factor) -> None :
 
 ### zoom_all
 
-
 zoom_all( (Map)arg1) -> None :
     Set the geographical extent of the map
     to the combined extents of all active layers.
-    
+
     Usage:
     >>> m.zoom_all()
     
@@ -429,11 +407,10 @@ zoom_all( (Map)arg1) -> None :
 
 ### zoom_to_box
 
-
 zoom_to_box( (Map)arg1, (Box2d)Boxd2) -> None :
     Set the geographical extent of the map
     by specifying a Mapnik Box2d.
-    
+
     Usage:
     >>> extent = Box2d(-180.0, -90.0, 180.0, 90.0)
     >>> m.zoom_to_box(extent)

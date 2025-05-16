@@ -36,10 +36,10 @@ See also a performance tuning page: [OptimizeRenderingWithPostGIS](OptimizeRende
 
 ## Usage
 
-*Note*: 
+*Note*:
 
- * Spatial tables read from PostGIS by Mapnik should ideally have a corresponding entry in `geometry_columns`.
- * Use the `geometry_field` parameter to specify which field to use if you have >1 geometry in the table/query or if your table does not have a `geometry_columns` entry.
+* Spatial tables read from PostGIS by Mapnik should ideally have a corresponding entry in `geometry_columns`.
+* Use the `geometry_field` parameter to specify which field to use if you have >1 geometry in the table/query or if your table does not have a `geometry_columns` entry.
 
 ## Advanced Usage
 
@@ -63,9 +63,9 @@ Using the token !bbox! allows you to write a subquery and leverage the spatial f
 
 Other tokens that can be used include:
 
-  * !scale_denominator! (Mapnik >= 0.7.0)
-  * !pixel_width! (Mapnik >= 2.1.0) -- width of a pixel in geographical units
-  * !pixel_height! (Mapnik >= 2.1.0) -- height of a pixel in geographical units
+* !scale_denominator! (Mapnik >= 0.7.0)
+* !pixel_width! (Mapnik >= 2.1.0) -- width of a pixel in geographical units
+* !pixel_height! (Mapnik >= 2.1.0) -- height of a pixel in geographical units
 
 ## Usage from Python
 
@@ -90,15 +90,15 @@ If you want to add something after the query (for example ORDER BY) you must use
     lyr.datasource = PostGIS(host='localhost',user='postgres',password='',dbname='your_postgis_database',table=BUFFERED_TABLE, srid='your_srid', geometry_field='way', extent='your_extent')
 ```
 
- * *Note*: because mapnik depends on the `geometry_columns` entry be careful not to use sub-selects that change the geometry type.
- * Further references: See Artem's email on [using the PostGIS from Python](https://lists.berlios.de/pipermail/mapnik-users/2007-June/000300.html)
- * Example code at the Mapnik-utils project: http://mapnik-utils.googlecode.com/svn/example_code/postgis/postgis_geometry.py
+* *Note*: because mapnik depends on the `geometry_columns` entry be careful not to use sub-selects that change the geometry type.
+* Further references: See Artem's email on [using the PostGIS from Python](https://lists.berlios.de/pipermail/mapnik-users/2007-June/000300.html)
+* Example code at the Mapnik-utils project: <http://mapnik-utils.googlecode.com/svn/example_code/postgis/postgis_geometry.py>
 
 ## Usage from XML
 
 If you are using XML mapfiles to style your data, then using a PostGIS datasource (with a sub-select in this case) looks like:
 
- * *Note*: if you use a sub-select that changes the extents of your features, make sure to use `estimate_extent=false` otherwise Mapnik will return no features. Otherwise you don't need to use the `estimate_extent` or `extent` parameters at all.
+* *Note*: if you use a sub-select that changes the extents of your features, make sure to use `estimate_extent=false` otherwise Mapnik will return no features. Otherwise you don't need to use the `estimate_extent` or `extent` parameters at all.
 
 ```xml
     <Layer name="countries" status="on" srs="+proj=latlong +datum=WGS84">
@@ -159,4 +159,5 @@ For other PostGIS parameters, see [the postgis_datasource constructor in postgis
 TODO -- more PostGIS query usage
 
 ## Further References
+
  [Using Mapnik and PostGIS with OSM](http://wiki.openstreetmap.org/index.php/Mapnik/PostGIS)

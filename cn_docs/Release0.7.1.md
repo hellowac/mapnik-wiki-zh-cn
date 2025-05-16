@@ -2,7 +2,7 @@
 <!-- Version: 1 -->
 <!-- Last-Modified: 2010/03/22 13:48:22 -->
 <!-- Author: artem -->
-## Mapnik 0.7.1 Release
+# Mapnik 0.7.1 Release
 
 (Packaged from r1745)
 
@@ -13,14 +13,14 @@
 - SCons: Added new build options 'PRIORITIZE_LINKING' and 'LINK_PRIORITY'. The first is a boolean (default True)
   of whether to use the new sorting implementation that gives explcit preference to custom or local paths
   during compile and linking that will affect builds when duplicate libraries and include directories are on the
-  system. LINK_PRIORITY defaults to prioritizing internal sources of the mapnik source folder, then local/user 
-  installed libraries over system libraries, but the option can be customized. Sorting not only ensures that 
-  compiling and linking will more likely match the desired libraries but also gives more likelyhood to avoid 
+  system. LINK_PRIORITY defaults to prioritizing internal sources of the mapnik source folder, then local/user
+  installed libraries over system libraries, but the option can be customized. Sorting not only ensures that
+  compiling and linking will more likely match the desired libraries but also gives more likelyhood to avoid
   the scenario where libraries are linked that don't match the includes libmapnik compiled against.
 
 - XML: Fixed behavior of PolygonPatternSymbolizer and LinePatternSymbolizer whereby width, height,
   and type of images is actually allowed to be optionally ommitted ([#508](https://github.com/mapnik/mapnik/issues/508)). This was added in r1543 but
-  only worked correctly for PointSymbolizer and ShieldSymbolizer. 
+  only worked correctly for PointSymbolizer and ShieldSymbolizer.
 
 - Fixed reading of PostGIS data on Big Endian systems ([#515](https://github.com/mapnik/mapnik/issues/515))
 

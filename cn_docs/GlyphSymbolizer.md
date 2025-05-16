@@ -8,7 +8,6 @@ Renders a TrueType Glyph at the Feature's label location (usually the center of 
 
 (see [source](https://github.com/mapnik/mapnik/blob/master/tests/python_tests/glyph_symbolizer_test.py) for sample usage)
 
-
 ## Sample XML Configuration
 
 ```xml

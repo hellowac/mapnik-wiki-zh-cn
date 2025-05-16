@@ -1,3 +1,5 @@
+# API changes between v2.3 and v3.0
+
 ## Removed
 
 - Support for `-ansi` flag / non-c++11 compile. Starting at 3.x a compiler that recognizes `-std=c++11` is required.

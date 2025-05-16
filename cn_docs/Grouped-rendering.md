@@ -2,7 +2,7 @@
 
 Using "grouped rendering" on a layer renders all styles of one layer for all features that have the same value before proceeding to other features that have a different value.
 
-This feature was added in https://github.com/mapnik/mapnik/pull/916 and is first available in Mapnik v2.1.0.
+This feature was added in <https://github.com/mapnik/mapnik/pull/916> and is first available in Mapnik v2.1.0.
 
 Example syntax looks like:
 
@@ -51,4 +51,3 @@ Example of rendering from one layer without and with the `group-by` on z order:
 ![1](images/non-grouped-rendering.png)
 
 ![2](images/grouped-rendering.png)
-

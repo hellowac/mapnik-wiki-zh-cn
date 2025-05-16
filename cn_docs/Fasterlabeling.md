@@ -1,10 +1,12 @@
-#### Ideas and designs for faster label rendering
+# Faster labeling
+
+## Ideas and designs for faster label rendering
 
 See also a ticket on code changes/ideas: [#1300](https://github.com/mapnik/mapnik/issues/1300)
 
 * Pre-processing - give thought to pre-processing your data. Split or merge lines so they can easily be labeled nicely without fancy options like `spacing` (see below). Simplify vertices. Collapse attribute columns into boolean columns for fast filtering and lookups. Index those columns.
 
-* `spacing` - do not use this parameter if you can avoid it - see [#1299](https://github.com/mapnik/mapnik/issues/1299). It can help achieve repeated labels along long lines, but this can also be achieved by splitting lines into more segments or breaking multilinestrings into linestrings. 
+* `spacing` - do not use this parameter if you can avoid it - see [#1299](https://github.com/mapnik/mapnik/issues/1299). It can help achieve repeated labels along long lines, but this can also be achieved by splitting lines into more segments or breaking multilinestrings into linestrings.
 
 * `encoding` - if rendering labels separately from other data - no background, polygons, lines - then tiles may be majority blank. In this case alternative encoding options may provide significantly encoding speeds, like `png:z=1` might not lead to much larger tiles but will result if much faster encoding. Also, oddly, usually png8 encoding is slower, but it can be just as fast or faster with blank or near-blank tiles so try `png8:z=1`. You could also try reducing colors with `png:c=64` since your labels may only be shades of grey, or even try encoding by passing in a fixed palette. See [https://github.com/mapnik/mapnik/wiki/OutputFormats](OutputFormats) for more details on options, and see the [encoding speed test](https://github.com/mapnik/mapnik/blob/master/tests/python_tests/image_encoding_speed_test.py) that can be run locally from your mapnik source checkout to see the speeds of various combinations of encoding options against test tiles like:
 

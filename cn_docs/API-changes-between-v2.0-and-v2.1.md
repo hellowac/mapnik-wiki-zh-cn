@@ -1,3 +1,5 @@
+# API changes between v2.0 and v2.1
+
 ## Removed
 
 * Python pickling support was removed for `map/style/rule/symbolizers/fontset/query` - these were poorly maintained and future support for fast, core deepcopy should handle most key use cases - see [#1390 (map deepcopy)](https://github.com/mapnik/mapnik/issues/1390)

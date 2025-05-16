@@ -1,18 +1,21 @@
+# Paleoserver
+
 <!-- Name: Paleoserver -->
 <!-- Version: 2 -->
 <!-- Last-Modified: 2011/04/28 09:44:27 -->
 <!-- Author: manelclos -->
 
-### Overview
+## Overview
+
 Paleoserver is a new asynchronous C++ wms for mapnik that leverages the latest boost libraries (boost::asio and boost::spirit) for multi-threaded rendering and request parsing.
 
 It requires at least Boost 1.42 and Mapnik 0.7.2 (ideally Mapnik trunk).
 
 It currently only supports being compiled with g++ on linux and mac osx (windows support is planned).
 
-It is in heavy development. For applications needing fully featured Mapnik WMS you should still use the pure python-based *ogcserver* (https://github.com/mapnik/OGCServer).
+It is in heavy development. For applications needing fully featured Mapnik WMS you should still use the pure python-based *ogcserver* (<https://github.com/mapnik/OGCServer>).
 
-### FAQ
+## FAQ
 
 *Q:* It is fast?
 
@@ -30,15 +33,15 @@ It is in heavy development. For applications needing fully featured Mapnik WMS y
 
 *A:* No, at this time Dane plans to continue to develop and maintain the python *ogcserver* WMS implementation (to the extent there is time in the day!). Hopefully in the long term lessons learned from the C++ version may improve design ideas around the ogcserver.
 
-### Code
+## Code
 
-For now the code can be downloaded from github: http://github.com/springmeyer/paleoserver
+For now the code can be downloaded from github: <http://github.com/springmeyer/paleoserver>
 
 ```sh
-    $ git clone git@github.com:springmeyer/paleoserver.git
+    git clone git@github.com:springmeyer/paleoserver.git
 ```
 
-### Building
+## Building
 
 The build scripts are not sophisticated at this point and do not accept options from the command line yet.
 
@@ -47,11 +50,11 @@ So, basically you need to open up 'SConstruct' and add any custom paths to libra
 The build requires an external installation of SCons:
 
 ```sh
-    $ sudo easy_install scons
+    sudo easy_install scons
 ```
 
 Then to compile do:
 
 ```sh
-    $ scons
+    scons
 ```

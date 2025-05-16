@@ -31,7 +31,7 @@ sudo make install
 
 ```
 
-NOTE: there used to be a community PPA maintained for Mapnik apt packages (https://launchpad.net/~mapnik/+archive), but it is no longer maintained or in use.
+NOTE: there used to be a community PPA maintained for Mapnik apt packages (<https://launchpad.net/~mapnik/+archive>), but it is no longer maintained or in use.
 
 ----
 
@@ -45,7 +45,7 @@ sudo apt-get purge libmapnik* mapnik-* python-mapnik
 
 ### Ensure your boost version is recent enough (at least 1.47)
 
-Mapnik master may require a boost version more recent than provided by your Ubuntu distribution. 
+Mapnik master may require a boost version more recent than provided by your Ubuntu distribution.
 
 Ubuntu 12.04 Precise ships with 2 different boost versions: 1.46 and 1.48. Make sure you install the correct version.
 
@@ -116,6 +116,7 @@ cd mapnik-2.3.x
 ### Source install of Mapnik Master (3.x)
 
 Upgrade your compiler to at least g++ 4.7 so it supports c++11 features. <br>`apt-get upgrade` should give you g++-4.8 and gcc-4.8):
+
 ```sh
 apt-get update
 apt-get upgrade
@@ -141,10 +142,6 @@ cd mapnik
 ./configure CXX=${CXX} CC=${CC}
 make && sudo make install
 ```
-
-
-
-
 
 ### Testing
 

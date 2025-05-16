@@ -1,3 +1,5 @@
+# Font Set
+
 <!-- Name: FontSet -->
 <!-- Version: 1 -->
 <!-- Last-Modified: 2009/01/28 20:44:31 -->
@@ -9,26 +11,26 @@ For example, on a layer with both English and Chinese names, one could specify f
 Here's a small example:
 
 ```xml
-    <?xml version="1.0" encoding="utf-8"?>
-    <!DOCTYPE Map>
-    <Map srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
-     <FontSet name="my-fonts">
-      <Font face-name="DejaVu Sans Book" />
-      <Font face-name="TSC FMing S TT Regular" />
-     </FontSet>
-    
-     <Style name="font-test">
-      <Rule>
-       <TextSymbolizer name="NAME" fontset-name="my-fonts" size="15" fill="black" />
-      </Rule>
-     </Style>
-    
-     <Layer name="font-test" status="on" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
-      <StyleName>font-test</StyleName>
-       <Datasource>
-        <Parameter name="type">shape</Parameter>
-        <Parameter name="file">Font_Test</Parameter>
-       </Datasource>
-      </Layer>
-    </Map>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map>
+<Map srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+  <FontSet name="my-fonts">
+  <Font face-name="DejaVu Sans Book" />
+  <Font face-name="TSC FMing S TT Regular" />
+  </FontSet>
+
+  <Style name="font-test">
+  <Rule>
+    <TextSymbolizer name="NAME" fontset-name="my-fonts" size="15" fill="black" />
+  </Rule>
+  </Style>
+
+  <Layer name="font-test" status="on" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+  <StyleName>font-test</StyleName>
+    <Datasource>
+    <Parameter name="type">shape</Parameter>
+    <Parameter name="file">Font_Test</Parameter>
+    </Datasource>
+  </Layer>
+</Map>
 ```

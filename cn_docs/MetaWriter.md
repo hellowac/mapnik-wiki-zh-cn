@@ -4,21 +4,21 @@ NOTE: MetaWriters have been [disabled in the Mapnik 2.1.x series](https://github
 
 MetaWriters are a way of outputting vector features, encoded as geojson, from Mapnik that exactly match the representations of rendered features. The idea is to allow for highly customizable output of specific features rendered into tiles that should also be made available as vectors to a web browser for interactivity. This support was added by Hermann Kraus (mail: herm @@@ scribus.info) in the GSOC project ["Hit Areas"](GSOC2010_Ideas).
 
-See also the `grid_renderer` which works better for polygons: https://github.com/mapnik/mapnik/wiki/MapnikRenderers
+See also the `grid_renderer` which works better for polygons: <https://github.com/mapnik/mapnik/wiki/MapnikRenderers>
 
-A blog post on the idea is at: http://mapnik.org/news/2010/jul/06/gsoc2010_halfway/.
+A blog post on the idea is at: <http://mapnik.org/news/2010/jul/06/gsoc2010_halfway/>.
 
 Slides from State of the Map Europe 2011 are [available](http://http://github.com/mapnik/mapnik/wiki/attachment/wiki/MetaWriter/metawriter-slides-sotmeu.pdf).
 
-See also Herm's demo, which highlights both visible and invisible features: http://r2d2.stefanm.com/mapnik/demo.html
+See also Herm's demo, which highlights both visible and invisible features: <http://r2d2.stefanm.com/mapnik/demo.html>
 
 ![](images/metawriter_bbox_around_width_plus_stroke.png)
 
 The above graphic highlights output (geojson) representing the clickable area of a [MarkersSymbolizer](MarkersSymbolizer) rendered circle. This circle can change size dynamically depending on the width/height of the shape plus the thickness of the stroke and the bbox output by the MetaWriter will be intelligent to all rendering parameters.
 
 ## MetaWriter Configuration
-The configuration for a MetaWriter is done as a child element of the Map.
 
+The configuration for a MetaWriter is done as a child element of the Map.
 
 ```xml
     <Map>
@@ -32,27 +32,26 @@ The configuration for a MetaWriter is done as a child element of the Map.
 
 Parameters are:
 
- * `name` (required)
-  * Assign a name to your metawriter so that it can be referenced from a symbolizer
- * `type` (required)
-  * currently 'json' and 'inmem' are the only supported types
- * `file` (json only, required)
-  * relative or absolute path to the file-based output (currently json) - in the future could potentially be other kinds of output
-  * NOTE: this parameter accepts variable replacement (internally it is a PathExpression) so that for a given render the path can be dynamically constructed (see below for more details)
- * `output-empty` (json only, optional)
-  * if true (default) output json files even if no features are intersected, which will write an FeatureCollection with an empty features list
- * `default-output` (optional)
-  * this is a comma delimited list of attributes to output for every metawriter attached to a symbolizer
-  * example: `default-output="field1,field2"`
-  * if not specified, for attributes to be output they must be requested in the symbolizer using the `meta-output` parameter
- * `pixel-coordinates` (relevant to json output format only, default=off) Output in image coordinates rather than long/lat (epsg:4326).
-
+* `name` (required)
+* Assign a name to your metawriter so that it can be referenced from a symbolizer
+* `type` (required)
+* currently 'json' and 'inmem' are the only supported types
+* `file` (json only, required)
+* relative or absolute path to the file-based output (currently json) - in the future could potentially be other kinds of output
+* NOTE: this parameter accepts variable replacement (internally it is a PathExpression) so that for a given render the path can be dynamically constructed (see below for more details)
+* `output-empty` (json only, optional)
+* if true (default) output json files even if no features are intersected, which will write an FeatureCollection with an empty features list
+* `default-output` (optional)
+* this is a comma delimited list of attributes to output for every metawriter attached to a symbolizer
+* example: `default-output="field1,field2"`
+* if not specified, for attributes to be output they must be requested in the symbolizer using the `meta-output` parameter
+* `pixel-coordinates` (relevant to json output format only, default=off) Output in image coordinates rather than long/lat (epsg:4326).
 
 ## Caveats
 
- * If no features are encountered no json file is output (unless you pass the option `output-empty="true"`)
- * output projection is currently hardcoded to WGS84/EPSG:4326
- * precision for geometries is currently fixed at 8
+* If no features are encountered no json file is output (unless you pass the option `output-empty="true"`)
+* output projection is currently hardcoded to WGS84/EPSG:4326
+* precision for geometries is currently fixed at 8
 
 ## Attaching writers to symbolizers
 
@@ -60,8 +59,8 @@ To actually trigger a metawriter to output features you need to attach one to a 
 
 Parameters that symbolizers accept (the relate to metawriters) are:
 
-  * `meta-writer` - the name of the MetaWriter to use
-  * `meta-output` - attributes to write out for this specific symbolizer
+* `meta-writer` - the name of the MetaWriter to use
+* `meta-output` - attributes to write out for this specific symbolizer
 
 For example, this would output geojson features  (bbox's as polygons) for every point rendered by the symbolizer:
 
@@ -86,7 +85,6 @@ This would do the same but also dump out the values for the attributes of 'ameni
 ```
 
 Example feature output:
-
 
 ```python
     { "type": "Feature",

@@ -6,7 +6,7 @@
 
 *New in 0.8*
 
-(Note: This document has been copied and translated from https://github.com/BenMoores/mapnik-trunk/wiki/RasterColorizer
+(Note: This document has been copied and translated from <https://github.com/BenMoores/mapnik-trunk/wiki/RasterColorizer>
 
 The Raster Colorizer allows the palette of rasters to be modified, for example, colorizing a height map.
 
@@ -16,14 +16,13 @@ The DataSource making use of the style must be a single band raster file opened 
 
 The colorizer works in the following way:
 
- * It has an ordered list of ''stop_s that describe how to translate an input value to an output color.
- * A _stop_ has a value, which marks the _stop_ as being applied to input values from its value, up until the next stops value.
- * A _stop_ has a mode, which says how the input value will be converted to a colour.
- * A _stop_ has a color
- * The colorizer also has default color, which input values will be converted to if they don't match any stops.
- * The colorizer also has a default mode, which can be inherited by the stops.
- * The colorizer also has an epsilon value, which is used in the exact mode.
-
+* It has an ordered list of ''stop_s that describe how to translate an input value to an output color.
+* A *stop* has a value, which marks the *stop* as being applied to input values from its value, up until the next stops value.
+* A *stop* has a mode, which says how the input value will be converted to a colour.
+* A *stop* has a color
+* The colorizer also has default color, which input values will be converted to if they don't match any stops.
+* The colorizer also has a default mode, which can be inherited by the stops.
+* The colorizer also has an epsilon value, which is used in the exact mode.
 
 ## Modes
 
@@ -36,7 +35,6 @@ Inherit is only valid for stops, and not the default colorizer mode. It means th
 
 *Exact* causes an input value which matches the stops value to be translated to the stops color. The colorizers epsilon value can be used to make the match a bit fuzzy (in the 'greater than' direction).
 
-
 # XML
 
 ## RasterColorizer element
@@ -45,41 +43,39 @@ Required attributes: none
 
 Optional attributes:
 
- * _default-mode_ This can be either "discrete", "linear" or "exact". If it is not specified then the default is "linear".
- * _default-color_ This can be any color. If it is not specified then the default is "transparent".
- * _epsilon_ This can be any positive floating point value. The default is a very small number (e.g.  1.1920928955078125e-07 )
+* *default-mode* This can be either "discrete", "linear" or "exact". If it is not specified then the default is "linear".
+* *default-color* This can be any color. If it is not specified then the default is "transparent".
+* *epsilon* This can be any positive floating point value. The default is a very small number (e.g.  1.1920928955078125e-07 )
 
 Optional sub-elements:
 
- * _stop_ The list of stops ordered by their value attribute.
+* *stop* The list of stops ordered by their value attribute.
 
 ## stop element
 
 Required attributes:
 
- * _value_ The value at which the stop begins to be applied
+* *value* The value at which the stop begins to be applied
 
 Optional attributes:
 
- * _color_ The color of the stop. If not specified, the colorizers _default_color_ will be used.
- * _mode_ The mode of the stop. If not specified, "inherit" will be used.
-
+* *color* The color of the stop. If not specified, the colorizers *default_color* will be used.
+* *mode* The mode of the stop. If not specified, "inherit" will be used.
 
 ## Example XML
 
 In this example XML, the following value to color translation is performed:
 
- * -inf <= x < -1000 white
- * -1000 <= x < -500 blue
- * -500 <= x < 0 red
- * 0 <= x < 5 yellow blending to white
- * 5 <= x < 10 white blending to red
- * 10 <= x < 15 red blending to green
- * 15 <= x < 17 green blending to black
- * 17 == x black
- * 17 <= x < 18 white
- * 18 <= x < 100 green blending to indigo
-
+* -inf <= x < -1000 white
+* -1000 <= x < -500 blue
+* -500 <= x < 0 red
+* 0 <= x < 5 yellow blending to white
+* 5 <= x < 10 white blending to red
+* 10 <= x < 15 red blending to green
+* 15 <= x < 17 green blending to black
+* 17 == x black
+* 17 <= x < 18 white
+* 18 <= x < 100 green blending to indigo
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -118,23 +114,23 @@ Python bindings are available. The objects are as follows:
 
 ## RasterColorizer
 
-__mapnik2.RasterColorizer()_
+_*mapnik2.RasterColorizer()*
 
-It has the properties _default_color_, _default_mode_, _epsilon_, and _stops_ (read only).
+It has the properties *default_color*, *default_mode*, *epsilon*, and *stops* (read only).
 
-It has the functions _add_stop_, and _get_color_.
+It has the functions *add_stop*, and *get_color*.
 
 ## ColorizerStops
 
-This is an array of _ColorizerStop_ objects. It is the type of the _RasterColorizer_ _stops_ property.
+This is an array of *ColorizerStop* objects. It is the type of the *RasterColorizer* *stops* property.
 
 ## ColorizerStop
 
-It has the properties _color_, _value_, and _mode_.
+It has the properties *color*, *value*, and *mode*.
 
 ## ColorizerMode
 
-This is the enumeration of the stop modes. The values are _mapnik2.COLORIZER_LINEAR_, _mapnik2.COLORIZER_DISCRETE_, _mapnik2.COLORIZER_EXACT_, and _mapnik2.COLORIZER_INHERIT_.
+This is the enumeration of the stop modes. The values are *mapnik2.COLORIZER_LINEAR*, *mapnik2.COLORIZER_DISCRETE*, *mapnik2.COLORIZER_EXACT*, and *mapnik2.COLORIZER_INHERIT*.
 
 ## Example Python
 

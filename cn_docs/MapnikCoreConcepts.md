@@ -11,6 +11,7 @@ A *style* defines how the objects in a layer are rendered. A style contains one 
 The order of layers, rules and symbolizers is generally important in Mapnik, as the layering of output in the result image is not modelled explicitly (like, for example the `z-index` property in CSS), but determined by the order of these elements. It is therefore important to set these elements up in the correct order to produce the desired results.
 
 There are 3 different coordinate systems in Mapnik.
+
 - lat/lon coordinates where geometric objects placed.
 - x/y coordinates after map projection applied where you set bbox/envelope.
 - pixmap x/y coordinates used in pan function.
@@ -19,7 +20,7 @@ There are 3 different coordinate systems in Mapnik.
 
 - [SymbologySupport](SymbologySupport)
 - [GettingStartedInPython](GettingStartedInPython)
-- [Mapnik API](XMLConfigReference) 
+- [Mapnik API](XMLConfigReference)
 
 ---
 Back to [LearningMapnik](LearningMapnik)

@@ -9,21 +9,24 @@
 
 *Committers and Cartographers* was the name and theme selected for the first Mapnik Code Sprint.  Grown from the seed of an idea at the OpenStreetMap State of the Map conference in Girona, Spain, July 2010.  It germinated on the Mapnik-Devel list to grow into an event on two continents.  
 
-
-
 ## Date
+
 Friday, 24 September 2010 - Sunday, 26 September 2010
 
 ## [Location](MapnikCodeSprint_MCS01_Location)
+
 MCS01 will be / was held in [London, England](MapnikCodeSprint_MCS01_Location).
 
 ## [Schedule](MapnikCodeSprint_MCS01_Schedule)
+
 This will be a full weekend of Mapnik fun.  For details see the [schedule](MapnikCodeSprint_MCS01_Schedule).
 
 ## Code
+
 Plan here for code to write and bugs to squish.  Please add your thoughts.  Discuss.  Plan.  
 
 ### Cartography Wish List
+
 Cartography wish list.  
 
 From Steve Chilton's SotM presentation:
@@ -95,7 +98,8 @@ Remote:
 * Rob Coup - Koordinates
 * Craig de Stigter - Koordinates
 
-## Oh look, Development Seed made a logo for us!
+## Oh look, Development Seed made a logo for us
+
 How cool are they?  Pretty cool!
 
 The logo is © 2010 Development Seed, [OpenStreetMap](http://www.openstreetmap.org/) and Contributors

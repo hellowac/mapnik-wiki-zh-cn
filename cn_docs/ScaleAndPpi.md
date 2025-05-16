@@ -10,6 +10,7 @@
 There are two aspects that play a role when you want to make a digital map and determine what the scale is: the projection you use, and the resolution at which you display or print the map. Both will be explained here.
 
 ### Scale
+
 Map scale has traditionally been about how the real world translates into the paper world, so when we see a scale of 1:10,000, that would mean one inch or centimeter on the paper map is really 10,000 inches or centimeters in the real world. However, since every map is the result of a projection, and because projections are often not perfect, a real world map will always introduce some distortions. British Ordnance Survey maps which are labeled with a scale of 1:50,000 have a true scale that varies, depending on easting, between 1:49,980 and 1:50,025. This is quite small difference and unlikely to cause confusion.
 
 For large maps, this difference will be even larger, for example, if we look at the world map below, it should be obvious that no scale can be given. On this map Africa looks the same size as Greenland, in reality it is 14 times as large. The pink circles indicate areas of equal size on the real world. Mapnik will still give a ‘scale’ for such a projection, but one should be aware that for these projections that cover a large area, such a number might not be very useful, or only be valid for a specific part of the map.
@@ -21,7 +22,6 @@ One can see a similar issue on Google Maps, if you follow [this link](http://map
 Alternatively you may compare the scale markers of [a googlemap at equator (LAT=0.0)](http://maps.google.com/maps?q=0.0,0.0&z=15) vs. [a googlemap in the northsea (LAT=70.0)](http://maps.google.com/maps?q=70.0,0.0&z=15).
 
 Let's look at some example code which makes a map for the same area of the earth (the Netherlands) using both the traditional Dutch projection (which is optimized for the Netherlands) and the projection Google uses and how this plays a part when you wish to determine the scale of the image.
-
 
 ```python
     #!/usr/bin/env python
@@ -71,23 +71,21 @@ Apart from the scale, there's also the scale denominator, which plays a further 
 
 ![](images/scale.png)
 
-The above image illustrates how scale dependent rendering and resolution interact. Each map has the same extent and proportions. The large map was printed at 1000px by 1000px and the smaller inset at 250px250px, these were both reduced by 50% for display here. What you should notice is that resolution matters for scale. Each of these maps, made with [Nik2Img](Nik2Img), have different levels of detail, because they are at different scales, even though the extents are the same. 
+The above image illustrates how scale dependent rendering and resolution interact. Each map has the same extent and proportions. The large map was printed at 1000px by 1000px and the smaller inset at 250px250px, these were both reduced by 50% for display here. What you should notice is that resolution matters for scale. Each of these maps, made with [Nik2Img](Nik2Img), have different levels of detail, because they are at different scales, even though the extents are the same.
 
 What determines the actual scale of the map when printed, is determined by an additional factor which is the number of pixels that make up an inch--Pixels per inch(PPI). Various digital screens have different pixel sizes and therefore PPI differs in ways that software often cannot be aware of.  Mapnik calculates it's default at about 90.7 PPI, which originates from an assumed standard pixel size of 0.28 millimeters as defined by the OGC (Open Geospatial Consortium) SLD (Styled Layer Descriptor) [Specification](http://www.opengeospatial.org/standards/sld).
 
 The value scale_denominator yields the map scale as given by the scale() method, divided by 0.00028. Note that this only an accurate description of the scale of your printed map if (a) you indeed print the map at 90 PPI and (b) if the scale() method is accurate for the area you are projecting (as explained in the previous section).
 
-
 ### MinScaleDenominator and MaxScaleDenominator
 
 As can be understood from the previous section: even if you project roughly the same part of the physical earth onto the same sized image, depending on the projection you use the scale of the map can change by a large amount. If you reuse a style file which was written with one projection (for example Google projection) in mind and you switch to another projection, you need to adjust these denominators in order to see the same amount of detail on your map. For the above Google -> Dutch switch, every denominator would need to be divided by (326/200) in order to get the same features on both maps.
 
+### References
 
-### References:
-
- * [DPI VS PPI](http://www.rideau-info.com/photos/printshop.html)
- * [Scale and PPI Discussion on Mapnik-Users](https://lists.berlios.de/pipermail/mapnik-users/2008-November/001415.html)
- * [SLD Implementation Specification](http://portal.opengeospatial.org/files/?artifact_id=1188)
- * [Mapnik's Scale Denominator Code](https://github.com/mapnik/mapnik/blob/master/src/scale_denominator.cpp)
- * [PCL Scale Denominator Code](http://trac.gispython.org/lab/browser/PCL/trunk/PCL-Core/cartography/context/rendering.py#L112)
- * [PPI @ Wikipedia](http://en.wikipedia.org/wiki/Pixels_per_inch)
+* [DPI VS PPI](http://www.rideau-info.com/photos/printshop.html)
+* [Scale and PPI Discussion on Mapnik-Users](https://lists.berlios.de/pipermail/mapnik-users/2008-November/001415.html)
+* [SLD Implementation Specification](http://portal.opengeospatial.org/files/?artifact_id=1188)
+* [Mapnik's Scale Denominator Code](https://github.com/mapnik/mapnik/blob/master/src/scale_denominator.cpp)
+* [PCL Scale Denominator Code](http://trac.gispython.org/lab/browser/PCL/trunk/PCL-Core/cartography/context/rendering.py#L112)
+* [PPI @ Wikipedia](http://en.wikipedia.org/wiki/Pixels_per_inch)

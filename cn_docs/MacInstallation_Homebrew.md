@@ -14,8 +14,8 @@ brew update
 
 Now you can either:
 
- - Install Mapnik itself with homebrew (which will automatically install all dependencies at the same time)
- - Install all Mapnik dependencies via homebrew and then Mapnik from source.
+- Install Mapnik itself with homebrew (which will automatically install all dependencies at the same time)
+- Install all Mapnik dependencies via homebrew and then Mapnik from source.
 
 ### Understanding build options
 
@@ -24,7 +24,8 @@ To see the options available for the build do:
 ```sh
 brew info mapnik
 ```
-For instance you should see `--with-cairo`, `--with-gdal`, and `--with-postgresql`. Unless you supply `--with-cairo` Mapnik will not be built with Cairo rendering support. If you pass `--with-gdal` or `--with-postgresql` then Homebrew will automatically install these dependencies before building Mapnik. 
+
+For instance you should see `--with-cairo`, `--with-gdal`, and `--with-postgresql`. Unless you supply `--with-cairo` Mapnik will not be built with Cairo rendering support. If you pass `--with-gdal` or `--with-postgresql` then Homebrew will automatically install these dependencies before building Mapnik.
 In order to work with a PostGIS Database you have to supply `--with-postgresql` (the formula only adds PG/GDAL support if stated explicitly: [see formula](https://github.com/Homebrew/homebrew/blob/master/Library/Formula/mapnik.rb#L79-L80))
 
 ```sh
@@ -46,7 +47,7 @@ brew install py2cairo
 brew install mapnik --with-cairo
 ```
 
-### To install the latest Mapnik release from Homebrew do:
+### To install the latest Mapnik release from Homebrew do
 
 ```sh
 brew install cairo --without-x --without-glib
@@ -91,7 +92,9 @@ brew install --build-from-source boost
 ```
 
 ## Mapbox Variant not found problem
+
 After git clone of mapnik, execute the following to pull down additional dependencies
+
 ```
 git submodule update --init deps/mapbox/variant
 ```

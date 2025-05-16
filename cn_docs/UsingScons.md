@@ -6,18 +6,18 @@ The build system is composed of a single `SConstruct` file in the main source di
 
 For more details see on SCons see:
 
-* SCons documentation: http://www.scons.org/documentation.php
-* Good Overview: http://www.humanized.com/presentations/scons/
+* SCons documentation: <http://www.scons.org/documentation.php>
+* Good Overview: <http://www.humanized.com/presentations/scons/>
 
 ## Quickstart
 
 For the impatient just do:
 
 ```sh
-    $ cd mapnik_src_dir
-    $ python scons/scons.py configure # will configure compilation and save out configuration to a python pickle
-    $ python scons/scons.py # will compile mapnik sources (running configure first if not done yet)
-    $ sudo python scons/scons.py install # will install Mapnik (running configure and compiling first if not done yet)
+    cd mapnik_src_dir
+    python scons/scons.py configure # will configure compilation and save out configuration to a python pickle
+    python scons/scons.py # will compile mapnik sources (running configure first if not done yet)
+    sudo python scons/scons.py install # will install Mapnik (running configure and compiling first if not done yet)
 ```
 
 ## Common Questions
@@ -28,7 +28,7 @@ For the impatient just do:
 * This allows you to run scons locally within the Mapnik source folder like:
 
 ```sh
-    $ python scons/scons.py
+    python scons/scons.py
 ```
 
 ### I already have SCons installed, can I use it?
@@ -36,77 +36,75 @@ For the impatient just do:
 * Yes, to use your installed version of SCons rather than the bundled version just run the command:
 
 ```sh
-    $ scons
+    scons
 ```
 
 ### How does SCons compare to `make`?
+
 * SCons is less verbose, handles dependency checking more thoroughly, and caches configuration settings differently.
 * However, the basic user experience is quite similar to the common `make` commands:
 
+| **Tool** | **Configure Step**  | **Compile Step** |       **Install Step** |
+| :------- | ------------------- | ---------------- | ---------------------: |
+| make     | `$ ./configure`     | `$ make`         |  `$ sudo make install` |
+| SCons    | `$ scons configure` | `$ scons`        | `$ sudo scons install` |
 
-|**Tool**|**Configure Step**|**Compile Step**|**Install Step**|
-|:-------|------------------|----------------|---------------:|
-|make|`$ ./configure`|`$ make`|`$ sudo make install`|
-|SCons|`$ scons configure`|`$ scons`|`$ sudo scons install`|
-
-
-For more details on SCons vs other build tools see: http://www.scons.org/wiki/SconsVsOtherBuildTools
+For more details on SCons vs other build tools see: <http://www.scons.org/wiki/SconsVsOtherBuildTools>
 
 ---
 
-# Old / outdated information
+## Old / outdated information
 
+### Summary of  Changes between 0.5.x and 0.6.0
 
-## Summary of  Changes between 0.5.x and 0.6.0
+* SCons now has an optional configure step which will configure your build, then exit.
+* To configure run $ python scons/scons.py configure SOMEVARIABLE=somevalue
+* Or simply specify SOMEVARIABLE=somevalue, however this will not exit and will proceed to compilation.
 
- * SCons now has an optional configure step which will configure your build, then exit.
-  * To configure run $ python scons/scons.py configure SOMEVARIABLE=somevalue
-  * Or simply specify SOMEVARIABLE=somevalue, however this will not exit and will proceed to compilation.
+* Any custom options you specify SCons will notice and save in a 'config.py' python file in the mapnik source directory.
 
- * Any custom options you specify SCons will notice and save in a 'config.py' python file in the mapnik source directory.
+* Later custom options can be added to this 'config.py' file and will be re-read by SCons when `python scons/scons.py configure` is run again.
 
- * Later custom options can be added to this 'config.py' file and will be re-read by SCons when `python scons/scons.py configure` is run again.
- 
- * You can ause the CONFIG variable to point to one more files to load custom options from.
+* You can ause the CONFIG variable to point to one more files to load custom options from.
 
- * BOOST_TOOLKIT, BOOST_VERSION, and BOOST_ABI have been added to help point SCons at custom library names for boost.
-  * BOOST_TOOLKIT is the name of the compiler uses to build boost.
-  * BOOST_VERSION is the library name in the format 'major_minor' or '1_38' (note underscore).
-  * BOOST_ABI is a single letter tag denoting the library's interoperability.
-  * For more information see: http://www.boost.org/doc/libs/1_38_0/more/getting_started/unix-variants.html#library-naming
+* BOOST_TOOLKIT, BOOST_VERSION, and BOOST_ABI have been added to help point SCons at custom library names for boost.
+* BOOST_TOOLKIT is the name of the compiler uses to build boost.
+* BOOST_VERSION is the library name in the format 'major_minor' or '1_38' (note underscore).
+* BOOST_ABI is a single letter tag denoting the library's interoperability.
+* For more information see: <http://www.boost.org/doc/libs/1_38_0/more/getting_started/unix-variants.html#library-naming>
 
- * Cairo rendering is new and requires extra dependecies.
-  * Cairo dependecies will be auto-detected using pkg-config
-  * If you don't wish to have SCons attempt to find and build Cairo specify CAIRO=False
+* Cairo rendering is new and requires extra dependecies.
+* Cairo dependecies will be auto-detected using pkg-config
+* If you don't wish to have SCons attempt to find and build Cairo specify CAIRO=False
 
- * Postgres is now configured using the `pg_config` program and not the PGSQL_LIBS and PGSQL_INCLUDES variables.
-  * If `pg_config` is not found use the PG_CONFIG variable to point to the full path of the program.
+* Postgres is now configured using the `pg_config` program and not the PGSQL_LIBS and PGSQL_INCLUDES variables.
+* If `pg_config` is not found use the PG_CONFIG variable to point to the full path of the program.
 
- * libxml2 is now the default XML parser specified using the XMLPARSER variable.
-  * Set XMLPARSER=tinyxml or spirit to use the other parser options.
+* libxml2 is now the default XML parser specified using the XMLPARSER variable.
+* Set XMLPARSER=tinyxml or spirit to use the other parser options.
 
- * FREETYPE_CONFIG and XML2_CONFIG are used to specific the `freetype-config` and `xml2-config` programs used to configure libfreetype and libxml2.
+* FREETYPE_CONFIG and XML2_CONFIG are used to specific the `freetype-config` and `xml2-config` programs used to configure libfreetype and libxml2.
 
- * GDAL (and the new OGR plugin) is now configured using the `gdal-config` program and not the GDAL_LIBS and GDAL_INCLUDES variables.
-  * If `gdal-config` is not found use the GDAL_CONFIG variable to point to the full path of the program.
+* GDAL (and the new OGR plugin) is now configured using the `gdal-config` program and not the GDAL_LIBS and GDAL_INCLUDES variables.
+* If `gdal-config` is not found use the GDAL_CONFIG variable to point to the full path of the program.
 
- * INPUT_PLUGINS now defaults to INPUT_PLUGINS=postgis,shape,raster so for other optional plugins you must add them to the list.
-  * And easy shortcut is to specify INPUT_PLUGINS=all and then all plugins whose dependencies are found will be built. 
+* INPUT_PLUGINS now defaults to INPUT_PLUGINS=postgis,shape,raster so for other optional plugins you must add them to the list.
+* And easy shortcut is to specify INPUT_PLUGINS=all and then all plugins whose dependencies are found will be built.
 
- * The install location for the Python bindings is now configured using `distutils` which may lead to a different install locations on Mac 10.5 and 64 linux systems.
-  * What the configure or install output to see the location for where the python bindings will be installed.
+* The install location for the Python bindings is now configured using `distutils` which may lead to a different install locations on Mac 10.5 and 64 linux systems.
+* What the configure or install output to see the location for where the python bindings will be installed.
 
-# Building Mapnik with SCons
+## Building Mapnik with SCons
 
 *GOCHAS*
 
- * Several optional dependencies (notably cairo, cairomm, and pycairo) are located using `pkg-config`. If you have more than one version you will need to modify the *PKG_CONFIG_PATH* variable to help pkg-config locate each dependency.
+* Several optional dependencies (notably cairo, cairomm, and pycairo) are located using `pkg-config`. If you have more than one version you will need to modify the *PKG_CONFIG_PATH* variable to help pkg-config locate each dependency.
 
- * Make sure you have a C and C++ compiler installed before running SCons. Because SCons tests for the presence of Mapnik dependencies by building and running sample C code in the background, therefore you *must* first install your system's compilers (usually `cpp` and `g++`).
+* Make sure you have a C and C++ compiler installed before running SCons. Because SCons tests for the presence of Mapnik dependencies by building and running sample C code in the background, therefore you *must* first install your system's compilers (usually `cpp` and `g++`).
 
- * SCons accepts command-line `key=value` arguments to customize paths to look for dependecies as well as other valuable options.
-  * All these arguments take the form of UPPERCASE = lowercase key value pairs. To see all possible options type:
-        
+* SCons accepts command-line `key=value` arguments to customize paths to look for dependecies as well as other valuable options.
+* All these arguments take the form of UPPERCASE = lowercase key value pairs. To see all possible options type:
+
 ```sh
     python scons/scons.py -h
 ```
@@ -118,83 +116,84 @@ For more details on SCons vs other build tools see: http://www.scons.org/wiki/Sc
     python scons/scons.py -h
 ```
 
- * If something goes wrong when finding dependencies make sure to look in the 'config.log' for any suspicious errors when SCons tried to compile the test targets. 
+* If something goes wrong when finding dependencies make sure to look in the 'config.log' for any suspicious errors when SCons tried to compile the test targets.
 
- * After a successful configure step, any  *custom* options (which differ from the defaults contained in the `SConstruct` files) will be saved in a user-editable 'config.py' file.
-  * Specifying options in this 'config.py' file is an alternative to listing them on the commandline.
-  * This file is just a python file so the `values` should be *quoted* if strings.
+* After a successful configure step, any  *custom* options (which differ from the defaults contained in the `SConstruct` files) will be saved in a user-editable 'config.py' file.
+* Specifying options in this 'config.py' file is an alternative to listing them on the commandline.
+* This file is just a python file so the `values` should be *quoted* if strings.
 
 *Explanations of Commonly Used Options*
 
- * To get a view of the various customization options specific to building Mapnik run:
+* To get a view of the various customization options specific to building Mapnik run:
 
 ```sh
     python scons/scons.py -h
 ```
 
- * To see some overall SCons options run:
+* To see some overall SCons options run:
 
 ```sh
     python scons/scons.py -H
 ```
 
- * If during the `configure` stage Scons aborts because you are missing a dependency it will print the library name or the tool used to find libraries (ie xml2-config).
+* If during the `configure` stage Scons aborts because you are missing a dependency it will print the library name or the tool used to find libraries (ie xml2-config).
 
- * The first way to attempt to direct SCons to custom paths for your dependencies is to set the 'LIBS' and 'INCLUDES' variables for a given library, for example:
+* The first way to attempt to direct SCons to custom paths for your dependencies is to set the 'LIBS' and 'INCLUDES' variables for a given library, for example:
 
 ```sh
     python scons/scons.py configure BOOST_INCLUDES=/opt/local/includes/boost BOOST_LIBS=/opt/local/lib
 ```
 
- * If the tool used to find a library cannot be found then specify the custom path to the program:
+* If the tool used to find a library cannot be found then specify the custom path to the program:
 
 ```sh
     python scons/scons.py configure PG_CONFIG=/usr/lib/postgresql/8.3/bin/pg_config XML2_CONFIG=/usr/local/bin/xml2-config
 ```
 
- * Building Mapnik in debug mode can be a useful thing for new users or developers as it prompts printing of status output during rendering.
- * *NOTE*: Debug mode also means that Mapnik compilation is not optimized so Mapnik will run *slower*.
+* Building Mapnik in debug mode can be a useful thing for new users or developers as it prompts printing of status output during rendering.
+* *NOTE*: Debug mode also means that Mapnik compilation is not optimized so Mapnik will run *slower*.
 
 ```sh
      python scons/scons.py configure DEBUG=True
 ```
 
-  * Note: set `XML_DEBUG=True` in addition if you want to see boost spirit debug output during XML parsing.
+* Note: set `XML_DEBUG=True` in addition if you want to see boost spirit debug output during XML parsing.
 
- * As noted above SCons will inherit variables from a local 'config.py' files but if you don't want this to happen you can do:
+* As noted above SCons will inherit variables from a local 'config.py' files but if you don't want this to happen you can do:
 
 ```sh
     python scons/scons.py configure USE_CONFIG=False
 ```
+
   ...or you can point SCons at a custom list of locations for python files to inherit variables from:
 
 ```sh
     python scons/scons.py configure CONFIG=/home/dane/config.py,/opt/mapnik/custom_config.py
 ```
 
- * *NEW in version 0.6.0*
-  * Libxml2 is now the default XMLPARSER which adds Entities support to Mapnik
-  * But you can still configure Mapnik to build against tinyxml or spirit if you like:
+* *NEW in version 0.6.0*
+* Libxml2 is now the default XMLPARSER which adds Entities support to Mapnik
+* But you can still configure Mapnik to build against tinyxml or spirit if you like:
 
 ```sh
     python scons/scons.py configure XML_PARSER=tinyxml
 ```
 
- * If you are experiencing any build problems it can be helpful to clean out all previous compiled files in the source directory:
+* If you are experiencing any build problems it can be helpful to clean out all previous compiled files in the source directory:
 
 ```sh
     python scons/scons.py -c
 ```
 
- * Boost can often require extra variables (beyond the standard BOOST_INCLUDES and BOOST_LIBS) for SCons to properly find and link the boost library.
-  * This is largely due to the different ways that boost installations create symlinks.
-  * Often source installs of boost can be properly found by specifying the BOOST_TOOLKIT or BOOST_VERSION variables:
+* Boost can often require extra variables (beyond the standard BOOST_INCLUDES and BOOST_LIBS) for SCons to properly find and link the boost library.
+* This is largely due to the different ways that boost installations create symlinks.
+* Often source installs of boost can be properly found by specifying the BOOST_TOOLKIT or BOOST_VERSION variables:
 
 ```sh
     python scons/scons.py configure BOOST_TOOLKIT=gcc43 BOOST_VERSION=1_37
 ```
 
- * The PostGIS, Shape, and Raster (TIFF) plugins are attempted to be build by default. To enable the compilation of further plugins either do:
+* The PostGIS, Shape, and Raster (TIFF) plugins are attempted to be build by default. To enable the compilation of further plugins either do:
 
 ```sh
     python scons/scons.py configure INPUT_PLUGINS=all
@@ -206,28 +205,28 @@ For more details on SCons vs other build tools see: http://www.scons.org/wiki/Sc
     python scons/scons.py configure INPUT_PLUGINS=postgis,shape,gdal,ogr,sqlite # etc...
 ```
 
- * Cairo is an optional dependency that will be built by default if the Cairo and Cairomm (C++ bindings to Cairo) can be found. To disable to default building of Cairo do:
+* Cairo is an optional dependency that will be built by default if the Cairo and Cairomm (C++ bindings to Cairo) can be found. To disable to default building of Cairo do:
 
 ```sh
     python scons/scons.py configure CAIRO=False
 ```
 
-  * *Note*: if Cairo and Cairomm are found, pycairo will also be built by default to enable the python binding to Cairo (and therefore access to Cairo functions in Mapnik via the Mapnik python bindings).
+* *Note*: if Cairo and Cairomm are found, pycairo will also be built by default to enable the python binding to Cairo (and therefore access to Cairo functions in Mapnik via the Mapnik python bindings).
 
- * SCons is very good at checking if the source code of any dependencies or the mapnik codes has changed, in order to know what targets to rebuild. This means that SCons builds can start slow.
- * To skip this behavior (only recommended for advanced users) at the cost of accurate builds turn on the FAST option with:
+* SCons is very good at checking if the source code of any dependencies or the mapnik codes has changed, in order to know what targets to rebuild. This means that SCons builds can start slow.
+* To skip this behavior (only recommended for advanced users) at the cost of accurate builds turn on the FAST option with:
 
 ```sh
     python scons/scons.py configure FAST=True
 ```
 
- * If you have a machine with several processors you can run parallel builds to speed up compilation with the JOBS option:
+* If you have a machine with several processors you can run parallel builds to speed up compilation with the JOBS option:
 
 ```sh
     python scons/scons.py configure JOBS=2
 ```
 
- * Below is a dump of all the SCons options*
+* Below is a dump of all the SCons options*
 Note: this is based on a Mac OS 10.5 setup
 
 ```sh

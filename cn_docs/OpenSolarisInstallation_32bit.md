@@ -2,7 +2,9 @@
 <!-- Version: 2 -->
 <!-- Last-Modified: 2010/12/08 13:45:47 -->
 <!-- Author: springmeyer -->
-For the main install page see: https://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation part InstallingCoreMapnikDependencies
+# Open solaris installation 32bit
+
+For the main install page see: <https://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation> part InstallingCoreMapnikDependencies
 
 ## 6a: 32 bit - Postgres 8.4 from source
 
@@ -163,6 +165,7 @@ Then get on with the installs
     svn co -r 19933 http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/
     cd osm2pgsql
 ```
+
 apply patch
 
 ```diff

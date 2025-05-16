@@ -1,3 +1,5 @@
+# Debugging Mapnik
+
 <!-- Name: DebuggingMapnik -->
 <!-- Version: 4 -->
 <!-- Last-Modified: 2009/10/05 12:49:44 -->
@@ -6,12 +8,12 @@ This page exists to discuss the best way for developers to debug Mapnik.
 
 Currently I have these questions:
 
- * What's the best way to get a Python build with debugging symbols? Will adding -g suffice? Is --with-pydebug needed?
- * Do we need to compile the Boost libraries with debugging symbols as well?
- * Is anything different for FreeBSD?
-
+* What's the best way to get a Python build with debugging symbols? Will adding -g suffice? Is --with-pydebug needed?
+* Do we need to compile the Boost libraries with debugging symbols as well?
+* Is anything different for FreeBSD?
 
 ## Eclipse
+
 Here I try to describe my setup. I'm sure there are better ways but this works for me:
 
 * Checkout the latest code: `git clone git://github.com/mapnik/mapnik.git mapnik_trunk`
@@ -44,5 +46,5 @@ This has the advantages that
 
 ## References
 
-* http://wiki.python.org/moin/DebuggingWithGdb
-* http://www.boost.org/libs/python/doc/v2/faq.html#debugging 
+* <http://wiki.python.org/moin/DebuggingWithGdb>
+* <http://www.boost.org/libs/python/doc/v2/faq.html#debugging>

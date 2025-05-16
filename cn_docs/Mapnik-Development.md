@@ -1,6 +1,5 @@
 # Mapnik Development
 
-
 - [CodingStandards](CodingStandards)
 - [DebuggingMapnik](DebuggingMapnik)
 - [DeveloperTodo](DeveloperTodo)

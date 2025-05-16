@@ -16,14 +16,14 @@ demonstrates how to avoid duplicate data in the XML file, like:
 * icon directories
 
 It also shows how to split a single, monolithic map file into reusable
-components using external entities and XInclude. 
+components using external entities and XInclude.
 
 ## Mapnik XML support
 
 Mapnik currently supports three different XML parsers:
 
 * the boost spirit based parser
-* the tinyxml parser 
+* the tinyxml parser
 * libxml2
 
 The three parsers differ in size, external dependencies and the number of XML
@@ -33,11 +33,11 @@ when building the Mapnik source with SCons, and available in the Windows binarie
 
 ## Compiling mapnik with libxml2 support
 
-If not default in your Mapnik version (< 0.6.0) the libxml2 parser is enabled by setting the XMLPARSER option at 
+If not default in your Mapnik version (< 0.6.0) the libxml2 parser is enabled by setting the XMLPARSER option at
 compile time:
 
 ```sh
-    $ python scons/scons.py configure XMLPARSER=libxml2
+    python scons/scons.py configure XMLPARSER=libxml2
 ```
 
 Of course this requires the libxml2 library and, depending on the distribution
@@ -47,7 +47,7 @@ can be set using the `XML2_CONFIG` option.
 For example, if you have installed the latest libxml2 on mac os x via Macports, you might need to do:
 
 ```sh
-    $ python scons/scons.py configure XML2_CONFIG=/opt/local/bin/xml2-config
+    python scons/scons.py configure XML2_CONFIG=/opt/local/bin/xml2-config
 ```
 
 ## Internal Entities
@@ -135,7 +135,6 @@ Datasource section is expanded to the content of the file. If a relative
 filename is given the file is searched relative to the document. The file
 `settings/db_settings` could look like this:
 
-
 ```xml
     <Parameter name="type">postgis</Parameter>
     <Parameter name="host">www.example.org</Parameter>
@@ -197,7 +196,7 @@ File earthquakes_since.lay:
 
 This is a quite flexible setup. It is very easy to add and remove thematic
 overlays. Other overlays may use the same parameters by referencing the
-same entities. Styles can be changed by replacing the reference to 
+same entities. Styles can be changed by replacing the reference to
 `&earthquakes_default_style;` with a custom one. It is also possible to have
 many map files all referencing the same set of styles and layer files but with
 different settings.
@@ -234,7 +233,7 @@ File tests/data/good_maps/xinclude/map.xml:
 ```
 
 Included files wrap their content within an Include tag.  XInclude replaces the xi:include tags with the contents of the included file, yielding a single, merged XML document.
-mapnik's XML parser then merges the contents of the Include tag into the Map tag, resulting in an XML document tree identical to one produced by processing a single file containing 
+mapnik's XML parser then merges the contents of the Include tag into the Map tag, resulting in an XML document tree identical to one produced by processing a single file containing
 all Style and Layer tags.
 
 File styles.xml:
@@ -287,18 +286,17 @@ file: zoomsymbols.txt
 ```xml
     <?xml version="1.0" encoding="utf-8"?>
     
-    <!ENTITY zoom00max		"750000000" >
-    <!ENTITY zoom00min		"540000000" >
+    <!ENTITY zoom00max  "750000000" >
+    <!ENTITY zoom00min  "540000000" >
     
-    <!ENTITY zoom01max		"500000000" >
-    <!ENTITY zoom01min		"270000000" >
+    <!ENTITY zoom01max  "500000000" >
+    <!ENTITY zoom01min  "270000000" >
     
-    <!ENTITY zoom02max		"250000000" >
-    <!ENTITY zoom02min		"130000000" >
+    <!ENTITY zoom02max  "250000000" >
+    <!ENTITY zoom02min  "130000000" >
 ```
 
 Adding a DOCTYPE line to the layers.xml file to include the external entities file, and adding parameterized minzoom and maxzoom attributes to the layer yields the file below:
-
 
 File layers_with_entities.xml:
 

@@ -1,3 +1,5 @@
+# Mapnik Code Sprint MCS01 Results
+
 <!-- Name: MapnikCodeSprint/MCS01/Results -->
 <!-- Version: 4 -->
 <!-- Last-Modified: 2010/09/30 12:04:24 -->
@@ -20,14 +22,13 @@ Dane Springmeyer
 
 ## Photos
 
-[Hard at work on Mapnik] (http://www.flickr.com/photos/developmentseed/5029925686/in/photostream/)
+[Hard at work on Mapnik] (<http://www.flickr.com/photos/developmentseed/5029925686/in/photostream/>)
 
 [Dane and Artem meet in person](http://yfrog.com/50o6xj)
 
 [Intensely following TileMill demonstration](http://yfrog.com/n4go6sj)
 
 [Toasting a successful sprint](http://yfrog.com/jvegpqj)
-
 
 ## Fixes and Improvements
 
@@ -38,8 +39,8 @@ This is a quick list of things we started work on or achieved during the sprint:
 * Discussed next stable release (.7x series and Mapnik2 work, what to backport)
 * Forward compatibility of .7.x series a priority  (springmeyer)
 * Lots of work on new prototype for documentation (dodobas) [#288](https://github.com/mapnik/mapnik/issues/288)
-* Moved Cascadenik to github and refactored lots of code, merging in XML-bad branch (migurski, rcoup, ninow) (http://github.com/mapnik/Cascadenik)
-* Came up with lots of new ideas and pushed they into tickets against [Sprint Milestone](http://http://github.com/mapnik/mapnik/wiki/milestone/MCS1%20Tickets) 
+* Moved Cascadenik to github and refactored lots of code, merging in XML-bad branch (migurski, rcoup, ninow) (<http://github.com/mapnik/Cascadenik>)
+* Came up with lots of new ideas and pushed they into tickets against [Sprint Milestone](http://http://github.com/mapnik/mapnik/wiki/milestone/MCS1%20Tickets)
 * Many sprinters installed Mapnik2 - we updated docs with lessons learned (springmeyer)
 * Extensive review and prioritization of tickets relating to cartographic features (ldp)
 * Work towards native boost::spirit WKT parser (artem)
@@ -64,8 +65,8 @@ This is a quick list of things we started work on or achieved during the sprint:
 
 ## Trac timeline
 
-http://http://github.com/mapnik/mapnik/wiki/timeline?from=09%2F29%2F10&daysback=10&ticket=on&ticket_details=on&changeset=on&update=Update
+<http://http://github.com/mapnik/mapnik/wiki/timeline?from=09%2F29%2F10&daysback=10&ticket=on&ticket_details=on&changeset=on&update=Update>
 
 ## Tickets
 
-http://http://github.com/mapnik/mapnik/wiki/milestone/MCS1%20Tickets
+<http://http://github.com/mapnik/mapnik/wiki/milestone/MCS1%20Tickets>

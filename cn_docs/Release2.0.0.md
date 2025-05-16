@@ -1,6 +1,6 @@
-Announcement: [Release 2.0](http://mapnik.org/news/2011/sep/26/release_2_0/) 
+# Mapnik 2.0.0 Changelog
 
-## Mapnik 2.0.0 Changelog
+Announcement: [Release 2.0](http://mapnik.org/news/2011/sep/26/release_2_0/)
 
 - Add minimum-path-length property to text_symbolizer to allow labels to be placed only on lines of a certain length ([#865](https://github.com/mapnik/mapnik/issues/865))
 
@@ -24,7 +24,7 @@ Announcement: [Release 2.0](http://mapnik.org/news/2011/sep/26/release_2_0/)
 - Added map.base parameter that can be set to control where files with relative paths should be interpreted
   from when a map is loaded from a string or saved to a string. It defaults to an empty string which means
   that the base path will be the current working directory of the mapnik process. When a stylesheet is read
-  from a file that files directory is used. And a custom value can still be passed as an argument to 
+  from a file that files directory is used. And a custom value can still be passed as an argument to
   load_map_from_string().
 
 - Added python function 'render_grid' to allow conversion of grid buffer to python object containing list of grid
@@ -59,7 +59,7 @@ Announcement: [Release 2.0](http://mapnik.org/news/2011/sep/26/release_2_0/)
 - Added 'mapnik_version_from_string()' function in python bindings to easily convert string representation
   of version number to the integer format used in 'mapnik/version.hpp'. e.g. '0.7.1' --> 701.
 
-- Added xinclude (http://www.w3.org/TR/xinclude/) support to libxml2-based xml parser (oldtopos) ([#567](https://github.com/mapnik/mapnik/issues/567))
+- Added xinclude (<http://www.w3.org/TR/xinclude/>) support to libxml2-based xml parser (oldtopos) ([#567](https://github.com/mapnik/mapnik/issues/567))
 
 - Optimized rendering speeds by avoiding locking in the projection code (r2063) (r2713)
 

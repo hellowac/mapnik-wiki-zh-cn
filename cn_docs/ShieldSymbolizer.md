@@ -17,21 +17,23 @@ Supports all options of [TextSymbolizer](TextSymbolizer) with additional options
 | opacity      | opacity of the image used for the shield        | 1         |
 | text-opacity | opacity of the text placed on top of the shield | 1         |
 | unlock-image | If true the shield image doesn't move           | "false"   |
-| shield-dx    | offset the shield image _and text_ horizontally | 0         |
-| shield-dy    | offset the shield image _and text_ vertically   | 0         |
+| shield-dx    | offset the shield image *and text* horizontally | 0         |
+| shield-dy    | offset the shield image *and text* vertically   | 0         |
 | transform    | [Transform](Transform) image                    |           |
 
 ### base
-Add 
+
+Add
 `<FileSource name="foo">/home/bar/baz/</FileSource>`
 to the beginning of your stylesheet and then use
 `<ShieldSymbolizer base="foo" name="bridge" />`
 to refer to /home/bar/baz/bridge.
 
 ### dx, dy
+
 To draw labeled points configure `placement="point"` (which is the default) and set dx/dy to move the text.
 
-dx, dy from TextSymbolizer moves only the text, and not the shield. This behavior will be changed in a future release of mapnik. (See below). 
+dx, dy from TextSymbolizer moves only the text, and not the shield. This behavior will be changed in a future release of mapnik. (See below).
 
 #### New interface in HarfBuzz branch
 
@@ -46,14 +48,16 @@ dx, dy from TextSymbolizer moves only the text, and not the shield. This behavio
 When symbols are still moving with dx/dy after setting unlock_image = true, try unlock-image="true" instead.
 
 ### placement
+
 `placement="line"` only means placement along a line for ShieldSymbolizer, whereas for TextSymbolizer it rotates the text too. Add the `spacing` parameter to get the ShieldSymbolizer to repeat along the line, otherwise `placement="line"` and `placement="point"` will look the same.
 
 ## Examples
 
 Setting up a sample shield symbolizer, from the Cascade Users of OpenSource GeoSpatial (CUGOS) list:
-http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba
+<http://groups.google.com/group/cugos/browse_thread/thread/b62b4890e1933bba>
 
 #### XML
+
 ```xml
 <ShieldSymbolizer
     face-name="DejaVu Sans Bold" size="6" fill="#000000"

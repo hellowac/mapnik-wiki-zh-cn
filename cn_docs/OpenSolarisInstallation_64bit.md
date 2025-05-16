@@ -2,13 +2,16 @@
 <!-- Version: 4 -->
 <!-- Last-Modified: 2010/12/08 14:52:04 -->
 <!-- Author: springmeyer -->
-For the main install page see: https://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation part InstallingCoreMapnikDependencies
+# Open solaris installation 64bit
+
+For the main install page see: <https://github.com/mapnik/mapnik/wiki/OpenSolarisInstallation> part InstallingCoreMapnikDependencies
 
 ## 6b: 64 bit - Postgres 8.3 from sun
 
 NOTE: next step on improving this approach will be to test using Postgres 9.0 and Python >= 2.6 from source, but all 64 bit.
 
 ### Getting 64 bit builds
+
 In a best case scenario building a tool 64 bit should be easy if:
 
 1. you can easily pass a few custom CFLAGS and LDFLAGS
@@ -30,8 +33,8 @@ But, lots can go wrong, including:
 3. older built tools (gcc, libtool, etc) are invoked and flags conflict in 64 bit mode, like -mt, or -M or -tag=CC
 4. the built scripts don't properly propogate your custom flags so that some code is built 32 bit and libraries fail with the -m64 flag
 5. some built scripts pull env variables from other apps compiled both 32 and 64 bit (like sun provided postgres)
-  * in this case you *must* have the 64bit commands on your path, such as PATH=/usr/postgres/bin/amd64
 
+* in this case you *must* have the 64bit commands on your path, such as PATH=/usr/postgres/bin/amd64
 
 To get started first we set up a few environment variables
 
@@ -236,7 +239,6 @@ Now set up postgis:
 
 Apply patch
 
-
 ```diff
     Index: Makefile
     ===================================================================
@@ -308,7 +310,6 @@ ensure:
     $ file /usr/local/lib/python2.6/site-packages/PIL/64/_imaging.so 
     /usr/local/lib/python2.6/site-packages/PIL/64/_imaging.so:      ELF 64-bit LSB dynamic lib AMD64 Version 1, dynamically linked, not stripped, no debugging information available
 
-
 Also can test PIL is 64 and PIC with:
 
     import ctypes
@@ -322,4 +323,4 @@ TileCache gocha:
     pfexec vim TileCache/Layer.py
     # replace import Image with import PIL.Image as Image
 
-More info: http://trac.osgeo.org/tilecache/ticket/26
+More info: <http://trac.osgeo.org/tilecache/ticket/26>

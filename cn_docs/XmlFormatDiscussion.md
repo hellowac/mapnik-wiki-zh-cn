@@ -1,3 +1,5 @@
+# Xml Format Discussion
+
 <!-- Name: XmlFormatDiscussion -->
 <!-- Version: 6 -->
 <!-- Last-Modified: 2008/09/08 17:15:20 -->
@@ -14,11 +16,12 @@ by adding a ticket with the keyword `XML`.
 If we do ticket [#58](https://github.com/mapnik/mapnik/issues/58) it would be consequent to make the denominators attributes too:
 
 ```xml
-    <Style name="some_style">
-        <Rule max_denominator="6000000" min_denominator="600000">
-            <Filter> ... </Filter>
-            <PointSymbolizer/>
-        </Rule>
-    </Style>
+<Style name="some_style">
+    <Rule max_denominator="6000000" min_denominator="600000">
+        <Filter> ... </Filter>
+        <PointSymbolizer/>
+    </Rule>
+</Style>
 ```
+
 (David Siegel)

@@ -1,3 +1,5 @@
+# Benchmark Notes
+
 Log of benchmarking runs using the `benchmark/run.cpp` tool available in Mapnik >= 2.2.x
 
 ## OS X 10.8, libstdc++, April 18, 2013, Lots of Chrome tabs open :)

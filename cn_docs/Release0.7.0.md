@@ -1,10 +1,10 @@
-Announcement: http://mapnik.org/news/2010/jan/19/release_0_7_0/
+# Mapnik 0.7.0 Changelog
+
+Announcement: <http://mapnik.org/news/2010/jan/19/release_0_7_0/>
 
 Overview of the 0.7.0 Milestone: milestone:0.7.0
 
 Complete list of [tickets closed against this milestone](https://github.com/mapnik/mapnik/issues?milestone=9&state=closed)
-
-## Mapnik 0.7.0 Changelog
 
 (Packaged from r1574)
 
@@ -14,11 +14,11 @@ Complete list of [tickets closed against this milestone](https://github.com/mapn
 
 - Gdal Plugin: Added support for Gdal overviews, enabling fast loading of > 1GB rasters ([#54]((https://github.com/mapnik/mapnik/issues/54)))
 
-    * Use the gdaladdo utility to add overviews to existing GDAL datasets
+    - Use the gdaladdo utility to add overviews to existing GDAL datasets
 
-- PostGIS: Added an optional 'geometry_table' parameter. The 'geometry_table' used by Mapnik to look up 
+- PostGIS: Added an optional 'geometry_table' parameter. The 'geometry_table' used by Mapnik to look up
   metadata in the geometry_columns and calculate extents (when the 'geometry_field' and 'srid' parameters
-  are not supplied). If 'geometry_table' is not specified Mapnik will attempt to determine the name of the 
+  are not supplied). If 'geometry_table' is not specified Mapnik will attempt to determine the name of the
   table to query based on parsing the 'table' parameter, which may fail for complex queries with more than
   one 'from' keyword. Using this parameter should allow for existing metadata and table indexes to be used
   while opening the door to much more complicated subqueries being passed to the 'table' parameter without
@@ -39,19 +39,19 @@ Complete list of [tickets closed against this milestone](https://github.com/mapn
   complex queries that may aggregate geometries to be kept fast by allowing proper placement of the bbox
   query to be used by indexes. ([#415](https://github.com/mapnik/mapnik/issues/415))
 
-    * Pass the bbox token inside a subquery like: !bbox!
+    - Pass the bbox token inside a subquery like: !bbox!
 
-    * e.g. (Select ST_Union(geom) as geom from table where ST_Intersects(geometry,!bbox!)) as map
+    - e.g. (Select ST_Union(geom) as geom from table where ST_Intersects(geometry,!bbox!)) as map
 
 - PostGIS Plugin: Added 'scale_denominator' substitution ability in sql query string ([#415](https://github.com/mapnik/mapnik/issues/415)/[#465](https://github.com/mapnik/mapnik/issues/465))
 
-    * Pass the scale_denominator token inside a subquery like: !scale_denominator!
+    - Pass the scale_denominator token inside a subquery like: !scale_denominator!
 
-    * e.g. (Select * from table where field_value > !scale_denominator!) as map
+    - e.g. (Select * from table where field_value > !scale_denominator!) as map
 
 - PostGIS Plugin: Added support for quoted table names (r1454) ([#393](https://github.com/mapnik/mapnik/issues/393))
 
-- PostGIS: Add a 'persist_connection' option (default true), that when false will release 
+- PostGIS: Add a 'persist_connection' option (default true), that when false will release
   the idle psql connection after datasource goes out of scope (r1337) ([#433](https://github.com/mapnik/mapnik/issues/433),[#434](https://github.com/mapnik/mapnik/issues/434))
 
 - PostGIS: Added support for BigInt (int8) postgres type ([#384](https://github.com/mapnik/mapnik/issues/384))
@@ -75,18 +75,18 @@ Complete list of [tickets closed against this milestone](https://github.com/mapn
 - PolygonSymbolizer: Added 'gamma' attribute to allow for dilation of polygon edges - a solution
   to gap artifacts or "ghost lines" between adjacent polygons and allows for slight sharpening of
   the edges of non overlapping polygons. Accepts any values but 0-1 is the recommended range.
-   
-- TextSymbolizer: Large set of new attributes: 'text_convert', 'line_spacing', 'character_spacing', 
+
+- TextSymbolizer: Large set of new attributes: 'text_convert', 'line_spacing', 'character_spacing',
   'wrap_character', 'wrap_before', 'horizontal_alignment', 'justify_alignment', and 'opacity'.
 
-    * More details at changesets: r1254 and r1341
+    - More details at changesets: r1254 and r1341
 
 - SheildSymbolizer: Added special new attributes: 'unlock_image', 'VERTEX' placement, 'no_text' and many
-  attributes previously only supported in the TextSymbolizer: 'allow_overlap', 'vertical_alignment', 
+  attributes previously only supported in the TextSymbolizer: 'allow_overlap', 'vertical_alignment',
   'horizontal_alignment', 'justify_alignment', 'wrap_width', 'wrap_character', 'wrap_before', 'text_convert',
   'line_spacing', 'character_spacing', and 'opacity'.
 
-    * More details at changeset r1341
+    - More details at changeset r1341
 
 - XML: Added support for using CDATA with libxml2 parser (r1364)
 

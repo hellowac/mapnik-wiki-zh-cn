@@ -1,7 +1,8 @@
+# OGR
+
 Mapnik's PluginArchitecture supports the use of different input formats.
 
 This plugin supports the [OGR](http://www.gdal.org/ogr/index.html) library in order to read multiple spatial vector formats.
-
 
 # Installation
 
@@ -14,26 +15,23 @@ To check if the ogr plugin built and was installed correctly, try the usual Pyth
 
     registered datasource : ogr
 
-
 # Parameters
 
-| *parameter*       | *value*  | *description* | *default* |
-|-------------------|----------|---------------|-----------|
-| file                  | string       | file to display | |
-| base                  | string       | base path where to search for file parameter | |
-| layer                 | string       | name of the layer to display (a single ogr datasource can contain multiple layers) | |
-| layer_by_index        | integer      | index of the layer to display, this becomes mandatory if no "layer" parameter is specified | |
-| layer_by_sql | string | SQL statement to execute against the OGR-datasource. The result set is used as the layer definition.|
-| multiple_geometries   | boolean      | whether to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon)| false |
-| encoding              | string       | internal file encoding | utf-8 |
-| string              | string | optional (replaces *file* parameter) string of literal OGR-datasource data, like GeoJSON |
-| extent | string | maximum extent of the layer. should be provided when an extent cannot be automatically determined by OGR |
-
-
+| _parameter_         | _value_ | _description_                                                                                                                                                                                                                           | _default_ |
+| ------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| file                | string  | file to display                                                                                                                                                                                                                         |           |
+| base                | string  | base path where to search for file parameter                                                                                                                                                                                            |           |
+| layer               | string  | name of the layer to display (a single ogr datasource can contain multiple layers)                                                                                                                                                      |           |
+| layer_by_index      | integer | index of the layer to display, this becomes mandatory if no "layer" parameter is specified                                                                                                                                              |           |
+| layer_by_sql        | string  | SQL statement to execute against the OGR-datasource. The result set is used as the layer definition.                                                                                                                                    |
+| multiple_geometries | boolean | whether to use multiple different objects or a single one when dealing with multi-objects (this is mainly related to how the label are used in the map, one label for a multi-polygon or one label for each polygon of a multi-polygon) | false     |
+| encoding            | string  | internal file encoding                                                                                                                                                                                                                  | utf-8     |
+| string              | string  | optional (replaces _file_ parameter) string of literal OGR-datasource data, like GeoJSON                                                                                                                                                |
+| extent              | string  | maximum extent of the layer. should be provided when an extent cannot be automatically determined by OGR                                                                                                                                |
 
 # Usage
 
-*Note*: The layer names of OGR datasources are returned by Mapnik in the error message when you do not provide the `layer` parameter.
+_Note_: The layer names of OGR datasources are returned by Mapnik in the error message when you do not provide the `layer` parameter.
 
 ```python
     >>> import mapnik
@@ -49,7 +47,6 @@ To check if the ogr plugin built and was installed correctly, try the usual Pyth
 
 However the best way to discover the layer names is to use the OGR provided utility called `ogrinfo`. For example running `ogrinfo` on a test GPX files provided with the OGR source code reveals the layer names and geometry types:
 
-
 ```sh
     $ ogrinfo test_point_line.gpx
     Had to open data source read-only.
@@ -63,7 +60,6 @@ However the best way to discover the layer names is to use the OGR provided util
 ```
 
 ## XML
-
 
 ```xml
         <Layer name="gps_waypoints">
@@ -108,7 +104,6 @@ However the best way to discover the layer names is to use the OGR provided util
 Plugin datasource initialization example code can be found on PluginArchitecture.
 
 A OGR datasource may be created as follows:
-
 
 ```cpp
     {

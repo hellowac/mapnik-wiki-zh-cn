@@ -18,59 +18,59 @@ This page is an attempt to standardize bands extraction and interpretation in a 
 
 The band parameter could have the following values:
 
- - `rgb[:<r>,<g>,<b>]`
+- `rgb[:<r>,<g>,<b>]`
 
    Red, green and blue channels found in input.
    Where `<r>`, `<g>` and `<b>` are integer representing 1-based band indexes.
- 
- - `rgb`
+
+- `rgb`
 
    Same as `rgb:1,2,3`
 
- - `rgba[:<r>,<g>,<b>,<a>]`
+- `rgba[:<r>,<g>,<b>,<a>]`
 
     Red, green, blue and alpha channels found in input.
     Where `<r>`, `<g>`, `<b>` and `<a>` are integer representing 1-based band indexes.
-   
- - `rgba`
+
+- `rgba`
 
     Same as `rgba:1,2,3,4`
 
- - `g[:<n>]`
+- `g[:<n>]`
 
    Grayscale channel found in input.
    Where `<n>` is an integer representing 1-based band indexes.
 
- - `ga[:<g>,<a>]`
+- `ga[:<g>,<a>]`
 
    Grayscale and alpha channels found in input.
    Where `<g>` and `<a>` are integer representing 1-based band indexes.
 
- - `d[:<n>]`
+- `d[:<n>]`
 
    Input values should not be interpreted by the reader.
    [RasterColorizer](RasterColorizer) could then be used to map values to colors.
    Where `<n>` is an integer representing 1-based band indexes.
 
- - `<n>`
+- `<n>`
 
    Same as `d:<n>`.
    **This is for backward compatibility with the GDAL plugin**
 
- - `auto`
+- `auto`
 
    The default value, if band parameter is omitted, enables guess based on input raster:
-   - If the input has 1 band, `g` assumed
-   - If the input has 2 band, `ga` assumed
-   - If the input has 3 bands, `rgb` assumed
-   - If the input has 4 bands, `rgba` assumed
+    - If the input has 1 band, `g` assumed
+    - If the input has 2 band, `ga` assumed
+    - If the input has 3 bands, `rgb` assumed
+    - If the input has 4 bands, `rgba` assumed
 
- - `-1`
+- `-1`
 
    Same as `auto`.
    **This is for backward compatibility with the GDAL plugin**
 
- - `0`
+- `0`
 
    Same as `auto`.
    This is for consistency (since band numbers are 1-based)

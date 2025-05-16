@@ -1,7 +1,8 @@
+# Introduction to GIS
+
 As one might guess from [Wikipedia's entry on GIS](http://en.wikipedia.org/wiki/Geographic_information_system), geographic information systems have a long and rich history.
 
 In this brief note, we will sketch out some basic GIS and GIS-related concepts that can be useful in making use of Mapnik!
-
 
 ----
 
@@ -23,7 +24,6 @@ TODO -- paras on choosing input data sources, whether here or in the MapDesign p
 
 As you start writing C++ or Python code, or tweaking existing XML files, you'll notice that Mapnik allows you to specify geospatial map projections like so:
 
-
     <Map srs="+proj=latlong +datum=WGS84 +k=1.0 +units=m +over +no_defs"> <!-- XML -->
 
 The "srs" attribute here stands for [Spatial reference system](http://en.wikipedia.org/wiki/Spatial_referencing_systems). In the "srs" above, note the specification of a map projection and a [datum](http://en.wikipedia.org/wiki/Datum_(geodesy) ) type.
@@ -34,9 +34,9 @@ For more information on map projections, read the proj.4 documentation, or check
 
 Related links
 
- * http://spatialreference.org/about/
- * http://en.wikipedia.org/wiki/Map_projection
- * http://trac.osgeo.org/proj/wiki/GenParms
+* <http://spatialreference.org/about/>
+* <http://en.wikipedia.org/wiki/Map_projection>
+* <http://trac.osgeo.org/proj/wiki/GenParms>
 
 ## Map Design
 

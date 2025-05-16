@@ -2,6 +2,8 @@
 <!-- Version: 2 -->
 <!-- Last-Modified: 2008/12/05 08:53:23 -->
 <!-- Author: sven -->
+# Max Scele Denominator
+
 Activates the rule, if [ScaleAndPpi scale] < MaxScaleDenominator + 1e-6
 
 Example:

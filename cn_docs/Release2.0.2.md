@@ -1,3 +1,5 @@
+# Mapnik 2.0.2 Changelog
+
 Released Aug 3, 2012
 
 (Packaged from [adb2ec741](https://github.com/mapnik/mapnik/commit/adb2ec741))
@@ -22,4 +24,4 @@ Released Aug 3, 2012
 
 - Fixed possible breakage registering plugins via python if a custom PREFIX or DESTDIR was used (e.g. macports/homebrew) ([#1171](https://github.com/mapnik/mapnik/issues/1171))
 
-- Fixed memory leak in the case of proj >= 4.8 and a projection initialization error ([#1173](https://github.com/mapnik/mapnik/issues/1173)) 
+- Fixed memory leak in the case of proj >= 4.8 and a projection initialization error ([#1173](https://github.com/mapnik/mapnik/issues/1173))

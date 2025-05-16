@@ -3,7 +3,6 @@
 <!-- Last-Modified: 2010/12/08 14:44:45 -->
 <!-- Author: springmeyer -->
 
-
 # Installing Mapnik and Dependencies on Open Solaris
 
 This guide will describe getting Mapnik and it's dependencies running on the latest Open Solaris release: *2009.06*.
@@ -20,8 +19,8 @@ If anyone does forge ahead using the old tools available from sun and can compil
 
 ## Testing Details
 
- * Tested running VirtualBox on OSX 10.6 (64 bit)
- * Tested using the latest OSOL iso release:
+* Tested running VirtualBox on OSX 10.6 (64 bit)
+* Tested using the latest OSOL iso release:
 
 ```sh
     $ cat /etc/release
@@ -33,7 +32,7 @@ If anyone does forge ahead using the old tools available from sun and can compil
 
 You will need at least:
 
- * Mapnik >= 2.x
+* Mapnik >= 2.x
 
 For 64 bit builds you need to apply patches from [#675](https://github.com/mapnik/mapnik/issues/675) and [#676](https://github.com/mapnik/mapnik/issues/676)
 
@@ -41,25 +40,26 @@ For 64 bit builds you need to apply patches from [#675](https://github.com/mapni
 
 This guide will rely heavily on existing tools for package management on Open Solaris
 
- * The 'pkg' tool supplied by Sun
- * The community 'pkgtool/pkgbuild' tools
- * The excellent WikiMedia Toolserver `spec` files for use with `pkgtool`
-
+* The 'pkg' tool supplied by Sun
+* The community 'pkgtool/pkgbuild' tools
+* The excellent WikiMedia Toolserver `spec` files for use with `pkgtool`
 
 ## OpenSolaris Gotchas
 
- * Don't use `sudo` use `pfexec` (alias sudo="pfexec")
- * Vim keystrokes are broken when logging in via ssh from a mac. But typing `:set nocp` fixes things.
- * Get info on CPUS: `prtdiag -v`
- * `-G` is the solaris compiler flag for creating a shared library, but recently gcc versions need `-shared`
- * If the `-shared` flag is missing then your libs will not be properly 'PIC" (position independent code) and this can be diagnosed with:
+* Don't use `sudo` use `pfexec` (alias sudo="pfexec")
+* Vim keystrokes are broken when logging in via ssh from a mac. But typing `:set nocp` fixes things.
+* Get info on CPUS: `prtdiag -v`
+* `-G` is the solaris compiler flag for creating a shared library, but recently gcc versions need `-shared`
+* If the `-shared` flag is missing then your libs will not be properly 'PIC" (position independent code) and this can be diagnosed with:
+
 ```
     elfdump -d /path/to/mylibrary.so | grep TEX # if PIC this should return nothing, if not PIC it will return a few rows
 ```
- * Library runtime linking works differently on solaris than linux.
-  * It is more like mac osx, where libraries hardcode runtime search paths at build time
-  * Except that Solaris needs a special flag to get this to work: `-R/usr/local/lib`
-  * To figure out where a library looks for depedents at runtime do:
+
+* Library runtime linking works differently on solaris than linux.
+* It is more like mac osx, where libraries hardcode runtime search paths at build time
+* Except that Solaris needs a special flag to get this to work: `-R/usr/local/lib`
+* To figure out where a library looks for depedents at runtime do:
 
     dump -Lv /usr/local/lib/mylibrary.so
 
@@ -118,9 +118,9 @@ Install Sun Studio and a few other sun provided base development tools you will 
     pfexec pkg install gcc-dev SUNWsshd SUNWgnu-readline SUNWcurl SUNWapr13 SUNWapu13 gd
 ```
 
- * NOTE: python26 is available only due to the pkg-update to `dev` which brings us to `snv_134`. If you can and want to compile your own python version, then updating to dev is less critical. 
+* NOTE: python26 is available only due to the pkg-update to `dev` which brings us to `snv_134`. If you can and want to compile your own python version, then updating to dev is less critical.
 
- * CRITICAL: boost_python and mapnik, compiled with gcc44 can run just fine, but if used with the sun proved python26 (which will be linked to a different version of libgcc) then exception handling will likely be broken: http://mail.python.org/pipermail/cplusplus-sig/2010-December/015822.html. At this time this guide uses this approach and their is not currently a clean solution for this problem (short of compiling python from source and all the issues that may arise from that).
+* CRITICAL: boost_python and mapnik, compiled with gcc44 can run just fine, but if used with the sun proved python26 (which will be linked to a different version of libgcc) then exception handling will likely be broken: <http://mail.python.org/pipermail/cplusplus-sig/2010-December/015822.html>. At this time this guide uses this approach and their is not currently a clean solution for this problem (short of compiling python from source and all the issues that may arise from that).
 
 ## Step 3: Setting up WikiMedia Toolserver's 'ts-specs'
 
@@ -233,7 +233,7 @@ We are almost ready to start cranking away on installs of the latest dev tools v
 
 One *critical* issue is that gnu tools have a circular dependency on *textinfo*. Luckily ts-specs can build up a base set of tools without using textinfo.
 
-We just need to patch our ts-specs directory to disable textinfo and bypass this circular dependency. 
+We just need to patch our ts-specs directory to disable textinfo and bypass this circular dependency.
 
 ```sh
     cd ts-specs
@@ -285,9 +285,7 @@ This was my first approach, and it worked great. But, I needed osm2pgsql to run 
 
 Go to -> [64bit](OpenSolarisInstallation_32bit)
 
-This approach attempts to get the whole stack running 64 bit, and 64 bit postgres and python are used from sun. Integrating with sun's postgres and python is really hairy, but postgres8.3 was desirable because it is known by the osm community to be faster than 8.4 for applying diffs with osm2pgsql and python from sun was desirable because it is highly customized to be able to run both 32 bit and 64 bit. However the *catch* with this approach is that mapnik's exceptions are broken (http://mail.python.org/pipermail/cplusplus-sig/2010-December/015822.html).
-
-
+This approach attempts to get the whole stack running 64 bit, and 64 bit postgres and python are used from sun. Integrating with sun's postgres and python is really hairy, but postgres8.3 was desirable because it is known by the osm community to be faster than 8.4 for applying diffs with osm2pgsql and python from sun was desirable because it is highly customized to be able to run both 32 bit and 64 bit. However the *catch* with this approach is that mapnik's exceptions are broken (<http://mail.python.org/pipermail/cplusplus-sig/2010-December/015822.html>).
 
 ## Step 7: Installing Mapnik
 

@@ -1,3 +1,5 @@
+# Debian Installation
+
 <!-- Name: DebianInstallation -->
 <!-- Version: 14 -->
 <!-- Last-Modified: 2011/06/08 10:41:44 -->
@@ -18,7 +20,7 @@ apt-get install libmapnik2-2.0 mapnik-utils
 
 A backport was done from Wheezy version
 
-Follow instructions from http://osm.fsffrance.org/debian-backports/README to install
+Follow instructions from <http://osm.fsffrance.org/debian-backports/README> to install
 
 ## Dependencies for Debian 7: Wheezy (stable) for Mapnik 2.2
 
@@ -82,9 +84,7 @@ Follow instructions from http://osm.fsffrance.org/debian-backports/README to ins
 
 *Note:* We use libjpeg62 instead of libjpeg8 above because libtiff package still depends on 62.
 
-
 ## Dependencies for Debian 5: Lenny
-
 
 ```sh
     sudo apt-get install -y g++ cpp \
@@ -125,7 +125,8 @@ Mapnik trunk:
 ```
 
 ### Optional: Build and install mapnik without root permissions
-The development libraries have to be present as described above. In the following example `/home/$USER/mapnik_svn` (`$DIR_MAPNIK_SVN`) is the directory where you want to check out the source and `/home/$USER/mapnik_inst` (`$DIR_MAPNIK_INSTALL`) is the directory you want to use for installation. 
+
+The development libraries have to be present as described above. In the following example `/home/$USER/mapnik_svn` (`$DIR_MAPNIK_SVN`) is the directory where you want to check out the source and `/home/$USER/mapnik_inst` (`$DIR_MAPNIK_INSTALL`) is the directory you want to use for installation.
 
 ```sh
     DIR_MAPNIK_SRC=/home/$USER/mapnik_svn
