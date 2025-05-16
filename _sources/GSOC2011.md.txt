@@ -1,0 +1,29 @@
+# Google Summer of Code 2011
+
+## Welcome
+
+### 2011 is the second year of the Mapnik project's involvement in GSOC
+
+We were accepted as an organization for 2011 program!
+
+[Three students were accepted](http://mapnik.org/news/2011/apr/25/three_students_mapnik_gsoc_2011/)
+
+### Help make it amazing
+
+* Keep a close eye on the schedule: <http://socghop.appspot.com/document/show/gsoc_program/google/gsoc2011/faqs#timeline>
+
+* *If you are a potential student*:
+* Review, comment, and add to the list of ideas at [GSOC2011/Ideas](GSOC2011_Ideas)
+* Sign up for the [mapnik-users](http://lists.berlios.de/mailman/listinfo/mapnik-users) mailing list and introduce yourself and your interests
+* Start compiling, running, and learning about the Mapnik codebase and most of all start asking questions!
+
+* *If you are a potential mentor*:
+* Create a profile at the gsoc site: <http://socghop.appspot.com/document/show/gsoc_program/google/gsoc2011/userguide#quick_all>
+* Start adding to [GSOC2011/Ideas](GSOC2011_Ideas) (and list your info)
+* Make note if you are interested in reviewing applications
+* Need an idea? See Steve8's: [Ideas](Ideas)
+
+### Administrator
+
+* Ian Dees (acting as organization administrator)
+* please feel free to contact with any questions by email: <iandees@gmail.com>

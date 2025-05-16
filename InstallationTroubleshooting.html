@@ -1,0 +1,893 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>Installation Troubleshooting - mapnik-wiki-zh-cn 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">mapnik-wiki-zh-cn 1.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">mapnik-wiki-zh-cn 1.0 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Introductory Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About-Mapnik.html">About Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik-Installation.html">Mapnik Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LearningMapnik.html">Learning Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notes-and-caveats.html">Notes and caveats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Related-projects-and-utilities.html">Related projects and utilties</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Mapnik API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XMLConfigReference.html">Mapnik configuration XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SymbologySupport.html">Symbology Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PluginArchitecture.html">Plugin Architecture</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/mapnik/mapnik/blob/master/INSTALL.md">Building Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik2.html">Mapnik2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapnikReleases.html">Mapnik Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/mapnik">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://webchat.freenode.net/?channels=#mapnik">#mapnik channel on irc.freenode.net Webchat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code-sprint.html">Code sprint</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://173.255.217.246:8000/mapnik_trac/wiki/MapnikCodeSprint/MCS01">Code sprint 2010 - Committers and Cartographers London, England, 24-26 September 2010</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/InstallationTroubleshooting.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section class="tex2jax_ignore mathjax_ignore" id="installation-troubleshooting">
+<h1>Installation Troubleshooting<a class="headerlink" href="#installation-troubleshooting" title="Link to this heading">¶</a></h1>
+<p>*See also: <a class="reference internal" href="UsingScons.html"><span class="doc std std-doc">UsingScons</span></a> for help on how to properly use SCons to find your dependencies.</p>
+<section id="build-errors">
+<h2>Build Errors<a class="headerlink" href="#build-errors" title="Link to this heading">¶</a></h2>
+<section id="implicit-dependency-not-found">
+<h3>Implicit dependency not found<a class="headerlink" href="#implicit-dependency-not-found" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: You get a scons build error like:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scons</span><span class="p">:</span> <span class="o">***</span> <span class="p">[</span><span class="n">bindings</span><span class="o">/</span><span class="n">python</span><span class="o">/</span><span class="n">mapnik_color</span><span class="o">.</span><span class="n">os</span><span class="p">]</span> <span class="n">Implicit</span> <span class="n">dependency</span> <span class="err">`</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="nb">float</span><span class="o">.</span><span class="n">h</span><span class="s1">&#39; not found, needed by target `bindings/python/mapnik_color.os&#39;</span><span class="o">.</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Either check out a new copy of mapnik or clear out the scons cache and re-configure:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>reset
+./configure
+make
+</pre></div>
+</div>
+</section>
+<section id="boost-object-base-initializer-was-not-declared-in-this-scope">
+<h3>boost: object_base_initializer was not declared in this scope<a class="headerlink" href="#boost-object-base-initializer-was-not-declared-in-this-scope" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: You get a compile error related to boost iostreams when building mapnik's shapefile or ogr plugin.</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>g++<span class="w"> </span>-o<span class="w"> </span>plugins/input/shape/shape.os<span class="w"> </span>-c<span class="w"> </span>-DHAVE_LIBXML2<span class="w"> </span>-DHAVE_PYCAIRO<span class="w"> </span>-<span class="w"> </span>ansi<span class="w"> </span>-Wall<span class="w"> </span>-pthread<span class="w"> </span>-ftemplate-depth-100<span class="w"> </span>-DLINUX<span class="w"> </span>-<span class="w"> </span>DBOOST_SPIRIT_THREADSAFE<span class="w"> </span>-DMAPNIK_THREADSAFE<span class="w"> </span>-DSVN_REVISION<span class="o">=</span><span class="m">1418</span><span class="w"> </span>-O0<span class="w"> </span>-<span class="w"> </span>fno-inline<span class="w"> </span>-g<span class="w"> </span>-DDEBUG<span class="w"> </span>-DMAPNIK_DEBUG<span class="w"> </span>-DSHAPE_MEMORY_MAPPED_FILE<span class="w"> </span>-fPIC<span class="w"> </span>-<span class="w"> </span>Iagg/include<span class="w"> </span>-Iinclude<span class="w"> </span>-I.<span class="w"> </span>-I/usr/include<span class="w"> </span>-I/usr/local/include<span class="w"> </span>-I/usr/<span class="w"> </span>include/freetype2<span class="w"> </span>-I/usr/include/libxml2<span class="w"> </span>-I/usr/include/pycairo<span class="w"> </span>-I/usr/<span class="w"> </span>include/cairo<span class="w"> </span>-I/usr/include/libpng12<span class="w"> </span>plugins/input/shape/shape.cpp<span class="w"> </span>/usr/local/include/boost/iostreams/device/mapped_file.hpp:43:<span class="w"> </span>error:<span class="w"> </span>redefinition<span class="w"> </span>of<span class="w">  </span>class<span class="w"> </span>boost::iostreams::mapped_file_base<span class="w"> </span>/usr/local/include/boost/iostreams/device/mapped_file.hpp:43:<span class="w"> </span>error:<span class="w"> </span>previous<span class="w"> </span>definition<span class="w"> </span>of<span class="w"> </span>âclass<span class="w"> </span>boost::iostreams::mapped_file_base
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Upgrade boost as this is a bug in boost 1.41. Or patch a single header like:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>cat<span class="w"> </span><span class="s">&lt;&lt; EOF &gt; iostream.patch</span>
+<span class="s">    --- boost/iostreams/device/mapped_file.hpp      2009-11-22 11:32:31.000000000 -0800</span>
+<span class="s">    +++ boost/iostreams/device/mapped_file.hpp      2009-11-22 11:24:25.000000000 -0800</span>
+<span class="s">    @@ -4,6 +4,9 @@</span>
+<span class="s">     // Distributed under the Boost Software License, Version 1.0. (See accompanying</span>
+<span class="s">     // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt.)</span>
+<span class="s">    </span>
+<span class="s">    +#ifndef BOOST_IOSTREAMS_MAPPED_FILE_HPP_INCLUDED</span>
+<span class="s">    +#define BOOST_IOSTREAMS_MAPPED_FILE_HPP_INCLUDED</span>
+<span class="s">    +</span>
+<span class="s">     #if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1020)</span>
+<span class="s">     # pragma once</span>
+<span class="s">     #endif</span>
+<span class="s">    @@ -591,3 +594,5 @@</span>
+<span class="s">     } } // End namespaces iostreams, boost.</span>
+<span class="s">    </span>
+<span class="s">     #include &lt;boost/config/abi_suffix.hpp&gt; // pops abi_suffix.hpp pragmas</span>
+<span class="s">    +</span>
+<span class="s">    +#endif // #ifndef BOOST_IOSTREAMS_MAPPED_FILE_HPP_INCLUDED</span>
+<span class="s">    EOF</span>
+<span class="w">    </span>patch<span class="w"> </span>-p0<span class="w"> </span>&lt;<span class="w"> </span>iostream.patch
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h3>boost: object_base_initializer was not declared in this scope<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: You get a compile error related to boost when building mapnik.</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>/usr/local/include/boost/python/numeric.hpp:121:<span class="w"> </span>instantiated<span class="w"> </span>from<span class="w"> </span>‘void<span class="w"> </span>boost::python::numeric::array::resize<span class="o">(</span>const<span class="w"> </span>Sequence<span class="p">&amp;</span><span class="o">)</span><span class="w"> </span><span class="o">[</span>with<span class="w"> </span><span class="nv">Sequence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>boost::python::tuple<span class="o">]</span>’<span class="w"> </span>/usr/local/include/boost/preprocessor/iteration/detail/local.hpp:<span class="w"> </span><span class="m">37</span>:<span class="w"> </span>instantiated<span class="w"> </span>from<span class="w"> </span>here<span class="w"> </span>/usr/local/include/boost/python/object_core.hpp:330:<span class="w"> </span>error:<span class="w"> </span>‘object_base_initializer’<span class="w"> </span>was<span class="w"> </span>not<span class="w"> </span>declared<span class="w"> </span><span class="k">in</span><span class="w"> </span>this<span class="w"> </span>scope
+<span class="w">    </span>scons:<span class="w"> </span>***<span class="w"> </span><span class="o">[</span>bindings/python/mapnik_shield_symbolizer.os<span class="o">]</span><span class="w"> </span>Error<span class="w"> </span><span class="m">1</span>
+<span class="w">    </span>scons:<span class="w"> </span>building<span class="w"> </span>terminated<span class="w"> </span>because<span class="w"> </span>of<span class="w"> </span>errors.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: You need to re-compile boost_python, correctly. Likely what is happening is that you have multiple python versions on your system, and when you built boost, the boost_python library compiled against a different set of headers than it linked against. Basically, <code class="docutils literal notranslate"><span class="pre">bjam</span></code>, the tool used to build boost, is not very smart about linking to python versions, and needs extra help. At the least you MUST pass the python version to <code class="docutils literal notranslate"><span class="pre">bjam</span></code> like:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>bjam<span class="w"> </span>--with-python<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">2</span>.6<span class="w"> </span><span class="o">[</span>...snip...<span class="o">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>And sometimes even that does not work. <em>HINT:</em> pass the <code class="docutils literal notranslate"><span class="pre">-d2</span></code> flag to see all the compile commands sent to <code class="docutils literal notranslate"><span class="pre">gcc</span></code> by <code class="docutils literal notranslate"><span class="pre">bjam</span></code> and you will likely see something like <code class="docutils literal notranslate"><span class="pre">-I/usr/include/python24</span></code> in the compile arguments when it should be <code class="docutils literal notranslate"><span class="pre">-I/usr/include/python26</span></code> (or some older version of python headers). If this happens then you can craft a full config file (with all possible python info) and pass a reference to that on the bjam command line. Docs on this are here: <a class="reference external" href="http://www.boost.org/doc/libs/1_42_0/libs/python/doc/building.html#configuring-boost-build">http://www.boost.org/doc/libs/1_42_0/libs/python/doc/building.html#configuring-boost-build</a>, and an example follows:</p></li>
+</ul>
+<p>Create a file called 'user-config.jam' (but change the python versions to be appropriate):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import option ;
+import feature ;
+if ! gcc in [ feature.values &lt;toolset&gt; ]
+{
+    using gcc ;
+}
+project : default-build &lt;toolset&gt;gcc ;
+using python
+     : 2.5 # version
+     : /usr/bin/python2.5 # cmd-or-prefix
+     : /usr/include/python2.5/ # includes
+     : /usr/lib/python2.5/config/ # a lib actually symlink
+     : &lt;toolset&gt;gcc # condition
+     ;
+libraries = --with-python ;
+</pre></div>
+</div>
+<p>Then, go recompile (just boost_python) and move the new library into place:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>./bjam --with-python -a -j2 --ignore-site-config --user-config=user-config.jam toolset=gcc stage -d2
+#install them by hand as it is faster
+sudo cp stage/lib/libboost_python.so* /usr/local/lib/
+</pre></div>
+</div>
+</section>
+<section id="dependency-not-found-but-once-worked-i-know">
+<h3>Dependency not found but once worked I know<a class="headerlink" href="#dependency-not-found-but-once-worked-i-know" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: One of the mapnik dependencies was once found by Scons, then cached, and even when you set the variable correctly (ie TIFF_INCLUDES=/correct/path) Scons does not find the library/include.</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>X...<span class="w"> </span>no<span class="w"> </span><span class="o">(</span>cached<span class="o">)</span>
+<span class="w">    </span>Could<span class="w"> </span>not<span class="w"> </span>find<span class="w"> </span>header<span class="w"> </span>or<span class="w"> </span>shared<span class="w"> </span>library<span class="w"> </span><span class="k">for</span><span class="w"> </span>X,<span class="w"> </span>exiting!
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Use the Scons option <code class="docutils literal notranslate"><span class="pre">--config=force</span></code> which will force Scons to forget about the old location used and honor your new command line variable/options.</p></li>
+</ul>
+</section>
+<section id="all-boost-libs-are-found-except-for-boost-thread">
+<h3>All boost libs are found except for boost_thread<a class="headerlink" href="#all-boost-libs-are-found-except-for-boost-thread" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: SCons apparently fails to find all boost libs except for boost_thread (or the last main C++ dependency checked) during the configure stage.</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">     </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>boost_program_options-mt...<span class="w"> </span>yes
+<span class="w">     </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>boost_thread-mt...<span class="w"> </span>no
+<span class="w">     </span>Could<span class="w"> </span>not<span class="w"> </span>find<span class="w"> </span>required<span class="w"> </span>header<span class="w"> </span>or<span class="w"> </span>shared<span class="w"> </span>library<span class="w"> </span><span class="k">for</span><span class="w"> </span>boost<span class="w"> </span>thread
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Likely do to hitting ctrl-c or otherwise aborting the configure stage, SCons internal <code class="docutils literal notranslate"><span class="pre">.sconf_temp/</span></code> have been messed up. Delete them and rebuild:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>rm<span class="w"> </span>-fR<span class="w"> </span>.sconf_temp
+</pre></div>
+</div>
+</section>
+<section id="boost-icu-linking-error-when-linking-libmapnik">
+<h3>Boost/ICU linking error when linking libmapnik<a class="headerlink" href="#boost-icu-linking-error-when-linking-libmapnik" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: undefined symbols in boost_regex when linking Mapnik</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">Undefined</span> <span class="n">symbols</span><span class="p">:</span>
+      <span class="s2">&quot;boost::re_detail::icu_regex_traits_implementation::do_transform(int const*, int const*, icu::Collator const*) const&quot;</span><span class="p">,</span> <span class="n">referenced</span> <span class="n">from</span><span class="p">:</span>
+      <span class="n">unsigned</span> <span class="n">short</span> <span class="n">const</span><span class="o">*</span> <span class="n">boost</span><span class="p">::</span><span class="n">re_detail</span><span class="p">::</span><span class="n">re_is_set_member</span><span class="o">&lt;</span><span class="n">unsigned</span> <span class="n">short</span> <span class="n">const</span><span class="o">*</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">boost</span><span class="p">::</span><span class="n">icu_regex_traits</span><span class="p">,</span> <span class="n">unsigned</span> <span class="n">long</span> <span class="n">long</span><span class="o">&gt;</span><span class="p">(</span><span class="n">unsigned</span> <span class="n">short</span> <span class="n">const</span><span class="o">*</span><span class="p">,</span> <span class="n">unsigned</span> <span class="n">short</span> <span class="n">const</span><span class="o">*</span><span class="p">,</span> <span class="n">boost</span><span class="p">::</span><span class="n">re_detail</span><span class="p">::</span><span class="n">re_set_long</span><span class="o">&lt;</span><span class="n">unsigned</span> <span class="n">long</span> <span class="n">long</span><span class="o">&gt;</span> <span class="n">const</span><span class="o">*</span><span class="p">,</span> <span class="n">boost</span><span class="p">::</span><span class="n">re_detail</span><span class="p">::</span><span class="n">regex_data</span><span class="o">&lt;</span><span class="nb">int</span><span class="p">,</span> <span class="n">boost</span><span class="p">::</span><span class="n">icu_regex_traits</span><span class="o">&gt;</span> <span class="n">const</span><span class="o">&amp;</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span><span class="ow">in</span> <span class="n">agg_renderer</span><span class="o">.</span><span class="n">os</span>
+      <span class="n">unsigned</span> <span class="n">short</span> <span class="n">const</span><span class="o">*</span> <span class="n">boost</span><span class="p">::</span><span class="n">re_detail</span><span class="p">::</span><span class="n">re_is_set_member</span><span class="o">&lt;</span><span class="n">unsigned</span> <span class="n">short</span> <span class="n">const</span><span class="o">*</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">boost</span><span class="p">::</span><span class="n">icu_regex_traits</span><span class="p">,</span> <span class="n">unsigned</span> <span class="n">long</span> <span class="n">long</span><span class="o">&gt;</span><span class="p">(</span><span class="n">unsigned</span> <span class="n">short</span> <span class="n">const</span><span class="o">*</span><span class="p">,</span> <span class="n">unsigned</span> <span class="n">short</span> <span class="n">const</span><span class="o">*</span><span class="p">,</span> <span class="n">boost</span><span class="p">::</span><span class="n">re_detail</span><span class="p">::</span><span class="n">re_set_long</span><span class="o">&lt;</span><span class="n">unsigned</span> <span class="n">long</span> <span class="n">long</span><span class="o">&gt;</span> <span class="n">const</span><span class="o">*</span><span class="p">,</span> <span class="n">boost</span><span class="p">::</span><span class="n">re_detail</span><span class="p">::</span><span class="n">regex_data</span><span class="o">&lt;</span><span class="nb">int</span><span class="p">,</span> <span class="n">boost</span><span class="p">::</span><span class="n">icu_regex_traits</span><span class="o">&gt;</span> <span class="n">const</span><span class="o">&amp;</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span><span class="ow">in</span> <span class="n">agg_renderer</span><span class="o">.</span><span class="n">os</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Likely, your boost library was built without regex+icu support. If you have built libboost from source, you can make your system's relevant .so files be recompiled with that support and reinstalled in place in the /lib/ folders. Go to libboost's source folder and run the following command (which you can find on <a class="reference external" href="http://github.com/mapnik/mapnik/wiki/Mapnik2#fromlatestrelease%7CMapnik2's">latest release install details</a>):</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>sudo<span class="w"> </span>./bjam<span class="w"> </span>--with-regex<span class="w"> </span><span class="nv">toolset</span><span class="o">=</span>gcc<span class="w"> </span>-sHAVE_ICU<span class="o">=</span><span class="m">1</span><span class="w"> </span>-sICU_PATH<span class="o">=</span>/usr/local/<span class="w"> </span>-a<span class="w"> </span>install
+</pre></div>
+</div>
+<p>Note the -a setting which makes your system's installed regex symbols to be updated in place.</p>
+</section>
+<section id="mapnik-build-error-due-to-outdated-icu">
+<h3>Mapnik build error due to outdated ICU<a class="headerlink" href="#mapnik-build-error-due-to-outdated-icu" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: Mapnik build fails with errors mentioning &quot;icu&quot; and Unicode stuff.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">src</span><span class="o">/</span><span class="n">expression_string</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span> <span class="n">In</span> <span class="n">member</span> <span class="n">function</span> <span class="s2">&quot;void mapnik::expression_string::operator()(const mapnik::regex_match_node&amp;) const&quot;</span><span class="p">:</span>
+    <span class="n">src</span><span class="o">/</span><span class="n">expression_string</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">79</span><span class="p">:</span> <span class="n">error</span><span class="p">:</span> <span class="s2">&quot;fromUTF32&quot;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">member</span> <span class="n">of</span> <span class="s2">&quot;icu_3_8::UnicodeString&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: The above errors tells basically that function UnicodeString::fromUTF32(...) used in Mapnik code isn't provided by your current ICU installation (above is 3.8). You need at least 4.1.4 (see <a class="reference external" href="https://github.com/mapnik/mapnik/issues/482">#482</a> for more details). Likely, you are compiling Mapnik from svn or a more recent version than the 7.0 branch with your distribution's (above was Ubuntu 8.04) outdated ICU package (version&lt;4.1.4). Remove update your ICU package or both remove your distribution's ICU package (eg. sudo apt-get remove libicu*) and compile and install ICU from source (from <a class="reference external" href="http://icu-project.org/download/">http://icu-project.org/download/</a>).</p></li>
+</ul>
+</section>
+<section id="harfbuzz-not-found">
+<h3>Harfbuzz not found<a class="headerlink" href="#harfbuzz-not-found" title="Link to this heading">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ brew install harfbuzz
+...
+$ ./configure
+...
+Checking for C++ library harfbuzz... no
+Could not find required header or shared library for harfbuzz
+...
+Exiting... the following required dependencies were not found:
+ - harfbuzz (HarfBuzz text shaping library | configure with HB_LIBS &amp; HB_INCLUDES)
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: HB_LIBS and HB_INCLUDES are directories, not cflags/ldflags, and HB_INCLUDES needs not to include the &quot;harfbuzz&quot; directory itself.</p></li>
+</ul>
+<p>If pkg-config says:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pkg-config --libs --cflags harfbuzz
+-I/usr/local/Cellar/harfbuzz/0.9.35_1/include/harfbuzz -L/usr/local/Cellar/harfbuzz/0.9.35_1/lib -lharfbuzz
+</pre></div>
+</div>
+<p>what you actually need is</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>./configure HB_LIBS=/usr/local/Cellar/harfbuzz/0.9.35_1/lib HB_INCLUDES=/usr/local/Cellar/harfbuzz/0.9.35_1/include
+</pre></div>
+</div>
+</section>
+<section id="icu-not-found">
+<h3>ICU not found<a class="headerlink" href="#icu-not-found" title="Link to this heading">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python
+$ import mapnik
+from _mapnik import * 
+ImportError: libicudata.so.38: cannot open shared object file: No such file or directory
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Mapnik's source code and libraries depend on Boost library (libboost*) which in turn -for the libboost regex library- depends on ICU library (libicu*). If you have compiled both libboost and libicu from source (eg. you wanted to build the bleeding edge Mapnik's svn/trunk) ; you likely did not remove your system's libicu* packages, build libboost first against those old ICU install libraries, then erased the latter libraries to install the ICU source newer libraries, which made libboost still linked to old libraries. In short, you should : a) build libUCI to update your system's installed version, b) build libboost that links to the new libUCIs.</p></li>
+<li><p><em>Solution</em>: This may simply occur because your mapnik library was compiled for a different ICU version than your currently installed ICU library. For example, your Mapnik was compiled and linked against libicu 3.8 while you have later on compiled and installed libicu v4.x. You should:</p>
+<ol class="arabic simple">
+<li><p>check that libicu is installed and same version as the error (find -name &quot;<em>libicu</em>.so*&quot; /usr/ ).</p></li>
+<li><p>If the error's mentioned ICU version and the find installed ICU version do not differ, try running &quot;$ ldconfig&quot; as a superuser ; restart python and see if the python import command works now.</p></li>
+<li><p>If ICU versions did differ (error message &lt;&gt; installed version), you have install a newer/older Mapnik or ICU libraries so that Mapnik's ICU requirements and your install library match. Typically, if you compiled and installed Mapnik from SVN/trunk and libicu was installed with your package manager, remove the latter package first (eg. apt-get remove libicu* on Debian/Ubuntu) and compile+install libicu from source (take newest ICU4C or SVN : <a class="reference external" href="http://site.icu-project.org/download">http://site.icu-project.org/download</a>).</p></li>
+</ol>
+</li>
+<li><p><em>Description</em>: International Components for Unicode libs are installed but Scons says they could not be found.</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>icuuc...<span class="w"> </span>no
+<span class="w">    </span>Could<span class="w"> </span>not<span class="w"> </span>find<span class="w"> </span>header<span class="w"> </span>or<span class="w"> </span>shared<span class="w"> </span>library<span class="w"> </span><span class="k">for</span><span class="w"> </span>icuuc,<span class="w"> </span>exiting!
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: This is the first C++ program that Scons 'finds' by actually compiling a sample program that links to it. <em>A g++ compiler</em> is therefore <em>required</em> for this step. On linux do <code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">g++</span></code> and on Mac os make sure you've installed XCode from the apple dev site.</p></li>
+<li><p><em>Solution</em>: If g++ is available then ICU must be in a custom location so set the paths to the libs and includes - ie. ICU_LIBS=/usr/local/lib and ICU_INCLUDES=/usr/local/include.</p></li>
+<li><p><em>Solution</em>: sudo aptitude install g++ make expat libicu-dev</p></li>
+</ul>
+</section>
+<section id="boost-not-found-during-scons-build">
+<h3>Boost not found during SCons build<a class="headerlink" href="#boost-not-found-during-scons-build" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: Often the various packages that install the Boost libraries do not properly symlink to the .so such that mapnik's Scons build process does not automatically find the boost libraries.</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>boost_filesystem-mt...<span class="w"> </span>no
+<span class="w">    </span>Could<span class="w"> </span>not<span class="w"> </span>find<span class="w"> </span>header<span class="w"> </span>or<span class="w"> </span>shared<span class="w"> </span>library<span class="w"> </span><span class="k">for</span><span class="w"> </span>boost_filesystem-mt,<span class="w"> </span>exiting!
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution Option 1</em>: Locate your libboost*.so files - usually located in /usr/lib, and find their naming scheme, then match it with the BOOST_TOOLKIT and BOOST_VERSION variables:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>$<span class="w"> </span>ls<span class="w"> </span>/usr/lib/libboost_*<span class="w"> </span>-la
+<span class="w">    </span>lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">      </span><span class="m">40</span><span class="w"> </span><span class="m">2008</span>-02-01<span class="w"> </span><span class="m">22</span>:46<span class="w"> </span>/usr/lib/libboost_filesystem-gcc-1_33_1.so<span class="w"> </span>-&gt;<span class="w"> </span>libboost_filesystem-gcc-1_33_1.so.1.33.1
+<span class="w">    </span>-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">   </span><span class="m">70152</span><span class="w"> </span><span class="m">2008</span>-01-17<span class="w"> </span><span class="m">04</span>:35<span class="w"> </span>/usr/lib/libboost_filesystem-gcc-1_33_1.so.1.33.1
+<span class="w">    </span>lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">      </span><span class="m">43</span><span class="w"> </span><span class="m">2008</span>-02-01<span class="w"> </span><span class="m">22</span>:46<span class="w"> </span>/usr/lib/libboost_filesystem-gcc-mt-1_33_1.so<span class="w"> </span>-&gt;<span class="w"> </span>libboost_filesystem-gcc-mt-1_33_1.so.1.33.1
+<span class="w">    </span>-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">   </span><span class="m">70248</span><span class="w"> </span><span class="m">2008</span>-01-17<span class="w"> </span><span class="m">04</span>:35<span class="w"> </span>/usr/lib/libboost_filesystem-gcc-mt-1_33_1.so.1.33.1
+<span class="w">    </span>lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">      </span><span class="m">36</span><span class="w"> </span><span class="m">2008</span>-02-01<span class="w"> </span><span class="m">22</span>:46<span class="w"> </span>/usr/lib/libboost_filesystem.so<span class="w"> </span>-&gt;<span class="w"> </span>libboost_filesystem-gcc-mt-1_33_1.so
+</pre></div>
+</div>
+<p>then, since 'threading' (mt) will be looked for by default you can match libboost*-gcc-mt-1_33_1.so with...</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>configure<span class="w"> </span><span class="nv">BOOST_TOOLKIT</span><span class="o">=</span>gcc<span class="w"> </span><span class="nv">BOOST_VERSION</span><span class="o">=</span>1_33
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution Option 2</em>: Locate your libboost* files - usually located in /usr/lib and manually create symlinks like:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>/usr/lib
+<span class="w">    </span>ln<span class="w"> </span>-s<span class="w"> </span>libboost_filesystem.so<span class="w"> </span>libboost_filesystem-mt.so
+<span class="w">    </span>ln<span class="w"> </span>-s<span class="w"> </span>libboost_regex.so<span class="w"> </span>libboost_regex-mt.so
+<span class="w">    </span>ln<span class="w"> </span>-s<span class="w"> </span>libboost_iostreams.so<span class="w"> </span>libboost_iostreams-mt.so
+<span class="w">    </span>ln<span class="w"> </span>-s<span class="w"> </span>libboost_program_options.so<span class="w"> </span>libboost_program_options-mt.so
+<span class="w">    </span>ln<span class="w"> </span>-s<span class="w"> </span>libboost_thread.so<span class="w"> </span>libboost_thread-mt.so
+<span class="w">    </span>ln<span class="w"> </span>-s<span class="w"> </span>libboost_python.so<span class="w"> </span>libboost_python-mt.so
+</pre></div>
+</div>
+<p>Note : if you experience trouble installing boost on <em>Ubuntu 7.04</em> see this mapnik-devel thread: <a class="reference external" href="https://lists.berlios.de/pipermail/mapnik-devel/2008-August/000700.html">https://lists.berlios.de/pipermail/mapnik-devel/2008-August/000700.html</a></p>
+<p>Note: If the SCons build process simply can't find an include or library and you are about to dive into the SConscript code to muck around, first read: <a class="reference external" href="http://www.scons.org/faq.php#SS_4_1">SCons can't find an include header</a></p>
+</section>
+<section id="boost-undefined-symbols">
+<h3>Boost undefined symbols<a class="headerlink" href="#boost-undefined-symbols" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: Boost builds without problems but Mapnik will not run due to missing Boost symbols (functions)
+<em>Related to filesystem symbols (with old libboost versions &lt;1.35)</em></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">Python</span> <span class="mf">2.4.3</span> <span class="p">(</span><span class="c1">#2, Aug 16 2008, 12:04:04)</span>
+    <span class="p">[</span><span class="n">GCC</span> <span class="mf">4.1.1</span> <span class="mi">20060724</span> <span class="p">(</span><span class="n">prerelease</span><span class="p">)</span> <span class="p">(</span><span class="mf">4.1.1</span><span class="o">-</span><span class="mi">4</span><span class="n">pclos2007</span><span class="p">)]</span> <span class="n">on</span> <span class="n">linux2</span>
+    <span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">mapnik</span>
+    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+      <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="err">?</span>
+      <span class="n">File</span> <span class="s2">&quot;/usr/lib/python2.4/site-packages/mapnik/__init__.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">31</span><span class="p">,</span> <span class="ow">in</span> <span class="err">?</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">_mapnik</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+    <span class="ne">ImportError</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libmapnik</span><span class="o">.</span><span class="n">so</span><span class="mf">.0.5</span><span class="p">:</span> <span class="n">undefined</span> <span class="n">symbol</span><span class="p">:</span> <span class="n">_ZN5boost10filesystem6detail15not_found_errorE</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: This problem is old and likely fixed now whatever libboost source or recent package you'd take. According to <a class="reference external" href="http://lists.boost.org/Archives/boost/2008/03/134329.php%7Cthis">page</a>, the problem was fixed from libboost v1.35. _Rebuild boost and then mapnik. If this does not fix the problem, confirm that your Boost version is compatible with the Mapnik release version, see: BoostCompatibility</p></li>
+</ul>
+<p><em>Related to regex symbols with ICU support</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="err">$</span> <span class="n">python</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">mapnik</span>
+    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+       <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+       <span class="n">File</span> <span class="s2">&quot;/usr/lib/python2.5/site-packages/mapnik/__init__.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">53</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+         <span class="kn">from</span><span class="w"> </span><span class="nn">_mapnik</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span> 
+    <span class="ne">ImportError</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libmapnik</span><span class="o">.</span><span class="n">so</span><span class="mf">.0.8</span><span class="p">:</span> <span class="n">undefined</span> <span class="n">symbol</span><span class="p">:</span> <span class="n">_ZN5boost11basic_regexIiNS_16icu_regex_traitsEE9do_assignEPKiS4_j</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Likely, your boost library was built without regex+icu support. If you have built libboost from source, you can make your system's relevant .so files be recompiled with that support and reinstalled in place in the /lib/ folders. Go to libboost's source folder and run the following command (which you can find on <a class="reference external" href="http://github.com/mapnik/mapnik/wiki/Mapnik2#fromlatestrelease%7CMapnik2's">latest release install details</a>):</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>sudo<span class="w"> </span>./bjam<span class="w"> </span>--with-regex<span class="w"> </span><span class="nv">toolset</span><span class="o">=</span>gcc<span class="w"> </span>-sHAVE_ICU<span class="o">=</span><span class="m">1</span><span class="w"> </span>-sICU_PATH<span class="o">=</span>/usr/local/<span class="w"> </span>-a<span class="w"> </span>install
+</pre></div>
+</div>
+<p>Note the -a setting which makes your system's installed regex symbols to be updated in place.
+You may need to run &quot;sudo ldconfig&quot; after that command, then retry &quot;import mapnik&quot; in python to check.</p>
+</section>
+<section id="input-plugin-not-found-error">
+<h3>Input/Plugin not found error<a class="headerlink" href="#input-plugin-not-found-error" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: You rebuild Mapnik with Scons without a problem but when importing the python module you get a strange error about one of the input plugins</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">mapnik</span>
+    <span class="n">dlopen</span><span class="p">(</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">mapnik</span><span class="o">/</span><span class="nb">input</span><span class="o">/</span><span class="n">postgis</span><span class="o">.</span><span class="n">input</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span> <span class="n">Library</span> <span class="ow">not</span> <span class="n">loaded</span><span class="p">:</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libboost_thread</span><span class="o">-</span><span class="n">mt</span><span class="o">-</span><span class="mf">1_35.</span><span class="n">dylib</span>
+      <span class="n">Referenced</span> <span class="n">from</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">mapnik</span><span class="o">/</span><span class="nb">input</span><span class="o">/</span><span class="n">postgis</span><span class="o">.</span><span class="n">input</span>
+      <span class="n">Reason</span><span class="p">:</span> <span class="n">image</span> <span class="ow">not</span> <span class="n">found</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">mapnik</span>
+    <span class="n">dlopen</span><span class="p">(</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">mapnik</span><span class="o">/</span><span class="nb">input</span><span class="o">/</span><span class="n">gdal</span><span class="o">.</span><span class="n">input</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span> <span class="n">Library</span> <span class="ow">not</span> <span class="n">loaded</span><span class="p">:</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libboost_thread</span><span class="o">-</span><span class="n">mt</span><span class="o">-</span><span class="mf">1_35.</span><span class="n">dylib</span>
+      <span class="n">Referenced</span> <span class="n">from</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">mapnik</span><span class="o">/</span><span class="nb">input</span><span class="o">/</span><span class="n">gdal</span><span class="o">.</span><span class="n">input</span>
+      <span class="n">Reason</span><span class="p">:</span> <span class="n">image</span> <span class="ow">not</span> <span class="n">found</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: It is likely that Scons did not rebuild a given plugin because GDAL or PostGIS was not found. So, either rebuild with Scons again, ensuring that those optional libraries are found, or simply manually remove the *.input plugin file.</p></li>
+</ul>
+</section>
+<section id="input-plugin-file-not-found-output">
+<h3>Input/Plugin 'file not found' output<a class="headerlink" href="#input-plugin-file-not-found-output" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: You rebuild Mapnik with Scons without a problem but when importing the python module you strange output about 'file not found'.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">mapnik</span>
+    <span class="n">file</span> <span class="ow">not</span> <span class="n">found</span>
+    <span class="n">file</span> <span class="ow">not</span> <span class="n">found</span>
+    <span class="n">file</span> <span class="ow">not</span> <span class="n">found</span>
+    <span class="n">file</span> <span class="ow">not</span> <span class="n">found</span>
+    <span class="n">file</span> <span class="ow">not</span> <span class="n">found</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: A previous installation of Mapnik was compiled with more Plugins that your latest build. Either rebuilt with INPUT_PLUGINS=all or delete the unused plugin libraries which can be found by typing:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">mapnik</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="n">mapnik</span><span class="o">.</span><span class="n">inputpluginspath</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="cairo-library-not-found">
+<h2>Cairo library not found<a class="headerlink" href="#cairo-library-not-found" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><em>Description</em>: Cairo plugin not found when rebuilding Mapnik with Cairo</p></li>
+<li><p><em>Solution</em>: Mapnik with Cairo needs the following libraries: libcairo2 libcairo2-dev python-cairo python-cairo-dev libcairomm-1.0-1 libcairomm-1.0-dev</p></li>
+</ul>
+</section>
+<section id="linking-errors">
+<h2>Linking Errors<a class="headerlink" href="#linking-errors" title="Link to this heading">¶</a></h2>
+<section id="the-libmapnik-shared-library-is-not-found">
+<h3>The libmapnik shared library is not found<a class="headerlink" href="#the-libmapnik-shared-library-is-not-found" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: This is a common problem on linux encountered immediately after installing mapnik for the first time.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="err">$</span> <span class="n">python</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">mapnik</span>
+    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+      <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+      <span class="n">File</span> <span class="s2">&quot;/usr/lib/python2.5/site-packages/mapnik/__init__.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">31</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">_mapnik</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+    <span class="ne">ImportError</span><span class="p">:</span> <span class="n">libmapnik</span><span class="o">.</span><span class="n">so</span><span class="mf">.0.5</span><span class="p">:</span> <span class="n">cannot</span> <span class="nb">open</span> <span class="n">shared</span> <span class="nb">object</span> <span class="n">file</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Add '/usr/local/lib' to the file 'etc/ld.so.conf' then run $ldconfig, log out and back in, and the shared library should be found. If you're running the 64bit version of Ubuntu, make the path '/usr/local/lib64'. Your Linux installation may have a directory '/etc/ld.so.conf.d' with additional configuration files - if this is the case and /'etc/ld.so.conf' contains &quot;include /etc/ld.so.conf.d/*.conf&quot;, add a new file to 'etc/ld.so.conf.d' containing &quot;/usr/local/lib&quot;.</p></li>
+</ul>
+</section>
+<section id="mapnik-not-found-after-building-on-an-amd64-or-x86-64bit-machine">
+<h3>Mapnik not found after building on an AMD64 or x86 64bit machine<a class="headerlink" href="#mapnik-not-found-after-building-on-an-amd64-or-x86-64bit-machine" title="Link to this heading">¶</a></h3>
+<p>Do the same as above but you'll just need to add an entry of '/usr/local/lib64' into one of the files inside '/etc/ld.so.conf.d/'</p>
+</section>
+</section>
+<section id="install-errors">
+<h2>Install Errors<a class="headerlink" href="#install-errors" title="Link to this heading">¶</a></h2>
+<section id="permission-denied-error">
+<h3>Permission Denied Error<a class="headerlink" href="#permission-denied-error" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: Installing mapnik libs requires root priveleges</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">scons</span><span class="p">:</span> <span class="n">Building</span> <span class="n">targets</span> <span class="o">...</span>
+    <span class="n">Install</span> <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;src/libmapnik.so&quot;</span> <span class="k">as</span> <span class="s2">&quot;/usr/local/lib/libmapnik.so.0.5.0&quot;</span>
+    <span class="n">scons</span><span class="p">:</span> <span class="o">***</span> <span class="p">[</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libmapnik</span><span class="o">.</span><span class="n">so</span><span class="mf">.0.5.0</span><span class="p">]</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libmapnik</span><span class="o">.</span><span class="n">so</span><span class="mf">.0.5.0</span><span class="p">:</span> <span class="n">Permission</span> <span class="n">denied</span>
+    <span class="n">scons</span><span class="p">:</span> <span class="n">building</span> <span class="n">terminated</span> <span class="n">because</span> <span class="n">of</span> <span class="n">errors</span><span class="o">.</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Run:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">sudo</span> <span class="n">python</span> <span class="n">scons</span><span class="o">/</span><span class="n">scons</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="python-errors">
+<h2>Python Errors<a class="headerlink" href="#python-errors" title="Link to this heading">¶</a></h2>
+<section id="python-typeerror">
+<h3>Python TypeError<a class="headerlink" href="#python-typeerror" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: In rare circumstances on Mac OS X the Mapnik python bindings are directly linked against a different version of Python then they were compiled against and you will see an error like:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="ne">TypeError</span><span class="p">:</span> <span class="fm">__init__</span><span class="p">()</span> <span class="n">should</span> <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="ow">not</span> <span class="s1">&#39;NoneType&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: In general you must rebuild Mapnik to link against the same version of Python as you are running. On Mac OS X recent versions of Mapnik &gt;= 0.7 should prevent this from happening, but just in case you can manually use the <code class="docutils literal notranslate"><span class="pre">FRAMEWORK_SEARCH_PATH</span></code> option to point SCons (see <a class="reference internal" href="UsingScons.html"><span class="doc std std-doc">UsingScons</span></a>) at the directory where the desired 'Python.framework' exists.</p></li>
+</ul>
+</section>
+<section id="python-version-mismatch">
+<h3>Python Version Mismatch<a class="headerlink" href="#python-version-mismatch" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: A <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Mismatch</span></code> can occur when the version of boost_python you installed is linked to a different version of Python that you are running and that Mapnik has linked to. This is most frequently seen when building boost with Macports, since Macports installs its own duplicate version of Python. See: <a class="reference external" href="http://trac.macports.org/ticket/17975">http://trac.macports.org/ticket/17975</a></p></li>
+<li><p>Since the Mapnik python bindings use boost python, both boost python (when it is compiled), and mapnik python must be linked against the same version of Python.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="err">$</span> <span class="n">python</span>
+    <span class="n">Python</span> <span class="mf">2.5</span> <span class="p">(</span><span class="n">r25</span><span class="p">:</span><span class="mi">51918</span><span class="p">,</span> <span class="n">Sep</span> <span class="mi">19</span> <span class="mi">2006</span><span class="p">,</span> <span class="mi">08</span><span class="p">:</span><span class="mi">49</span><span class="p">:</span><span class="mi">13</span><span class="p">)</span> 
+    <span class="p">[</span><span class="n">GCC</span> <span class="mf">4.0.1</span> <span class="p">(</span><span class="n">Apple</span> <span class="n">Computer</span><span class="p">,</span> <span class="n">Inc</span><span class="o">.</span> <span class="n">build</span> <span class="mi">5341</span><span class="p">)]</span> <span class="n">on</span> <span class="n">darwin</span>
+    <span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">mapnik</span>
+    <span class="n">Fatal</span> <span class="n">Python</span> <span class="n">error</span><span class="p">:</span> <span class="n">Interpreter</span> <span class="ow">not</span> <span class="n">initialized</span> <span class="p">(</span><span class="n">version</span> <span class="n">mismatch</span><span class="err">?</span><span class="p">)</span>
+    <span class="n">Abort</span> <span class="n">trap</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Usually you must rebuild boost_python so that it links against the correct version of Python, or you can use the <code class="docutils literal notranslate"><span class="pre">install_name_tool</span></code> to on-the-fly change the linking paths. In rarer cases you may need to rebuild Mapnik as well.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">otool</span></code> command is how you find out what is linked against what library. In the following example, Boost python and Mapnik are both linked against the Python25 Apple installed version of Python on 10.5 (which works):</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="err">$</span> <span class="n">otool</span> <span class="o">-</span><span class="n">L</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libboost_python</span><span class="o">-</span><span class="n">mt</span><span class="o">.</span><span class="n">dylib</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">Python</span>
+     <span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">2.5</span><span class="o">/</span><span class="n">Python</span> <span class="p">(</span><span class="n">compatibility</span> <span class="n">version</span> <span class="mf">2.5.0</span><span class="p">,</span> <span class="n">current</span> <span class="n">version</span> <span class="mf">2.5.1</span><span class="p">)</span>
+    <span class="err">$</span> <span class="n">otool</span> <span class="o">-</span><span class="n">L</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">2.5</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">mapnik</span><span class="o">/</span><span class="n">_mapnik</span><span class="o">.</span><span class="n">so</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">Python</span>
+    <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">2.5</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">mapnik</span><span class="o">/</span><span class="n">_mapnik</span><span class="o">.</span><span class="n">so</span><span class="p">:</span>
+     <span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">2.5</span><span class="o">/</span><span class="n">Python</span> <span class="p">(</span><span class="n">compatibility</span> <span class="n">version</span> <span class="mf">2.5.0</span><span class="p">,</span> <span class="n">current</span> <span class="n">version</span> <span class="mf">2.5.1</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>In Mapnik versions &gt;=0.7, the FRAMEWORK_SEARCH_PATH option can be used to direct mapnik to link against a specific version of python, for example to link against Python 26 installed from python.org (which is /Library/Frameworks/Python.framework) do:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">python</span> <span class="n">scons</span><span class="o">/</span><span class="n">scons</span><span class="o">.</span><span class="n">py</span> <span class="n">FRAMEWORK_SEARCH_PATH</span><span class="o">=/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Also see this discussion: <a class="reference external" href="https://github.com/mapnik/mapnik/wiki/MacPythonUpgradeIssues">MacPythonUpgradeIssues</a></p></li>
+</ul>
+</section>
+<section id="unknown-required-load-command">
+<h3>unknown required load command<a class="headerlink" href="#unknown-required-load-command" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: You installed mapnik on osx using a binary installer. When you import the Mapnik python bindings you get a generic 'no suitable image found'.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">mapnik</span>
+    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+      <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+      <span class="n">File</span> <span class="s2">&quot;/Library/Frameworks/Mapnik.framework/Versions/Current/Python/System/2.5/site-packages/mapnik/__init__.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">53</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">_mapnik</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+    <span class="ne">ImportError</span><span class="p">:</span> <span class="n">dlopen</span><span class="p">(</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Mapnik</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="n">Current</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="mf">2.5</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">mapnik</span><span class="o">/</span><span class="n">_mapnik</span><span class="o">.</span><span class="n">so</span><span class="p">,</span> <span class="mi">258</span><span class="p">):</span> <span class="n">Library</span> <span class="ow">not</span> <span class="n">loaded</span><span class="p">:</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Mapnik</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">0.7</span><span class="o">/</span><span class="n">Mapnik</span>
+      <span class="n">Referenced</span> <span class="n">from</span><span class="p">:</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Mapnik</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">0.7</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="mf">2.5</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">mapnik</span><span class="o">/</span><span class="n">_mapnik</span><span class="o">.</span><span class="n">so</span>
+      <span class="n">Reason</span><span class="p">:</span> <span class="n">no</span> <span class="n">suitable</span> <span class="n">image</span> <span class="n">found</span><span class="o">.</span>  <span class="n">Did</span> <span class="n">find</span><span class="p">:</span>
+     <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Mapnik</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">0.7</span><span class="o">/</span><span class="n">Mapnik</span><span class="p">:</span> <span class="n">unknown</span> <span class="n">required</span> <span class="n">load</span> <span class="n">command</span> <span class="mh">0x80000022</span>
+     <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Mapnik</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">0.7</span><span class="o">/</span><span class="n">Mapnik</span><span class="p">:</span> <span class="n">unknown</span> <span class="n">required</span> <span class="n">load</span> <span class="n">command</span> <span class="mh">0x80000022</span>
+     <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">Mapnik</span><span class="p">:</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">file</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: The key error is &quot;unknown required load command&quot; which indicates that you are likely trying to run libraries compiled for a different MAC OS X version. Go back and make sure you installed the correct Installer for your OS X version.</p></li>
+</ul>
+</section>
+</section>
+<section id="runtime-errors">
+<h2>Runtime Errors<a class="headerlink" href="#runtime-errors" title="Link to this heading">¶</a></h2>
+<section id="boost-assertion-error-in-visitation-assertion-false-failed">
+<h3>Boost assertion error in visitation: &quot;Assertion false failed&quot;<a class="headerlink" href="#boost-assertion-error-in-visitation-assertion-false-failed" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: When trying to run a program written in C/C++ that has been compiled against mapnik, boost throws an assertion error that looks like:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">boost</span><span class="o">/</span><span class="n">variant</span><span class="o">/</span><span class="n">detail</span><span class="o">/</span><span class="n">visitation_impl</span><span class="o">.</span><span class="n">hpp</span><span class="p">:</span><span class="mi">203</span><span class="p">:</span> <span class="n">typename</span> <span class="n">Visitor</span><span class="p">::</span><span class="n">result_type</span> <span class="n">boost</span><span class="p">::</span><span class="n">detail</span><span class="p">::</span><span class="n">variant</span><span class="p">::</span><span class="n">visitation_impl</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Visitor</span><span class="o">&amp;</span><span class="p">,</span> <span class="n">VPCV</span><span class="p">,</span> <span class="n">mpl_</span><span class="p">::</span><span class="n">true_</span><span class="p">,</span> <span class="n">NBF</span><span class="p">,</span> <span class="n">W</span><span class="o">*</span><span class="p">,</span> <span class="n">S</span><span class="o">*</span><span class="p">)</span> <span class="p">[</span><span class="k">with</span> <span class="n">W</span> <span class="o">=</span> <span class="n">mpl_</span><span class="p">::</span><span class="n">int_</span><span class="o">&lt;</span><span class="mi">20</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">S</span> <span class="o">=</span> <span class="n">boost</span><span class="p">::</span><span class="n">detail</span><span class="p">::</span><span class="n">variant</span><span class="p">::</span><span class="n">visitation_impl_step</span><span class="o">&lt;</span><span class="n">boost</span><span class="p">::</span><span class="n">mpl</span><span class="p">::</span><span class="n">l_iter</span><span class="o">&lt;</span><span class="n">boost</span><span class="p">::</span><span class="n">mpl</span><span class="p">::</span><span class="n">l_end</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">boost</span><span class="p">::</span><span class="n">mpl</span><span class="p">::</span><span class="n">l_iter</span><span class="o">&lt;</span><span class="n">boost</span><span class="p">::</span><span class="n">mpl</span><span class="p">::</span><span class="n">l_end</span><span class="o">&gt;</span> <span class="o">&gt;</span><span class="p">,</span> <span class="n">Visitor</span> <span class="o">=</span> <span class="n">boost</span><span class="p">::</span><span class="n">detail</span><span class="p">::</span><span class="n">variant</span><span class="p">::</span><span class="n">invoke_visitor</span><span class="o">&lt;</span><span class="n">mapnik</span><span class="p">::</span><span class="n">symbolizer_attributes</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">VPCV</span> <span class="o">=</span> <span class="n">const</span> <span class="n">void</span><span class="o">*</span><span class="p">,</span> <span class="n">NBF</span> <span class="o">=</span> <span class="n">boost</span><span class="p">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">mapnik</span><span class="p">::</span><span class="n">point_symbolizer</span><span class="p">,</span> <span class="n">mapnik</span><span class="p">::</span><span class="n">line_symbolizer</span><span class="p">,</span> <span class="n">mapnik</span><span class="p">::</span><span class="n">line_pattern_symbolizer</span><span class="p">,</span> <span class="n">mapnik</span><span class="p">::</span><span class="n">polygon_symbolizer</span><span class="p">,</span> <span class="n">mapnik</span><span class="p">::</span><span class="n">polygon_pattern_symbolizer</span><span class="p">,</span> <span class="n">mapnik</span><span class="p">::</span><span class="n">raster_symbolizer</span><span class="p">,</span> <span class="n">mapnik</span><span class="p">::</span><span class="n">shield_symbolizer</span><span class="p">,</span> <span class="n">mapnik</span><span class="p">::</span><span class="n">text_symbolizer</span><span class="p">,</span> <span class="n">mapnik</span><span class="p">::</span><span class="n">building_symbolizer</span><span class="p">,</span> <span class="n">mapnik</span><span class="p">::</span><span class="n">markers_symbolizer</span><span class="p">,</span> <span class="n">mapnik</span><span class="p">::</span><span class="n">glyph_symbolizer</span><span class="o">&gt;</span><span class="p">::</span><span class="n">has_fallback_type_</span><span class="p">,</span> <span class="n">typename</span> <span class="n">Visitor</span><span class="p">::</span><span class="n">result_type</span> <span class="o">=</span> <span class="n">void</span><span class="p">,</span> <span class="n">mpl_</span><span class="p">::</span><span class="n">true_</span> <span class="o">=</span> <span class="n">mpl_</span><span class="p">::</span><span class="n">bool_</span><span class="o">&lt;</span><span class="n">true</span><span class="o">&gt;</span><span class="p">]:</span> <span class="n">Assertion</span> <span class="err">`</span><span class="n">false</span><span class="s1">&#39; failed.</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: This indicates a problem in compiling against mapnik headers. It might be able to be fixed simply by completely cleaning and rebuilding the C++ program that is linking to mapnik. If that does not solve it then this indicates that key compiler flags that affect how inlining are done were likely missing from the compile commands for the program that is building against mapnik headers. You should be using the <code class="docutils literal notranslate"><span class="pre">mapnik-config</span> <span class="pre">--cflags</span></code> output when compiling c++ programs against mapnik to ensure that key flags like these are included (but these may change between mapnik releases to check <code class="docutils literal notranslate"><span class="pre">mapnik-config</span></code>):</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="o">-</span><span class="n">ansi</span> <span class="o">-</span><span class="n">Wall</span> <span class="o">-</span><span class="n">ftemplate</span><span class="o">-</span><span class="n">depth</span><span class="o">-</span><span class="mi">200</span> <span class="o">-</span><span class="n">DBOOST_SPIRIT_THREADSAFE</span> <span class="o">-</span><span class="n">DMAPNIK_THREADSAFE</span> <span class="o">-</span><span class="n">O3</span> <span class="o">-</span><span class="n">finline</span><span class="o">-</span><span class="n">functions</span> <span class="o">-</span><span class="n">Wno</span><span class="o">-</span><span class="n">inline</span> <span class="o">-</span><span class="n">DNDEBUG</span>
+</pre></div>
+</div>
+</section>
+<section id="proj-init-error">
+<h3>Proj_init_error<a class="headerlink" href="#proj-init-error" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: When trying to project a Map or Layer by setting a projection using the '+init=epsg:' syntax, mapnik returns a blank graphic. If mapnik was built in debug mode (scons.py DEBUG=y) then in your terminal (or apache logs when running the OGCServer) you will see a 'proj_init_error' during the map processing stage:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>start<span class="w"> </span>map<span class="w"> </span>processing<span class="w"> </span><span class="nv">bbox</span><span class="o">=</span>Envelope<span class="o">(</span>-180,-4.428969359331489,-94.42896935933148,81.14206128133704<span class="o">)</span>
+<span class="w">    </span>proj_init_error:failed<span class="w"> </span>to<span class="w"> </span>initialize<span class="w"> </span>projection<span class="w"> </span>with:+init<span class="o">=</span>epsg:4326
+<span class="w">    </span>end<span class="w"> </span>map<span class="w"> </span>processing
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Reinstall your proj4 library because this means that mapnik (through proj4) can't find the proj epsg file. It could also mean that you are improperly setting the 'allowedepsgcodes' in the OGCServer conf file (which need a trailing ',' to be a formal python tuple) or that you are simply trying to initiate a custom projection that does not have a corresponding epsg code (in this case you'll need to add a record to your proj epsg file).</p></li>
+<li><p><em>Note</em>: If you want to use the Google Spherical Mercator projection and initiate the projection with an epsg code add this text to your /usr/local/share/proj/epsg file:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>&lt;<span class="m">900913</span>&gt;<span class="w"> </span>+proj<span class="o">=</span>merc<span class="w"> </span>+a<span class="o">=</span><span class="m">6378137</span><span class="w"> </span>+b<span class="o">=</span><span class="m">6378137</span><span class="w"> </span>+lat_ts<span class="o">=</span><span class="m">0</span>.0<span class="w"> </span>+lon_0<span class="o">=</span><span class="m">0</span>.0<span class="w"> </span>+x_0<span class="o">=</span><span class="m">0</span>.0<span class="w"> </span>+y_0<span class="o">=</span><span class="m">0</span><span class="w"> </span>+k<span class="o">=</span><span class="m">1</span>.0<span class="w"> </span>+units<span class="o">=</span>m<span class="w"> </span>+nadgrids<span class="o">=</span>@null<span class="w"> </span>+no_defs<span class="w"> </span>+over&lt;&gt;<span class="w"> </span>
+</pre></div>
+</div>
+</section>
+<section id="node-map-not-found">
+<h3>Node 'Map' not found<a class="headerlink" href="#node-map-not-found" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: When trying to use XML entities within an xml mapfile the load_map() function fails on a strange error:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">Not</span> <span class="n">a</span> <span class="nb">map</span> <span class="n">file</span><span class="o">.</span> <span class="n">Node</span> <span class="s1">&#39;Map&#39;</span> <span class="ow">not</span> <span class="n">found</span><span class="o">.</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Rebuild mapnik with support for XML entities by installing libxml2 and specifying the XMLParser as a Scons option. Libxml2 is not the default parser used by Mapnik but the only one capable of handling XML entities (see: <a class="reference internal" href="#MapnikXMLsupport"><span class="xref myst">MapnikXMLsupport</span></a>)</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>install<span class="w"> </span><span class="nv">XMLPARSER</span><span class="o">=</span>libxml2
+</pre></div>
+</div>
+</section>
+<section id="expected-type-double-but-got">
+<h3>Expected type double but got<a class="headerlink" href="#expected-type-double-but-got" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><em>Description</em>: When loading an xml map, mapnik throws a parsing error like:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">Error</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">parse</span> <span class="n">attribute</span> <span class="s1">&#39;stroke-width&#39;</span><span class="o">.</span> <span class="n">Expected</span> <span class="nb">type</span> <span class="n">double</span> <span class="n">but</span> <span class="n">got</span> <span class="s1">&#39;.2&#39;</span> <span class="ow">in</span> <span class="n">LineSymbolizer</span> <span class="ow">in</span> <span class="n">style</span> <span class="s1">&#39;style&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Solution</em>: Notice in the above error that '.2' is a double type. This signals that C++ thinks doubles are not doubles, which is very bad. This is certainly an ABI compatibility problem and due to some problem compiling or linking. One potential cause is that libmapnik is linked to a different version of libstd++ or libgcc than libboost was or python or some other key mapnik dependency. So, most likely you have some bad duplicate installation of gcc/g++. Look around your system and try to clean it up otherwise no amount of recompiling mapnik will help. Once you find the culprit remove it and recompile mapnik. To find what libraries and linked against what other libraries use the <code class="docutils literal notranslate"><span class="pre">ldd</span></code> tool on linux and the <code class="docutils literal notranslate"><span class="pre">otool</span> <span class="pre">-L</span></code> command on os x.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, hellowac
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Installation Troubleshooting</a><ul>
+<li><a class="reference internal" href="#build-errors">Build Errors</a><ul>
+<li><a class="reference internal" href="#implicit-dependency-not-found">Implicit dependency not found</a></li>
+<li><a class="reference internal" href="#boost-object-base-initializer-was-not-declared-in-this-scope">boost: object_base_initializer was not declared in this scope</a></li>
+<li><a class="reference internal" href="#id1">boost: object_base_initializer was not declared in this scope</a></li>
+<li><a class="reference internal" href="#dependency-not-found-but-once-worked-i-know">Dependency not found but once worked I know</a></li>
+<li><a class="reference internal" href="#all-boost-libs-are-found-except-for-boost-thread">All boost libs are found except for boost_thread</a></li>
+<li><a class="reference internal" href="#boost-icu-linking-error-when-linking-libmapnik">Boost/ICU linking error when linking libmapnik</a></li>
+<li><a class="reference internal" href="#mapnik-build-error-due-to-outdated-icu">Mapnik build error due to outdated ICU</a></li>
+<li><a class="reference internal" href="#harfbuzz-not-found">Harfbuzz not found</a></li>
+<li><a class="reference internal" href="#icu-not-found">ICU not found</a></li>
+<li><a class="reference internal" href="#boost-not-found-during-scons-build">Boost not found during SCons build</a></li>
+<li><a class="reference internal" href="#boost-undefined-symbols">Boost undefined symbols</a></li>
+<li><a class="reference internal" href="#input-plugin-not-found-error">Input/Plugin not found error</a></li>
+<li><a class="reference internal" href="#input-plugin-file-not-found-output">Input/Plugin 'file not found' output</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cairo-library-not-found">Cairo library not found</a></li>
+<li><a class="reference internal" href="#linking-errors">Linking Errors</a><ul>
+<li><a class="reference internal" href="#the-libmapnik-shared-library-is-not-found">The libmapnik shared library is not found</a></li>
+<li><a class="reference internal" href="#mapnik-not-found-after-building-on-an-amd64-or-x86-64bit-machine">Mapnik not found after building on an AMD64 or x86 64bit machine</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#install-errors">Install Errors</a><ul>
+<li><a class="reference internal" href="#permission-denied-error">Permission Denied Error</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#python-errors">Python Errors</a><ul>
+<li><a class="reference internal" href="#python-typeerror">Python TypeError</a></li>
+<li><a class="reference internal" href="#python-version-mismatch">Python Version Mismatch</a></li>
+<li><a class="reference internal" href="#unknown-required-load-command">unknown required load command</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#runtime-errors">Runtime Errors</a><ul>
+<li><a class="reference internal" href="#boost-assertion-error-in-visitation-assertion-false-failed">Boost assertion error in visitation: &quot;Assertion false failed&quot;</a></li>
+<li><a class="reference internal" href="#proj-init-error">Proj_init_error</a></li>
+<li><a class="reference internal" href="#node-map-not-found">Node 'Map' not found</a></li>
+<li><a class="reference internal" href="#expected-type-double-but-got">Expected type double but got</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=f115507d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>

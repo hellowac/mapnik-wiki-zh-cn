@@ -1,0 +1,494 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>Sharing Map Styles - mapnik-wiki-zh-cn 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">mapnik-wiki-zh-cn 1.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">mapnik-wiki-zh-cn 1.0 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Introductory Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About-Mapnik.html">About Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik-Installation.html">Mapnik Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LearningMapnik.html">Learning Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notes-and-caveats.html">Notes and caveats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Related-projects-and-utilities.html">Related projects and utilties</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Mapnik API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XMLConfigReference.html">Mapnik configuration XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SymbologySupport.html">Symbology Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PluginArchitecture.html">Plugin Architecture</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/mapnik/mapnik/blob/master/INSTALL.md">Building Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik2.html">Mapnik2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapnikReleases.html">Mapnik Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/mapnik">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://webchat.freenode.net/?channels=#mapnik">#mapnik channel on irc.freenode.net Webchat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code-sprint.html">Code sprint</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://173.255.217.246:8000/mapnik_trac/wiki/MapnikCodeSprint/MCS01">Code sprint 2010 - Committers and Cartographers London, England, 24-26 September 2010</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/StyleShare.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <!-- Name: StyleShare -->
+<!-- Version: 15 -->
+<!-- Last-Modified: 2011/05/16 07:42:34 -->
+<!-- Author: Harry Wood -->
+<section class="tex2jax_ignore mathjax_ignore" id="sharing-map-styles">
+<h1>Sharing Map Styles<a class="headerlink" href="#sharing-map-styles" title="Link to this heading">¶</a></h1>
+<p>We need a proper app to share styles (Dane has started django code but its not ready yet)</p>
+<p>The idea behind this app is that all styles uploaded will have a sample rendered live, therefore:</p>
+<ul class="simple">
+<li><p>All styles must have relative paths or urls to resources</p></li>
+<li><p>Must either work with OSM data or work against uploaded sample WKT or GeoJSON</p></li>
+<li><p>Will be able to be downloaded as MML if that is their native format or exported as XML</p></li>
+<li><p>Will also be able to be serialized as python pickles (in the future)</p></li>
+</ul>
+<p>For now, list your styles here!</p>
+<section id="name-of-style-s">
+<h2>Name of Style(s)<a class="headerlink" href="#name-of-style-s" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: A unique descriptive for your style or set of styles.</p>
+<p><em>Type</em>: Cascadenik MML, Mapnik XML, or Python code</p>
+<p><em>URI</em>: If you host them somewhere (like github) then paste the url</p>
+<ul class="simple">
+<li><p>otherwise, paste inline...</p></li>
+</ul>
+<p><em>Minimum Mapnik Version</em>: What Mapnik version do these style depend on?</p>
+</section>
+<section id="openstreetmap-standard-style">
+<h2>OpenStreetMap &quot;standard&quot; style<a class="headerlink" href="#openstreetmap-standard-style" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: Current stylesheet used by openstreetmap.org for the &quot;standard&quot; default map</p>
+<p><em>Type</em>: CartoCSS</p>
+<p><em>URI</em>: <a class="reference external" href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a></p>
+</section>
+<section id="openstreetmap-france">
+<h2>OpenStreetMap France<a class="headerlink" href="#openstreetmap-france" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: <a class="reference external" href="http://tile.openstreetmap.fr">http://tile.openstreetmap.fr</a>  An early fork of the &quot;standard&quot; cartoCSS OpenStreetMap style with various interesting refinements including more shops, and fat roads and other details at zoom 19.</p>
+<p><em>Type</em>: CartoCSS</p>
+<p><em>URI</em>: <a class="reference external" href="https://github.com/cquest/osmfr-cartocss">https://github.com/cquest/osmfr-cartocss</a></p>
+</section>
+<section id="humanitarian-style">
+<h2>Humanitarian style<a class="headerlink" href="#humanitarian-style" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: A style by the Humanitarian OpenStreetMap Team emphasising details for developing world/crisis features from the &quot;Humanitarian Data Model&quot;. <a class="reference external" href="http://hot.openstreetmap.org/updates/2013-09-29_a_new_window_on_openstreetmap_data">More on the HOT blog</a></p>
+<p><em>Type</em>: CartoCSS</p>
+<p><em>URI</em>: <a class="reference external" href="https://github.com/hotosm/HDM-CartoCSS">https://github.com/hotosm/HDM-CartoCSS</a></p>
+</section>
+<section id="openstreetmap-old-stylesheets">
+<h2>OpenStreetMap Old stylesheets<a class="headerlink" href="#openstreetmap-old-stylesheets" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: The original mapnik XML style sheet used by openstreetmap.org</p>
+<p><em>Type</em>: Mapnik XML</p>
+<p><em>URI</em>: <a class="reference external" href="https://github.com/openstreetmap/mapnik-stylesheets">https://github.com/openstreetmap/mapnik-stylesheets</a></p>
+<p><em>Minimum Mapnik Version</em>: Mapnik 0.7.1 (recommended)</p>
+</section>
+<section id="osm-nl-styles">
+<h2>OSM NL Styles<a class="headerlink" href="#osm-nl-styles" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: Various styles powering <a class="reference external" href="http://www.openstreetmap.nl/">http://www.openstreetmap.nl/</a></p>
+<p><em>Type</em>: Mapnik XML</p>
+<p><em>URI</em>: <a class="reference external" href="http://git.openstreet.nl/index.cgi/stylesheets.git/">http://git.openstreet.nl/index.cgi/stylesheets.git/</a></p>
+<p><em>Minimum Mapnik Version</em>: Mapnik 0.7.1 <a class="reference external" href="http://help.openstreetmap.org/questions/1746/running-generate_image-gives-features-only-present-in-mapnik-version-071-error">see q</a></p>
+</section>
+<section id="mapquest">
+<h2>Mapquest<a class="headerlink" href="#mapquest" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: OSM style featured on open.mapquest.com .   MIT licensed</p>
+<p><em>URI</em>: <a class="reference external" href="https://github.com/MapQuest/MapQuest-Mapnik-Style">https://github.com/MapQuest/MapQuest-Mapnik-Style</a></p>
+<p><em>Minimum Mapnik Version</em> : 0.8.0  (see readme for other dependencies)</p>
+</section>
+<section id="haiti-osm-wms-overlay">
+<h2>Haiti OSM WMS overlay<a class="headerlink" href="#haiti-osm-wms-overlay" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: TODO</p>
+<p><em>Type</em>: Mapnik XML</p>
+<p><em>URI</em>: HaitiStyles</p>
+<p><em>Minimum Mapnik Version</em>: Mapnik 0.7.0</p>
+</section>
+<section id="hike-bike">
+<h2>Hike &amp; Bike<a class="headerlink" href="#hike-bike" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: A style for hiking and biking, with hiking symbols</p>
+<p><em>Type</em>: Cascadenik MML</p>
+<p><em>URI</em>: <a class="reference external" href="http://mapnik-utils.googlecode.com/svn/sandbox/cascadenik/hike_n_bike/">http://mapnik-utils.googlecode.com/svn/sandbox/cascadenik/hike_n_bike/</a> (style.mml)</p>
+<p><em>Minimum Mapnik Version</em>: 0.7.0</p>
+</section>
+<section id="by-night">
+<h2>By Night<a class="headerlink" href="#by-night" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: An overlay for showing lit (or non-lit) ways, buildings and areas</p>
+<p><em>Type</em>: Cascadenik MML</p>
+<p><em>URI</em>: <a class="reference external" href="http://mapnik-utils.googlecode.com/svn/sandbox/cascadenik/hike_n_bike/">http://mapnik-utils.googlecode.com/svn/sandbox/cascadenik/hike_n_bike/</a> (lighting.mml)</p>
+<p><em>Minimum Mapnik Version</em>: 0.6.0</p>
+</section>
+<section id="mapbox-osm-bright">
+<h2>MapBox OSM Bright<a class="headerlink" href="#mapbox-osm-bright" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: see <a class="reference external" href="https://github.com/mapbox/osm-bright/blob/master/README.md">https://github.com/mapbox/osm-bright/blob/master/README.md</a></p>
+<p><em>Type</em>: Carto MML</p>
+<p><em>URI</em>: <a class="reference external" href="https://github.com/mapbox/osm-bright.tm2">https://github.com/mapbox/osm-bright.tm2</a> is TileMill2 reboot of <a class="reference external" href="https://github.com/mapbox/osm-bright/">https://github.com/mapbox/osm-bright/</a></p>
+<p><em>Minimum Mapnik Version</em>: 2.0.0</p>
+</section>
+<section id="cascadenik-dev-osm-styles-aka-remapniking-osm">
+<h2>Cascadenik Dev OSM Styles, aka &quot;Remapniking OSM&quot;<a class="headerlink" href="#cascadenik-dev-osm-styles-aka-remapniking-osm" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: demo at: <a class="reference external" href="http://teczno.com/cascadenik-openstreetmap-II/">http://teczno.com/cascadenik-openstreetmap-II/</a></p>
+<p><em>Type</em>: Cascadenik MML</p>
+<p><em>URI</em>: <a class="reference external" href="http://mapnik-utils.googlecode.com/svn/trunk/serverside/cascadenik/openstreetmap/">http://mapnik-utils.googlecode.com/svn/trunk/serverside/cascadenik/openstreetmap/</a></p>
+<p><em>Minimum Mapnik Version</em>: 0.6.1</p>
+</section>
+<section id="tango">
+<h2>Tango<a class="headerlink" href="#tango" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: tango base style file, demo at: <a class="reference external" href="http://osm.tcweb.org/">http://osm.tcweb.org/</a></p>
+<p><em>Type</em>: Mapnik XML</p>
+<p><em>URI</em>: <a class="reference external" href="http://github.com/tclavier/mapnik">http://github.com/tclavier/mapnik</a></p>
+<p><em>Minimum Mapnik Version</em>: Mapnik 0.7.1</p>
+</section>
+<section id="wikimedia-toolserver">
+<h2>WikiMedia Toolserver<a class="headerlink" href="#wikimedia-toolserver" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: variety of styles used at <a class="reference external" href="http://toolserver.org/~osm/styles/">http://toolserver.org/~osm/styles/</a></p>
+<p><em>Type</em>: Mapnik XML</p>
+<p><em>URI</em>: <a class="reference external" href="http://svn.toolserver.org/svnroot/p_osm/styles/">http://svn.toolserver.org/svnroot/p_osm/styles/</a></p>
+<p><em>Minimum Mapnik Version</em>: Mapnik 0.7.1</p>
+</section>
+<section id="golf-overlay">
+<h2>Golf overlay<a class="headerlink" href="#golf-overlay" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: A render of golf course features, for golfers.</p>
+<p><em>URI</em>: <a class="reference external" href="https://github.com/rweait/Mapnik-golf-overlay">https://github.com/rweait/Mapnik-golf-overlay</a></p>
+<p><em>Minimum Mapnik Version</em>: Mapnik 2.0.0</p>
+</section>
+<section id="open-streets-style">
+<h2>Open Streets Style<a class="headerlink" href="#open-streets-style" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: A TileMill/Carto style for OpenStreetMap PostGIS databases that you can export later to XML Mapnik format.</p>
+<p><em>Type</em>: Carto MML</p>
+<p><em>URI</em>: <a class="reference external" href="https://github.com/mapbox/open-streets-style">https://github.com/mapbox/open-streets-style</a></p>
+<p><em>Minimum Mapnik Version</em>:  2.2.0</p>
+</section>
+<section id="openstreetmap-argentina">
+<h2>OpenStreetMap Argentina<a class="headerlink" href="#openstreetmap-argentina" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: A localized TileMill/Carto style for OpenStreetMap PostGIS databases that you can export later to XML Mapnik format. Forked from <a class="reference external" href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a></p>
+<p><em>Type</em>: Carto MML</p>
+<p><em>URI</em>: <a class="reference external" href="https://github.com/osm-ar/osm-ar-carto">https://github.com/osm-ar/osm-ar-carto</a></p>
+</section>
+<section id="veloroad">
+<h2>VeloRoad<a class="headerlink" href="#veloroad" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: VeloRoad style by Zverik is specifically made for printing in black and white at at least 150 dpi with a route overlayed. Contrast is high, labels are small and aplenty. You can see a demo at <a class="reference external" href="http://osmz.ru/veloroad.html">http://osmz.ru/veloroad.html</a></p>
+<p><em>Type</em>: Carto MML</p>
+<p><em>URI</em>: <a class="reference external" href="https://github.com/Zverik/veloroad">https://github.com/Zverik/veloroad</a></p>
+</section>
+<section id="hydda">
+<h2>Hydda<a class="headerlink" href="#hydda" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: Based on an old version of OSMBright, but patched to add more features such as piers, stadiums, pitches, and more. Colors set to allow for looking good when adding transparent red-yellow-green overlays. Apache licensed. See the stylesheet in action hosted by OpenStreetMap Sweden, and <a class="reference external" href="http://umap.openstreetmap.fr/en/map/new/#15/51.5281/-0.1213">viewable via umap</a></p>
+<p><em>Type</em>: Carto MML</p>
+<p><em>URI</em>: <a class="reference external" href="https://github.com/karlwettin/tilemill-style-hydda">https://github.com/karlwettin/tilemill-style-hydda</a></p>
+</section>
+<section id="osm-swiss">
+<h2>OSM swiss<a class="headerlink" href="#osm-swiss" title="Link to this heading">¶</a></h2>
+<p><em>Description</em>: Based on OSMBright. CC-BY-SA4.0. See it here <a class="reference external" href="http://umap.osm.ch/de/map/vegan-in-bern_76">http://umap.osm.ch/de/map/vegan-in-bern_76</a></p>
+<p><em>Type</em>: Carto MML</p>
+<p><em>URI</em>: <a class="reference external" href="https://github.com/xyztobixyz/OSM-Swiss-Style">https://github.com/xyztobixyz/OSM-Swiss-Style</a></p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, hellowac
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Sharing Map Styles</a><ul>
+<li><a class="reference internal" href="#name-of-style-s">Name of Style(s)</a></li>
+<li><a class="reference internal" href="#openstreetmap-standard-style">OpenStreetMap &quot;standard&quot; style</a></li>
+<li><a class="reference internal" href="#openstreetmap-france">OpenStreetMap France</a></li>
+<li><a class="reference internal" href="#humanitarian-style">Humanitarian style</a></li>
+<li><a class="reference internal" href="#openstreetmap-old-stylesheets">OpenStreetMap Old stylesheets</a></li>
+<li><a class="reference internal" href="#osm-nl-styles">OSM NL Styles</a></li>
+<li><a class="reference internal" href="#mapquest">Mapquest</a></li>
+<li><a class="reference internal" href="#haiti-osm-wms-overlay">Haiti OSM WMS overlay</a></li>
+<li><a class="reference internal" href="#hike-bike">Hike &amp; Bike</a></li>
+<li><a class="reference internal" href="#by-night">By Night</a></li>
+<li><a class="reference internal" href="#mapbox-osm-bright">MapBox OSM Bright</a></li>
+<li><a class="reference internal" href="#cascadenik-dev-osm-styles-aka-remapniking-osm">Cascadenik Dev OSM Styles, aka &quot;Remapniking OSM&quot;</a></li>
+<li><a class="reference internal" href="#tango">Tango</a></li>
+<li><a class="reference internal" href="#wikimedia-toolserver">WikiMedia Toolserver</a></li>
+<li><a class="reference internal" href="#golf-overlay">Golf overlay</a></li>
+<li><a class="reference internal" href="#open-streets-style">Open Streets Style</a></li>
+<li><a class="reference internal" href="#openstreetmap-argentina">OpenStreetMap Argentina</a></li>
+<li><a class="reference internal" href="#veloroad">VeloRoad</a></li>
+<li><a class="reference internal" href="#hydda">Hydda</a></li>
+<li><a class="reference internal" href="#osm-swiss">OSM swiss</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=f115507d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>

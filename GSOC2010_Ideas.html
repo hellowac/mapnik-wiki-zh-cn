@@ -1,0 +1,632 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>Google Summer of Code Ideas - 2010 - mapnik-wiki-zh-cn 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">mapnik-wiki-zh-cn 1.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">mapnik-wiki-zh-cn 1.0 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Introductory Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About-Mapnik.html">About Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik-Installation.html">Mapnik Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LearningMapnik.html">Learning Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notes-and-caveats.html">Notes and caveats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Related-projects-and-utilities.html">Related projects and utilties</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Mapnik API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XMLConfigReference.html">Mapnik configuration XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SymbologySupport.html">Symbology Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PluginArchitecture.html">Plugin Architecture</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/mapnik/mapnik/blob/master/INSTALL.md">Building Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik2.html">Mapnik2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapnikReleases.html">Mapnik Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/mapnik">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://webchat.freenode.net/?channels=#mapnik">#mapnik channel on irc.freenode.net Webchat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code-sprint.html">Code sprint</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://173.255.217.246:8000/mapnik_trac/wiki/MapnikCodeSprint/MCS01">Code sprint 2010 - Committers and Cartographers London, England, 24-26 September 2010</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/GSOC2010_Ideas.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section class="tex2jax_ignore mathjax_ignore" id="google-summer-of-code-ideas-2010">
+<h1>Google Summer of Code Ideas - 2010<a class="headerlink" href="#google-summer-of-code-ideas-2010" title="Link to this heading">¶</a></h1>
+<p>Mapnik will participate in Google Summer of Code 2010.</p>
+<p>Both potential students and mentors can start adding their ideas for potential projects here.</p>
+<p>See the main page for more details: <a class="reference internal" href="GSOC2010.html"><span class="doc std std-doc">GSOC2010</span></a></p>
+<p>See also steve8's ideas page: <a class="reference internal" href="Ideas.html"><span class="doc std std-doc">Ideas</span></a></p>
+<section id="project-ideas">
+<h2>Project Ideas<a class="headerlink" href="#project-ideas" title="Link to this heading">¶</a></h2>
+</section>
+<hr class="docutils" />
+<section id="results">
+<h2>Results<a class="headerlink" href="#results" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><em>Mapnik Python3k Support</em>: Done: see <a class="reference internal" href="Python3k.html"><span class="doc std std-doc">Python3k</span></a></p></li>
+<li><p><em>Layer Composites</em>: Too hard for a GSOC student, but hopefully will be tackled by core devs soon</p></li>
+<li><p><em>Better Print Support</em>: GSOC Student Carlos finished adding scale_factor to agg_renderer and wrote a custom svg_renderer (also see: <a class="reference external" href="https://github.com/thjc/mapnik-svg">https://github.com/thjc/mapnik-svg</a>)</p></li>
+<li><p><em>Support for outputting hit-areas</em>:  GSOC Student Herm created <a class="reference internal" href="MetaWriter.html"><span class="doc std std-doc">MetaWriter</span></a></p></li>
+<li><p><em>Processnik</em>: DevSeed wrote something like this, see <a class="reference external" href="http://tilemill.com">http://tilemill.com</a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="mapnik-python3k-support">
+<h2>Mapnik Python3k Support<a class="headerlink" href="#mapnik-python3k-support" title="Link to this heading">¶</a></h2>
+<section id="description">
+<h3>Description<a class="headerlink" href="#description" title="Link to this heading">¶</a></h3>
+<p>Mapnik uses Boost.Python for its python bindings. Boost.Python is written in C++ and recently added support for Python 3.x based on the excellent <a class="reference external" href="http://socghop.appspot.com/gsoc/student_project/show/google/gsoc2009/boost/t124021999037">2009 Google Summer of Code project by Haoyu Bai</a> (mentored by Stefan Seefeld). An amazing addition to the Mapnik library would be following up on this work and applying it to Mapnik for full python 3.x support.</p>
+<p>In addition, if interest and time this project could look at exposing more pythonic access to Mapnik C++ objects, perhaps using a more declarative style (<a class="reference external" href="https://github.com/mapnik/mapnik/issues/459">#459</a>) and extending wrapping of key object like r1740.</p>
+</section>
+<section id="how-it-would-benefit-mapnik-project">
+<h3>How it would benefit Mapnik Project<a class="headerlink" href="#how-it-would-benefit-mapnik-project" title="Link to this heading">¶</a></h3>
+<p>Mapnik would be compatible with both Python 2.x and Python 3.x, paving the way for better integration with other leading python applications. Better python style would encourage faster and funner development.</p>
+</section>
+<section id="what-student-would-learn">
+<h3>What student would learn<a class="headerlink" href="#what-student-would-learn" title="Link to this heading">¶</a></h3>
+<p>The student would learn about the latest advances in Boost Python, the intricacies of Mapnik's Python bindings, and overall very valuable skills that could be applied to a range of other projects that have yet to upgrade to Python 3.x.</p>
+</section>
+<section id="submitter">
+<h3>Submitter<a class="headerlink" href="#submitter" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="http://dbsgeo.com">Dane Springmeyer</a></p>
+</section>
+<section id="possible-mentors">
+<h3>Possible Mentors<a class="headerlink" href="#possible-mentors" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="http://dbsgeo.com">Dane Springmeyer</a></p>
+</section>
+<section id="technical-issues">
+<h3>Technical Issues<a class="headerlink" href="#technical-issues" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>See <a class="reference external" href="https://github.com/mapnik/mapnik/issues/334">ticket #334</a> for more details</p></li>
+<li><p>-- springmeyer - March 12th,2010</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<hr class="docutils" />
+<section id="layer-composites">
+<h2>Layer Composites<a class="headerlink" href="#layer-composites" title="Link to this heading">¶</a></h2>
+<section id="id1">
+<h3>Description<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>Mapnik layers should be able to interact with one another just like layers in Photoshop. They could have transfer modes (e.g. screen, hard light, darken), masks, and groups. The XML description for this would be backward-compatible with the current Mapnik stylesheet language, but when new markup is added, such as a <em>mode</em> or <em>opacity</em> attribute on a layer, a <em>Group</em> element around a group of layers, or a <em>Mask</em> layer inside another layer, new behaviors could be seen.</p>
+</section>
+<section id="id2">
+<h3>How it would benefit Mapnik Project<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<p>Mapnik would natively create complex, layered maps like the amazing <a class="reference external" href="http://wiki.openstreetmap.org/wiki/TopOSM">TopOSM</a>.</p>
+</section>
+<section id="id3">
+<h3>What student would learn<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<p>The student would learn the internals of Mapnik and the math and complexity behind Photoshop-style image compositing.</p>
+</section>
+<section id="id4">
+<h3>Submitter<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="http://mike.teczno.com">Mike Migurski</a> (<a class="reference external" href="mailto:mike&#37;&#52;&#48;stamen&#46;com">mike<span>&#64;</span>stamen<span>&#46;</span>com</a>)</p>
+</section>
+<section id="id5">
+<h3>Possible Mentors<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<p>Unsure who would be a willing mentor - <a class="reference external" href="http://mike.teczno.com">I</a> know what would be a great-looking end result and could help with the math and cartography and XML format bits, but I can't offer C++ help of any kind. Maybe this is a bidirectional mentorship? =)</p>
+</section>
+<section id="id6">
+<h3>Technical Issues<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Maybe is possible to use other free software (like imagemagick) instead Photoshop to study layer composing, i'm interesting to develop this idea, i have a little knowledge of C++ but i can study it in these months before GSOC will start</p></li>
+<li><p>-- luca delucchi - March 11, 2009</p></li>
+<li><p>GRASS GIS made something similar with <a class="reference external" href="http://grass.osgeo.org/grass64/manuals/html64_user/r.his.html">r.his</a></p></li>
+<li><p>-- luca delucchi - March 12, 2009</p></li>
+<li><p>Seems perhaps related to <a class="reference external" href="https://github.com/mapnik/mapnik/issues/314">#314</a></p></li>
+<li><p>-- springmeyer - March 12, 2009</p></li>
+<li><p>TopOSM does indeed use ImageMagick for compositing, so that may be a good thing to look at. See <a class="reference external" href="http://wiki.openstreetmap.org/wiki/TopOSM/Details">http://wiki.openstreetmap.org/wiki/TopOSM/Details</a> for more info about how it is done.</p>
+<ul>
+<li><p>-- Lars Ahlzen - March 13, 2010</p></li>
+</ul>
+</li>
+<li><p>See also: <a class="reference external" href="http://wiki.openstreetmap.org/wiki/User:Kobezda/GSoC">http://wiki.openstreetmap.org/wiki/User:Kobezda/GSoC</a></p>
+<ul>
+<li><p>-- Dane Springmeyer - April 6, 2010</p></li>
+</ul>
+</li>
+<li><p>Potential spec could look like: <a class="reference internal" href="Ideas_Compositing.html"><span class="doc std std-doc">Ideas/Compositing</span></a></p>
+<ul>
+<li><p>-- Dane Springmeyer - April 6, 2010</p></li>
+</ul>
+</li>
+<li><p>Good brainstorming thread on issues around compositing on #mapnik April 7th: <a class="reference external" href="http://mapnik.dbsgeo.com/mapnik_logs/2010/04/07/">http://mapnik.dbsgeo.com/mapnik_logs/2010/04/07/</a></p></li>
+<li><p>-- Dane Springmeyer - April 7, 2010</p></li>
+<li><p>Ideas/Compositing - shawnbot's idea around a potential syntax</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<hr class="docutils" />
+<section id="better-print-support">
+<h2>Better Print Support<a class="headerlink" href="#better-print-support" title="Link to this heading">¶</a></h2>
+<section id="id7">
+<h3>Description<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<p>Through the growth of projects using Mapnik rendering, like <a class="reference external" href="http://OpenStreetMap.org">http://OpenStreetMap.org</a>, <a class="reference external" href="http://Walking-Papers.org">http://Walking-Papers.org</a>, and <a class="reference external" href="http://MapOSMatic.org">http://MapOSMatic.org</a>, more and more users are looking to print out Mapnik cartography. Target formats are large paper plots or other variable-resolution digital formats (vectors like PDF/SVG). It is an exciting and powerful thing to be able to use the same renderer for web cartography as multi-resolution cartography, and due to Mapnik's solid Cairo Rendering backend the foundation is in place for multi-resolution output. But currently Mapnik has a few limits which hold back optimal print and vector output.</p>
+<p>Potential subtopics include:</p>
+<ul class="simple">
+<li><p>Mapnik's understanding of units could be expanded beyond just pixels (<a class="reference external" href="https://github.com/mapnik/mapnik/issues/389">#389</a>)</p></li>
+<li><p>Users could gain hooks into the Mapnik rendering process to control scaling directives (<a class="reference external" href="https://github.com/mapnik/mapnik/issues/343">#343</a>), and tune currently hardcoded map scale assumptions (<a class="reference external" href="https://github.com/mapnik/mapnik/issues/196">#196</a>)</p></li>
+<li><p>More internal objects could be logically scalable</p></li>
+<li><p>e.g. we need to be able to scale raster graphics which should be feasible (not going to look very good, but still needed: see <a class="reference external" href="https://github.com/mapnik/mapnik/issues/155">#155</a>)</p></li>
+<li><p>and ideally need scalable vector symbols as per <a class="reference external" href="https://github.com/mapnik/mapnik/issues/320">#320</a> (this is likely out of the scope of a GSOC project but should be considered).</p></li>
+<li><p>Other cool stuff can (and should for proper paper output) be drawn on the map: <a class="reference external" href="https://github.com/mapnik/mapnik/issues/358">#358</a> (see also <a class="reference internal" href="Legending.html"><span class="doc std std-doc">Legending</span></a>)</p></li>
+<li><p>Lastly, certain limitations exist in the Cairo API Mapnik uses that might be able to be addressed by student research/coding:</p></li>
+<li><p>notably Cairo does not currently embedded fonts in SVG output but rather falls back to vectors to represent fonts.(<a class="reference external" href="https://github.com/mapnik/mapnik/issues/535">#535</a>)</p></li>
+</ul>
+<p>So, to recap Mapnik output could be easily adjustable to various scales and point sizes, use vector or multi-scale symbolizers (shields, points, texture fills, etc), svg icons, etc. SVG supports text on a path, perhaps this could be used in the output. Something like scale-9 might be useful for highway shields: <a class="reference external" href="http://www.sephiroth.it/tutorials/flashPHP/scale9/">http://www.sephiroth.it/tutorials/flashPHP/scale9/</a> ... all this should be documented, too! In combination with cascadenik, maybe this uses the CSS media attributes, and could be extended to other changes in resolution like mobile cartography too.</p>
+</section>
+<section id="id8">
+<h3>How it would benefit Mapnik Project<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<p>Mapnik would continue to be an attractive way to structure and process cartographic information and a single stylesheet could be generalized and applicable in multiple contexts.</p>
+</section>
+<section id="id9">
+<h3>What student would learn<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<p>The student would learn the internals of Mapnik (AGG, Boost etc) and the subtleties of multi-scale and multi-resolution rendering. There's a tension between the accuracy of pixels and the reusable nature of measurements specified in points, inches, millimeters etc. that will be very familiar to users and authors of graphical software. The student would learn all that.</p>
+</section>
+<section id="id10">
+<h3>Submitter<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="http://www.tom-carden.co.uk">Tom Carden</a> (<a class="reference external" href="mailto:tom&#37;&#52;&#48;tom-carden&#46;co&#46;uk">tom<span>&#64;</span>tom-carden<span>&#46;</span>co<span>&#46;</span>uk</a>)</p>
+</section>
+<section id="id11">
+<h3>Possible Mentors<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<p>As above, <a class="reference external" href="http://www.tom-carden.co.uk">I</a> would be willing to mentor this from a sanity, usefulness and syntax point of view but not really from a C++ internals point of view.</p>
+<p>I would be interested in co-mentoring this project from an Mapnik/C++ internals point of view</p>
+<ul class="simple">
+<li><p>-- dane springmeyer - March 21, 2010</p></li>
+</ul>
+</section>
+<section id="id12">
+<h3>Technical Issues<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>This could be done in tandem with two students/mentors with OpenStreetMap</p></li>
+<li><p><strong>Important</strong>: see discussion also at: <a class="reference external" href="http://wiki.openstreetmap.org/wiki/GSoC_Project_Ideas_2010#Paper_Output_Projects">http://wiki.openstreetmap.org/wiki/GSoC_Project_Ideas_2010#Paper_Output_Projects</a></p></li>
+<li><p>-- dane springmeyer - March 21, 2010</p></li>
+<li><p>Existing tickets that could be advanced/started as part of this project include: <a class="reference external" href="https://github.com/mapnik/mapnik/issues/343">#343</a> and <a class="reference external" href="https://github.com/mapnik/mapnik/issues/389">#389</a></p></li>
+<li><p>--dane springmeyer - March 21, 2010</p></li>
+<li><p>This has many linkages with the idea of <a class="reference external" href="http://wiki.osgeo.org/wiki/OSGeo_Cartographic_Engine#Ideas_for_Summer_of_Code_2010_Project">OSGEO Cartographic Library</a></p></li>
+<li><p>--dane springmeyer - March 9, 2010</p></li>
+<li><p>One student application on this topic is being prepared at: <a class="reference external" href="http://betterprintsupport.blogspot.com/">http://betterprintsupport.blogspot.com/</a></p></li>
+<li><p>Two more examples of people using Mapnik for printed output:</p>
+<ul>
+<li><p><a class="reference external" href="http://oliverobrien.co.uk/2010/03/map-adornments-with-cairo/">http://oliverobrien.co.uk/2010/03/map-adornments-with-cairo/</a></p></li>
+<li><p><a class="reference external" href="http://razor.occams.info/blog/2010/02/26/printable-congressional-district-maps-behind-the-scenes/">http://razor.occams.info/blog/2010/02/26/printable-congressional-district-maps-behind-the-scenes/</a></p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<hr class="docutils" />
+<section id="support-for-outputting-hit-areas">
+<h2>Support for outputting hit-areas<a class="headerlink" href="#support-for-outputting-hit-areas" title="Link to this heading">¶</a></h2>
+<section id="id13">
+<h3>Description<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<p>It should be possible to specify a layer as &quot;clickable&quot; and as well as outputting an image output a corresponding data file (e.g. JSON or HTML map/area tags or raw geometry) that could be used to perform hit tests. This could be used to make clickable points, lines or polygons. Demo implementation could be done using OpenLayers, perhaps. This idea could be extended to embedding metadata directly in image files, for example all visible street names could be added as EXIF data so that a map image (might) appear in an image search for a street.</p>
+</section>
+<section id="id14">
+<h3>How it would benefit Mapnik Project<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<p>Mapnik would continue to be the first open-source choice for rendering web-based maps. Mapnik's geometry internals would be robustly exposed to outputting (projected, image-space) geometry with arbitrary selections of metadata.</p>
+</section>
+<section id="id15">
+<h3>What student would learn<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<p>The student would learn the internals of mapnik and the very edges of the trade-offs between raster and vector imagery for interactivity on the web.</p>
+</section>
+<section id="id16">
+<h3>Submitter<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="http://www.tom-carden.co.uk">Tom Carden</a></p>
+</section>
+<section id="id17">
+<h3>Possible Mentors<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<p>As above, <a class="reference external" href="http://www.tom-carden.co.uk">I</a> would be willing to mentor this from a sanity, usefulness and syntax point of view but not really from a C++ internals point of view.</p>
+</section>
+<section id="id18">
+<h3>Technical Issues<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
+<hr class="docutils" />
+</section>
+</section>
+<hr class="docutils" />
+<section id="processnik">
+<h2>Processnik<a class="headerlink" href="#processnik" title="Link to this heading">¶</a></h2>
+<section id="id19">
+<h3>Description<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h3>
+<p>Processing <a class="reference external" href="http://processing.org">http://processing.org</a> for Mapnik/Cascadenik. Or Nodebox, for Python folks. Basically a tabbed text editor with a play button that would preview a map. But clearly Mapnik requires a few more features than that: it would be lovely to be able to interrogate/browse data sets and find out which attributes should be used. It would be ideal, Firebug style, to click on a street and find out which styles were applied to it. It would be great to have a slippy map as a preview. Perhaps this is an extension of Quantumnik. Perhaps it's a Firefox extension that uses Mapnik's SVG output and then piggybacks onto Firebug. Who knows?</p>
+</section>
+<section id="id20">
+<h3>How it would benefit Mapnik Project<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
+<p>GUI tools bring users, users bring fame and glory.</p>
+</section>
+<section id="id21">
+<h3>What student would learn<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h3>
+<p>GUI development, Mapnik internals, Cascadenik, Python, etc. Plus a healthy dose of reaching out to cartographers who don't want to edit code. Setting up layers with database queries in this environment would be tricky, but simple shapefile rendering should be totally doable.</p>
+</section>
+<section id="id22">
+<h3>Submitter<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="http://www.tom-carden.co.uk">Tom Carden</a></p>
+</section>
+<section id="id23">
+<h3>Possible Mentors<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h3>
+<p>As above, <a class="reference external" href="http://www.tom-carden.co.uk">I</a> would be willing to mentor this from a sanity, usefulness and syntax point of view but not really from a C++ internals point of view.</p>
+</section>
+<section id="id24">
+<h3>Technical Issues<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h3>
+<hr class="docutils" />
+<hr class="docutils" />
+<p>Format should be:</p>
+</section>
+</section>
+<section id="name-here">
+<h2>NAME HERE<a class="headerlink" href="#name-here" title="Link to this heading">¶</a></h2>
+<section id="id25">
+<h3>Description<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h3>
+</section>
+<section id="id26">
+<h3>How it would benefit Mapnik Project<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h3>
+</section>
+<section id="id27">
+<h3>What student would learn<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h3>
+</section>
+<section id="id28">
+<h3>Submitter<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h3>
+</section>
+<section id="id29">
+<h3>Possible Mentors<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h3>
+</section>
+<section id="id30">
+<h3>Technical Issues<a class="headerlink" href="#id30" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Comment/Idea</p></li>
+<li><p>-- name of person commenting - date</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, hellowac
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Google Summer of Code Ideas - 2010</a><ul>
+<li><a class="reference internal" href="#project-ideas">Project Ideas</a></li>
+<li><a class="reference internal" href="#results">Results</a></li>
+<li><a class="reference internal" href="#mapnik-python3k-support">Mapnik Python3k Support</a><ul>
+<li><a class="reference internal" href="#description">Description</a></li>
+<li><a class="reference internal" href="#how-it-would-benefit-mapnik-project">How it would benefit Mapnik Project</a></li>
+<li><a class="reference internal" href="#what-student-would-learn">What student would learn</a></li>
+<li><a class="reference internal" href="#submitter">Submitter</a></li>
+<li><a class="reference internal" href="#possible-mentors">Possible Mentors</a></li>
+<li><a class="reference internal" href="#technical-issues">Technical Issues</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#layer-composites">Layer Composites</a><ul>
+<li><a class="reference internal" href="#id1">Description</a></li>
+<li><a class="reference internal" href="#id2">How it would benefit Mapnik Project</a></li>
+<li><a class="reference internal" href="#id3">What student would learn</a></li>
+<li><a class="reference internal" href="#id4">Submitter</a></li>
+<li><a class="reference internal" href="#id5">Possible Mentors</a></li>
+<li><a class="reference internal" href="#id6">Technical Issues</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#better-print-support">Better Print Support</a><ul>
+<li><a class="reference internal" href="#id7">Description</a></li>
+<li><a class="reference internal" href="#id8">How it would benefit Mapnik Project</a></li>
+<li><a class="reference internal" href="#id9">What student would learn</a></li>
+<li><a class="reference internal" href="#id10">Submitter</a></li>
+<li><a class="reference internal" href="#id11">Possible Mentors</a></li>
+<li><a class="reference internal" href="#id12">Technical Issues</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#support-for-outputting-hit-areas">Support for outputting hit-areas</a><ul>
+<li><a class="reference internal" href="#id13">Description</a></li>
+<li><a class="reference internal" href="#id14">How it would benefit Mapnik Project</a></li>
+<li><a class="reference internal" href="#id15">What student would learn</a></li>
+<li><a class="reference internal" href="#id16">Submitter</a></li>
+<li><a class="reference internal" href="#id17">Possible Mentors</a></li>
+<li><a class="reference internal" href="#id18">Technical Issues</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#processnik">Processnik</a><ul>
+<li><a class="reference internal" href="#id19">Description</a></li>
+<li><a class="reference internal" href="#id20">How it would benefit Mapnik Project</a></li>
+<li><a class="reference internal" href="#id21">What student would learn</a></li>
+<li><a class="reference internal" href="#id22">Submitter</a></li>
+<li><a class="reference internal" href="#id23">Possible Mentors</a></li>
+<li><a class="reference internal" href="#id24">Technical Issues</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#name-here">NAME HERE</a><ul>
+<li><a class="reference internal" href="#id25">Description</a></li>
+<li><a class="reference internal" href="#id26">How it would benefit Mapnik Project</a></li>
+<li><a class="reference internal" href="#id27">What student would learn</a></li>
+<li><a class="reference internal" href="#id28">Submitter</a></li>
+<li><a class="reference internal" href="#id29">Possible Mentors</a></li>
+<li><a class="reference internal" href="#id30">Technical Issues</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=f115507d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>

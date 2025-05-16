@@ -1,0 +1,624 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>Managing complex map files using XML entities - mapnik-wiki-zh-cn 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">mapnik-wiki-zh-cn 1.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">mapnik-wiki-zh-cn 1.0 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Introductory Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About-Mapnik.html">About Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik-Installation.html">Mapnik Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LearningMapnik.html">Learning Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notes-and-caveats.html">Notes and caveats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Related-projects-and-utilities.html">Related projects and utilties</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Mapnik API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XMLConfigReference.html">Mapnik configuration XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SymbologySupport.html">Symbology Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PluginArchitecture.html">Plugin Architecture</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/mapnik/mapnik/blob/master/INSTALL.md">Building Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik2.html">Mapnik2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapnikReleases.html">Mapnik Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/mapnik">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://webchat.freenode.net/?channels=#mapnik">#mapnik channel on irc.freenode.net Webchat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code-sprint.html">Code sprint</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://173.255.217.246:8000/mapnik_trac/wiki/MapnikCodeSprint/MCS01">Code sprint 2010 - Committers and Cartographers London, England, 24-26 September 2010</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/ManagingLargeXmlFiles.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <!-- Name: ManagingLargeXmlFiles -->
+<!-- Version: 11 -->
+<!-- Last-Modified: 2010/07/17 10:06:46 -->
+<!-- Author: oldtopos -->
+<section class="tex2jax_ignore mathjax_ignore" id="managing-complex-map-files-using-xml-entities">
+<h1>Managing complex map files using XML entities<a class="headerlink" href="#managing-complex-map-files-using-xml-entities" title="Link to this heading">¶</a></h1>
+<p><strong>Note</strong>: you will need a copy of mapnik built against libxml2.  This is not the default, please read the <strong>Mapnik XML Support</strong> or <a class="reference external" href="https://github.com/mapnik/mapnik/issues/3191">issue here</a> for details.</p>
+<p>Mapnik XML files can become quite complex. This tutorial introduces some
+techniques to keep large map files more maintainable. Specifically it
+demonstrates how to avoid duplicate data in the XML file, like:</p>
+<ul class="simple">
+<li><p>color values</p></li>
+<li><p>database connection parameters</p></li>
+<li><p>icon directories</p></li>
+</ul>
+<p>It also shows how to split a single, monolithic map file into reusable
+components using external entities and XInclude.</p>
+<section id="mapnik-xml-support">
+<h2>Mapnik XML support<a class="headerlink" href="#mapnik-xml-support" title="Link to this heading">¶</a></h2>
+<p>Mapnik currently supports three different XML parsers:</p>
+<ul class="simple">
+<li><p>the boost spirit based parser</p></li>
+<li><p>the tinyxml parser</p></li>
+<li><p>libxml2</p></li>
+</ul>
+<p>The three parsers differ in size, external dependencies and the number of XML
+features they support. The most comprehensive parser is the libxml2 parser and
+it is the only one that supports XML entities.  As of Mapnik 0.6.0 libxml2 is the default
+when building the Mapnik source with SCons, and available in the Windows binaries as of 0.6.1.</p>
+</section>
+<section id="compiling-mapnik-with-libxml2-support">
+<h2>Compiling mapnik with libxml2 support<a class="headerlink" href="#compiling-mapnik-with-libxml2-support" title="Link to this heading">¶</a></h2>
+<p>If not default in your Mapnik version (&lt; 0.6.0) the libxml2 parser is enabled by setting the XMLPARSER option at
+compile time:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>configure<span class="w"> </span><span class="nv">XMLPARSER</span><span class="o">=</span>libxml2
+</pre></div>
+</div>
+<p>Of course this requires the libxml2 library and, depending on the distribution
+the corresponding devel package. If <code class="docutils literal notranslate"><span class="pre">xml2-config</span></code> is not in the PATH its location
+can be set using the <code class="docutils literal notranslate"><span class="pre">XML2_CONFIG</span></code> option.</p>
+<p>For example, if you have installed the latest libxml2 on mac os x via Macports, you might need to do:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>configure<span class="w"> </span><span class="nv">XML2_CONFIG</span><span class="o">=</span>/opt/local/bin/xml2-config
+</pre></div>
+</div>
+</section>
+<section id="internal-entities">
+<h2>Internal Entities<a class="headerlink" href="#internal-entities" title="Link to this heading">¶</a></h2>
+<p>All XML parsers have some built-in entities to escape otherwise illegal
+characters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&amp;gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&amp;lt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&amp;amp;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&amp;quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&amp;apos;</span></code></p></li>
+</ul>
+<p>The XML document type definition (DTD) provides a way to declare new, user
+defined entities:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="w">    </span><span class="cp">&lt;!DOCTYPE Map[</span>
+<span class="cp">        &lt;!ENTITY water_color &quot;#b5d0d0&quot;&gt;</span>
+<span class="w">    </span>]&gt;
+<span class="w">    </span><span class="nt">&lt;Map</span><span class="w"> </span><span class="na">bgcolor=</span><span class="s">&quot;&amp;water_color;&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>This XML document declares an internal entity named water_color. This entity is
+referenced by the bgcolor attribute of the Map element. The parser replaces all
+occurrences of <code class="docutils literal notranslate"><span class="pre">&amp;water_color;</span></code> with the string <code class="docutils literal notranslate"><span class="pre">#b5d0d0</span></code>.</p>
+<p>Using entities for common values results in a single point of definition. This
+greatly improves maintainability. Instead of searching and replacing all
+occurrences of a value, there is a single place to change it. By using names,
+like water_color the XML becomes more readable which helps a lot with future
+changes. In case of color values it has an additional benefit. Because all
+entities are declared at the top of the document the color set of the map is
+immediately apparent. Of course color values are not the only application. Any
+reoccurring value is a candidate for an entity.</p>
+<p>It is allowed to nest entities:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="w">    </span><span class="cp">&lt;!DOCTYPE Map[</span>
+<span class="cp">        &lt;!ENTITY home_dir &quot;/home/david&quot;&gt;</span>
+<span class="w">        </span><span class="cp">&lt;!ENTITY icons    &quot;&amp;home_dir;/map/icons&quot;&gt;</span>
+<span class="w">    </span>]&gt;
+<span class="w">    </span><span class="nt">&lt;Map&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Style</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;volcanos&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Rule&gt;</span>
+<span class="w">                </span><span class="nt">&lt;PointSymbolizer</span><span class="w"> </span><span class="na">file=</span><span class="s">&quot;&amp;icons;/volcano.png&quot;</span>
+<span class="w">                                 </span><span class="na">type=</span><span class="s">&quot;png&quot;</span><span class="w"> </span><span class="na">width=</span><span class="s">&quot;16&quot;</span><span class="w"> </span><span class="na">height=</span><span class="s">&quot;16&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Rule&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Style&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Map&gt;</span>
+</pre></div>
+</div>
+<p>However, these internal entities are not suitable for larger blocks. They also
+do not help with sharing common styles and layers between different maps.</p>
+</section>
+<section id="external-entities">
+<h2>External Entities<a class="headerlink" href="#external-entities" title="Link to this heading">¶</a></h2>
+<p>External entities are declared by adding the keyword SYSTEM:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="w">    </span><span class="cp">&lt;!DOCTYPE Map[</span>
+<span class="cp">        &lt;!ENTITY db_settings SYSTEM &quot;settings/db_settings&quot;&gt;</span>
+<span class="w">    </span>]&gt;
+<span class="w">    </span><span class="nt">&lt;Map&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Layer</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;volcanos&quot;</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;on&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;StyleName&gt;</span>volcanos<span class="nt">&lt;/StyleName&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Datasource&gt;</span>
+<span class="w">    </span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;table&quot;</span><span class="nt">&gt;</span>volcanos<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">    </span>
+<span class="w">                </span><span class="ni">&amp;db_settings;</span>
+<span class="w">    </span>
+<span class="w">            </span><span class="nt">&lt;/Datasource&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Layer&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Map&gt;</span>
+</pre></div>
+</div>
+<p>The entity declaration assigns the content of the file <code class="docutils literal notranslate"><span class="pre">settings/db_settings</span></code> to
+the entity <code class="docutils literal notranslate"><span class="pre">&amp;db_settings;</span></code>. When parsed the reference to <code class="docutils literal notranslate"><span class="pre">&amp;db_settings;</span></code> in the
+Datasource section is expanded to the content of the file. If a relative
+filename is given the file is searched relative to the document. The file
+<code class="docutils literal notranslate"><span class="pre">settings/db_settings</span></code> could look like this:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="nt">&gt;</span>postgis<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;host&quot;</span><span class="nt">&gt;</span>www.example.org<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;port&quot;</span><span class="nt">&gt;</span>5433<span class="nt">&lt;/Parameter&gt;</span><span class="w">     </span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;user&quot;</span><span class="nt">&gt;</span>david<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;dbname&quot;</span><span class="nt">&gt;</span>geo<span class="nt">&lt;/Parameter&gt;</span>
+</pre></div>
+</div>
+<p>Note that this is not a legal XML document on its own because it does not have
+a single root element. It is a list of elements. But the tags have to be well
+balanced. Also note that references to external entities are illegal in
+attribute values. They are only allowed in text sections.</p>
+<p>It is possible to use entity references in external entities. This allows a
+limited form of parameterization. Consider the following example:</p>
+<p>File earthquake.map:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="w">    </span><span class="cp">&lt;!DOCTYPE Map[</span>
+<span class="cp">        &lt;!ENTITY since_year &quot;1970&quot;&gt;</span>
+<span class="w">        </span><span class="cp">&lt;!ENTITY earthquakes_since SYSTEM &quot;earthquakes_since.lay&quot;&gt;</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="cp">&lt;!ENTITY earthquakes_default_style SYSTEM &quot;earthquakes.sty&quot;&gt;</span>
+<span class="w">        </span><span class="cp">&lt;!ENTITY common_styles SYSTEM &quot;common.sty&quot;&gt;</span>
+<span class="w">        </span><span class="cp">&lt;!ENTITY common_layers SYSTEM &quot;common.lay&quot;&gt;</span>
+<span class="w">        </span><span class="cp">&lt;!ENTITY db_settings SYSTEM &quot;db_settings&quot;&gt;</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="cm">&lt;!-- colors --&gt;</span>
+<span class="w">    </span>]&gt;
+<span class="w">    </span><span class="nt">&lt;Map&gt;</span>
+<span class="w">        </span><span class="ni">&amp;earthquakes_default_style;</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="ni">&amp;earthquakes_since;</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="ni">&amp;common_styles;</span>
+<span class="w">        </span><span class="ni">&amp;common_layers;</span>
+<span class="w">    </span><span class="nt">&lt;/Map&gt;</span>
+</pre></div>
+</div>
+<p>File earthquakes_since.lay:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nt">&lt;Layer</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;earthquakes_since&quot;</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;on&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;StyleName&gt;</span>earthquakes<span class="nt">&lt;/StyleName&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Datasource&gt;</span>
+
+<span class="w">            </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;table&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span>(SELECT<span class="w"> </span>*<span class="w"> </span>FROM<span class="w"> </span>earthquakes<span class="w"> </span>
+<span class="w">                 </span>WHERE<span class="w"> </span>year<span class="w"> </span><span class="ni">&amp;gt;</span>=<span class="w"> </span><span class="ni">&amp;since_year;</span><span class="w"> </span>)<span class="w"> </span>AS<span class="w"> </span>earthquakes_since
+<span class="w">            </span><span class="nt">&lt;/Parameter&gt;</span>
+
+<span class="w">            </span><span class="ni">&amp;db_settings;</span>
+
+<span class="w">        </span><span class="nt">&lt;/Datasource&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Layer&gt;</span>
+</pre></div>
+</div>
+<p>This is a quite flexible setup. It is very easy to add and remove thematic
+overlays. Other overlays may use the same parameters by referencing the
+same entities. Styles can be changed by replacing the reference to
+<code class="docutils literal notranslate"><span class="pre">&amp;earthquakes_default_style;</span></code> with a custom one. It is also possible to have
+many map files all referencing the same set of styles and layer files but with
+different settings.</p>
+</section>
+<section id="entities-summary">
+<h2>Entities Summary<a class="headerlink" href="#entities-summary" title="Link to this heading">¶</a></h2>
+<p>Entities provide a way to use symbolic names in the map file. This improves
+readability and helps to build logical groups. By providing a single point
+of definition map files are better adaptable to different environments and in
+general more maintainable. External entities can store whole blocks of XML.
+This helps to build reusable collections of layers and styles. These reusable
+components can be parameterized using other entities as needed.</p>
+</section>
+<section id="including-external-files-using-xinclude">
+<h2>Including external files using XInclude<a class="headerlink" href="#including-external-files-using-xinclude" title="Link to this heading">¶</a></h2>
+<p>libxml2 also provides support for decomposing large mapnik XML files through the use of XInclude.</p>
+<p>To enable XInclude in your root file, modify the Map container tag, adding the xi namespace.  Adding xi:include tags where the href attribute names the file to include completes the change to the root file.</p>
+<p>File tests/data/good_maps/xinclude/map.xml:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="w">    </span><span class="cp">&lt;!DOCTYPE Map  &gt;</span>
+<span class="w">    </span><span class="nt">&lt;Map</span><span class="w"> </span><span class="na">xmlns:xi=</span><span class="s">&quot;http://www.w3.org/2001/XInclude&quot;</span><span class="w"> </span><span class="na">srs=</span><span class="s">&quot;+init=epsg:4326&quot;</span><span class="w"> </span><span class="na">bgcolor=</span><span class="s">&quot;rgb(255,255,255)&quot;</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="cm">&lt;!-- http://www.oreillynet.com/xml/blog/2004/05/transclude_with_xinclude_and_x.html --&gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nt">&lt;xi:include</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;styles.xml&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nt">&lt;xi:include</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;layers.xml&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nt">&lt;/Map&gt;</span>
+</pre></div>
+</div>
+<p>Included files wrap their content within an Include tag.  XInclude replaces the xi:include tags with the contents of the included file, yielding a single, merged XML document.
+mapnik's XML parser then merges the contents of the Include tag into the Map tag, resulting in an XML document tree identical to one produced by processing a single file containing
+all Style and Layer tags.</p>
+<p>File styles.xml:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Include</span><span class="w"> </span><span class="na">xmlns:xi=</span><span class="s">&quot;http://www.w3.org/2001/XInclude&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="nt">&lt;Style</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;point_style&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Rule&gt;</span>
+<span class="w">                </span><span class="nt">&lt;PointSymbolizer</span><span class="w"> </span><span class="na">file=</span><span class="s">&quot;../../svg/point.svg&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;TextSymbolizer</span><span class="w"> </span><span class="na">face_name=</span><span class="s">&quot;DejaVu Sans Book&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;12&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;[name]&quot;</span><span class="w"> </span><span class="na">halo_fill=</span><span class="s">&quot;rgb(255,255,255,100)&quot;</span><span class="w"> </span><span class="na">halo_radius=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">dy=</span><span class="s">&quot;-5&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Rule&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Style&gt;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="nt">&lt;Style</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;world_borders_style&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Rule&gt;</span>
+<span class="w">                </span><span class="nt">&lt;PolygonSymbolizer</span><span class="w"> </span><span class="na">fill=</span><span class="s">&quot;grey&quot;</span><span class="w"> </span><span class="na">gamma=</span><span class="s">&quot;0.7&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Rule&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Style&gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nt">&lt;/Include&gt;</span>
+</pre></div>
+</div>
+<p>File layers.xml:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Include</span><span class="w">  </span><span class="na">xmlns:xi=</span><span class="s">&quot;http://www.w3.org/2001/XInclude&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="nt">&lt;Layer</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;world_borders&quot;</span><span class="w"> </span><span class="na">srs=</span><span class="s">&quot;+proj=merc +lon_0=0 +lat_ts=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;StyleName&gt;</span>world_borders_style<span class="nt">&lt;/StyleName&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Datasource&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;file&quot;</span><span class="nt">&gt;</span>../../shp/world_merc.shp<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="nt">&gt;</span>shape<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Datasource&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Layer&gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nt">&lt;/Include&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="combining-xinclude-and-external-entities">
+<h2>Combining XInclude and External Entities<a class="headerlink" href="#combining-xinclude-and-external-entities" title="Link to this heading">¶</a></h2>
+<p>Used together, XInclude and External Entities provide improved document size management and parameterization, greatly reducing maintenance effort.</p>
+<p>A common pattern found in mapnik XML file sets is specifying the zoom levels for which a Style or Layer is enabled.  Creating an external entity file assigning symbolic names to the minimum and maximum scale denominators for each zoom level increases readability.  A fragment of such a file is shown below:</p>
+<p>file: zoomsymbols.txt</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="cp">&lt;!ENTITY zoom00max  &quot;750000000&quot; &gt;</span>
+<span class="w">    </span><span class="cp">&lt;!ENTITY zoom00min  &quot;540000000&quot; &gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="cp">&lt;!ENTITY zoom01max  &quot;500000000&quot; &gt;</span>
+<span class="w">    </span><span class="cp">&lt;!ENTITY zoom01min  &quot;270000000&quot; &gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="cp">&lt;!ENTITY zoom02max  &quot;250000000&quot; &gt;</span>
+<span class="w">    </span><span class="cp">&lt;!ENTITY zoom02min  &quot;130000000&quot; &gt;</span>
+</pre></div>
+</div>
+<p>Adding a DOCTYPE line to the layers.xml file to include the external entities file, and adding parameterized minzoom and maxzoom attributes to the layer yields the file below:</p>
+<p>File layers_with_entities.xml:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="w">    </span><span class="cp">&lt;!DOCTYPE Include SYSTEM &quot;zoomsymbols.txt&quot;&gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nt">&lt;Include</span><span class="w">  </span><span class="na">xmlns:xi=</span><span class="s">&quot;http://www.w3.org/2001/XInclude&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="nt">&lt;Layer</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;world_borders&quot;</span><span class="w"> </span><span class="na">minzoom=</span><span class="s">&quot;&amp;zoom02min;&quot;</span><span class="w"> </span><span class="na">maxzoom=</span><span class="s">&quot;&amp;zoom00max;&quot;</span><span class="w"> </span><span class="na">srs=</span><span class="s">&quot;+proj=merc +lon_0=0 +lat_ts=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;StyleName&gt;</span>world_borders_style<span class="nt">&lt;/StyleName&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Datasource&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;file&quot;</span><span class="nt">&gt;</span>../../shp/world_merc.shp<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="nt">&gt;</span>shape<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Datasource&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Layer&gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nt">&lt;/Include&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.xml.com/pub/a/98/08/xmlqna0.html">XML.com entity tutorial</a></p></li>
+<li><p><a class="reference external" href="http://www.w3.org/TR/REC-xml/">W3C XML Standard</a></p></li>
+<li><p><a class="reference external" href="http://www.w3.org/TR/xinclude/">W3C XInclude Standard</a></p></li>
+<li><p><a class="reference external" href="http://en.wikipedia.org/wiki/XInclude">Wikipedia XInclude Page</a></p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, hellowac
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Managing complex map files using XML entities</a><ul>
+<li><a class="reference internal" href="#mapnik-xml-support">Mapnik XML support</a></li>
+<li><a class="reference internal" href="#compiling-mapnik-with-libxml2-support">Compiling mapnik with libxml2 support</a></li>
+<li><a class="reference internal" href="#internal-entities">Internal Entities</a></li>
+<li><a class="reference internal" href="#external-entities">External Entities</a></li>
+<li><a class="reference internal" href="#entities-summary">Entities Summary</a></li>
+<li><a class="reference internal" href="#including-external-files-using-xinclude">Including external files using XInclude</a></li>
+<li><a class="reference internal" href="#combining-xinclude-and-external-entities">Combining XInclude and External Entities</a></li>
+<li><a class="reference internal" href="#further-reading">Further Reading</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=f115507d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>

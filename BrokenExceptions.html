@@ -1,0 +1,483 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>Brokern Exceptions - mapnik-wiki-zh-cn 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">mapnik-wiki-zh-cn 1.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">mapnik-wiki-zh-cn 1.0 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Introductory Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About-Mapnik.html">About Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik-Installation.html">Mapnik Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LearningMapnik.html">Learning Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notes-and-caveats.html">Notes and caveats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Related-projects-and-utilities.html">Related projects and utilties</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Mapnik API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XMLConfigReference.html">Mapnik configuration XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SymbologySupport.html">Symbology Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PluginArchitecture.html">Plugin Architecture</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/mapnik/mapnik/blob/master/INSTALL.md">Building Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik2.html">Mapnik2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapnikReleases.html">Mapnik Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/mapnik">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://webchat.freenode.net/?channels=#mapnik">#mapnik channel on irc.freenode.net Webchat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code-sprint.html">Code sprint</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://173.255.217.246:8000/mapnik_trac/wiki/MapnikCodeSprint/MCS01">Code sprint 2010 - Committers and Cartographers London, England, 24-26 September 2010</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/BrokenExceptions.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section class="tex2jax_ignore mathjax_ignore" id="brokern-exceptions">
+<h1>Brokern Exceptions<a class="headerlink" href="#brokern-exceptions" title="Link to this heading">¶</a></h1>
+<!-- Name: BrokenExceptions -->
+<!-- Version: 6 -->
+<!-- Last-Modified: 2010/12/02 14:53:05 -->
+<!-- Author: springmeyer -->
+<p>In rare cases boost pythons exception handling breaks.</p>
+<p>I've seen this twice: once with early versions (~ sept 2010) of clang, and also with 64 bit open solaris.</p>
+<p>What happens is that instead of getting a runtime error with some nice message you get a segfault.</p>
+<p>Here are the steps to try to guess what is actually causing the problem:</p>
+<section id="using-gdb">
+<h2>Using GDB<a class="headerlink" href="#using-gdb" title="Link to this heading">¶</a></h2>
+<p>Run the python executable in gdb:</p>
+<p>( in this example we use the full path to apps for clarity, your system will differ )</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>gdb<span class="w"> </span>/usr/bin/amd64/python
+</pre></div>
+</div>
+<p>You should get some basic gdb startup output:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>GNU<span class="w"> </span>gdb<span class="w"> </span><span class="m">6</span>.8
+<span class="w">    </span>Copyright<span class="w"> </span><span class="o">(</span>C<span class="o">)</span><span class="w"> </span><span class="m">2008</span><span class="w"> </span>Free<span class="w"> </span>Software<span class="w"> </span>Foundation,<span class="w"> </span>Inc.
+<span class="w">    </span>License<span class="w"> </span>GPLv3+:<span class="w"> </span>GNU<span class="w"> </span>GPL<span class="w"> </span>version<span class="w"> </span><span class="m">3</span><span class="w"> </span>or<span class="w"> </span>later<span class="w"> </span>&lt;http://gnu.org/licenses/gpl.html&gt;
+<span class="w">    </span>This<span class="w"> </span>is<span class="w"> </span>free<span class="w"> </span>software:<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>free<span class="w"> </span>to<span class="w"> </span>change<span class="w"> </span>and<span class="w"> </span>redistribute<span class="w"> </span>it.
+<span class="w">    </span>There<span class="w"> </span>is<span class="w"> </span>NO<span class="w"> </span>WARRANTY,<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>extent<span class="w"> </span>permitted<span class="w"> </span>by<span class="w"> </span>law.<span class="w">  </span>Type<span class="w"> </span><span class="s2">&quot;show copying&quot;</span>
+<span class="w">    </span>and<span class="w"> </span><span class="s2">&quot;show warranty&quot;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>details.
+<span class="w">    </span>This<span class="w"> </span>GDB<span class="w"> </span>was<span class="w"> </span>configured<span class="w"> </span>as<span class="w"> </span><span class="s2">&quot;i386-pc-solaris2.11&quot;</span>...
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+</pre></div>
+</div>
+<p>Now you have a gdb prompt and you need to run your actual program that is crashing. The goal here is to get a backtrace that may indicate the place where the crash is happening.</p>
+<p>For example, is it happening in a datasource plugin? If so that would point toward a problem configuring the paths to shapefiles or the database connections for postgres.</p>
+<p>Below we run nik2img by typing 'r' then the path to the command and its arguments:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="o">(</span>gdb<span class="o">)</span><span class="w"> </span>r<span class="w"> </span>/usr/bin/nik2img.py<span class="w"> </span>osm.xml<span class="w"> </span>image.png
+</pre></div>
+</div>
+<p>You should see a bunch of output like:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>Starting<span class="w"> </span>program:<span class="w"> </span>/usr/bin/amd64/python<span class="w"> </span>/usr/bin/nik2img.py<span class="w"> </span>osm.xml<span class="w"> </span>t.png
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span>warning:<span class="w"> </span>Lowest<span class="w"> </span>section<span class="w"> </span><span class="k">in</span><span class="w"> </span>/lib/amd64/libdl.so.1<span class="w"> </span>is<span class="w"> </span>.dynamic<span class="w"> </span>at<span class="w"> </span>00000000000000b0
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span>warning:<span class="w"> </span>Lowest<span class="w"> </span>section<span class="w"> </span><span class="k">in</span><span class="w"> </span>/lib/amd64/libintl.so.1<span class="w"> </span>is<span class="w"> </span>.dynamic<span class="w"> </span>at<span class="w"> </span>00000000000000b0
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span><span class="o">(</span>no<span class="w"> </span>debugging<span class="w"> </span>symbols<span class="w"> </span>found<span class="o">)</span>
+<span class="w">    </span>warning:<span class="w"> </span>Lowest<span class="w"> </span>section<span class="w"> </span><span class="k">in</span><span class="w"> </span>/lib/amd64/librt.so.1<span class="w"> </span>is<span class="w"> </span>.dynamic<span class="w"> </span>at<span class="w"> </span>00000000000000b0
+<span class="w">    </span>warning:<span class="w"> </span>Lowest<span class="w"> </span>section<span class="w"> </span><span class="k">in</span><span class="w"> </span>/lib/amd64/libpthread.so.1<span class="w"> </span>is<span class="w"> </span>.dynamic<span class="w"> </span>at<span class="w"> </span>00000000000000b0
+<span class="w">    </span>warning:<span class="w"> </span>Lowest<span class="w"> </span>section<span class="w"> </span><span class="k">in</span><span class="w"> </span>/lib/amd64/libthread.so.1<span class="w"> </span>is<span class="w"> </span>.dynamic<span class="w"> </span>at<span class="w"> </span>00000000000000b0
+</pre></div>
+</div>
+<p>And then if you hit the crash you should see a line like:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Program received signal SIGSEGV, Segmentation fault.
+</pre></div>
+</div>
+<p>Now, type 'bt' in the interpreter to get the backtrace:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="o">(</span>gdb<span class="o">)</span><span class="w"> </span>bt
+<span class="w">    </span><span class="c1">#0  0x0000000000053735 in ?? ()</span>
+<span class="w">    </span><span class="c1">#1  0xfffffd7fff2ec5d1 in _Unwind_RaiseException_Body () from /usr/lib/amd64/libc.so.1</span>
+<span class="w">    </span><span class="c1">#2  0xfffffd7fff2ec855 in _Unwind_RaiseException () from /usr/lib/amd64/libc.so.1</span>
+<span class="w">    </span><span class="c1">#3  0xfffffd7ffc25bb39 in __cxa_throw (obj=&lt;value optimized out&gt;, tinfo=0x1, dest=0x474e5543432b2b00)</span>
+<span class="w">        </span>at<span class="w"> </span>../../../../.././libstdc++-v3/libsupc++/eh_throw.cc:78
+<span class="w">    </span><span class="c1">#4  0xfffffd7ffaaaa1c8 in shape_datasource::bind () from /usr/local/lib/mapnik/input/shape.input</span>
+<span class="w">    </span><span class="c1">#5  0xfffffd7ffaaaadb5 in shape_datasource::shape_datasource () from /usr/local/lib/mapnik/input/shape.input</span>
+<span class="w">    </span><span class="c1">#6  0xfffffd7ffaaaae80 in create () from /usr/local/lib/mapnik/input/shape.input</span>
+<span class="w">    </span><span class="c1">#7  0xfffffd7ffc4bfa51 in mapnik::datasource_cache::create () from /usr/local/lib/libmapnik.so</span>
+<span class="w">    </span><span class="c1">#8  0xfffffd7ffc459d1b in mapnik::map_parser::parse_layer () from /usr/local/lib/libmapnik.so</span>
+<span class="w">    </span><span class="c1">#9  0xfffffd7ffc469b00 in mapnik::map_parser::parse_map () from /usr/local/lib/libmapnik.so</span>
+<span class="w">    </span><span class="c1">#10 0xfffffd7ffc46b0b7 in mapnik::load_map () from /usr/local/lib/libmapnik.so</span>
+<span class="w">    </span><span class="c1">#11 0xfffffd7ffc76b12a in load_map_overloads::non_void_return_type::gen&lt;boost::mpl::vector4&lt;void, mapnik::Map&amp;, std::string const&amp;, bool&gt; &gt;::func_0 () from /usr/local/lib/python2.6/site-packages/mapnik/64/_mapnik.so</span>
+<span class="w">    </span><span class="c1">#12 0xfffffd7ffc770950 in boost::python::objects::caller_py_function_impl&lt;boost::python::detail::caller&lt;void (*)(mapnik::Map&amp;, std::string const&amp;), boost::python::default_call_policies, boost::mpl::vector3&lt;void, mapnik::Map&amp;, std::string const&amp;&gt; &gt; &gt;::operator()</span>
+<span class="w">        </span><span class="o">()</span><span class="w"> </span>from<span class="w"> </span>/usr/local/lib/python2.6/site-packages/mapnik/64/_mapnik.so
+<span class="w">    </span><span class="c1">#13 0xfffffd7ffc2db47c in boost::python::objects::function::call () from /usr/local/lib/libboost_python.so.1.44.0</span>
+<span class="w">    </span><span class="c1">#14 0xfffffd7ffc2db730 in boost::detail::function::void_function_ref_invoker0&lt;boost::python::objects::(anonymous namespace)::bind_return, void&gt;::invoke () from /usr/local/lib/libboost_python.so.1.44.0</span>
+<span class="w">    </span><span class="c1">#15 0xfffffd7ffc2e3053 in boost::python::detail::exception_handler::operator() () from /usr/local/lib/libboost_python.so.1.44.0</span>
+<span class="w">    </span><span class="c1">#16 0xfffffd7ffc76b2e2 in boost::detail::function::function_obj_invoker2&lt;boost::_bi::bind_t&lt;bool, boost::python::detail::translate_exception&lt;mapnik::config_error, void (*)(mapnik::config_error const&amp;)&gt;, boost::_bi::list3&lt;boost::arg&lt;1&gt;, boost::arg&lt;2&gt;, boost::_bi::value&lt;void (*)(mapnik::config_error const&amp;)&gt; &gt; &gt;, bool, boost::python::detail::exception_handler const&amp;, boost::function0&lt;void&gt; const&amp;&gt;::invoke () from /usr/local/lib/python2.6/site-packages/mapnik/64/_mapnik.so</span>
+<span class="w">    </span><span class="c1">#17 0xfffffd7ffc2e2e25 in boost::python::handle_exception_impl () from /usr/local/lib/libboost_python.so.1.44.0</span>
+<span class="w">    </span><span class="c1">#18 0xfffffd7ffc2d7d50 in function_call () from /usr/local/lib/libboost_python.so.1.44.0</span>
+<span class="w">    </span><span class="c1">#19 0xfffffd7ffd309aad in PyObject_Call () from /usr/lib/amd64/libpython2.6.so.1.0</span>
+<span class="w">    </span><span class="c1">#20 0xfffffd7ffd3ac1c0 in do_call () from /usr/lib/amd64/libpython2.6.so.1.0</span>
+<span class="w">    </span><span class="c1">#21 0xfffffd7ffd3ab672 in call_function () from /usr/lib/amd64/libpython2.6.so.1.0</span>
+<span class="w">    </span><span class="c1">#22 0xfffffd7ffd3a810d in PyEval_EvalFrameExReal () from /usr/lib/amd64/libpython2.6.so.1.0</span>
+<span class="w">    </span><span class="c1">#23 0xfffffd7ffd3a4d9d in PyEval_EvalFrameEx () from /usr/lib/amd64/libpython2.6.so.1.0</span>
+<span class="w">    </span><span class="c1">#24 0xfffffd7ffd3abb95 in fast_function () from /usr/lib/amd64/libpython2.6.so.1.0</span>
+<span class="w">    </span><span class="c1">#25 0xfffffd7ffd3ab68a in call_function () from /usr/lib/amd64/libpython2.6.so.1.0</span>
+<span class="w">    </span><span class="c1">#26 0xfffffd7ffd3a810d in PyEval_EvalFrameExReal () from /usr/lib/amd64/libpython2.6.so.1.0</span>
+<span class="w">    </span><span class="c1">#27 0xfffffd7ffd3a4d9d in PyEval_EvalFrameEx () from /usr/lib/amd64/libpython2.6.so.1.0</span>
+<span class="w">    </span><span class="c1">#28 0xfffffd7ffd3abb95 in fast_function () from /usr/lib/amd64/libpython2.6.so.1.0</span>
+<span class="w">    </span><span class="c1">#29 0xfffffd7ffd3ab68a in call_function () from /usr/lib/amd64/libpython2.6.so.1.0</span>
+</pre></div>
+</div>
+<p>The most important lines are the top ones:</p>
+<p>Basically in this case it clearly indicates that the problem happened in the 'shape.input' or the Shapefile datasource plugin, and specifically the 'bind()' function.</p>
+<p>We know the bind function is basically the call to create the datasource, so at creation time one of the values must be wrong. A likely possibility is that the path to a shapefile was wrong and mapnik is throwing a datasource exception to tell us this, but because this exception is not caught we cannot know for sure.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1">#0  0x0000000000053735 in ?? ()</span>
+<span class="w">    </span><span class="c1">#1  0xfffffd7fff2ec5d1 in _Unwind_RaiseException_Body () from /usr/lib/amd64/libc.so.1</span>
+<span class="w">    </span><span class="c1">#2  0xfffffd7fff2ec855 in _Unwind_RaiseException () from /usr/lib/amd64/libc.so.1</span>
+<span class="w">    </span><span class="c1">#3  0xfffffd7ffc25bb39 in __cxa_throw (obj=&lt;value optimized out&gt;, tinfo=0x1, dest=0x474e5543432b2b00)</span>
+<span class="w">        </span>at<span class="w"> </span>../../../../.././libstdc++-v3/libsupc++/eh_throw.cc:78
+<span class="w">    </span><span class="c1">#4  0xfffffd7ffaaaa1c8 in shape_datasource::bind () from /usr/local/lib/mapnik/input/shape.input</span>
+<span class="w">    </span><span class="c1">#5  0xfffffd7ffaaaadb5 in shape_datasource::shape_datasource () from /usr/local/lib/mapnik/input/shape.input</span>
+</pre></div>
+</div>
+<p>To leave gdb do:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>quit
+</pre></div>
+</div>
+<p>It is a sad thing, but perhaps the only definitive way to figure out what is wrong without being able to fix the ultimate problem is to replace any <code class="docutils literal notranslate"><span class="pre">throw</span></code>s with std::exit like:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nl">Index</span><span class="p">:</span><span class="w"> </span><span class="n">plugins</span><span class="o">/</span><span class="n">input</span><span class="o">/</span><span class="n">shape</span><span class="o">/</span><span class="n">shape</span><span class="p">.</span><span class="n">cpp</span>
+<span class="w">    </span><span class="o">===================================================================</span>
+<span class="w">    </span><span class="o">---</span><span class="w"> </span><span class="n">plugins</span><span class="o">/</span><span class="n">input</span><span class="o">/</span><span class="n">shape</span><span class="o">/</span><span class="n">shape</span><span class="p">.</span><span class="n">cpp</span><span class="w">       </span><span class="p">(</span><span class="n">revision</span><span class="w"> </span><span class="mi">2441</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+++</span><span class="w"> </span><span class="n">plugins</span><span class="o">/</span><span class="n">input</span><span class="o">/</span><span class="n">shape</span><span class="o">/</span><span class="n">shape</span><span class="p">.</span><span class="n">cpp</span><span class="w">       </span><span class="p">(</span><span class="n">working</span><span class="w"> </span><span class="n">copy</span><span class="p">)</span>
+<span class="w">    </span><span class="err">@@</span><span class="w"> </span><span class="mi">-54</span><span class="p">,</span><span class="mi">8</span><span class="w"> </span><span class="o">+</span><span class="mi">54</span><span class="p">,</span><span class="mi">13</span><span class="w"> </span><span class="err">@@</span>
+<span class="w">           </span><span class="n">desc_</span><span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">params</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;encoding&quot;</span><span class="p">,</span><span class="s">&quot;utf-8&quot;</span><span class="p">))</span>
+<span class="w">     </span><span class="p">{</span>
+<span class="w">         </span><span class="n">boost</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;file&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="o">-</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">file</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">datasource_exception</span><span class="p">(</span><span class="s">&quot;missing &lt;file&gt; parameter&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="o">-</span>
+<span class="w">    </span><span class="o">+</span><span class="w">    </span>
+<span class="w">    </span><span class="o">+</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">file</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="o">+</span><span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="o">+</span><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">clog</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;missing &lt;file&gt; parameter</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="o">+</span><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">   </span>
+<span class="w">    </span><span class="o">+</span><span class="c1">///throw datasource_exception(&quot;missing &lt;file&gt; parameter&quot;);</span>
+<span class="w">    </span><span class="o">+</span><span class="p">}</span>
+<span class="w">         </span><span class="n">boost</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;base&quot;</span><span class="p">);</span>
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+<span class="w">             </span><span class="n">shape_name_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="p">;</span>
+<span class="w">    </span><span class="err">@@</span><span class="w"> </span><span class="mi">-76</span><span class="p">,</span><span class="mi">7</span><span class="w"> </span><span class="o">+</span><span class="mi">81</span><span class="p">,</span><span class="mi">8</span><span class="w"> </span><span class="err">@@</span>
+<span class="w">     </span>
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">boost</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">exists</span><span class="p">(</span><span class="n">shape_name_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.shp&quot;</span><span class="p">))</span>
+<span class="w">         </span><span class="p">{</span>
+<span class="w">    </span><span class="o">-</span><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="n">datasource_exception</span><span class="p">(</span><span class="s">&quot;shapefile &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">shape_name_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.shp&#39; does not exist&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="o">+</span><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">clog</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;shapefile &#39;&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">shape_name_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;.shp&#39; does not exist&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="o">+</span><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">     </span>
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">is_directory</span><span class="p">(</span><span class="n">shape_name_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.shp&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, hellowac
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Brokern Exceptions</a><ul>
+<li><a class="reference internal" href="#using-gdb">Using GDB</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=f115507d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>

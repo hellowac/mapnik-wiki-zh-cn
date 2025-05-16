@@ -1,0 +1,693 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>Installing Mapnik and Dependencies on Open Solaris - mapnik-wiki-zh-cn 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">mapnik-wiki-zh-cn 1.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">mapnik-wiki-zh-cn 1.0 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Introductory Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About-Mapnik.html">About Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik-Installation.html">Mapnik Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LearningMapnik.html">Learning Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notes-and-caveats.html">Notes and caveats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Related-projects-and-utilities.html">Related projects and utilties</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Mapnik API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XMLConfigReference.html">Mapnik configuration XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SymbologySupport.html">Symbology Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PluginArchitecture.html">Plugin Architecture</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/mapnik/mapnik/blob/master/INSTALL.md">Building Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik2.html">Mapnik2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapnikReleases.html">Mapnik Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/mapnik">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://webchat.freenode.net/?channels=#mapnik">#mapnik channel on irc.freenode.net Webchat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code-sprint.html">Code sprint</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://173.255.217.246:8000/mapnik_trac/wiki/MapnikCodeSprint/MCS01">Code sprint 2010 - Committers and Cartographers London, England, 24-26 September 2010</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/OpenSolarisInstallation.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <!-- Name: OpenSolarisInstallation -->
+<!-- Version: 44 -->
+<!-- Last-Modified: 2010/12/08 14:44:45 -->
+<!-- Author: springmeyer -->
+<section class="tex2jax_ignore mathjax_ignore" id="installing-mapnik-and-dependencies-on-open-solaris">
+<h1>Installing Mapnik and Dependencies on Open Solaris<a class="headerlink" href="#installing-mapnik-and-dependencies-on-open-solaris" title="Link to this heading">¶</a></h1>
+<p>This guide will describe getting Mapnik and it's dependencies running on the latest Open Solaris release: <em>2009.06</em>.</p>
+<p>This is a <em>non-trivial</em> exercise. It is highly recommended that you consider using Linux unless Open Solaris is a must. This document was written in late 2010 - your mileage may vary with later versions of Open Solaris. Basically package names may change and other workarounds below (hopefully) will become unneeded.</p>
+<p>In the future hopefully the latest versions of the <a class="reference external" href="http://gcc.gnu.org/">GNU compiler (gcc)</a> will become better supported on Open Solaris, or better packaging options may be available with  <a class="reference external" href="http://openindiana.org/">OpenIndiana</a> or <a class="reference external" href="http://www.nexenta.org/">Nexenta</a>.</p>
+<p>Basically the challenge here is boost and old, buggy compilers that sun (or sun packages) provide. If you you simply forge ahead compiling boost with suncc or the g++ provided by sun on open solaris you'd hit boost regex, boost python, and boost thread compile errors. You'll likely see problems such as those detailed at the <a class="reference internal" href="OpenSolarisInstallation_TroubleShooting.html"><span class="doc std std-doc">Open Solaris Troubleshooting page</span></a>.</p>
+<p>If you are finding this guide and do not need to install the boost libraries then this approach is overkill and likely the wrong approach. Most geospatial packages (like geos, proj4, postgis) should compile just fine on open solaris with the existing versions of gcc available. Instead this guide uses a custom compiled gcc44 which makes compiling boost possible, and works great to compile all other packages. The catch is that this approach requires much more care and attention (and some would likely call it insane to built up a whole geostack using a custom compiler not officially supported on the os).</p>
+<p>If anyone does forge ahead using the old tools available from sun and can compile Mapnik trunk and run the python nosetest successfully, then the approach of using gcc44 below may be able to be avoided. If you are this daft, then please update this page with what you've learned.</p>
+<section id="testing-details">
+<h2>Testing Details<a class="headerlink" href="#testing-details" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Tested running VirtualBox on OSX 10.6 (64 bit)</p></li>
+<li><p>Tested using the latest OSOL iso release:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>$<span class="w"> </span>cat<span class="w"> </span>/etc/release
+<span class="w">       </span>OpenSolaris<span class="w"> </span><span class="m">2009</span>.06<span class="w"> </span>snv_111b<span class="w"> </span>X86
+<span class="w">       </span>Assembled<span class="w"> </span><span class="m">07</span><span class="w"> </span>May<span class="w"> </span><span class="m">2009</span>
+</pre></div>
+</div>
+</section>
+<section id="mapnik-details">
+<h2>Mapnik Details<a class="headerlink" href="#mapnik-details" title="Link to this heading">¶</a></h2>
+<p>You will need at least:</p>
+<ul class="simple">
+<li><p>Mapnik &gt;= 2.x</p></li>
+</ul>
+<p>For 64 bit builds you need to apply patches from <a class="reference external" href="https://github.com/mapnik/mapnik/issues/675">#675</a> and <a class="reference external" href="https://github.com/mapnik/mapnik/issues/676">#676</a></p>
+</section>
+<section id="build-details">
+<h2>Build Details<a class="headerlink" href="#build-details" title="Link to this heading">¶</a></h2>
+<p>This guide will rely heavily on existing tools for package management on Open Solaris</p>
+<ul class="simple">
+<li><p>The 'pkg' tool supplied by Sun</p></li>
+<li><p>The community 'pkgtool/pkgbuild' tools</p></li>
+<li><p>The excellent WikiMedia Toolserver <code class="docutils literal notranslate"><span class="pre">spec</span></code> files for use with <code class="docutils literal notranslate"><span class="pre">pkgtool</span></code></p></li>
+</ul>
+</section>
+<section id="opensolaris-gotchas">
+<h2>OpenSolaris Gotchas<a class="headerlink" href="#opensolaris-gotchas" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Don't use <code class="docutils literal notranslate"><span class="pre">sudo</span></code> use <code class="docutils literal notranslate"><span class="pre">pfexec</span></code> (alias sudo=&quot;pfexec&quot;)</p></li>
+<li><p>Vim keystrokes are broken when logging in via ssh from a mac. But typing <code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">nocp</span></code> fixes things.</p></li>
+<li><p>Get info on CPUS: <code class="docutils literal notranslate"><span class="pre">prtdiag</span> <span class="pre">-v</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-G</span></code> is the solaris compiler flag for creating a shared library, but recently gcc versions need <code class="docutils literal notranslate"><span class="pre">-shared</span></code></p></li>
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">-shared</span></code> flag is missing then your libs will not be properly 'PIC&quot; (position independent code) and this can be diagnosed with:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">elfdump</span> <span class="o">-</span><span class="n">d</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">mylibrary</span><span class="o">.</span><span class="n">so</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">TEX</span> <span class="c1"># if PIC this should return nothing, if not PIC it will return a few rows</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Library runtime linking works differently on solaris than linux.</p></li>
+<li><p>It is more like mac osx, where libraries hardcode runtime search paths at build time</p></li>
+<li><p>Except that Solaris needs a special flag to get this to work: <code class="docutils literal notranslate"><span class="pre">-R/usr/local/lib</span></code></p></li>
+<li><p>To figure out where a library looks for depedents at runtime do:</p>
+<p>dump -Lv /usr/local/lib/mylibrary.so</p>
+</li>
+</ul>
+</section>
+<section id="step-1-updating-open-solaris">
+<h2>Step 1: Updating Open Solaris<a class="headerlink" href="#step-1-updating-open-solaris" title="Link to this heading">¶</a></h2>
+<p>Optional: If running VirtualBox, install the guest additions then reboot</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>pfexec<span class="w"> </span>reboot
+</pre></div>
+</div>
+<p>First we need to update the package manager</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>pfexec<span class="w"> </span>pkg<span class="w"> </span>install<span class="w"> </span>SUNWipkg
+</pre></div>
+</div>
+<p>Next, we update to the latest Open Solaris Development environment</p>
+<p><em>Note:</em> If we update the base os image after setting the publisher to the &quot;dev&quot;, the gnome/x11 user interface will break and we will only have a command line interface remaining. But, we want to update to dev (and the below guide depends upon it) because we want the ease of getting various packages from dev (via<code class="docutils literal notranslate"><span class="pre">pkg</span></code>) that otherwise we would need to install from source with <code class="docutils literal notranslate"><span class="pre">ts-specs/pkgtool</span></code>. The error upon rebooting that you will see (indicating the loss of X11) is <code class="docutils literal notranslate"><span class="pre">inetd[6270[:</span> <span class="pre">Failed</span> <span class="pre">to</span> <span class="pre">update</span> <span class="pre">state</span> <span class="pre">of</span> <span class="pre">instance</span> <span class="pre">svc:</span> <span class="pre">/application/x11/xfs:default</span> <span class="pre">in</span> <span class="pre">repository</span></code>. So, if you don't want to update to the dev environment as you don't want to break the GUI, don't set the publisher before running image-update (and know that certain commands in this guide will fail because dependencies are not going to be found).</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>pfexec<span class="w"> </span>pkg<span class="w"> </span>set-publisher<span class="w"> </span>-O<span class="w"> </span>http://pkg.opensolaris.org/dev<span class="w"> </span>opensolaris.org
+<span class="w">    </span>pfexec<span class="w"> </span>pkg<span class="w"> </span>refresh<span class="w"> </span>--full
+<span class="w">    </span><span class="c1"># update the package manager if you did not already (otherwise next command will fail)</span>
+<span class="w">    </span>pfexec<span class="w"> </span>pkg<span class="w"> </span>install<span class="w"> </span>SUNWipkg
+<span class="w">    </span><span class="c1"># optional: test upgrade of system</span>
+<span class="w">    </span>pfexec<span class="w"> </span>pkg<span class="w"> </span>image-update<span class="w"> </span>-nv
+<span class="w">    </span><span class="c1"># do actual upgrade (note: upgrades not possible on ec2)</span>
+<span class="w">    </span>pfexec<span class="w"> </span>pkg<span class="w"> </span>image-update
+<span class="w">    </span>pfexec<span class="w"> </span>reboot<span class="w"> </span><span class="c1"># then boot into new &#39;opensolaris-1&#39;</span>
+</pre></div>
+</div>
+<p>When you reboot you should see the new version reflected in <code class="docutils literal notranslate"><span class="pre">/etc/release</span></code>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>cat<span class="w"> </span>/etc/release
+<span class="w">    </span><span class="c1"># should get:</span>
+<span class="w">                           </span>OpenSolaris<span class="w"> </span>Development<span class="w"> </span>snv_134<span class="w"> </span>X86
+<span class="w">               </span>Copyright<span class="w"> </span><span class="m">2010</span><span class="w"> </span>Sun<span class="w"> </span>Microsystems,<span class="w"> </span>Inc.<span class="w">  </span>All<span class="w"> </span>Rights<span class="w"> </span>Reserved.
+<span class="w">                            </span>Use<span class="w"> </span>is<span class="w"> </span>subject<span class="w"> </span>to<span class="w"> </span>license<span class="w"> </span>terms.
+<span class="w">                                 </span>Assembled<span class="w"> </span><span class="m">01</span><span class="w"> </span>March<span class="w"> </span><span class="m">2010</span>
+</pre></div>
+</div>
+<p><em>Note:</em> This is a new boot environment, see the <a class="reference external" href="http://developers.sun.com/developer/technicalArticles/opensolaris/bootenvironments/index.html">solaris docs</a> for more info.</p>
+</section>
+<section id="step-2-setting-up-sun-studio-and-package-installation-tools">
+<h2>Step 2: Setting up Sun Studio and Package Installation Tools<a class="headerlink" href="#step-2-setting-up-sun-studio-and-package-installation-tools" title="Link to this heading">¶</a></h2>
+<p>Install Sun Studio and a few other sun provided base development tools you will need to get started:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1"># install dev tools from sun needed specifically for mapnik build</span>
+<span class="w">    </span>pfexec<span class="w"> </span>pkg<span class="w"> </span>install<span class="w"> </span>SUNWsvn<span class="w"> </span>SUNWpython26<span class="w"> </span>SUNWgmake<span class="w"> </span>SUNWgcc<span class="w"> </span>developer/sunstudio12u1
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># install other dev tools you&#39;ll likely need down the road</span>
+<span class="w">    </span>pfexec<span class="w"> </span>pkg<span class="w"> </span>install<span class="w"> </span>gcc-dev<span class="w"> </span>SUNWsshd<span class="w"> </span>SUNWgnu-readline<span class="w"> </span>SUNWcurl<span class="w"> </span>SUNWapr13<span class="w"> </span>SUNWapu13<span class="w"> </span>gd
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>NOTE: python26 is available only due to the pkg-update to <code class="docutils literal notranslate"><span class="pre">dev</span></code> which brings us to <code class="docutils literal notranslate"><span class="pre">snv_134</span></code>. If you can and want to compile your own python version, then updating to dev is less critical.</p></li>
+<li><p>CRITICAL: boost_python and mapnik, compiled with gcc44 can run just fine, but if used with the sun proved python26 (which will be linked to a different version of libgcc) then exception handling will likely be broken: <a class="reference external" href="http://mail.python.org/pipermail/cplusplus-sig/2010-December/015822.html">http://mail.python.org/pipermail/cplusplus-sig/2010-December/015822.html</a>. At this time this guide uses this approach and their is not currently a clean solution for this problem (short of compiling python from source and all the issues that may arise from that).</p></li>
+</ul>
+</section>
+<section id="step-3-setting-up-wikimedia-toolserver-s-ts-specs">
+<h2>Step 3: Setting up WikiMedia Toolserver's 'ts-specs'<a class="headerlink" href="#step-3-setting-up-wikimedia-toolserver-s-ts-specs" title="Link to this heading">¶</a></h2>
+<p>The WikiMedia project runs Solaris for many of its systems and maintains an excellent rpm-like set of package specs which can be used to built up a robust development and production environment.</p>
+<p>The CATCH with using these build files is that they are written for Solaris not Open Solaris - so <em>many</em> hardcoded paths are correct but some are not and cause packages to break unless you are willing to dig deeply to figure out what may be going wrong. So, we do not recommend using the <em>ts-specs</em> for anything other that getting gcc44 built, but in the future the <em>ts-specs</em> project may have a lot of promise as an awesome way to build up a geo stack.</p>
+<p>So, overally we choose this route because using suncc (Sun's compiler) or the gcc version available in the standard open solaris packages (4.3.x) will lead to hard and lonely dead-ends compiling boost. Boost is an excellent set of libraries but pushes compilers and exposes their bugs. So, basically we need gcc/g++ 4.4 for building boost, and we can get it built, as well as boost (if we choose to, but in this guide we do not), using spec files from WikiMedia Toolservers 'ts-specs'.</p>
+<p>Download the 'ts-spec' repository:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>svn<span class="w"> </span>co<span class="w"> </span>http://svn.toolserver.org/svnroot/toolserver/trunk/ts-specs<span class="w"> </span>-r<span class="w"> </span><span class="m">568</span><span class="w"> </span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>ts-specs
+<span class="w">    </span><span class="c1"># confirm that packages should be downloaded locally</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>download<span class="w"> </span>&gt;~/.pkgtoolrc
+</pre></div>
+</div>
+<p>*NOTE: we fetch a specific revision above just for caution and so that the below patch will be sure to apply cleanly. You can update to the latest <em>ts-specs</em> if you wish.</p>
+<p>Now we need the pkgtool program to use these spec files. Ultimately we'll install this tool using ts-specs, but first we fetch it and compile ourselves:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1"># as the root user build latest pkgbuild</span>
+<span class="w">    </span><span class="c1"># http://pkgbuild.sourceforge.net/pkgtool.html</span>
+<span class="w">    </span>wget<span class="w"> </span>http://prdownloads.sourceforge.net/pkgbuild/pkgbuild-1.3.103.tar.bz2
+<span class="w">    </span>tar<span class="w"> </span>xvf<span class="w"> </span>pkgbuild-1.3.103.tar.bz2
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>pkgbuild-1.3.103
+<span class="w">    </span>./configure<span class="w"> </span>--prefix<span class="o">=</span>/opt/pkgbuild<span class="w"> </span><span class="c1"># use a custom prefix so it is easy to uninstall later</span>
+<span class="w">    </span>make
+<span class="w">    </span>pfexec<span class="w"> </span>make<span class="w"> </span>install
+</pre></div>
+</div>
+<p>If you do not already have a non-root user you are using, then set one up now to run the ts-spec installs (pkgtool insists!).</p>
+<p>Optional: If you don't already have a non-root user with admin access do:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>groupadd<span class="w"> </span>dev<span class="w"> </span><span class="c1"># or your preferable group name</span>
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">USERNAME</span><span class="o">=</span>&lt;user&gt;<span class="w"> </span><span class="c1"># your new username</span>
+<span class="w">    </span>useradd<span class="w"> </span>-g<span class="w"> </span>dev<span class="w"> </span>-d<span class="w"> </span>/export/home/<span class="nv">$USERNAME</span><span class="w"> </span>-m<span class="w"> </span>-s<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USERNAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="nv">$USERNAME</span>
+<span class="w">    </span>passwd<span class="w"> </span><span class="nv">$USERNAME</span>
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">HOME</span><span class="o">=</span>/export/home/<span class="nv">$USERNAME</span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>
+<span class="w">    </span>mkdir<span class="w"> </span>src
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">src</span><span class="o">=</span><span class="nv">$HOME</span>/src
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/opt/ts/bin/:<span class="nv">$PATH</span>
+<span class="w">    </span><span class="c1"># give the user rights</span>
+<span class="w">    </span><span class="c1"># http://developers.sun.com/developer/technicalArticles/opensolaris/pfexec.html</span>
+<span class="w">    </span>usermod<span class="w"> </span>-P<span class="s1">&#39;File System Management&#39;</span><span class="w"> </span><span class="nv">$USERNAME</span>
+<span class="w">    </span>usermod<span class="w"> </span>-P<span class="s1">&#39;Software Installation&#39;</span><span class="w"> </span><span class="nv">$USERNAME</span>
+<span class="w">    </span><span class="c1"># giving sudo/admin privs</span>
+<span class="w">    </span>usermod<span class="w"> </span>-P<span class="s1">&#39;Primary Administrator&#39;</span><span class="w"> </span><span class="nv">$USERNAME</span>
+</pre></div>
+</div>
+<p>Once done, log out and back in as this new user</p>
+<p>Then, finally install pkgtool via ts-specs and uninstall the source compiled version.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>ts-specs<span class="w"> </span><span class="c1"># move into ts-specs directory that you download above</span>
+<span class="w">    </span><span class="c1"># as non-root user...</span>
+<span class="w">    </span>/opt/pkgbuild/bin/pkgtool<span class="w"> </span>build<span class="w"> </span>sysutils/TSpkgbuild
+<span class="w">    </span><span class="c1"># then remove /opt/pkgbuild</span>
+<span class="w">    </span>pfexec<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/opt/pkgbuild
+</pre></div>
+</div>
+<p>The expected output from pkgtool is:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>INFO:<span class="w"> </span>Copying<span class="w"> </span>%use<span class="s1">&#39;d or %include&#39;</span>d<span class="w"> </span>spec<span class="w"> </span>files<span class="w"> </span>to<span class="w"> </span>SPECS<span class="w"> </span>directory
+<span class="w">    </span>INFO:<span class="w"> </span>Processing<span class="w"> </span>spec<span class="w"> </span>files
+<span class="w">    </span>INFO:<span class="w"> </span>Finding<span class="w"> </span>sources
+<span class="w">    </span>INFO:<span class="w"> </span>Downloading<span class="w"> </span><span class="nb">source</span><span class="w"> </span>http://mesh.dl.sourceforge.net/sourceforge/pkgbuild/pkgbuild-1.3.98.4.tar.bz2
+<span class="w">    </span>INFO:<span class="w"> </span>Running<span class="w"> </span>pkgbuild<span class="w"> </span>-ba<span class="w"> </span><span class="o">[</span>...<span class="o">]</span><span class="w"> </span>TSpkgbuild.spec<span class="w"> </span><span class="o">(</span>TSpkgbuild<span class="o">)</span>
+<span class="w">    </span>INFO:<span class="w"> </span>TSpkgbuild<span class="w"> </span>PASSED
+<span class="w">    </span>INFO:<span class="w"> </span>Installing<span class="w"> </span>TSpkgbuild
+<span class="w">    </span>libnotify-Message:<span class="w"> </span>Unable<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>session<span class="w"> </span>bus:<span class="w"> </span>/usr/bin/dbus-launch<span class="w"> </span>terminated<span class="w"> </span>abnormally<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>error:<span class="w"> </span>Autolaunch<span class="w"> </span>error:<span class="w"> </span>X11<span class="w"> </span>initialization<span class="w"> </span>failed.
+<span class="w">    </span>
+<span class="w">    </span>Summary:
+<span class="w">    </span>
+<span class="w">                             </span>package<span class="w"> </span><span class="p">|</span><span class="w">      </span>status<span class="w"> </span><span class="p">|</span><span class="w"> </span>details
+<span class="w">    </span>---------------------------------+-------------+-------------------------------
+<span class="w">                          </span>TSpkgbuild<span class="w"> </span><span class="p">|</span><span class="w">      </span>PASSED<span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</pre></div>
+</div>
+<p>Later on when using pkgtool you will likely see these harmless errors:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">pkgparam</span><span class="p">:</span> <span class="n">ERROR</span><span class="p">:</span> <span class="n">unable</span> <span class="n">to</span> <span class="n">locate</span> <span class="n">parameter</span> <span class="n">information</span> <span class="k">for</span> <span class="s2">&quot;SUNWcar&quot;</span>
+    <span class="n">pkgparam</span><span class="p">:</span> <span class="n">ERROR</span><span class="p">:</span> <span class="n">unable</span> <span class="n">to</span> <span class="n">locate</span> <span class="n">parameter</span> <span class="n">information</span> <span class="k">for</span> <span class="s2">&quot;SUNWkvm&quot;</span>
+</pre></div>
+</div>
+<p>Now set up the path to the ts-specs install prefix:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/opt/ts/bin/:<span class="nv">$PATH</span><span class="w"> </span><span class="c1"># or put this in your bashrc...</span>
+</pre></div>
+</div>
+<p>If you are new to pkgtool check out all the default settings like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pkgtool</span> <span class="o">--</span><span class="n">dumprc</span>
+</pre></div>
+</div>
+</section>
+<section id="step-4-patching-ts-specs">
+<h2>Step 4: Patching ts-specs<a class="headerlink" href="#step-4-patching-ts-specs" title="Link to this heading">¶</a></h2>
+<p>We are almost ready to start cranking away on installs of the latest dev tools via ts-specs.</p>
+<p>One <em>critical</em> issue is that gnu tools have a circular dependency on <em>textinfo</em>. Luckily ts-specs can build up a base set of tools without using textinfo.</p>
+<p>We just need to patch our ts-specs directory to disable textinfo and bypass this circular dependency.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>ts-specs
+<span class="w">    </span>wget<span class="w"> </span>http://http://github.com/mapnik/mapnik/wiki/raw-attachment/wiki/OpenSolarisInstallation/ts-spec1-compile-gcc44.patch
+<span class="w">    </span>patch<span class="w"> </span>-p0<span class="w"> </span>&lt;<span class="w"> </span>ts-spec1-compile-gcc44.patch
+</pre></div>
+</div>
+</section>
+<section id="step-5-installing-development-environment">
+<h2>Step 5: Installing Development Environment<a class="headerlink" href="#step-5-installing-development-environment" title="Link to this heading">¶</a></h2>
+<p>Now we are ready for our base installs via ts-specs.</p>
+<p>Here are the commands that work to install gcc4.4:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1"># build dependencies for gcc4.4</span>
+<span class="w">    </span>pkgtool<span class="w"> </span>build<span class="w"> </span>devel/TSm4
+<span class="w">    </span>pkgtool<span class="w"> </span>build<span class="w"> </span>libs/TSgmp
+<span class="w">    </span>pkgtool<span class="w"> </span>build<span class="w"> </span>libs/TSmpfr
+<span class="w">    </span>pkgtool<span class="w"> </span>build<span class="w"> </span>devel/TSbinutils
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># finally we&#39;ll build gcc4.4</span>
+<span class="w">    </span>pkgtool<span class="w"> </span>build<span class="w"> </span>devel/TSgcc44
+<span class="w">    </span><span class="c1"># remove sun gcc - this may fail, but should not be a big deal if it does</span>
+<span class="w">    </span>pfexec<span class="w"> </span>pkg<span class="w"> </span>uninstall<span class="w"> </span>SUNWgcc
+<span class="w">    </span><span class="c1"># add new gcc on path</span>
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/opt/ts/gcc/4.4/bin/:<span class="nv">$PATH</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># build gmake from ts-spec</span>
+<span class="w">    </span>pkgtool<span class="w"> </span>build<span class="w"> </span>devel/TSgmake
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># now remove sun gmake</span>
+<span class="w">    </span>pfexec<span class="w"> </span>pkg<span class="w"> </span>uninstall<span class="w"> </span>SUNWgmake
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># python26 is already available, but grab a few extra python tools</span>
+<span class="w">    </span>pfexec<span class="w"> </span>pkg<span class="w"> </span>install<span class="w"> </span>SUNWpython26-setuptools<span class="w"> </span>SUNWpython26-lxml
+</pre></div>
+</div>
+</section>
+<section id="step-6-installing-core-mapnik-dependencies">
+<h2>Step 6: Installing Core Mapnik Dependencies<a class="headerlink" href="#step-6-installing-core-mapnik-dependencies" title="Link to this heading">¶</a></h2>
+<p>We're going to do this from source, rather than use ts-specs just to make any debugging much easier (things can go wrong with ts-specs on opensolaris because it has only really been tested on solaris). But in the future I may revise this to try to build more (or all) Mapnik core dependencies with ts-specs.</p>
+<section id="a-32-bit-postgres-8-4-from-source">
+<h3>6a: 32 bit - Postgres 8.4 from source<a class="headerlink" href="#a-32-bit-postgres-8-4-from-source" title="Link to this heading">¶</a></h3>
+<p>Go to -&gt; <a class="reference internal" href="OpenSolarisInstallation_32bit.html"><span class="doc std std-doc">32bit</span></a></p>
+<p>This was my first approach, and it worked great. But, I needed osm2pgsql to run 64 bit (to handle osm planet imports), and postgres to run 64 bit for better performance. So the step below is the current effort.</p>
+</section>
+<section id="b-64-bit-postgres-8-3-from-sun">
+<h3>6b: 64 bit - Postgres 8.3 from sun<a class="headerlink" href="#b-64-bit-postgres-8-3-from-sun" title="Link to this heading">¶</a></h3>
+<p>Go to -&gt; <a class="reference internal" href="OpenSolarisInstallation_32bit.html"><span class="doc std std-doc">64bit</span></a></p>
+<p>This approach attempts to get the whole stack running 64 bit, and 64 bit postgres and python are used from sun. Integrating with sun's postgres and python is really hairy, but postgres8.3 was desirable because it is known by the osm community to be faster than 8.4 for applying diffs with osm2pgsql and python from sun was desirable because it is highly customized to be able to run both 32 bit and 64 bit. However the <em>catch</em> with this approach is that mapnik's exceptions are broken (<a class="reference external" href="http://mail.python.org/pipermail/cplusplus-sig/2010-December/015822.html">http://mail.python.org/pipermail/cplusplus-sig/2010-December/015822.html</a>).</p>
+</section>
+</section>
+<section id="step-7-installing-mapnik">
+<h2>Step 7: Installing Mapnik<a class="headerlink" href="#step-7-installing-mapnik" title="Link to this heading">¶</a></h2>
+<p>Install Mapnik 0.7.2 or trunk (Mapnik2)</p>
+<p>For 64 bit builds you may need to apply patches from <a class="reference external" href="https://github.com/mapnik/mapnik/issues/675">#675</a> and <a class="reference external" href="https://github.com/mapnik/mapnik/issues/676">#676</a></p>
+<p>Mapnik 0.7.2:</p>
+<p>32bit:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$SRC</span>
+<span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>git://github.com/mapnik/mapnik.git<span class="w"> </span>mapnik-0.7.3
+<span class="w">    </span>git<span class="w"> </span>checkout<span class="w"> </span>v0.7.3
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>mapnik-0.7.2
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">LANG</span><span class="o">=</span><span class="s2">&quot;C&quot;</span>
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">LC_ALL</span><span class="o">=</span><span class="s2">&quot;C&quot;</span>
+<span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>configure<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="nv">CXX</span><span class="o">=</span><span class="s2">&quot;/opt/ts/gcc/4.4/bin/g++&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="nv">OPTIMIZATION</span><span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="nv">INPUT_PLUGINS</span><span class="o">=</span>shape,gdal,postgis<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="nv">PG_CONFIG</span><span class="o">=</span>/usr/local/pgsql/bin/pg_config<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="nv">GDAL_CONFIG</span><span class="o">=</span>/usr/local/bin/gdal-config<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="nv">PYTHON_PREFIX</span><span class="o">=</span>/usr/local/
+<span class="w">    </span>
+<span class="w">    </span>python<span class="w"> </span>scons/scons.py
+<span class="w">    </span>pfexec<span class="w"> </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>install
+</pre></div>
+</div>
+<p>64 bit:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">python</span> <span class="n">scons</span><span class="o">/</span><span class="n">scons</span><span class="o">.</span><span class="n">py</span> <span class="n">configure</span> \
+      <span class="n">CXX</span><span class="o">=</span><span class="s2">&quot;/opt/ts/gcc/4.4/bin/g++ -m64 -R/opt/ts/gcc/4.4/lib/amd64/ -R/usr/local/lib -R/usr/postgres/8.3/lib/amd64&quot;</span> \
+      <span class="n">CC</span><span class="o">=</span><span class="s2">&quot;/opt/ts/gcc/4.4/bin/gcc -m64 -R/opt/ts/gcc/4.4/lib/amd64/ -R/usr/local/lib -R/usr/postgres/8.3/lib/amd64&quot;</span> \
+      <span class="n">OPTIMIZATION</span><span class="o">=</span><span class="mi">3</span> \
+      <span class="n">INPUT_PLUGINS</span><span class="o">=</span><span class="n">shape</span><span class="p">,</span><span class="n">gdal</span><span class="p">,</span><span class="n">postgis</span> \
+      <span class="n">PG_CONFIG</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">postgres</span><span class="o">/</span><span class="mf">8.3</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">amd64</span><span class="o">/</span><span class="n">pg_config</span> \
+      <span class="n">GDAL_CONFIG</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">gdal</span><span class="o">-</span><span class="n">config</span> \
+      <span class="n">PYTHON_PREFIX</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span> \
+      <span class="n">PYTHON</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">amd64</span><span class="o">/</span><span class="n">python</span> \
+      <span class="n">DEMO</span><span class="o">=</span><span class="kc">True</span> \
+</pre></div>
+</div>
+<p>NOTE: in 64 bit mode python exceptions will be broken (you will get segfaults instead) due to incompatible libgcc versions linked to by mapnik (/opt/ts/gcc/4/4/lib/ammd64/libgcc_s.so) vs python (/usr/sfw/lib/amd64/libgcc_s.so). Only know solution at this point is to paste this command before running python process that imports mapnik:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">LD_PRELOAD</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">sfw</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">amd64</span><span class="o">/</span><span class="n">libgcc_s</span><span class="o">.</span><span class="n">so</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">amd64</span><span class="o">/</span><span class="n">python</span>
+</pre></div>
+</div>
+<p>Mapnik2:</p>
+<p>32 bit:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1"># mapnik trunk</span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$SRC</span>
+<span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>git://github.com/mapnik/mapnik.git<span class="w"> </span>mapnik-trunk
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>mapnik-trunk
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">LANG</span><span class="o">=</span><span class="s2">&quot;C&quot;</span>
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">LC_ALL</span><span class="o">=</span><span class="s2">&quot;C&quot;</span>
+<span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>configure<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="nv">CXX</span><span class="o">=</span>/opt/ts/gcc/4.4/bin/g++<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="nv">OPTIMIZATION</span><span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="nv">INPUT_PLUGINS</span><span class="o">=</span>shape,gdal,postgis<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="nv">PG_CONFIG</span><span class="o">=</span>/usr/local/pgsql/bin/pg_config<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="nv">GDAL_CONFIG</span><span class="o">=</span>/usr/local/bin/gdal-config<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="nv">PYTHON_PREFIX</span><span class="o">=</span>/usr/local/
+<span class="w">    </span>
+<span class="w">    </span>python<span class="w"> </span>scons/scons.py
+<span class="w">    </span>pfexec<span class="w"> </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>install
+</pre></div>
+</div>
+<p>64bit:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>see command for 0.7.2 above - Mapnik2 should work just as well, but I&#39;ve not tested 64 bit
+</pre></div>
+</div>
+</section>
+<section id="step-8-testing-mapnik">
+<h2>Step 8: Testing Mapnik<a class="headerlink" href="#step-8-testing-mapnik" title="Link to this heading">¶</a></h2>
+<p>Run the nosetests:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$SRC</span>
+<span class="w">    </span>wget<span class="w"> </span>http://somethingaboutorange.com/mrl/projects/nose/nose-0.11.2.tar.gz
+<span class="w">    </span>tar<span class="w"> </span>xvf<span class="w"> </span>nose-0.11.2.tar.gz
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>nose-0.11.2
+<span class="w">    </span>pfexec<span class="w"> </span>python2.6<span class="w"> </span>setup.py<span class="w"> </span>install
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># now, within mapnik source directory</span>
+<span class="w">    </span>python<span class="w"> </span>tests/run_test.py
+<span class="w">    </span><span class="c1"># with trunk you should get:</span>
+<span class="w">    </span>FAILED<span class="w"> </span><span class="o">(</span><span class="nv">TODO</span><span class="o">=</span><span class="m">9</span>,<span class="w"> </span><span class="nv">errors</span><span class="o">=</span><span class="m">8</span>,<span class="w"> </span><span class="nv">failures</span><span class="o">=</span><span class="m">4</span><span class="o">)</span>
+<span class="w">    </span><span class="c1"># with Mapnik 0.7.1 you should get no errors or failures</span>
+</pre></div>
+</div>
+<p>Test actual rendering (this assumes you've got an osm db setup up with data using osm2pgsql):</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1"># install nik2img</span>
+<span class="w">    </span>svn<span class="w"> </span>co<span class="w"> </span>http://mapnik-utils.googlecode.com/svn/trunk/nik2img/<span class="w"> </span>nik2img-svn
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>nik2img-svn
+<span class="w">    </span>pfexec<span class="w"> </span>python<span class="w"> </span>setup.py<span class="w"> </span>install
+<span class="w">    </span><span class="c1"># grab osm stylesheets</span>
+<span class="w">    </span>svn<span class="w"> </span>co<span class="w"> </span>http://svn.openstreetmap.org/applications/rendering/mapnik/<span class="w"> </span>osm-mapnik
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>osm-mapnik
+<span class="w">    </span>./generate_xml.py<span class="w"> </span>--dbname<span class="w"> </span>osm<span class="w"> </span>--accept-none
+</pre></div>
+</div>
+<p>If using Mapnik2:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># if using mapnik trunk upgrade xml into new copy:</span>
+    <span class="n">upgrade_map_xml</span><span class="o">.</span><span class="n">py</span> <span class="n">osm</span><span class="o">.</span><span class="n">xml</span> <span class="n">osm2</span><span class="o">.</span><span class="n">xml</span>
+    <span class="c1"># test rendering</span>
+    <span class="n">nik2img</span><span class="o">.</span><span class="n">py</span> <span class="n">osm2</span><span class="o">.</span><span class="n">xml</span> <span class="n">image</span><span class="o">.</span><span class="n">png</span> <span class="o">--</span><span class="n">mapnik</span><span class="o">-</span><span class="n">version</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Otherwise:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">nik2img</span><span class="o">.</span><span class="n">py</span> <span class="n">osm</span><span class="o">.</span><span class="n">xml</span> <span class="n">image</span><span class="o">.</span><span class="n">png</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, hellowac
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Installing Mapnik and Dependencies on Open Solaris</a><ul>
+<li><a class="reference internal" href="#testing-details">Testing Details</a></li>
+<li><a class="reference internal" href="#mapnik-details">Mapnik Details</a></li>
+<li><a class="reference internal" href="#build-details">Build Details</a></li>
+<li><a class="reference internal" href="#opensolaris-gotchas">OpenSolaris Gotchas</a></li>
+<li><a class="reference internal" href="#step-1-updating-open-solaris">Step 1: Updating Open Solaris</a></li>
+<li><a class="reference internal" href="#step-2-setting-up-sun-studio-and-package-installation-tools">Step 2: Setting up Sun Studio and Package Installation Tools</a></li>
+<li><a class="reference internal" href="#step-3-setting-up-wikimedia-toolserver-s-ts-specs">Step 3: Setting up WikiMedia Toolserver's 'ts-specs'</a></li>
+<li><a class="reference internal" href="#step-4-patching-ts-specs">Step 4: Patching ts-specs</a></li>
+<li><a class="reference internal" href="#step-5-installing-development-environment">Step 5: Installing Development Environment</a></li>
+<li><a class="reference internal" href="#step-6-installing-core-mapnik-dependencies">Step 6: Installing Core Mapnik Dependencies</a><ul>
+<li><a class="reference internal" href="#a-32-bit-postgres-8-4-from-source">6a: 32 bit - Postgres 8.4 from source</a></li>
+<li><a class="reference internal" href="#b-64-bit-postgres-8-3-from-sun">6b: 64 bit - Postgres 8.3 from sun</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#step-7-installing-mapnik">Step 7: Installing Mapnik</a></li>
+<li><a class="reference internal" href="#step-8-testing-mapnik">Step 8: Testing Mapnik</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=f115507d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>

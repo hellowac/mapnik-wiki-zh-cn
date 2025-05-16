@@ -1,0 +1,523 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>Google Summer of Code Ideas - mapnik-wiki-zh-cn 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">mapnik-wiki-zh-cn 1.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">mapnik-wiki-zh-cn 1.0 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Introductory Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About-Mapnik.html">About Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik-Installation.html">Mapnik Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LearningMapnik.html">Learning Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notes-and-caveats.html">Notes and caveats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Related-projects-and-utilities.html">Related projects and utilties</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Mapnik API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XMLConfigReference.html">Mapnik configuration XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SymbologySupport.html">Symbology Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PluginArchitecture.html">Plugin Architecture</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/mapnik/mapnik/blob/master/INSTALL.md">Building Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik2.html">Mapnik2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapnikReleases.html">Mapnik Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/mapnik">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://webchat.freenode.net/?channels=#mapnik">#mapnik channel on irc.freenode.net Webchat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code-sprint.html">Code sprint</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://173.255.217.246:8000/mapnik_trac/wiki/MapnikCodeSprint/MCS01">Code sprint 2010 - Committers and Cartographers London, England, 24-26 September 2010</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/GSOC-Ideas.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section class="tex2jax_ignore mathjax_ignore" id="google-summer-of-code-ideas">
+<h1>Google Summer of Code Ideas<a class="headerlink" href="#google-summer-of-code-ideas" title="Link to this heading">¶</a></h1>
+<p>Mapnik has participated in Google Summer of Code in 2010 (2 students) &amp; 2011 (3 students). In 2012 we had a GSoC student via the OpenStreetMap umbrella project, and in 2013 students can apply via <a class="reference external" href="http://wiki.osgeo.org/wiki/Google_Summer_of_Code_2013">OSGeo</a>.</p>
+<p>Below are some projects we've come up with, which hopefully will interest you! See also <a class="reference internal" href="Ideas.html"><span class="doc std std-doc">&#64;steve8s ideas page</span></a> for more &quot;what Mapnik would do in an ideal world&quot;.</p>
+<p>In general, students will need to:</p>
+<ul class="simple">
+<li><p>have a solid coding (C/C++/Python)</p></li>
+<li><p>ideally have had some exposure to mapping/geo (or, get started and experimenting now!)</p></li>
+<li><p>be good communicators, we expect weekly public blog posts with progress/successes/problems.</p></li>
+<li><p>be motivated and self-driven - we're not going to drag you through this, you need to <em>want</em> it!</p></li>
+</ul>
+<p>Questions? Email <a class="reference internal" href="#/rcoup"><span class="xref myst">Rob</span></a> at <a class="reference external" href="mailto:robert&#37;&#52;&#48;coup&#46;net&#46;nz">robert<span>&#64;</span>coup<span>&#46;</span>net<span>&#46;</span>nz</a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="project-ideas">
+<h1>Project Ideas<a class="headerlink" href="#project-ideas" title="Link to this heading">¶</a></h1>
+<section id="new-visual-test-framework">
+<h2>New visual test framework<a class="headerlink" href="#new-visual-test-framework" title="Link to this heading">¶</a></h2>
+<section id="description">
+<h3>Description<a class="headerlink" href="#description" title="Link to this heading">¶</a></h3>
+<p>The amount of styling options demanded by high performance and high quality cartography is bewildering.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mapnik</span><span class="o">/</span><span class="n">mapnik</span><span class="o">-</span><span class="n">reference</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">latest</span><span class="o">/</span><span class="n">reference</span><span class="o">.</span><span class="n">json</span>
+<span class="err">$</span> <span class="n">python</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;reference.json&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">[</span><span class="s1">&#39;symbolizers&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="n">count</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="n">count</span>
+<span class="mi">162</span>
+</pre></div>
+</div>
+<p>Combine those 162 properties with the many different <a class="reference external" href="https://github.com/mapnik/mapnik-reference/blob/master/latest/datasources.json">types of datasources</a> and <a class="reference internal" href="OutputFormats.html"><span class="doc std std-doc">output formats</span></a> Mapnik supports, and all their options and you end up with thousands of combinations of things that interact with variable and massive geodata in interesting ways.</p>
+<p>Add sources like OSM, which do not restrict geometry validity and to forge forward in this wild world you need amazing test cases and an amazing framework for creating, evaluating, summarizing, and understanding the test results. They have to be visual so that developers to look at the results to learn about the impact of code and because the visual output is the goal. Regressions need to be prevented, but developers also need easy ways to understand how their code changes potentially many hundreds of test results. So, a code change that fixes a bug, for example in the way that text is placed, should break hundreds of tests because tests should exist already to validate current behavior. But it should also be very easy to update all those tests and confirm, visually that the updates look good.</p>
+<p>What could the framework look like? Where can you look for inspiration?</p>
+<ul class="simple">
+<li><p>our existing tests at <a class="reference external" href="https://github.com/mapnik/mapnik/tree/master/tests">https://github.com/mapnik/mapnik/tree/master/tests</a>. Note there are not just visual tests, but 'traditional' algorithm/code/performance unit tests as well.</p></li>
+<li><p>what test frameworks exist for video encoders/decoders and image processing libraries? (think ffmpeg, videolan, imagemagick, OpenCV, PIL, <a class="reference external" href="https://github.com/developmentseed/node-blend/tree/master/test">node-blend</a>, etc) Which do it really well?</p></li>
+<li><p>what test frameworks exist for software with 1000s of combinations?</p></li>
+<li><p>how can we optimise test creation/running/reporting/updates for developer efficiency?</p></li>
+<li><p>how could we run it on distributed infrastructure via TravisCI/Jenkins/etc?</p></li>
+</ul>
+<p>What we want in an application:</p>
+<ul class="simple">
+<li><p>to see your experience in Python</p></li>
+<li><p>research into what is 'out there'</p></li>
+<li><p>a solid proposed approach we can work together to refine</p></li>
+</ul>
+</section>
+<section id="how-it-would-benefit-mapnik-project">
+<h3>How it would benefit Mapnik Project<a class="headerlink" href="#how-it-would-benefit-mapnik-project" title="Link to this heading">¶</a></h3>
+<p>Allows the project to move forward faster - fixing bugs, adding features, and refactoring without needing to just hope that regressions don't appear. The faster bugs/regressions are found, the easier they are to fix. The easier tests are to create and update, the more tests there will be.</p>
+</section>
+<section id="what-student-would-learn">
+<h3>What student would learn<a class="headerlink" href="#what-student-would-learn" title="Link to this heading">¶</a></h3>
+<p>How a modern map rendering framework works. How test frameworks catering to 1000s of possible combinations of options/inputs/outputs can work (because you'll build one!). All about image and geodata formats and their structures and internals. How to optimise testing for developer happiness and developer speed.</p>
+</section>
+<section id="submitter">
+<h3>Submitter<a class="headerlink" href="#submitter" title="Link to this heading">¶</a></h3>
+<p><a class="reference internal" href="#/springmeyer"><span class="xref myst">Dane Springmeyer</span></a></p>
+</section>
+<section id="possible-mentors">
+<h3>Possible Mentors<a class="headerlink" href="#possible-mentors" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#/springmeyer"><span class="xref myst">Dane Springmeyer</span></a> - <a class="reference external" href="mailto:dane&#37;&#52;&#48;dbsgeo&#46;com">dane<span>&#64;</span>dbsgeo<span>&#46;</span>com</a></p></li>
+</ul>
+</section>
+<section id="discussion">
+<h3>Discussion<a class="headerlink" href="#discussion" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Comment/Idea</p></li>
+<li><p>-- name of person commenting - date</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="anti-meridian-support">
+<h2>Anti-Meridian Support<a class="headerlink" href="#anti-meridian-support" title="Link to this heading">¶</a></h2>
+<section id="id1">
+<h3>Description<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>The anti-meridian (aka 'date line'/180th meridian/+180°/-180°/end of the world) causes problems (eg. <a class="reference external" href="http://trac.osgeo.org/mapserver/attachment/ticket/15/mswms_gmap.gif">1</a>, <a class="reference external" href="http://www.youtube.com/watch?v=-t0AV27t8tQ&amp;amp;feature=youtu.be&amp;amp;noredirect=1">2</a>, <a class="reference external" href="https://earth-issues.googlecode.com/issues/attachment?aid=13400000000&amp;amp;name=PolygonCross.jpg&amp;amp;token=DznRVkFPn0C7yeqygJ3rkGEZp8g%3A1364419894395&amp;amp;inline=1">3</a>, <a class="reference external" href="http://cdn.cruisersforum.com/forums/attachment.php?attachmentid=37372&amp;amp;d=1329218601">4</a>, <a class="reference external" href="http://wiki.openstreetmap.org/wiki/180th_meridian">5</a> ) for most mapping and geospatial software, since they naively treat our round world as flat. Mapnik is no exception.</p>
+<ul class="simple">
+<li><p>Features with components (eg. MultiPolygons) where <a class="reference external" href="http://data.linz.govt.nz/#/layer/785-nz-land-districts/">parts are on different sides</a> of the anti-meridian.</p></li>
+<li><p><a class="reference external" href="http://koordinates.com/#/layer/1541-new-zealand-region-bathymetry/">Geometries that span</a> the antimeridian</p></li>
+<li><p><a class="reference external" href="http://koordinates.com/#/layer/1720-new-zealand-250m-bathymetry-rainbow-2008/">Rasters that span</a> the anti-meridian</p></li>
+<li><p>lines/polygons whose coordinates go from +175 to +185 (into the 'next world'), or -175 to -185 (into the 'previous world'), or +175 to -175 (theoretically 'right')</p></li>
+<li><p>projection issues - data that 'works' in one coordinate system might not work in another based on naive transformations. At least with geographic (lat/long) coordinate systems we <em>know</em> they wrap, for projected ones (eg. Spherical Mercator) that span the world, we don't even know.</p></li>
+<li><p>all the various hacks people have done to source data to make it work in particular software</p></li>
+<li><p>extents/bounds/boxes that use (&amp; enforce) minx,maxx rather than left,right</p></li>
+<li><p><a class="reference external" href="http://postgis.net/docs/using_postgis_dbmanagement.html#PostGIS_Geography">Geography data types</a>, which solve it at a datasource level. But we're rendering flat maps!</p></li>
+<li><p>output maps that cross the anti-meridian</p></li>
+<li><p>tiled maps that go right up to the anti-meridian but don't cross it.</p></li>
+</ul>
+<p>Unfortunately since the bulk of the world's mapping software engineers work in Europe/America/Asia, the problem has never really been dealt to. Ask a New Zealander geographer and you'll get an earful ;)</p>
+<p>There are all sorts of approaches to 'solving' it, each with their own performance/complexity/data limitations:</p>
+<ul class="simple">
+<li><p>copying/shifting geometries into previous/next worlds</p></li>
+<li><p>splitting geometries on the anti-meridian into separate lines/polygons</p></li>
+<li><p>querying multiple extents, checking for duplicates</p></li>
+<li><p>rendering multiple extents and gluing together the results</p></li>
+</ul>
+<p>Since Mapnik lives between datasources and rendered maps, we can solve this. That's the project.</p>
+<p>What we need to see in a proposal:</p>
+<ul class="simple">
+<li><p>to see your experience and background in C/C++</p></li>
+<li><p>Geospatial background - understand geographic and projected coordinate systems, and what happens when you re-project geometries at the anti-meridian.</p></li>
+<li><p>Good understanding of the problem, how mapnik (&amp; related geo software like Tilemill, Leaflet, OpenLayers, PostGIS, GeoServer) work right now with the anti-meridian. Create some data, have a play.</p></li>
+<li><p>Research into how different software works around it, and what ideas there are.</p></li>
+<li><p>A proposed approach we can refine together.</p></li>
+<li><p>Thoughts on performance.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>How it would benefit Mapnik Project<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<p>Mapnik will be the first FOSS rendering engine that deals with the anti-meridian properly. Users won't need to mangle both datasources <em>and</em> map outputs to get working results.</p>
+</section>
+<section id="id3">
+<h3>What student would learn<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<p>More than they ever wanted to know about meridians, projections, coordinate systems, polygon windings, and geospatial data. Be able to out-geo-geek even the geekiest geographers you'll find. Shake your head for years afterwards at all the software that doesn't solve it properly - thanks to you Mapnik will! New Zealand geographers will love you forever.</p>
+</section>
+<section id="id4">
+<h3>Submitter<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<p><a class="reference internal" href="#/rcoup"><span class="xref myst">Robert Coup</span></a></p>
+</section>
+<section id="id5">
+<h3>Possible Mentors<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#/rcoup"><span class="xref myst">Robert Coup</span></a> - <a class="reference external" href="mailto:robert&#37;&#52;&#48;coup&#46;net&#46;nz">robert<span>&#64;</span>coup<span>&#46;</span>net<span>&#46;</span>nz</a></p></li>
+<li><p><a class="reference internal" href="#/craigds"><span class="xref myst">Craig de Stigter</span></a> - <a class="reference external" href="mailto:craig&#46;destigter&#37;&#52;&#48;koordinates&#46;com">craig<span>&#46;</span>destigter<span>&#64;</span>koordinates<span>&#46;</span>com</a></p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>Discussion<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Comment/Idea</p></li>
+<li><p>-- name of person commenting - date</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="prospective-2-5-dimension-rendering">
+<h2>Prospective (2.5 Dimension) Rendering<a class="headerlink" href="#prospective-2-5-dimension-rendering" title="Link to this heading">¶</a></h2>
+<section id="id7">
+<h3>Description<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<p>Mapnik right now print only 2D image. This project could improve a prospective (2.5 Dimension) Rendering. The idea come from Maperitive function that provide map similar these <a class="reference external" href="http://images2.gazzettaobjects.it/static_images/ciclismo/giroditalia/2012/tappa_19_S03.jpg">image 1</a>, <a class="reference external" href="http://www.gazzetta.it/Speciali/Giroditalia/2011/immagini/zoom/tappa_15_s.jpg">image 2</a></p>
+</section>
+<section id="id8">
+<h3>How it would benefit Mapnik Project<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<p>Mapnik could rendering prospective (2.5 Dimension) image, another beautiful type of maps. This kind of rendering it is very important for outdoor sports: ski resort, cycling or hiking stage are often rendering with  prospective (2.5 Dimension) image.</p>
+</section>
+<section id="id9">
+<h3>What student would learn<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<p>The Mapnik core and prospective (2.5 Dimension) rendering.</p>
+</section>
+<section id="id10">
+<h3>Submitter<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<p>Luca Delucchi</p>
+</section>
+<section id="id11">
+<h3>Possible Mentors<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+</section>
+<section id="id12">
+<h3>Discussion<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<section id="skia-opengl-backend">
+<h2>Skia/OpenGL backend<a class="headerlink" href="#skia-opengl-backend" title="Link to this heading">¶</a></h2>
+<section id="id13">
+<h3>Description<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<p>Mapnik has a pluggable rendering backend system, currently supporting numerous renderers: AGG (antigrain geometry, main rendering for image output), Cairo (alternative renderer for image output + vector formats like PDF and SVG), Grid (json format - utf8 hit grids).</p>
+<p><a class="reference external" href="http://code.google.com/p/skia/">Skia</a> is the rendering library used in Chrome and has some support for OpenGL on certain hardware. An experimental backend using Skia would be interesting to see if the software rendering pipeline was any faster than AGG (and of similar quality) and if the hardware pipeline was useful for rendering on mobile devices. Alternatively a direct OpenGL backend could also be investigated.</p>
+<p>What we want to see in your proposal:</p>
+<ul class="simple">
+<li><p>to see your experience and background in C/C++</p></li>
+<li><p>to see your experience with OpenGL/Skia/similar rendering software</p></li>
+<li><p>a proposed approach we can refine together.</p></li>
+</ul>
+</section>
+<section id="id14">
+<h3>How it would benefit Mapnik Project<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<p>Mapnik is about beautiful maps, but also fast maps. In many common performance critical rendering scenarios using Mapnik, the rendering backend is not the bottleneck - e.g. its not AGG that is taking the most time, but rather io and pulling/processing data. But, focused optimizations in Mapnik core are starting to change this and the renderer may become more of the bottleneck in the future - so seeking the fastest possible rendering is desirable.</p>
+</section>
+<section id="id15">
+<h3>What student would learn<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<p>They would learn a lot about the latest advances in GPU's, the tradeoffs of hardware acceleration, and the details of modern graphics libraries for desktop and mobile, like Skia.</p>
+</section>
+<section id="id16">
+<h3>Submitter<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h3>
+<p><a class="reference internal" href="#/springmeyer"><span class="xref myst">Dane Springmeyer</span></a></p>
+</section>
+<section id="id17">
+<h3>Possible Mentors<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#/springmeyer"><span class="xref myst">Dane Springmeyer</span></a> - <a class="reference external" href="mailto:dane&#37;&#52;&#48;dbsgeo&#46;com">dane<span>&#64;</span>dbsgeo<span>&#46;</span>com</a></p></li>
+</ul>
+</section>
+<section id="id18">
+<h3>Discussion<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Comment/Idea</p></li>
+<li><p>-- name of person commenting - date</p></li>
+</ul>
+<hr class="docutils" />
+<p>Got more? Format should be:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## Project Name</span>
+<span class="c1">### Description</span>
+<span class="c1">### How it would benefit Mapnik Project</span>
+<span class="c1">### What student would learn</span>
+<span class="c1">### Submitter</span>
+<span class="c1">### Possible Mentors</span>
+<span class="c1">### Discussion</span>
+  <span class="o">*</span> <span class="n">Comment</span><span class="o">/</span><span class="n">Idea</span>
+   <span class="o">*</span> <span class="o">--</span> <span class="n">name</span> <span class="n">of</span> <span class="n">person</span> <span class="n">commenting</span> <span class="o">-</span> <span class="n">date</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, hellowac
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=f115507d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>

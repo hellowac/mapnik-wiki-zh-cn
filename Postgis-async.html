@@ -1,0 +1,466 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>Postgis async - mapnik-wiki-zh-cn 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">mapnik-wiki-zh-cn 1.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">mapnik-wiki-zh-cn 1.0 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Introductory Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About-Mapnik.html">About Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik-Installation.html">Mapnik Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LearningMapnik.html">Learning Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notes-and-caveats.html">Notes and caveats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Related-projects-and-utilities.html">Related projects and utilties</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Mapnik API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XMLConfigReference.html">Mapnik configuration XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SymbologySupport.html">Symbology Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PluginArchitecture.html">Plugin Architecture</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/mapnik/mapnik/blob/master/INSTALL.md">Building Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik2.html">Mapnik2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapnikReleases.html">Mapnik Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/mapnik">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://webchat.freenode.net/?channels=#mapnik">#mapnik channel on irc.freenode.net Webchat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code-sprint.html">Code sprint</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://173.255.217.246:8000/mapnik_trac/wiki/MapnikCodeSprint/MCS01">Code sprint 2010 - Committers and Cartographers London, England, 24-26 September 2010</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/Postgis-async.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section class="tex2jax_ignore mathjax_ignore" id="postgis-async">
+<h1>Postgis async<a class="headerlink" href="#postgis-async" title="Link to this heading">¶</a></h1>
+<p>Since Mapnik 2.3.0 the PostGIS plugin can be used asynchronously to potentially reduce the overall map rendering time when stylesheets contain many PostGIS layers.</p>
+<p>The functionality was added via pull request <a class="reference external" href="https://github.com/mapnik/mapnik/pull/2010">#2010</a>.</p>
+<section id="how-it-works">
+<h2>How it works<a class="headerlink" href="#how-it-works" title="Link to this heading">¶</a></h2>
+<p>Mapnik uses the painter's algorithm to render maps. It means that layers are drawn sequentially. The inner algorithm is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">For</span> <span class="n">each</span> <span class="n">layer</span>
+       <span class="n">For</span> <span class="n">each</span> <span class="n">style</span> <span class="n">attached</span> <span class="n">to</span> <span class="n">the</span> <span class="n">layer</span>
+         <span class="n">Query</span> <span class="n">the</span> <span class="n">features</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">layer</span>
+         <span class="n">Wait</span> <span class="k">for</span> <span class="n">the</span> <span class="n">features</span><span class="o">...</span>
+         <span class="n">For</span> <span class="n">each</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">layer</span> <span class="k">for</span> <span class="n">given</span> <span class="n">style</span>
+             <span class="n">For</span> <span class="n">each</span> <span class="n">matching</span> <span class="n">rule</span> <span class="n">draw</span> <span class="n">the</span> <span class="n">feature</span>
+</pre></div>
+</div>
+<p>In this case, the renderer potentially spends a lot of time waiting for PostGIS to perform and return the query results that will provide the feature resultset.</p>
+<p>The new <code class="docutils literal notranslate"><span class="pre">asynchronous_request</span></code> parameter in PostGIS plugin aims to parallelize rendering and queries on the database server : while a layer is rendering, SQL queries for further layers are sent ahead.</p>
+</section>
+<section id="when-to-use-it">
+<h2>When to use it<a class="headerlink" href="#when-to-use-it" title="Link to this heading">¶</a></h2>
+<p>A good idea:</p>
+<ul class="simple">
+<li><p>You have already applied the <a class="reference internal" href="OptimizeRenderingWithPostGIS.html"><span class="doc std std-doc">rendering optimizations with PostGIS</span></a></p></li>
+<li><p>You have at least six PostGIS layers in your stylesheet</p></li>
+</ul>
+<p>Nice to have:</p>
+<ul class="simple">
+<li><p>Rendering time for layers are quite homogeneous</p></li>
+<li><p>You already use <code class="docutils literal notranslate"><span class="pre">cache-features=true</span></code> to reduce rendering time in the case of layers with multiple styles</p></li>
+<li><p>Your PostGIS database is on another server (so that the extra load on the database from parallel queries can be handled well)</p></li>
+</ul>
+</section>
+<section id="problems-it-will-not-solve">
+<h2>Problems it will not solve<a class="headerlink" href="#problems-it-will-not-solve" title="Link to this heading">¶</a></h2>
+<p>It will only parallelize queries on different layers. If your layer has multiple styles (like for drawing road casings) then the multiple queries issued for that same layer will not be parallelized. Therefore if you want to speed up this scenario you should instead try using <code class="docutils literal notranslate"><span class="pre">cache-features=true</span></code> which will trigger caching of data on the first pass to avoid issuing the same query twice. Just make sure you have enough RAM to store the query results (this is why <code class="docutils literal notranslate"><span class="pre">cache-features=true</span></code> is not the default).</p>
+</section>
+<section id="when-not-to-use-it">
+<h2>When not to use it<a class="headerlink" href="#when-not-to-use-it" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>You have less than 3 PostGIS layers - unlikely any benefit.</p></li>
+<li><p>You have very heterogenous layers : for example, a huge road layers that takes 8 times longer to render than the other layers. Issuing multiple queries in this case may just slow down the fetch for that single really slow layer and will not benefit your overall rendering times.</p></li>
+</ul>
+</section>
+<section id="how-to-use-it">
+<h2>How to use it<a class="headerlink" href="#how-to-use-it" title="Link to this heading">¶</a></h2>
+<section id="usage-from-python">
+<h3>Usage from Python<a class="headerlink" href="#usage-from-python" title="Link to this heading">¶</a></h3>
+<p>Instantiate a datasource like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">lyr</span> <span class="o">=</span> <span class="n">Layer</span><span class="p">(</span><span class="s1">&#39;Geometry from PostGIS&#39;</span><span class="p">)</span>
+    <span class="n">lyr</span><span class="o">.</span><span class="n">datasource</span> <span class="o">=</span> <span class="n">PostGIS</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span><span class="n">user</span><span class="o">=</span><span class="s1">&#39;postgres&#39;</span><span class="p">,</span><span class="n">password</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">dbname</span><span class="o">=</span><span class="s1">&#39;your_postgis_database&#39;</span><span class="p">,</span><span class="n">table</span><span class="o">=</span><span class="s1">&#39;your_table&#39;</span><span class="p">,</span> <span class="n">asynchronous_request</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">max_async_connection</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="usage-from-c">
+<h2>Usage from C++<a class="headerlink" href="#usage-from-c" title="Link to this heading">¶</a></h2>
+<p>A PostGIS asynchronous datasource may be created as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;mapnik/version.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;mapnik/datasource_cache.hpp&gt;</span>
+
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">parameters</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;type&quot;</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;postgis&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;host&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">database_hostname</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;port&quot;</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;5432&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;dbname&quot;</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;gis&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;user&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">your_username</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;password&quot;</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;asynchronous_request&quot;</span><span class="p">]</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;max_async_connection&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="n">Layer</span><span class="w"> </span><span class="n">lyr</span><span class="p">(</span><span class="s">&quot;Roads&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">set_datasource</span><span class="p">(</span><span class="n">datasource_cache</span><span class="o">::</span><span class="n">instance</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="n">p</span><span class="p">));</span>
+<span class="w">        </span><span class="n">lyr</span><span class="p">.</span><span class="n">add_style</span><span class="p">(</span><span class="s">&quot;roads&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">m</span><span class="p">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">lyr</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<section id="usage-from-xml">
+<h3>Usage from XML<a class="headerlink" href="#usage-from-xml" title="Link to this heading">¶</a></h3>
+<p>Set the value of <code class="docutils literal notranslate"><span class="pre">max_async_connection</span></code> and <code class="docutils literal notranslate"><span class="pre">asynchronous_request</span></code> in your existing PostGIS datasources:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Layer</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;countries&quot;</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;on&quot;</span><span class="w"> </span><span class="na">srs=</span><span class="s">&quot;+proj=latlong +datum=WGS84&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;StyleName&gt;</span>countries_style_label<span class="nt">&lt;/StyleName&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Datasource&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="nt">&gt;</span>postgis<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;host&quot;</span><span class="nt">&gt;</span>dbhost<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;dbname&quot;</span><span class="nt">&gt;</span>admin<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;user&quot;</span><span class="nt">&gt;</span>postgres<span class="nt">&lt;/Parameter&gt;</span><span class="w">      </span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;password&quot;</span><span class="nt">&gt;&lt;/Parameter&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;table&quot;</span><span class="nt">&gt;</span>world_worldborders<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max_size&quot;</span><span class="nt">&gt;</span>5<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;asynchronous_request&quot;</span><span class="nt">&gt;</span>true<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max_async_connection&quot;</span><span class="nt">&gt;</span>4<span class="nt">&lt;/Parameter&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Datasource&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Layer&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="what-value-to-use-for-max-async-connection-and-when-for-what-layers-to-set-it">
+<h3>What value to use for max_async_connection and when/for what layers to set it?<a class="headerlink" href="#what-value-to-use-for-max-async-connection-and-when-for-what-layers-to-set-it" title="Link to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">max_async_connection</span></code> sets the database connection size that can run in parallel for the rendering of one map. Concretely, it means how many layers to load features for ahead of rendering. If you want to benefit from parallelization, you must ensure that the heaviest layer to draw does not wait for the geographic features, ie the PostGIS query must have been launched early enough.</p>
+<p>Let's consider the number of geographical features for 7 layers :</p>
+<ol class="arabic simple">
+<li><p>countries -&gt;  500</p></li>
+<li><p>urban areas -&gt; 550</p></li>
+<li><p>parcs -&gt; 620</p></li>
+<li><p>commercial areas -&gt; 580</p></li>
+<li><p>lakes -&gt; 570</p></li>
+<li><p>roads -&gt; 2500</p></li>
+<li><p>cities -&gt; 300</p></li>
+</ol>
+<p>In this example we assume database query time and drawing time are equal and proportional to the number of features in the layer (1).</p>
+<p>The largest layer is <em>roads</em>; it is 4 time larger than the others. Hence we should launch the query to get the features for roads before the drawing of layer <em>urban areas</em>, so that the query is finished when the drawing of roads is about to start. So <code class="docutils literal notranslate"><span class="pre">max_async_connection</span></code> can be set to 4.</p>
+<p>Anyway, if you have no idea at all, <strong>4</strong> is a good start.</p>
+<p>(1) If you use two identical servers, and you have optimized layers according to <a class="reference internal" href="OptimizeRenderingWithPostGIS.html"><span class="doc std std-doc">rendering optimizations with PostGIS</span></a>, you can assume queries and drawing are about the same time, except for drawing labels that are slower than queries.</p>
+</section>
+<section id="impact-on-the-database-server">
+<h3>Impact on the database server<a class="headerlink" href="#impact-on-the-database-server" title="Link to this heading">¶</a></h3>
+<p>If <code class="docutils literal notranslate"><span class="pre">max_async_connection</span></code> is set to 4, and the pool of database connection (<code class="docutils literal notranslate"><span class="pre">max_size</span></code>), when rendering one map, the database is likely to receive 20 SQL queries at the same time.</p>
+<p>You must ensure the parameter <code class="docutils literal notranslate"><span class="pre">max_connections</span></code> in <a class="reference external" href="http://www.postgresql.org/docs/9.3/static/runtime-config-connection.html">postgresql.conf</a> can handle at least <code class="docutils literal notranslate"><span class="pre">max_async_connection</span></code> x <code class="docutils literal notranslate"><span class="pre">max_size</span></code>. Be careful when changing <code class="docutils literal notranslate"><span class="pre">max_connections</span></code>, because it might use more memory on the server (see <code class="docutils literal notranslate"><span class="pre">work_mem</span></code> in <a class="reference external" href="http://www.postgresql.org/docs/9.3/static/runtime-config-resource.html">http://www.postgresql.org/docs/9.3/static/runtime-config-resource.html</a>)</p>
+</section>
+<section id="tip-how-to-measure-the-drawing-waiting-for-database-ratio">
+<h3>Tip : how to measure the drawing / waiting-for-database ratio<a class="headerlink" href="#tip-how-to-measure-the-drawing-waiting-for-database-ratio" title="Link to this heading">¶</a></h3>
+<p>Monitor your CPU activity while rendering maps in a loop, for example with <code class="docutils literal notranslate"><span class="pre">htop</span></code> under Linux. You must have removed all non-PostGIS layers and set the <code class="docutils literal notranslate"><span class="pre">asynchronous_request</span></code> parameter to <strong>false</strong>. If the activity of the only CPU used is 40%, you can deduce that Mapnik spends 40% of time drawing and 60% waiting for the result of database queries.</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, hellowac
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Postgis async</a><ul>
+<li><a class="reference internal" href="#how-it-works">How it works</a></li>
+<li><a class="reference internal" href="#when-to-use-it">When to use it</a></li>
+<li><a class="reference internal" href="#problems-it-will-not-solve">Problems it will not solve</a></li>
+<li><a class="reference internal" href="#when-not-to-use-it">When not to use it</a></li>
+<li><a class="reference internal" href="#how-to-use-it">How to use it</a><ul>
+<li><a class="reference internal" href="#usage-from-python">Usage from Python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage-from-c">Usage from C++</a><ul>
+<li><a class="reference internal" href="#usage-from-xml">Usage from XML</a></li>
+<li><a class="reference internal" href="#what-value-to-use-for-max-async-connection-and-when-for-what-layers-to-set-it">What value to use for max_async_connection and when/for what layers to set it?</a></li>
+<li><a class="reference internal" href="#impact-on-the-database-server">Impact on the database server</a></li>
+<li><a class="reference internal" href="#tip-how-to-measure-the-drawing-waiting-for-database-ratio">Tip : how to measure the drawing / waiting-for-database ratio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=f115507d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>

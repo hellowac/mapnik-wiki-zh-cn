@@ -1,0 +1,744 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>Macinstallation Source - mapnik-wiki-zh-cn 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">mapnik-wiki-zh-cn 1.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">mapnik-wiki-zh-cn 1.0 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Introductory Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About-Mapnik.html">About Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik-Installation.html">Mapnik Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LearningMapnik.html">Learning Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notes-and-caveats.html">Notes and caveats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Related-projects-and-utilities.html">Related projects and utilties</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Mapnik API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XMLConfigReference.html">Mapnik configuration XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SymbologySupport.html">Symbology Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PluginArchitecture.html">Plugin Architecture</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/mapnik/mapnik/blob/master/INSTALL.md">Building Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik2.html">Mapnik2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapnikReleases.html">Mapnik Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/mapnik">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://webchat.freenode.net/?channels=#mapnik">#mapnik channel on irc.freenode.net Webchat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code-sprint.html">Code sprint</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://173.255.217.246:8000/mapnik_trac/wiki/MapnikCodeSprint/MCS01">Code sprint 2010 - Committers and Cartographers London, England, 24-26 September 2010</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/MacInstallationSource.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section class="tex2jax_ignore mathjax_ignore" id="macinstallation-source">
+<h1>Macinstallation Source<a class="headerlink" href="#macinstallation-source" title="Link to this heading">¶</a></h1>
+<!-- Name: MacInstallationSource -->
+<!-- Version: 14 -->
+<!-- Last-Modified: 2010/01/29 15:03:43 -->
+<!-- Author: springmeyer -->
+<section id="warning-this-page-is-out-of-date-use-brew-instead">
+<h2>WARNING - this page is out of date: Use Brew instead<a class="headerlink" href="#warning-this-page-is-out-of-date-use-brew-instead" title="Link to this heading">¶</a></h2>
+<p>See <a class="reference external" href="https://github.com/mapnik/mapnik/wiki/MacInstallation_Homebrew">MacInstallation_Brew</a> for instructions.</p>
+</section>
+<section id="installing-mapnik-on-mac-os-x-build-dependencies-from-source">
+<h2>Installing Mapnik on Mac OS X (build dependencies from source)<a class="headerlink" href="#installing-mapnik-on-mac-os-x-build-dependencies-from-source" title="Link to this heading">¶</a></h2>
+<p>If you are new to compiling source code, or having trouble getting started on a Mac, you may find that building Mapnik on a Linux-based system is a more friendly place to start. Also see MacInstallation which makes use of MacPorts instead.</p>
+<section id="notes-on-these-instructions">
+<h3>Notes on These Instructions<a class="headerlink" href="#notes-on-these-instructions" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Prerequisites are mandatory unless noted</p></li>
+<li><p>Instructions here focus on terminal commands. If you are new to command line usage, read up on using the <a class="reference external" href="https://help.ubuntu.com/community/UsingTheTerminal?action=show&amp;amp;redirect=BasicCommands">Bash shell</a> and the mac native <a class="reference external" href="http://www.oreilly.com/pub/a/mac/2004/02/24/bash.html">Terminal.app</a>.</p></li>
+<li><p>The <a class="reference external" href="http://www.gnu.org/software/wget/">Wget</a> command is used below to download source packages and is not pre-installed on Mac OS.</p></li>
+<li><p>If you are new to Python a great place to start is to <a class="reference external" href="http://www.diveintopython.net/installing_python/shell.html">'Dive into Python'</a>.</p></li>
+<li><p>The $ indicates a normal command prompt in the shell.</p></li>
+<li><p>The # indicates a command that likely needs to be run by a superuser.</p></li>
+<li><p>The ## indicates code comments that are not executed.</p></li>
+<li><p>If you run into any problems not discussed on this page see: InstallationTroubleshooting</p></li>
+</ul>
+</section>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Intel or PPC Mac, g++ compiler (default compiler should be fine)</p></li>
+<li><p><em>Python</em> ≥2.4 - <a class="reference external" href="http://www.python.org">python.org</a></p></li>
+<li><p>Note: Python 2.5.1 comes preloaded on 10.5</p></li>
+<li><p>Current Source (2.5) and Mac Binaries are available - <a class="reference external" href="http://www.python.org/download/">http://www.python.org/download/</a></p></li>
+<li><p><em>The Latest Mapnik Source</em> - <a class="reference external" href="http://mapnik.org/download/Release">0.5.1</a></p></li>
+<li><p>Download stable release 0.5.1 - <a class="reference external" href="http://prdownload.berlios.de/mapnik/mapnik_src-0.5.1.tar.gz">Mapnik Source 0.5.1</a></p></li>
+<li><p>Checkout the current repository with subversion:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>git://github.com/mapnik/mapnik.git<span class="w"> </span>mapnik
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Recommended</em>: Proj.4 - <a class="reference external" href="http://www.remotesensing.org/proj/">Cartographic Projections Library</a></p></li>
+<li><p>necessary for reprojection support</p></li>
+<li><p>necessary for the WMS server</p></li>
+<li><p><em>Boost</em> - <a class="reference external" href="http://www.boost.org/">C++ Libraries</a></p></li>
+<li><p>Thread - libboost_thread-mt.dylib</p></li>
+<li><p>System -  config.hpp (for different operating systems support)</p></li>
+<li><p>Filesystem - libboost_filesystem.dylib</p></li>
+<li><p>regex (regular expressions) - libboost_regex.dylib</p></li>
+<li><p>Iostreams (input/output) - libboost_iostreams.dylib</p></li>
+<li><p>Program Options - program_options.hpp</p></li>
+<li><p>python - libboost_python.dylib</p></li>
+<li><p>Note: <a class="reference external" href="http://www.boost.org/users/download/">Boost Jam</a> (bjam) needed for boost source build</p></li>
+<li><p><em>Libraries</em> for Imaging, character encoding, font, compression, and parsing</p></li>
+<li><p>libpng - <a class="reference external" href="http://www.libpng.org/pub/png/libpng.html">Portable Network Graphics format</a></p></li>
+<li><p>libjpeg - <a class="reference external" href="http://www.ijg.org/">Joint Photographic Experts Group format</a></p></li>
+<li><p>libtiff - <a class="reference external" href="http://www.libtiff.org/">Tag Image File Format</a></p></li>
+<li><p>libltdl - <a class="reference external" href="http://www.gnu.org/software/libtool/manual/libtool.html">GNU Libtool / Shared Library Linker</a></p></li>
+<li><p>libz - <a class="reference external" href="http://www.zlib.net/">zlib compression library</a></p></li>
+<li><p>Comes pre-installed on Mac OS X in /usr/local/lib</p></li>
+<li><p>libicu -  <a class="reference external" href="http://www.icu-project.org/">International Components for Unicode</a></p></li>
+<li><p>Note: libicucore.dylib is installed on mac but to build against it you need to generate the headers, see below</p></li>
+<li><p>Optional: libcairo, libcairomm, pycairo, tinyxml / spirit / libxml2. See [MacInstallation/Optional] for more details.</p></li>
+</ul>
+</section>
+<section id="instructions">
+<h3>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">¶</a></h3>
+<section id="short-version">
+<h4>Short Version<a class="headerlink" href="#short-version" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Install dependencies (Good luck! See below...)</p></li>
+<li><p>Optional: within the Mapnik source directory run this command to get your build options:</p></li>
+</ol>
+<ul class="simple">
+<li><p>These are configured in the [source:trunk/SConstruct SConstruct file used by scons.py] but can be assigned with flags</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>-h<span class="w"> </span><span class="c1"># lowercase h is the scons dependency configurations</span>
+<span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>-H<span class="w"> </span><span class="c1"># capitol H is the scons help</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Then run scons to build:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Note: this will only work if all your required dependencies are in the default locations (near impossible on Mac OS)</p></li>
+<li><p>Some packages are located in scons using pkg-config (so make sure that binary in is your path)</p></li>
+<li><p>Set custom directives with flags like PGSQL_INCLUDES=/usr/local/pgsql/include PGSQL_LIBS=/usr/local/pgsql/lib to point to custom locations</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>python<span class="w"> </span>scons/scons.py
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Once scons can find all needed dependencies it will compile Mapnik locally. To install then issue:</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>install<span class="w"> </span><span class="o">[</span>and<span class="w"> </span>any<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>flags<span class="w"> </span>you<span class="w"> </span>needed<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>dependencies<span class="o">]</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Optional: Run this command to clear out the local scons build if you already attempted, unsuccessfully, to build:</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>-c
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Optional: if you are rebuilding Mapnik due to compile problems or updgrading it may help to first delete your mapnik libs and python bindings:</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1">## If you ran scons using the system python the PYTHON_PREFIX will likely be equivalent to: /usr/lib/python2.5/site-packages/</span>
+<span class="w">    </span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHON_PREFIX</span><span class="o">=</span>/System/Library/Frameworks/Python.framework/Versions/2.5/lib/python2.5/site-packages
+<span class="w">    </span><span class="c1">## The PREFIX will be /usr/local by default or your custom location</span>
+<span class="w">    </span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PREFIX</span><span class="o">=</span>/usr/local
+<span class="w">    </span><span class="c1">## Uninstall the Python `mapnik` module.</span>
+<span class="w">    </span>$<span class="w"> </span>sudo<span class="w"> </span>rm<span class="w"> </span>-fr<span class="w"> </span><span class="nv">$PYTHON_PREFIX</span>/mapnik
+<span class="w">    </span><span class="c1">## Uninstall the mapnik libs, includes, and bin</span>
+<span class="w">    </span>$<span class="w"> </span>sudo<span class="w"> </span>rm<span class="w"> </span>-fr<span class="w"> </span><span class="nv">$PREFIX</span>/include/mapnik
+<span class="w">    </span>$<span class="w"> </span>sudo<span class="w"> </span>rm<span class="w"> </span>-fr<span class="w"> </span><span class="nv">$PREFIX</span>/lib/mapnik
+<span class="w">    </span>$<span class="w"> </span>sudo<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span><span class="nv">$PREFIX</span>/lib/libmapnik.*
+<span class="w">    </span>$<span class="w"> </span>sudo<span class="w"> </span>rm<span class="w"> </span><span class="nv">$PREFIX</span>/bin/shapeindex
+</pre></div>
+</div>
+</section>
+</section>
+<section id="full-instructions">
+<h3>Full Instructions<a class="headerlink" href="#full-instructions" title="Link to this heading">¶</a></h3>
+<section id="download-mapnik">
+<h4>Download Mapnik<a class="headerlink" href="#download-mapnik" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Download the Mapnik source code from svn</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>git://github.com/mapnik/mapnik.git<span class="w"> </span>mapnik_svn
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>mapnik_svn
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Read over the INSTALL instructions for your version</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>open<span class="w"> </span>INSTALL<span class="w"> </span><span class="c1"># Doc in the root of Mapnik download</span>
+</pre></div>
+</div>
+</section>
+<section id="optional-installs">
+<h4>Optional Installs<a class="headerlink" href="#optional-installs" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple" start="3">
+<li><p>Install Proj.4, PostgreSQL/PostGIS, and GDAL if necessary.</p></li>
+</ol>
+<p>See <a class="reference internal" href="#MacInstallation_Optional"><span class="xref myst">MacInstallation Optional</span></a> for details.</p>
+</section>
+<section id="install-necessary-libraries">
+<h4>Install Necessary Libraries<a class="headerlink" href="#install-necessary-libraries" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple" start="4">
+<li><p>Install all the imaging, character encoding, font, compression, and parsing libraries</p></li>
+</ol>
+<ul class="simple">
+<li><p>This can be done with <a class="reference external" href="http://www.macports.org/">Macports</a>, <a class="reference external" href="http://www.finkproject.org/">Fink</a>, or by source (recommended).</p></li>
+<li><p>The image libraries should already be installed if you used the <a class="reference external" href="http://www.kyngchaos.com/wiki/software:frameworks">Frameworks</a> from kyngchaos.com for GDAL</p></li>
+<li><p>You will still need to specify their locations in the scons build process like:</p></li>
+<li><p>TIFF_LIBS=/Library/Frameworks/UnixImageIO.framework/Versions/Current/unix/lib</p></li>
+<li><p>TIFF_INCLUDES=/Library/Frameworks/UnixImageIO.framework/Versions/Current/unix/include</p></li>
+<li><p>And you may need to specify in your .bash_profile:</p></li>
+<li><p>export DYLD_LIBRARY_PATH=/Library/Frameworks/UnixImageIO.framework/Versions/Current/unix/lib</p></li>
+<li><p>Detailed descriptions - TO DO / FIXME</p></li>
+</ul>
+</section>
+<section id="install-icu">
+<h4>Install ICU<a class="headerlink" href="#install-icu" title="Link to this heading">¶</a></h4>
+<p>OS 10.5.10.6 trick to build against Apple provided ICU, which lacks headers.</p>
+<p>Note: custom approach - it is easier to just install your own copy of ICU.</p>
+<p>To get this to work you need to:</p>
+<ul class="simple">
+<li><p>Pass <code class="docutils literal notranslate"><span class="pre">ICU_LIB_NAME=icucore</span></code> when building Mapnik for this to work (only 0.7 or greater).</p></li>
+<li><p>compile boost_regex with:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">bjam</span> <span class="o">--</span><span class="k">with</span><span class="o">-</span><span class="n">regex</span> <span class="n">toolset</span><span class="o">=</span><span class="n">darwin</span> <span class="o">-</span><span class="n">sHAVE_ICU</span><span class="o">=</span><span class="mi">1</span> <span class="n">cxxflags</span><span class="o">=</span><span class="s1">&#39;-DU_HIDE_DRAFT_API -DUDISABLE_RENAMING&#39;</span> <span class="o">-</span><span class="n">sICU_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span> <span class="o">-</span><span class="n">a</span> <span class="n">install</span>  
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>patch boost regex jamfile like:</p></li>
+</ul>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>   Index: libs/regex/build/Jamfile.v2
+<span class="w"> </span>   ===================================================================
+<span class="w"> </span>   --- libs/regex/build/Jamfile.v2 (revision 58875)
+<span class="w"> </span>   +++ libs/regex/build/Jamfile.v2 (working copy)
+<span class="w"> </span>   @@ -25,9 +25,9 @@
+<span class="w"> </span>          if $(HAVE_ICU) &amp;&amp; ! $(ICU_PATH)
+<span class="w"> </span>          {
+<span class="w"> </span>             gHAS_ICU = true ;
+<span class="w"> </span>   -         gICU_CORE_LIB = icuuc ;
+<span class="w"> </span>   -         gICU_IN_LIB = icui18n ;
+<span class="w"> </span>   -         gICU_DATA_LIB = icudata ;
+<span class="w"> </span>   +         gICU_CORE_LIB = icucore ;
+<span class="w"> </span>   +         #gICU_IN_LIB = icui18n ;
+<span class="w"> </span>   +         #gICU_DATA_LIB = icudata ;
+<span class="w"> </span>             gICU_CONFIG_CHECKED = true ;
+<span class="w"> </span>          }
+<span class="w"> </span>          else if $(ICU_PATH)
+</pre></div>
+</div>
+<p>And compile icu to pull out headers like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">cd</span> <span class="o">~/</span><span class="n">src</span>
+    <span class="c1">### SNOW LEOPARD - 10.6</span>
+    <span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">opensource</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">tarballs</span><span class="o">/</span><span class="n">ICU</span><span class="o">/</span><span class="n">ICU</span><span class="o">-</span><span class="mf">400.38</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+    <span class="n">tar</span> <span class="n">xvf</span> <span class="n">ICU</span><span class="o">-</span><span class="mf">400.38</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+    <span class="n">cd</span> <span class="n">ICU</span><span class="o">-</span><span class="mf">400.38</span>
+    
+    <span class="c1">### LEOPARD - 10.5</span>
+    <span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">opensource</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">tarballs</span><span class="o">/</span><span class="n">ICU</span><span class="o">/</span><span class="n">ICU</span><span class="o">-</span><span class="mf">8.11.4</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+    <span class="n">rac</span> <span class="n">xvf</span> <span class="n">ICU</span><span class="o">-</span><span class="mf">8.11.4</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+    <span class="n">cd</span> <span class="n">ICU</span><span class="o">-</span><span class="mf">8.11.4</span>
+    
+    <span class="c1">## BUILD</span>
+    <span class="n">make</span>
+    <span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+    <span class="c1"># copy headers to /usr/include</span>
+    <span class="c1"># or you could put these anywhere that Mapnik can find them</span>
+    <span class="n">sudo</span> <span class="n">mv</span> <span class="n">build</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">unicode</span><span class="o">/</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">include</span><span class="o">/</span>
+</pre></div>
+</div>
+</section>
+<section id="install-boost">
+<h4>Install Boost<a class="headerlink" href="#install-boost" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple" start="5">
+<li><p>Install Boost using Bjam</p></li>
+</ol>
+<ul class="simple">
+<li><p>You can install boost with Macports (currently 1.35.0):</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>$<span class="w"> </span>port<span class="w"> </span>info<span class="w"> </span>boost-jam<span class="w"> </span>boost<span class="w"> </span><span class="c1"># optional: this is to check that these exist and see their details</span>
+<span class="w">    </span><span class="c1"># port install boost-jam # must install bjam manually first, due to [http://trac.macosforge.org/projects/macports/ticket/13714 Macports bug]</span>
+<span class="w">    </span><span class="c1"># port install -v boost +python25 +icu</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Prepare for a long wait and lots of CPU!</p></li>
+<li><p>Macports should automatically download any dependencies needed for Boost</p></li>
+<li><p>Or install from source (recommended) like so:</p></li>
+<li><p>Thanks jbronn for this writeup</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">bjam</span></code> not the <code class="docutils literal notranslate"><span class="pre">configure</span></code> script to build.</p></li>
+<li><p>If you have a dual-core system you can add the <code class="docutils literal notranslate"><span class="pre">-j2</span></code> flag to both <code class="docutils literal notranslate"><span class="pre">bjam</span></code> and <code class="docutils literal notranslate"><span class="pre">scons</span></code> to take advantage of both cores:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>svn<span class="w"> </span>co<span class="w"> </span>http://svn.boost.org/svn/boost/trunk<span class="w"> </span>boost-trunk
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>boost-trunk
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">BOOST</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>tools/jam/src
+<span class="w">    </span>./build.sh<span class="w"> </span>darwin
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>bin.mac*/
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:<span class="nv">$PATH</span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$BOOST</span>
+<span class="w">    </span>bjam<span class="w"> </span>--toolset<span class="o">=</span>darwin<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>--with-thread<span class="w"> </span>--with-filesystem<span class="w"> </span>--with-iostreams<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>--with-regex<span class="w"> </span>--with-program_options<span class="w"> </span>--with-python<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>--with-system<span class="w"> </span>stage
+<span class="w">    </span>sudo<span class="w"> </span>bjam<span class="w"> </span>--toolset<span class="o">=</span>darwin<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>--with-thread<span class="w"> </span>--with-filesystem<span class="w"> </span>--with-iostreams<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>--with-regex<span class="w"> </span>--with-program_options<span class="w"> </span>--with-python<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>--with-system<span class="w"> </span>install
+</pre></div>
+</div>
+</section>
+<section id="install-wms-dependencies">
+<h4>Install WMS dependencies<a class="headerlink" href="#install-wms-dependencies" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple" start="6">
+<li><p>See <a class="reference internal" href="#MacInstallation_Optional"><span class="xref myst">MacInstallation Optional</span></a> for details.</p></li>
+</ol>
+</section>
+</section>
+<section id="finally-build-and-install-mapnik">
+<h3>Finally, build and install Mapnik<a class="headerlink" href="#finally-build-and-install-mapnik" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple" start="7">
+<li><p>Run scons (debug mode flag, DEBUG=y, is recommended for troubleshooting later on)</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>mapnik-0.5.1
+<span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span>y
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>If the scons build process is not able to find a required dependency it will exit.</p></li>
+<li><p>You'll need to manually set the paths to the locations of library (libs) and/or header files (includes)</p></li>
+<li><p>See the svn INSTALL readme for more details about setting paths or issue the command:</p></li>
+<li><p>You will be looking for an output once scons finds all necessary dependencies (an elusive target) that looks like:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>$<span class="w"> </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span>y
+<span class="w">    </span>scons:<span class="w"> </span>Reading<span class="w"> </span>SConscript<span class="w"> </span>files<span class="w"> </span>...
+<span class="w">    </span>Building<span class="w"> </span>on<span class="w"> </span>Darwin<span class="w"> </span>...
+<span class="w">    </span>pkg-config<span class="w"> </span>--exists<span class="w"> </span>cairomm-1.0
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C<span class="w"> </span>library<span class="w"> </span>m...<span class="w">  </span>yes
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C<span class="w"> </span>library<span class="w"> </span>ltdl...<span class="w">  </span>yes
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C<span class="w"> </span>library<span class="w"> </span>png...<span class="w">  </span>yes
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C<span class="w"> </span>library<span class="w"> </span>tiff...<span class="w">  </span>yes
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C<span class="w"> </span>library<span class="w"> </span>z...<span class="w">  </span>yes
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C<span class="w"> </span>library<span class="w"> </span>jpeg...<span class="w">  </span>yes
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C<span class="w"> </span>library<span class="w"> </span>proj...<span class="w">  </span>no
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C<span class="w"> </span>library<span class="w"> </span>pq...<span class="w">  </span>no
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>icuuc...<span class="w">  </span>yes
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>icudata...<span class="w">  </span>yes
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>gdal...<span class="w">  </span>no
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>boost_filesystem-mt...<span class="w">  </span>yes
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>boost_regex-mt...<span class="w">  </span>yes
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>boost_iostreams-mt...<span class="w">  </span>yes
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>boost_program_options-mt...<span class="w">  </span>yes
+<span class="w">    </span>Checking<span class="w"> </span><span class="k">for</span><span class="w"> </span>C++<span class="w"> </span>library<span class="w"> </span>boost_thread-mt...<span class="w">  </span>yes
+<span class="w">    </span>Bindings<span class="w"> </span>Python<span class="w"> </span>version...<span class="w"> </span><span class="m">2</span>.5
+<span class="w">    </span>Python<span class="w"> </span><span class="m">2</span>.5<span class="w"> </span>prefix...<span class="w"> </span>/System/Library/Frameworks/Python.framework/Versions/2.5
+<span class="w">    </span>pkg-config<span class="w"> </span>--exists<span class="w"> </span>pycairo
+<span class="w">    </span>scons:<span class="w"> </span><span class="k">done</span><span class="w"> </span>reading<span class="w"> </span>SConscript<span class="w"> </span>files.
+<span class="w">    </span><span class="o">[</span>...<span class="w"> </span>build<span class="w"> </span>process<span class="w"> </span>will<span class="w"> </span>commence...<span class="o">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Mapnik should be successfully built at the culmination of that command.</p></li>
+<li><p>If this fails with an error complaining that boost filesystem cannot be found, check the section above for building boost and add the symlinks. Also ensure you add the following to the scons command (assuming built from source and default installation folder)</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span>y<span class="w"> </span><span class="nv">BOOST_LIBS</span><span class="o">=</span>/usr/local/lib<span class="w"> </span><span class="nv">BOOST_INCLUDES</span><span class="o">=</span>/usr/local/includes/boost-1_35/
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Then you should install the compiled files:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>python<span class="w"> </span>scons/scons.py<span class="w"> </span>install<span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span>y
+</pre></div>
+</div>
+<section id="test-installation">
+<h4>Test Installation<a class="headerlink" href="#test-installation" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple" start="8">
+<li><p>Now test your mapnik installation in the python interpreter:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">python</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">mapnik</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+    <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ImportError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">mapnik</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Whoops, the mapnik module is not on sys.path!</p></li>
+<li><p>This command will show you what <em>is</em> on your PYTHONPATH:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">python</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span>
+<span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;/Library/Python/2.5/site-packages/ ....</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>If you got the ImportError put your mapnik module in your PYTHONPATH like so:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Place this text in either /etc/profile or ~/.bash_profile</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span>/usr/lib/python2.5/site-packages/
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Or Symlink to your Mapnik module from the default site-packages directory (it should be on your path automatically)</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># ln -s /System/Library/Frameworks/Python.framework/Versions/2.5/lib/python2.5/site-packages/mapnik /Library/Python/2.5/site-packages/mapnik</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Find your default site-packages directory like so:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from distutils.sysconfig import get_python_lib; print get_python_lib()&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>Now return to the python interpreter:</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python
+&gt;&gt;&gt;<span class="w"> </span>import<span class="w"> </span>mapnik
+registered<span class="w"> </span>datasource<span class="w"> </span>:<span class="w"> </span>gdal
+registered<span class="w"> </span>datasource<span class="w"> </span>:<span class="w"> </span>postgis
+registered<span class="w"> </span>datasource<span class="w"> </span>:<span class="w"> </span>raster
+registered<span class="w"> </span>datasource<span class="w"> </span>:<span class="w"> </span>shape
+&gt;&gt;&gt;<span class="w"> </span>dir<span class="o">(</span>mapnik<span class="o">)</span><span class="w"> </span><span class="c1"># This gets you a list of symbols</span>
+<span class="o">[</span><span class="s1">&#39;BoostPythonMetaclass&#39;</span>,<span class="w"> </span><span class="s1">&#39;Color&#39;</span>,<span class="w"> </span><span class="s1">&#39;Coord&#39;</span>,<span class="w"> </span><span class="s1">&#39;CreateDatasource&#39;</span>
+<span class="w">    </span><span class="o">[</span>.....<span class="o">]</span>
+<span class="w">    </span><span class="s1">&#39;scale_denominator&#39;</span>,<span class="w"> </span><span class="s1">&#39;setdlopenflags&#39;</span><span class="o">]</span>
+&gt;&gt;&gt;<span class="w"> </span>help<span class="o">(</span>mapnik<span class="o">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Congrats: you can now head to the [GettingStarted Getting Started page] for a 'Hello World' demo of using Mapnik via the python bindings.</p></li>
+</ul>
+</section>
+</section>
+<section id="known-issues">
+<h3>Known Issues<a class="headerlink" href="#known-issues" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>There are several known issues with building Mapnik on Mac OS X</p></li>
+<li><p>It is entirely possible to run Mapnik on Mac 10.4 and 10.5 but some users have experienced the following problems:</p></li>
+<li><p>Mapnik does not correctly read the map Envelope(extent) and gets caught in infinite loop during shapefile processing - <a class="reference external" href="https://lists.berlios.de/pipermail/mapnik-users/2008-April/000801.html">April 17</a> - May be related to PPC architecture. See Ticket #92</p></li>
+<li><p>NoneType Error occurs in python bindings - <a class="reference external" href="https://lists.berlios.de/pipermail/mapnik-devel/2008-April/000610.html">April 21</a> &amp; <a class="reference external" href="https://lists.berlios.de/pipermail/mapnik-users/2008-April/000813.html">April 18</a>. The NoneType error may be due to a previously installed version of Python (possible from Tiger to Leopard Upgrade) that left frameworks in /Library/Frameworks/Python.framework. Remove that folder, and rebuild mapnik. NOTE: Only do this if you can confirm that this is not the current location of your system Python.</p></li>
+<li><p>Keep in mind that installation on most linux distros is an easier starting point. For example, on [UbuntuInstallation Ubuntu] many of the dependencies are either pre-installed or readily available via the synaptic package manager. Macports and Fink hypothetically offer similar convience but conflicts between local source installs and port/fink installs are pita's for mapnik mac users.</p></li>
+<li><p>If you upgraded your core python (from the mac binary from python.org) and are trying to rebuild mapnik see this page <a class="reference internal" href="MacPythonUpgradeIssues.html"><span class="doc std std-doc">MacPython upgrade issues</span></a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, hellowac
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Macinstallation Source</a><ul>
+<li><a class="reference internal" href="#warning-this-page-is-out-of-date-use-brew-instead">WARNING - this page is out of date: Use Brew instead</a></li>
+<li><a class="reference internal" href="#installing-mapnik-on-mac-os-x-build-dependencies-from-source">Installing Mapnik on Mac OS X (build dependencies from source)</a><ul>
+<li><a class="reference internal" href="#notes-on-these-instructions">Notes on These Instructions</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#instructions">Instructions</a><ul>
+<li><a class="reference internal" href="#short-version">Short Version</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#full-instructions">Full Instructions</a><ul>
+<li><a class="reference internal" href="#download-mapnik">Download Mapnik</a></li>
+<li><a class="reference internal" href="#optional-installs">Optional Installs</a></li>
+<li><a class="reference internal" href="#install-necessary-libraries">Install Necessary Libraries</a></li>
+<li><a class="reference internal" href="#install-icu">Install ICU</a></li>
+<li><a class="reference internal" href="#install-boost">Install Boost</a></li>
+<li><a class="reference internal" href="#install-wms-dependencies">Install WMS dependencies</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#finally-build-and-install-mapnik">Finally, build and install Mapnik</a><ul>
+<li><a class="reference internal" href="#test-installation">Test Installation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-issues">Known Issues</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=f115507d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>

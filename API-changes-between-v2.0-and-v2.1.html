@@ -1,0 +1,455 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>API changes between v2.0 and v2.1 - mapnik-wiki-zh-cn 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">mapnik-wiki-zh-cn 1.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">mapnik-wiki-zh-cn 1.0 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Introductory Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About-Mapnik.html">About Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik-Installation.html">Mapnik Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LearningMapnik.html">Learning Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notes-and-caveats.html">Notes and caveats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Related-projects-and-utilities.html">Related projects and utilties</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Mapnik API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XMLConfigReference.html">Mapnik configuration XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SymbologySupport.html">Symbology Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PluginArchitecture.html">Plugin Architecture</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/mapnik/mapnik/blob/master/INSTALL.md">Building Mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapnik2.html">Mapnik2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapnikReleases.html">Mapnik Releases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/mapnik">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://webchat.freenode.net/?channels=#mapnik">#mapnik channel on irc.freenode.net Webchat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Code-sprint.html">Code sprint</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://173.255.217.246:8000/mapnik_trac/wiki/MapnikCodeSprint/MCS01">Code sprint 2010 - Committers and Cartographers London, England, 24-26 September 2010</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/API-changes-between-v2.0-and-v2.1.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section class="tex2jax_ignore mathjax_ignore" id="api-changes-between-v2-0-and-v2-1">
+<h1>API changes between v2.0 and v2.1<a class="headerlink" href="#api-changes-between-v2-0-and-v2-1" title="Link to this heading">¶</a></h1>
+<section id="removed">
+<h2>Removed<a class="headerlink" href="#removed" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Python pickling support was removed for <code class="docutils literal notranslate"><span class="pre">map/style/rule/symbolizers/fontset/query</span></code> - these were poorly maintained and future support for fast, core deepcopy should handle most key use cases - see <a class="reference external" href="https://github.com/mapnik/mapnik/issues/1390">#1390 (map deepcopy)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MetaWriter</span></code> - <a class="reference external" href="https://github.com/mapnik/mapnik/issues/1240">disabled in 2.1.x series - may be re-enabled in future releases</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PointDatasource</span></code> - Use <code class="docutils literal notranslate"><span class="pre">MemoryDatasource</span></code> instead. PointDatasource was an incomplete wrapper around MemoryDatasource, and is obsolete now that <code class="docutils literal notranslate"><span class="pre">Feature</span></code> objects can leverage WKB and WKT to create geometries and features can be added to MemoryDatasources.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GlyphSymbolizer</span></code> - functionality can now be achieved with the <code class="docutils literal notranslate"><span class="pre">TextSymbolizer</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MarkersSymbolizer</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">marker-type</span></code> is removed, built in ellipse and arrow types now can be referenced like <code class="docutils literal notranslate"><span class="pre">file=&quot;shape://ellipse&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">file=&quot;shape://arrow&quot;</span></code> - although this interface is unstable and may continue to change.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ShieldSymbolizer</span></code> attribute <code class="docutils literal notranslate"><span class="pre">no_text</span></code> - Simply leave the text empty if you don't want any text to be rendered.</p></li>
+<li><p>Removed <code class="docutils literal notranslate"><span class="pre">XML</span> <span class="pre">DTD</span></code> in <code class="docutils literal notranslate"><span class="pre">utils/xml</span></code> since it was unmaintained: <a class="reference external" href="https://github.com/mapnik/mapnik/issues/1402">https://github.com/mapnik/mapnik/issues/1402</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RasterSymbolizer</span></code> <code class="docutils literal notranslate"><span class="pre">mode</span></code> <code class="docutils literal notranslate"><span class="pre">divide</span></code> (see below)</p></li>
+</ul>
+</section>
+<section id="changed">
+<h2>Changed<a class="headerlink" href="#changed" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MarkersSymbolizer</span></code></p>
+<ul>
+<li><p>default <code class="docutils literal notranslate"><span class="pre">marker-placement</span></code> is now <code class="docutils literal notranslate"><span class="pre">point</span></code> instead of <code class="docutils literal notranslate"><span class="pre">line</span></code> - meaning if you want your symbols (like arrows) to be oriented along lines you now need to specify <code class="docutils literal notranslate"><span class="pre">placement=line</span></code>, whereas previously this was the default. This changes reflects the goal of making the MarkersSymbolizer default behavior more reasonable for any geometry type, including points, lines, and polygons and to make it consistent with the <code class="docutils literal notranslate"><span class="pre">TextSymbolizer</span></code> and <code class="docutils literal notranslate"><span class="pre">ShieldSymbolizer</span></code> which also default to <code class="docutils literal notranslate"><span class="pre">point</span></code> placement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> are now optional expressions rather than raw floats and their values represent diameter in pixels not radii. If not set they will be <code class="docutils literal notranslate"><span class="pre">None</span></code>, but the default ellipse has a <code class="docutils literal notranslate"><span class="pre">radius</span></code> of <code class="docutils literal notranslate"><span class="pre">10</span></code> meaning that if you set <code class="docutils literal notranslate"><span class="pre">width=&quot;20&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">height=&quot;20&quot;</span></code> then there will be no change in the rendering size of the ellipse. The arrow default dimensions can be roughly maintained with <code class="docutils literal notranslate"><span class="pre">width=&quot;15&quot;</span> <span class="pre">height=&quot;10&quot;</span></code>. But to get the exact rendering of the Mapnik 2.0.x arrow use <a class="reference external" href="https://gist.github.com/4158533">this svg file</a>. Altering width or height will build a new <code class="docutils literal notranslate"><span class="pre">ellipse</span></code> svg marker internally by default if no custom file type is provided. For non-ellipse types setting <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> will proportionally scale the marker, but ideally you should use `transform=&quot;scale(x,y)&quot; instead.</p></li>
+<li><p>A new <code class="docutils literal notranslate"><span class="pre">fill-opacity</span></code> setting is available and now <code class="docutils literal notranslate"><span class="pre">opacity</span></code> reverse to a new overall opacity that will be multiplied against the <code class="docutils literal notranslate"><span class="pre">fill-opacity</span></code> or <code class="docutils literal notranslate"><span class="pre">stroke-opacity</span></code> - this is to match how svg behaves.</p></li>
+</ul>
+</li>
+<li><p>In Python a mapnik.Feature now expects a mapnik.Context() as a first argument and a feature id as the second argument, which stores all attribute names (previously mapnik.Feature only needed a single argument of the feature id and redundantly stored feature attribute names per feature) <a class="reference external" href="https://github.com/mapnik/mapnik/issues/834">#834</a>.</p></li>
+</ul>
+</section>
+<section id="added">
+<h2>Added<a class="headerlink" href="#added" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">MarkersSymbolizer</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fill-opacity</span></code> is new.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">opacity</span></code> value now works to set the alpha of bitmap images.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Expression</span></code> - you can now use the built in keyword of <code class="docutils literal notranslate"><span class="pre">[mapnik::geometry_type]</span></code> to filter features by geometry type either by name or integer key. The mapping is <code class="docutils literal notranslate"><span class="pre">0:no</span> <span class="pre">geometry</span></code>, <code class="docutils literal notranslate"><span class="pre">1:point</span></code>, <code class="docutils literal notranslate"><span class="pre">2:linestring</span></code>, <code class="docutils literal notranslate"><span class="pre">3:polygon</span></code>, and <code class="docutils literal notranslate"><span class="pre">4:collection</span></code>. A collection indicates that the <code class="docutils literal notranslate"><span class="pre">Feature</span></code> has more than one geometry of different types. So a <code class="docutils literal notranslate"><span class="pre">Feature</span></code> with three linestrings will be reported as <code class="docutils literal notranslate"><span class="pre">linestring</span></code> but a <code class="docutils literal notranslate"><span class="pre">Feature</span></code> with a point and a linestring will be reported as a <code class="docutils literal notranslate"><span class="pre">collection</span></code>. - for more details see <a class="reference external" href="https://github.com/mapnik/mapnik/issues/546">#546</a></p></li>
+<li><p>To All symbolizers (in most cases)</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">comp-op</span></code> - All symbolizers now support compositing in the AGG and Cairo renderers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clip</span></code> - All(most) symbolizers - boolean of whether to clip geometries before rendering (defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smooth</span></code> - bezier smooth value - 0-1, 0 (default) means no smoothing, 1 means fully smoothed, higher values create wild loopbacks</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LineSymbolizer</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">offset</span></code> - offset lines either in positive (right side) or negative (left side)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stroke</span></code> <code class="docutils literal notranslate"><span class="pre">miterlimit</span></code> added (<a class="reference external" href="https://developer.mozilla.org/en-US/docs/SVG/Attribute/stroke-miterlimit">https://developer.mozilla.org/en-US/docs/SVG/Attribute/stroke-miterlimit</a>)</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/mapnik/mapnik/wiki/TextSymbolizer"><code class="docutils literal notranslate"><span class="pre">TextSymbolizer</span></code></a></p>
+<ul class="simple">
+<li><p>New placement alogrithm: <code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
+<li><p>Text formatting</p></li>
+</ul>
+<p>Changes documented in TextSymbolizer documentation</p>
+</li>
+<li><p>Python Bindings:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mapnik.Image.get_pixel()</span></code> - get unsigned int value representing the rgba value, useful for fast pixel comparisons</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mapnik.Grid.get_pixel()</span></code> - get int value representing the feature id encoded in the grid pixels</p></li>
+<li><p>bindings for text placement and formatting work</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="deprecated">
+<h2>Deprecated<a class="headerlink" href="#deprecated" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">TextSymbolizer</span></code> - most attributes moved to either <code class="docutils literal notranslate"><span class="pre">format</span></code> or <code class="docutils literal notranslate"><span class="pre">placements</span></code> properties</p>
+<p><code class="docutils literal notranslate"><span class="pre">properties</span></code>:</p>
+<ul class="simple">
+<li><p>label-placement</p></li>
+<li><p>horizontal-alignment</p></li>
+<li><p>justify-alignment</p></li>
+<li><p>vertical-alignment</p></li>
+<li><p>orientation</p></li>
+<li><p>displacement</p></li>
+<li><p>label-spacing</p></li>
+<li><p>label-position-tolerance</p></li>
+<li><p>avoid-edges</p></li>
+<li><p>minimum-distance</p></li>
+<li><p>minimum-padding</p></li>
+<li><p>minimum-path-length</p></li>
+<li><p>maximum-angle-char-delta</p></li>
+<li><p>force-odd-labels</p></li>
+<li><p>allow-overlap</p></li>
+<li><p>largest-bbox-only</p></li>
+<li><p>text-ratio</p></li>
+<li><p>wrap-width</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">format</span></code>:</p>
+<ul class="simple">
+<li><p>face_name</p></li>
+<li><p>fontset</p></li>
+<li><p>text-size</p></li>
+<li><p>character-spacing</p></li>
+<li><p>line-spacing</p></li>
+<li><p>text-opacity</p></li>
+<li><p>wrap-char</p></li>
+<li><p>wrap-before</p></li>
+<li><p>text-transform</p></li>
+<li><p>fill</p></li>
+<li><p>halo-fill</p></li>
+<li><p>halo-radius</p></li>
+</ul>
+<p>Backward compatibility is preserved by python wrappers, however a warning message is printed if the old name is used.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RasterSymbolizer</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> is deprecated, now use <code class="docutils literal notranslate"><span class="pre">comp-op</span></code> which supports <a class="reference external" href="https://github.com/mapnik/mapnik/blob/master/include/mapnik/image_compositing.hpp#L42-79">many more compositing modes</a></p></li>
+<li><p>The new mapping from <code class="docutils literal notranslate"><span class="pre">mode</span></code> to <code class="docutils literal notranslate"><span class="pre">comp-op</span></code> is:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">normal</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">src_over</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grain_merge</span></code> and <code class="docutils literal notranslate"><span class="pre">grain_merge2</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">grain-merge</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">multiply</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">multiply</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">screen</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">screen</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hard_light</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">hard-light</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">divide</span></code> and <code class="docutils literal notranslate"><span class="pre">divide</span></code> -&gt; Not supported anymore, see: <a class="reference external" href="https://github.com/mapnik/mapnik/issues/1432">https://github.com/mapnik/mapnik/issues/1432</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaling=fast</span></code> is deprecated. It has always been a synonym for <code class="docutils literal notranslate"><span class="pre">near</span></code>, use <code class="docutils literal notranslate"><span class="pre">near</span></code> going forward</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaling</span></code> is now exposed in python as enumerations of <code class="docutils literal notranslate"><span class="pre">mapnik.scaling_method</span></code> not as bare strings</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, hellowac
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">API changes between v2.0 and v2.1</a><ul>
+<li><a class="reference internal" href="#removed">Removed</a></li>
+<li><a class="reference internal" href="#changed">Changed</a></li>
+<li><a class="reference internal" href="#added">Added</a></li>
+<li><a class="reference internal" href="#deprecated">Deprecated</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=f115507d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>
