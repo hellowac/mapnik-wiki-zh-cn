@@ -18,7 +18,7 @@ jobs:
           python-version: "3.12"
       - name: 安装依赖
         run: |
-          git checkout sync-docs && pip install 'sphinx' 'myst_parser'
+          git checkout sync-docs && pip install 'sphinx' 'myst_parser' 'furo'
       - name: Sphinx 构建
         working-directory: ./
         run: |
